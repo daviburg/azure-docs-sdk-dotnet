@@ -1,0 +1,11 @@
+---
+title: Azure Workloadorchestration SDK for .NET
+description: Reference for Azure Workloadorchestration SDK for .NET
+ms.date: 06/23/2026
+ms.topic: reference
+ms.devlang: dotnet
+ms.service: workloadorchestration
+---
+# Azure Workloadorchestration SDK for .NET - preview
+## Packages - preview
+[!INCLUDE [packages](workloadorchestration-index.md)]
