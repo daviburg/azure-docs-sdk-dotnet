@@ -12,7 +12,6 @@
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
   <Docs>
     <summary> The AgentAdministrationClient sub-client. </summary>
     <remarks>To be added.</remarks>
@@ -29,7 +28,6 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
       <Docs>
         <summary> Initializes a new instance of AgentAdministrationClient for mocking. </summary>
         <remarks>To be added.</remarks>
@@ -124,10 +122,13 @@
         <Parameter Name="options" Type="Azure.AI.Projects.Agents.AgentAdministrationClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint">To be added.</param>
-        <param name="tokenProvider">To be added.</param>
-        <param name="options">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="endpoint">The service endpoint to target.</param>
+        <param name="tokenProvider">The token provider used to authenticate requests.</param>
+        <param name="options">Optional client configuration options.</param>
+        <summary>
+            Initializes a new <see cref="T:Azure.AI.Projects.Agents.AgentAdministrationClient" /> with the specified
+            service endpoint and authentication token provider.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -589,11 +590,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="agentName">To be added.</param>
-        <param name="manifestId">To be added.</param>
-        <param name="options">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="agentName">The name of the agent to create a version for.</param>
+        <param name="manifestId">The identifier of the agent manifest to use.</param>
+        <param name="options">Options describing the manifest-based creation request.</param>
+        <param name="cancellationToken">The cancellation token to use.</param>
+        <summary> Creates a new version of an agent from an agent manifest. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -662,11 +663,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="agentName">To be added.</param>
-        <param name="manifestId">To be added.</param>
-        <param name="options">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="agentName">The name of the agent to create a version for.</param>
+        <param name="manifestId">The identifier of the agent manifest to use.</param>
+        <param name="options">Options describing the manifest-based creation request.</param>
+        <param name="cancellationToken">The cancellation token to use.</param>
+        <summary> Creates a new version of an agent from an agent manifest. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1429,12 +1430,152 @@
         <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
+    <Member MemberName="DisableAgent">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult DisableAgent (string agentName, System.ClientModel.Primitives.RequestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult DisableAgent(string agentName, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DisableAgent(System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableAgent (agentName As String, options As RequestOptions) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member DisableAgent : string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.DisableAgent : string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="agentAdministrationClient.DisableAgent (agentName, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to disable. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Disables the specified agent, preventing it from accepting new sessions or processing requests.
+            Existing active sessions are allowed to drain gracefully but no new sessions can be created.
+            This operation is idempotent — disabling an already-disabled agent returns success with no side effects.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAgent">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult DisableAgent (string agentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult DisableAgent(string agentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DisableAgent(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableAgent (agentName As String, Optional cancellationToken As CancellationToken = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member DisableAgent : string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&#xA;override this.DisableAgent : string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult" Usage="agentAdministrationClient.DisableAgent (agentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to disable. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Disables the specified agent, preventing it from accepting new sessions or processing requests.
+            Existing active sessions are allowed to drain gracefully but no new sessions can be created.
+            This operation is idempotent — disabling an already-disabled agent returns success with no side effects.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; DisableAgentAsync (string agentName, System.ClientModel.Primitives.RequestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; DisableAgentAsync(string agentName, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DisableAgentAsync(System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableAgentAsync (agentName As String, options As RequestOptions) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member DisableAgentAsync : string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.DisableAgentAsync : string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="agentAdministrationClient.DisableAgentAsync (agentName, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to disable. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Disables the specified agent, preventing it from accepting new sessions or processing requests.
+            Existing active sessions are allowed to drain gracefully but no new sessions can be created.
+            This operation is idempotent — disabling an already-disabled agent returns success with no side effects.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; DisableAgentAsync (string agentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; DisableAgentAsync(string agentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DisableAgentAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableAgentAsync (agentName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member DisableAgentAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.DisableAgentAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="agentAdministrationClient.DisableAgentAsync (agentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to disable. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Disables the specified agent, preventing it from accepting new sessions or processing requests.
+            Existing active sessions are allowed to drain gracefully but no new sessions can be created.
+            This operation is idempotent — disabling an already-disabled agent returns success with no side effects.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
     <Member MemberName="DownloadAgentCode">
-      <MemberSignature Language="C#" Value="public virtual BinaryData DownloadAgentCode (string agentName, string path, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.BinaryData DownloadAgentCode(string agentName, string path, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DownloadAgentCode(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadAgentCode (agentName As String, path As String, Optional cancellationToken As CancellationToken = Nothing) As BinaryData" />
-      <MemberSignature Language="F#" Value="abstract member DownloadAgentCode : string * string * System.Threading.CancellationToken -&gt; BinaryData&#xA;override this.DownloadAgentCode : string * string * System.Threading.CancellationToken -&gt; BinaryData" Usage="agentAdministrationClient.DownloadAgentCode (agentName, path, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual BinaryData DownloadAgentCode (string agentName, string path, string agentVersion = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.BinaryData DownloadAgentCode(string agentName, string path, string agentVersion, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DownloadAgentCode(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadAgentCode (agentName As String, path As String, Optional agentVersion As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As BinaryData" />
+      <MemberSignature Language="F#" Value="abstract member DownloadAgentCode : string * string * string * System.Threading.CancellationToken -&gt; BinaryData&#xA;override this.DownloadAgentCode : string * string * string * System.Threading.CancellationToken -&gt; BinaryData" Usage="agentAdministrationClient.DownloadAgentCode (agentName, path, agentVersion, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
@@ -1446,11 +1587,16 @@
       <Parameters>
         <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="path" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="agentVersion" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="agentName"> The name of the agent whose latest-version code zip should be downloaded. </param>
         <param name="path"> The path to save the agent code. </param>
+        <param name="agentVersion">
+            The version of the agent whose code zip should be downloaded.
+            If omitted, the latest version's code zip is returned.
+            </param>
         <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
             Download the code zip for the latest version of a code-based hosted agent. And unpacks ut to the user directory; returns the zip content as a binary data.
@@ -1467,11 +1613,11 @@
       </Docs>
     </Member>
     <Member MemberName="DownloadAgentCodeAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;BinaryData&gt; DownloadAgentCodeAsync (string agentName, string path, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.BinaryData&gt; DownloadAgentCodeAsync(string agentName, string path, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DownloadAgentCodeAsync(System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadAgentCodeAsync (agentName As String, path As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of BinaryData)" />
-      <MemberSignature Language="F#" Value="abstract member DownloadAgentCodeAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;BinaryData&gt;&#xA;override this.DownloadAgentCodeAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;BinaryData&gt;" Usage="agentAdministrationClient.DownloadAgentCodeAsync (agentName, path, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;BinaryData&gt; DownloadAgentCodeAsync (string agentName, string path, string agentVersion = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.BinaryData&gt; DownloadAgentCodeAsync(string agentName, string path, string agentVersion, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.DownloadAgentCodeAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DownloadAgentCodeAsync (agentName As String, path As String, Optional agentVersion As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="abstract member DownloadAgentCodeAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;BinaryData&gt;&#xA;override this.DownloadAgentCodeAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;BinaryData&gt;" Usage="agentAdministrationClient.DownloadAgentCodeAsync (agentName, path, agentVersion, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
@@ -1483,11 +1629,16 @@
       <Parameters>
         <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="path" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="agentVersion" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="agentName"> The name of the agent whose latest-version code zip should be downloaded. </param>
         <param name="path"> The path to save the agent code. </param>
+        <param name="agentVersion">
+            The version of the agent whose code zip should be downloaded.
+            If omitted, the latest version's code zip is returned.
+            </param>
         <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
             Download the code zip for the latest version of a code-based hosted agent and unpacks it to the user directory; returns the zip content as a binary data.
@@ -1500,6 +1651,142 @@
           <paramref name="agentName" /> or <paramref name="path" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="agentName" /> or <paramref name="path" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAgent">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult EnableAgent (string agentName, System.ClientModel.Primitives.RequestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult EnableAgent(string agentName, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.EnableAgent(System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EnableAgent (agentName As String, options As RequestOptions) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member EnableAgent : string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.EnableAgent : string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="agentAdministrationClient.EnableAgent (agentName, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to enable. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Enables the specified agent, allowing it to accept new sessions and process requests.
+            This operation is idempotent — enabling an already-enabled agent returns success with no side effects.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAgent">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult EnableAgent (string agentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult EnableAgent(string agentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.EnableAgent(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EnableAgent (agentName As String, Optional cancellationToken As CancellationToken = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member EnableAgent : string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&#xA;override this.EnableAgent : string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult" Usage="agentAdministrationClient.EnableAgent (agentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to enable. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Enables the specified agent, allowing it to accept new sessions and process requests.
+            This operation is idempotent — enabling an already-enabled agent returns success with no side effects.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; EnableAgentAsync (string agentName, System.ClientModel.Primitives.RequestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; EnableAgentAsync(string agentName, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.EnableAgentAsync(System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EnableAgentAsync (agentName As String, options As RequestOptions) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member EnableAgentAsync : string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.EnableAgentAsync : string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="agentAdministrationClient.EnableAgentAsync (agentName, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to enable. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Enables the specified agent, allowing it to accept new sessions and process requests.
+            This operation is idempotent — enabling an already-enabled agent returns success with no side effects.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; EnableAgentAsync (string agentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; EnableAgentAsync(string agentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.Agents.AgentAdministrationClient.EnableAgentAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function EnableAgentAsync (agentName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member EnableAgentAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.EnableAgentAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="agentAdministrationClient.EnableAgentAsync (agentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects.Agents</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="agentName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="agentName"> The name of the agent to enable. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Enables the specified agent, allowing it to accept new sessions and process requests.
+            This operation is idempotent — enabling an already-enabled agent returns success with no side effects.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="agentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="agentName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
@@ -1661,9 +1948,8 @@
       <ReturnValue>
         <ReturnType>Azure.AI.Projects.Agents.AgentOptimizationJobs</ReturnType>
       </ReturnValue>
-      <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary> Gets the lazily-initialized agent optimization jobs sub-client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1782,9 +2068,8 @@
       <ReturnValue>
         <ReturnType>Azure.AI.Projects.Agents.AgentSessionFiles</ReturnType>
       </ReturnValue>
-      <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary> Gets the lazily-initialized agent session files sub-client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1803,9 +2088,8 @@
       <ReturnValue>
         <ReturnType>Azure.AI.Projects.Agents.ProjectAgentSkills</ReturnType>
       </ReturnValue>
-      <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary> Gets the lazily-initialized project agent skills sub-client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1824,9 +2108,8 @@
       <ReturnValue>
         <ReturnType>Azure.AI.Projects.Agents.AgentToolboxes</ReturnType>
       </ReturnValue>
-      <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary> Gets the lazily-initialized agent toolboxes sub-client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

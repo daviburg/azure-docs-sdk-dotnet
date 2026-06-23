@@ -15,7 +15,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -76,19 +76,43 @@
         <Parameter Name="aaaaRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="aaaaRecords"> The list of AAAA records in the record set. </param>
-        <summary> Initializes a new instance of DnsAaaaRecordData. </summary>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsAaaaRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsAaaaRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsAaaaRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo DnsAaaaRecordInfo (System.Net.IPAddress iPv6Address = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo DnsAaaaRecordInfo(class System.Net.IPAddress iPv6Address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsAaaaRecordInfo(System.Net.IPAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsAaaaRecordInfo (Optional iPv6Address As IPAddress = Nothing) As DnsAaaaRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsAaaaRecordInfo : System.Net.IPAddress -&gt; Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsAaaaRecordInfo iPv6Address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iPv6Address" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="iPv6Address"> The IPv6 address of this AAAA record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,19 +145,43 @@
         <Parameter Name="aRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="aRecords"> The list of A records in the record set. </param>
-        <summary> Initializes a new instance of DnsARecordData. </summary>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsARecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsARecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsARecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsARecordInfo DnsARecordInfo (System.Net.IPAddress iPv4Address = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsARecordInfo DnsARecordInfo(class System.Net.IPAddress iPv4Address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsARecordInfo(System.Net.IPAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsARecordInfo (Optional iPv4Address As IPAddress = Nothing) As DnsARecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsARecordInfo : System.Net.IPAddress -&gt; Azure.ResourceManager.Dns.Models.DnsARecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsARecordInfo iPv4Address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsARecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iPv4Address" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="iPv4Address"> The IPv4 address of this A record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsARecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -166,19 +214,47 @@
         <Parameter Name="caaRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
-        <param name="caaRecords"> The list of Caa records in the record set. </param>
-        <summary> Initializes a new instance of DnsCaaRecordData. </summary>
+        <param name="caaRecords"> The list of CAA records in the record set. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsCaaRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsCaaRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsCaaRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo DnsCaaRecordInfo (int? flags = default, string tag = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo DnsCaaRecordInfo(valuetype System.Nullable`1&lt;int32&gt; flags, string tag, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsCaaRecordInfo(System.Nullable{System.Int32},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsCaaRecordInfo (Optional flags As Nullable(Of Integer) = Nothing, Optional tag As String = Nothing, Optional value As String = Nothing) As DnsCaaRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsCaaRecordInfo : Nullable&lt;int&gt; * string * string -&gt; Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsCaaRecordInfo (flags, tag, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tag" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="flags"> The flags for this CAA record as an integer between 0 and 255. </param>
+        <param name="tag"> The tag for this CAA record. </param>
+        <param name="value"> The value for this CAA record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,19 +287,47 @@
         <Parameter Name="CnameRecordName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="CnameRecordName"> The canonical name for this CNAME record. </param>
-        <summary> Initializes a new instance of DnsCnameRecordData. </summary>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsCnameRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsCnameRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsDSRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsDSRecordInfo DnsDSRecordInfo (int? keyTag = default, int? algorithm = default, Azure.ResourceManager.Dns.Models.DSRecordDigest digest = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsDSRecordInfo DnsDSRecordInfo(valuetype System.Nullable`1&lt;int32&gt; keyTag, valuetype System.Nullable`1&lt;int32&gt; algorithm, class Azure.ResourceManager.Dns.Models.DSRecordDigest digest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsDSRecordInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.ResourceManager.Dns.Models.DSRecordDigest)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsDSRecordInfo (Optional keyTag As Nullable(Of Integer) = Nothing, Optional algorithm As Nullable(Of Integer) = Nothing, Optional digest As DSRecordDigest = Nothing) As DnsDSRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsDSRecordInfo : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.ResourceManager.Dns.Models.DSRecordDigest -&gt; Azure.ResourceManager.Dns.Models.DnsDSRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsDSRecordInfo (keyTag, algorithm, digest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsDSRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyTag" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="algorithm" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="digest" Type="Azure.ResourceManager.Dns.Models.DSRecordDigest" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="keyTag"> The key tag value is used to determine which DNSKEY Resource Record is used for signature verification. </param>
+        <param name="algorithm"> The security algorithm type represents the standard security algorithm number of the DNSKEY Resource Record. See: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml. </param>
+        <param name="digest"> The digest entity. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsDSRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -256,19 +360,79 @@
         <Parameter Name="mxRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="mxRecords"> The list of MX records in the record set. </param>
-        <summary> Initializes a new instance of DnsMXRecordData. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsDSRecordData" /> instance for mocking. </returns>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsMXRecordData" /> for mocking. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsMXRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsMXRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsMXRecordInfo DnsMXRecordInfo (int? preference = default, string exchange = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsMXRecordInfo DnsMXRecordInfo(valuetype System.Nullable`1&lt;int32&gt; preference, string exchange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsMXRecordInfo(System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsMXRecordInfo (Optional preference As Nullable(Of Integer) = Nothing, Optional exchange As String = Nothing) As DnsMXRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsMXRecordInfo : Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Dns.Models.DnsMXRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsMXRecordInfo (preference, exchange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsMXRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preference" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="exchange" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="preference"> The preference value for this MX record. </param>
+        <param name="exchange"> The domain name of the mail host for this MX record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsMXRecordInfo" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsNaptrRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo DnsNaptrRecordInfo (int? order = default, int? preference = default, string flags = default, string services = default, string regexp = default, string replacement = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo DnsNaptrRecordInfo(valuetype System.Nullable`1&lt;int32&gt; order, valuetype System.Nullable`1&lt;int32&gt; preference, string flags, string services, string regexp, string replacement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsNaptrRecordInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsNaptrRecordInfo (Optional order As Nullable(Of Integer) = Nothing, Optional preference As Nullable(Of Integer) = Nothing, Optional flags As String = Nothing, Optional services As String = Nothing, Optional regexp As String = Nothing, Optional replacement As String = Nothing) As DnsNaptrRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsNaptrRecordInfo : Nullable&lt;int&gt; * Nullable&lt;int&gt; * string * string * string * string -&gt; Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsNaptrRecordInfo (order, preference, flags, services, regexp, replacement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="order" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="preference" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="flags" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="services" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="regexp" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="replacement" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="order"> The order in which the NAPTR records MUST be processed in order to accurately represent the ordered list of rules. The ordering is from lowest to highest. Valid values: 0-65535. </param>
+        <param name="preference"> The preference specifies the order in which NAPTR records with equal 'order' values should be processed, low numbers being processed before high numbers. Valid values: 0-65535. </param>
+        <param name="flags"> The flags specific to DDDS applications. Values currently defined in RFC 3404 are uppercase and lowercase letters "A", "P", "S", and "U", and the empty string, "". Enclose Flags in quotation marks. </param>
+        <param name="services"> The services specific to DDDS applications. Enclose Services in quotation marks. </param>
+        <param name="regexp"> The regular expression that the DDDS application uses to convert an input value into an output value. For example: an IP phone system might use a regular expression to convert a phone number that is entered by a user into a SIP URI. Enclose the regular expression in quotation marks. Specify either a value for 'regexp' or a value for 'replacement'. </param>
+        <param name="replacement"> The replacement is a fully qualified domain name (FQDN) of the next domain name that you want the DDDS application to submit a DNS query for. The DDDS application replaces the input value with the value specified for replacement. Specify either a value for 'regexp' or a value for 'replacement'. If you specify a value for 'regexp', specify a dot (.) for 'replacement'. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -301,19 +465,43 @@
         <Parameter Name="nsRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="nsRecords"> The list of NS records in the record set. </param>
-        <summary> Initializes a new instance of DnsNSRecordData. </summary>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsNSRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsNSRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsNSRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsNSRecordInfo DnsNSRecordInfo (string dnsNSDomainName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsNSRecordInfo DnsNSRecordInfo(string dnsNSDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsNSRecordInfo(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsNSRecordInfo (Optional dnsNSDomainName As String = Nothing) As DnsNSRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsNSRecordInfo : string -&gt; Azure.ResourceManager.Dns.Models.DnsNSRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsNSRecordInfo dnsNSDomainName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsNSRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dnsNSDomainName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="dnsNSDomainName"> The name server name for this NS record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsNSRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -346,28 +534,52 @@
         <Parameter Name="ptrRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
-        <param name="ptrRecords"> The list of Ptr records in the record set. </param>
-        <summary> Initializes a new instance of DnsPtrRecordData. </summary>
+        <param name="ptrRecords"> The list of PTR records in the record set. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsPtrRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsPtrRecordData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DnsPtrRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo DnsPtrRecordInfo (string dnsPtrDomainName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo DnsPtrRecordInfo(string dnsPtrDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsPtrRecordInfo(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsPtrRecordInfo (Optional dnsPtrDomainName As String = Nothing) As DnsPtrRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsPtrRecordInfo : string -&gt; Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsPtrRecordInfo dnsPtrDomainName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dnsPtrDomainName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="dnsPtrDomainName"> The PTR target domain name for this PTR record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DnsRecordData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsRecordData DnsRecordData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ETag? etag, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata, long? ttl, string fqdn, string provisioningState, Azure.ResourceManager.Resources.Models.WritableSubResource targetResource, Azure.ResourceManager.Resources.Models.WritableSubResource trafficManagementProfile, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; aRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; aaaaRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; mxRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; nsRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; ptrRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; srvRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; txtRecords, string cname, Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo soaRecordInfo, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; caaRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; dsRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; tlsaRecords, System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; naptrRecords, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; serializedAdditionalRawData);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnsRecordData DnsRecordData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Nullable`1&lt;int64&gt; ttl, string fqdn, string provisioningState, class Azure.ResourceManager.Resources.Models.WritableSubResource targetResource, class Azure.ResourceManager.Resources.Models.WritableSubResource trafficManagementProfile, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; aRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; aaaaRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; mxRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; nsRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; ptrRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; srvRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; txtRecords, string cname, class Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo soaRecordInfo, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; caaRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; dsRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; tlsaRecords, class System.Collections.Generic.IList`1&lt;class Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; naptrRecords, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; serializedAdditionalRawData) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.ETag},System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int64},System.String,System.String,Azure.ResourceManager.Resources.Models.WritableSubResource,Azure.ResourceManager.Resources.Models.WritableSubResource,System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsARecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsMXRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsNSRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo},System.String,Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo,System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsDSRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo},System.Collections.Generic.IDictionary{System.String,System.BinaryData})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsRecordData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, etag As Nullable(Of ETag), metadata As IDictionary(Of String, String), ttl As Nullable(Of Long), fqdn As String, provisioningState As String, targetResource As WritableSubResource, trafficManagementProfile As WritableSubResource, aRecords As IList(Of DnsARecordInfo), aaaaRecords As IList(Of DnsAaaaRecordInfo), mxRecords As IList(Of DnsMXRecordInfo), nsRecords As IList(Of DnsNSRecordInfo), ptrRecords As IList(Of DnsPtrRecordInfo), srvRecords As IList(Of DnsSrvRecordInfo), txtRecords As IList(Of DnsTxtRecordInfo), cname As String, soaRecordInfo As DnsSoaRecordInfo, caaRecords As IList(Of DnsCaaRecordInfo), dsRecords As IList(Of DnsDSRecordInfo), tlsaRecords As IList(Of DnsTlsaRecordInfo), naptrRecords As IList(Of DnsNaptrRecordInfo), serializedAdditionalRawData As IDictionary(Of String, BinaryData)) As DnsRecordData" />
-      <MemberSignature Language="F#" Value="static member DnsRecordData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Nullable&lt;Azure.ETag&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * Nullable&lt;int64&gt; * string * string * Azure.ResourceManager.Resources.Models.WritableSubResource * Azure.ResourceManager.Resources.Models.WritableSubResource * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; * string * Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; * System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; -&gt; Azure.ResourceManager.Dns.DnsRecordData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordData (id, name, resourceType, systemData, etag, metadata, ttl, fqdn, provisioningState, targetResource, trafficManagementProfile, aRecords, aaaaRecords, mxRecords, nsRecords, ptrRecords, srvRecords, txtRecords, cname, soaRecordInfo, caaRecords, dsRecords, tlsaRecords, naptrRecords, serializedAdditionalRawData)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsRecordData DnsRecordData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Dns.Models.DnsRecordSetProperties properties = default, Azure.ETag? eTag = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnsRecordData DnsRecordData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Dns.Models.DnsRecordSetProperties properties, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; eTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.Dns.Models.DnsRecordSetProperties,System.Nullable{Azure.ETag})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsRecordData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional properties As DnsRecordSetProperties = Nothing, Optional eTag As Nullable(Of ETag) = Nothing) As DnsRecordData" />
+      <MemberSignature Language="F#" Value="static member DnsRecordData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.Dns.Models.DnsRecordSetProperties * Nullable&lt;Azure.ETag&gt; -&gt; Azure.ResourceManager.Dns.DnsRecordData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordData (id, name, resourceType, systemData, properties, eTag)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
@@ -381,56 +593,78 @@
         <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="etag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="ttl" Type="System.Nullable&lt;System.Int64&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="fqdn" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="provisioningState" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="targetResource" Type="Azure.ResourceManager.Resources.Models.WritableSubResource" Index="9" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="trafficManagementProfile" Type="Azure.ResourceManager.Resources.Models.WritableSubResource" Index="10" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="aRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="aaaaRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="mxRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="nsRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="ptrRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt;" Index="15" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="srvRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt;" Index="16" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="txtRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt;" Index="17" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cname" Type="System.String" Index="18" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="soaRecordInfo" Type="Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo" Index="19" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="caaRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt;" Index="20" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="dsRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt;" Index="21" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="tlsaRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt;" Index="22" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="naptrRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt;" Index="23" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="serializedAdditionalRawData" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="24" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.Dns.Models.DnsRecordSetProperties" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="etag"> The etag of the record set. </param>
+        <param name="id" />
+        <param name="name" />
+        <param name="resourceType" />
+        <param name="systemData" />
+        <param name="properties" />
+        <param name="eTag" />
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsRecordSetProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsRecordSetProperties DnsRecordSetProperties (System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, long? ttlInSeconds = default, string fqdn = default, string provisioningState = default, Azure.ResourceManager.Resources.Models.WritableSubResource targetResource = default, Azure.ResourceManager.Resources.Models.WritableSubResource trafficManagementProfile = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; dnsARecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; dnsAaaaRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; dnsMXRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; dnsNSRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; dnsPtrRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; dnsSrvRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; dnsTxtRecords = default, string cname = default, Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo dnsSoaRecord = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; dnsCaaRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; dnsDSRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; dnsTlsaRecords = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; dnsNaptrRecords = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsRecordSetProperties DnsRecordSetProperties(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Nullable`1&lt;int64&gt; ttlInSeconds, string fqdn, string provisioningState, class Azure.ResourceManager.Resources.Models.WritableSubResource targetResource, class Azure.ResourceManager.Resources.Models.WritableSubResource trafficManagementProfile, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; dnsARecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; dnsAaaaRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; dnsMXRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; dnsNSRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; dnsPtrRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; dnsSrvRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; dnsTxtRecords, string cname, class Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo dnsSoaRecord, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; dnsCaaRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; dnsDSRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; dnsTlsaRecords, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; dnsNaptrRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordSetProperties(System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int64},System.String,System.String,Azure.ResourceManager.Resources.Models.WritableSubResource,Azure.ResourceManager.Resources.Models.WritableSubResource,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsARecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsMXRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsNSRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo},System.String,Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsDSRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsRecordSetProperties (Optional metadata As IDictionary(Of String, String) = Nothing, Optional ttlInSeconds As Nullable(Of Long) = Nothing, Optional fqdn As String = Nothing, Optional provisioningState As String = Nothing, Optional targetResource As WritableSubResource = Nothing, Optional trafficManagementProfile As WritableSubResource = Nothing, Optional dnsARecords As IEnumerable(Of DnsARecordInfo) = Nothing, Optional dnsAaaaRecords As IEnumerable(Of DnsAaaaRecordInfo) = Nothing, Optional dnsMXRecords As IEnumerable(Of DnsMXRecordInfo) = Nothing, Optional dnsNSRecords As IEnumerable(Of DnsNSRecordInfo) = Nothing, Optional dnsPtrRecords As IEnumerable(Of DnsPtrRecordInfo) = Nothing, Optional dnsSrvRecords As IEnumerable(Of DnsSrvRecordInfo) = Nothing, Optional dnsTxtRecords As IEnumerable(Of DnsTxtRecordInfo) = Nothing, Optional cname As String = Nothing, Optional dnsSoaRecord As DnsSoaRecordInfo = Nothing, Optional dnsCaaRecords As IEnumerable(Of DnsCaaRecordInfo) = Nothing, Optional dnsDSRecords As IEnumerable(Of DnsDSRecordInfo) = Nothing, Optional dnsTlsaRecords As IEnumerable(Of DnsTlsaRecordInfo) = Nothing, Optional dnsNaptrRecords As IEnumerable(Of DnsNaptrRecordInfo) = Nothing) As DnsRecordSetProperties" />
+      <MemberSignature Language="F#" Value="static member DnsRecordSetProperties : System.Collections.Generic.IDictionary&lt;string, string&gt; * Nullable&lt;int64&gt; * string * string * Azure.ResourceManager.Resources.Models.WritableSubResource * Azure.ResourceManager.Resources.Models.WritableSubResource * seq&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt; * string * Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo * seq&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt; -&gt; Azure.ResourceManager.Dns.Models.DnsRecordSetProperties" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordSetProperties (metadata, ttlInSeconds, fqdn, provisioningState, targetResource, trafficManagementProfile, dnsARecords, dnsAaaaRecords, dnsMXRecords, dnsNSRecords, dnsPtrRecords, dnsSrvRecords, dnsTxtRecords, cname, dnsSoaRecord, dnsCaaRecords, dnsDSRecords, dnsTlsaRecords, dnsNaptrRecords)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsRecordSetProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="ttlInSeconds" Type="System.Nullable&lt;System.Int64&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="fqdn" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetResource" Type="Azure.ResourceManager.Resources.Models.WritableSubResource" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="trafficManagementProfile" Type="Azure.ResourceManager.Resources.Models.WritableSubResource" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsARecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsARecordInfo&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsAaaaRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsMXRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsMXRecordInfo&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsNSRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsNSRecordInfo&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsPtrRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsSrvRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsTxtRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cname" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsSoaRecord" Type="Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsCaaRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo&gt;" Index="15" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsDSRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsDSRecordInfo&gt;" Index="16" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsTlsaRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo&gt;" Index="17" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dnsNaptrRecords" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo&gt;" Index="18" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The TTL (time-to-live) of the records in the record set. </param>
+        <param name="ttlInSeconds"> The TTL (time-to-live) of the records in the record set. </param>
         <param name="fqdn"> Fully qualified domain name of the record set. </param>
         <param name="provisioningState"> provisioning State of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="trafficManagementProfile"> A reference to an azure traffic manager profile resource from where the dns resource value is taken. </param>
-        <param name="aRecords"> The list of A records in the record set. </param>
-        <param name="aaaaRecords"> The list of AAAA records in the record set. </param>
-        <param name="mxRecords"> The list of MX records in the record set. </param>
-        <param name="nsRecords"> The list of NS records in the record set. </param>
-        <param name="ptrRecords"> The list of PTR records in the record set. </param>
-        <param name="srvRecords"> The list of SRV records in the record set. </param>
-        <param name="txtRecords"> The list of TXT records in the record set. </param>
+        <param name="dnsARecords"> The list of A records in the record set. </param>
+        <param name="dnsAaaaRecords"> The list of AAAA records in the record set. </param>
+        <param name="dnsMXRecords"> The list of MX records in the record set. </param>
+        <param name="dnsNSRecords"> The list of NS records in the record set. </param>
+        <param name="dnsPtrRecords"> The list of PTR records in the record set. </param>
+        <param name="dnsSrvRecords"> The list of SRV records in the record set. </param>
+        <param name="dnsTxtRecords"> The list of TXT records in the record set. </param>
         <param name="cname"> The canonical name for this CNAME record. </param>
-        <param name="soaRecordInfo"> The SOA record in the record set. </param>
-        <param name="caaRecords"> The list of CAA records in the record set. </param>
-        <param name="dsRecords"> The list of DS records in the record set. </param>
-        <param name="tlsaRecords"> The list of TLSA records in the record set. </param>
-        <param name="naptrRecords"> The list of NAPTR records in the record set. </param>
-        <param name="serializedAdditionalRawData"> Keeps track of any properties unknown to the library. </param>
-        <summary> Initializes a new instance of <see cref="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsRecordData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.ETag},System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int64},System.String,System.String,Azure.ResourceManager.Resources.Models.WritableSubResource,Azure.ResourceManager.Resources.Models.WritableSubResource,System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsARecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsAaaaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsMXRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsNSRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsPtrRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo},System.String,Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo,System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsCaaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsDSRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo},System.Collections.Generic.IList{Azure.ResourceManager.Dns.Models.DnsNaptrRecordInfo},System.Collections.Generic.IDictionary{System.String,System.BinaryData})" />. </summary>
-        <returns>To be added.</returns>
+        <param name="dnsSoaRecord"> The SOA record in the record set. </param>
+        <param name="dnsCaaRecords"> The list of CAA records in the record set. </param>
+        <param name="dnsDSRecords"> The list of DS records in the record set. </param>
+        <param name="dnsTlsaRecords"> The list of TLSA records in the record set. </param>
+        <param name="dnsNaptrRecords"> The list of NAPTR records in the record set. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsRecordSetProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -446,6 +680,12 @@
         <AssemblyVersion>1.1.1.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Dns.Models.DnsResourceReference</ReturnType>
       </ReturnValue>
@@ -458,6 +698,56 @@
         <param name="targetResourceId"> A reference to an azure resource from where the dns resource value is taken. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.Models.DnsResourceReference" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsResourceReference" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsResourceReference">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsResourceReference DnsResourceReference (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; dnsResources = default, Azure.ResourceManager.Resources.Models.WritableSubResource targetResource = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsResourceReference DnsResourceReference(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; dnsResources, class Azure.ResourceManager.Resources.Models.WritableSubResource targetResource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsResourceReference(System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},Azure.ResourceManager.Resources.Models.WritableSubResource)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsResourceReference (Optional dnsResources As IEnumerable(Of WritableSubResource) = Nothing, Optional targetResource As WritableSubResource = Nothing) As DnsResourceReference" />
+      <MemberSignature Language="F#" Value="static member DnsResourceReference : seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * Azure.ResourceManager.Resources.Models.WritableSubResource -&gt; Azure.ResourceManager.Dns.Models.DnsResourceReference" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsResourceReference (dnsResources, targetResource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsResourceReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dnsResources" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetResource" Type="Azure.ResourceManager.Resources.Models.WritableSubResource" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="dnsResources"> A list of dns Records. </param>
+        <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsResourceReference" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsResourceReferenceContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsResourceReferenceContent DnsResourceReferenceContent (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; targetResources = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsResourceReferenceContent DnsResourceReferenceContent(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; targetResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsResourceReferenceContent(System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsResourceReferenceContent (Optional targetResources As IEnumerable(Of WritableSubResource) = Nothing) As DnsResourceReferenceContent" />
+      <MemberSignature Language="F#" Value="static member DnsResourceReferenceContent : seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; -&gt; Azure.ResourceManager.Dns.Models.DnsResourceReferenceContent" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsResourceReferenceContent targetResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsResourceReferenceContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResources" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="targetResources"> A list of references to azure resources for which referencing dns records need to be queried. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsResourceReferenceContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -487,11 +777,11 @@
       </Docs>
     </Member>
     <Member MemberName="DnssecConfigData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnssecConfigData DnssecConfigData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ETag? etag = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnssecConfigData DnssecConfigData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, string provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnssecConfigData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.ETag},System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsSigningKey})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DnssecConfigData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional etag As Nullable(Of ETag) = Nothing, Optional provisioningState As String = Nothing, Optional signingKeys As IEnumerable(Of DnsSigningKey) = Nothing) As DnssecConfigData" />
-      <MemberSignature Language="F#" Value="static member DnssecConfigData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Nullable&lt;Azure.ETag&gt; * string * seq&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; -&gt; Azure.ResourceManager.Dns.DnssecConfigData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnssecConfigData (id, name, resourceType, systemData, etag, provisioningState, signingKeys)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnssecConfigData DnssecConfigData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys = default, Azure.ETag? eTag = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnssecConfigData DnssecConfigData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; eTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnssecConfigData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsSigningKey},System.Nullable{Azure.ETag})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnssecConfigData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional provisioningState As String = Nothing, Optional signingKeys As IEnumerable(Of DnsSigningKey) = Nothing, Optional eTag As Nullable(Of ETag) = Nothing) As DnssecConfigData" />
+      <MemberSignature Language="F#" Value="static member DnssecConfigData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * seq&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; * Nullable&lt;Azure.ETag&gt; -&gt; Azure.ResourceManager.Dns.DnssecConfigData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnssecConfigData (id, name, resourceType, systemData, provisioningState, signingKeys, eTag)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
@@ -505,19 +795,19 @@
         <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="etag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="provisioningState" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="signingKeys" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="signingKeys" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="etag"> The etag of the DNSSEC configuration. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="provisioningState"> Provisioning State of the DNSSEC configuration. </param>
         <param name="signingKeys"> The list of signing keys. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnssecConfigData" />. </summary>
+        <param name="eTag"> The etag of the DNSSEC configuration. </param>
+        <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnssecConfigData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -585,19 +875,55 @@
         <Parameter Name="soaRecords" Type="Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
         <param name="soaRecords"> The SOA record in the record set. </param>
-        <summary> Initializes a new instance of DnsSoaRecordData. </summary>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsSoaRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsSoaRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsSoaRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo DnsSoaRecordInfo (string host = default, string email = default, long? serialNumber = default, long? refreshTimeInSeconds = default, long? retryTimeInSeconds = default, long? expireTimeInSeconds = default, long? minimumTtlInSeconds = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo DnsSoaRecordInfo(string host, string email, valuetype System.Nullable`1&lt;int64&gt; serialNumber, valuetype System.Nullable`1&lt;int64&gt; refreshTimeInSeconds, valuetype System.Nullable`1&lt;int64&gt; retryTimeInSeconds, valuetype System.Nullable`1&lt;int64&gt; expireTimeInSeconds, valuetype System.Nullable`1&lt;int64&gt; minimumTtlInSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsSoaRecordInfo(System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsSoaRecordInfo (Optional host As String = Nothing, Optional email As String = Nothing, Optional serialNumber As Nullable(Of Long) = Nothing, Optional refreshTimeInSeconds As Nullable(Of Long) = Nothing, Optional retryTimeInSeconds As Nullable(Of Long) = Nothing, Optional expireTimeInSeconds As Nullable(Of Long) = Nothing, Optional minimumTtlInSeconds As Nullable(Of Long) = Nothing) As DnsSoaRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsSoaRecordInfo : string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; -&gt; Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsSoaRecordInfo (host, email, serialNumber, refreshTimeInSeconds, retryTimeInSeconds, expireTimeInSeconds, minimumTtlInSeconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="email" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="serialNumber" Type="System.Nullable&lt;System.Int64&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="refreshTimeInSeconds" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="retryTimeInSeconds" Type="System.Nullable&lt;System.Int64&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expireTimeInSeconds" Type="System.Nullable&lt;System.Int64&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="minimumTtlInSeconds" Type="System.Nullable&lt;System.Int64&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="host"> The domain name of the authoritative name server for this SOA record. </param>
+        <param name="email"> The email contact for this SOA record. </param>
+        <param name="serialNumber"> The serial number for this SOA record. </param>
+        <param name="refreshTimeInSeconds"> The refresh value for this SOA record. </param>
+        <param name="retryTimeInSeconds"> The retry time for this SOA record. </param>
+        <param name="expireTimeInSeconds"> The expire time for this SOA record. </param>
+        <param name="minimumTtlInSeconds"> The minimum value for this SOA record. By convention this is used to determine the negative caching duration. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsSoaRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -630,19 +956,79 @@
         <Parameter Name="srvRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
-        <param name="srvRecords"> The list of Srv records in the record set. </param>
-        <summary> Initializes a new instance of DnsSrvRecordData. </summary>
+        <param name="srvRecords"> The list of SRV records in the record set. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsSrvRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo DnsSrvRecordInfo (int? priority = default, int? weight = default, int? port = default, string target = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo DnsSrvRecordInfo(valuetype System.Nullable`1&lt;int32&gt; priority, valuetype System.Nullable`1&lt;int32&gt; weight, valuetype System.Nullable`1&lt;int32&gt; port, string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsSrvRecordInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsSrvRecordInfo (Optional priority As Nullable(Of Integer) = Nothing, Optional weight As Nullable(Of Integer) = Nothing, Optional port As Nullable(Of Integer) = Nothing, Optional target As String = Nothing) As DnsSrvRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsSrvRecordInfo : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsSrvRecordInfo (priority, weight, port, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="weight" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="port" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="target" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="priority"> The priority value for this SRV record. </param>
+        <param name="weight"> The weight value for this SRV record. </param>
+        <param name="port"> The port value for this SRV record. </param>
+        <param name="target"> The target domain name for this SRV record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsSrvRecordInfo" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsTlsaRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo DnsTlsaRecordInfo (int? usage = default, int? selector = default, int? matchingType = default, string certAssociationData = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo DnsTlsaRecordInfo(valuetype System.Nullable`1&lt;int32&gt; usage, valuetype System.Nullable`1&lt;int32&gt; selector, valuetype System.Nullable`1&lt;int32&gt; matchingType, string certAssociationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsTlsaRecordInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsTlsaRecordInfo (Optional usage As Nullable(Of Integer) = Nothing, Optional selector As Nullable(Of Integer) = Nothing, Optional matchingType As Nullable(Of Integer) = Nothing, Optional certAssociationData As String = Nothing) As DnsTlsaRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsTlsaRecordInfo : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsTlsaRecordInfo (usage, selector, matchingType, certAssociationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usage" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="selector" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="matchingType" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="certAssociationData" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="usage"> The usage specifies the provided association that will be used to match the certificate presented in the TLS handshake. </param>
+        <param name="selector"> The selector specifies which part of the TLS certificate presented by the server will be matched against the association data. </param>
+        <param name="matchingType"> The matching type specifies how the certificate association is presented. </param>
+        <param name="certAssociationData"> This specifies the certificate association data to be matched. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsTlsaRecordInfo" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -675,30 +1061,52 @@
         <Parameter Name="txtRecords" Type="System.Collections.Generic.IList&lt;Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> The resource identifier. </param>
+        <param name="name"> The resource name. </param>
+        <param name="resourceType"> The resource type. </param>
+        <param name="systemData"> The system data. </param>
         <param name="etag"> The etag of the record set. </param>
         <param name="metadata"> The metadata attached to the record set. </param>
-        <param name="ttl"> The Ttl (time-to-live) of the records in the record set. </param>
-        <param name="fqdn"> Fully qualified domain name of the record set. </param>
-        <param name="provisioningState"> provisioning State of the record set. </param>
+        <param name="ttl"> The TTL of the record set. </param>
+        <param name="fqdn"> The fully qualified domain name of the record set. </param>
+        <param name="provisioningState"> The provisioning state of the record set. </param>
         <param name="targetResource"> A reference to an azure resource from where the dns resource value is taken. </param>
-        <param name="txtRecords"> The list of Txt records in the record set. </param>
-        <summary> Initializes a new instance of DnsTxtRecordData. </summary>
+        <param name="txtRecords"> The list of TXT records in the record set. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsTxtRecordData" /> for mocking. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsTxtRecordData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DnsTxtRecordInfo">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo DnsTxtRecordInfo (System.Collections.Generic.IEnumerable&lt;string&gt; values = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo DnsTxtRecordInfo(class System.Collections.Generic.IEnumerable`1&lt;string&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsTxtRecordInfo(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsTxtRecordInfo (Optional values As IEnumerable(Of String) = Nothing) As DnsTxtRecordInfo" />
+      <MemberSignature Language="F#" Value="static member DnsTxtRecordInfo : seq&lt;string&gt; -&gt; Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsTxtRecordInfo values" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="values"> The text value of this TXT record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsTxtRecordInfo" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DnsZoneData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsZoneData DnsZoneData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ETag? etag = default, long? maxNumberOfRecords = default, long? maxNumberOfRecordsPerRecord = default, long? numberOfRecords = default, System.Collections.Generic.IEnumerable&lt;string&gt; nameServers = default, Azure.ResourceManager.Dns.Models.DnsZoneType? zoneType = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsZoneData DnsZoneData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ETag? etag = default, long? maxNumberOfRecords = default, long? maxNumberOfRecordsPerRecord = default, long? numberOfRecords = default, System.Collections.Generic.IEnumerable&lt;string&gt; nameServers = default, Azure.ResourceManager.Dns.Models.DnsZoneType? zoneType = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnsZoneData DnsZoneData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecords, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecordsPerRecord, valuetype System.Nullable`1&lt;int64&gt; numberOfRecords, class System.Collections.Generic.IEnumerable`1&lt;string&gt; nameServers, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Dns.Models.DnsZoneType&gt; zoneType, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{Azure.ETag},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Dns.Models.DnsZoneType},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZoneData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional etag As Nullable(Of ETag) = Nothing, Optional maxNumberOfRecords As Nullable(Of Long) = Nothing, Optional maxNumberOfRecordsPerRecord As Nullable(Of Long) = Nothing, Optional numberOfRecords As Nullable(Of Long) = Nothing, Optional nameServers As IEnumerable(Of String) = Nothing, Optional zoneType As Nullable(Of DnsZoneType) = Nothing, Optional registrationVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional resolutionVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing) As DnsZoneData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZoneData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional etag As Nullable(Of ETag) = Nothing, Optional maxNumberOfRecords As Nullable(Of Long) = Nothing, Optional maxNumberOfRecordsPerRecord As Nullable(Of Long) = Nothing, Optional numberOfRecords As Nullable(Of Long) = Nothing, Optional nameServers As IEnumerable(Of String) = Nothing, Optional zoneType As Nullable(Of DnsZoneType) = Nothing, Optional registrationVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional resolutionVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing) As DnsZoneData" />
       <MemberSignature Language="F#" Value="static member DnsZoneData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;Azure.ETag&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Dns.Models.DnsZoneType&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; -&gt; Azure.ResourceManager.Dns.DnsZoneData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData (id, name, resourceType, systemData, tags, location, etag, maxNumberOfRecords, maxNumberOfRecordsPerRecord, numberOfRecords, nameServers, zoneType, registrationVirtualNetworks, resolutionVirtualNetworks)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsZoneData DnsZoneData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ETag? etag, long? maxNumberOfRecords, long? maxNumberOfRecordsPerRecord, long? numberOfRecords, System.Collections.Generic.IEnumerable&lt;string&gt; nameServers, Azure.ResourceManager.Dns.Models.DnsZoneType? zoneType, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZoneData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, etag As Nullable(Of ETag), maxNumberOfRecords As Nullable(Of Long), maxNumberOfRecordsPerRecord As Nullable(Of Long), numberOfRecords As Nullable(Of Long), nameServers As IEnumerable(Of String), zoneType As Nullable(Of DnsZoneType), registrationVirtualNetworks As IEnumerable(Of WritableSubResource), resolutionVirtualNetworks As IEnumerable(Of WritableSubResource)) As DnsZoneData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
@@ -751,11 +1159,11 @@
       </Docs>
     </Member>
     <Member MemberName="DnsZoneData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsZoneData DnsZoneData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ETag? etag = default, long? maxNumberOfRecords = default, long? maxNumberOfRecordsPerRecord = default, long? numberOfRecords = default, System.Collections.Generic.IEnumerable&lt;string&gt; nameServers = default, Azure.ResourceManager.Dns.Models.DnsZoneType? zoneType = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnsZoneData DnsZoneData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecords, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecordsPerRecord, valuetype System.Nullable`1&lt;int64&gt; numberOfRecords, class System.Collections.Generic.IEnumerable`1&lt;string&gt; nameServers, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Dns.Models.DnsZoneType&gt; zoneType, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{Azure.ETag},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Dns.Models.DnsZoneType},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsSigningKey})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZoneData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional etag As Nullable(Of ETag) = Nothing, Optional maxNumberOfRecords As Nullable(Of Long) = Nothing, Optional maxNumberOfRecordsPerRecord As Nullable(Of Long) = Nothing, Optional numberOfRecords As Nullable(Of Long) = Nothing, Optional nameServers As IEnumerable(Of String) = Nothing, Optional zoneType As Nullable(Of DnsZoneType) = Nothing, Optional registrationVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional resolutionVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional signingKeys As IEnumerable(Of DnsSigningKey) = Nothing) As DnsZoneData" />
-      <MemberSignature Language="F#" Value="static member DnsZoneData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;Azure.ETag&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Dns.Models.DnsZoneType&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; -&gt; Azure.ResourceManager.Dns.DnsZoneData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData (id, name, resourceType, systemData, tags, location, etag, maxNumberOfRecords, maxNumberOfRecordsPerRecord, numberOfRecords, nameServers, zoneType, registrationVirtualNetworks, resolutionVirtualNetworks, signingKeys)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.DnsZoneData DnsZoneData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, long? maxNumberOfRecords = default, long? maxNumberOfRecordsPerRecord = default, long? numberOfRecords = default, System.Collections.Generic.IEnumerable&lt;string&gt; nameServers = default, Azure.ResourceManager.Dns.Models.DnsZoneType? zoneType = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys = default, Azure.ETag? eTag = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.DnsZoneData DnsZoneData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecords, valuetype System.Nullable`1&lt;int64&gt; maxNumberOfRecordsPerRecord, valuetype System.Nullable`1&lt;int64&gt; numberOfRecords, class System.Collections.Generic.IEnumerable`1&lt;string&gt; nameServers, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Dns.Models.DnsZoneType&gt; zoneType, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; registrationVirtualNetworks, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; resolutionVirtualNetworks, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; signingKeys, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; eTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Dns.Models.DnsZoneType},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Dns.Models.DnsSigningKey},System.Nullable{Azure.ETag})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZoneData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional maxNumberOfRecords As Nullable(Of Long) = Nothing, Optional maxNumberOfRecordsPerRecord As Nullable(Of Long) = Nothing, Optional numberOfRecords As Nullable(Of Long) = Nothing, Optional nameServers As IEnumerable(Of String) = Nothing, Optional zoneType As Nullable(Of DnsZoneType) = Nothing, Optional registrationVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional resolutionVirtualNetworks As IEnumerable(Of WritableSubResource) = Nothing, Optional signingKeys As IEnumerable(Of DnsSigningKey) = Nothing, Optional eTag As Nullable(Of ETag) = Nothing) As DnsZoneData" />
+      <MemberSignature Language="F#" Value="static member DnsZoneData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Dns.Models.DnsZoneType&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * seq&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt; * Nullable&lt;Azure.ETag&gt; -&gt; Azure.ResourceManager.Dns.DnsZoneData" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZoneData (id, name, resourceType, systemData, tags, location, maxNumberOfRecords, maxNumberOfRecordsPerRecord, numberOfRecords, nameServers, zoneType, registrationVirtualNetworks, resolutionVirtualNetworks, signingKeys, eTag)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
@@ -771,24 +1179,23 @@
         <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="etag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="maxNumberOfRecords" Type="System.Nullable&lt;System.Int64&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="maxNumberOfRecordsPerRecord" Type="System.Nullable&lt;System.Int64&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="numberOfRecords" Type="System.Nullable&lt;System.Int64&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="nameServers" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="zoneType" Type="System.Nullable&lt;Azure.ResourceManager.Dns.Models.DnsZoneType&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="registrationVirtualNetworks" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resolutionVirtualNetworks" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="signingKeys" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxNumberOfRecords" Type="System.Nullable&lt;System.Int64&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxNumberOfRecordsPerRecord" Type="System.Nullable&lt;System.Int64&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="numberOfRecords" Type="System.Nullable&lt;System.Int64&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="nameServers" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="zoneType" Type="System.Nullable&lt;Azure.ResourceManager.Dns.Models.DnsZoneType&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="registrationVirtualNetworks" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resolutionVirtualNetworks" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="signingKeys" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Dns.Models.DnsSigningKey&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="etag"> The etag of the zone. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="maxNumberOfRecords"> The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored. </param>
         <param name="maxNumberOfRecordsPerRecord"> The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored. </param>
         <param name="numberOfRecords"> The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored. </param>
@@ -797,8 +1204,59 @@
         <param name="registrationVirtualNetworks"> A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private. </param>
         <param name="resolutionVirtualNetworks"> A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private. </param>
         <param name="signingKeys"> The list of signing keys. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Dns.DnsZoneData" />. </summary>
+        <param name="eTag"> The etag of the zone. </param>
+        <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Dns.DnsZoneData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsZonePatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DnsZonePatch DnsZonePatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DnsZonePatch DnsZonePatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZonePatch(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DnsZonePatch (Optional tags As IDictionary(Of String, String) = Nothing) As DnsZonePatch" />
+      <MemberSignature Language="F#" Value="static member DnsZonePatch : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Dns.Models.DnsZonePatch" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DnsZonePatch tags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DnsZonePatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Resource tags. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DnsZonePatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DSRecordDigest">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Dns.Models.DSRecordDigest DSRecordDigest (int? algorithmType = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Dns.Models.DSRecordDigest DSRecordDigest(valuetype System.Nullable`1&lt;int32&gt; algorithmType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DSRecordDigest(System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DSRecordDigest (Optional algorithmType As Nullable(Of Integer) = Nothing, Optional value As String = Nothing) As DSRecordDigest" />
+      <MemberSignature Language="F#" Value="static member DSRecordDigest : Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Dns.Models.DSRecordDigest" Usage="Azure.ResourceManager.Dns.Models.ArmDnsModelFactory.DSRecordDigest (algorithmType, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.Models.DSRecordDigest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithmType" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="algorithmType"> The digest algorithm type represents the standard digest algorithm number used to construct the digest. See: https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml. </param>
+        <param name="value"> The digest value is a cryptographic hash value of the referenced DNSKEY Resource Record. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Dns.Models.DSRecordDigest" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

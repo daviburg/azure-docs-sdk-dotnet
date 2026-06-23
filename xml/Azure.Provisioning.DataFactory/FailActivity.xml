@@ -1,0 +1,116 @@
+<Type Name="FailActivity" FullName="Azure.Provisioning.DataFactory.FailActivity">
+  <TypeSignature Language="C#" Value="public class FailActivity : Azure.Provisioning.DataFactory.ControlActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FailActivity extends Azure.Provisioning.DataFactory.ControlActivity" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.FailActivity" />
+  <TypeSignature Language="VB.NET" Value="Public Class FailActivity&#xA;Inherits ControlActivity" />
+  <TypeSignature Language="F#" Value="type FailActivity = class&#xA;    inherit ControlActivity" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.ControlActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This activity will fail within its own scope and output a custom error
+            message and error code. The error message and code can provided either as
+            a string literal or as an expression that can be evaluated to a string at
+            runtime. The activity scope can be the whole pipeline or a control
+            activity (e.g. foreach, switch, until), if the fail activity is contained
+            in it.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FailActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.FailActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new FailActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.FailActivity.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="failActivity.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of FailActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; ErrorCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.FailActivity.ErrorCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorCode As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.FailActivity.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The error code that categorizes the error type of the Fail activity. It
+            can be dynamic content that's evaluated to a non empty/blank
+            string at runtime. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Message" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.FailActivity.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Property Message As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Message : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.FailActivity.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The error message that surfaced in the Fail activity. It can be dynamic
+            content that's evaluated to a non empty/blank string at runtime.
+            Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

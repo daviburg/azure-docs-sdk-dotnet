@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> The DataMap service client. </summary>
+    <summary> The DataMapClient. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,6 +34,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataMapClient (Azure.Analytics.Purview.DataMap.DataMapClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Analytics.Purview.DataMap.DataMapClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.#ctor(Azure.Analytics.Purview.DataMap.DataMapClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As DataMapClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.Analytics.Purview.DataMap.DataMapClient : Azure.Analytics.Purview.DataMap.DataMapClientSettings -&gt; Azure.Analytics.Purview.DataMap.DataMapClient" Usage="new Azure.Analytics.Purview.DataMap.DataMapClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.Analytics.Purview.DataMap.DataMapClientSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for DataMapClient. </param>
+        <summary> Initializes a new instance of DataMapClient from a <see cref="T:Azure.Analytics.Purview.DataMap.DataMapClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DataMapClient (Uri endpoint, Azure.Core.TokenCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.Core.TokenCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.#ctor(System.Uri,Azure.Core.TokenCredential)" />
@@ -49,8 +69,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> The <see cref="T:System.Uri" /> to use. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of DataMapClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -74,8 +94,8 @@
         <Parameter Name="options" Type="Azure.Analytics.Purview.DataMap.DataMapClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> The <see cref="T:System.Uri" /> to use. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of DataMapClient. </summary>
         <remarks>To be added.</remarks>
@@ -84,11 +104,11 @@
       </Docs>
     </Member>
     <Member MemberName="GetDiscoveryClient">
-      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Discovery GetDiscoveryClient (string apiVersion = &quot;2023-09-01&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Discovery GetDiscoveryClient(string apiVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetDiscoveryClient(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDiscoveryClient (Optional apiVersion As String = &quot;2023-09-01&quot;) As Discovery" />
-      <MemberSignature Language="F#" Value="abstract member GetDiscoveryClient : string -&gt; Azure.Analytics.Purview.DataMap.Discovery&#xA;override this.GetDiscoveryClient : string -&gt; Azure.Analytics.Purview.DataMap.Discovery" Usage="dataMapClient.GetDiscoveryClient apiVersion" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Discovery GetDiscoveryClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Discovery GetDiscoveryClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetDiscoveryClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDiscoveryClient () As Discovery" />
+      <MemberSignature Language="F#" Value="abstract member GetDiscoveryClient : unit -&gt; Azure.Analytics.Purview.DataMap.Discovery&#xA;override this.GetDiscoveryClient : unit -&gt; Azure.Analytics.Purview.DataMap.Discovery" Usage="dataMapClient.GetDiscoveryClient " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
@@ -97,24 +117,19 @@
       <ReturnValue>
         <ReturnType>Azure.Analytics.Purview.DataMap.Discovery</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="apiVersion" Type="System.String" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="apiVersion"> The API version to use for this operation. </param>
         <summary> Initializes a new instance of Discovery. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="apiVersion" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEntityClient">
-      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Entity GetEntityClient (string apiVersion = &quot;2023-09-01&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Entity GetEntityClient(string apiVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetEntityClient(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEntityClient (Optional apiVersion As String = &quot;2023-09-01&quot;) As Entity" />
-      <MemberSignature Language="F#" Value="abstract member GetEntityClient : string -&gt; Azure.Analytics.Purview.DataMap.Entity&#xA;override this.GetEntityClient : string -&gt; Azure.Analytics.Purview.DataMap.Entity" Usage="dataMapClient.GetEntityClient apiVersion" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Entity GetEntityClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Entity GetEntityClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetEntityClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEntityClient () As Entity" />
+      <MemberSignature Language="F#" Value="abstract member GetEntityClient : unit -&gt; Azure.Analytics.Purview.DataMap.Entity&#xA;override this.GetEntityClient : unit -&gt; Azure.Analytics.Purview.DataMap.Entity" Usage="dataMapClient.GetEntityClient " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
@@ -123,22 +138,19 @@
       <ReturnValue>
         <ReturnType>Azure.Analytics.Purview.DataMap.Entity</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="apiVersion" Type="System.String" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="apiVersion"> The API version to use for this operation. </param>
         <summary> Initializes a new instance of Entity. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetGlossaryClient">
-      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Glossary GetGlossaryClient (string apiVersion = &quot;2023-09-01&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Glossary GetGlossaryClient(string apiVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetGlossaryClient(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetGlossaryClient (Optional apiVersion As String = &quot;2023-09-01&quot;) As Glossary" />
-      <MemberSignature Language="F#" Value="abstract member GetGlossaryClient : string -&gt; Azure.Analytics.Purview.DataMap.Glossary&#xA;override this.GetGlossaryClient : string -&gt; Azure.Analytics.Purview.DataMap.Glossary" Usage="dataMapClient.GetGlossaryClient apiVersion" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Glossary GetGlossaryClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Glossary GetGlossaryClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetGlossaryClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetGlossaryClient () As Glossary" />
+      <MemberSignature Language="F#" Value="abstract member GetGlossaryClient : unit -&gt; Azure.Analytics.Purview.DataMap.Glossary&#xA;override this.GetGlossaryClient : unit -&gt; Azure.Analytics.Purview.DataMap.Glossary" Usage="dataMapClient.GetGlossaryClient " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
@@ -147,22 +159,19 @@
       <ReturnValue>
         <ReturnType>Azure.Analytics.Purview.DataMap.Glossary</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="apiVersion" Type="System.String" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="apiVersion"> The API version to use for this operation. </param>
         <summary> Initializes a new instance of Glossary. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetLineageClient">
-      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Lineage GetLineageClient (string apiVersion = &quot;2023-09-01&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Lineage GetLineageClient(string apiVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetLineageClient(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLineageClient (Optional apiVersion As String = &quot;2023-09-01&quot;) As Lineage" />
-      <MemberSignature Language="F#" Value="abstract member GetLineageClient : string -&gt; Azure.Analytics.Purview.DataMap.Lineage&#xA;override this.GetLineageClient : string -&gt; Azure.Analytics.Purview.DataMap.Lineage" Usage="dataMapClient.GetLineageClient apiVersion" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.Lineage GetLineageClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.Lineage GetLineageClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetLineageClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLineageClient () As Lineage" />
+      <MemberSignature Language="F#" Value="abstract member GetLineageClient : unit -&gt; Azure.Analytics.Purview.DataMap.Lineage&#xA;override this.GetLineageClient : unit -&gt; Azure.Analytics.Purview.DataMap.Lineage" Usage="dataMapClient.GetLineageClient " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
@@ -171,16 +180,11 @@
       <ReturnValue>
         <ReturnType>Azure.Analytics.Purview.DataMap.Lineage</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="apiVersion" Type="System.String" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="apiVersion"> The API version to use for this operation. </param>
         <summary> Initializes a new instance of Lineage. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="apiVersion" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetRelationshipClient">
@@ -205,11 +209,11 @@
       </Docs>
     </Member>
     <Member MemberName="GetTypeDefinitionClient">
-      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.TypeDefinition GetTypeDefinitionClient (string apiVersion = &quot;2023-09-01&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.TypeDefinition GetTypeDefinitionClient(string apiVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetTypeDefinitionClient(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetTypeDefinitionClient (Optional apiVersion As String = &quot;2023-09-01&quot;) As TypeDefinition" />
-      <MemberSignature Language="F#" Value="abstract member GetTypeDefinitionClient : string -&gt; Azure.Analytics.Purview.DataMap.TypeDefinition&#xA;override this.GetTypeDefinitionClient : string -&gt; Azure.Analytics.Purview.DataMap.TypeDefinition" Usage="dataMapClient.GetTypeDefinitionClient apiVersion" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Analytics.Purview.DataMap.TypeDefinition GetTypeDefinitionClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Analytics.Purview.DataMap.TypeDefinition GetTypeDefinitionClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.Purview.DataMap.DataMapClient.GetTypeDefinitionClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetTypeDefinitionClient () As TypeDefinition" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeDefinitionClient : unit -&gt; Azure.Analytics.Purview.DataMap.TypeDefinition&#xA;override this.GetTypeDefinitionClient : unit -&gt; Azure.Analytics.Purview.DataMap.TypeDefinition" Usage="dataMapClient.GetTypeDefinitionClient " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.Purview.DataMap</AssemblyName>
@@ -218,11 +222,8 @@
       <ReturnValue>
         <ReturnType>Azure.Analytics.Purview.DataMap.TypeDefinition</ReturnType>
       </ReturnValue>
-      <Parameters>
-        <Parameter Name="apiVersion" Type="System.String" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="apiVersion"> The API version to use for this operation. </param>
         <summary> Initializes a new instance of TypeDefinition. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

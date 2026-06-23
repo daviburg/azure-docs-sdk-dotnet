@@ -65,50 +65,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetPolicyAssignments">
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignments (string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter = default, string expand = default, int? top = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignments(string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter, string expand, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyResourceGroupResource.GetPolicyAssignments(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyAssignments (resourceProviderNamespace As String, parentResourcePath As String, resourceType As String, resourceName As String, Optional filter As String = Nothing, Optional expand As String = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of PolicyAssignmentResource)" />
-      <MemberSignature Language="F#" Value="override this.GetPolicyAssignments : string * string * string * string * string * string * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt;" Usage="mockableResourcesPolicyResourceGroupResource.GetPolicyAssignments (resourceProviderNamespace, parentResourcePath, resourceType, resourceName, filter, expand, top, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="resourceProviderNamespace" Type="System.String" />
-        <Parameter Name="parentResourcePath" Type="System.String" />
-        <Parameter Name="resourceType" Type="System.String" />
-        <Parameter Name="resourceName" Type="System.String" />
-        <Parameter Name="filter" Type="System.String" />
-        <Parameter Name="expand" Type="System.String" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="resourceProviderNamespace"> The namespace of the resource provider. For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines). </param>
-        <param name="parentResourcePath"> The parent resource path. Use empty string if there is none. </param>
-        <param name="resourceType"> The resource type name. For example the type name of a web app is 'sites' (from Microsoft.Web/sites). </param>
-        <param name="resourceName"> The name of the resource. </param>
-        <param name="filter"> The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope() is provided, the returned list only includes all policy assignments that apply to the scope, which is everything in the unfiltered list except those applied to sub scopes contained within the given scope. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments of the policy definition whose id is {value}. </param>
-        <param name="expand"> Comma-separated list of additional properties to be included in the response. Supported values are 'LatestDefinitionVersion, EffectiveDefinitionVersion'. </param>
-        <param name="top"> Maximum number of records to return. When the $top filter is not provided, it will return 500 records. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '{value}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments of the policy definition whose id is {value} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').
-            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/policyAssignments. </description></item><item><term> Operation Id. </term><description> PolicyAssignments_ListForResource. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource" /> that may take multiple service requests to iterate over. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is an empty string, and was expected to be non-empty. </exception>
-      </Docs>
-    </Member>
     <Member MemberName="GetPolicyAssignmentsAsync">
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignmentsAsync (string filter = default, string expand = default, int? top = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignmentsAsync(string filter, string expand, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -141,50 +97,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetPolicyAssignmentsAsync">
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignmentsAsync (string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter = default, string expand = default, int? top = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt; GetPolicyAssignmentsAsync(string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter, string expand, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyResourceGroupResource.GetPolicyAssignmentsAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyAssignmentsAsync (resourceProviderNamespace As String, parentResourcePath As String, resourceType As String, resourceName As String, Optional filter As String = Nothing, Optional expand As String = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of PolicyAssignmentResource)" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicyAssignmentsAsync : string * string * string * string * string * string * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt;&#xA;override this.GetPolicyAssignmentsAsync : string * string * string * string * string * string * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt;" Usage="mockableResourcesPolicyResourceGroupResource.GetPolicyAssignmentsAsync (resourceProviderNamespace, parentResourcePath, resourceType, resourceName, filter, expand, top, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="resourceProviderNamespace" Type="System.String" />
-        <Parameter Name="parentResourcePath" Type="System.String" />
-        <Parameter Name="resourceType" Type="System.String" />
-        <Parameter Name="resourceName" Type="System.String" />
-        <Parameter Name="filter" Type="System.String" />
-        <Parameter Name="expand" Type="System.String" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="resourceProviderNamespace"> The namespace of the resource provider. For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines). </param>
-        <param name="parentResourcePath"> The parent resource path. Use empty string if there is none. </param>
-        <param name="resourceType"> The resource type name. For example the type name of a web app is 'sites' (from Microsoft.Web/sites). </param>
-        <param name="resourceName"> The name of the resource. </param>
-        <param name="filter"> The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope() is provided, the returned list only includes all policy assignments that apply to the scope, which is everything in the unfiltered list except those applied to sub scopes contained within the given scope. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments of the policy definition whose id is {value}. </param>
-        <param name="expand"> Comma-separated list of additional properties to be included in the response. Supported values are 'LatestDefinitionVersion, EffectiveDefinitionVersion'. </param>
-        <param name="top"> Maximum number of records to return. When the $top filter is not provided, it will return 500 records. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '{value}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments of the policy definition whose id is {value} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').
-            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/policyAssignments. </description></item><item><term> Operation Id. </term><description> PolicyAssignments_ListForResource. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyAssignmentResource" /> that may take multiple service requests to iterate over. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is an empty string, and was expected to be non-empty. </exception>
-      </Docs>
-    </Member>
     <Member MemberName="GetPolicyExemptions">
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions (string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions(string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -213,46 +125,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetPolicyExemptions">
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions (string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions(string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyResourceGroupResource.GetPolicyExemptions(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyExemptions (resourceProviderNamespace As String, parentResourcePath As String, resourceType As String, resourceName As String, Optional filter As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of PolicyExemptionResource)" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicyExemptions : string * string * string * string * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;&#xA;override this.GetPolicyExemptions : string * string * string * string * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;" Usage="mockableResourcesPolicyResourceGroupResource.GetPolicyExemptions (resourceProviderNamespace, parentResourcePath, resourceType, resourceName, filter, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="resourceProviderNamespace" Type="System.String" />
-        <Parameter Name="parentResourcePath" Type="System.String" />
-        <Parameter Name="resourceType" Type="System.String" />
-        <Parameter Name="resourceName" Type="System.String" />
-        <Parameter Name="filter" Type="System.String" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="resourceProviderNamespace"> The namespace of the resource provider. For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines). </param>
-        <param name="parentResourcePath"> The parent resource path. Use empty string if there is none. </param>
-        <param name="resourceType"> The resource type name. For example the type name of a web app is 'sites' (from Microsoft.Web/sites). </param>
-        <param name="resourceName"> The name of the resource. </param>
-        <param name="filter"> The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter is not provided, the unfiltered list includes all policy exemptions associated with the scope, including those that apply directly or apply from containing scopes. If $filter=atScope() is provided, the returned list only includes all policy exemptions that apply to the scope, which is everything in the unfiltered list except those applied to sub scopes contained within the given scope. If $filter=atExactScope() is provided, the returned list only includes all policy exemptions that at the given scope. If $filter=excludeExpired() is provided, the returned list only includes all policy exemptions that either haven't expired or didn't set expiration date. If $filter=policyAssignmentId eq '{value}' is provided. the returned list only includes all policy exemptions that are associated with the give policyAssignmentId. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation retrieves the list of all policy exemptions associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId eq '{value}''. If $filter is not provided, the unfiltered list includes all policy exemptions associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').
-            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/policyExemptions. </description></item><item><term> Operation Id. </term><description> PolicyExemptions_ListForResource. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyExemptionResource" /> that may take multiple service requests to iterate over. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is an empty string, and was expected to be non-empty. </exception>
-      </Docs>
-    </Member>
     <Member MemberName="GetPolicyExemptionsAsync">
       <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptionsAsync (string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptionsAsync(string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -279,46 +151,6 @@
             <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Authorization/policyExemptions. </description></item><item><term> Operation Id. </term><description> PolicyExemptions_ListForResourceGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyExemptionResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetPolicyExemptionsAsync">
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptionsAsync (string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptionsAsync(string resourceProviderNamespace, string parentResourcePath, string resourceType, string resourceName, string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyResourceGroupResource.GetPolicyExemptionsAsync(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyExemptionsAsync (resourceProviderNamespace As String, parentResourcePath As String, resourceType As String, resourceName As String, Optional filter As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of PolicyExemptionResource)" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicyExemptionsAsync : string * string * string * string * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;&#xA;override this.GetPolicyExemptionsAsync : string * string * string * string * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;" Usage="mockableResourcesPolicyResourceGroupResource.GetPolicyExemptionsAsync (resourceProviderNamespace, parentResourcePath, resourceType, resourceName, filter, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="resourceProviderNamespace" Type="System.String" />
-        <Parameter Name="parentResourcePath" Type="System.String" />
-        <Parameter Name="resourceType" Type="System.String" />
-        <Parameter Name="resourceName" Type="System.String" />
-        <Parameter Name="filter" Type="System.String" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="resourceProviderNamespace"> The namespace of the resource provider. For example, the namespace of a virtual machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines). </param>
-        <param name="parentResourcePath"> The parent resource path. Use empty string if there is none. </param>
-        <param name="resourceType"> The resource type name. For example the type name of a web app is 'sites' (from Microsoft.Web/sites). </param>
-        <param name="resourceName"> The name of the resource. </param>
-        <param name="filter"> The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter is not provided, the unfiltered list includes all policy exemptions associated with the scope, including those that apply directly or apply from containing scopes. If $filter=atScope() is provided, the returned list only includes all policy exemptions that apply to the scope, which is everything in the unfiltered list except those applied to sub scopes contained within the given scope. If $filter=atExactScope() is provided, the returned list only includes all policy exemptions that at the given scope. If $filter=excludeExpired() is provided, the returned list only includes all policy exemptions that either haven't expired or didn't set expiration date. If $filter=policyAssignmentId eq '{value}' is provided. the returned list only includes all policy exemptions that are associated with the give policyAssignmentId. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation retrieves the list of all policy exemptions associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId eq '{value}''. If $filter is not provided, the unfiltered list includes all policy exemptions associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as ({resourceProviderNamespace} == 'Microsoft.Web', {parentResourcePath} == '', {resourceType} == 'sites', {resourceName} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as ({resourceProviderNamespace} == 'Microsoft.Compute', {parentResourcePath} == 'virtualMachines/MyVirtualMachine', {resourceType} == 'domainNames', {resourceName} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the {resourceType} parameter, format: ({resourceProviderNamespace} == '', {parentResourcePath} == '', {resourceType} == 'Microsoft.Web/sites', {resourceName} == 'MyWebApp').
-            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/policyExemptions. </description></item><item><term> Operation Id. </term><description> PolicyExemptions_ListForResource. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyExemptionResource" /> that may take multiple service requests to iterate over. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="resourceProviderNamespace" />, <paramref name="parentResourcePath" />, <paramref name="resourceType" /> or <paramref name="resourceName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
   </Members>

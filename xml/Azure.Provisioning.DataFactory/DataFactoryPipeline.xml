@@ -1,0 +1,537 @@
+<Type Name="DataFactoryPipeline" FullName="Azure.Provisioning.DataFactory.DataFactoryPipeline">
+  <TypeSignature Language="C#" Value="public class DataFactoryPipeline : Azure.Provisioning.Primitives.ProvisionableResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFactoryPipeline extends Azure.Provisioning.Primitives.ProvisionableResource" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.DataFactoryPipeline" />
+  <TypeSignature Language="VB.NET" Value="Public Class DataFactoryPipeline&#xA;Inherits ProvisionableResource" />
+  <TypeSignature Language="F#" Value="type DataFactoryPipeline = class&#xA;    inherit ProvisionableResource" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.Primitives.ProvisionableResource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            DataFactoryPipeline.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFactoryPipeline (string bicepIdentifier, string? resourceVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string bicepIdentifier, string resourceVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryPipeline.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (bicepIdentifier As String, Optional resourceVersion As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Azure.Provisioning.DataFactory.DataFactoryPipeline : string * string -&gt; Azure.Provisioning.DataFactory.DataFactoryPipeline" Usage="new Azure.Provisioning.DataFactory.DataFactoryPipeline (bicepIdentifier, resourceVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bicepIdentifier" Type="System.String" />
+        <Parameter Name="resourceVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="bicepIdentifier">
+            The the Bicep identifier name of the DataFactoryPipeline resource.
+            This can be used to refer to the resource in expressions, but is not
+            the Azure name of the resource.  This value can contain letters,
+            numbers, and underscores.
+            </param>
+        <param name="resourceVersion">Version of the DataFactoryPipeline.</param>
+        <summary>
+            Creates a new DataFactoryPipeline.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activities">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; Activities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.PipelineActivity&gt; Activities" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Activities" />
+      <MemberSignature Language="VB.NET" Value="Public Property Activities As BicepList(Of PipelineActivity)" />
+      <MemberSignature Language="F#" Value="member this.Activities : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Activities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of activities in pipeline.             Please note
+            Azure.ResourceManager.DataFactory.Models.PipelineActivity is the base
+            class. According to the scenario, a derived class of the base class
+            might need to be assigned here, or this property needs to be casted to
+            one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AppendVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureDataExplorerCommandActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureFunctionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLBatchExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLUpdateResourceActivity,
+            Azure.ResourceManager.DataFactory.Models.ControlActivity,
+            Azure.ResourceManager.DataFactory.Models.CopyActivity,
+            Azure.ResourceManager.DataFactory.Models.CustomActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksJobActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkJarActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkPythonActivity,
+            Azure.ResourceManager.DataFactory.Models.DataLakeAnalyticsUsqlActivity,
+            Azure.ResourceManager.DataFactory.Models.DeleteActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteDataFlowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteSsisPackageActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteWranglingDataflowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.FailActivity,
+            Azure.ResourceManager.DataFactory.Models.FilterActivity,
+            Azure.ResourceManager.DataFactory.Models.ForEachActivity,
+            Azure.ResourceManager.DataFactory.Models.GetDatasetMetadataActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightHiveActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightMapReduceActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightPigActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightSparkActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightStreamingActivity,
+            Azure.ResourceManager.DataFactory.Models.IfConditionActivity,
+            Azure.ResourceManager.DataFactory.Models.LookupActivity,
+            Azure.ResourceManager.DataFactory.Models.DataFactoryScriptActivity,
+            Azure.ResourceManager.DataFactory.Models.SetVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseSparkJobDefinitionActivity,
+            Azure.ResourceManager.DataFactory.Models.SqlServerStoredProcedureActivity,
+            Azure.ResourceManager.DataFactory.Models.SwitchActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.UntilActivity,
+            Azure.ResourceManager.DataFactory.Models.ValidationActivity,
+            Azure.ResourceManager.DataFactory.Models.WaitActivity,
+            Azure.ResourceManager.DataFactory.Models.WebActivity and
+            Azure.ResourceManager.DataFactory.Models.WebHookActivity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalProperties">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalProperties" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.AdditionalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalProperties As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalProperties : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.AdditionalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional Properties                          To assign an object to
+            the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;BinaryData&gt; Annotations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class System.BinaryData&gt; Annotations" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Annotations" />
+      <MemberSignature Language="VB.NET" Value="Public Property Annotations As BicepList(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.Annotations : Azure.Provisioning.BicepList&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of tags that can be used for describing the Pipeline.
+            To assign an object to the element of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concurrency">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;int&gt; Concurrency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;int32&gt; Concurrency" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Concurrency" />
+      <MemberSignature Language="VB.NET" Value="Public Property Concurrency As BicepValue(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.Concurrency : Azure.Provisioning.BicepValue&lt;int&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Concurrency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The max number of concurrent runs for the pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryPipeline.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="dataFactoryPipeline.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of DataFactoryPipeline.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Description" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Description : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The description of the pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedTimeMetricDuration">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; ElapsedTimeMetricDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; ElapsedTimeMetricDuration" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.ElapsedTimeMetricDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Property ElapsedTimeMetricDuration As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.ElapsedTimeMetricDuration : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.ElapsedTimeMetricDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TimeSpan value, after which an Azure Monitoring Metric is fired.
+            To assign an object to this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ETag">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;Azure.ETag&gt; ETag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype Azure.ETag&gt; ETag" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.ETag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ETag As BicepValue(Of ETag)" />
+      <MemberSignature Language="F#" Value="member this.ETag : Azure.Provisioning.BicepValue&lt;Azure.ETag&gt;" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.ETag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;Azure.ETag&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Etag identifies change in the resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; FolderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; FolderName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.FolderName" />
+      <MemberSignature Language="VB.NET" Value="Public Property FolderName As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.FolderName : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.FolderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the folder that this Pipeline is in.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromExisting">
+      <MemberSignature Language="C#" Value="public static Azure.Provisioning.DataFactory.DataFactoryPipeline FromExisting (string bicepIdentifier, string? resourceVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Provisioning.DataFactory.DataFactoryPipeline FromExisting(string bicepIdentifier, string resourceVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryPipeline.FromExisting(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromExisting (bicepIdentifier As String, Optional resourceVersion As String = Nothing) As DataFactoryPipeline" />
+      <MemberSignature Language="F#" Value="static member FromExisting : string * string -&gt; Azure.Provisioning.DataFactory.DataFactoryPipeline" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.FromExisting (bicepIdentifier, resourceVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryPipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bicepIdentifier" Type="System.String" />
+        <Parameter Name="resourceVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="bicepIdentifier">
+            The the Bicep identifier name of the DataFactoryPipeline resource.
+            This can be used to refer to the resource in expressions, but is not
+            the Azure name of the resource.  This value can contain letters,
+            numbers, and underscores.
+            </param>
+        <param name="resourceVersion">Version of the DataFactoryPipeline.</param>
+        <summary>
+            Creates a reference to an existing DataFactoryPipeline.
+            </summary>
+        <returns>The existing DataFactoryPipeline resource.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;Azure.Core.ResourceIdentifier&gt; Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class Azure.Core.ResourceIdentifier&gt; Id" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As BicepValue(Of ResourceIdentifier)" />
+      <MemberSignature Language="F#" Value="member this.Id : Azure.Provisioning.BicepValue&lt;Azure.Core.ResourceIdentifier&gt;" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;Azure.Core.ResourceIdentifier&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Name" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Name : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pipeline name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As BicepDictionary(Of EntityParameterSpecification)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of parameters for pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DataFactoryService? Parent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DataFactoryService Parent" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parent As DataFactoryService" />
+      <MemberSignature Language="F#" Value="member this.Parent : Azure.Provisioning.DataFactory.DataFactoryService with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a reference to the parent DataFactoryService.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDimensions">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; RunDimensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; RunDimensions" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.RunDimensions" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunDimensions As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.RunDimensions : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.RunDimensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dimensions emitted by Pipeline.                          To assign an
+            object to the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemData">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.Resources.SystemData SystemData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.Resources.SystemData SystemData" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.SystemData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SystemData As SystemData" />
+      <MemberSignature Language="F#" Value="member this.SystemData : Azure.Provisioning.Resources.SystemData" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.SystemData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.Resources.SystemData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the SystemData.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.PipelineVariableSpecification&gt; Variables { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class Azure.Provisioning.DataFactory.PipelineVariableSpecification&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryPipeline.Variables" />
+      <MemberSignature Language="VB.NET" Value="Public Property Variables As BicepDictionary(Of PipelineVariableSpecification)" />
+      <MemberSignature Language="F#" Value="member this.Variables : Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.PipelineVariableSpecification&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryPipeline.Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.PipelineVariableSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of variables for pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

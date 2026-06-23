@@ -157,58 +157,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="GetPolicyDefinitions">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt; GetPolicyDefinitions (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt; GetPolicyDefinitions(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyManagementGroupResource.GetPolicyDefinitions(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyDefinitions (Optional cancellationToken As CancellationToken = Nothing) As Response(Of PolicyDefinitionVersionListResult)" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicyDefinitions : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&#xA;override this.GetPolicyDefinitions : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;" Usage="mockableResourcesPolicyManagementGroupResource.GetPolicyDefinitions cancellationToken" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation lists all the policy definition versions for all policy definitions at the management group scope.
-            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicyDefinitionVersions. </description></item><item><term> Operation Id. </term><description> PolicyDefinitionVersionsOperationGroup_ListAllAtManagementGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetPolicyDefinitionsAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&gt; GetPolicyDefinitionsAsync (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&gt; GetPolicyDefinitionsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyManagementGroupResource.GetPolicyDefinitionsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicyDefinitionsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PolicyDefinitionVersionListResult))" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicyDefinitionsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&gt;&#xA;override this.GetPolicyDefinitionsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&gt;" Usage="mockableResourcesPolicyManagementGroupResource.GetPolicyDefinitionsAsync cancellationToken" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicyDefinitionVersionListResult&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation lists all the policy definition versions for all policy definitions at the management group scope.
-            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicyDefinitionVersions. </description></item><item><term> Operation Id. </term><description> PolicyDefinitionVersionsOperationGroup_ListAllAtManagementGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="GetPolicyExemptions">
       <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions (string filter = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Resources.Policy.PolicyExemptionResource&gt; GetPolicyExemptions(string filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -262,58 +210,6 @@
             This operation retrieves the list of all policy exemptions applicable to the management group that match the given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId eq '{value}''. If $filter=atScope() is provided, the returned list includes all policy exemptions that are assigned to the management group or the management group's ancestors.
             <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Authorization/policyExemptions. </description></item><item><term> Operation Id. </term><description> PolicyExemptions_ListForManagementGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Resources.Policy.PolicyExemptionResource" /> that may take multiple service requests to iterate over. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetPolicySetDefinitions">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt; GetPolicySetDefinitions (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt; GetPolicySetDefinitions(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyManagementGroupResource.GetPolicySetDefinitions(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicySetDefinitions (Optional cancellationToken As CancellationToken = Nothing) As Response(Of PolicySetDefinitionVersionListResult)" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicySetDefinitions : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&#xA;override this.GetPolicySetDefinitions : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;" Usage="mockableResourcesPolicyManagementGroupResource.GetPolicySetDefinitions cancellationToken" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation lists all the policy set definition versions for all policy set definitions at the management group scope.
-            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions. </description></item><item><term> Operation Id. </term><description> PolicySetDefinitionVersionsOperationGroup_ListAllAtManagementGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetPolicySetDefinitionsAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&gt; GetPolicySetDefinitionsAsync (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&gt; GetPolicySetDefinitionsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Resources.Policy.Mocking.MockableResourcesPolicyManagementGroupResource.GetPolicySetDefinitionsAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPolicySetDefinitionsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PolicySetDefinitionVersionListResult))" />
-      <MemberSignature Language="F#" Value="abstract member GetPolicySetDefinitionsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&gt;&#xA;override this.GetPolicySetDefinitionsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&gt;" Usage="mockableResourcesPolicyManagementGroupResource.GetPolicySetDefinitionsAsync cancellationToken" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Resources.Policy</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Resources.Policy.Models.PolicySetDefinitionVersionListResult&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            This operation lists all the policy set definition versions for all policy set definitions at the management group scope.
-            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions. </description></item><item><term> Operation Id. </term><description> PolicySetDefinitionVersionsOperationGroup_ListAllAtManagementGroup. </description></item><item><term> Default Api Version. </term><description> 2025-12-01-preview. </description></item></list></summary>
-        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

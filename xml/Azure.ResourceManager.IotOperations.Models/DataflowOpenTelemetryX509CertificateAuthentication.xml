@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryAuthentication</BaseTypeName>
@@ -28,28 +29,6 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DataflowOpenTelemetryX509CertificateAuthentication (Azure.ResourceManager.IotOperations.Models.DataflowEndpointAuthenticationX509 x509CertificateSettings);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.ResourceManager.IotOperations.Models.DataflowEndpointAuthenticationX509 x509CertificateSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication.#ctor(Azure.ResourceManager.IotOperations.Models.DataflowEndpointAuthenticationX509)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (x509CertificateSettings As DataflowEndpointAuthenticationX509)" />
-      <MemberSignature Language="F#" Value="new Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication : Azure.ResourceManager.IotOperations.Models.DataflowEndpointAuthenticationX509 -&gt; Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication" Usage="new Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication x509CertificateSettings" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="x509CertificateSettings" Type="Azure.ResourceManager.IotOperations.Models.DataflowEndpointAuthenticationX509" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="x509CertificateSettings"> X.509 certificate authentication settings. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication" />. </summary>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="x509CertificateSettings" /> is null. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DataflowOpenTelemetryX509CertificateAuthentication (string x509CertificateSecretRef);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string x509CertificateSecretRef) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication.#ctor(System.String)" />
@@ -59,9 +38,10 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="x509CertificateSecretRef" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="x509CertificateSecretRef" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="x509CertificateSecretRef"> Secret reference of the X.509 certificate. </param>
@@ -81,13 +61,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryAuthentication</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="reader"> The JSON reader. </param>
@@ -107,6 +88,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -132,13 +114,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryAuthentication</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="data" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="data"> The data to parse. </param>
@@ -158,12 +141,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="options"> The client options for reading and writing models. </param>
@@ -185,6 +169,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication</ReturnType>
@@ -217,6 +202,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -248,6 +234,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.IotOperations.Models.DataflowOpenTelemetryX509CertificateAuthentication</ReturnType>
@@ -280,6 +267,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -309,6 +297,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -336,6 +325,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.IotOperations</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

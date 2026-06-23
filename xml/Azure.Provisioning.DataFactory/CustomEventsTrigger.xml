@@ -1,0 +1,169 @@
+<Type Name="CustomEventsTrigger" FullName="Azure.Provisioning.DataFactory.CustomEventsTrigger">
+  <TypeSignature Language="C#" Value="public class CustomEventsTrigger : Azure.Provisioning.DataFactory.MultiplePipelineTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomEventsTrigger extends Azure.Provisioning.DataFactory.MultiplePipelineTrigger" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.CustomEventsTrigger" />
+  <TypeSignature Language="VB.NET" Value="Public Class CustomEventsTrigger&#xA;Inherits MultiplePipelineTrigger" />
+  <TypeSignature Language="F#" Value="type CustomEventsTrigger = class&#xA;    inherit MultiplePipelineTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.MultiplePipelineTrigger</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Trigger that runs every time a custom event is received.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomEventsTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.CustomEventsTrigger.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new CustomEventsTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.CustomEventsTrigger.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="customEventsTrigger.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of CustomEventsTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;BinaryData&gt; Events { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class System.BinaryData&gt; Events" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CustomEventsTrigger.Events" />
+      <MemberSignature Language="VB.NET" Value="Public Property Events As BicepList(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.Events : Azure.Provisioning.BicepList&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CustomEventsTrigger.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of event types that cause this trigger to fire.
+            To assign an object to the element of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Scope" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CustomEventsTrigger.Scope" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scope As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scope : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CustomEventsTrigger.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ARM resource ID of the Azure Event Grid Topic.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectBeginsWith">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; SubjectBeginsWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; SubjectBeginsWith" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CustomEventsTrigger.SubjectBeginsWith" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubjectBeginsWith As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SubjectBeginsWith : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CustomEventsTrigger.SubjectBeginsWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event subject must begin with the pattern provided for trigger to
+            fire. At least one of these must be provided: subjectBeginsWith,
+            subjectEndsWith.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectEndsWith">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; SubjectEndsWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; SubjectEndsWith" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CustomEventsTrigger.SubjectEndsWith" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubjectEndsWith As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SubjectEndsWith : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CustomEventsTrigger.SubjectEndsWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event subject must end with the pattern provided for trigger to
+            fire. At least one of these must be provided: subjectBeginsWith,
+            subjectEndsWith.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

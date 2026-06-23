@@ -1,0 +1,200 @@
+<Type Name="SnowflakeExportCopyCommand" FullName="Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand">
+  <TypeSignature Language="C#" Value="public class SnowflakeExportCopyCommand : Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SnowflakeExportCopyCommand extends Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class SnowflakeExportCopyCommand&#xA;Inherits ProvisionableConstruct" />
+  <TypeSignature Language="F#" Value="type SnowflakeExportCopyCommand = class&#xA;    inherit ProvisionableConstruct" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.Primitives.ProvisionableConstruct</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Snowflake export command settings.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnowflakeExportCopyCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new SnowflakeExportCopyCommand.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalCopyOptions">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalCopyOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalCopyOptions" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalCopyOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalCopyOptions As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalCopyOptions : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalCopyOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional copy options directly passed to snowflake Copy Command.
+            Type: key value pairs (value should be string type) (or Expression
+            with resultType object). Example: "additionalCopyOptions": {
+            "DATE_FORMAT": "MM/DD/YYYY",
+            "TIME_FORMAT": "'HH24:MI:SS.FF'" }
+            To assign an object to the value of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalFormatOptions">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalFormatOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalFormatOptions" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalFormatOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalFormatOptions As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalFormatOptions : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalFormatOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional format options directly passed to snowflake Copy Command.
+            Type: key value pairs (value should be string type) (or Expression
+            with resultType object). Example: "additionalFormatOptions":
+            { "OVERWRITE": "TRUE", "MAX_FILE_SIZE":
+            "'FALSE'" }                          To assign an
+            object to the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalProperties">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalProperties" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalProperties As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalProperties : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.AdditionalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional Properties                          To assign an object to
+            the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="snowflakeExportCopyCommand.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of SnowflakeExportCopyCommand.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageIntegration">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; StorageIntegration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; StorageIntegration" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.StorageIntegration" />
+      <MemberSignature Language="VB.NET" Value="Public Property StorageIntegration As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.StorageIntegration : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SnowflakeExportCopyCommand.StorageIntegration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the snowflake storage integration to use for the copy
+            operation. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsFabricProfile</BaseTypeName>
@@ -28,30 +29,6 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DevOpsVmssFabricProfile (Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsAzureSku sku, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt; images);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsAzureSku sku, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt; images) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile.#ctor(Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsAzureSku,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (sku As DevOpsAzureSku, images As IEnumerable(Of DevOpsPoolVmImage))" />
-      <MemberSignature Language="F#" Value="new Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile : Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsAzureSku * seq&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt; -&gt; Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile" Usage="new Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile (sku, images)" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="sku" Type="Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsAzureSku" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="images" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="sku"> The Azure SKU of the machines in the pool. </param>
-        <param name="images"> The VM images of the machines in the pool. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile" />. </summary>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="sku" /> or <paramref name="images" /> is null. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DevOpsVmssFabricProfile (string skuName, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt; images);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string skuName, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt; images) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile.#ctor(System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage})" />
@@ -61,10 +38,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="skuName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="images" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="skuName" Type="System.String" />
+        <Parameter Name="images" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt;" />
       </Parameters>
       <Docs>
         <param name="skuName"> The Azure SKU name of the machines in the pool. </param>
@@ -85,6 +63,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsPoolVmImage&gt;</ReturnType>
@@ -105,13 +84,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsFabricProfile</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="reader"> The JSON reader. </param>
@@ -131,13 +111,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="writer"> The JSON writer. </param>
@@ -156,32 +137,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsNetworkProfile</ReturnType>
       </ReturnValue>
       <Docs>
         <summary> The network profile of the machines in the pool. </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="NetworkSubnetId">
-      <MemberSignature Language="C#" Value="public string NetworkSubnetId { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string NetworkSubnetId" />
-      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile.NetworkSubnetId" />
-      <MemberSignature Language="VB.NET" Value="Public Property NetworkSubnetId As String" />
-      <MemberSignature Language="F#" Value="member this.NetworkSubnetId : string with get, set" Usage="Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile.NetworkSubnetId" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary> The subnet id on which to put all machines created in the pool. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,6 +158,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsOSProfile</ReturnType>
@@ -216,13 +179,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsFabricProfile</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="data" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="data"> The data to parse. </param>
@@ -242,12 +206,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
         <param name="options"> The client options for reading and writing models. </param>
@@ -266,6 +231,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -286,6 +252,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsStorageProfile</ReturnType>
@@ -309,6 +276,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile</ReturnType>
@@ -341,6 +309,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -372,6 +341,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DevOpsInfrastructure.Models.DevOpsVmssFabricProfile</ReturnType>
@@ -404,6 +374,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -433,6 +404,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DevOpsInfrastructure</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>

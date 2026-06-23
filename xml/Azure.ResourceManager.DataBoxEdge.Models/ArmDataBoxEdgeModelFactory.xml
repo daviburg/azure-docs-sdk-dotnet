@@ -9,6 +9,7 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,14 +30,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="value" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="encryptionCertThumbprint" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="encryptionAlgorithm" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeEncryptionAlgorithm" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="encryptionCertThumbprint" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeEncryptionAlgorithm" />
       </Parameters>
       <Docs>
         <param name="value"> The value of the secret. </param>
@@ -56,8 +58,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.AvailableDataBoxEdgeSku</ReturnType>
@@ -110,19 +112,20 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="startOn" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="stopOn" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="rateInMbps" Type="System.Nullable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="days" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="startOn" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="stopOn" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="rateInMbps" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="days" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -139,21 +142,19 @@
       </Docs>
     </Member>
     <Member MemberName="BandwidthScheduleData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData BandwidthScheduleData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, TimeSpan startOn, TimeSpan stopOn, int rateInMbps, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt; days);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData BandwidthScheduleData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, TimeSpan startOn, TimeSpan stopOn, int rateInMbps, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt; days);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData BandwidthScheduleData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.TimeSpan startOn, valuetype System.TimeSpan stopOn, int32 rateInMbps, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt; days) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.BandwidthScheduleData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.TimeSpan,System.TimeSpan,System.Int32,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BandwidthScheduleData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, startOn As TimeSpan, stopOn As TimeSpan, rateInMbps As Integer, days As IEnumerable(Of DataBoxEdgeDayOfWeek)) As BandwidthScheduleData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BandwidthScheduleData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, startOn As TimeSpan, stopOn As TimeSpan, rateInMbps As Integer, days As IEnumerable(Of DataBoxEdgeDayOfWeek)) As BandwidthScheduleData" />
       <MemberSignature Language="F#" Value="static member BandwidthScheduleData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * TimeSpan * TimeSpan * int * seq&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt; -&gt; Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.BandwidthScheduleData (id, name, resourceType, systemData, startOn, stopOn, rateInMbps, days)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.BandwidthScheduleData BandwidthScheduleData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, TimeSpan startOn = default, TimeSpan stopOn = default, int rateInMbps = 0, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDayOfWeek&gt; days = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BandwidthScheduleData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional startOn As TimeSpan = Nothing, Optional stopOn As TimeSpan = Nothing, Optional rateInMbps As Integer = 0, Optional days As IEnumerable(Of DataBoxEdgeDayOfWeek) = Nothing) As BandwidthScheduleData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -195,13 +196,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="client" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accessPermission" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClientPermissionType" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="client" Type="System.String" />
+        <Parameter Name="accessPermission" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClientPermissionType" />
       </Parameters>
       <Docs>
         <param name="client"> IP of the client. </param>
@@ -220,11 +222,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -264,18 +266,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.CloudEdgeManagementRole</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="localManagementStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleStatus&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="roleStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleStatus&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="edgeSubscription" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeProfileSubscription" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="localManagementStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleStatus&gt;" />
+        <Parameter Name="roleStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleStatus&gt;" />
+        <Parameter Name="edgeSubscription" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeProfileSubscription" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -299,8 +302,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.CniConfig</ReturnType>
@@ -330,8 +333,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeAlertData</ReturnType>
@@ -375,8 +378,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeAlertErrorDetails</ReturnType>
@@ -405,15 +408,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeContactDetails</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="contactPerson" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="companyName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="phone" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="emailList" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="contactPerson" Type="System.String" />
+        <Parameter Name="companyName" Type="System.String" />
+        <Parameter Name="phone" Type="System.String" />
+        <Parameter Name="emailList" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="contactPerson"> The contact person name. </param>
@@ -434,8 +438,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataCenterAccessCode</ReturnType>
@@ -459,15 +463,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceCapacityInfoData instead.", false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceCapacityInfoData instead.", false)&gt;]</AttributeName>
         </Attribute>
@@ -509,19 +513,20 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeDeviceCapacityInfoData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="timeStamp" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterStorageCapacityInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterStorageViewInfo" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterComputeCapacityInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterCapacityViewInfo" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="nodeCapacityInfos" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.DataBoxEdge.Models.HostCapacity&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="timeStamp" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="clusterStorageCapacityInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterStorageViewInfo" />
+        <Parameter Name="clusterComputeCapacityInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterCapacityViewInfo" />
+        <Parameter Name="nodeCapacityInfos" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.DataBoxEdge.Models.HostCapacity&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -546,11 +551,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -630,40 +635,41 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeDeviceData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataBoxEdgeSystemData" Type="Azure.ResourceManager.Models.SystemData" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataBoxEdgeDeviceStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceStatus&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="serialNumber" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="description" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="modelDescription" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceType&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="friendlyName" Type="System.String" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="culture" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceModel" Type="System.String" Index="14" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceSoftwareVersion" Type="System.String" Index="15" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceLocalCapacity" Type="System.Nullable&lt;System.Int64&gt;" Index="16" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="timeZone" Type="System.String" Index="17" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceHcsVersion" Type="System.String" Index="18" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="configuredRoleTypes" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleType&gt;" Index="19" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="nodeCount" Type="System.Nullable&lt;System.Int32&gt;" Index="20" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceMoveDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeResourceMoveDetails" Index="21" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="kubernetesWorkloadProfile" Type="System.String" Index="22" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="edgeSubscription" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeProfileSubscription" Index="23" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="residencyType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataResidencyType&gt;" Index="24" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sku" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSku" Index="25" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" Index="26" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="27" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="kind" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceKind&gt;" Index="28" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" />
+        <Parameter Name="dataBoxEdgeSystemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="dataBoxEdgeDeviceStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceStatus&gt;" />
+        <Parameter Name="serialNumber" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="modelDescription" Type="System.String" />
+        <Parameter Name="deviceType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceType&gt;" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="culture" Type="System.String" />
+        <Parameter Name="deviceModel" Type="System.String" />
+        <Parameter Name="deviceSoftwareVersion" Type="System.String" />
+        <Parameter Name="deviceLocalCapacity" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="timeZone" Type="System.String" />
+        <Parameter Name="deviceHcsVersion" Type="System.String" />
+        <Parameter Name="configuredRoleTypes" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleType&gt;" />
+        <Parameter Name="nodeCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="resourceMoveDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeResourceMoveDetails" />
+        <Parameter Name="kubernetesWorkloadProfile" Type="System.String" />
+        <Parameter Name="edgeSubscription" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeProfileSubscription" />
+        <Parameter Name="residencyType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataResidencyType&gt;" />
+        <Parameter Name="sku" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSku" />
+        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
+        <Parameter Name="kind" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceKind&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -709,8 +715,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceExtendedInfo</ReturnType>
@@ -771,16 +777,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceExtendedInfoPatch</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="clientSecretStoreId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clientSecretStoreUri" Type="System.Uri" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="channelIntegrityKeyName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="channelIntegrityKeyVersion" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="syncStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeKeyVaultSyncStatus&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="clientSecretStoreId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="clientSecretStoreUri" Type="System.Uri" />
+        <Parameter Name="channelIntegrityKeyName" Type="System.String" />
+        <Parameter Name="channelIntegrityKeyVersion" Type="System.String" />
+        <Parameter Name="syncStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeKeyVaultSyncStatus&gt;" />
       </Parameters>
       <Docs>
         <param name="clientSecretStoreId"> The Key Vault ARM Id for client secrets. </param>
@@ -802,15 +809,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceNetworkSettingsData instead.", false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceNetworkSettingsData instead.", false)&gt;]</AttributeName>
         </Attribute>
@@ -846,16 +853,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeDeviceNetworkSettingsData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="networkAdapters" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeNetworkAdapter&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="networkAdapters" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeNetworkAdapter&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -878,14 +886,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDevicePatch</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="subscriptionId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
+        <Parameter Name="subscriptionId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="tags"> The tags attached to the Data Box Edge/Gateway resource. </param>
@@ -905,8 +914,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDeviceSecret</ReturnType>
@@ -932,15 +941,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceUpdateSummaryData instead.", false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use ArmDataBoxEdgeModelFactory.DataBoxEdgeDeviceUpdateSummaryData instead.", false)&gt;]</AttributeName>
         </Attribute>
@@ -1024,40 +1033,41 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeDeviceUpdateSummaryData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceVersionNumber" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="friendlyDeviceVersionName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deviceLastScannedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedScanJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastSuccessfulScanJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedDownloadJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedDownloadJobId" Type="Azure.Core.ResourceIdentifier" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastDownloadJobStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastSuccessfulInstallJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedInstallJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedInstallJobId" Type="Azure.Core.ResourceIdentifier" Index="14" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastInstallJobStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" Index="15" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalNumberOfUpdatesAvailable" Type="System.Nullable&lt;System.Int32&gt;" Index="16" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalNumberOfUpdatesPendingDownload" Type="System.Nullable&lt;System.Int32&gt;" Index="17" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalNumberOfUpdatesPendingInstall" Type="System.Nullable&lt;System.Int32&gt;" Index="18" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="rebootBehavior" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.InstallRebootBehavior&gt;" Index="19" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="ongoingUpdateOperation" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUpdateOperation&gt;" Index="20" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="inProgressDownloadJobId" Type="Azure.Core.ResourceIdentifier" Index="21" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="inProgressInstallJobId" Type="Azure.Core.ResourceIdentifier" Index="22" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="inProgressDownloadJobStartedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="23" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="inProgressInstallJobStartedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="24" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="updateTitles" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="25" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="updates" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUpdateDetails&gt;" Index="26" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalUpdateSizeInBytes" Type="System.Nullable&lt;System.Double&gt;" Index="27" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalTimeInMinutes" Type="System.Nullable&lt;System.Int32&gt;" Index="28" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="deviceVersionNumber" Type="System.String" />
+        <Parameter Name="friendlyDeviceVersionName" Type="System.String" />
+        <Parameter Name="deviceLastScannedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastCompletedScanJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastSuccessfulScanJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastCompletedDownloadJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastCompletedDownloadJobId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="lastDownloadJobStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" />
+        <Parameter Name="lastSuccessfulInstallJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastCompletedInstallJobOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="lastCompletedInstallJobId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="lastInstallJobStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" />
+        <Parameter Name="totalNumberOfUpdatesAvailable" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="totalNumberOfUpdatesPendingDownload" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="totalNumberOfUpdatesPendingInstall" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="rebootBehavior" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.InstallRebootBehavior&gt;" />
+        <Parameter Name="ongoingUpdateOperation" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUpdateOperation&gt;" />
+        <Parameter Name="inProgressDownloadJobId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="inProgressInstallJobId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="inProgressDownloadJobStartedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="inProgressInstallJobStartedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="updateTitles" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="updates" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUpdateDetails&gt;" />
+        <Parameter Name="totalUpdateSizeInBytes" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="totalTimeInMinutes" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1103,8 +1113,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeEtcdInfo</ReturnType>
@@ -1130,8 +1140,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeIPv4Config</ReturnType>
@@ -1159,8 +1169,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeIPv6Config</ReturnType>
@@ -1188,11 +1198,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -1252,28 +1262,29 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeJobData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="jobType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobType&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="currentStage" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.UpdateOperationStage&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="downloadProgress" Type="Azure.ResourceManager.DataBoxEdge.Models.UpdateDownloadProgress" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="installProgress" Type="Azure.ResourceManager.DataBoxEdge.Models.UpdateInstallProgress" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalRefreshErrors" Type="System.Nullable&lt;System.Int32&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="errorManifestFile" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="refreshedEntityId" Type="Azure.Core.ResourceIdentifier" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="folder" Type="System.String" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="startOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="endOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="14" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="percentComplete" Type="System.Nullable&lt;System.Int32&gt;" Index="15" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="error" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobErrorDetails" Index="16" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="jobType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobType&gt;" />
+        <Parameter Name="currentStage" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.UpdateOperationStage&gt;" />
+        <Parameter Name="downloadProgress" Type="Azure.ResourceManager.DataBoxEdge.Models.UpdateDownloadProgress" />
+        <Parameter Name="installProgress" Type="Azure.ResourceManager.DataBoxEdge.Models.UpdateInstallProgress" />
+        <Parameter Name="totalRefreshErrors" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="errorManifestFile" Type="System.String" />
+        <Parameter Name="refreshedEntityId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="folder" Type="System.String" />
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobStatus&gt;" />
+        <Parameter Name="startOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="endOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="percentComplete" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="error" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobErrorDetails" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1307,8 +1318,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobErrorDetails</ReturnType>
@@ -1336,8 +1347,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeJobErrorItem</ReturnType>
@@ -1365,11 +1376,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -1399,14 +1410,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeLoadBalancerConfig</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="loadBalancerConfigType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="version" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="ipRange" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="loadBalancerConfigType" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="ipRange" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="loadBalancerConfigType"> Load balancer type. </param>
@@ -1427,15 +1439,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricConfiguration</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="resourceId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="mdmAccount" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="metricNameSpace" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="counterSets" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounterSet&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="resourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="mdmAccount" Type="System.String" />
+        <Parameter Name="metricNameSpace" Type="System.String" />
+        <Parameter Name="counterSets" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounterSet&gt;" />
       </Parameters>
       <Docs>
         <param name="resourceId"> The Resource ID on which the metrics should be pushed. </param>
@@ -1457,15 +1470,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounter</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="instance" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dimensionFilter" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricDimension&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="additionalDimensions" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricDimension&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="instance" Type="System.String" />
+        <Parameter Name="dimensionFilter" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricDimension&gt;" />
+        <Parameter Name="additionalDimensions" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricDimension&gt;" />
       </Parameters>
       <Docs>
         <param name="name"> The counter name. </param>
@@ -1487,12 +1501,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounterSet</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="counters" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounter&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="counters" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricCounter&gt;" />
       </Parameters>
       <Docs>
         <param name="counters"> The counters that should be collected in this set. </param>
@@ -1511,13 +1526,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMetricDimension</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="sourceType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sourceName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="sourceType" Type="System.String" />
+        <Parameter Name="sourceName" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="sourceType"> The dimension type. </param>
@@ -1536,8 +1552,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap</ReturnType>
@@ -1569,8 +1585,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeNetworkAdapter</ReturnType>
@@ -1622,8 +1638,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeNetworkAdapterPosition</ReturnType>
@@ -1649,8 +1665,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeNode</ReturnType>
@@ -1695,25 +1711,26 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeOrderData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="orderId" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="contactInformation" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeContactDetails" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="shippingAddress" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShippingAddress" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="currentStatus" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOrderStatus" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="orderHistory" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOrderStatus&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="serialNumber" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="deliveryTrackingInfo" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeTrackingInfo&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="returnTrackingInfo" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeTrackingInfo&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="shipmentType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShipmentType&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="kind" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="orderId" Type="System.String" />
+        <Parameter Name="contactInformation" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeContactDetails" />
+        <Parameter Name="shippingAddress" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShippingAddress" />
+        <Parameter Name="currentStatus" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOrderStatus" />
+        <Parameter Name="orderHistory" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOrderStatus&gt;" />
+        <Parameter Name="serialNumber" Type="System.String" />
+        <Parameter Name="deliveryTrackingInfo" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeTrackingInfo&gt;" />
+        <Parameter Name="returnTrackingInfo" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeTrackingInfo&gt;" />
+        <Parameter Name="shipmentType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShipmentType&gt;" />
+        <Parameter Name="kind" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1744,11 +1761,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -1801,8 +1818,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOrderStatus</ReturnType>
@@ -1838,15 +1855,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="inProgressRefreshJobId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastCompletedRefreshJobTimeInUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="errorManifestFile" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastJob" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="inProgressRefreshJobId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="lastCompletedRefreshJobTimeInUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="errorManifestFile" Type="System.String" />
+        <Parameter Name="lastJob" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="inProgressRefreshJobId"> If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress. </param>
@@ -1867,8 +1885,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeResourceMoveDetails</ReturnType>
@@ -1886,18 +1904,16 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeRoleAddonData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData DataBoxEdgeRoleAddonData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData DataBoxEdgeRoleAddonData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData DataBoxEdgeRoleAddonData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeRoleAddonData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleAddonData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeRoleAddonData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleAddonData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeRoleAddonData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeRoleAddonData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeRoleAddonData (id, name, resourceType, systemData, kind)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData DataBoxEdgeRoleAddonData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = &quot;Unknown&quot;);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleAddonData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = &quot;Unknown&quot;) As DataBoxEdgeRoleAddonData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleAddonData</ReturnType>
@@ -1921,18 +1937,16 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeRoleData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData DataBoxEdgeRoleData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData DataBoxEdgeRoleData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData DataBoxEdgeRoleData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeRoleData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeRoleData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeRoleData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeRoleData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeRoleData (id, name, resourceType, systemData, kind)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData DataBoxEdgeRoleData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = &quot;Unknown&quot;);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeRoleData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = &quot;Unknown&quot;) As DataBoxEdgeRoleData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeRoleData</ReturnType>
@@ -1965,12 +1979,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleSinkInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="roleId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="roleId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="roleId"> Compute role ID. </param>
@@ -1988,8 +2003,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSecuritySettings</ReturnType>
@@ -2015,21 +2030,19 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeShareData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData DataBoxEdgeShareData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string description, Azure.ResourceManager.DataBoxEdge.Models.ShareStatus shareStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus monitoringStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo azureContainerInfo, Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol accessProtocol, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt; userAccessRights, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt; clientAccessRights, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt; shareMappings, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy? dataPolicy);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData DataBoxEdgeShareData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string description, Azure.ResourceManager.DataBoxEdge.Models.ShareStatus shareStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus monitoringStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo azureContainerInfo, Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol accessProtocol, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt; userAccessRights, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt; clientAccessRights, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt; shareMappings, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy? dataPolicy);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData DataBoxEdgeShareData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string description, valuetype Azure.ResourceManager.DataBoxEdge.Models.ShareStatus shareStatus, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus monitoringStatus, class Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo azureContainerInfo, valuetype Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol accessProtocol, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt; userAccessRights, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt; clientAccessRights, class Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt; shareMappings, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt; dataPolicy) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeShareData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,Azure.ResourceManager.DataBoxEdge.Models.ShareStatus,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo,Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight},System.Collections.Generic.IEnumerable{Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight},Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap},System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeShareData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, description As String, shareStatus As ShareStatus, monitoringStatus As DataBoxEdgeShareMonitoringStatus, azureContainerInfo As DataBoxEdgeStorageContainerInfo, accessProtocol As ShareAccessProtocol, userAccessRights As IEnumerable(Of UserAccessRight), clientAccessRights As IEnumerable(Of ClientAccessRight), refreshDetails As DataBoxEdgeRefreshDetails, shareMappings As IEnumerable(Of DataBoxEdgeMountPointMap), dataPolicy As Nullable(Of DataBoxEdgeDataPolicy)) As DataBoxEdgeShareData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeShareData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, description As String, shareStatus As ShareStatus, monitoringStatus As DataBoxEdgeShareMonitoringStatus, azureContainerInfo As DataBoxEdgeStorageContainerInfo, accessProtocol As ShareAccessProtocol, userAccessRights As IEnumerable(Of UserAccessRight), clientAccessRights As IEnumerable(Of ClientAccessRight), refreshDetails As DataBoxEdgeRefreshDetails, shareMappings As IEnumerable(Of DataBoxEdgeMountPointMap), dataPolicy As Nullable(Of DataBoxEdgeDataPolicy)) As DataBoxEdgeShareData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeShareData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * Azure.ResourceManager.DataBoxEdge.Models.ShareStatus * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo * Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol * seq&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt; * seq&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt; * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails * seq&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt; * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt; -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeShareData (id, name, resourceType, systemData, description, shareStatus, monitoringStatus, azureContainerInfo, accessProtocol, userAccessRights, clientAccessRights, refreshDetails, shareMappings, dataPolicy)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData DataBoxEdgeShareData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string description = default, Azure.ResourceManager.DataBoxEdge.Models.ShareStatus shareStatus = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus monitoringStatus = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo azureContainerInfo = default, Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol accessProtocol = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt; userAccessRights = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt; clientAccessRights = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt; shareMappings = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy? dataPolicy = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeShareData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional description As String = Nothing, Optional shareStatus As ShareStatus = Nothing, Optional monitoringStatus As DataBoxEdgeShareMonitoringStatus = Nothing, Optional azureContainerInfo As DataBoxEdgeStorageContainerInfo = Nothing, Optional accessProtocol As ShareAccessProtocol = Nothing, Optional userAccessRights As IEnumerable(Of UserAccessRight) = Nothing, Optional clientAccessRights As IEnumerable(Of ClientAccessRight) = Nothing, Optional refreshDetails As DataBoxEdgeRefreshDetails = Nothing, Optional shareMappings As IEnumerable(Of DataBoxEdgeMountPointMap) = Nothing, Optional dataPolicy As Nullable(Of DataBoxEdgeDataPolicy) = Nothing) As DataBoxEdgeShareData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2083,25 +2096,26 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeShareData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="description" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="shareStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareStatus&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="monitoringStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="azureContainerInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accessProtocol" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="userAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clientAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="refreshDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="shareMappings" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataPolicy" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="shareStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareStatus&gt;" />
+        <Parameter Name="monitoringStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShareMonitoringStatus&gt;" />
+        <Parameter Name="azureContainerInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo" />
+        <Parameter Name="accessProtocol" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessProtocol&gt;" />
+        <Parameter Name="userAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight&gt;" />
+        <Parameter Name="clientAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ClientAccessRight&gt;" />
+        <Parameter Name="refreshDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails" />
+        <Parameter Name="shareMappings" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeMountPointMap&gt;" />
+        <Parameter Name="dataPolicy" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2133,18 +2147,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeShippingAddress</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="addressLine1" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="addressLine2" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="addressLine3" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="postalCode" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="city" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="state" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="country" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="addressLine1" Type="System.String" />
+        <Parameter Name="addressLine2" Type="System.String" />
+        <Parameter Name="addressLine3" Type="System.String" />
+        <Parameter Name="postalCode" Type="System.String" />
+        <Parameter Name="city" Type="System.String" />
+        <Parameter Name="state" Type="System.String" />
+        <Parameter Name="country" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="addressLine1"> The address line1. </param>
@@ -2169,13 +2184,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSku</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuName&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tier" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuTier&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="name" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuName&gt;" />
+        <Parameter Name="tier" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuTier&gt;" />
       </Parameters>
       <Docs>
         <param name="name"> SKU name. </param>
@@ -2194,8 +2210,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuCapability</ReturnType>
@@ -2221,8 +2237,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuCost</ReturnType>
@@ -2250,8 +2266,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeSkuLocationInfo</ReturnType>
@@ -2271,21 +2287,19 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeStorageAccountCredentialData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData DataBoxEdgeStorageAccountCredentialData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string alias, string userName, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret accountKey, string connectionString, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus sslStatus, string blobDomainName, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType accountType, Azure.Core.ResourceIdentifier storageAccountId);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData DataBoxEdgeStorageAccountCredentialData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string alias, string userName, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret accountKey, string connectionString, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus sslStatus, string blobDomainName, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType accountType, Azure.Core.ResourceIdentifier storageAccountId);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData DataBoxEdgeStorageAccountCredentialData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string alias, string userName, class Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret accountKey, string connectionString, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus sslStatus, string blobDomainName, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType accountType, class Azure.Core.ResourceIdentifier storageAccountId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageAccountCredentialData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.String,Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret,System.String,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus,System.String,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType,Azure.Core.ResourceIdentifier)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountCredentialData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, alias As String, userName As String, accountKey As AsymmetricEncryptedSecret, connectionString As String, sslStatus As DataBoxEdgeStorageAccountSslStatus, blobDomainName As String, accountType As DataBoxEdgeStorageAccountType, storageAccountId As ResourceIdentifier) As DataBoxEdgeStorageAccountCredentialData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountCredentialData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, alias As String, userName As String, accountKey As AsymmetricEncryptedSecret, connectionString As String, sslStatus As DataBoxEdgeStorageAccountSslStatus, blobDomainName As String, accountType As DataBoxEdgeStorageAccountType, storageAccountId As ResourceIdentifier) As DataBoxEdgeStorageAccountCredentialData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeStorageAccountCredentialData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * string * Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret * string * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus * string * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageAccountCredentialData (id, name, resourceType, systemData, alias, userName, accountKey, connectionString, sslStatus, blobDomainName, accountType, storageAccountId)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData DataBoxEdgeStorageAccountCredentialData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string alias = default, string userName = default, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret accountKey = default, string connectionString = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus sslStatus = default, string blobDomainName = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType accountType = default, Azure.Core.ResourceIdentifier storageAccountId = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountCredentialData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional alias As String = Nothing, Optional userName As String = Nothing, Optional accountKey As AsymmetricEncryptedSecret = Nothing, Optional connectionString As String = Nothing, Optional sslStatus As DataBoxEdgeStorageAccountSslStatus = Nothing, Optional blobDomainName As String = Nothing, Optional accountType As DataBoxEdgeStorageAccountType = Nothing, Optional storageAccountId As ResourceIdentifier = Nothing) As DataBoxEdgeStorageAccountCredentialData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2335,23 +2349,24 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountCredentialData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="alias" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="userName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accountKey" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="connectionString" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sslStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="blobDomainName" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accountType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageAccountId" Type="Azure.Core.ResourceIdentifier" Index="11" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="alias" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="accountKey" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" />
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="sslStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountSslStatus&gt;" />
+        <Parameter Name="blobDomainName" Type="System.String" />
+        <Parameter Name="accountType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountType&gt;" />
+        <Parameter Name="storageAccountId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2372,21 +2387,19 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeStorageAccountData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData DataBoxEdgeStorageAccountData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string description, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus? storageAccountStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy dataPolicy, Azure.Core.ResourceIdentifier storageAccountCredentialId, string blobEndpoint, int? containerCount);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData DataBoxEdgeStorageAccountData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string description, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus? storageAccountStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy dataPolicy, Azure.Core.ResourceIdentifier storageAccountCredentialId, string blobEndpoint, int? containerCount);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData DataBoxEdgeStorageAccountData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string description, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus&gt; storageAccountStatus, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy dataPolicy, class Azure.Core.ResourceIdentifier storageAccountCredentialId, string blobEndpoint, valuetype System.Nullable`1&lt;int32&gt; containerCount) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageAccountData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus},Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy,Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, description As String, storageAccountStatus As Nullable(Of DataBoxEdgeStorageAccountStatus), dataPolicy As DataBoxEdgeDataPolicy, storageAccountCredentialId As ResourceIdentifier, blobEndpoint As String, containerCount As Nullable(Of Integer)) As DataBoxEdgeStorageAccountData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, description As String, storageAccountStatus As Nullable(Of DataBoxEdgeStorageAccountStatus), dataPolicy As DataBoxEdgeDataPolicy, storageAccountCredentialId As ResourceIdentifier, blobEndpoint As String, containerCount As Nullable(Of Integer)) As DataBoxEdgeStorageAccountData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeStorageAccountData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus&gt; * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy * Azure.Core.ResourceIdentifier * string * Nullable&lt;int&gt; -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageAccountData (id, name, resourceType, systemData, description, storageAccountStatus, dataPolicy, storageAccountCredentialId, blobEndpoint, containerCount)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData DataBoxEdgeStorageAccountData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string description = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus? storageAccountStatus = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy dataPolicy = default, Azure.Core.ResourceIdentifier storageAccountCredentialId = default, string blobEndpoint = default, int? containerCount = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageAccountData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional description As String = Nothing, Optional storageAccountStatus As Nullable(Of DataBoxEdgeStorageAccountStatus) = Nothing, Optional dataPolicy As DataBoxEdgeDataPolicy = Nothing, Optional storageAccountCredentialId As ResourceIdentifier = Nothing, Optional blobEndpoint As String = Nothing, Optional containerCount As Nullable(Of Integer) = Nothing) As DataBoxEdgeStorageAccountData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2432,21 +2445,22 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageAccountData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="description" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageAccountStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataPolicy" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageAccountCredentialId" Type="Azure.Core.ResourceIdentifier" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="blobEndpoint" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="containerCount" Type="System.Nullable&lt;System.Int32&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="storageAccountStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageAccountStatus&gt;" />
+        <Parameter Name="dataPolicy" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeDataPolicy&gt;" />
+        <Parameter Name="storageAccountCredentialId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="blobEndpoint" Type="System.String" />
+        <Parameter Name="containerCount" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2465,21 +2479,19 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeStorageContainerData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData DataBoxEdgeStorageContainerData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus? containerStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat dataFormat, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, DateTimeOffset? createdOn);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData DataBoxEdgeStorageContainerData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus? containerStatus, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat dataFormat, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, DateTimeOffset? createdOn);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData DataBoxEdgeStorageContainerData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus&gt; containerStatus, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat dataFormat, class Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdOn) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageContainerData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus},Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails,System.Nullable{System.DateTimeOffset})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageContainerData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, containerStatus As Nullable(Of DataBoxEdgeStorageContainerStatus), dataFormat As DataBoxEdgeStorageContainerDataFormat, refreshDetails As DataBoxEdgeRefreshDetails, createdOn As Nullable(Of DateTimeOffset)) As DataBoxEdgeStorageContainerData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageContainerData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, containerStatus As Nullable(Of DataBoxEdgeStorageContainerStatus), dataFormat As DataBoxEdgeStorageContainerDataFormat, refreshDetails As DataBoxEdgeRefreshDetails, createdOn As Nullable(Of DateTimeOffset)) As DataBoxEdgeStorageContainerData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeStorageContainerData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus&gt; * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeStorageContainerData (id, name, resourceType, systemData, containerStatus, dataFormat, refreshDetails, createdOn)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData DataBoxEdgeStorageContainerData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus? containerStatus = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat dataFormat = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails refreshDetails = default, DateTimeOffset? createdOn = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeStorageContainerData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional containerStatus As Nullable(Of DataBoxEdgeStorageContainerStatus) = Nothing, Optional dataFormat As DataBoxEdgeStorageContainerDataFormat = Nothing, Optional refreshDetails As DataBoxEdgeRefreshDetails = Nothing, Optional createdOn As Nullable(Of DateTimeOffset) = Nothing) As DataBoxEdgeStorageContainerData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2521,19 +2533,20 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeStorageContainerData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="containerStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataFormat" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="refreshDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="containerStatus" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerStatus&gt;" />
+        <Parameter Name="dataFormat" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat&gt;" />
+        <Parameter Name="refreshDetails" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRefreshDetails" />
+        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2559,14 +2572,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="storageAccountCredentialId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="containerName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataFormat" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="storageAccountCredentialId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="dataFormat" Type="Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeStorageContainerDataFormat" />
       </Parameters>
       <Docs>
         <param name="storageAccountCredentialId"> ID of the storage account credential used to access storage. </param>
@@ -2586,8 +2600,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeTrackingInfo</ReturnType>
@@ -2609,18 +2623,16 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeTriggerData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData DataBoxEdgeTriggerData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData DataBoxEdgeTriggerData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData DataBoxEdgeTriggerData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeTriggerData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeTriggerData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeTriggerData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeTriggerData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = Nothing) As DataBoxEdgeTriggerData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeTriggerData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeTriggerData (id, name, resourceType, systemData, kind)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData DataBoxEdgeTriggerData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string kind = &quot;Unknown&quot;);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeTriggerData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional kind As String = &quot;Unknown&quot;) As DataBoxEdgeTriggerData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeTriggerData</ReturnType>
@@ -2652,8 +2664,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUpdateDetails</ReturnType>
@@ -2685,21 +2697,19 @@
       </Docs>
     </Member>
     <Member MemberName="DataBoxEdgeUserData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData DataBoxEdgeUserData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret encryptedPassword, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt; shareAccessRights, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType userType);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData DataBoxEdgeUserData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret encryptedPassword, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt; shareAccessRights, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType userType);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData DataBoxEdgeUserData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret encryptedPassword, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt; shareAccessRights, valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType userType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeUserData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret,System.Collections.Generic.IEnumerable{Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight},Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeUserData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, encryptedPassword As AsymmetricEncryptedSecret, shareAccessRights As IEnumerable(Of ShareAccessRight), userType As DataBoxEdgeUserType) As DataBoxEdgeUserData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeUserData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, encryptedPassword As AsymmetricEncryptedSecret, shareAccessRights As IEnumerable(Of ShareAccessRight), userType As DataBoxEdgeUserType) As DataBoxEdgeUserData" />
       <MemberSignature Language="F#" Value="static member DataBoxEdgeUserData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret * seq&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt; * Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType -&gt; Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DataBoxEdgeUserData (id, name, resourceType, systemData, encryptedPassword, shareAccessRights, userType)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData DataBoxEdgeUserData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret encryptedPassword = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt; shareAccessRights = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType userType = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DataBoxEdgeUserData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional encryptedPassword As AsymmetricEncryptedSecret = Nothing, Optional shareAccessRights As IEnumerable(Of ShareAccessRight) = Nothing, Optional userType As DataBoxEdgeUserType = Nothing) As DataBoxEdgeUserData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2739,18 +2749,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DataBoxEdgeUserData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="encryptedPassword" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="shareAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="userType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="encryptedPassword" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" />
+        <Parameter Name="shareAccessRights" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight&gt;" />
+        <Parameter Name="userType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeUserType&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2775,13 +2786,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeVmMemory</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startupMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="currentMemoryUsageInMB" Type="System.Nullable&lt;System.Int64&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="startupMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="currentMemoryUsageInMB" Type="System.Nullable&lt;System.Int64&gt;" />
       </Parameters>
       <Docs>
         <param name="startupMemoryInMB"> The total amount of RAM in the virtual machine, as seen by the guest  operating system. For a virtual machine with dynamic memory enabled, this represents the initial memory available at startup. </param>
@@ -2801,13 +2813,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.DeviceCapacityRequestContent</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="vmPlacementQuery" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IList&lt;System.String&gt;&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="vmPlacementResults" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.VmPlacementRequestResult&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="vmPlacementQuery" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IList&lt;System.String&gt;&gt;" />
+        <Parameter Name="vmPlacementResults" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.VmPlacementRequestResult&gt;" />
       </Parameters>
       <Docs>
         <param name="vmPlacementQuery"> Array containing the sizes of the VMs for checking if its feasible to create them on the appliance. </param>
@@ -2820,21 +2833,19 @@
       </Docs>
     </Member>
     <Member MemberName="DiagnosticProactiveLogCollectionSettingData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData DiagnosticProactiveLogCollectionSettingData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent userConsent);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData DiagnosticProactiveLogCollectionSettingData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent userConsent);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData DiagnosticProactiveLogCollectionSettingData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent userConsent) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DiagnosticProactiveLogCollectionSettingData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DiagnosticProactiveLogCollectionSettingData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, userConsent As ProactiveDiagnosticsConsent) As DiagnosticProactiveLogCollectionSettingData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DiagnosticProactiveLogCollectionSettingData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, userConsent As ProactiveDiagnosticsConsent) As DiagnosticProactiveLogCollectionSettingData" />
       <MemberSignature Language="F#" Value="static member DiagnosticProactiveLogCollectionSettingData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent -&gt; Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.DiagnosticProactiveLogCollectionSettingData (id, name, resourceType, systemData, userConsent)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData DiagnosticProactiveLogCollectionSettingData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent userConsent = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DiagnosticProactiveLogCollectionSettingData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional userConsent As ProactiveDiagnosticsConsent = Nothing) As DiagnosticProactiveLogCollectionSettingData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2870,16 +2881,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DiagnosticProactiveLogCollectionSettingData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="userConsent" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="userConsent" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.ProactiveDiagnosticsConsent&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -2901,8 +2913,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.DiagnosticRemoteSupportSettingData</ReturnType>
@@ -2926,21 +2938,19 @@
       </Docs>
     </Member>
     <Member MemberName="EdgeArcAddon">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon EdgeArcAddon (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string subscriptionId, string resourceGroupName, string resourceName, Azure.Core.AzureLocation resourceLocation, string version, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType? hostPlatform, Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType? hostPlatformType, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState? provisioningState);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon EdgeArcAddon (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, string subscriptionId, string resourceGroupName, string resourceName, Azure.Core.AzureLocation resourceLocation, string version, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType? hostPlatform, Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType? hostPlatformType, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState? provisioningState);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon EdgeArcAddon(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string subscriptionId, string resourceGroupName, string resourceName, valuetype Azure.Core.AzureLocation resourceLocation, string version, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType&gt; hostPlatform, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType&gt; hostPlatformType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState&gt; provisioningState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.EdgeArcAddon(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.String,System.String,Azure.Core.AzureLocation,System.String,System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType},System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType},System.Nullable{Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function EdgeArcAddon (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, subscriptionId As String, resourceGroupName As String, resourceName As String, resourceLocation As AzureLocation, version As String, hostPlatform As Nullable(Of DataBoxEdgeOSPlatformType), hostPlatformType As Nullable(Of HostPlatformType), provisioningState As Nullable(Of DataBoxEdgeRoleAddonProvisioningState)) As EdgeArcAddon" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EdgeArcAddon (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, subscriptionId As String, resourceGroupName As String, resourceName As String, resourceLocation As AzureLocation, version As String, hostPlatform As Nullable(Of DataBoxEdgeOSPlatformType), hostPlatformType As Nullable(Of HostPlatformType), provisioningState As Nullable(Of DataBoxEdgeRoleAddonProvisioningState)) As EdgeArcAddon" />
       <MemberSignature Language="F#" Value="static member EdgeArcAddon : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * string * string * Azure.Core.AzureLocation * string * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType&gt; * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType&gt; * Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState&gt; -&gt; Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon" Usage="Azure.ResourceManager.DataBoxEdge.Models.ArmDataBoxEdgeModelFactory.EdgeArcAddon (id, name, resourceType, systemData, subscriptionId, resourceGroupName, resourceName, resourceLocation, version, hostPlatform, hostPlatformType, provisioningState)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon EdgeArcAddon (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string subscriptionId = default, string resourceGroupName = default, string resourceName = default, Azure.Core.AzureLocation resourceLocation = default, string version = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType? hostPlatform = default, Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType? hostPlatformType = default, Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState? provisioningState = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function EdgeArcAddon (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional subscriptionId As String = Nothing, Optional resourceGroupName As String = Nothing, Optional resourceName As String = Nothing, Optional resourceLocation As AzureLocation = Nothing, Optional version As String = Nothing, Optional hostPlatform As Nullable(Of DataBoxEdgeOSPlatformType) = Nothing, Optional hostPlatformType As Nullable(Of HostPlatformType) = Nothing, Optional provisioningState As Nullable(Of DataBoxEdgeRoleAddonProvisioningState) = Nothing) As EdgeArcAddon" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -2990,23 +3000,24 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeArcAddon</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="subscriptionId" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceGroupName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceName" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="version" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="hostPlatform" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="hostPlatformType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="subscriptionId" Type="System.String" />
+        <Parameter Name="resourceGroupName" Type="System.String" />
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="resourceLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="hostPlatform" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeOSPlatformType&gt;" />
+        <Parameter Name="hostPlatformType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.HostPlatformType&gt;" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeRoleAddonProvisioningState&gt;" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -3036,16 +3047,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterCapacityViewInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fqdn" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuCapacity" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterGpuCapacity" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="memoryCapacity" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterMemoryCapacity" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastRefreshedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalProvisionedNonHpnCores" Type="System.Nullable&lt;System.Int64&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="fqdn" Type="System.String" />
+        <Parameter Name="gpuCapacity" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterGpuCapacity" />
+        <Parameter Name="memoryCapacity" Type="Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterMemoryCapacity" />
+        <Parameter Name="lastRefreshedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="totalProvisionedNonHpnCores" Type="System.Nullable&lt;System.Int64&gt;" />
       </Parameters>
       <Docs>
         <param name="fqdn"> The FQDN of the cluster. </param>
@@ -3068,16 +3080,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterGpuCapacity</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="gpuType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuUsedUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuFreeUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuReservedForFailoverUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuTotalUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="gpuType" Type="System.String" />
+        <Parameter Name="gpuUsedUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="gpuFreeUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="gpuReservedForFailoverUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="gpuTotalUnitsCount" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
         <param name="gpuType"> The cluster GPU Type. </param>
@@ -3100,20 +3113,21 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterMemoryCapacity</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="clusterFreeMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterUsedMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterFailoverMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterFragmentationMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterHyperVReserveMemoryMb" Type="System.Nullable&lt;System.Double&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterInfraVmMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterTotalMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterNonFailoverVmInMB" Type="System.Nullable&lt;System.Double&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterMemoryUsedByVmsInMB" Type="System.Nullable&lt;System.Double&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="clusterFreeMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterUsedMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterFailoverMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterFragmentationMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterHyperVReserveMemoryMb" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterInfraVmMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterTotalMemoryInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterNonFailoverVmInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterMemoryUsedByVmsInMB" Type="System.Nullable&lt;System.Double&gt;" />
       </Parameters>
       <Docs>
         <param name="clusterFreeMemoryInMB"> The free memory in the cluster in MB. </param>
@@ -3140,13 +3154,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeClusterStorageViewInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="clusterTotalStorageInMB" Type="System.Nullable&lt;System.Double&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterFreeStorageInMB" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="clusterTotalStorageInMB" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="clusterFreeStorageInMB" Type="System.Nullable&lt;System.Double&gt;" />
       </Parameters>
       <Docs>
         <param name="clusterTotalStorageInMB"> Total storage on the cluster in MB. </param>
@@ -3166,13 +3181,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeComputeResourceInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="processorCount" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="memoryInGB" Type="System.Int64" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="processorCount" Type="System.Int32" />
+        <Parameter Name="memoryInGB" Type="System.Int64" />
       </Parameters>
       <Docs>
         <param name="processorCount"> Processor count. </param>
@@ -3191,11 +3207,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -3235,18 +3251,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeFileEventTrigger</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="customContextTag" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sourceInfoShareId" Type="Azure.Core.ResourceIdentifier" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sinkInfoRoleId" Type="Azure.Core.ResourceIdentifier" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="customContextTag" Type="System.String" />
+        <Parameter Name="sourceInfoShareId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="sinkInfoRoleId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -3273,12 +3290,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeFileSourceInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="shareId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="shareId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="shareId"> File share ID. </param>
@@ -3296,8 +3314,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeIotAddon</ReturnType>
@@ -3342,15 +3360,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeIotDeviceInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="deviceId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="iotHostHub" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="iotHostHubId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="symmetricKeyConnectionString" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="deviceId" Type="System.String" />
+        <Parameter Name="iotHostHub" Type="System.String" />
+        <Parameter Name="iotHostHubId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="symmetricKeyConnectionString" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" />
       </Parameters>
       <Docs>
         <param name="deviceId"> ID of the IoT device/edge device. </param>
@@ -3371,8 +3390,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeIotRole</ReturnType>
@@ -3418,8 +3437,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesClusterInfo</ReturnType>
@@ -3447,8 +3466,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesIPConfiguration</ReturnType>
@@ -3474,8 +3493,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesNodeInfo</ReturnType>
@@ -3503,8 +3522,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRole</ReturnType>
@@ -3546,8 +3565,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRoleCompute</ReturnType>
@@ -3575,8 +3594,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRoleNetwork</ReturnType>
@@ -3602,8 +3621,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRoleResources</ReturnType>
@@ -3631,8 +3650,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRoleStorage</ReturnType>
@@ -3658,8 +3677,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeKubernetesRoleStorageClassInfo</ReturnType>
@@ -3687,8 +3706,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeProfileSubscription</ReturnType>
@@ -3731,14 +3750,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.EdgeRemoteSupportSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="remoteApplicationType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeRemoteApplicationType&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accessLevel" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeRemoteApplicationAccessLevel&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="remoteApplicationType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeRemoteApplicationType&gt;" />
+        <Parameter Name="accessLevel" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.EdgeRemoteApplicationAccessLevel&gt;" />
+        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="remoteApplicationType"> Remote application type. </param>
@@ -3758,8 +3778,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.GenerateCertResult</ReturnType>
@@ -3794,17 +3814,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.HostCapacity</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="hostName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="effectiveAvailableMemoryInMBOnHost" Type="System.Nullable&lt;System.Int64&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="availableGpuCount" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="vmUsedMemory" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeVmMemory&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="gpuType" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="numaNodesData" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.NumaNodeInfo&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="hostName" Type="System.String" />
+        <Parameter Name="effectiveAvailableMemoryInMBOnHost" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="availableGpuCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="vmUsedMemory" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeVmMemory&gt;" />
+        <Parameter Name="gpuType" Type="System.String" />
+        <Parameter Name="numaNodesData" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DataBoxEdge.Models.NumaNodeInfo&gt;" />
       </Parameters>
       <Docs>
         <param name="hostName"> The name of the host. </param>
@@ -3828,14 +3849,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.ImageRepositoryCredential</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="imageRepositoryUri" Type="System.Uri" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="userName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="password" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="imageRepositoryUri" Type="System.Uri" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="Azure.ResourceManager.DataBoxEdge.Models.AsymmetricEncryptedSecret" />
       </Parameters>
       <Docs>
         <param name="imageRepositoryUri"> Image repository url (e.g.: mcr.microsoft.com). </param>
@@ -3856,14 +3878,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.IotEdgeAgentInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="imageName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tag" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="imageRepository" Type="Azure.ResourceManager.DataBoxEdge.Models.ImageRepositoryCredential" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="imageName" Type="System.String" />
+        <Parameter Name="tag" Type="System.String" />
+        <Parameter Name="imageRepository" Type="Azure.ResourceManager.DataBoxEdge.Models.ImageRepositoryCredential" />
       </Parameters>
       <Docs>
         <param name="imageName"> Name of the IoT edge agent image. </param>
@@ -3883,8 +3906,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.MecRole</ReturnType>
@@ -3922,8 +3945,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.MonitoringMetricConfigurationData</ReturnType>
@@ -3958,18 +3981,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.NumaNodeInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="numaNodeIndex" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="totalMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="logicalCoreCountPerCore" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="effectiveAvailableMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="freeVCpuIndexesForHpn" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="vCpuIndexesForHpn" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="vCpuIndexesForRoot" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="numaNodeIndex" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="totalMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="logicalCoreCountPerCore" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="effectiveAvailableMemoryInMB" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="freeVCpuIndexesForHpn" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="vCpuIndexesForHpn" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="vCpuIndexesForRoot" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
         <param name="numaNodeIndex"> The NUMA node index. </param>
@@ -3993,11 +4017,11 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -4037,18 +4061,19 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.PeriodicTimerEventTrigger</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sourceInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.PeriodicTimerSourceInfo" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="customContextTag" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sinkInfoRoleId" Type="Azure.Core.ResourceIdentifier" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="sourceInfo" Type="Azure.ResourceManager.DataBoxEdge.Models.PeriodicTimerSourceInfo" />
+        <Parameter Name="customContextTag" Type="System.String" />
+        <Parameter Name="sinkInfoRoleId" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -4075,14 +4100,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.PeriodicTimerSourceInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startOn" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="schedule" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="topic" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="startOn" Type="System.DateTimeOffset" />
+        <Parameter Name="schedule" Type="System.String" />
+        <Parameter Name="topic" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="startOn"> The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time. </param>
@@ -4102,8 +4128,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.ShareAccessRight</ReturnType>
@@ -4131,8 +4157,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.SubscriptionRegisteredFeatures</ReturnType>
@@ -4158,8 +4184,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.TriggerSupportPackageContent</ReturnType>
@@ -4199,8 +4225,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.UpdateDownloadProgress</ReturnType>
@@ -4234,8 +4260,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.UpdateInstallProgress</ReturnType>
@@ -4264,13 +4290,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.UploadCertificateContent</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="authenticationType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeAuthenticationType&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="certificate" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="authenticationType" Type="System.Nullable&lt;Azure.ResourceManager.DataBoxEdge.Models.DataBoxEdgeAuthenticationType&gt;" />
+        <Parameter Name="certificate" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="authenticationType"> The authentication type. </param>
@@ -4291,8 +4318,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.UploadCertificateResponse</ReturnType>
@@ -4331,13 +4358,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.UserAccessRight</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="userId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="accessType" Type="Azure.ResourceManager.DataBoxEdge.Models.ShareAccessType" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="userId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="accessType" Type="Azure.ResourceManager.DataBoxEdge.Models.ShareAccessType" />
       </Parameters>
       <Docs>
         <param name="userId"> User ID (already existing in the device). </param>
@@ -4357,15 +4385,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataBoxEdge</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataBoxEdge.Models.VmPlacementRequestResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="vmSize" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="isFeasible" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="messageCode" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="message" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="vmSize" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="isFeasible" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="messageCode" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="vmSize"> List of VM sizes being checked. </param>

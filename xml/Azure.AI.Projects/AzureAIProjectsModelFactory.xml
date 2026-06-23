@@ -152,6 +152,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AgentTaxonomyInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.AgentTaxonomyInput AgentTaxonomyInput (Azure.AI.Projects.Evaluation.EvaluationTarget target = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.RiskCategory&gt; riskCategories = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.AgentTaxonomyInput AgentTaxonomyInput(class Azure.AI.Projects.Evaluation.EvaluationTarget target, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.Evaluation.RiskCategory&gt; riskCategories) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.AgentTaxonomyInput(Azure.AI.Projects.Evaluation.EvaluationTarget,System.Collections.Generic.IEnumerable{Azure.AI.Projects.Evaluation.RiskCategory})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AgentTaxonomyInput (Optional target As EvaluationTarget = Nothing, Optional riskCategories As IEnumerable(Of RiskCategory) = Nothing) As AgentTaxonomyInput" />
+      <MemberSignature Language="F#" Value="static member AgentTaxonomyInput : Azure.AI.Projects.Evaluation.EvaluationTarget * seq&lt;Azure.AI.Projects.Evaluation.RiskCategory&gt; -&gt; Azure.AI.Projects.Evaluation.AgentTaxonomyInput" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.AgentTaxonomyInput (target, riskCategories)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.AgentTaxonomyInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="Azure.AI.Projects.Evaluation.EvaluationTarget" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="riskCategories" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.RiskCategory&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="target"> Target configuration for the agent. </param>
+        <param name="riskCategories"> List of risk categories to evaluate against. </param>
+        <summary> Input configuration for the evaluation taxonomy when the input type is agent. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.AgentTaxonomyInput" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AIProjectBlobReference">
       <MemberSignature Language="C#" Value="public static Azure.AI.Projects.AIProjectBlobReference AIProjectBlobReference (Uri blobUri = default, string storageAccountArmId = default, Azure.AI.Projects.BlobReferenceSasCredential credential = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.AIProjectBlobReference AIProjectBlobReference(class System.Uri blobUri, string storageAccountArmId, class Azure.AI.Projects.BlobReferenceSasCredential credential) cil managed" />
@@ -919,17 +945,25 @@
       </Docs>
     </Member>
     <Member MemberName="ContinuousEvaluationRuleAction">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction (string evalId = default, int? maxHourlyRuns = default);" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction (string evalId = default, int? maxHourlyRuns = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction(string evalId, valuetype System.Nullable`1&lt;int32&gt; maxHourlyRuns) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.ContinuousEvaluationRuleAction(System.String,System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ContinuousEvaluationRuleAction (Optional evalId As String = Nothing, Optional maxHourlyRuns As Nullable(Of Integer) = Nothing) As ContinuousEvaluationRuleAction" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ContinuousEvaluationRuleAction (Optional evalId As String = Nothing, Optional maxHourlyRuns As Nullable(Of Integer) = Nothing) As ContinuousEvaluationRuleAction" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="static member ContinuousEvaluationRuleAction : string * Nullable&lt;int&gt; -&gt; Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.ContinuousEvaluationRuleAction (evalId, maxHourlyRuns)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction (string evalId, int? maxHourlyRuns);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ContinuousEvaluationRuleAction (evalId As String, maxHourlyRuns As Nullable(Of Integer)) As ContinuousEvaluationRuleAction" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Projects</AssemblyName>
         <AssemblyVersion>2.0.1.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction</ReturnType>
       </ReturnValue>
@@ -942,6 +976,64 @@
         <param name="maxHourlyRuns"> Maximum number of evaluation runs allowed per hour. </param>
         <summary> Evaluation rule action for continuous evaluation. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousEvaluationRuleAction">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction (string evalId = default, int? maxHourlyRuns = default, double? samplingRate = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction ContinuousEvaluationRuleAction(string evalId, valuetype System.Nullable`1&lt;int32&gt; maxHourlyRuns, valuetype System.Nullable`1&lt;float64&gt; samplingRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.ContinuousEvaluationRuleAction(System.String,System.Nullable{System.Int32},System.Nullable{System.Double})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ContinuousEvaluationRuleAction (Optional evalId As String = Nothing, Optional maxHourlyRuns As Nullable(Of Integer) = Nothing, Optional samplingRate As Nullable(Of Double) = Nothing) As ContinuousEvaluationRuleAction" />
+      <MemberSignature Language="F#" Value="static member ContinuousEvaluationRuleAction : string * Nullable&lt;int&gt; * Nullable&lt;double&gt; -&gt; Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.ContinuousEvaluationRuleAction (evalId, maxHourlyRuns, samplingRate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evalId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxHourlyRuns" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="samplingRate" Type="System.Nullable&lt;System.Double&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="evalId"> Eval Id to add continuous evaluation runs to. </param>
+        <param name="maxHourlyRuns"> Maximum number of evaluation runs allowed per hour. </param>
+        <param name="samplingRate"> Percentage (0-100] chance that a matching event triggers an evaluation. When omitted, the service-default is to evaluate every event, which is equivalent to setting a sampling rate of 100. </param>
+        <summary> Evaluation rule action for continuous evaluation. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.ContinuousEvaluationRuleAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CronTrigger">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.CronTrigger CronTrigger (string expression = default, string timeZone = default, DateTimeOffset? startTime = default, DateTimeOffset? endTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.CronTrigger CronTrigger(string expression, string timeZone, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; startTime, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; endTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.CronTrigger(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CronTrigger (Optional expression As String = Nothing, Optional timeZone As String = Nothing, Optional startTime As Nullable(Of DateTimeOffset) = Nothing, Optional endTime As Nullable(Of DateTimeOffset) = Nothing) As CronTrigger" />
+      <MemberSignature Language="F#" Value="static member CronTrigger : string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.AI.Projects.Evaluation.CronTrigger" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.CronTrigger (expression, timeZone, startTime, endTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.CronTrigger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="timeZone" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="startTime" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="endTime" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="expression"> Cron expression that defines the schedule frequency. </param>
+        <param name="timeZone"> Time zone for the cron schedule. Defaults to `UTC`. </param>
+        <param name="startTime"> Start time for the cron schedule in ISO 8601 format. </param>
+        <param name="endTime"> End time for the cron schedule in ISO 8601 format. </param>
+        <summary> Cron based trigger. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.CronTrigger" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -970,6 +1062,30 @@
         <param name="parameters"> Provider-specific trigger parameters. </param>
         <summary> A custom event routine trigger. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.CustomRoutineTrigger" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DailyRecurrenceSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule DailyRecurrenceSchedule (System.Collections.Generic.IEnumerable&lt;int&gt; hours = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule DailyRecurrenceSchedule(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; hours) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.DailyRecurrenceSchedule(System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DailyRecurrenceSchedule (Optional hours As IEnumerable(Of Integer) = Nothing) As DailyRecurrenceSchedule" />
+      <MemberSignature Language="F#" Value="static member DailyRecurrenceSchedule : seq&lt;int&gt; -&gt; Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.DailyRecurrenceSchedule hours" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hours" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="hours"> Hours for the recurrence schedule. </param>
+        <summary> Daily recurrence schedule. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1605,6 +1721,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EvaluationResultSample">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.EvaluationResultSample EvaluationResultSample (string id = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; features = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; correlationInfo = default, Azure.AI.Projects.Evaluation.EvalResult evaluationResult = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.EvaluationResultSample EvaluationResultSample(string id, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; features, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; correlationInfo, class Azure.AI.Projects.Evaluation.EvalResult evaluationResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluationResultSample(System.String,System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IDictionary{System.String,System.BinaryData},Azure.AI.Projects.Evaluation.EvalResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EvaluationResultSample (Optional id As String = Nothing, Optional features As IDictionary(Of String, BinaryData) = Nothing, Optional correlationInfo As IDictionary(Of String, BinaryData) = Nothing, Optional evaluationResult As EvalResult = Nothing) As EvaluationResultSample" />
+      <MemberSignature Language="F#" Value="static member EvaluationResultSample : string * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * Azure.AI.Projects.Evaluation.EvalResult -&gt; Azure.AI.Projects.Evaluation.EvaluationResultSample" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluationResultSample (id, features, correlationInfo, evaluationResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.EvaluationResultSample</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="features" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="correlationInfo" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="evaluationResult" Type="Azure.AI.Projects.Evaluation.EvalResult" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The unique identifier for the analysis sample. </param>
+        <param name="features"> Features to help with additional filtering of data in UX. </param>
+        <param name="correlationInfo"> Info about the correlation for the analysis sample. </param>
+        <param name="evaluationResult"> Evaluation result for the analysis sample. </param>
+        <summary> A sample from the evaluation result. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.EvaluationResultSample" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="EvaluationRule">
       <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.EvaluationRule EvaluationRule (string id = default, string displayName = default, string description = default, Azure.AI.Projects.Evaluation.EvaluationRuleAction action = default, Azure.AI.Projects.Evaluation.EvaluationRuleFilter filter = default, Azure.AI.Projects.Evaluation.EvaluationRuleEventType eventType = default, bool enabled = false, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; systemData = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.EvaluationRule EvaluationRule(string id, string displayName, string description, class Azure.AI.Projects.Evaluation.EvaluationRuleAction action, class Azure.AI.Projects.Evaluation.EvaluationRuleFilter filter, valuetype Azure.AI.Projects.Evaluation.EvaluationRuleEventType eventType, bool enabled, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; systemData) cil managed" />
@@ -1874,6 +2020,33 @@
         <param name="properties"> Additional properties for the evaluation taxonomy. </param>
         <summary> Evaluation Taxonomy Definition. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.EvaluationTaxonomy" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluationTaxonomyInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.EvaluationTaxonomyInput EvaluationTaxonomyInput (string type = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.EvaluationTaxonomyInput EvaluationTaxonomyInput(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluationTaxonomyInput(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EvaluationTaxonomyInput (Optional type As String = Nothing) As EvaluationTaxonomyInput" />
+      <MemberSignature Language="F#" Value="static member EvaluationTaxonomyInput : string -&gt; Azure.AI.Projects.Evaluation.EvaluationTaxonomyInput" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluationTaxonomyInput type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.EvaluationTaxonomyInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="type"> Input type of the evaluation taxonomy. </param>
+        <summary>
+            Input configuration for the evaluation taxonomy.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Evaluation.AgentTaxonomyInput" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.EvaluationTaxonomyInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2181,11 +2354,11 @@
       </Docs>
     </Member>
     <Member MemberName="EvaluatorVersion">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.EvaluatorVersion EvaluatorVersion (string displayName = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, Azure.AI.Projects.EvaluatorType evaluatorType = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; categories = default, Azure.AI.Projects.Evaluation.EvaluatorDefinition definition = default, Azure.AI.Projects.EvaluatorGenerationArtifacts generationArtifacts = default, string createdBy = default, string createdAt = default, string modifiedAt = default, string id = default, string name = default, string version = default, string description = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.EvaluatorVersion EvaluatorVersion(string displayName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype Azure.AI.Projects.EvaluatorType evaluatorType, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; categories, class Azure.AI.Projects.Evaluation.EvaluatorDefinition definition, class Azure.AI.Projects.EvaluatorGenerationArtifacts generationArtifacts, string createdBy, string createdAt, string modifiedAt, string id, string name, string version, string description, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluatorVersion(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Azure.AI.Projects.EvaluatorType,System.Collections.Generic.IEnumerable{Azure.AI.Projects.Evaluation.EvaluatorCategory},Azure.AI.Projects.Evaluation.EvaluatorDefinition,Azure.AI.Projects.EvaluatorGenerationArtifacts,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function EvaluatorVersion (Optional displayName As String = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional evaluatorType As EvaluatorType = Nothing, Optional categories As IEnumerable(Of EvaluatorCategory) = Nothing, Optional definition As EvaluatorDefinition = Nothing, Optional generationArtifacts As EvaluatorGenerationArtifacts = Nothing, Optional createdBy As String = Nothing, Optional createdAt As String = Nothing, Optional modifiedAt As String = Nothing, Optional id As String = Nothing, Optional name As String = Nothing, Optional version As String = Nothing, Optional description As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing) As EvaluatorVersion" />
-      <MemberSignature Language="F#" Value="static member EvaluatorVersion : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.AI.Projects.EvaluatorType * seq&lt;Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; * Azure.AI.Projects.Evaluation.EvaluatorDefinition * Azure.AI.Projects.EvaluatorGenerationArtifacts * string * string * string * string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.AI.Projects.Evaluation.EvaluatorVersion" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluatorVersion (displayName, metadata, evaluatorType, categories, definition, generationArtifacts, createdBy, createdAt, modifiedAt, id, name, version, description, tags)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.EvaluatorVersion EvaluatorVersion (string displayName = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, Azure.AI.Projects.EvaluatorType evaluatorType = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; categories = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.EvaluationLevel&gt; supportedEvaluationLevels = default, Azure.AI.Projects.Evaluation.EvaluatorDefinition definition = default, Azure.AI.Projects.EvaluatorGenerationArtifacts generationArtifacts = default, string createdBy = default, string createdAt = default, string modifiedAt = default, string id = default, string name = default, string version = default, string description = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.EvaluatorVersion EvaluatorVersion(string displayName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype Azure.AI.Projects.EvaluatorType evaluatorType, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; categories, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.EvaluationLevel&gt; supportedEvaluationLevels, class Azure.AI.Projects.Evaluation.EvaluatorDefinition definition, class Azure.AI.Projects.EvaluatorGenerationArtifacts generationArtifacts, string createdBy, string createdAt, string modifiedAt, string id, string name, string version, string description, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluatorVersion(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Azure.AI.Projects.EvaluatorType,System.Collections.Generic.IEnumerable{Azure.AI.Projects.Evaluation.EvaluatorCategory},System.Collections.Generic.IEnumerable{Azure.AI.Projects.EvaluationLevel},Azure.AI.Projects.Evaluation.EvaluatorDefinition,Azure.AI.Projects.EvaluatorGenerationArtifacts,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EvaluatorVersion (Optional displayName As String = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional evaluatorType As EvaluatorType = Nothing, Optional categories As IEnumerable(Of EvaluatorCategory) = Nothing, Optional supportedEvaluationLevels As IEnumerable(Of EvaluationLevel) = Nothing, Optional definition As EvaluatorDefinition = Nothing, Optional generationArtifacts As EvaluatorGenerationArtifacts = Nothing, Optional createdBy As String = Nothing, Optional createdAt As String = Nothing, Optional modifiedAt As String = Nothing, Optional id As String = Nothing, Optional name As String = Nothing, Optional version As String = Nothing, Optional description As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing) As EvaluatorVersion" />
+      <MemberSignature Language="F#" Value="static member EvaluatorVersion : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.AI.Projects.EvaluatorType * seq&lt;Azure.AI.Projects.Evaluation.EvaluatorCategory&gt; * seq&lt;Azure.AI.Projects.EvaluationLevel&gt; * Azure.AI.Projects.Evaluation.EvaluatorDefinition * Azure.AI.Projects.EvaluatorGenerationArtifacts * string * string * string * string * string * string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.AI.Projects.Evaluation.EvaluatorVersion" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.EvaluatorVersion (displayName, metadata, evaluatorType, categories, supportedEvaluationLevels, definition, generationArtifacts, createdBy, createdAt, modifiedAt, id, name, version, description, tags)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Projects</AssemblyName>
@@ -2199,22 +2372,24 @@
         <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="evaluatorType" Type="Azure.AI.Projects.EvaluatorType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="categories" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.EvaluatorCategory&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="definition" Type="Azure.AI.Projects.Evaluation.EvaluatorDefinition" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="generationArtifacts" Type="Azure.AI.Projects.EvaluatorGenerationArtifacts" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="createdBy" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="createdAt" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="modifiedAt" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="id" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="name" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="version" Type="System.String" Index="11" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="description" Type="System.String" Index="12" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="supportedEvaluationLevels" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.EvaluationLevel&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="definition" Type="Azure.AI.Projects.Evaluation.EvaluatorDefinition" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="generationArtifacts" Type="Azure.AI.Projects.EvaluatorGenerationArtifacts" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="createdBy" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="createdAt" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="modifiedAt" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="id" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.String" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="displayName"> Display Name for evaluator. It helps to find the evaluator easily in AI Foundry. It does not need to be unique. </param>
         <param name="metadata"> Metadata about the evaluator. </param>
         <param name="evaluatorType"> The type of the evaluator. </param>
         <param name="categories"> The categories of the evaluator. </param>
+        <param name="supportedEvaluationLevels"> Evaluation levels this evaluator supports (e.g., `turn`, `conversation`). When omitted on create, the service defaults to `["turn"]`. On update, omitting this field leaves it unchanged; an empty list is rejected. Custom code-based evaluators support only `turn`; custom prompt-based evaluators support exactly one level (`turn` or `conversation`). </param>
         <param name="definition"> Definition of the evaluator. </param>
         <param name="generationArtifacts"> Provenance artifacts from the generation pipeline. Read-only; present only on evaluator versions created via an EvaluatorGenerationJob. Each artifact resolves to a versioned Foundry Dataset. </param>
         <param name="createdBy"> Creator of the evaluator. </param>
@@ -2387,6 +2562,27 @@
         <param name="issueEvent"> The GitHub issue event that fires the routine. </param>
         <summary> A GitHub issue routine trigger. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.GitHubIssueRoutineTrigger" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HourlyRecurrenceSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule HourlyRecurrenceSchedule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule HourlyRecurrenceSchedule() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.HourlyRecurrenceSchedule" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function HourlyRecurrenceSchedule () As HourlyRecurrenceSchedule" />
+      <MemberSignature Language="F#" Value="static member HourlyRecurrenceSchedule : unit -&gt; Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.HourlyRecurrenceSchedule " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Hourly recurrence schedule. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2588,6 +2784,39 @@
             Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Evaluation.EvaluationComparisonInsightResult" />, <see cref="T:Azure.AI.Projects.Evaluation.EvaluationRunClusterInsightResult" />, and <see cref="T:Azure.AI.Projects.Evaluation.AgentClusterInsightResult" />.
             </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.InsightResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsightSample">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.InsightSample InsightSample (string id = default, string type = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; features = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; correlationInfo = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.InsightSample InsightSample(string id, string type, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; features, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; correlationInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.InsightSample(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IDictionary{System.String,System.BinaryData})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function InsightSample (Optional id As String = Nothing, Optional type As String = Nothing, Optional features As IDictionary(Of String, BinaryData) = Nothing, Optional correlationInfo As IDictionary(Of String, BinaryData) = Nothing) As InsightSample" />
+      <MemberSignature Language="F#" Value="static member InsightSample : string * string * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; -&gt; Azure.AI.Projects.Evaluation.InsightSample" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.InsightSample (id, type, features, correlationInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.InsightSample</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="type" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="features" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="correlationInfo" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The unique identifier for the analysis sample. </param>
+        <param name="type"> Sample type. </param>
+        <param name="features"> Features to help with additional filtering of data in UX. </param>
+        <param name="correlationInfo"> Info about the correlation for the analysis sample. </param>
+        <summary>
+            A sample from the analysis.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Evaluation.EvaluationResultSample" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.InsightSample" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2970,6 +3199,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MemoryStoreDefaultDefinition">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition MemoryStoreDefaultDefinition (string chatModel = default, string embeddingModel = default, Azure.AI.Projects.Memory.MemoryStoreDefaultOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition MemoryStoreDefaultDefinition(string chatModel, string embeddingModel, class Azure.AI.Projects.Memory.MemoryStoreDefaultOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.MemoryStoreDefaultDefinition(System.String,System.String,Azure.AI.Projects.Memory.MemoryStoreDefaultOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MemoryStoreDefaultDefinition (Optional chatModel As String = Nothing, Optional embeddingModel As String = Nothing, Optional options As MemoryStoreDefaultOptions = Nothing) As MemoryStoreDefaultDefinition" />
+      <MemberSignature Language="F#" Value="static member MemoryStoreDefaultDefinition : string * string * Azure.AI.Projects.Memory.MemoryStoreDefaultOptions -&gt; Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.MemoryStoreDefaultDefinition (chatModel, embeddingModel, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chatModel" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="embeddingModel" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.AI.Projects.Memory.MemoryStoreDefaultOptions" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="chatModel"> The name or identifier of the chat completion model deployment used for memory processing. </param>
+        <param name="embeddingModel"> The name or identifier of the embedding model deployment used for memory processing. </param>
+        <param name="options"> Default memory store options. </param>
+        <summary> Default memory store implementation. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MemoryStoreDefaultOptions">
       <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Memory.MemoryStoreDefaultOptions MemoryStoreDefaultOptions (bool isUserProfileEnabled = false, string userProfileDetails = default, bool isChatSummaryEnabled = false);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Memory.MemoryStoreDefaultOptions MemoryStoreDefaultOptions(bool isUserProfileEnabled, string userProfileDetails, bool isChatSummaryEnabled) cil managed" />
@@ -3036,6 +3293,33 @@
         <param name="defaultTtlSeconds"> The default time-to-live for memories in seconds. A value of `0` indicates that memories do not expire. Defaults to `0`. </param>
         <summary> Default memory store configurations. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Memory.MemoryStoreDefaultOptions" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryStoreDefinition">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Memory.MemoryStoreDefinition MemoryStoreDefinition (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Memory.MemoryStoreDefinition MemoryStoreDefinition(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.MemoryStoreDefinition(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MemoryStoreDefinition (Optional kind As String = Nothing) As MemoryStoreDefinition" />
+      <MemberSignature Language="F#" Value="static member MemoryStoreDefinition : string -&gt; Azure.AI.Projects.Memory.MemoryStoreDefinition" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.MemoryStoreDefinition kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Memory.MemoryStoreDefinition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The kind of the memory store. </param>
+        <summary>
+            Base definition for memory store configurations.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Memory.MemoryStoreDefaultDefinition" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Memory.MemoryStoreDefinition" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3314,6 +3598,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MonthlyRecurrenceSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule MonthlyRecurrenceSchedule (System.Collections.Generic.IEnumerable&lt;int&gt; daysOfMonth = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule MonthlyRecurrenceSchedule(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; daysOfMonth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.MonthlyRecurrenceSchedule(System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MonthlyRecurrenceSchedule (Optional daysOfMonth As IEnumerable(Of Integer) = Nothing) As MonthlyRecurrenceSchedule" />
+      <MemberSignature Language="F#" Value="static member MonthlyRecurrenceSchedule : seq&lt;int&gt; -&gt; Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.MonthlyRecurrenceSchedule daysOfMonth" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="daysOfMonth" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="daysOfMonth"> Days of the month for the recurrence schedule. </param>
+        <summary> Monthly recurrence schedule. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="NoAuthenticationCredentials">
       <MemberSignature Language="C#" Value="public static Azure.AI.Projects.NoAuthenticationCredentials NoAuthenticationCredentials ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.NoAuthenticationCredentials NoAuthenticationCredentials() cil managed" />
@@ -3333,6 +3641,32 @@
       <Docs>
         <summary> Credentials that do not require authentication. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.NoAuthenticationCredentials" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTimeTrigger">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.OneTimeTrigger OneTimeTrigger (DateTimeOffset triggerAt = default, string timeZone = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.OneTimeTrigger OneTimeTrigger(valuetype System.DateTimeOffset triggerAt, string timeZone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.OneTimeTrigger(System.DateTimeOffset,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OneTimeTrigger (Optional triggerAt As DateTimeOffset = Nothing, Optional timeZone As String = Nothing) As OneTimeTrigger" />
+      <MemberSignature Language="F#" Value="static member OneTimeTrigger : DateTimeOffset * string -&gt; Azure.AI.Projects.Evaluation.OneTimeTrigger" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.OneTimeTrigger (triggerAt, timeZone)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.OneTimeTrigger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="triggerAt" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="timeZone" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="triggerAt"> Date and time for the one-time trigger in ISO 8601 format. </param>
+        <param name="timeZone"> Time zone for the one-time trigger. Defaults to `UTC`. </param>
+        <summary> One-time trigger. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.OneTimeTrigger" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3721,6 +4055,65 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RecurrenceSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.RecurrenceSchedule RecurrenceSchedule (string type = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.RecurrenceSchedule RecurrenceSchedule(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.RecurrenceSchedule(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RecurrenceSchedule (Optional type As String = Nothing) As RecurrenceSchedule" />
+      <MemberSignature Language="F#" Value="static member RecurrenceSchedule : string -&gt; Azure.AI.Projects.Evaluation.RecurrenceSchedule" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.RecurrenceSchedule type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.RecurrenceSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="type"> Recurrence type for the recurrence schedule. </param>
+        <summary>
+            Recurrence schedule model.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Evaluation.HourlyRecurrenceSchedule" />, <see cref="T:Azure.AI.Projects.Evaluation.DailyRecurrenceSchedule" />, <see cref="T:Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule" />, and <see cref="T:Azure.AI.Projects.Evaluation.MonthlyRecurrenceSchedule" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.RecurrenceSchedule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecurrenceTrigger">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.RecurrenceTrigger RecurrenceTrigger (DateTimeOffset? startTime = default, DateTimeOffset? endTime = default, string timeZone = default, int interval = 0, Azure.AI.Projects.Evaluation.RecurrenceSchedule schedule = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.RecurrenceTrigger RecurrenceTrigger(valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; startTime, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; endTime, string timeZone, int32 interval, class Azure.AI.Projects.Evaluation.RecurrenceSchedule schedule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.RecurrenceTrigger(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,System.Int32,Azure.AI.Projects.Evaluation.RecurrenceSchedule)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RecurrenceTrigger (Optional startTime As Nullable(Of DateTimeOffset) = Nothing, Optional endTime As Nullable(Of DateTimeOffset) = Nothing, Optional timeZone As String = Nothing, Optional interval As Integer = 0, Optional schedule As RecurrenceSchedule = Nothing) As RecurrenceTrigger" />
+      <MemberSignature Language="F#" Value="static member RecurrenceTrigger : Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * int * Azure.AI.Projects.Evaluation.RecurrenceSchedule -&gt; Azure.AI.Projects.Evaluation.RecurrenceTrigger" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.RecurrenceTrigger (startTime, endTime, timeZone, interval, schedule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.RecurrenceTrigger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startTime" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="endTime" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="timeZone" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="interval" Type="System.Int32" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="schedule" Type="Azure.AI.Projects.Evaluation.RecurrenceSchedule" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="startTime"> Start time for the recurrence schedule in ISO 8601 format. </param>
+        <param name="endTime"> End time for the recurrence schedule in ISO 8601 format. </param>
+        <param name="timeZone"> Time zone for the recurrence schedule. Defaults to `UTC`. </param>
+        <param name="interval"> Interval for the recurrence schedule. </param>
+        <param name="schedule"> Recurrence schedule for the recurrence trigger. </param>
+        <summary> Recurrence based trigger. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.RecurrenceTrigger" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RedTeam">
       <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.RedTeam RedTeam (string name = default, string displayName = default, int? turnCount = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.AttackStrategy&gt; attackStrategies = default, bool? isSimulationOnly = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Projects.Evaluation.RiskCategory&gt; riskCategories = default, string applicationScenario = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, System.Collections.Generic.IDictionary&lt;string,string&gt; properties = default, string status = default, Azure.AI.Projects.Evaluation.TargetConfig target = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.RedTeam RedTeam(string name, string displayName, valuetype System.Nullable`1&lt;int32&gt; turnCount, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.Evaluation.AttackStrategy&gt; attackStrategies, valuetype System.Nullable`1&lt;bool&gt; isSimulationOnly, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Projects.Evaluation.RiskCategory&gt; riskCategories, string applicationScenario, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; properties, string status, class Azure.AI.Projects.Evaluation.TargetConfig target) cil managed" />
@@ -3871,11 +4264,11 @@
       </Docs>
     </Member>
     <Member MemberName="RoutineRun">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.RoutineRun RoutineRun (string id = default, string status = default, Azure.AI.Projects.RoutineRunPhase? phase = default, Azure.AI.Projects.RoutineTriggerType? triggerType = default, string triggerName = default, Azure.AI.Projects.RoutineAttemptSource? attemptSource = default, Azure.AI.Projects.RoutineActionType? actionType = default, string agentId = default, string agentEndpointId = default, string conversationId = default, string sessionId = default, DateTimeOffset? triggeredAt = default, DateTimeOffset? scheduledFireAt = default, DateTimeOffset? startedAt = default, DateTimeOffset? endedAt = default, string dispatchId = default, string actionCorrelationId = default, string responseId = default, string taskId = default, int? errorStatusCode = default, string errorType = default, string errorMessage = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.RoutineRun RoutineRun(string id, string status, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineRunPhase&gt; phase, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineTriggerType&gt; triggerType, string triggerName, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineAttemptSource&gt; attemptSource, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineActionType&gt; actionType, string agentId, string agentEndpointId, string conversationId, string sessionId, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; triggeredAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; scheduledFireAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; startedAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; endedAt, string dispatchId, string actionCorrelationId, string responseId, string taskId, valuetype System.Nullable`1&lt;int32&gt; errorStatusCode, string errorType, string errorMessage) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.RoutineRun(System.String,System.String,System.Nullable{Azure.AI.Projects.RoutineRunPhase},System.Nullable{Azure.AI.Projects.RoutineTriggerType},System.String,System.Nullable{Azure.AI.Projects.RoutineAttemptSource},System.Nullable{Azure.AI.Projects.RoutineActionType},System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function RoutineRun (Optional id As String = Nothing, Optional status As String = Nothing, Optional phase As Nullable(Of RoutineRunPhase) = Nothing, Optional triggerType As Nullable(Of RoutineTriggerType) = Nothing, Optional triggerName As String = Nothing, Optional attemptSource As Nullable(Of RoutineAttemptSource) = Nothing, Optional actionType As Nullable(Of RoutineActionType) = Nothing, Optional agentId As String = Nothing, Optional agentEndpointId As String = Nothing, Optional conversationId As String = Nothing, Optional sessionId As String = Nothing, Optional triggeredAt As Nullable(Of DateTimeOffset) = Nothing, Optional scheduledFireAt As Nullable(Of DateTimeOffset) = Nothing, Optional startedAt As Nullable(Of DateTimeOffset) = Nothing, Optional endedAt As Nullable(Of DateTimeOffset) = Nothing, Optional dispatchId As String = Nothing, Optional actionCorrelationId As String = Nothing, Optional responseId As String = Nothing, Optional taskId As String = Nothing, Optional errorStatusCode As Nullable(Of Integer) = Nothing, Optional errorType As String = Nothing, Optional errorMessage As String = Nothing) As RoutineRun" />
-      <MemberSignature Language="F#" Value="static member RoutineRun : string * string * Nullable&lt;Azure.AI.Projects.RoutineRunPhase&gt; * Nullable&lt;Azure.AI.Projects.RoutineTriggerType&gt; * string * Nullable&lt;Azure.AI.Projects.RoutineAttemptSource&gt; * Nullable&lt;Azure.AI.Projects.RoutineActionType&gt; * string * string * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * string * string * string * Nullable&lt;int&gt; * string * string -&gt; Azure.AI.Projects.RoutineRun" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.RoutineRun (id, status, phase, triggerType, triggerName, attemptSource, actionType, agentId, agentEndpointId, conversationId, sessionId, triggeredAt, scheduledFireAt, startedAt, endedAt, dispatchId, actionCorrelationId, responseId, taskId, errorStatusCode, errorType, errorMessage)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.RoutineRun RoutineRun (string id = default, BinaryData statusInternal = default, Azure.AI.Projects.RoutineRunPhase? phase = default, Azure.AI.Projects.RoutineTriggerType? triggerType = default, string triggerName = default, Azure.AI.Projects.RoutineAttemptSource? attemptSource = default, Azure.AI.Projects.RoutineActionType? actionType = default, string agentId = default, string agentEndpointId = default, string conversationId = default, string sessionId = default, DateTimeOffset? triggeredAt = default, DateTimeOffset? scheduledFireAt = default, DateTimeOffset? startedAt = default, DateTimeOffset? endedAt = default, string dispatchId = default, string actionCorrelationId = default, string responseId = default, string taskId = default, int? errorStatusCode = default, string errorType = default, string errorMessage = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.RoutineRun RoutineRun(string id, class System.BinaryData statusInternal, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineRunPhase&gt; phase, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineTriggerType&gt; triggerType, string triggerName, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineAttemptSource&gt; attemptSource, valuetype System.Nullable`1&lt;valuetype Azure.AI.Projects.RoutineActionType&gt; actionType, string agentId, string agentEndpointId, string conversationId, string sessionId, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; triggeredAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; scheduledFireAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; startedAt, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; endedAt, string dispatchId, string actionCorrelationId, string responseId, string taskId, valuetype System.Nullable`1&lt;int32&gt; errorStatusCode, string errorType, string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.RoutineRun(System.String,System.BinaryData,System.Nullable{Azure.AI.Projects.RoutineRunPhase},System.Nullable{Azure.AI.Projects.RoutineTriggerType},System.String,System.Nullable{Azure.AI.Projects.RoutineAttemptSource},System.Nullable{Azure.AI.Projects.RoutineActionType},System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RoutineRun (Optional id As String = Nothing, Optional statusInternal As BinaryData = Nothing, Optional phase As Nullable(Of RoutineRunPhase) = Nothing, Optional triggerType As Nullable(Of RoutineTriggerType) = Nothing, Optional triggerName As String = Nothing, Optional attemptSource As Nullable(Of RoutineAttemptSource) = Nothing, Optional actionType As Nullable(Of RoutineActionType) = Nothing, Optional agentId As String = Nothing, Optional agentEndpointId As String = Nothing, Optional conversationId As String = Nothing, Optional sessionId As String = Nothing, Optional triggeredAt As Nullable(Of DateTimeOffset) = Nothing, Optional scheduledFireAt As Nullable(Of DateTimeOffset) = Nothing, Optional startedAt As Nullable(Of DateTimeOffset) = Nothing, Optional endedAt As Nullable(Of DateTimeOffset) = Nothing, Optional dispatchId As String = Nothing, Optional actionCorrelationId As String = Nothing, Optional responseId As String = Nothing, Optional taskId As String = Nothing, Optional errorStatusCode As Nullable(Of Integer) = Nothing, Optional errorType As String = Nothing, Optional errorMessage As String = Nothing) As RoutineRun" />
+      <MemberSignature Language="F#" Value="static member RoutineRun : string * BinaryData * Nullable&lt;Azure.AI.Projects.RoutineRunPhase&gt; * Nullable&lt;Azure.AI.Projects.RoutineTriggerType&gt; * string * Nullable&lt;Azure.AI.Projects.RoutineAttemptSource&gt; * Nullable&lt;Azure.AI.Projects.RoutineActionType&gt; * string * string * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * string * string * string * Nullable&lt;int&gt; * string * string -&gt; Azure.AI.Projects.RoutineRun" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.RoutineRun (id, statusInternal, phase, triggerType, triggerName, attemptSource, actionType, agentId, agentEndpointId, conversationId, sessionId, triggeredAt, scheduledFireAt, startedAt, endedAt, dispatchId, actionCorrelationId, responseId, taskId, errorStatusCode, errorType, errorMessage)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Projects</AssemblyName>
@@ -3886,7 +4279,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="status" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="statusInternal" Type="System.BinaryData" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="phase" Type="System.Nullable&lt;Azure.AI.Projects.RoutineRunPhase&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="triggerType" Type="System.Nullable&lt;Azure.AI.Projects.RoutineTriggerType&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="triggerName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
@@ -3910,7 +4303,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The unique run identifier for the routine attempt. </param>
-        <param name="status"> The run status. </param>
+        <param name="statusInternal"> The run status. </param>
         <param name="phase"> The AgentExtensions lifecycle phase for the routine attempt. </param>
         <param name="triggerType"> The trigger type that produced the routine attempt. </param>
         <param name="triggerName"> The configured trigger name that produced the routine attempt. </param>
@@ -4053,6 +4446,33 @@
         <param name="properties"> Properties of the schedule run. </param>
         <summary> Schedule run model. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.ScheduleRun" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScheduleTrigger">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.ScheduleTrigger ScheduleTrigger (string type = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.ScheduleTrigger ScheduleTrigger(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.ScheduleTrigger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ScheduleTrigger (Optional type As String = Nothing) As ScheduleTrigger" />
+      <MemberSignature Language="F#" Value="static member ScheduleTrigger : string -&gt; Azure.AI.Projects.Evaluation.ScheduleTrigger" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.ScheduleTrigger type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.ScheduleTrigger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="type"> Type of the trigger. </param>
+        <summary>
+            Base model for Trigger of the schedule.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Projects.Evaluation.CronTrigger" />, <see cref="T:Azure.AI.Projects.Evaluation.RecurrenceTrigger" />, and <see cref="T:Azure.AI.Projects.Evaluation.OneTimeTrigger" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.ScheduleTrigger" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4410,6 +4830,30 @@
         <param name="content"> The content of the memory. </param>
         <summary> A memory item specifically containing user profile information extracted from conversations, such as preferences, interests, and personal details. </summary>
         <returns> A new <see cref="T:Azure.AI.Projects.Memory.UserProfileMemoryItem" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WeeklyRecurrenceSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule WeeklyRecurrenceSchedule (System.Collections.Generic.IEnumerable&lt;DayOfWeek&gt; daysOfWeek = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule WeeklyRecurrenceSchedule(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.DayOfWeek&gt; daysOfWeek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Projects.AzureAIProjectsModelFactory.WeeklyRecurrenceSchedule(System.Collections.Generic.IEnumerable{System.DayOfWeek})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WeeklyRecurrenceSchedule (Optional daysOfWeek As IEnumerable(Of DayOfWeek) = Nothing) As WeeklyRecurrenceSchedule" />
+      <MemberSignature Language="F#" Value="static member WeeklyRecurrenceSchedule : seq&lt;DayOfWeek&gt; -&gt; Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule" Usage="Azure.AI.Projects.AzureAIProjectsModelFactory.WeeklyRecurrenceSchedule daysOfWeek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Projects</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="daysOfWeek" Type="System.Collections.Generic.IEnumerable&lt;System.DayOfWeek&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="daysOfWeek"> Days of the week for the recurrence schedule. </param>
+        <summary> Weekly recurrence schedule. </summary>
+        <returns> A new <see cref="T:Azure.AI.Projects.Evaluation.WeeklyRecurrenceSchedule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

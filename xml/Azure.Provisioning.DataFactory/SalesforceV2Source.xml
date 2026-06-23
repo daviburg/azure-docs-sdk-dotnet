@@ -1,0 +1,185 @@
+<Type Name="SalesforceV2Source" FullName="Azure.Provisioning.DataFactory.SalesforceV2Source">
+  <TypeSignature Language="C#" Value="public class SalesforceV2Source : Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SalesforceV2Source extends Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.SalesforceV2Source" />
+  <TypeSignature Language="VB.NET" Value="Public Class SalesforceV2Source&#xA;Inherits TabularSource" />
+  <TypeSignature Language="F#" Value="type SalesforceV2Source = class&#xA;    inherit TabularSource" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.TabularSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A copy activity Salesforce V2 source.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SalesforceV2Source ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.SalesforceV2Source.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new SalesforceV2Source.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.SalesforceV2Source.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="salesforceV2Source.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of SalesforceV2Source.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDeletedObjects">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;bool&gt; IncludeDeletedObjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;bool&gt; IncludeDeletedObjects" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SalesforceV2Source.IncludeDeletedObjects" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludeDeletedObjects As BicepValue(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IncludeDeletedObjects : Azure.Provisioning.BicepValue&lt;bool&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SalesforceV2Source.IncludeDeletedObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property control whether query result contains Deleted objects.
+            Default is false. Type: boolean (or Expression with resultType
+            boolean).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;int&gt; PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;int32&gt; PageSize" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SalesforceV2Source.PageSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property PageSize As BicepValue(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.PageSize : Azure.Provisioning.BicepValue&lt;int&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SalesforceV2Source.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Page size for each http request, too large pageSize will caused
+            timeout, default 300,000. Type: integer (or Expression with resultType
+            integer).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionOption">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; PartitionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; PartitionOption" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SalesforceV2Source.PartitionOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionOption As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.PartitionOption : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SalesforceV2Source.PartitionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Partition option for the SalesforceV2 connector in copy activity,
+            AutoDetect or None. Type: string (or Expression with resultType
+            string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Query" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SalesforceV2Source.Query" />
+      <MemberSignature Language="VB.NET" Value="Public Property Query As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Query : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SalesforceV2Source.Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            You can only use Salesforce Object Query Language (SOQL) query with
+            limitations. For SOQL limitations, see this article:
+            https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/queries.htm#SOQL%20Considerations.
+            If query is not specified, all the data of the Salesforce object
+            specified in ObjectApiName/reportId in dataset will be retrieved.
+            Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoqlQuery">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; SoqlQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; SoqlQuery" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.SalesforceV2Source.SoqlQuery" />
+      <MemberSignature Language="VB.NET" Value="Public Property SoqlQuery As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SoqlQuery : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.SalesforceV2Source.SoqlQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Deprecating, please use 'query' property instead. Type:
+            string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

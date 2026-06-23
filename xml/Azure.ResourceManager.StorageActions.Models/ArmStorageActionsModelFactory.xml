@@ -8,6 +8,7 @@
     <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -18,6 +19,32 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="StorageTaskAction">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.Models.StorageTaskAction StorageTaskAction (Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition if = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt; elseOperations = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.Models.StorageTaskAction StorageTaskAction(class Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition if, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt; elseOperations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskAction(Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition,System.Collections.Generic.IEnumerable{Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StorageTaskAction (Optional if As StorageTaskIfCondition = Nothing, Optional elseOperations As IEnumerable(Of StorageTaskOperationInfo) = Nothing) As StorageTaskAction" />
+      <MemberSignature Language="F#" Value="static member StorageTaskAction : Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition * seq&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt; -&gt; Azure.ResourceManager.StorageActions.Models.StorageTaskAction" Usage="Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskAction (if, elseOperations)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="if" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="elseOperations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="if"> The if block of storage task operation. </param>
+        <param name="elseOperations"> List of operations to execute in the else block. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StorageTaskData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.StorageTaskData StorageTaskData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Azure.ResourceManager.StorageActions.Models.StorageTaskProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.StorageTaskData StorageTaskData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, class Azure.ResourceManager.StorageActions.Models.StorageTaskProperties properties) cil managed" />
@@ -27,8 +54,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.StorageTaskData</ReturnType>
@@ -67,13 +94,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskIfCondition</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="condition" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="operations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="operations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo&gt;" />
       </Parameters>
       <Docs>
         <param name="condition"> Condition predicate to evaluate each object. See https://aka.ms/storagetaskconditions for valid properties and operators. </param>
@@ -93,15 +121,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskOperationInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskOperationName" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="onSuccess" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.OnSuccessAction&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="onFailure" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.OnFailureAction&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="name" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskOperationName" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="onSuccess" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.OnSuccessAction&gt;" />
+        <Parameter Name="onFailure" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.OnFailureAction&gt;" />
       </Parameters>
       <Docs>
         <param name="name"> The operation to be performed on the object. </param>
@@ -123,14 +152,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPatch</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="properties" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskUpdateProperties" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskUpdateProperties" />
       </Parameters>
       <Docs>
         <param name="identity"> The identity of the resource. </param>
@@ -138,6 +168,80 @@
         <param name="properties"> Properties of the storage task. </param>
         <summary> Parameters of the storage task update request. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageTaskPreviewAction">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewAction StorageTaskPreviewAction (Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewAction StorageTaskPreviewAction(class Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewAction(Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StorageTaskPreviewAction (Optional properties As StorageTaskPreviewActionProperties = Nothing) As StorageTaskPreviewAction" />
+      <MemberSignature Language="F#" Value="static member StorageTaskPreviewAction : Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties -&gt; Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewAction" Usage="Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewAction properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="properties"> Properties of the storage task preview. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageTaskPreviewActionCondition">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition StorageTaskPreviewActionCondition (string ifCondition = default, bool elseBlockExists = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition StorageTaskPreviewActionCondition(string ifCondition, bool elseBlockExists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewActionCondition(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StorageTaskPreviewActionCondition (Optional ifCondition As String = Nothing, Optional elseBlockExists As Boolean = false) As StorageTaskPreviewActionCondition" />
+      <MemberSignature Language="F#" Value="static member StorageTaskPreviewActionCondition : string * bool -&gt; Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition" Usage="Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewActionCondition (ifCondition, elseBlockExists)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ifCondition" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="elseBlockExists" Type="System.Boolean" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="ifCondition"> Storage task condition to bes tested for a match. </param>
+        <param name="elseBlockExists"> Specify whether the else block is present in the condition. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageTaskPreviewActionIfCondition">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionIfCondition StorageTaskPreviewActionIfCondition (string condition = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionIfCondition StorageTaskPreviewActionIfCondition(string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewActionIfCondition(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StorageTaskPreviewActionIfCondition (Optional condition As String = Nothing) As StorageTaskPreviewActionIfCondition" />
+      <MemberSignature Language="F#" Value="static member StorageTaskPreviewActionIfCondition : string -&gt; Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionIfCondition" Usage="Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewActionIfCondition condition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionIfCondition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="condition"> Storage task condition to bes tested for a match. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionIfCondition" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,14 +255,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionProperties</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="container" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewContainerProperties" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="blobs" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewBlobProperties&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="action" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="container" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewContainerProperties" />
+        <Parameter Name="blobs" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewBlobProperties&gt;" />
+        <Parameter Name="action" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewActionCondition" />
       </Parameters>
       <Docs>
         <param name="container"> Properties of a sample container to test for a match with the preview action. </param>
@@ -178,8 +283,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewBlobProperties</ReturnType>
@@ -212,19 +317,46 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewContainerProperties</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties&gt;" />
       </Parameters>
       <Docs>
         <param name="name"> Name of test container. </param>
         <param name="metadata"> metadata key value pairs to be tested for a match against the provided condition. </param>
         <summary> Storage task preview container properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewContainerProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageTaskPreviewKeyValueProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties StorageTaskPreviewKeyValueProperties (string key = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties StorageTaskPreviewKeyValueProperties(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewKeyValueProperties(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StorageTaskPreviewKeyValueProperties (Optional key As String = Nothing, Optional value As String = Nothing) As StorageTaskPreviewKeyValueProperties" />
+      <MemberSignature Language="F#" Value="static member StorageTaskPreviewKeyValueProperties : string * string -&gt; Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties" Usage="Azure.ResourceManager.StorageActions.Models.ArmStorageActionsModelFactory.StorageTaskPreviewKeyValueProperties (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="key"> Represents the key property of the pair. </param>
+        <param name="value"> Represents the value property of the pair. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.StorageActions.Models.StorageTaskPreviewKeyValueProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -237,8 +369,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskProperties</ReturnType>
@@ -272,8 +404,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskReportInstance</ReturnType>
@@ -305,8 +437,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskReportProperties</ReturnType>
@@ -357,17 +489,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.StorageActions</AssemblyName>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.StorageActions.Models.StorageTaskUpdateProperties</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="taskVersion" Type="System.Nullable&lt;System.Int64&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="enabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="description" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="action" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskAction" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskProvisioningState&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="creationTimeInUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="taskVersion" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="enabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="action" Type="Azure.ResourceManager.StorageActions.Models.StorageTaskAction" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.StorageActions.Models.StorageTaskProvisioningState&gt;" />
+        <Parameter Name="creationTimeInUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="taskVersion"> Storage task version. </param>

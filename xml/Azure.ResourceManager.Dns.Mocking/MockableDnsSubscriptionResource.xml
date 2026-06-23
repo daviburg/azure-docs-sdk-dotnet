@@ -15,7 +15,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to SubscriptionResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -32,7 +32,63 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Dns.Mocking.MockableDnsSubscriptionResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableDnsSubscriptionResource for mocking. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt; GetAll (int? top = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Dns.DnsZoneResource&gt; GetAll(valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Mocking.MockableDnsSubscriptionResource.GetAll(System.Nullable{System.Int32},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAll (Optional top As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of DnsZoneResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetAll : Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;&#xA;override this.GetAll : Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;" Usage="mockableDnsSubscriptionResource.GetAll (top, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="top"> The maximum number of DNS zones to return. If not specified, returns up to 100 zones. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Network/dnszones. </description></item><item><term> Operation Id. </term><description> Zones_List. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt; GetAllAsync (int? top = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Dns.DnsZoneResource&gt; GetAllAsync(valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.Mocking.MockableDnsSubscriptionResource.GetAllAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAllAsync (Optional top As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of DnsZoneResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetAllAsync : Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;&#xA;override this.GetAllAsync : Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;" Usage="mockableDnsSubscriptionResource.GetAllAsync (top, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsZoneResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="top"> The maximum number of DNS zones to return. If not specified, returns up to 100 zones. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the DNS zones in all resource groups in a subscription.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Network/dnszones. </description></item><item><term> Operation Id. </term><description> Zones_List. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -56,11 +112,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="content"> Properties for dns resource reference request. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Returns the DNS records specified by the referencing targetResourceIds.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Network/getDnsResourceReference</description></item><item><term>Operation Id</term><description>DnsResourceReference_GetByTargetResources</description></item><item><term>Default Api Version</term><description>2023-07-01-preview</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Network/getDnsResourceReference. </description></item><item><term> Operation Id. </term><description> DnsResourceReferenceOperationGroup_GetByTargetResources. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -87,11 +143,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="content"> Properties for dns resource reference request. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Returns the DNS records specified by the referencing targetResourceIds.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Network/getDnsResourceReference</description></item><item><term>Operation Id</term><description>DnsResourceReference_GetByTargetResources</description></item><item><term>Default Api Version</term><description>2023-07-01-preview</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Network/getDnsResourceReference. </description></item><item><term> Operation Id. </term><description> DnsResourceReferenceOperationGroup_GetByTargetResources. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -118,11 +174,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="top"> The maximum number of DNS zones to return. If not specified, returns up to 100 zones. </param>
+        <param name="top"> The maximum number of DNS zones to return. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the DNS zones in all resource groups in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Network/dnszones</description></item><item><term>Operation Id</term><description>Zones_List</description></item><item><term>Default Api Version</term><description>2023-07-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /></description></item></list></summary>
+        <summary> Lists the DNS zones in all resource groups in a subscription. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,12 +201,10 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="top"> The maximum number of DNS zones to return. If not specified, returns up to 100 zones. </param>
+        <param name="top"> The maximum number of DNS zones to return. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the DNS zones in all resource groups in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Network/dnszones</description></item><item><term>Operation Id</term><description>Zones_List</description></item><item><term>Default Api Version</term><description>2023-07-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> that may take multiple service requests to iterate over. </returns>
+        <summary> Lists the DNS zones in all resource groups in a subscription. </summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

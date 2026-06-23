@@ -15,11 +15,51 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary> Extension methods to add <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" />, <see cref="T:Azure.Communication.Messages.MessageTemplateClient" />, <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" />, <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> to client builder. </summary>
+    <summary> Extension methods to add clients to <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AddConversationAdministrationClient&lt;TBuilder&gt;">
+      <MemberSignature Language="C#" Value="public static Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationAdministrationClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationAdministrationClient&lt;TBuilder&gt; (this TBuilder builder, string connectionString) where TBuilder : Azure.Core.Extensions.IAzureClientFactoryBuilder;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.Extensions.IAzureClientBuilder`2&lt;class Azure.Communication.Messages.ConversationAdministrationClient, class Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationAdministrationClient&lt;(class Azure.Core.Extensions.IAzureClientFactoryBuilder) TBuilder&gt;(!!TBuilder builder, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddConversationAdministrationClient``1(``0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddConversationAdministrationClient(Of TBuilder As IAzureClientFactoryBuilder) (builder As TBuilder, connectionString As String) As IAzureClientBuilder(Of ConversationAdministrationClient, CommunicationMessagesClientOptions)" />
+      <MemberSignature Language="F#" Value="static member AddConversationAdministrationClient : 'Builder * string -&gt; Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationAdministrationClient, Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; (requires 'Builder :&gt; Azure.Core.Extensions.IAzureClientFactoryBuilder)" Usage="Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddConversationAdministrationClient (builder, connectionString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.Messages</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationAdministrationClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TBuilder">
+          <Constraints>
+            <InterfaceName>Azure.Core.Extensions.IAzureClientFactoryBuilder</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="TBuilder" Index="0" FrameworkAlternate="azure-dotnet-preview" RefType="this" />
+        <Parameter Name="connectionString" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TBuilder">To be added.</typeparam>
+        <param name="builder"> The builder to register with. </param>
+        <param name="connectionString" />
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AddConversationAdministrationClient&lt;TBuilder&gt;">
       <MemberSignature Language="C#" Value="public static Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationAdministrationClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationAdministrationClient&lt;TBuilder&gt; (this TBuilder builder, Uri endpoint) where TBuilder : Azure.Core.Extensions.IAzureClientFactoryBuilderWithCredential;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.Extensions.IAzureClientBuilder`2&lt;class Azure.Communication.Messages.ConversationAdministrationClient, class Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationAdministrationClient&lt;(class Azure.Core.Extensions.IAzureClientFactoryBuilderWithCredential) TBuilder&gt;(!!TBuilder builder, class System.Uri endpoint) cil managed" />
@@ -48,8 +88,8 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> instance. </summary>
+        <param name="endpoint" />
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -83,9 +123,9 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> instance. </summary>
+        <param name="endpoint" />
+        <param name="credential" />
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -120,8 +160,8 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,46 +194,12 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> instance. </summary>
+        <param name="endpoint"> Service endpoint. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AddConversationThreadClient&lt;TBuilder&gt;">
-      <MemberSignature Language="C#" Value="public static Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationThreadClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationThreadClient&lt;TBuilder&gt; (this TBuilder builder, Uri endpoint, Azure.AzureKeyCredential credential) where TBuilder : Azure.Core.Extensions.IAzureClientFactoryBuilder;" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.Extensions.IAzureClientBuilder`2&lt;class Azure.Communication.Messages.ConversationThreadClient, class Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddConversationThreadClient&lt;(class Azure.Core.Extensions.IAzureClientFactoryBuilder) TBuilder&gt;(!!TBuilder builder, class System.Uri endpoint, class Azure.AzureKeyCredential credential) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddConversationThreadClient``1(``0,System.Uri,Azure.AzureKeyCredential)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddConversationThreadClient(Of TBuilder As IAzureClientFactoryBuilder) (builder As TBuilder, endpoint As Uri, credential As AzureKeyCredential) As IAzureClientBuilder(Of ConversationThreadClient, CommunicationMessagesClientOptions)" />
-      <MemberSignature Language="F#" Value="static member AddConversationThreadClient : 'Builder * Uri * Azure.AzureKeyCredential -&gt; Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationThreadClient, Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; (requires 'Builder :&gt; Azure.Core.Extensions.IAzureClientFactoryBuilder)" Usage="Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddConversationThreadClient (builder, endpoint, credential)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.Messages</AssemblyName>
-        <AssemblyVersion>1.3.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.ConversationThreadClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt;</ReturnType>
-      </ReturnValue>
-      <TypeParameters>
-        <TypeParameter Name="TBuilder">
-          <Constraints>
-            <InterfaceName>Azure.Core.Extensions.IAzureClientFactoryBuilder</InterfaceName>
-          </Constraints>
-        </TypeParameter>
-      </TypeParameters>
-      <Parameters>
-        <Parameter Name="builder" Type="TBuilder" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="endpoint" Type="System.Uri" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="credential" Type="Azure.AzureKeyCredential" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <typeparam name="TBuilder">To be added.</typeparam>
-        <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> instance. </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddConversationThreadClient&lt;TBuilder,TConfiguration&gt;">
@@ -226,8 +232,42 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.ConversationThreadClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMessageTemplateClient&lt;TBuilder&gt;">
+      <MemberSignature Language="C#" Value="public static Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.MessageTemplateClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddMessageTemplateClient&lt;TBuilder&gt; (this TBuilder builder, string connectionString) where TBuilder : Azure.Core.Extensions.IAzureClientFactoryBuilder;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.Extensions.IAzureClientBuilder`2&lt;class Azure.Communication.Messages.MessageTemplateClient, class Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddMessageTemplateClient&lt;(class Azure.Core.Extensions.IAzureClientFactoryBuilder) TBuilder&gt;(!!TBuilder builder, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddMessageTemplateClient``1(``0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddMessageTemplateClient(Of TBuilder As IAzureClientFactoryBuilder) (builder As TBuilder, connectionString As String) As IAzureClientBuilder(Of MessageTemplateClient, CommunicationMessagesClientOptions)" />
+      <MemberSignature Language="F#" Value="static member AddMessageTemplateClient : 'Builder * string -&gt; Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.MessageTemplateClient, Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; (requires 'Builder :&gt; Azure.Core.Extensions.IAzureClientFactoryBuilder)" Usage="Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddMessageTemplateClient (builder, connectionString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.Messages</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.MessageTemplateClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TBuilder">
+          <Constraints>
+            <InterfaceName>Azure.Core.Extensions.IAzureClientFactoryBuilder</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="TBuilder" Index="0" FrameworkAlternate="azure-dotnet-preview" RefType="this" />
+        <Parameter Name="connectionString" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TBuilder">To be added.</typeparam>
+        <param name="builder"> The builder to register with. </param>
+        <param name="connectionString" />
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -261,8 +301,8 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> instance. </summary>
+        <param name="endpoint"> The service endpoint. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -297,9 +337,9 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> instance. </summary>
+        <param name="endpoint"> The service endpoint. </param>
+        <param name="credential"> The key credential. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -335,8 +375,42 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.MessageTemplateClient" /> client. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNotificationMessagesClient&lt;TBuilder&gt;">
+      <MemberSignature Language="C#" Value="public static Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.NotificationMessagesClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddNotificationMessagesClient&lt;TBuilder&gt; (this TBuilder builder, string connectionString) where TBuilder : Azure.Core.Extensions.IAzureClientFactoryBuilder;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.Extensions.IAzureClientBuilder`2&lt;class Azure.Communication.Messages.NotificationMessagesClient, class Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; AddNotificationMessagesClient&lt;(class Azure.Core.Extensions.IAzureClientFactoryBuilder) TBuilder&gt;(!!TBuilder builder, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddNotificationMessagesClient``1(``0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddNotificationMessagesClient(Of TBuilder As IAzureClientFactoryBuilder) (builder As TBuilder, connectionString As String) As IAzureClientBuilder(Of NotificationMessagesClient, CommunicationMessagesClientOptions)" />
+      <MemberSignature Language="F#" Value="static member AddNotificationMessagesClient : 'Builder * string -&gt; Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.NotificationMessagesClient, Azure.Communication.Messages.CommunicationMessagesClientOptions&gt; (requires 'Builder :&gt; Azure.Core.Extensions.IAzureClientFactoryBuilder)" Usage="Microsoft.Extensions.Azure.CommunicationMessagesClientBuilderExtensions.AddNotificationMessagesClient (builder, connectionString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.Messages</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.Communication.Messages.NotificationMessagesClient,Azure.Communication.Messages.CommunicationMessagesClientOptions&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TBuilder">
+          <Constraints>
+            <InterfaceName>Azure.Core.Extensions.IAzureClientFactoryBuilder</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="builder" Type="TBuilder" Index="0" FrameworkAlternate="azure-dotnet-preview" RefType="this" />
+        <Parameter Name="connectionString" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TBuilder">To be added.</typeparam>
+        <param name="builder"> The builder to register with. </param>
+        <param name="connectionString" />
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -370,8 +444,8 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> instance. </summary>
+        <param name="endpoint"> The service endpoint. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -406,9 +480,9 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> instance. </summary>
+        <param name="endpoint"> The service endpoint. </param>
+        <param name="credential"> The key credential. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -444,8 +518,8 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.Communication.Messages.NotificationMessagesClient" /> client. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

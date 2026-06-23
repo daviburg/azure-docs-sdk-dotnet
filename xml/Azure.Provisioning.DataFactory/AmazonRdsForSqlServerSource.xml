@@ -1,0 +1,266 @@
+<Type Name="AmazonRdsForSqlServerSource" FullName="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource">
+  <TypeSignature Language="C#" Value="public class AmazonRdsForSqlServerSource : Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AmazonRdsForSqlServerSource extends Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource" />
+  <TypeSignature Language="VB.NET" Value="Public Class AmazonRdsForSqlServerSource&#xA;Inherits TabularSource" />
+  <TypeSignature Language="F#" Value="type AmazonRdsForSqlServerSource = class&#xA;    inherit TabularSource" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.TabularSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A copy activity Amazon RDS for SQL Server source.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmazonRdsForSqlServerSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new AmazonRdsForSqlServerSource.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="amazonRdsForSqlServerSource.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of AmazonRdsForSqlServerSource.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; IsolationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.IsolationLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsolationLevel As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.IsolationLevel : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the transaction locking behavior for the SQL source. Allowed
+            values:
+            ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot.
+            The default value is ReadCommitted. Type: string (or Expression with
+            resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionOption">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; PartitionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; PartitionOption" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.PartitionOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionOption As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.PartitionOption : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.PartitionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The partition mechanism that will be used for Sql read in parallel.
+            Possible values include: "None",
+            "PhysicalPartitionsOfTable", "DynamicRange".
+            To assign an object to this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionSettings">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.SqlPartitionSettings PartitionSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.SqlPartitionSettings PartitionSettings" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.PartitionSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property PartitionSettings As SqlPartitionSettings" />
+      <MemberSignature Language="F#" Value="member this.PartitionSettings : Azure.Provisioning.DataFactory.SqlPartitionSettings with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.PartitionSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.SqlPartitionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The settings that will be leveraged for Sql source partitioning.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProduceAdditionalTypes">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; ProduceAdditionalTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; ProduceAdditionalTypes" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.ProduceAdditionalTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProduceAdditionalTypes As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.ProduceAdditionalTypes : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.ProduceAdditionalTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Which additional types to produce.                          To assign
+            an object to this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlReaderQuery">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; SqlReaderQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; SqlReaderQuery" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.SqlReaderQuery" />
+      <MemberSignature Language="VB.NET" Value="Public Property SqlReaderQuery As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SqlReaderQuery : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.SqlReaderQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SQL reader query. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlReaderStoredProcedureName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; SqlReaderStoredProcedureName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; SqlReaderStoredProcedureName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.SqlReaderStoredProcedureName" />
+      <MemberSignature Language="VB.NET" Value="Public Property SqlReaderStoredProcedureName As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SqlReaderStoredProcedureName : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.SqlReaderStoredProcedureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the stored procedure for a SQL Database source. This cannot be
+            used at the same time as SqlReaderQuery. Type: string (or Expression
+            with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoredProcedureParameters">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; StoredProcedureParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; StoredProcedureParameters" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.StoredProcedureParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property StoredProcedureParameters As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.StoredProcedureParameters : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AmazonRdsForSqlServerSource.StoredProcedureParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value and type setting for stored procedure parameters. Example:
+            "{Parameter1: {value: "1", type:
+            "int"}}".                          To assign an object
+            to this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

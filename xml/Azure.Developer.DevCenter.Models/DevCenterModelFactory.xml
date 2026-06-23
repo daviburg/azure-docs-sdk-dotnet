@@ -7,13 +7,14 @@
   <AssemblyInfo>
     <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,6 +28,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBox</ReturnType>
@@ -75,9 +77,9 @@
         <param name="hardwareProfile"> Information about the Dev Box's hardware resources. </param>
         <param name="storageProfile"> Storage settings for this Dev Box. </param>
         <param name="imageReference"> Information about the image used for this Dev Box. </param>
-        <param name="createdTime"> Creation time of this Dev Box. </param>
+        <param name="createdTime"> Creation time of this Dev Box, in RFC3339 format. </param>
         <param name="localAdministratorStatus"> Indicates whether the owner of the Dev Box is a local administrator. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBox" />. </summary>
+        <summary> A Dev Box. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBox" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -92,6 +94,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxAction</ReturnType>
@@ -107,9 +110,9 @@
         <param name="name"> The name of the action. </param>
         <param name="actionType"> The action that will be taken. </param>
         <param name="sourceId"> The id of the resource which triggered this action. </param>
-        <param name="suspendedUntil"> The earliest time that the action could occur (UTC). </param>
+        <param name="suspendedUntil"> The earliest time that the action could occur (UTC), in RFC3339 format. </param>
         <param name="nextAction"> Details about the next run of this action. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxAction" />. </summary>
+        <summary> An action which will take place on a Dev Box. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -124,6 +127,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxActionDelayResult</ReturnType>
@@ -139,7 +143,7 @@
         <param name="delayStatus"> The result of the delay operation on this action. </param>
         <param name="action"> The delayed action. </param>
         <param name="error"> Information about the error that occurred. Only populated on error. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxActionDelayResult" />. </summary>
+        <summary> The action delay result. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxActionDelayResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,6 +158,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxHardwareProfile</ReturnType>
@@ -167,7 +172,7 @@
         <param name="skuName"> The name of the SKU. </param>
         <param name="vcpUs"> The number of vCPUs available for the Dev Box. </param>
         <param name="memoryGB"> The amount of memory available for the Dev Box. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxHardwareProfile" />. </summary>
+        <summary> Hardware specifications for the Dev Box. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxHardwareProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,6 +187,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxImageReference</ReturnType>
@@ -198,8 +204,8 @@
         <param name="version"> The version of the image. </param>
         <param name="operatingSystem"> The operating system of the image. </param>
         <param name="osBuildNumber"> The operating system build number of the image. </param>
-        <param name="publishedDate"> The datetime that the backing image version was published. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxImageReference" />. </summary>
+        <param name="publishedDate"> The datetime that the backing image version was published, in RFC3339 format. </param>
+        <summary> Specifies information about the image used. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxImageReference" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -214,6 +220,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxNextAction</ReturnType>
@@ -222,8 +229,8 @@
         <Parameter Name="scheduledTime" Type="System.DateTimeOffset" />
       </Parameters>
       <Docs>
-        <param name="scheduledTime"> The time the action will be triggered (UTC). </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxNextAction" />. </summary>
+        <param name="scheduledTime"> The time the action will be triggered (UTC), in RFC3339 format. </param>
+        <summary> Details about the next run of an action. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxNextAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -238,6 +245,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxPool</ReturnType>
@@ -271,7 +279,7 @@
             Overall health status of the Pool. Indicates whether or not the Pool is
             available to create Dev Boxes.
             </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxPool" />. </summary>
+        <summary> A pool of Dev Boxes. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxPool" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -286,6 +294,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxSchedule</ReturnType>
@@ -303,7 +312,7 @@
         <param name="scheduleFrequency"> The frequency of this scheduled task. </param>
         <param name="time"> The target time to trigger the action. The format is HH:MM. </param>
         <param name="timeZone"> The IANA timezone id at which the schedule should execute. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxSchedule" />. </summary>
+        <summary> A Schedule to execute action. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxSchedule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -318,6 +327,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevBoxStorageProfile</ReturnType>
@@ -327,7 +337,7 @@
       </Parameters>
       <Docs>
         <param name="osDisk"> Settings for the operating system disk. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevBoxStorageProfile" />. </summary>
+        <summary> Storage settings for the Dev Box's disks. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevBoxStorageProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -342,6 +352,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevCenterCatalog</ReturnType>
@@ -351,7 +362,7 @@
       </Parameters>
       <Docs>
         <param name="name"> Name of the catalog. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevCenterCatalog" />. </summary>
+        <summary> A catalog. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevCenterCatalog" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -366,6 +377,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevCenterEnvironment</ReturnType>
@@ -391,7 +403,7 @@
         <param name="catalogName"> Name of the catalog. </param>
         <param name="environmentDefinitionName"> Name of the environment definition. </param>
         <param name="error"> Provisioning error details. Populated only for error states. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevCenterEnvironment" />. </summary>
+        <summary> Properties of an environment. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevCenterEnvironment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -406,6 +418,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevCenterEnvironmentType</ReturnType>
@@ -423,7 +436,7 @@
             or management group.
             </param>
         <param name="status"> Indicates whether this environment type is enabled for use in this project. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevCenterEnvironmentType" />. </summary>
+        <summary> Properties of an environment type. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevCenterEnvironmentType" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -438,6 +451,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.DevCenterProject</ReturnType>
@@ -454,7 +468,7 @@
             When specified, indicates the maximum number of Dev Boxes a single user can
             create across all pools in the project.
             </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.DevCenterProject" />. </summary>
+        <summary> Project details. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.DevCenterProject" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -469,6 +483,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.EnvironmentDefinition</ReturnType>
@@ -490,7 +505,7 @@
         <param name="parameters"> Input parameters passed to an environment. </param>
         <param name="parametersSchema"> JSON schema defining the parameters object passed to an environment. </param>
         <param name="templatePath"> Path to the Environment Definition entrypoint file. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.EnvironmentDefinition" />. </summary>
+        <summary> An environment definition. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.EnvironmentDefinition" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -505,6 +520,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.EnvironmentDefinitionParameter</ReturnType>
@@ -526,7 +542,7 @@
         <param name="defaultValue"> Default value of the parameter. </param>
         <param name="parameterType">
             A string of one of the basic JSON types (number, integer, array, object,
-            boolean, string)
+            boolean, string).
             </param>
         <param name="readOnly">
             Whether or not this parameter is read-only.  If true, default should have a
@@ -534,7 +550,7 @@
             </param>
         <param name="required"> Whether or not this parameter is required. </param>
         <param name="allowed"> An array of allowed values. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.EnvironmentDefinitionParameter" />. </summary>
+        <summary> Properties of an Environment Definition parameter. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.EnvironmentDefinitionParameter" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -549,6 +565,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.OSDisk</ReturnType>
@@ -558,7 +575,7 @@
       </Parameters>
       <Docs>
         <param name="diskSizeGB"> The size of the OS Disk in gigabytes. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.OSDisk" />. </summary>
+        <summary> Settings for the operating system disk. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.OSDisk" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -573,6 +590,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.RemoteConnection</ReturnType>
@@ -584,7 +602,7 @@
       <Docs>
         <param name="webUri"> URL to open a browser based RDP session. </param>
         <param name="rdpConnectionUri"> Link to open a Remote Desktop session. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.RemoteConnection" />. </summary>
+        <summary> Provides remote connection information for a Dev Box. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.RemoteConnection" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -599,6 +617,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Developer.DevCenter</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Developer.DevCenter.Models.StopOnDisconnectConfiguration</ReturnType>
@@ -616,7 +635,7 @@
             The specified time in minutes to wait before stopping a Dev Box once disconnect
             is detected.
             </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Developer.DevCenter.Models.StopOnDisconnectConfiguration" />. </summary>
+        <summary> Stop on disconnect configuration settings for Dev Boxes created in this pool. </summary>
         <returns> A new <see cref="T:Azure.Developer.DevCenter.Models.StopOnDisconnectConfiguration" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>

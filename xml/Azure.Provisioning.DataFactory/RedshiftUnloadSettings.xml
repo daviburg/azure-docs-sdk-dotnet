@@ -1,0 +1,114 @@
+<Type Name="RedshiftUnloadSettings" FullName="Azure.Provisioning.DataFactory.RedshiftUnloadSettings">
+  <TypeSignature Language="C#" Value="public class RedshiftUnloadSettings : Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RedshiftUnloadSettings extends Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.RedshiftUnloadSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class RedshiftUnloadSettings&#xA;Inherits ProvisionableConstruct" />
+  <TypeSignature Language="F#" Value="type RedshiftUnloadSettings = class&#xA;    inherit ProvisionableConstruct" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.Primitives.ProvisionableConstruct</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Amazon S3 settings needed for the interim Amazon S3 when copying from
+            Amazon Redshift with unload. With this, data from Amazon Redshift source
+            will be unloaded into S3 first and then copied into the targeted sink from
+            the interim S3.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RedshiftUnloadSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.RedshiftUnloadSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new RedshiftUnloadSettings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BucketName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; BucketName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; BucketName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RedshiftUnloadSettings.BucketName" />
+      <MemberSignature Language="VB.NET" Value="Public Property BucketName As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.BucketName : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.RedshiftUnloadSettings.BucketName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bucket of the interim Amazon S3 which will be used to store the
+            unloaded data from Amazon Redshift source. The bucket must be in the
+            same region as the Amazon Redshift source. Type: string (or Expression
+            with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.RedshiftUnloadSettings.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="redshiftUnloadSettings.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of RedshiftUnloadSettings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="S3LinkedServiceName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference S3LinkedServiceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference S3LinkedServiceName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RedshiftUnloadSettings.S3LinkedServiceName" />
+      <MemberSignature Language="VB.NET" Value="Public Property S3LinkedServiceName As DataFactoryLinkedServiceReference" />
+      <MemberSignature Language="F#" Value="member this.S3LinkedServiceName : Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference with get, set" Usage="Azure.Provisioning.DataFactory.RedshiftUnloadSettings.S3LinkedServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the Amazon S3 linked service which will be used for the
+            unload operation when copying from the Amazon Redshift source.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

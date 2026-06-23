@@ -1,0 +1,210 @@
+<Type Name="HDInsightPigActivity" FullName="Azure.Provisioning.DataFactory.HDInsightPigActivity">
+  <TypeSignature Language="C#" Value="public class HDInsightPigActivity : Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HDInsightPigActivity extends Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.HDInsightPigActivity" />
+  <TypeSignature Language="VB.NET" Value="Public Class HDInsightPigActivity&#xA;Inherits ExecutionActivity" />
+  <TypeSignature Language="F#" Value="type HDInsightPigActivity = class&#xA;    inherit ExecutionActivity" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.ExecutionActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            HDInsight Pig activity type.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HDInsightPigActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.HDInsightPigActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new HDInsightPigActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;string&gt; Arguments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;string&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.Arguments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Arguments As BicepList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Arguments : Azure.Provisioning.BicepList&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User specified arguments to HDInsightActivity. Type: array (or
+            Expression with resultType array).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.HDInsightPigActivity.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="hDInsightPigActivity.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of HDInsightPigActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Defines">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; Defines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; Defines" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.Defines" />
+      <MemberSignature Language="VB.NET" Value="Public Property Defines As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.Defines : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.Defines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows user to specify defines for Pig job request.
+            To assign an object to the value of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDebugInfo">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.HDInsightActivityDebugInfoOptionSetting&gt; GetDebugInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype Azure.Provisioning.DataFactory.HDInsightActivityDebugInfoOptionSetting&gt; GetDebugInfo" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.GetDebugInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Property GetDebugInfo As BicepValue(Of HDInsightActivityDebugInfoOptionSetting)" />
+      <MemberSignature Language="F#" Value="member this.GetDebugInfo : Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.HDInsightActivityDebugInfoOptionSetting&gt; with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.GetDebugInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.HDInsightActivityDebugInfoOptionSetting&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Debug info option.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptLinkedService">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference ScriptLinkedService { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference ScriptLinkedService" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.ScriptLinkedService" />
+      <MemberSignature Language="VB.NET" Value="Public Property ScriptLinkedService As DataFactoryLinkedServiceReference" />
+      <MemberSignature Language="F#" Value="member this.ScriptLinkedService : Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.ScriptLinkedService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Script linked service reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptPath">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; ScriptPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; ScriptPath" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.ScriptPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property ScriptPath As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ScriptPath : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.ScriptPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Script path. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageLinkedServices">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference&gt; StorageLinkedServices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference&gt; StorageLinkedServices" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.HDInsightPigActivity.StorageLinkedServices" />
+      <MemberSignature Language="VB.NET" Value="Public Property StorageLinkedServices As BicepList(Of DataFactoryLinkedServiceReference)" />
+      <MemberSignature Language="F#" Value="member this.StorageLinkedServices : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference&gt; with get, set" Usage="Azure.Provisioning.DataFactory.HDInsightPigActivity.StorageLinkedServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Storage linked service references.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -59,34 +59,25 @@
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
         <param name="attribute">
-             The qualified name of the entity. (This is only an example. qualifiedName can
-             be changed to other unique attributes)
-             </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+            The qualified name of the entity. (This is only an example. qualifiedName can
+            be changed to other unique attributes)
+            </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
-             Return lineage info about entity.
-            
-             In addition to the typeName path parameter,
-             attribute key-value pair(s) can be provided in the following
-             format
-            
-             attr:[attrName]=[attrValue]
-            
-             NOTE: The attrName and attrValue should be
-             unique across entities, eg. qualifiedName.
-            
-             The REST request would look
-             something like this:
-            
-             GET
-             /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
-             </summary>
+            Return lineage info about entity.
+            In addition to the typeName path parameter,
+            attribute key-value pair(s) can be provided in the following
+            format
+            attr:[attrName]=[attrValue]
+            NOTE: The attrName and attrValue should be
+            unique across entities, eg. qualifiedName.
+            The REST request would look
+            something like this:
+            GET
+            /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="typeName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetByUniqueAttribute.
 <code><![CDATA[
@@ -96,6 +87,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient();
 
 Response<AtlasLineageInfo> response = client.GetByUniqueAttribute("azure_blob_path", LineageDirection.Both);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetByUniqueAttribute">
@@ -121,42 +117,28 @@ Response<AtlasLineageInfo> response = client.GetByUniqueAttribute("azure_blob_pa
       </Parameters>
       <Docs>
         <param name="typeName"> The name of the type. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
         <param name="attribute">
-             The qualified name of the entity. (This is only an example. qualifiedName can
-             be changed to other unique attributes)
-             </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+            The qualified name of the entity. (This is only an example. qualifiedName can
+            be changed to other unique attributes)
+            </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
-             [Protocol Method] Return lineage info about entity.
-            
-             In addition to the typeName path parameter,
-             attribute key-value pair(s) can be provided in the following
-             format
-            
-             attr:[attrName]=[attrValue]
-            
-             NOTE: The attrName and attrValue should be
-             unique across entities, eg. qualifiedName.
-            
-             The REST request would look
-             something like this:
-            
-             GET
-             /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
-             <list type="bullet"><item><description>
-             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-             </description></item><item><description>
-             Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetByUniqueAttribute(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-             </description></item></list></summary>
+            [Protocol Method] Return lineage info about entity.
+            In addition to the typeName path parameter,
+            attribute key-value pair(s) can be provided in the following
+            format
+            attr:[attrName]=[attrValue]
+            NOTE: The attrName and attrValue should be
+            unique across entities, eg. qualifiedName.
+            The REST request would look
+            something like this:
+            GET
+            /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="typeName" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetByUniqueAttribute and parse the result.
 <code><![CDATA[
@@ -169,6 +151,11 @@ Response response = client.GetByUniqueAttribute("azure_blob_path", "BOTH");
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetByUniqueAttributeAsync">
@@ -197,34 +184,25 @@ Console.WriteLine(result.ToString());
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
         <param name="attribute">
-             The qualified name of the entity. (This is only an example. qualifiedName can
-             be changed to other unique attributes)
-             </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+            The qualified name of the entity. (This is only an example. qualifiedName can
+            be changed to other unique attributes)
+            </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
-             Return lineage info about entity.
-            
-             In addition to the typeName path parameter,
-             attribute key-value pair(s) can be provided in the following
-             format
-            
-             attr:[attrName]=[attrValue]
-            
-             NOTE: The attrName and attrValue should be
-             unique across entities, eg. qualifiedName.
-            
-             The REST request would look
-             something like this:
-            
-             GET
-             /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
-             </summary>
+            Return lineage info about entity.
+            In addition to the typeName path parameter,
+            attribute key-value pair(s) can be provided in the following
+            format
+            attr:[attrName]=[attrValue]
+            NOTE: The attrName and attrValue should be
+            unique across entities, eg. qualifiedName.
+            The REST request would look
+            something like this:
+            GET
+            /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="typeName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetByUniqueAttributeAsync.
 <code><![CDATA[
@@ -234,6 +212,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient();
 
 Response<AtlasLineageInfo> response = await client.GetByUniqueAttributeAsync("azure_blob_path", LineageDirection.Both);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetByUniqueAttributeAsync">
@@ -259,42 +242,28 @@ Response<AtlasLineageInfo> response = await client.GetByUniqueAttributeAsync("az
       </Parameters>
       <Docs>
         <param name="typeName"> The name of the type. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
         <param name="attribute">
-             The qualified name of the entity. (This is only an example. qualifiedName can
-             be changed to other unique attributes)
-             </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+            The qualified name of the entity. (This is only an example. qualifiedName can
+            be changed to other unique attributes)
+            </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
-             [Protocol Method] Return lineage info about entity.
-            
-             In addition to the typeName path parameter,
-             attribute key-value pair(s) can be provided in the following
-             format
-            
-             attr:[attrName]=[attrValue]
-            
-             NOTE: The attrName and attrValue should be
-             unique across entities, eg. qualifiedName.
-            
-             The REST request would look
-             something like this:
-            
-             GET
-             /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
-             <list type="bullet"><item><description>
-             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-             </description></item><item><description>
-             Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetByUniqueAttributeAsync(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-             </description></item></list></summary>
+            [Protocol Method] Return lineage info about entity.
+            In addition to the typeName path parameter,
+            attribute key-value pair(s) can be provided in the following
+            format
+            attr:[attrName]=[attrValue]
+            NOTE: The attrName and attrValue should be
+            unique across entities, eg. qualifiedName.
+            The REST request would look
+            something like this:
+            GET
+            /v2/lineage/uniqueAttribute/type/aType?attr:aTypeAttribute=someValue.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="typeName" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetByUniqueAttributeAsync and parse the result.
 <code><![CDATA[
@@ -307,6 +276,11 @@ Response response = await client.GetByUniqueAttributeAsync("azure_blob_path", "B
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="typeName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetLineage">
@@ -333,14 +307,10 @@ Console.WriteLine(result.ToString());
         <param name="guid"> The globally unique identifier of the entity. </param>
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Get lineage info of the entity specified by GUID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetLineage.
 <code><![CDATA[
@@ -350,6 +320,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient();
 
 Response<AtlasLineageInfo> response = client.GetLineage("a6894eb3-81f3-829b-2adc-52f3e603411a", LineageDirection.Input);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetLineage">
@@ -374,23 +349,14 @@ Response<AtlasLineageInfo> response = client.GetLineage("a6894eb3-81f3-829b-2adc
       </Parameters>
       <Docs>
         <param name="guid"> The globally unique identifier of the entity. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Get lineage info of the entity specified by GUID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetLineage(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetLineage and parse the result.
 <code><![CDATA[
@@ -403,6 +369,11 @@ Response response = client.GetLineage("a6894eb3-81f3-829b-2adc-52f3e603411a", "I
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetLineageAsync">
@@ -429,14 +400,10 @@ Console.WriteLine(result.ToString());
         <param name="guid"> The globally unique identifier of the entity. </param>
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Get lineage info of the entity specified by GUID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetLineageAsync.
 <code><![CDATA[
@@ -446,6 +413,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient();
 
 Response<AtlasLineageInfo> response = await client.GetLineageAsync("a6894eb3-81f3-829b-2adc-52f3e603411a", LineageDirection.Input);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetLineageAsync">
@@ -470,23 +442,14 @@ Response<AtlasLineageInfo> response = await client.GetLineageAsync("a6894eb3-81f
       </Parameters>
       <Docs>
         <param name="guid"> The globally unique identifier of the entity. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="depth"> The number of hops for lineage. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Get lineage info of the entity specified by GUID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetLineageAsync(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetLineageAsync and parse the result.
 <code><![CDATA[
@@ -499,6 +462,11 @@ Response response = await client.GetLineageAsync("a6894eb3-81f3-829b-2adc-52f3e6
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetNextPage">
@@ -527,14 +495,10 @@ Console.WriteLine(result.ToString());
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="offset"> The offset for pagination purpose. </param>
         <param name="limit"> The page size - by default there is no paging. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Return immediate next page lineage info about entity with pagination. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetNextPage.
 <code><![CDATA[
@@ -544,6 +508,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient(apiVer
 
 Response<AtlasLineageInfo> response = client.GetNextPage("a6894eb3-81f3-829b-2adc-52f3e603411a", LineageDirection.Input);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetNextPage">
@@ -569,24 +538,15 @@ Response<AtlasLineageInfo> response = client.GetNextPage("a6894eb3-81f3-829b-2ad
       </Parameters>
       <Docs>
         <param name="guid"> The globally unique identifier of the entity. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="offset"> The offset for pagination purpose. </param>
         <param name="limit"> The page size - by default there is no paging. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Return immediate next page lineage info about entity with pagination
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetNextPage(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetNextPage and parse the result.
 <code><![CDATA[
@@ -599,6 +559,11 @@ Response response = client.GetNextPage("a6894eb3-81f3-829b-2adc-52f3e603411a", "
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetNextPageAsync">
@@ -627,14 +592,10 @@ Console.WriteLine(result.ToString());
         <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="offset"> The offset for pagination purpose. </param>
         <param name="limit"> The page size - by default there is no paging. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Return immediate next page lineage info about entity with pagination. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetNextPageAsync.
 <code><![CDATA[
@@ -644,6 +605,11 @@ Lineage client = new DataMapClient(endpoint, credential).GetLineageClient(apiVer
 
 Response<AtlasLineageInfo> response = await client.GetNextPageAsync("a6894eb3-81f3-829b-2adc-52f3e603411a", LineageDirection.Input);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetNextPageAsync">
@@ -669,24 +635,15 @@ Response<AtlasLineageInfo> response = await client.GetNextPageAsync("a6894eb3-81
       </Parameters>
       <Docs>
         <param name="guid"> The globally unique identifier of the entity. </param>
-        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. Allowed values: "INPUT" | "OUTPUT" | "BOTH". </param>
+        <param name="direction"> The direction of the lineage, which could be INPUT, OUTPUT or BOTH. </param>
         <param name="offset"> The offset for pagination purpose. </param>
         <param name="limit"> The page size - by default there is no paging. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Return immediate next page lineage info about entity with pagination
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.Purview.DataMap.Lineage.GetNextPageAsync(System.String,Azure.Analytics.Purview.DataMap.LineageDirection,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="guid" /> or <paramref name="direction" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetNextPageAsync and parse the result.
 <code><![CDATA[
@@ -699,6 +656,11 @@ Response response = await client.GetNextPageAsync("a6894eb3-81f3-829b-2adc-52f3e
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="guid" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="guid" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">

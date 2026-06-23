@@ -1,0 +1,114 @@
+<Type Name="CassandraSource" FullName="Azure.Provisioning.DataFactory.CassandraSource">
+  <TypeSignature Language="C#" Value="public class CassandraSource : Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CassandraSource extends Azure.Provisioning.DataFactory.TabularSource" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.CassandraSource" />
+  <TypeSignature Language="VB.NET" Value="Public Class CassandraSource&#xA;Inherits TabularSource" />
+  <TypeSignature Language="F#" Value="type CassandraSource = class&#xA;    inherit TabularSource" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.TabularSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A copy activity source for a Cassandra database.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CassandraSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.CassandraSource.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new CassandraSource.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsistencyLevel">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.CassandraSourceReadConsistencyLevel&gt; ConsistencyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype Azure.Provisioning.DataFactory.CassandraSourceReadConsistencyLevel&gt; ConsistencyLevel" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CassandraSource.ConsistencyLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConsistencyLevel As BicepValue(Of CassandraSourceReadConsistencyLevel)" />
+      <MemberSignature Language="F#" Value="member this.ConsistencyLevel : Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.CassandraSourceReadConsistencyLevel&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CassandraSource.ConsistencyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.CassandraSourceReadConsistencyLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The consistency level specifies how many Cassandra servers must respond
+            to a read request before returning data to the client application.
+            Cassandra checks the specified number of Cassandra servers for data to
+            satisfy the read request. Must be one of
+            cassandraSourceReadConsistencyLevels. The default value is
+            'ONE'. It is case-insensitive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.CassandraSource.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="cassandraSource.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of CassandraSource.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Query" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.CassandraSource.Query" />
+      <MemberSignature Language="VB.NET" Value="Public Property Query As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Query : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.CassandraSource.Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Database query. Should be a SQL-92 query expression or Cassandra Query
+            Language (CQL) command. Type: string (or Expression with resultType
+            string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

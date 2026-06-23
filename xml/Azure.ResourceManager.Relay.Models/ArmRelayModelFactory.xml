@@ -9,6 +9,7 @@
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +29,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.Models.RelayAccessKeys</ReturnType>
@@ -61,8 +62,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayAuthorizationRuleData</ReturnType>
@@ -96,8 +97,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayHybridConnectionData</ReturnType>
@@ -140,12 +141,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.Models.RelayNameAvailabilityContent</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="name"> The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number. </param>
@@ -163,8 +165,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.Models.RelayNameAvailabilityResult</ReturnType>
@@ -192,9 +194,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayNamespaceData</ReturnType>
       </ReturnValue>
@@ -236,6 +244,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RelayNamespaceData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayNamespaceData RelayNamespaceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, string provisioningState = default, string status = default, DateTimeOffset? createdOn = default, DateTimeOffset? updatedOn = default, string serviceBusEndpoint = default, string metricId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt; privateEndpointConnections = default, Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess? publicNetworkAccess = default, Azure.ResourceManager.Relay.Models.RelaySku sku = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.RelayNamespaceData RelayNamespaceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, string provisioningState, string status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; updatedOn, string serviceBusEndpoint, string metricId, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt; privateEndpointConnections, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt; publicNetworkAccess, class Azure.ResourceManager.Relay.Models.RelaySku sku) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNamespaceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData},System.Nullable{Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess},Azure.ResourceManager.Relay.Models.RelaySku)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayNamespaceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional provisioningState As String = Nothing, Optional status As String = Nothing, Optional createdOn As Nullable(Of DateTimeOffset) = Nothing, Optional updatedOn As Nullable(Of DateTimeOffset) = Nothing, Optional serviceBusEndpoint As String = Nothing, Optional metricId As String = Nothing, Optional privateEndpointConnections As IEnumerable(Of RelayPrivateEndpointConnectionData) = Nothing, Optional publicNetworkAccess As Nullable(Of RelayPublicNetworkAccess) = Nothing, Optional sku As RelaySku = Nothing) As RelayNamespaceData" />
+      <MemberSignature Language="F#" Value="static member RelayNamespaceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * string * seq&lt;Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt; * Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt; * Azure.ResourceManager.Relay.Models.RelaySku -&gt; Azure.ResourceManager.Relay.RelayNamespaceData" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNamespaceData (id, name, resourceType, systemData, tags, location, provisioningState, status, createdOn, updatedOn, serviceBusEndpoint, metricId, privateEndpointConnections, publicNetworkAccess, sku)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Relay.RelayNamespaceData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="status" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="updatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="serviceBusEndpoint" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metricId" Type="System.String" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="privateEndpointConnections" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sku" Type="Azure.ResourceManager.Relay.Models.RelaySku" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="provisioningState"> Provisioning state of the Namespace. </param>
+        <param name="status"> Status of the Namespace. </param>
+        <param name="createdOn"> The time the namespace was created. </param>
+        <param name="updatedOn"> The time the namespace was updated. </param>
+        <param name="serviceBusEndpoint"> Endpoint you can use to perform Service Bus operations. </param>
+        <param name="metricId"> Identifier for Azure Insights metrics. </param>
+        <param name="privateEndpointConnections"> List of private endpoint connections. </param>
+        <param name="publicNetworkAccess"> This determines if traffic is allowed over public network. By default it is enabled. </param>
+        <param name="sku"> SKU of the namespace. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Relay.RelayNamespaceData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RelayNamespacePatch">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.Models.RelayNamespacePatch RelayNamespacePatch (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Relay.Models.RelaySku sku = default, string provisioningState = default, string status = default, DateTimeOffset? createdOn = default, DateTimeOffset? updatedOn = default, string serviceBusEndpoint = default, string metricId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt; privateEndpointConnections = default, Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess? publicNetworkAccess = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.Models.RelayNamespacePatch RelayNamespacePatch(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Relay.Models.RelaySku sku, string provisioningState, string status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; updatedOn, string serviceBusEndpoint, string metricId, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData&gt; privateEndpointConnections, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt; publicNetworkAccess, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
@@ -245,8 +305,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.Models.RelayNamespacePatch</ReturnType>
@@ -288,21 +348,19 @@
       </Docs>
     </Member>
     <Member MemberName="RelayNetworkRuleSetData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayNetworkRuleSetData RelayNetworkRuleSetData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction? defaultAction, Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess? publicNetworkAccess, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt; ipRules);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayNetworkRuleSetData RelayNetworkRuleSetData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction? defaultAction, Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess? publicNetworkAccess, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt; ipRules);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.RelayNetworkRuleSetData RelayNetworkRuleSetData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction&gt; defaultAction, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt; publicNetworkAccess, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt; ipRules) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNetworkRuleSetData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction},System.Nullable{Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayNetworkRuleSetData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, defaultAction As Nullable(Of RelayNetworkRuleSetDefaultAction), publicNetworkAccess As Nullable(Of RelayPublicNetworkAccess), ipRules As IEnumerable(Of RelayNetworkRuleSetIPRule)) As RelayNetworkRuleSetData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayNetworkRuleSetData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, defaultAction As Nullable(Of RelayNetworkRuleSetDefaultAction), publicNetworkAccess As Nullable(Of RelayPublicNetworkAccess), ipRules As IEnumerable(Of RelayNetworkRuleSetIPRule)) As RelayNetworkRuleSetData" />
       <MemberSignature Language="F#" Value="static member RelayNetworkRuleSetData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Nullable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction&gt; * Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt; * seq&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt; -&gt; Azure.ResourceManager.Relay.RelayNetworkRuleSetData" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNetworkRuleSetData (id, name, resourceType, systemData, defaultAction, publicNetworkAccess, ipRules)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayNetworkRuleSetData RelayNetworkRuleSetData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction? defaultAction = default, Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess? publicNetworkAccess = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt; ipRules = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayNetworkRuleSetData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional defaultAction As Nullable(Of RelayNetworkRuleSetDefaultAction) = Nothing, Optional publicNetworkAccess As Nullable(Of RelayPublicNetworkAccess) = Nothing, Optional ipRules As IEnumerable(Of RelayNetworkRuleSetIPRule) = Nothing) As RelayNetworkRuleSetData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -342,19 +400,20 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayNetworkRuleSetData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="trustedServiceAccessEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="defaultAction" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="ipRules" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="trustedServiceAccessEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="defaultAction" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetDefaultAction&gt;" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPublicNetworkAccess&gt;" />
+        <Parameter Name="ipRules" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -370,6 +429,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RelayNetworkRuleSetIPRule">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule RelayNetworkRuleSetIPRule (string ipMask = default, Azure.ResourceManager.Relay.Models.RelayNetworkRuleIPAction? action = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule RelayNetworkRuleSetIPRule(string ipMask, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayNetworkRuleIPAction&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNetworkRuleSetIPRule(System.String,System.Nullable{Azure.ResourceManager.Relay.Models.RelayNetworkRuleIPAction})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayNetworkRuleSetIPRule (Optional ipMask As String = Nothing, Optional action As Nullable(Of RelayNetworkRuleIPAction) = Nothing) As RelayNetworkRuleSetIPRule" />
+      <MemberSignature Language="F#" Value="static member RelayNetworkRuleSetIPRule : string * Nullable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleIPAction&gt; -&gt; Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayNetworkRuleSetIPRule (ipMask, action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipMask" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="action" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayNetworkRuleIPAction&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="ipMask"> IP Mask. </param>
+        <param name="action"> The IP Filter Action. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Relay.Models.RelayNetworkRuleSetIPRule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RelayPrivateEndpointConnectionData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData RelayPrivateEndpointConnectionData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.Core.ResourceIdentifier privateEndpointId = default, Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState connectionState = default, Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState? provisioningState = default, Azure.Core.AzureLocation? location = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData RelayPrivateEndpointConnectionData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.Core.ResourceIdentifier privateEndpointId, class Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState connectionState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location) cil managed" />
@@ -379,9 +464,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData</ReturnType>
       </ReturnValue>
@@ -409,6 +500,44 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RelayPrivateEndpointConnectionData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData RelayPrivateEndpointConnectionData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState connectionState = default, Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState? provisioningState = default, Azure.Core.ResourceIdentifier privateEndpointId = default, Azure.Core.AzureLocation? location = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData RelayPrivateEndpointConnectionData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState connectionState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState&gt; provisioningState, class Azure.Core.ResourceIdentifier privateEndpointId, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayPrivateEndpointConnectionData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState,System.Nullable{Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState},Azure.Core.ResourceIdentifier,System.Nullable{Azure.Core.AzureLocation})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayPrivateEndpointConnectionData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional connectionState As RelayPrivateLinkServiceConnectionState = Nothing, Optional provisioningState As Nullable(Of RelayPrivateEndpointConnectionProvisioningState) = Nothing, Optional privateEndpointId As ResourceIdentifier = Nothing, Optional location As Nullable(Of AzureLocation) = Nothing) As RelayPrivateEndpointConnectionData" />
+      <MemberSignature Language="F#" Value="static member RelayPrivateEndpointConnectionData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState * Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;Azure.Core.AzureLocation&gt; -&gt; Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayPrivateEndpointConnectionData (id, name, resourceType, systemData, connectionState, provisioningState, privateEndpointId, location)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="connectionState" Type="Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPrivateEndpointConnectionProvisioningState&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="privateEndpointId" Type="Azure.Core.ResourceIdentifier" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="connectionState"> Details about the state of the connection. </param>
+        <param name="provisioningState"> Provisioning state of the Private Endpoint Connection. </param>
+        <param name="privateEndpointId"> The ARM identifier for Private Endpoint. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Relay.RelayPrivateEndpointConnectionData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RelayPrivateLinkResourceData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.RelayPrivateLinkResourceData RelayPrivateLinkResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string groupId = default, System.Collections.Generic.IEnumerable&lt;string&gt; requiredMembers = default, System.Collections.Generic.IEnumerable&lt;string&gt; requiredZoneNames = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.RelayPrivateLinkResourceData RelayPrivateLinkResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string groupId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; requiredMembers, class System.Collections.Generic.IEnumerable`1&lt;string&gt; requiredZoneNames) cil managed" />
@@ -418,8 +547,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.RelayPrivateLinkResourceData</ReturnType>
@@ -446,6 +575,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RelayPrivateLinkServiceConnectionState">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState RelayPrivateLinkServiceConnectionState (Azure.ResourceManager.Relay.Models.RelayPrivateLinkConnectionStatus? status = default, string description = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState RelayPrivateLinkServiceConnectionState(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelayPrivateLinkConnectionStatus&gt; status, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayPrivateLinkServiceConnectionState(System.Nullable{Azure.ResourceManager.Relay.Models.RelayPrivateLinkConnectionStatus},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelayPrivateLinkServiceConnectionState (Optional status As Nullable(Of RelayPrivateLinkConnectionStatus) = Nothing, Optional description As String = Nothing) As RelayPrivateLinkServiceConnectionState" />
+      <MemberSignature Language="F#" Value="static member RelayPrivateLinkServiceConnectionState : Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPrivateLinkConnectionStatus&gt; * string -&gt; Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelayPrivateLinkServiceConnectionState (status, description)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelayPrivateLinkConnectionStatus&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="status"> Status of the connection. </param>
+        <param name="description"> Description of the connection state. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Relay.Models.RelayPrivateLinkServiceConnectionState" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RelayRegenerateAccessKeyContent">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.Models.RelayRegenerateAccessKeyContent RelayRegenerateAccessKeyContent (Azure.ResourceManager.Relay.Models.RelayAccessKeyType keyType = default, string key = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.Models.RelayRegenerateAccessKeyContent RelayRegenerateAccessKeyContent(valuetype Azure.ResourceManager.Relay.Models.RelayAccessKeyType keyType, string key) cil managed" />
@@ -456,19 +611,46 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.Models.RelayRegenerateAccessKeyContent</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="keyType" Type="Azure.ResourceManager.Relay.Models.RelayAccessKeyType" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="keyType" Type="Azure.ResourceManager.Relay.Models.RelayAccessKeyType" />
+        <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="keyType"> The access key to regenerate. </param>
         <param name="key"> Optional. If the key value is provided, this is set to key type, or autogenerated key value set for key type. </param>
         <summary> Parameters supplied to the regenerate authorization rule operation, specifies which key needs to be reset. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Relay.Models.RelayRegenerateAccessKeyContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelaySku">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Relay.Models.RelaySku RelaySku (Azure.ResourceManager.Relay.Models.RelaySkuName name = default, Azure.ResourceManager.Relay.Models.RelaySkuTier? tier = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Relay.Models.RelaySku RelaySku(valuetype Azure.ResourceManager.Relay.Models.RelaySkuName name, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Relay.Models.RelaySkuTier&gt; tier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelaySku(Azure.ResourceManager.Relay.Models.RelaySkuName,System.Nullable{Azure.ResourceManager.Relay.Models.RelaySkuTier})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RelaySku (Optional name As RelaySkuName = Nothing, Optional tier As Nullable(Of RelaySkuTier) = Nothing) As RelaySku" />
+      <MemberSignature Language="F#" Value="static member RelaySku : Azure.ResourceManager.Relay.Models.RelaySkuName * Nullable&lt;Azure.ResourceManager.Relay.Models.RelaySkuTier&gt; -&gt; Azure.ResourceManager.Relay.Models.RelaySku" Usage="Azure.ResourceManager.Relay.Models.ArmRelayModelFactory.RelaySku (name, tier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Relay.Models.RelaySku</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Azure.ResourceManager.Relay.Models.RelaySkuName" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tier" Type="System.Nullable&lt;Azure.ResourceManager.Relay.Models.RelaySkuTier&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> Name of this SKU. </param>
+        <param name="tier"> The tier of this SKU. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Relay.Models.RelaySku" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -481,8 +663,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Relay</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Relay.WcfRelayData</ReturnType>

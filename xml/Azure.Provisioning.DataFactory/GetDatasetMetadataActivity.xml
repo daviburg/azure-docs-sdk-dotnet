@@ -1,0 +1,193 @@
+<Type Name="GetDatasetMetadataActivity" FullName="Azure.Provisioning.DataFactory.GetDatasetMetadataActivity">
+  <TypeSignature Language="C#" Value="public class GetDatasetMetadataActivity : Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetDatasetMetadataActivity extends Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity" />
+  <TypeSignature Language="VB.NET" Value="Public Class GetDatasetMetadataActivity&#xA;Inherits ExecutionActivity" />
+  <TypeSignature Language="F#" Value="type GetDatasetMetadataActivity = class&#xA;    inherit ExecutionActivity" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.ExecutionActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Activity to get metadata of dataset.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetDatasetMetadataActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new GetDatasetMetadataActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dataset">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DatasetReference Dataset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DatasetReference Dataset" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.Dataset" />
+      <MemberSignature Language="VB.NET" Value="Public Property Dataset As DatasetReference" />
+      <MemberSignature Language="F#" Value="member this.Dataset : Azure.Provisioning.DataFactory.DatasetReference with get, set" Usage="Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.Dataset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DatasetReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GetMetadata activity dataset reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="getDatasetMetadataActivity.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of GetDatasetMetadataActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldList">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;BinaryData&gt; FieldList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class System.BinaryData&gt; FieldList" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.FieldList" />
+      <MemberSignature Language="VB.NET" Value="Public Property FieldList As BicepList(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.FieldList : Azure.Provisioning.BicepList&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.FieldList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fields of metadata to get from dataset.                          To
+            assign an object to the element of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatSettings">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.FormatReadSettings FormatSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.FormatReadSettings FormatSettings" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.FormatSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property FormatSettings As FormatReadSettings" />
+      <MemberSignature Language="F#" Value="member this.FormatSettings : Azure.Provisioning.DataFactory.FormatReadSettings with get, set" Usage="Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.FormatSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.FormatReadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GetMetadata activity format settings.             Please note
+            Azure.ResourceManager.DataFactory.Models.FormatReadSettings is the
+            base class. According to the scenario, a derived class of the base
+            class might need to be assigned here, or this property needs to be
+            casted to one of the possible derived classes.             The
+            available derived classes include
+            Azure.ResourceManager.DataFactory.Models.BinaryReadSettings,
+            Azure.ResourceManager.DataFactory.Models.DelimitedTextReadSettings,
+            Azure.ResourceManager.DataFactory.Models.JsonReadSettings,
+            Azure.ResourceManager.DataFactory.Models.ParquetReadSettings and
+            Azure.ResourceManager.DataFactory.Models.XmlReadSettings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreSettings">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.StoreReadSettings StoreSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.StoreReadSettings StoreSettings" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.StoreSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property StoreSettings As StoreReadSettings" />
+      <MemberSignature Language="F#" Value="member this.StoreSettings : Azure.Provisioning.DataFactory.StoreReadSettings with get, set" Usage="Azure.Provisioning.DataFactory.GetDatasetMetadataActivity.StoreSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.StoreReadSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GetMetadata activity store settings.             Please note
+            Azure.ResourceManager.DataFactory.Models.StoreReadSettings is the base
+            class. According to the scenario, a derived class of the base class
+            might need to be assigned here, or this property needs to be casted to
+            one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AmazonS3CompatibleReadSettings,
+            Azure.ResourceManager.DataFactory.Models.AmazonS3ReadSettings,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobFSReadSettings,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobStorageReadSettings,
+            Azure.ResourceManager.DataFactory.Models.AzureDataLakeStoreReadSettings,
+            Azure.ResourceManager.DataFactory.Models.AzureFileStorageReadSettings,
+            Azure.ResourceManager.DataFactory.Models.FileServerReadSettings,
+            Azure.ResourceManager.DataFactory.Models.FtpReadSettings,
+            Azure.ResourceManager.DataFactory.Models.GoogleCloudStorageReadSettings,
+            Azure.ResourceManager.DataFactory.Models.HdfsReadSettings,
+            Azure.ResourceManager.DataFactory.Models.HttpReadSettings,
+            Azure.ResourceManager.DataFactory.Models.LakeHouseReadSettings,
+            Azure.ResourceManager.DataFactory.Models.OracleCloudStorageReadSettings
+            and Azure.ResourceManager.DataFactory.Models.SftpReadSettings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

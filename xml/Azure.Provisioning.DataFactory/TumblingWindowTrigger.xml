@@ -1,0 +1,282 @@
+<Type Name="TumblingWindowTrigger" FullName="Azure.Provisioning.DataFactory.TumblingWindowTrigger">
+  <TypeSignature Language="C#" Value="public class TumblingWindowTrigger : Azure.Provisioning.DataFactory.DataFactoryTriggerProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TumblingWindowTrigger extends Azure.Provisioning.DataFactory.DataFactoryTriggerProperties" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.TumblingWindowTrigger" />
+  <TypeSignature Language="VB.NET" Value="Public Class TumblingWindowTrigger&#xA;Inherits DataFactoryTriggerProperties" />
+  <TypeSignature Language="F#" Value="type TumblingWindowTrigger = class&#xA;    inherit DataFactoryTriggerProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.DataFactoryTriggerProperties</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Trigger that schedules pipeline runs for all fixed time interval windows
+            from a start time without gaps and also supports backfill scenarios (when
+            start time is in the past).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TumblingWindowTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.TumblingWindowTrigger.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new TumblingWindowTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.TumblingWindowTrigger.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="tumblingWindowTrigger.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of TumblingWindowTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delay">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Delay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Delay" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.Delay" />
+      <MemberSignature Language="VB.NET" Value="Public Property Delay As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Delay : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.Delay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies how long the trigger waits past due time before triggering
+            new run. It doesn't alter window start and end time. The default
+            is 0. Type: string (or Expression with resultType string), pattern:
+            ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOn">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DependencyReference&gt; DependsOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.DependencyReference&gt; DependsOn" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.DependsOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DependsOn As BicepList(Of DependencyReference)" />
+      <MemberSignature Language="F#" Value="member this.DependsOn : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DependencyReference&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.DependsOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DependencyReference&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Triggers that this trigger depends on. Only tumbling window triggers
+            are supported.             Please note
+            Azure.ResourceManager.DataFactory.Models.DependencyReference is the
+            base class. According to the scenario, a derived class of the base
+            class might need to be assigned here, or this property needs to be
+            casted to one of the possible derived classes.             The
+            available derived classes include
+            Azure.ResourceManager.DataFactory.Models.SelfDependencyTumblingWindowTriggerReference,
+            Azure.ResourceManager.DataFactory.Models.TriggerDependencyReference
+            and Azure.ResourceManager.DataFactory.Models.TumblingWindowTriggerDependencyReference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOn">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; EndOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype System.DateTimeOffset&gt; EndOn" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.EndOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndOn As BicepValue(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.EndOn : Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.EndOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The end time for the time period for the trigger during which events
+            are fired for windows that are ready. Only UTC time is currently
+            supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frequency">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.TumblingWindowFrequency&gt; Frequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype Azure.Provisioning.DataFactory.TumblingWindowFrequency&gt; Frequency" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.Frequency" />
+      <MemberSignature Language="VB.NET" Value="Public Property Frequency As BicepValue(Of TumblingWindowFrequency)" />
+      <MemberSignature Language="F#" Value="member this.Frequency : Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.TumblingWindowFrequency&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.Frequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;Azure.Provisioning.DataFactory.TumblingWindowFrequency&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The frequency of the time windows.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;int&gt; Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;int32&gt; Interval" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.Interval" />
+      <MemberSignature Language="VB.NET" Value="Public Property Interval As BicepValue(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.Interval : Azure.Provisioning.BicepValue&lt;int&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The interval of the time windows. The minimum interval allowed is 15
+            Minutes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConcurrency">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;int&gt; MaxConcurrency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;int32&gt; MaxConcurrency" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.MaxConcurrency" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConcurrency As BicepValue(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaxConcurrency : Azure.Provisioning.BicepValue&lt;int&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.MaxConcurrency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The max number of parallel time windows (ready for execution) for which
+            a new run is triggered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipeline">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.TriggerPipelineReference Pipeline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.TriggerPipelineReference Pipeline" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.Pipeline" />
+      <MemberSignature Language="VB.NET" Value="Public Property Pipeline As TriggerPipelineReference" />
+      <MemberSignature Language="F#" Value="member this.Pipeline : Azure.Provisioning.DataFactory.TriggerPipelineReference with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.Pipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.TriggerPipelineReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Pipeline for which runs are created when an event is fired for trigger
+            window that is ready.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryPolicy">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.RetryPolicy RetryPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.RetryPolicy RetryPolicy" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.RetryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property RetryPolicy As RetryPolicy" />
+      <MemberSignature Language="F#" Value="member this.RetryPolicy : Azure.Provisioning.DataFactory.RetryPolicy with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.RetryPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.RetryPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Retry policy that will be applied for failed pipeline runs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartOn">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; StartOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype System.DateTimeOffset&gt; StartOn" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.TumblingWindowTrigger.StartOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartOn As BicepValue(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.StartOn : Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; with get, set" Usage="Azure.Provisioning.DataFactory.TumblingWindowTrigger.StartOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The start time for the time period for the trigger during which events
+            are fired for windows that are ready. Only UTC time is currently
+            supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

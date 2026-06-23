@@ -15,7 +15,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> The language service conversations API is a suite of natural language processing (NLP) skills that can be used to analyze structured conversations (textual or spoken). The synchronous API in this suite accepts a request and mediates among multiple language projects, such as LUIS Generally Available, Question Answering, Conversational Language Understanding, and then calls the best candidate service to handle the request. At last, it returns a response with the candidate service's response as a payload.\n\n In some cases, this API needs to forward requests and responses between the caller and an upstream service. The asynchronous APIs in this suite enable tasks like Conversation Summarization and Conversational PII detection. </summary>
+    <summary>
+            The <see cref="T:Azure.AI.Language.Conversations.ConversationAnalysisClient" /> allows for the analysis of conversations.
+            </summary>
     <remarks>
             See <see href="https://learn.microsoft.com/rest/api/language/2023-04-01/conversation-analysis-runtime" /> for more information about models you can pass to this client.
             </remarks>
@@ -39,6 +41,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationAnalysisClient (Azure.AI.Language.Conversations.ConversationAnalysisClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.AI.Language.Conversations.ConversationAnalysisClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.#ctor(Azure.AI.Language.Conversations.ConversationAnalysisClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As ConversationAnalysisClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.AI.Language.Conversations.ConversationAnalysisClient : Azure.AI.Language.Conversations.ConversationAnalysisClientSettings -&gt; Azure.AI.Language.Conversations.ConversationAnalysisClient" Usage="new Azure.AI.Language.Conversations.ConversationAnalysisClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.AI.Language.Conversations.ConversationAnalysisClientSettings" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for ConversationAnalysisClient. </param>
+        <summary> Initializes a new instance of ConversationAnalysisClient from a <see cref="T:Azure.AI.Language.Conversations.ConversationAnalysisClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ConversationAnalysisClient (Uri endpoint, Azure.AzureKeyCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.AzureKeyCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.#ctor(System.Uri,Azure.AzureKeyCredential)" />
@@ -55,8 +77,8 @@
         <Parameter Name="credential" Type="Azure.AzureKeyCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of ConversationAnalysisClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -80,8 +102,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of ConversationAnalysisClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -106,8 +128,8 @@
         <Parameter Name="options" Type="Azure.AI.Language.Conversations.ConversationsClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of ConversationAnalysisClient. </summary>
         <remarks>To be added.</remarks>
@@ -133,8 +155,8 @@
         <Parameter Name="options" Type="Azure.AI.Language.Conversations.ConversationsClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of ConversationAnalysisClient. </summary>
         <remarks>To be added.</remarks>
@@ -162,12 +184,10 @@
       </Parameters>
       <Docs>
         <param name="analyzeConversationInput"> The input for the analyze conversations operation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Analyzes the input conversation utterance. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeConversationInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeConversation.
 <code><![CDATA[
@@ -252,6 +272,9 @@ AnalyzeConversationInput analyzeConversationInput = new ConversationLanguageUnde
 });
 Response<AnalyzeConversationActionResult> response = client.AnalyzeConversation(analyzeConversationInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeConversationInput" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversation">
@@ -275,14 +298,10 @@ Response<AnalyzeConversationActionResult> response = client.AnalyzeConversation(
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Analyzes the input conversation utterance.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversation(Azure.AI.Language.Conversations.Models.AnalyzeConversationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>
 
@@ -290,9 +309,6 @@ Additional information can be found in the service REST API documentation:
 https://learn.microsoft.com/rest/api/language/2023-04-01/conversation-analysis-runtime/analyze-conversation
 
 </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversation and parse the result.
 <code><![CDATA[
@@ -495,6 +511,9 @@ Response response = client.AnalyzeConversation(content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("kind").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationAsync">
@@ -517,12 +536,10 @@ Console.WriteLine(result.GetProperty("kind").ToString());
       </Parameters>
       <Docs>
         <param name="analyzeConversationInput"> The input for the analyze conversations operation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Analyzes the input conversation utterance. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeConversationInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeConversationAsync.
 <code><![CDATA[
@@ -607,6 +624,9 @@ AnalyzeConversationInput analyzeConversationInput = new ConversationLanguageUnde
 });
 Response<AnalyzeConversationActionResult> response = await client.AnalyzeConversationAsync(analyzeConversationInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeConversationInput" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationAsync">
@@ -630,14 +650,10 @@ Response<AnalyzeConversationActionResult> response = await client.AnalyzeConvers
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Analyzes the input conversation utterance.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversationAsync(Azure.AI.Language.Conversations.Models.AnalyzeConversationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>
 
@@ -645,9 +661,6 @@ Additional information can be found in the service REST API documentation:
 https://learn.microsoft.com/rest/api/language/2023-04-01/conversation-analysis-runtime/analyze-conversation
 
 </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversationAsync and parse the result.
 <code><![CDATA[
@@ -850,6 +863,9 @@ Response response = await client.AnalyzeConversationAsync(content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("kind").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversations">
@@ -902,17 +918,13 @@ Console.WriteLine(result.GetProperty("kind").ToString());
       </Parameters>
       <Docs>
         <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. </param>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Submits an analysis long running operation for conversations and return the response once processed.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversations(Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+            </summary>
+        <returns> The <see cref="T:Azure.Operation`1" /> representing an asynchronous operation on the service. </returns>
         <remarks>
 
 Additional information can be found in the service REST API documentation:
@@ -1083,17 +1095,13 @@ Console.WriteLine(result.GetProperty("nextLink").ToString());
       </Parameters>
       <Docs>
         <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. </param>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Submits an analysis long running operation for conversations and return the response once processed.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversationsAsync(Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+            </summary>
+        <returns> The <see cref="T:Azure.Operation`1" /> representing an asynchronous operation on the service. </returns>
         <remarks>
 
 Additional information can be found in the service REST API documentation:
@@ -1237,12 +1245,10 @@ Console.WriteLine(result.GetProperty("nextLink").ToString());
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="analyzeConversationOperationInput"> The input for the analyze conversations operation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Analyzes the input conversation utterance. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeConversationOperationInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeConversationSubmitOperation.
 <code><![CDATA[
@@ -1803,6 +1809,8 @@ AnalyzeConversationOperationInput analyzeConversationOperationInput = new Analyz
 };
 Operation operation = client.AnalyzeConversationSubmitOperation(WaitUntil.Completed, analyzeConversationOperationInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeConversationOperationInput" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationSubmitOperation">
@@ -1828,18 +1836,10 @@ Operation operation = client.AnalyzeConversationSubmitOperation(WaitUntil.Comple
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Analyzes the input conversation utterance.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversationSubmitOperation(Azure.WaitUntil,Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Analyzes the input conversation utterance. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversationSubmitOperation.
@@ -2585,6 +2585,8 @@ using RequestContent content = RequestContent.Create(new
 });
 Operation operation = client.AnalyzeConversationSubmitOperation(WaitUntil.Completed, content);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationSubmitOperationAsync">
@@ -2610,12 +2612,10 @@ Operation operation = client.AnalyzeConversationSubmitOperation(WaitUntil.Comple
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="analyzeConversationOperationInput"> The input for the analyze conversations operation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Analyzes the input conversation utterance. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeConversationOperationInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeConversationSubmitOperationAsync.
 <code><![CDATA[
@@ -3176,6 +3176,8 @@ AnalyzeConversationOperationInput analyzeConversationOperationInput = new Analyz
 };
 Operation operation = await client.AnalyzeConversationSubmitOperationAsync(WaitUntil.Completed, analyzeConversationOperationInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeConversationOperationInput" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationSubmitOperationAsync">
@@ -3201,18 +3203,10 @@ Operation operation = await client.AnalyzeConversationSubmitOperationAsync(WaitU
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Analyzes the input conversation utterance.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.AnalyzeConversationSubmitOperationAsync(Azure.WaitUntil,Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Analyzes the input conversation utterance. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversationSubmitOperationAsync.
@@ -3958,14 +3952,18 @@ using RequestContent content = RequestContent.Create(new
 });
 Operation operation = await client.AnalyzeConversationSubmitOperationAsync(WaitUntil.Completed, content);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="CancelAnalyzeConversations">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation CancelAnalyzeConversations (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation CancelAnalyzeConversations (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation CancelAnalyzeConversations(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.CancelAnalyzeConversations(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversations (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Operation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversations (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Operation" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CancelAnalyzeConversations : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.CancelAnalyzeConversations : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAnalysisClient.CancelAnalyzeConversations (waitUntil, jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation CancelAnalyzeConversations (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversations (waitUntil As WaitUntil, jobId As Guid, context As RequestContext) As Operation" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
@@ -3984,13 +3982,9 @@ Operation operation = await client.AnalyzeConversationSubmitOperationAsync(WaitU
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="jobId"> The job ID to cancel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Cancel a long-running Text Analysis conversations job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Cancel a long-running job for text analysis of conversations. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>
 
 Additional information can be found in the service REST API documentation:
@@ -4009,12 +4003,43 @@ Operation operation = client.CancelAnalyzeConversations(WaitUntil.Completed, Gui
 ]]></code></example>
       </Docs>
     </Member>
+    <Member MemberName="CancelAnalyzeConversations">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation CancelAnalyzeConversations (Azure.WaitUntil waitUntil, Guid jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation CancelAnalyzeConversations(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.CancelAnalyzeConversations(Azure.WaitUntil,System.Guid,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversations (waitUntil As WaitUntil, jobId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member CancelAnalyzeConversations : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.CancelAnalyzeConversations : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAnalysisClient.CancelAnalyzeConversations (waitUntil, jobId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Operation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="jobId" Type="System.Guid" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="jobId"> The job ID to cancel. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Cancel a long-running job for text analysis of conversations. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CancelAnalyzeConversationsAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; CancelAnalyzeConversationsAsync (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; CancelAnalyzeConversationsAsync (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; CancelAnalyzeConversationsAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.CancelAnalyzeConversationsAsync(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversationsAsync (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversationsAsync (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Task(Of Operation)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CancelAnalyzeConversationsAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.CancelAnalyzeConversationsAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAnalysisClient.CancelAnalyzeConversationsAsync (waitUntil, jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; CancelAnalyzeConversationsAsync (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversationsAsync (waitUntil As WaitUntil, jobId As Guid, context As RequestContext) As Task(Of Operation)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
@@ -4033,13 +4058,9 @@ Operation operation = client.CancelAnalyzeConversations(WaitUntil.Completed, Gui
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="jobId"> The job ID to cancel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Cancel a long-running Text Analysis conversations job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Cancel a long-running job for text analysis of conversations. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>
 
 Additional information can be found in the service REST API documentation:
@@ -4056,6 +4077,35 @@ ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, cre
 
 Operation operation = await client.CancelAnalyzeConversationsAsync(WaitUntil.Completed, Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
 ]]></code></example>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAnalyzeConversationsAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; CancelAnalyzeConversationsAsync (Azure.WaitUntil waitUntil, Guid jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; CancelAnalyzeConversationsAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.CancelAnalyzeConversationsAsync(Azure.WaitUntil,System.Guid,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelAnalyzeConversationsAsync (waitUntil As WaitUntil, jobId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member CancelAnalyzeConversationsAsync : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.CancelAnalyzeConversationsAsync : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAnalysisClient.CancelAnalyzeConversationsAsync (waitUntil, jobId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Operation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="jobId" Type="System.Guid" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="jobId"> The job ID to cancel. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Cancel a long-running job for text analysis of conversations. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Endpoint">
@@ -4103,8 +4153,8 @@ Operation operation = await client.CancelAnalyzeConversationsAsync(WaitUntil.Com
       <Docs>
         <param name="jobId"> job ID. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Get analysis status and results. </summary>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </summary>
         <returns>To be added.</returns>
         <remarks> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </remarks>
         <example>
@@ -4180,6 +4230,7 @@ ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, cre
 
 Response<AnalyzeConversationOperationState> response = client.GetAnalyzeConversationJobStatus(Guid.Parse("3e9e8518-492f-47f9-abd1-9a7468231086"));
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnalyzeConversationJobStatus">
@@ -4211,14 +4262,10 @@ Response<AnalyzeConversationOperationState> response = client.GetAnalyzeConversa
         <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
         <param name="jobId"> job ID. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
-            [Protocol Method] Get analysis status and results
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.GetAnalyzeConversationJobStatus(System.Guid,System.Nullable{System.Boolean},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            [Protocol Method] Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>
 
@@ -4226,7 +4273,6 @@ Additional information can be found in the service REST API documentation:
 https://learn.microsoft.com/rest/api/language/2023-04-01/analyze-conversation/job-status
 
 </remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetAnalyzeConversationJobStatus and parse the result.
 <code><![CDATA[
@@ -4390,6 +4436,7 @@ Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
 Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
 Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnalyzeConversationJobStatusAsync">
@@ -4414,8 +4461,8 @@ Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
       <Docs>
         <param name="jobId"> job ID. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Get analysis status and results. </summary>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </summary>
         <returns>To be added.</returns>
         <remarks> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </remarks>
         <example>
@@ -4491,6 +4538,7 @@ ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, cre
 
 Response<AnalyzeConversationOperationState> response = await client.GetAnalyzeConversationJobStatusAsync(Guid.Parse("3e9e8518-492f-47f9-abd1-9a7468231086"));
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnalyzeConversationJobStatusAsync">
@@ -4522,14 +4570,10 @@ Response<AnalyzeConversationOperationState> response = await client.GetAnalyzeCo
         <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
         <param name="jobId"> job ID. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
-            [Protocol Method] Get analysis status and results
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.ConversationAnalysisClient.GetAnalyzeConversationJobStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            [Protocol Method] Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>
 
@@ -4537,7 +4581,6 @@ Additional information can be found in the service REST API documentation:
 https://learn.microsoft.com/rest/api/language/2023-04-01/analyze-conversation/job-status
 
 </remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetAnalyzeConversationJobStatusAsync and parse the result.
 <code><![CDATA[
@@ -4701,6 +4744,7 @@ Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
 Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
 Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">

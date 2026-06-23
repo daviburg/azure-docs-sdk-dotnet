@@ -1,0 +1,271 @@
+<Type Name="AzureMLExecutePipelineActivity" FullName="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity">
+  <TypeSignature Language="C#" Value="public class AzureMLExecutePipelineActivity : Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureMLExecutePipelineActivity extends Azure.Provisioning.DataFactory.ExecutionActivity" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureMLExecutePipelineActivity&#xA;Inherits ExecutionActivity" />
+  <TypeSignature Language="F#" Value="type AzureMLExecutePipelineActivity = class&#xA;    inherit ExecutionActivity" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.ExecutionActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Azure ML Execute Pipeline activity.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureMLExecutePipelineActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new AzureMLExecutePipelineActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnStepFailure">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;bool&gt; ContinueOnStepFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;bool&gt; ContinueOnStepFailure" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.ContinueOnStepFailure" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContinueOnStepFailure As BicepValue(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ContinueOnStepFailure : Azure.Provisioning.BicepValue&lt;bool&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.ContinueOnStepFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether to continue execution of other steps in the PipelineRun if a
+            step fails. This information will be passed in the
+            continueOnStepFailure property of the published pipeline execution
+            request. Type: boolean (or Expression with resultType boolean).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataPathAssignments">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; DataPathAssignments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; DataPathAssignments" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.DataPathAssignments" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataPathAssignments As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.DataPathAssignments : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.DataPathAssignments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dictionary used for changing data path assignments without retraining.
+            Values will be passed in the dataPathAssignments property of the
+            published pipeline execution request. Type: object (or Expression with
+            resultType object).                          To assign an object to
+            this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="azureMLExecutePipelineActivity.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of
+            AzureMLExecutePipelineActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExperimentName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; ExperimentName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; ExperimentName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.ExperimentName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExperimentName As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExperimentName : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.ExperimentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Run history experiment name of the pipeline run. This information will
+            be passed in the ExperimentName property of the published pipeline
+            execution request. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MLParentRunId">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; MLParentRunId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; MLParentRunId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLParentRunId" />
+      <MemberSignature Language="VB.NET" Value="Public Property MLParentRunId As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.MLParentRunId : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLParentRunId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parent Azure ML Service pipeline run id. This information will be
+            passed in the ParentRunId property of the published pipeline execution
+            request. Type: string (or Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MLPipelineEndpointId">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; MLPipelineEndpointId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; MLPipelineEndpointId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineEndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public Property MLPipelineEndpointId As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.MLPipelineEndpointId : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineEndpointId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ID of the published Azure ML pipeline endpoint. Type: string (or
+            Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MLPipelineId">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; MLPipelineId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; MLPipelineId" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineId" />
+      <MemberSignature Language="VB.NET" Value="Public Property MLPipelineId As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.MLPipelineId : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ID of the published Azure ML pipeline. Type: string (or Expression with
+            resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MLPipelineParameters">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;string&gt; MLPipelineParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;string&gt; MLPipelineParameters" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property MLPipelineParameters As BicepDictionary(Of String)" />
+      <MemberSignature Language="F#" Value="member this.MLPipelineParameters : Azure.Provisioning.BicepDictionary&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.MLPipelineParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key,Value pairs to be passed to the published Azure ML pipeline
+            endpoint. Keys must match the names of pipeline parameters defined in
+            the published pipeline. Values will be passed in the
+            ParameterAssignments property of the published pipeline execution
+            request. Type: object with key value pairs (or Expression with
+            resultType object).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Version" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Property Version As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Version : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.AzureMLExecutePipelineActivity.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Version of the published Azure ML pipeline endpoint. Type: string (or
+            Expression with resultType string).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

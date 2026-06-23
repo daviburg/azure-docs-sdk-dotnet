@@ -1,0 +1,168 @@
+<Type Name="RerunTumblingWindowTrigger" FullName="Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger">
+  <TypeSignature Language="C#" Value="public class RerunTumblingWindowTrigger : Azure.Provisioning.DataFactory.DataFactoryTriggerProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RerunTumblingWindowTrigger extends Azure.Provisioning.DataFactory.DataFactoryTriggerProperties" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger" />
+  <TypeSignature Language="VB.NET" Value="Public Class RerunTumblingWindowTrigger&#xA;Inherits DataFactoryTriggerProperties" />
+  <TypeSignature Language="F#" Value="type RerunTumblingWindowTrigger = class&#xA;    inherit DataFactoryTriggerProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.DataFactoryTriggerProperties</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Trigger that schedules pipeline reruns for all fixed time interval windows
+            from a requested start time to requested end time.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RerunTumblingWindowTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new RerunTumblingWindowTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="rerunTumblingWindowTrigger.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of RerunTumblingWindowTrigger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentTrigger">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;BinaryData&gt; ParentTrigger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;class System.BinaryData&gt; ParentTrigger" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.ParentTrigger" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParentTrigger As BicepValue(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.ParentTrigger : Azure.Provisioning.BicepValue&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.ParentTrigger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parent trigger reference.                          To assign an
+            object to this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedEndOn">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; RequestedEndOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype System.DateTimeOffset&gt; RequestedEndOn" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RequestedEndOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequestedEndOn As BicepValue(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.RequestedEndOn : Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; with get, set" Usage="Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RequestedEndOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The end time for the time period for which restatement is initiated.
+            Only UTC time is currently supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedStartOn">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; RequestedStartOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;valuetype System.DateTimeOffset&gt; RequestedStartOn" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RequestedStartOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequestedStartOn As BicepValue(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.RequestedStartOn : Azure.Provisioning.BicepValue&lt;DateTimeOffset&gt; with get, set" Usage="Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RequestedStartOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The start time for the time period for which restatement is initiated.
+            Only UTC time is currently supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RerunConcurrency">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;int&gt; RerunConcurrency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;int32&gt; RerunConcurrency" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RerunConcurrency" />
+      <MemberSignature Language="VB.NET" Value="Public Property RerunConcurrency As BicepValue(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.RerunConcurrency : Azure.Provisioning.BicepValue&lt;int&gt; with get, set" Usage="Azure.Provisioning.DataFactory.RerunTumblingWindowTrigger.RerunConcurrency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The max number of parallel time windows (ready for execution) for which
+            a rerun is triggered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

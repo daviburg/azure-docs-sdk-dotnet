@@ -12,6 +12,7 @@
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
     <AssemblyVersion>1.1.3.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationProperties</BaseTypeName>
@@ -27,8 +28,18 @@
       <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("This type is obsolete and will be removed in a future version. Use NetworkTapDestinationProperties instead.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This type is obsolete and will be removed in a future version. Use NetworkTapDestinationProperties instead.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary> The network tap destination properties. </summary>
+    <summary> The NetworkTapPatchableParametersDestinationsItem. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -41,9 +52,46 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkTapPatchableParametersDestinationsItem (string name, Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationType? destinationType, Azure.Core.ResourceIdentifier destinationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationType&gt; destinationType, class Azure.Core.ResourceIdentifier destinationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem.#ctor(System.String,System.Nullable{Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationType},Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, destinationType As Nullable(Of NetworkTapDestinationType), destinationId As ResourceIdentifier)" />
+      <MemberSignature Language="F#" Value="new Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem : string * Nullable&lt;Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationType&gt; * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem" Usage="new Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem (name, destinationType, destinationId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="destinationType" Type="System.Nullable&lt;Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapDestinationType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="destinationId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> Destination name. </param>
+        <param name="destinationType"> Type of destination. Input can be IsolationDomain or Direct. </param>
+        <param name="destinationId"> The destination Id. ARM Resource ID of either NNI or Internal Networks. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem" />. </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -63,8 +111,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
-        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet" />
       </Parameters>
       <Docs>
         <param name="writer"> The JSON writer. </param>
@@ -86,6 +134,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem</ReturnType>
@@ -118,6 +167,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -149,6 +199,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ManagedNetworkFabric.Models.NetworkTapPatchableParametersDestinationsItem</ReturnType>
@@ -181,6 +232,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -210,6 +262,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ManagedNetworkFabric</AssemblyName>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>

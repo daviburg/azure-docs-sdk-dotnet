@@ -9,13 +9,14 @@
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to SubscriptionResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,10 +29,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Billing.Mocking.MockableBillingSubscriptionResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableBillingSubscriptionResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -45,13 +47,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingPropertyResource</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets an object representing a BillingPropertyResource along with the instance operations that can be performed on it in the SubscriptionResource. </summary>
+        <summary>
+            Gets the billing properties for a subscription
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingProperty/default. </description></item><item><term> Operation Id. </term><description> BillingProperties_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingPropertyResource" />. </description></item></list></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Billing.BillingPropertyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -66,13 +71,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.SubscriptionPolicyResource</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets an object representing a SubscriptionPolicyResource along with the instance operations that can be performed on it in the SubscriptionResource. </summary>
+        <summary>
+            Lists the policies that are managed by the Billing Admin for the defined subscriptions. This is supported for Microsoft Online Services Program, Microsoft Customer Agreement and Microsoft Partner Agreement.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Billing/policies/default. </description></item><item><term> Operation Id. </term><description> SubscriptionPolicies_GetBySubscription. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.SubscriptionPolicyResource" />. </description></item></list></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Billing.SubscriptionPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>

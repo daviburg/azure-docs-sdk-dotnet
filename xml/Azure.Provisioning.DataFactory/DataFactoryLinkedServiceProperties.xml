@@ -1,0 +1,351 @@
+<Type Name="DataFactoryLinkedServiceProperties" FullName="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties">
+  <TypeSignature Language="C#" Value="public class DataFactoryLinkedServiceProperties : Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFactoryLinkedServiceProperties extends Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class DataFactoryLinkedServiceProperties&#xA;Inherits ProvisionableConstruct" />
+  <TypeSignature Language="F#" Value="type DataFactoryLinkedServiceProperties = class&#xA;    inherit ProvisionableConstruct" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.Primitives.ProvisionableConstruct</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The nested object which contains the information and credential which can
+            be used to connect with related store or compute resource.
+            Please note
+            Azure.ResourceManager.DataFactory.Models.DataFactoryLinkedServiceProperties
+            is the base class. According to the scenario, a derived class of the base
+            class might need to be assigned here, or this property needs to be casted
+            to one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AmazonMwsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AmazonRdsForOracleLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AmazonRdsForSqlServerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AmazonRedshiftLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AmazonS3LinkedService,
+            Azure.ResourceManager.DataFactory.Models.AmazonS3CompatibleLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AppFiguresLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AsanaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureBatchLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobFSLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureDatabricksLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureDatabricksDeltaLakeLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureDataExplorerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureDataLakeAnalyticsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureDataLakeStoreLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureFileStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureFunctionLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureKeyVaultLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureMariaDBLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureMLLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureMLServiceLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureMySqlLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzurePostgreSqlLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureSearchLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlDatabaseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlDWLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlMILinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureSynapseArtifactsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.AzureTableStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CassandraLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CommonDataServiceForAppsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ConcurLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CosmosDBLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CosmosDBMongoDBApiLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CouchbaseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.CustomDataSourceLinkedService,
+            Azure.ResourceManager.DataFactory.Models.DataworldLinkedService,
+            Azure.ResourceManager.DataFactory.Models.Db2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.DrillLinkedService,
+            Azure.ResourceManager.DataFactory.Models.DynamicsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.DynamicsAXLinkedService,
+            Azure.ResourceManager.DataFactory.Models.DynamicsCrmLinkedService,
+            Azure.ResourceManager.DataFactory.Models.EloquaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.FileServerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.FtpServerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.GoogleAdWordsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.GoogleBigQueryLinkedService,
+            Azure.ResourceManager.DataFactory.Models.GoogleBigQueryV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.GoogleCloudStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.GoogleSheetsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.GreenplumLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HBaseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HdfsLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HDInsightLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HDInsightOnDemandLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HiveLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HttpLinkedService,
+            Azure.ResourceManager.DataFactory.Models.HubspotLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ImpalaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.InformixLinkedService,
+            Azure.ResourceManager.DataFactory.Models.JiraLinkedService,
+            Azure.ResourceManager.DataFactory.Models.LakeHouseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MagentoLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MariaDBLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MarketoLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MicrosoftAccessLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MongoDBLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MongoDBAtlasLinkedService,
+            Azure.ResourceManager.DataFactory.Models.MongoDBV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.MySqlLinkedService,
+            Azure.ResourceManager.DataFactory.Models.NetezzaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ODataLinkedService,
+            Azure.ResourceManager.DataFactory.Models.OdbcLinkedService,
+            Azure.ResourceManager.DataFactory.Models.Office365LinkedService,
+            Azure.ResourceManager.DataFactory.Models.OracleLinkedService,
+            Azure.ResourceManager.DataFactory.Models.OracleCloudStorageLinkedService,
+            Azure.ResourceManager.DataFactory.Models.OracleServiceCloudLinkedService,
+            Azure.ResourceManager.DataFactory.Models.PaypalLinkedService,
+            Azure.ResourceManager.DataFactory.Models.PhoenixLinkedService,
+            Azure.ResourceManager.DataFactory.Models.PostgreSqlLinkedService,
+            Azure.ResourceManager.DataFactory.Models.PostgreSqlV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.PrestoLinkedService,
+            Azure.ResourceManager.DataFactory.Models.QuickbaseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.QuickBooksLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ResponsysLinkedService,
+            Azure.ResourceManager.DataFactory.Models.RestServiceLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SalesforceLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SalesforceMarketingCloudLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SalesforceServiceCloudLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SalesforceServiceCloudV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.SalesforceV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapBWLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapCloudForCustomerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapEccLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapHanaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapOdpLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapOpenHubLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SapTableLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ServiceNowLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ServiceNowV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.SftpServerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SharePointOnlineListLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ShopifyLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SmartsheetLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SnowflakeLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SnowflakeV2LinkedService,
+            Azure.ResourceManager.DataFactory.Models.SparkLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SqlServerLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SquareLinkedService,
+            Azure.ResourceManager.DataFactory.Models.SybaseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.TeamDeskLinkedService,
+            Azure.ResourceManager.DataFactory.Models.TeradataLinkedService,
+            Azure.ResourceManager.DataFactory.Models.TwilioLinkedService,
+            Azure.ResourceManager.DataFactory.Models.VerticaLinkedService,
+            Azure.ResourceManager.DataFactory.Models.WarehouseLinkedService,
+            Azure.ResourceManager.DataFactory.Models.WebLinkedService,
+            Azure.ResourceManager.DataFactory.Models.XeroLinkedService,
+            Azure.ResourceManager.DataFactory.Models.ZendeskLinkedService and
+            Azure.ResourceManager.DataFactory.Models.ZohoLinkedService.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFactoryLinkedServiceProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new DataFactoryLinkedServiceProperties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalProperties">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalProperties" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.AdditionalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalProperties As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalProperties : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.AdditionalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional Properties                          To assign an object to
+            the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;BinaryData&gt; Annotations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class System.BinaryData&gt; Annotations" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Annotations" />
+      <MemberSignature Language="VB.NET" Value="Public Property Annotations As BicepList(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.Annotations : Azure.Provisioning.BicepList&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of tags that can be used for describing the linked service.
+            To assign an object to the element of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectVia">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.IntegrationRuntimeReference ConnectVia { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.IntegrationRuntimeReference ConnectVia" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.ConnectVia" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectVia As IntegrationRuntimeReference" />
+      <MemberSignature Language="F#" Value="member this.ConnectVia : Azure.Provisioning.DataFactory.IntegrationRuntimeReference with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.ConnectVia" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.IntegrationRuntimeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The integration runtime reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="dataFactoryLinkedServiceProperties.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of
+            DataFactoryLinkedServiceProperties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Description" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Description : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Linked service description.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedServiceVersion">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; LinkedServiceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; LinkedServiceVersion" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.LinkedServiceVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property LinkedServiceVersion As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.LinkedServiceVersion : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.LinkedServiceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Version of the linked service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As BicepDictionary(Of EntityParameterSpecification)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryLinkedServiceProperties.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameters for linked service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

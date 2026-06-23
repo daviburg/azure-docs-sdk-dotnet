@@ -7,13 +7,28 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("This options type is obsolete. Use the direct parameter overload of GetConsumptionReservationsSummaries.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This options type is obsolete. Use the direct parameter overload of GetConsumptionReservationsSummaries.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary> The ArmResourceGetConsumptionReservationsSummariesOptions. </summary>
+    <summary>
+            Obsolete options bag retained for backward compatibility with the v1.1.0 surface that used an
+            options-style overload of <c>GetConsumptionReservationsSummaries</c>. Use the direct-parameter
+            overload of <c>GetConsumptionReservationSummaries</c> on the appropriate scope instead.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,13 +42,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="grain" Type="Azure.ResourceManager.Consumption.Models.ReservationSummaryDataGrain" />
       </Parameters>
       <Docs>
-        <param name="grain"> Can be daily or monthly. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Consumption.Models.ArmResourceGetConsumptionReservationsSummariesOptions" />. </summary>
+        <param name="grain"> Reservation summary data grain (daily/monthly). </param>
+        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Consumption.Models.ArmResourceGetConsumptionReservationsSummariesOptions" /> class. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -47,12 +63,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> End date. Only applicable when querying with billing profile. </summary>
+        <summary> Optional end date filter (ISO 8601). </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -67,12 +84,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Required only for daily grain. The properties/UsageDate for start date and end date. The filter supports 'le' and  'ge'. Not applicable when querying with billing profile. </summary>
+        <summary> Optional OData filter expression. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -87,12 +105,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Consumption.Models.ReservationSummaryDataGrain</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Can be daily or monthly. </summary>
+        <summary> Reservation summary data grain. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -107,12 +126,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Reservation Id GUID. Only valid if reservationOrderId is also provided. Filter to a specific reservation. </summary>
+        <summary> Optional reservation identifier filter. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -127,12 +147,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Reservation Order Id GUID. Required if reservationId is provided. Filter to a specific reservation order. </summary>
+        <summary> Optional reservation-order identifier filter. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,12 +168,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Start date. Only applicable when querying with billing profile. </summary>
+        <summary> Optional start date filter (ISO 8601). </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

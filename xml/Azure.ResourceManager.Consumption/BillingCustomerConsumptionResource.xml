@@ -9,15 +9,28 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("This type is obsolete and will be removed in a future release.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This type is obsolete and will be removed in a future release.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            A class extending from the BillingCustomerResource in Azure.ResourceManager.Consumption along with the instance operations that can be performed on it.
-            You can only construct a <see cref="T:Azure.ResourceManager.Consumption.BillingCustomerConsumptionResource" /> from a <see cref="T:Azure.Core.ResourceIdentifier" /> with a resource type of Microsoft.Billing/billingAccounts/customers.
+            Obsolete backward-compatibility stub for the billing-customer scoped consumption resource that
+            existed in the v1.1.0 surface. The TypeSpec migration replaced this wrapper resource with
+            scope-based extension methods on <see cref="T:Azure.ResourceManager.ArmClient" />; this type now throws on every member
+            and is hidden from IntelliSense. Use <c>ArmClient.GetConsumptionLotSummaries(scope, filter)</c> instead.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -31,6 +44,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +62,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionLotSummary&gt;</ReturnType>
       </ReturnValue>
@@ -57,11 +78,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="filter"> May be used to filter the lots by Status, Source etc. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. Tag filter is a key value pair string where key and value is separated by a colon (:). </param>
+        <param name="filter"> Optional OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists all Azure credits for a customer. The API is only supported for Microsoft Partner  Agreements (MPA) billing accounts.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}/providers/Microsoft.Consumption/lots</description></item><item><term>Operation Id</term><description>Lots_ListByCustomer</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use <c>ArmClient.GetConsumptionLotSummaries(scope, filter)</c> instead. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionLotSummary" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -76,7 +95,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionLotSummary&gt;</ReturnType>
       </ReturnValue>
@@ -85,11 +111,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="filter"> May be used to filter the lots by Status, Source etc. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. Tag filter is a key value pair string where key and value is separated by a colon (:). </param>
+        <param name="filter"> Optional OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists all Azure credits for a customer. The API is only supported for Microsoft Partner  Agreements (MPA) billing accounts.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}/providers/Microsoft.Consumption/lots</description></item><item><term>Operation Id</term><description>Lots_ListByCustomer</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use <c>ArmClient.GetConsumptionLotSummariesAsync(scope, filter)</c> instead. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionLotSummary" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -104,6 +128,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>

@@ -10,6 +10,7 @@
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
@@ -29,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,6 +48,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -76,6 +79,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -106,7 +110,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationVmAssignmentResource&gt;</ReturnType>
       </ReturnValue>
@@ -115,9 +126,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            List all guest configuration assignments for a subscription.
-            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments. </description></item><item><term> Operation Id. </term><description> GuestConfigurationAssignments_SubscriptionList. </description></item><item><term> Default Api Version. </term><description> 2024-04-05. </description></item></list></summary>
+        <summary> List all guest configuration assignments for a subscription. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.GuestConfiguration.GuestConfigurationVmAssignmentResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -132,7 +141,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationVmAssignmentResource&gt;</ReturnType>
       </ReturnValue>
@@ -141,10 +157,60 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> List all guest configuration assignments for a subscription. </summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.GuestConfiguration.GuestConfigurationVmAssignmentResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionList">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt; SubscriptionList (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt; SubscriptionList(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.GuestConfiguration.Mocking.MockableGuestConfigurationSubscriptionResource.SubscriptionList(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SubscriptionList (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of GuestConfigurationAssignmentData)" />
+      <MemberSignature Language="F#" Value="abstract member SubscriptionList : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;&#xA;override this.SubscriptionList : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;" Usage="mockableGuestConfigurationSubscriptionResource.SubscriptionList cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List all guest configuration assignments for a subscription.
             <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments. </description></item><item><term> Operation Id. </term><description> GuestConfigurationAssignments_SubscriptionList. </description></item><item><term> Default Api Version. </term><description> 2024-04-05. </description></item></list></summary>
-        <returns> A collection of <see cref="T:Azure.ResourceManager.GuestConfiguration.GuestConfigurationVmAssignmentResource" /> that may take multiple service requests to iterate over. </returns>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionListAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt; SubscriptionListAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt; SubscriptionListAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.GuestConfiguration.Mocking.MockableGuestConfigurationSubscriptionResource.SubscriptionListAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SubscriptionListAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of GuestConfigurationAssignmentData)" />
+      <MemberSignature Language="F#" Value="abstract member SubscriptionListAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;&#xA;override this.SubscriptionListAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;" Usage="mockableGuestConfigurationSubscriptionResource.SubscriptionListAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.GuestConfiguration</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            List all guest configuration assignments for a subscription.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments. </description></item><item><term> Operation Id. </term><description> GuestConfigurationAssignments_SubscriptionList. </description></item><item><term> Default Api Version. </term><description> 2024-04-05. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.GuestConfiguration.GuestConfigurationAssignmentData" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

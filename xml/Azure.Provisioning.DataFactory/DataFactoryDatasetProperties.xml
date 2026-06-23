@@ -1,0 +1,381 @@
+<Type Name="DataFactoryDatasetProperties" FullName="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties">
+  <TypeSignature Language="C#" Value="public class DataFactoryDatasetProperties : Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFactoryDatasetProperties extends Azure.Provisioning.Primitives.ProvisionableConstruct" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class DataFactoryDatasetProperties&#xA;Inherits ProvisionableConstruct" />
+  <TypeSignature Language="F#" Value="type DataFactoryDatasetProperties = class&#xA;    inherit ProvisionableConstruct" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.Primitives.ProvisionableConstruct</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Azure Data Factory nested object which identifies data within different
+            data stores, such as tables, files, folders, and documents.
+            Please note
+            Azure.ResourceManager.DataFactory.Models.DataFactoryDatasetProperties is
+            the base class. According to the scenario, a derived class of the base
+            class might need to be assigned here, or this property needs to be casted
+            to one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AmazonMwsObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.AmazonRdsForOracleTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AmazonRdsForSqlServerTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AmazonRedshiftTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AmazonS3Dataset,
+            Azure.ResourceManager.DataFactory.Models.AvroDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureBlobFSDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureDatabricksDeltaLakeDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureDataExplorerTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureDataLakeStoreDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureMariaDBTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureMySqlTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzurePostgreSqlTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureSearchIndexDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlDWTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlMITableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureSqlTableDataset,
+            Azure.ResourceManager.DataFactory.Models.AzureTableDataset,
+            Azure.ResourceManager.DataFactory.Models.BinaryDataset,
+            Azure.ResourceManager.DataFactory.Models.CassandraTableDataset,
+            Azure.ResourceManager.DataFactory.Models.CommonDataServiceForAppsEntityDataset,
+            Azure.ResourceManager.DataFactory.Models.ConcurObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.CosmosDBMongoDBApiCollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.CosmosDBSqlApiCollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.CouchbaseTableDataset,
+            Azure.ResourceManager.DataFactory.Models.CustomDataset,
+            Azure.ResourceManager.DataFactory.Models.Db2TableDataset,
+            Azure.ResourceManager.DataFactory.Models.DelimitedTextDataset,
+            Azure.ResourceManager.DataFactory.Models.DocumentDBCollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.DrillTableDataset,
+            Azure.ResourceManager.DataFactory.Models.DynamicsAXResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.DynamicsCrmEntityDataset,
+            Azure.ResourceManager.DataFactory.Models.DynamicsEntityDataset,
+            Azure.ResourceManager.DataFactory.Models.EloquaObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.ExcelDataset,
+            Azure.ResourceManager.DataFactory.Models.FileShareDataset,
+            Azure.ResourceManager.DataFactory.Models.GoogleAdWordsObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.GoogleBigQueryObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.GoogleBigQueryV2ObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.GreenplumTableDataset,
+            Azure.ResourceManager.DataFactory.Models.HBaseObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.HiveObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.DataFactoryHttpDataset,
+            Azure.ResourceManager.DataFactory.Models.HubspotObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.IcebergDataset,
+            Azure.ResourceManager.DataFactory.Models.ImpalaObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.InformixTableDataset,
+            Azure.ResourceManager.DataFactory.Models.JiraObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.JsonDataset,
+            Azure.ResourceManager.DataFactory.Models.LakeHouseTableDataset,
+            Azure.ResourceManager.DataFactory.Models.MagentoObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.MariaDBTableDataset,
+            Azure.ResourceManager.DataFactory.Models.MarketoObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.MicrosoftAccessTableDataset,
+            Azure.ResourceManager.DataFactory.Models.MongoDBAtlasCollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.MongoDBCollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.MongoDBV2CollectionDataset,
+            Azure.ResourceManager.DataFactory.Models.MySqlTableDataset,
+            Azure.ResourceManager.DataFactory.Models.NetezzaTableDataset,
+            Azure.ResourceManager.DataFactory.Models.ODataResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.OdbcTableDataset,
+            Azure.ResourceManager.DataFactory.Models.Office365Dataset,
+            Azure.ResourceManager.DataFactory.Models.OracleServiceCloudObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.OracleTableDataset,
+            Azure.ResourceManager.DataFactory.Models.OrcDataset,
+            Azure.ResourceManager.DataFactory.Models.ParquetDataset,
+            Azure.ResourceManager.DataFactory.Models.PaypalObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.PhoenixObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.PostgreSqlTableDataset,
+            Azure.ResourceManager.DataFactory.Models.PostgreSqlV2TableDataset,
+            Azure.ResourceManager.DataFactory.Models.PrestoObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.QuickBooksObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.RelationalTableDataset,
+            Azure.ResourceManager.DataFactory.Models.ResponsysObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.RestResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.SalesforceMarketingCloudObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SalesforceObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SalesforceServiceCloudObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SalesforceServiceCloudV2ObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SalesforceV2ObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SapBWCubeDataset,
+            Azure.ResourceManager.DataFactory.Models.SapCloudForCustomerResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.SapEccResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.SapHanaTableDataset,
+            Azure.ResourceManager.DataFactory.Models.SapOdpResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.SapOpenHubTableDataset,
+            Azure.ResourceManager.DataFactory.Models.SapTableResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.ServiceNowObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.ServiceNowV2ObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SharePointOnlineListResourceDataset,
+            Azure.ResourceManager.DataFactory.Models.ShopifyObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SnowflakeDataset,
+            Azure.ResourceManager.DataFactory.Models.SnowflakeV2Dataset,
+            Azure.ResourceManager.DataFactory.Models.SparkObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SqlServerTableDataset,
+            Azure.ResourceManager.DataFactory.Models.SquareObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.SybaseTableDataset,
+            Azure.ResourceManager.DataFactory.Models.TeradataTableDataset,
+            Azure.ResourceManager.DataFactory.Models.VerticaTableDataset,
+            Azure.ResourceManager.DataFactory.Models.WarehouseTableDataset,
+            Azure.ResourceManager.DataFactory.Models.WebTableDataset,
+            Azure.ResourceManager.DataFactory.Models.XeroObjectDataset,
+            Azure.ResourceManager.DataFactory.Models.XmlDataset and
+            Azure.ResourceManager.DataFactory.Models.ZohoObjectDataset.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFactoryDatasetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new DataFactoryDatasetProperties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalProperties">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; AdditionalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class System.BinaryData&gt; AdditionalProperties" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.AdditionalProperties" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdditionalProperties As BicepDictionary(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalProperties : Azure.Provisioning.BicepDictionary&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.AdditionalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional Properties                          To assign an object to
+            the value of this property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;BinaryData&gt; Annotations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class System.BinaryData&gt; Annotations" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Annotations" />
+      <MemberSignature Language="VB.NET" Value="Public Property Annotations As BicepList(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="member this.Annotations : Azure.Provisioning.BicepList&lt;BinaryData&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;System.BinaryData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of tags that can be used for describing the Dataset.
+            To assign an object to the element of this
+            property use
+            System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions).
+            To assign an already formatted json string to
+            this property use System.BinaryData.FromString(System.String).
+            Examples:
+            BinaryData.FromObjectAsJson("foo")Creates a
+            payload of
+            "foo".BinaryData.FromString("\"foo\"")Creates
+            a payload of "foo".BinaryData.FromObjectAsJson(new { key =
+            "value" })Creates a payload of { "key":
+            "value" }.BinaryData.FromString("{\"key\":
+            \"value\"}")Creates a payload of { "key":
+            "value" }.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="dataFactoryDatasetProperties.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of DataFactoryDatasetProperties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; Description" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Description : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dataset description.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepValue&lt;string&gt; FolderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepValue`1&lt;string&gt; FolderName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.FolderName" />
+      <MemberSignature Language="VB.NET" Value="Public Property FolderName As BicepValue(Of String)" />
+      <MemberSignature Language="F#" Value="member this.FolderName : Azure.Provisioning.BicepValue&lt;string&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.FolderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepValue&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the folder that this Dataset is in.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedServiceName">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference LinkedServiceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference LinkedServiceName" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.LinkedServiceName" />
+      <MemberSignature Language="VB.NET" Value="Public Property LinkedServiceName As DataFactoryLinkedServiceReference" />
+      <MemberSignature Language="F#" Value="member this.LinkedServiceName : Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.LinkedServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryLinkedServiceReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Linked service reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepDictionary`1&lt;class Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As BicepDictionary(Of EntityParameterSpecification)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepDictionary&lt;Azure.Provisioning.DataFactory.EntityParameterSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameters for dataset.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetSchemaDataElement&gt; Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.DatasetSchemaDataElement&gt; Schema" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Schema" />
+      <MemberSignature Language="VB.NET" Value="Public Property Schema As BicepList(Of DatasetSchemaDataElement)" />
+      <MemberSignature Language="F#" Value="member this.Schema : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetSchemaDataElement&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetSchemaDataElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Columns that define the physical type schema of the dataset. Type:
+            array (or Expression with resultType array), itemType:
+            DatasetSchemaDataElement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Structure">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetDataElement&gt; Structure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.DatasetDataElement&gt; Structure" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Structure" />
+      <MemberSignature Language="VB.NET" Value="Public Property Structure As BicepList(Of DatasetDataElement)" />
+      <MemberSignature Language="F#" Value="member this.Structure : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetDataElement&gt; with get, set" Usage="Azure.Provisioning.DataFactory.DataFactoryDatasetProperties.Structure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.DatasetDataElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Columns that define the structure of the dataset. Type: array (or
+            Expression with resultType array), itemType: DatasetDataElement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

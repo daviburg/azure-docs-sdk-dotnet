@@ -1,0 +1,231 @@
+<Type Name="IfConditionActivity" FullName="Azure.Provisioning.DataFactory.IfConditionActivity">
+  <TypeSignature Language="C#" Value="public class IfConditionActivity : Azure.Provisioning.DataFactory.ControlActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IfConditionActivity extends Azure.Provisioning.DataFactory.ControlActivity" />
+  <TypeSignature Language="DocId" Value="T:Azure.Provisioning.DataFactory.IfConditionActivity" />
+  <TypeSignature Language="VB.NET" Value="Public Class IfConditionActivity&#xA;Inherits ControlActivity" />
+  <TypeSignature Language="F#" Value="type IfConditionActivity = class&#xA;    inherit ControlActivity" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Azure.Provisioning.DataFactory.ControlActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This activity evaluates a boolean expression and executes either the
+            activities under the ifTrueActivities property or the ifFalseActivities
+            property depending on the result of the expression.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IfConditionActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.IfConditionActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new IfConditionActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineProvisionableProperties">
+      <MemberSignature Language="C#" Value="protected override void DefineProvisionableProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefineProvisionableProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Provisioning.DataFactory.IfConditionActivity.DefineProvisionableProperties" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DefineProvisionableProperties ()" />
+      <MemberSignature Language="F#" Value="override this.DefineProvisionableProperties : unit -&gt; unit" Usage="ifConditionActivity.DefineProvisionableProperties " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Define all the provisionable properties of IfConditionActivity.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.DataFactory.DataFactoryExpression Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.DataFactory.DataFactoryExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.IfConditionActivity.Expression" />
+      <MemberSignature Language="VB.NET" Value="Public Property Expression As DataFactoryExpression" />
+      <MemberSignature Language="F#" Value="member this.Expression : Azure.Provisioning.DataFactory.DataFactoryExpression with get, set" Usage="Azure.Provisioning.DataFactory.IfConditionActivity.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.DataFactory.DataFactoryExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An expression that would evaluate to Boolean. This is used to determine
+            the block of activities (ifTrueActivities or ifFalseActivities) that
+            will be executed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfFalseActivities">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; IfFalseActivities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.PipelineActivity&gt; IfFalseActivities" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.IfConditionActivity.IfFalseActivities" />
+      <MemberSignature Language="VB.NET" Value="Public Property IfFalseActivities As BicepList(Of PipelineActivity)" />
+      <MemberSignature Language="F#" Value="member this.IfFalseActivities : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; with get, set" Usage="Azure.Provisioning.DataFactory.IfConditionActivity.IfFalseActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of activities to execute if expression is evaluated to false. This
+            is an optional property and if not provided, the activity will exit
+            without any action.             Please note
+            Azure.ResourceManager.DataFactory.Models.PipelineActivity is the base
+            class. According to the scenario, a derived class of the base class
+            might need to be assigned here, or this property needs to be casted to
+            one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AppendVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureDataExplorerCommandActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureFunctionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLBatchExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLUpdateResourceActivity,
+            Azure.ResourceManager.DataFactory.Models.ControlActivity,
+            Azure.ResourceManager.DataFactory.Models.CopyActivity,
+            Azure.ResourceManager.DataFactory.Models.CustomActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksJobActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkJarActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkPythonActivity,
+            Azure.ResourceManager.DataFactory.Models.DataLakeAnalyticsUsqlActivity,
+            Azure.ResourceManager.DataFactory.Models.DeleteActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteDataFlowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteSsisPackageActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteWranglingDataflowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.FailActivity,
+            Azure.ResourceManager.DataFactory.Models.FilterActivity,
+            Azure.ResourceManager.DataFactory.Models.ForEachActivity,
+            Azure.ResourceManager.DataFactory.Models.GetDatasetMetadataActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightHiveActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightMapReduceActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightPigActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightSparkActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightStreamingActivity,
+            Azure.ResourceManager.DataFactory.Models.IfConditionActivity,
+            Azure.ResourceManager.DataFactory.Models.LookupActivity,
+            Azure.ResourceManager.DataFactory.Models.DataFactoryScriptActivity,
+            Azure.ResourceManager.DataFactory.Models.SetVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseSparkJobDefinitionActivity,
+            Azure.ResourceManager.DataFactory.Models.SqlServerStoredProcedureActivity,
+            Azure.ResourceManager.DataFactory.Models.SwitchActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.UntilActivity,
+            Azure.ResourceManager.DataFactory.Models.ValidationActivity,
+            Azure.ResourceManager.DataFactory.Models.WaitActivity,
+            Azure.ResourceManager.DataFactory.Models.WebActivity and
+            Azure.ResourceManager.DataFactory.Models.WebHookActivity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfTrueActivities">
+      <MemberSignature Language="C#" Value="public Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; IfTrueActivities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Provisioning.BicepList`1&lt;class Azure.Provisioning.DataFactory.PipelineActivity&gt; IfTrueActivities" />
+      <MemberSignature Language="DocId" Value="P:Azure.Provisioning.DataFactory.IfConditionActivity.IfTrueActivities" />
+      <MemberSignature Language="VB.NET" Value="Public Property IfTrueActivities As BicepList(Of PipelineActivity)" />
+      <MemberSignature Language="F#" Value="member this.IfTrueActivities : Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt; with get, set" Usage="Azure.Provisioning.DataFactory.IfConditionActivity.IfTrueActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Provisioning.DataFactory</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Provisioning.BicepList&lt;Azure.Provisioning.DataFactory.PipelineActivity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of activities to execute if expression is evaluated to true. This
+            is an optional property and if not provided, the activity will exit
+            without any action.             Please note
+            Azure.ResourceManager.DataFactory.Models.PipelineActivity is the base
+            class. According to the scenario, a derived class of the base class
+            might need to be assigned here, or this property needs to be casted to
+            one of the possible derived classes.             The available derived
+            classes include
+            Azure.ResourceManager.DataFactory.Models.AppendVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureDataExplorerCommandActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureFunctionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLBatchExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.AzureMLUpdateResourceActivity,
+            Azure.ResourceManager.DataFactory.Models.ControlActivity,
+            Azure.ResourceManager.DataFactory.Models.CopyActivity,
+            Azure.ResourceManager.DataFactory.Models.CustomActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksJobActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkJarActivity,
+            Azure.ResourceManager.DataFactory.Models.DatabricksSparkPythonActivity,
+            Azure.ResourceManager.DataFactory.Models.DataLakeAnalyticsUsqlActivity,
+            Azure.ResourceManager.DataFactory.Models.DeleteActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteDataFlowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutePipelineActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteSsisPackageActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecuteWranglingDataflowActivity,
+            Azure.ResourceManager.DataFactory.Models.ExecutionActivity,
+            Azure.ResourceManager.DataFactory.Models.FailActivity,
+            Azure.ResourceManager.DataFactory.Models.FilterActivity,
+            Azure.ResourceManager.DataFactory.Models.ForEachActivity,
+            Azure.ResourceManager.DataFactory.Models.GetDatasetMetadataActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightHiveActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightMapReduceActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightPigActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightSparkActivity,
+            Azure.ResourceManager.DataFactory.Models.HDInsightStreamingActivity,
+            Azure.ResourceManager.DataFactory.Models.IfConditionActivity,
+            Azure.ResourceManager.DataFactory.Models.LookupActivity,
+            Azure.ResourceManager.DataFactory.Models.DataFactoryScriptActivity,
+            Azure.ResourceManager.DataFactory.Models.SetVariableActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseSparkJobDefinitionActivity,
+            Azure.ResourceManager.DataFactory.Models.SqlServerStoredProcedureActivity,
+            Azure.ResourceManager.DataFactory.Models.SwitchActivity,
+            Azure.ResourceManager.DataFactory.Models.SynapseNotebookActivity,
+            Azure.ResourceManager.DataFactory.Models.UntilActivity,
+            Azure.ResourceManager.DataFactory.Models.ValidationActivity,
+            Azure.ResourceManager.DataFactory.Models.WaitActivity,
+            Azure.ResourceManager.DataFactory.Models.WebActivity and
+            Azure.ResourceManager.DataFactory.Models.WebHookActivity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
