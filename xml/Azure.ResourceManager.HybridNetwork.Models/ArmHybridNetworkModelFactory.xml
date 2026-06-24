@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -41,14 +41,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ArtifactManifestPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Artifact manifest properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.ArtifactManifestData" />. </summary>
+        <summary> Artifact manifest properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.ArtifactManifestData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -76,7 +76,7 @@
         <param name="provisioningState"> The provisioning state of the ArtifactManifest resource. </param>
         <param name="artifactManifestState"> The artifact manifest state. </param>
         <param name="artifacts"> The artifacts list. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactManifestPropertiesFormat" />. </summary>
+        <summary> Artifact manifest properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactManifestPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -105,24 +105,72 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> ArtifactStores properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.ArtifactStoreData" />. </summary>
+        <summary> Artifact store properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.ArtifactStoreData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ArtifactStoreNetworkFabricControllerEndPoints">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreNetworkFabricControllerEndPoints ArtifactStoreNetworkFabricControllerEndPoints (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; networkFabricControllerIds = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreNetworkFabricControllerEndPoints ArtifactStoreNetworkFabricControllerEndPoints(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; networkFabricControllerIds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStoreNetworkFabricControllerEndPoints(System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ArtifactStoreNetworkFabricControllerEndPoints (Optional networkFabricControllerIds As IEnumerable(Of ReferencedResourceById) = Nothing) As ArtifactStoreNetworkFabricControllerEndPoints" />
+      <MemberSignature Language="F#" Value="static member ArtifactStoreNetworkFabricControllerEndPoints : seq&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreNetworkFabricControllerEndPoints" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStoreNetworkFabricControllerEndPoints networkFabricControllerIds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreNetworkFabricControllerEndPoints</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="networkFabricControllerIds" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="networkFabricControllerIds"> list of network fabric controllers. </param>
+        <summary> List of network fabric controller ids. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreNetworkFabricControllerEndPoints" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArtifactStorePrivateEndPointsFormat">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePrivateEndPointsFormat ArtifactStorePrivateEndPointsFormat (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; manualPrivateEndPointConnections = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePrivateEndPointsFormat ArtifactStorePrivateEndPointsFormat(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; manualPrivateEndPointConnections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePrivateEndPointsFormat(System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ArtifactStorePrivateEndPointsFormat (Optional manualPrivateEndPointConnections As IEnumerable(Of ReferencedResourceById) = Nothing) As ArtifactStorePrivateEndPointsFormat" />
+      <MemberSignature Language="F#" Value="static member ArtifactStorePrivateEndPointsFormat : seq&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePrivateEndPointsFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePrivateEndPointsFormat manualPrivateEndPointConnections" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePrivateEndPointsFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manualPrivateEndPointConnections" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="manualPrivateEndPointConnections"> list of private endpoints. </param>
+        <summary> List of manual private endpoints. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePrivateEndPointsFormat" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ArtifactStorePropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat ArtifactStorePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType? storeType = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy? replicationStrategy = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration managedResourceGroupConfiguration = default, Azure.Core.ResourceIdentifier storageResourceId = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat ArtifactStorePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType&gt; storeType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy&gt; replicationStrategy, class Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration managedResourceGroupConfiguration, class Azure.Core.ResourceIdentifier storageResourceId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy},Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration,Azure.Core.ResourceIdentifier)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ArtifactStorePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional storeType As Nullable(Of ArtifactStoreType) = Nothing, Optional replicationStrategy As Nullable(Of ArtifactReplicationStrategy) = Nothing, Optional managedResourceGroupConfiguration As ArtifactStorePropertiesFormatManagedResourceGroupConfiguration = Nothing, Optional storageResourceId As ResourceIdentifier = Nothing) As ArtifactStorePropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member ArtifactStorePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy&gt; * Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePropertiesFormat (provisioningState, storeType, replicationStrategy, managedResourceGroupConfiguration, storageResourceId)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat ArtifactStorePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType? storeType = default, Azure.ResourceManager.HybridNetwork.Models.BackingResourcePublicNetworkAccess? backingResourcePublicNetworkAccess = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy? replicationStrategy = default, Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration managedResourceGroupConfiguration = default, Azure.Core.ResourceIdentifier storageResourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat ArtifactStorePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType&gt; storeType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.BackingResourcePublicNetworkAccess&gt; backingResourcePublicNetworkAccess, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy&gt; replicationStrategy, class Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration managedResourceGroupConfiguration, class Azure.Core.ResourceIdentifier storageResourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.BackingResourcePublicNetworkAccess},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy},Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration,Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ArtifactStorePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional storeType As Nullable(Of ArtifactStoreType) = Nothing, Optional backingResourcePublicNetworkAccess As Nullable(Of BackingResourcePublicNetworkAccess) = Nothing, Optional replicationStrategy As Nullable(Of ArtifactReplicationStrategy) = Nothing, Optional managedResourceGroupConfiguration As ArtifactStorePropertiesFormatManagedResourceGroupConfiguration = Nothing, Optional storageResourceId As ResourceIdentifier = Nothing) As ArtifactStorePropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member ArtifactStorePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.BackingResourcePublicNetworkAccess&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy&gt; * Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ArtifactStorePropertiesFormat (provisioningState, storeType, backingResourcePublicNetworkAccess, replicationStrategy, managedResourceGroupConfiguration, storageResourceId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -134,6 +182,7 @@
       <Parameters>
         <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt;" />
         <Parameter Name="storeType" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactStoreType&gt;" />
+        <Parameter Name="backingResourcePublicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.BackingResourcePublicNetworkAccess&gt;" />
         <Parameter Name="replicationStrategy" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ArtifactReplicationStrategy&gt;" />
         <Parameter Name="managedResourceGroupConfiguration" Type="Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormatManagedResourceGroupConfiguration" />
         <Parameter Name="storageResourceId" Type="Azure.Core.ResourceIdentifier" />
@@ -141,20 +190,45 @@
       <Docs>
         <param name="provisioningState"> The provisioning state of the application groups resource. </param>
         <param name="storeType"> The artifact store type. </param>
+        <param name="backingResourcePublicNetworkAccess"> The artifact store backing resource network access type. </param>
         <param name="replicationStrategy"> The replication strategy. </param>
         <param name="managedResourceGroupConfiguration" />
         <param name="storageResourceId"> The created storage resource id. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat" />. </summary>
+        <summary> Artifact store properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArtifactStorePropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AzureArcKubernetesNetworkFunctionTemplate">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate AzureArcKubernetesNetworkFunctionTemplate (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionApplication&gt; networkFunctionApplications = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate AzureArcKubernetesNetworkFunctionTemplate(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionApplication&gt; networkFunctionApplications) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureArcKubernetesNetworkFunctionTemplate(System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionApplication})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureArcKubernetesNetworkFunctionTemplate (Optional networkFunctionApplications As IEnumerable(Of AzureArcKubernetesNetworkFunctionApplication) = Nothing) As AzureArcKubernetesNetworkFunctionTemplate" />
+      <MemberSignature Language="F#" Value="static member AzureArcKubernetesNetworkFunctionTemplate : seq&lt;Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionApplication&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureArcKubernetesNetworkFunctionTemplate networkFunctionApplications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="networkFunctionApplications" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionApplication&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="networkFunctionApplications"> Network function applications. </param>
+        <summary> Azure Arc kubernetes network function template. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AzureContainerRegistryScopedTokenCredential">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential AzureContainerRegistryScopedTokenCredential (string username = default, string acrToken = default, Uri acrServerUri = default, System.Collections.Generic.IEnumerable&lt;string&gt; repositories = default, DateTimeOffset? expiry = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential AzureContainerRegistryScopedTokenCredential(string username, string acrToken, class System.Uri acrServerUri, class System.Collections.Generic.IEnumerable`1&lt;string&gt; repositories, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiry) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential AzureContainerRegistryScopedTokenCredential (string username = default, string acrToken = default, Uri acrServerUri = default, System.Collections.Generic.IEnumerable&lt;string&gt; repositories = default, DateTimeOffset? expiryOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential AzureContainerRegistryScopedTokenCredential(string username, string acrToken, class System.Uri acrServerUri, class System.Collections.Generic.IEnumerable`1&lt;string&gt; repositories, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiryOn) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureContainerRegistryScopedTokenCredential(System.String,System.String,System.Uri,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.DateTimeOffset})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureContainerRegistryScopedTokenCredential (Optional username As String = Nothing, Optional acrToken As String = Nothing, Optional acrServerUri As Uri = Nothing, Optional repositories As IEnumerable(Of String) = Nothing, Optional expiry As Nullable(Of DateTimeOffset) = Nothing) As AzureContainerRegistryScopedTokenCredential" />
-      <MemberSignature Language="F#" Value="static member AzureContainerRegistryScopedTokenCredential : string * string * Uri * seq&lt;string&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureContainerRegistryScopedTokenCredential (username, acrToken, acrServerUri, repositories, expiry)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureContainerRegistryScopedTokenCredential (Optional username As String = Nothing, Optional acrToken As String = Nothing, Optional acrServerUri As Uri = Nothing, Optional repositories As IEnumerable(Of String) = Nothing, Optional expiryOn As Nullable(Of DateTimeOffset) = Nothing) As AzureContainerRegistryScopedTokenCredential" />
+      <MemberSignature Language="F#" Value="static member AzureContainerRegistryScopedTokenCredential : string * string * Uri * seq&lt;string&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureContainerRegistryScopedTokenCredential (username, acrToken, acrServerUri, repositories, expiryOn)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -168,16 +242,64 @@
         <Parameter Name="acrToken" Type="System.String" />
         <Parameter Name="acrServerUri" Type="System.Uri" />
         <Parameter Name="repositories" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="expiry" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="expiryOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="username"> The username of the credential. </param>
         <param name="acrToken"> The credential value. </param>
         <param name="acrServerUri"> The Acr server url. </param>
         <param name="repositories"> The repositories that could be accessed using the current credential. </param>
-        <param name="expiry"> The UTC time when credential will expire. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential" />. </summary>
+        <param name="expiryOn"> The UTC time when credential will expire. </param>
+        <summary> The azure container registry scoped token credential definition. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureContainerRegistryScopedTokenCredential" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureCoreNetworkFunctionTemplate">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate AzureCoreNetworkFunctionTemplate (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionApplication&gt; networkFunctionApplications = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate AzureCoreNetworkFunctionTemplate(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionApplication&gt; networkFunctionApplications) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureCoreNetworkFunctionTemplate(System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionApplication})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureCoreNetworkFunctionTemplate (Optional networkFunctionApplications As IEnumerable(Of AzureCoreNetworkFunctionApplication) = Nothing) As AzureCoreNetworkFunctionTemplate" />
+      <MemberSignature Language="F#" Value="static member AzureCoreNetworkFunctionTemplate : seq&lt;Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionApplication&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureCoreNetworkFunctionTemplate networkFunctionApplications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="networkFunctionApplications" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionApplication&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="networkFunctionApplications"> Network function applications. </param>
+        <summary> Azure virtual network function template. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureOperatorNexusNetworkFunctionTemplate">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate AzureOperatorNexusNetworkFunctionTemplate (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionApplication&gt; networkFunctionApplications = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate AzureOperatorNexusNetworkFunctionTemplate(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionApplication&gt; networkFunctionApplications) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureOperatorNexusNetworkFunctionTemplate(System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionApplication})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureOperatorNexusNetworkFunctionTemplate (Optional networkFunctionApplications As IEnumerable(Of AzureOperatorNexusNetworkFunctionApplication) = Nothing) As AzureOperatorNexusNetworkFunctionTemplate" />
+      <MemberSignature Language="F#" Value="static member AzureOperatorNexusNetworkFunctionTemplate : seq&lt;Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionApplication&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureOperatorNexusNetworkFunctionTemplate networkFunctionApplications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="networkFunctionApplications" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionApplication&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="networkFunctionApplications"> Network function applications. </param>
+        <summary> Azure Operator Distributed Services network function template. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -202,17 +324,17 @@
       <Docs>
         <param name="containerName"> The storage account container name. </param>
         <param name="containerSasUri"> The storage account container sas uri. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential" />. </summary>
+        <summary> The azure storage account container credential definition. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AzureStorageAccountCredential">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential AzureStorageAccountCredential (Azure.Core.ResourceIdentifier storageAccountId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; containerCredentials = default, DateTimeOffset? expiry = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential AzureStorageAccountCredential(class Azure.Core.ResourceIdentifier storageAccountId, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; containerCredentials, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiry) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential AzureStorageAccountCredential (Azure.Core.ResourceIdentifier storageAccountId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; containerCredentials = default, DateTimeOffset? expiryOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential AzureStorageAccountCredential(class Azure.Core.ResourceIdentifier storageAccountId, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; containerCredentials, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiryOn) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureStorageAccountCredential(Azure.Core.ResourceIdentifier,System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential},System.Nullable{System.DateTimeOffset})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureStorageAccountCredential (Optional storageAccountId As ResourceIdentifier = Nothing, Optional containerCredentials As IEnumerable(Of AzureStorageAccountContainerCredential) = Nothing, Optional expiry As Nullable(Of DateTimeOffset) = Nothing) As AzureStorageAccountCredential" />
-      <MemberSignature Language="F#" Value="static member AzureStorageAccountCredential : Azure.Core.ResourceIdentifier * seq&lt;Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureStorageAccountCredential (storageAccountId, containerCredentials, expiry)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AzureStorageAccountCredential (Optional storageAccountId As ResourceIdentifier = Nothing, Optional containerCredentials As IEnumerable(Of AzureStorageAccountContainerCredential) = Nothing, Optional expiryOn As Nullable(Of DateTimeOffset) = Nothing) As AzureStorageAccountCredential" />
+      <MemberSignature Language="F#" Value="static member AzureStorageAccountCredential : Azure.Core.ResourceIdentifier * seq&lt;Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.AzureStorageAccountCredential (storageAccountId, containerCredentials, expiryOn)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -224,14 +346,40 @@
       <Parameters>
         <Parameter Name="storageAccountId" Type="Azure.Core.ResourceIdentifier" />
         <Parameter Name="containerCredentials" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountContainerCredential&gt;" />
-        <Parameter Name="expiry" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="expiryOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="storageAccountId"> The storage account Id. </param>
         <param name="containerCredentials"> The containers that could be accessed using the current credential. </param>
-        <param name="expiry"> The UTC time when credential will expire. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential" />. </summary>
+        <param name="expiryOn"> The UTC time when credential will expire. </param>
+        <summary> The azure storage account credential definition. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureStorageAccountCredential" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelInformation">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.CancelInformation CancelInformation (Azure.Core.ResourceIdentifier siteNetworkServiceReferenceId = default, Azure.ResourceManager.HybridNetwork.Models.CancelableLongRunningOperationType? longRunningOperation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.CancelInformation CancelInformation(class Azure.Core.ResourceIdentifier siteNetworkServiceReferenceId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.CancelableLongRunningOperationType&gt; longRunningOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.CancelInformation(Azure.Core.ResourceIdentifier,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.CancelableLongRunningOperationType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CancelInformation (Optional siteNetworkServiceReferenceId As ResourceIdentifier = Nothing, Optional longRunningOperation As Nullable(Of CancelableLongRunningOperationType) = Nothing) As CancelInformation" />
+      <MemberSignature Language="F#" Value="static member CancelInformation : Azure.Core.ResourceIdentifier * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.CancelableLongRunningOperationType&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.CancelInformation" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.CancelInformation (siteNetworkServiceReferenceId, longRunningOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.CancelInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteNetworkServiceReferenceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="longRunningOperation" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.CancelableLongRunningOperationType&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="siteNetworkServiceReferenceId"> Resource ID. </param>
+        <param name="longRunningOperation"> The type of long-running operation the user wants to cancel, such as 'Put'. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.CancelInformation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -257,12 +405,12 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ComponentProperties" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> The component properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.ComponentData" />. </summary>
+        <summary> The component sub resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.ComponentData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -294,7 +442,7 @@
         <param name="replicaSets"> Replica sets related to component resource. </param>
         <param name="statefulSets"> Stateful sets related to component resource. </param>
         <param name="daemonSets"> Daemonsets related to component resource. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ComponentKubernetesResources" />. </summary>
+        <summary> The resources of the network function component. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ComponentKubernetesResources" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -322,7 +470,7 @@
         <param name="provisioningState"> The provisioning state of the component resource. </param>
         <param name="deploymentProfile"> The JSON-serialized deployment profile of the component resource. </param>
         <param name="deploymentStatus"> The deployment status of the component resource. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ComponentProperties" />. </summary>
+        <summary> The component properties of the network function. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ComponentProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -351,14 +499,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupSchemaPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Configuration group schema properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupSchemaData" />. </summary>
+        <summary> Configuration group schema resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupSchemaData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -388,7 +536,7 @@
         <param name="versionState"> The configuration group schema version state. </param>
         <param name="description"> Description of what schema can contain. </param>
         <param name="schemaDefinition"> Name and value pairs that define the configuration value. It can be a well formed escaped JSON string. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupSchemaPropertiesFormat" />. </summary>
+        <summary> Configuration group schema properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupSchemaPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -417,28 +565,24 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties">
-            Hybrid configuration group value properties.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueData" />. </summary>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> Hybrid configuration group value properties. </param>
+        <summary> Hybrid configuration group value resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationGroupValuePropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat ConfigurationGroupValuePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, string configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string configurationType = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat ConfigurationGroupValuePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, string configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string configurationType) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationGroupValuePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationGroupValuePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As String = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional configurationType As String = Nothing) As ConfigurationGroupValuePropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member ConfigurationGroupValuePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationGroupValuePropertiesFormat (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, configurationType)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat ConfigurationGroupValuePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, Azure.Core.AzureLocation? configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string configurationType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat ConfigurationGroupValuePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string configurationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationGroupValuePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationGroupValuePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional configurationType As String = Nothing) As ConfigurationGroupValuePropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member ConfigurationGroupValuePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationGroupValuePropertiesFormat (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, configurationType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -452,7 +596,7 @@
         <Parameter Name="publisherName" Type="System.String" />
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="configurationGroupSchemaName" Type="System.String" />
-        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.String" />
+        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="configurationGroupSchemaResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="configurationType" Type="System.String" />
       </Parameters>
@@ -462,23 +606,22 @@
         <param name="publisherScope"> The scope of the publisher. </param>
         <param name="configurationGroupSchemaName"> The configuration group schema name. </param>
         <param name="configurationGroupSchemaOfferingLocation"> The location of the configuration group schema offering. </param>
-        <param name="configurationGroupSchemaResourceReference">
-            The configuration group schema resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="configurationGroupSchemaResourceReference"> The configuration group schema resource reference. </param>
         <param name="configurationType"> The value which indicates if configuration values are secrets. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" />. </summary>
+        <summary>
+            Hybrid configuration group value properties.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" />.
+            </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationGroupValuePropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationValueWithoutSecrets">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets ConfigurationValueWithoutSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, string configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string configurationValue = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets ConfigurationValueWithoutSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, string configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string configurationValue) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithoutSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationValueWithoutSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As String = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional configurationValue As String = Nothing) As ConfigurationValueWithoutSecrets" />
-      <MemberSignature Language="F#" Value="static member ConfigurationValueWithoutSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithoutSecrets (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, configurationValue)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets ConfigurationValueWithoutSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, Azure.Core.AzureLocation? configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string configurationValue = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets ConfigurationValueWithoutSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string configurationValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithoutSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationValueWithoutSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional configurationValue As String = Nothing) As ConfigurationValueWithoutSecrets" />
+      <MemberSignature Language="F#" Value="static member ConfigurationValueWithoutSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithoutSecrets (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, configurationValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -492,7 +635,7 @@
         <Parameter Name="publisherName" Type="System.String" />
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="configurationGroupSchemaName" Type="System.String" />
-        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.String" />
+        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="configurationGroupSchemaResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="configurationValue" Type="System.String" />
       </Parameters>
@@ -502,23 +645,19 @@
         <param name="publisherScope"> The scope of the publisher. </param>
         <param name="configurationGroupSchemaName"> The configuration group schema name. </param>
         <param name="configurationGroupSchemaOfferingLocation"> The location of the configuration group schema offering. </param>
-        <param name="configurationGroupSchemaResourceReference">
-            The configuration group schema resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="configurationGroupSchemaResourceReference"> The configuration group schema resource reference. </param>
         <param name="configurationValue"> Name and value pairs that define the configuration value. It can be a well formed escaped JSON string. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" />. </summary>
+        <summary> The ConfigurationValue with no secrets. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithoutSecrets" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationValueWithSecrets">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets ConfigurationValueWithSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, string configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string secretConfigurationValue = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets ConfigurationValueWithSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, string configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string secretConfigurationValue) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationValueWithSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As String = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional secretConfigurationValue As String = Nothing) As ConfigurationValueWithSecrets" />
-      <MemberSignature Language="F#" Value="static member ConfigurationValueWithSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithSecrets (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, secretConfigurationValue)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets ConfigurationValueWithSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string configurationGroupSchemaName = default, Azure.Core.AzureLocation? configurationGroupSchemaOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference = default, string secretConfigurationValue = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets ConfigurationValueWithSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string configurationGroupSchemaName, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; configurationGroupSchemaOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference configurationGroupSchemaResourceReference, string secretConfigurationValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConfigurationValueWithSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional configurationGroupSchemaName As String = Nothing, Optional configurationGroupSchemaOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional configurationGroupSchemaResourceReference As DeploymentResourceIdReference = Nothing, Optional secretConfigurationValue As String = Nothing) As ConfigurationValueWithSecrets" />
+      <MemberSignature Language="F#" Value="static member ConfigurationValueWithSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * string -&gt; Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ConfigurationValueWithSecrets (provisioningState, publisherName, publisherScope, configurationGroupSchemaName, configurationGroupSchemaOfferingLocation, configurationGroupSchemaResourceReference, secretConfigurationValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -532,7 +671,7 @@
         <Parameter Name="publisherName" Type="System.String" />
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="configurationGroupSchemaName" Type="System.String" />
-        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.String" />
+        <Parameter Name="configurationGroupSchemaOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="configurationGroupSchemaResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="secretConfigurationValue" Type="System.String" />
       </Parameters>
@@ -542,13 +681,9 @@
         <param name="publisherScope"> The scope of the publisher. </param>
         <param name="configurationGroupSchemaName"> The configuration group schema name. </param>
         <param name="configurationGroupSchemaOfferingLocation"> The location of the configuration group schema offering. </param>
-        <param name="configurationGroupSchemaResourceReference">
-            The configuration group schema resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="configurationGroupSchemaResourceReference"> The configuration group schema resource reference. </param>
         <param name="secretConfigurationValue"> Name and value pairs that define the configuration value secrets. It can be a well formed escaped JSON string. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" />. </summary>
+        <summary> The ConfigurationValue with secrets. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ConfigurationValueWithSecrets" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -579,13 +714,37 @@
         <param name="versionState"> The network function definition version state. </param>
         <param name="description"> The network function definition version description. </param>
         <param name="deployParameters"> The deployment parameters of the network function definition version. </param>
-        <param name="networkFunctionTemplate">
-            Containerized network function template.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ContainerizedNetworkFunctionTemplate" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureArcKubernetesNetworkFunctionTemplate" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ContainerizedNetworkFunctionDefinitionVersion" />. </summary>
+        <param name="networkFunctionTemplate"> Containerized network function template. </param>
+        <summary> Containerized network function network function definition version properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ContainerizedNetworkFunctionDefinitionVersion" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.DependsOnProfile DependsOnProfile (System.Collections.Generic.IEnumerable&lt;string&gt; installDependsOn = default, System.Collections.Generic.IEnumerable&lt;string&gt; uninstallDependsOn = default, System.Collections.Generic.IEnumerable&lt;string&gt; updateDependsOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.DependsOnProfile DependsOnProfile(class System.Collections.Generic.IEnumerable`1&lt;string&gt; installDependsOn, class System.Collections.Generic.IEnumerable`1&lt;string&gt; uninstallDependsOn, class System.Collections.Generic.IEnumerable`1&lt;string&gt; updateDependsOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.DependsOnProfile(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DependsOnProfile (Optional installDependsOn As IEnumerable(Of String) = Nothing, Optional uninstallDependsOn As IEnumerable(Of String) = Nothing, Optional updateDependsOn As IEnumerable(Of String) = Nothing) As DependsOnProfile" />
+      <MemberSignature Language="F#" Value="static member DependsOnProfile : seq&lt;string&gt; * seq&lt;string&gt; * seq&lt;string&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.DependsOnProfile" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.DependsOnProfile (installDependsOn, uninstallDependsOn, updateDependsOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.DependsOnProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="installDependsOn" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="uninstallDependsOn" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="updateDependsOn" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="installDependsOn"> Application installation operation dependency. </param>
+        <param name="uninstallDependsOn"> Application deletion operation dependency. </param>
+        <param name="updateDependsOn"> Application update operation dependency. </param>
+        <summary> Depends on profile definition. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DependsOnProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -612,8 +771,64 @@
         <param name="status"> The status of the component resource. </param>
         <param name="resources"> The resource related to the component resource. </param>
         <param name="nextExpectedUpdateOn"> The next expected update of deployment status. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentStatusProperties" />. </summary>
+        <summary> The deployment status properties of the network function component. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentStatusProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteRequestContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.ExecuteRequestContent ExecuteRequestContent (string serviceEndpoint = default, Azure.ResourceManager.HybridNetwork.Models.RequestMetadata requestMetadata = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.ExecuteRequestContent ExecuteRequestContent(string serviceEndpoint, class Azure.ResourceManager.HybridNetwork.Models.RequestMetadata requestMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ExecuteRequestContent(System.String,Azure.ResourceManager.HybridNetwork.Models.RequestMetadata)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExecuteRequestContent (Optional serviceEndpoint As String = Nothing, Optional requestMetadata As RequestMetadata = Nothing) As ExecuteRequestContent" />
+      <MemberSignature Language="F#" Value="static member ExecuteRequestContent : string * Azure.ResourceManager.HybridNetwork.Models.RequestMetadata -&gt; Azure.ResourceManager.HybridNetwork.Models.ExecuteRequestContent" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.ExecuteRequestContent (serviceEndpoint, requestMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.ExecuteRequestContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.String" />
+        <Parameter Name="requestMetadata" Type="Azure.ResourceManager.HybridNetwork.Models.RequestMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint"> The endpoint of service to call. </param>
+        <param name="requestMetadata"> The request metadata. </param>
+        <summary> Payload for execute request post call. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ExecuteRequestContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelmArtifactProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.HelmArtifactProfile HelmArtifactProfile (string helmPackageName = default, string helmPackageVersionRange = default, System.Collections.Generic.IEnumerable&lt;string&gt; registryValuesPaths = default, System.Collections.Generic.IEnumerable&lt;string&gt; imagePullSecretsValuesPaths = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.HelmArtifactProfile HelmArtifactProfile(string helmPackageName, string helmPackageVersionRange, class System.Collections.Generic.IEnumerable`1&lt;string&gt; registryValuesPaths, class System.Collections.Generic.IEnumerable`1&lt;string&gt; imagePullSecretsValuesPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.HelmArtifactProfile(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function HelmArtifactProfile (Optional helmPackageName As String = Nothing, Optional helmPackageVersionRange As String = Nothing, Optional registryValuesPaths As IEnumerable(Of String) = Nothing, Optional imagePullSecretsValuesPaths As IEnumerable(Of String) = Nothing) As HelmArtifactProfile" />
+      <MemberSignature Language="F#" Value="static member HelmArtifactProfile : string * string * seq&lt;string&gt; * seq&lt;string&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.HelmArtifactProfile" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.HelmArtifactProfile (helmPackageName, helmPackageVersionRange, registryValuesPaths, imagePullSecretsValuesPaths)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.HelmArtifactProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helmPackageName" Type="System.String" />
+        <Parameter Name="helmPackageVersionRange" Type="System.String" />
+        <Parameter Name="registryValuesPaths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="imagePullSecretsValuesPaths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="helmPackageName"> Helm package name. </param>
+        <param name="helmPackageVersionRange"> Helm package version range. </param>
+        <param name="registryValuesPaths"> The registry values path list. </param>
+        <param name="imagePullSecretsValuesPaths"> The image pull secrets values path list. </param>
+        <summary> Helm artifact profile. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.HelmArtifactProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -638,7 +853,7 @@
       <Docs>
         <param name="name"> Name of this Sku. </param>
         <param name="tier"> The SKU tier based on the SKU name. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.HybridNetworkSku" />. </summary>
+        <summary> Sku, to be associated with a SiteNetworkService. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.HybridNetworkSku" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -676,7 +891,7 @@
         <param name="upToDateNumberOfPods"> Number of  upto date pods. </param>
         <param name="availableNumberOfPods"> Number of available pods. </param>
         <param name="createdOn"> Creation Time of daemonSet. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesDaemonSet" />. </summary>
+        <summary> Helm DaemonSet status properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesDaemonSet" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -712,7 +927,7 @@
         <param name="upToDateNumberOfPods"> Number of upto date pods. </param>
         <param name="availableNumberOfPods"> Number of available pods. </param>
         <param name="createdOn"> Creation Time of deployment. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesDeployment" />. </summary>
+        <summary> Helm Deployment status properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesDeployment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -748,7 +963,7 @@
         <param name="status"> The status of a pod. </param>
         <param name="createdOn"> Creation Time of Pod. </param>
         <param name="events"> Last 5 Pod events. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesPod" />. </summary>
+        <summary> Helm Pod status properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesPod" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -782,7 +997,7 @@
         <param name="readyNumberOfPods"> Number of ready pods. </param>
         <param name="currentNumberOfPods"> Number of current pods. </param>
         <param name="createdOn"> Creation Time of replicaSet. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesReplicaSet" />. </summary>
+        <summary> Helm ReplicaSet status properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesReplicaSet" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -814,17 +1029,17 @@
         <param name="desiredNumberOfPods"> Desired number of pods. </param>
         <param name="readyNumberOfPods"> Number of ready pods. </param>
         <param name="createdOn"> Creation Time of statefulset. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesStatefulSet" />. </summary>
+        <summary> Helm StatefulSet status properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.KubernetesStatefulSet" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkFunctionData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.NetworkFunctionData NetworkFunctionData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat properties = default, Azure.ETag? etag = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.NetworkFunctionData NetworkFunctionData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat properties, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, class Azure.ResourceManager.Models.ManagedServiceIdentity identity) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.NetworkFunctionData NetworkFunctionData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat properties = default, Azure.ETag? eTag = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.NetworkFunctionData NetworkFunctionData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat properties, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; eTag, class Azure.ResourceManager.Models.ManagedServiceIdentity identity) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat,System.Nullable{Azure.ETag},Azure.ResourceManager.Models.ManagedServiceIdentity)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional properties As NetworkFunctionPropertiesFormat = Nothing, Optional etag As Nullable(Of ETag) = Nothing, Optional identity As ManagedServiceIdentity = Nothing) As NetworkFunctionData" />
-      <MemberSignature Language="F#" Value="static member NetworkFunctionData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat * Nullable&lt;Azure.ETag&gt; * Azure.ResourceManager.Models.ManagedServiceIdentity -&gt; Azure.ResourceManager.HybridNetwork.NetworkFunctionData" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionData (id, name, resourceType, systemData, tags, location, properties, etag, identity)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional properties As NetworkFunctionPropertiesFormat = Nothing, Optional eTag As Nullable(Of ETag) = Nothing, Optional identity As ManagedServiceIdentity = Nothing) As NetworkFunctionData" />
+      <MemberSignature Language="F#" Value="static member NetworkFunctionData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat * Nullable&lt;Azure.ETag&gt; * Azure.ResourceManager.Models.ManagedServiceIdentity -&gt; Azure.ResourceManager.HybridNetwork.NetworkFunctionData" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionData (id, name, resourceType, systemData, tags, location, properties, eTag, identity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -841,24 +1056,20 @@
         <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="location" Type="Azure.Core.AzureLocation" />
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" />
-        <Parameter Name="etag" Type="System.Nullable&lt;Azure.ETag&gt;" />
+        <Parameter Name="eTag" Type="System.Nullable&lt;Azure.ETag&gt;" />
         <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties">
-            Network function properties.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" />.
-            </param>
-        <param name="etag"> A unique read-only string that changes whenever the resource is updated. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> Network function properties. </param>
+        <param name="eTag"> A unique read-only string that changes whenever the resource is updated. </param>
         <param name="identity"> The managed identity of the network function. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionData" />. </summary>
+        <summary> Network function resource response. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -887,14 +1098,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionGroupPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Network function definition group properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionDefinitionGroupData" />. </summary>
+        <summary> Network function definition group resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionDefinitionGroupData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -920,7 +1131,7 @@
       <Docs>
         <param name="provisioningState"> The provisioning state of the network function definition groups resource. </param>
         <param name="description"> The network function definition group description. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionGroupPropertiesFormat" />. </summary>
+        <summary> Network function definition group properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionGroupPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -949,18 +1160,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionVersionPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties">
-            Network function definition version properties.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionVersionPropertiesFormat" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ContainerizedNetworkFunctionDefinitionVersion" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.VirtualNetworkFunctionDefinitionVersion" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionDefinitionVersionData" />. </summary>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> Network function definition version properties. </param>
+        <summary> Network function definition version. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionDefinitionVersionData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -992,17 +1199,20 @@
         <param name="description"> The network function definition version description. </param>
         <param name="deployParameters"> The deployment parameters of the network function definition version. </param>
         <param name="networkFunctionType"> The network function type. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionVersionPropertiesFormat" />. </summary>
+        <summary>
+            Network function definition version properties.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ContainerizedNetworkFunctionDefinitionVersion" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.VirtualNetworkFunctionDefinitionVersion" />.
+            </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionVersionPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkFunctionPropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat NetworkFunctionPropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, string networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, string configurationType = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat NetworkFunctionPropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, string networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, string configurationType, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionPropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IEnumerable{System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionPropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As String = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional configurationType As String = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing) As NetworkFunctionPropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member NetworkFunctionPropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * string * seq&lt;string&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionPropertiesFormat (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, configurationType, roleOverrideValues)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat NetworkFunctionPropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, Azure.Core.AzureLocation? networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, string configurationType = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat NetworkFunctionPropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, string configurationType, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionPropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionPropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional configurationType As String = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing) As NetworkFunctionPropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member NetworkFunctionPropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * string * seq&lt;string&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionPropertiesFormat (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, configurationType, roleOverrideValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1017,7 +1227,7 @@
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="networkFunctionDefinitionGroupName" Type="System.String" />
         <Parameter Name="networkFunctionDefinitionVersion" Type="System.String" />
-        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.String" />
+        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="networkFunctionDefinitionVersionResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="nfviType" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt;" />
         <Parameter Name="nfviId" Type="Azure.Core.ResourceIdentifier" />
@@ -1032,27 +1242,26 @@
         <param name="networkFunctionDefinitionGroupName"> The network function definition group name for the network function. </param>
         <param name="networkFunctionDefinitionVersion"> The network function definition version for the network function. </param>
         <param name="networkFunctionDefinitionOfferingLocation"> The location of the network function definition offering. </param>
-        <param name="networkFunctionDefinitionVersionResourceReference">
-            The network function definition version resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="networkFunctionDefinitionVersionResourceReference"> The network function definition version resource reference. </param>
         <param name="nfviType"> The nfvi type for the network function. </param>
         <param name="nfviId"> The nfviId for the network function. </param>
         <param name="allowSoftwareUpdate"> Indicates if software updates are allowed during deployment. </param>
         <param name="configurationType"> The value which indicates if NF  values are secrets. </param>
         <param name="roleOverrideValues"> The role configuration override values from the user. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" />. </summary>
+        <summary>
+            Network function properties.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" />.
+            </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkFunctionValueWithoutSecrets">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets NetworkFunctionValueWithoutSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, string networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default, string deploymentValues = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets NetworkFunctionValueWithoutSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, string networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues, string deploymentValues) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithoutSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionValueWithoutSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As String = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing, Optional deploymentValues As String = Nothing) As NetworkFunctionValueWithoutSecrets" />
-      <MemberSignature Language="F#" Value="static member NetworkFunctionValueWithoutSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithoutSecrets (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, roleOverrideValues, deploymentValues)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets NetworkFunctionValueWithoutSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, Azure.Core.AzureLocation? networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default, string deploymentValues = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets NetworkFunctionValueWithoutSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues, string deploymentValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithoutSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionValueWithoutSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing, Optional deploymentValues As String = Nothing) As NetworkFunctionValueWithoutSecrets" />
+      <MemberSignature Language="F#" Value="static member NetworkFunctionValueWithoutSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithoutSecrets (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, roleOverrideValues, deploymentValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1067,7 +1276,7 @@
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="networkFunctionDefinitionGroupName" Type="System.String" />
         <Parameter Name="networkFunctionDefinitionVersion" Type="System.String" />
-        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.String" />
+        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="networkFunctionDefinitionVersionResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="nfviType" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt;" />
         <Parameter Name="nfviId" Type="Azure.Core.ResourceIdentifier" />
@@ -1082,27 +1291,23 @@
         <param name="networkFunctionDefinitionGroupName"> The network function definition group name for the network function. </param>
         <param name="networkFunctionDefinitionVersion"> The network function definition version for the network function. </param>
         <param name="networkFunctionDefinitionOfferingLocation"> The location of the network function definition offering. </param>
-        <param name="networkFunctionDefinitionVersionResourceReference">
-            The network function definition version resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="networkFunctionDefinitionVersionResourceReference"> The network function definition version resource reference. </param>
         <param name="nfviType"> The nfvi type for the network function. </param>
         <param name="nfviId"> The nfviId for the network function. </param>
         <param name="allowSoftwareUpdate"> Indicates if software updates are allowed during deployment. </param>
         <param name="roleOverrideValues"> The role configuration override values from the user. </param>
         <param name="deploymentValues"> The JSON-serialized deployment values from the user. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" />. </summary>
+        <summary> NetworkFunction with no secrets. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithoutSecrets" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkFunctionValueWithSecrets">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets NetworkFunctionValueWithSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, string networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default, string secretDeploymentValues = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets NetworkFunctionValueWithSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, string networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues, string secretDeploymentValues) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionValueWithSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As String = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing, Optional secretDeploymentValues As String = Nothing) As NetworkFunctionValueWithSecrets" />
-      <MemberSignature Language="F#" Value="static member NetworkFunctionValueWithSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithSecrets (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, roleOverrideValues, secretDeploymentValues)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets NetworkFunctionValueWithSecrets (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkFunctionDefinitionGroupName = default, string networkFunctionDefinitionVersion = default, Azure.Core.AzureLocation? networkFunctionDefinitionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference = default, Azure.ResourceManager.HybridNetwork.Models.NfviType? nfviType = default, Azure.Core.ResourceIdentifier nfviId = default, bool? allowSoftwareUpdate = default, System.Collections.Generic.IEnumerable&lt;string&gt; roleOverrideValues = default, string secretDeploymentValues = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets NetworkFunctionValueWithSecrets(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkFunctionDefinitionGroupName, string networkFunctionDefinitionVersion, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; networkFunctionDefinitionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkFunctionDefinitionVersionResourceReference, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; nfviType, class Azure.Core.ResourceIdentifier nfviId, valuetype System.Nullable`1&lt;bool&gt; allowSoftwareUpdate, class System.Collections.Generic.IEnumerable`1&lt;string&gt; roleOverrideValues, string secretDeploymentValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithSecrets(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.NfviType},Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkFunctionValueWithSecrets (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkFunctionDefinitionGroupName As String = Nothing, Optional networkFunctionDefinitionVersion As String = Nothing, Optional networkFunctionDefinitionOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional networkFunctionDefinitionVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional nfviType As Nullable(Of NfviType) = Nothing, Optional nfviId As ResourceIdentifier = Nothing, Optional allowSoftwareUpdate As Nullable(Of Boolean) = Nothing, Optional roleOverrideValues As IEnumerable(Of String) = Nothing, Optional secretDeploymentValues As String = Nothing) As NetworkFunctionValueWithSecrets" />
+      <MemberSignature Language="F#" Value="static member NetworkFunctionValueWithSecrets : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkFunctionValueWithSecrets (provisioningState, publisherName, publisherScope, networkFunctionDefinitionGroupName, networkFunctionDefinitionVersion, networkFunctionDefinitionOfferingLocation, networkFunctionDefinitionVersionResourceReference, nfviType, nfviId, allowSoftwareUpdate, roleOverrideValues, secretDeploymentValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1117,7 +1322,7 @@
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="networkFunctionDefinitionGroupName" Type="System.String" />
         <Parameter Name="networkFunctionDefinitionVersion" Type="System.String" />
-        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.String" />
+        <Parameter Name="networkFunctionDefinitionOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="networkFunctionDefinitionVersionResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
         <Parameter Name="nfviType" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviType&gt;" />
         <Parameter Name="nfviId" Type="Azure.Core.ResourceIdentifier" />
@@ -1132,17 +1337,13 @@
         <param name="networkFunctionDefinitionGroupName"> The network function definition group name for the network function. </param>
         <param name="networkFunctionDefinitionVersion"> The network function definition version for the network function. </param>
         <param name="networkFunctionDefinitionOfferingLocation"> The location of the network function definition offering. </param>
-        <param name="networkFunctionDefinitionVersionResourceReference">
-            The network function definition version resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
+        <param name="networkFunctionDefinitionVersionResourceReference"> The network function definition version resource reference. </param>
         <param name="nfviType"> The nfvi type for the network function. </param>
         <param name="nfviId"> The nfviId for the network function. </param>
         <param name="allowSoftwareUpdate"> Indicates if software updates are allowed during deployment. </param>
         <param name="roleOverrideValues"> The role configuration override values from the user. </param>
         <param name="secretDeploymentValues"> The JSON-serialized secret deployment values from the user. This contains secrets like passwords,keys etc. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" />. </summary>
+        <summary> NetworkFunction with secrets. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionValueWithSecrets" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1171,14 +1372,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignGroupPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> network service design group properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkServiceDesignGroupData" />. </summary>
+        <summary> network service design group resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkServiceDesignGroupData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1204,7 +1405,7 @@
       <Docs>
         <param name="provisioningState"> The provisioning state of the network service design groups resource. </param>
         <param name="description"> The network service design group description. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignGroupPropertiesFormat" />. </summary>
+        <summary> network service design group properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignGroupPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1233,24 +1434,24 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> network service design version properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkServiceDesignVersionData" />. </summary>
+        <summary> network service design version. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkServiceDesignVersionData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkServiceDesignVersionPropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat NetworkServiceDesignVersionPropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.VersionState? versionState = default, string description = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.Resources.Models.WritableSubResource&gt; configurationGroupSchemaReferences = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; nfvisFromSite = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; resourceElementTemplates = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat NetworkServiceDesignVersionPropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.VersionState&gt; versionState, string description, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; configurationGroupSchemaReferences, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; nfvisFromSite, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; resourceElementTemplates) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkServiceDesignVersionPropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.VersionState},System.String,System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.Resources.Models.WritableSubResource},System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.HybridNetwork.Models.NfviDetails},System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkServiceDesignVersionPropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional versionState As Nullable(Of VersionState) = Nothing, Optional description As String = Nothing, Optional configurationGroupSchemaReferences As IDictionary(Of String, WritableSubResource) = Nothing, Optional nfvisFromSite As IDictionary(Of String, NfviDetails) = Nothing, Optional resourceElementTemplates As IEnumerable(Of ResourceElementTemplate) = Nothing) As NetworkServiceDesignVersionPropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member NetworkServiceDesignVersionPropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.VersionState&gt; * string * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; * seq&lt;Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkServiceDesignVersionPropertiesFormat (provisioningState, versionState, description, configurationGroupSchemaReferences, nfvisFromSite, resourceElementTemplates)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat NetworkServiceDesignVersionPropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.VersionState? versionState = default, string description = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; referencedConfigurationGroupSchemas = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.HybridNetwork.Models.NfviSiteDetails&gt; nfvisFromSite = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; resourceElementTemplates = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat NetworkServiceDesignVersionPropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.VersionState&gt; versionState, string description, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; referencedConfigurationGroupSchemas, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.HybridNetwork.Models.NfviSiteDetails&gt; nfvisFromSite, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; resourceElementTemplates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkServiceDesignVersionPropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Nullable{Azure.ResourceManager.HybridNetwork.Models.VersionState},System.String,System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById},System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.HybridNetwork.Models.NfviSiteDetails},System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NetworkServiceDesignVersionPropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional versionState As Nullable(Of VersionState) = Nothing, Optional description As String = Nothing, Optional referencedConfigurationGroupSchemas As IDictionary(Of String, ReferencedResourceById) = Nothing, Optional nfvisFromSite As IDictionary(Of String, NfviSiteDetails) = Nothing, Optional resourceElementTemplates As IEnumerable(Of ResourceElementTemplate) = Nothing) As NetworkServiceDesignVersionPropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member NetworkServiceDesignVersionPropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.VersionState&gt; * string * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.HybridNetwork.Models.NfviSiteDetails&gt; * seq&lt;Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.NetworkServiceDesignVersionPropertiesFormat (provisioningState, versionState, description, referencedConfigurationGroupSchemas, nfvisFromSite, resourceElementTemplates)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1263,22 +1464,18 @@
         <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt;" />
         <Parameter Name="versionState" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.VersionState&gt;" />
         <Parameter Name="description" Type="System.String" />
-        <Parameter Name="configurationGroupSchemaReferences" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" />
-        <Parameter Name="nfvisFromSite" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt;" />
+        <Parameter Name="referencedConfigurationGroupSchemas" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
+        <Parameter Name="nfvisFromSite" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.HybridNetwork.Models.NfviSiteDetails&gt;" />
         <Parameter Name="resourceElementTemplates" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate&gt;" />
       </Parameters>
       <Docs>
         <param name="provisioningState"> The provisioning state of the network service design version resource. </param>
         <param name="versionState"> The network service design version state. </param>
         <param name="description"> The network service design version description. </param>
-        <param name="configurationGroupSchemaReferences"> The configuration schemas to used to define the values. </param>
+        <param name="referencedConfigurationGroupSchemas"> The configuration schemas to used to define the values. </param>
         <param name="nfvisFromSite"> The nfvis from the site. </param>
-        <param name="resourceElementTemplates">
-            List of resource element template
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ResourceElementTemplate" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ArmResourceDefinitionResourceElementTemplateDetails" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkFunctionDefinitionResourceElementTemplateDetails" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat" />. </summary>
+        <param name="resourceElementTemplates"> List of resource element template. </param>
+        <summary> network service design version properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NetworkServiceDesignVersionPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1308,7 +1505,7 @@
         <param name="reason"> Event reason. </param>
         <param name="message"> Event message. </param>
         <param name="lastSeenOn"> Event Last seen. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.PodEvent" />. </summary>
+        <summary> Pod Event  properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.PodEvent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1334,11 +1531,11 @@
         <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactListOverview" />. </summary>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <summary> The proxy artifact overview. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactListOverview" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1366,7 +1563,7 @@
         <param name="artifactType"> The artifact type. </param>
         <param name="artifactVersion"> The artifact version. </param>
         <param name="artifactState"> The artifact state. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactOverviewPropertiesValue" />. </summary>
+        <summary> The ProxyArtifactOverviewPropertiesValue. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactOverviewPropertiesValue" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1393,12 +1590,12 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactOverviewPropertiesValue" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> Proxy Artifact overview properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactVersionsListOverview" />. </summary>
+        <summary> The proxy artifact overview. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.ProxyArtifactVersionsListOverview" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1428,15 +1625,15 @@
         <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Publisher properties. </param>
         <param name="identity"> The managed identity of the publisher, if configured. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.PublisherData" />. </summary>
+        <summary> publisher resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.PublisherData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1462,7 +1659,7 @@
       <Docs>
         <param name="provisioningState"> The provisioning state of the publisher resource. </param>
         <param name="scope"> The publisher scope. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.PublisherPropertiesFormat" />. </summary>
+        <summary> publisher properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.PublisherPropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1492,7 +1689,7 @@
         <param name="httpMethod"> The http method of the request. </param>
         <param name="serializedBody"> The serialized body of the request. </param>
         <param name="apiVersion"> The api version of the request. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.RequestMetadata" />. </summary>
+        <summary> Request metadata of execute request post call payload. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.RequestMetadata" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1521,14 +1718,14 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Site properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteData" />. </summary>
+        <summary> Site resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.SiteData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1559,26 +1756,26 @@
         <Parameter Name="sku" Type="Azure.ResourceManager.HybridNetwork.Models.HybridNetworkSku" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> Site network service properties. </param>
         <param name="identity"> The managed identity of the Site network service, if configured. </param>
         <param name="sku"> Sku of the site network service. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceData" />. </summary>
+        <summary> Site network service resource. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SiteNetworkServicePropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat SiteNetworkServicePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration managedResourceGroupConfiguration = default, Azure.Core.ResourceIdentifier siteReferenceId = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkServiceDesignGroupName = default, string networkServiceDesignVersionName = default, string networkServiceDesignVersionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkServiceDesignVersionResourceReference = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.Resources.Models.WritableSubResource&gt; desiredStateConfigurationGroupValueReferences = default, string lastStateNetworkServiceDesignVersionName = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,Azure.ResourceManager.Resources.Models.WritableSubResource&gt; lastStateConfigurationGroupValueReferences = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat SiteNetworkServicePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, class Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration managedResourceGroupConfiguration, class Azure.Core.ResourceIdentifier siteReferenceId, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkServiceDesignGroupName, string networkServiceDesignVersionName, string networkServiceDesignVersionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkServiceDesignVersionResourceReference, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; desiredStateConfigurationGroupValueReferences, string lastStateNetworkServiceDesignVersionName, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; lastStateConfigurationGroupValueReferences) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SiteNetworkServicePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration,Azure.Core.ResourceIdentifier,System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.String,Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.Resources.Models.WritableSubResource},System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,Azure.ResourceManager.Resources.Models.WritableSubResource})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SiteNetworkServicePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional managedResourceGroupConfiguration As ManagedResourceGroupConfiguration = Nothing, Optional siteReferenceId As ResourceIdentifier = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkServiceDesignGroupName As String = Nothing, Optional networkServiceDesignVersionName As String = Nothing, Optional networkServiceDesignVersionOfferingLocation As String = Nothing, Optional networkServiceDesignVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional desiredStateConfigurationGroupValueReferences As IDictionary(Of String, WritableSubResource) = Nothing, Optional lastStateNetworkServiceDesignVersionName As String = Nothing, Optional lastStateConfigurationGroupValueReferences As IReadOnlyDictionary(Of String, WritableSubResource) = Nothing) As SiteNetworkServicePropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member SiteNetworkServicePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration * Azure.Core.ResourceIdentifier * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * string * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.Resources.Models.WritableSubResource&gt; * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, Azure.ResourceManager.Resources.Models.WritableSubResource&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SiteNetworkServicePropertiesFormat (provisioningState, managedResourceGroupConfiguration, siteReferenceId, publisherName, publisherScope, networkServiceDesignGroupName, networkServiceDesignVersionName, networkServiceDesignVersionOfferingLocation, networkServiceDesignVersionResourceReference, desiredStateConfigurationGroupValueReferences, lastStateNetworkServiceDesignVersionName, lastStateConfigurationGroupValueReferences)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat SiteNetworkServicePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration managedResourceGroupConfiguration = default, Azure.Core.ResourceIdentifier siteReferenceId = default, string publisherName = default, Azure.ResourceManager.HybridNetwork.Models.PublisherScope? publisherScope = default, string networkServiceDesignGroupName = default, string networkServiceDesignVersionName = default, Azure.Core.AzureLocation? networkServiceDesignVersionOfferingLocation = default, Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkServiceDesignVersionResourceReference = default, System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; desiredStateConfigurationGroupValueReferencedResources = default, string lastStateNetworkServiceDesignVersionName = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; lastStateConfigurationGroupValueReferencedResources = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat SiteNetworkServicePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, class Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration managedResourceGroupConfiguration, class Azure.Core.ResourceIdentifier siteReferenceId, string publisherName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; publisherScope, string networkServiceDesignGroupName, string networkServiceDesignVersionName, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; networkServiceDesignVersionOfferingLocation, class Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference networkServiceDesignVersionResourceReference, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; desiredStateConfigurationGroupValueReferencedResources, string lastStateNetworkServiceDesignVersionName, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; lastStateConfigurationGroupValueReferencedResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SiteNetworkServicePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration,Azure.Core.ResourceIdentifier,System.String,System.Nullable{Azure.ResourceManager.HybridNetwork.Models.PublisherScope},System.String,System.String,System.Nullable{Azure.Core.AzureLocation},Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference,System.Collections.Generic.IDictionary{System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById},System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SiteNetworkServicePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional managedResourceGroupConfiguration As ManagedResourceGroupConfiguration = Nothing, Optional siteReferenceId As ResourceIdentifier = Nothing, Optional publisherName As String = Nothing, Optional publisherScope As Nullable(Of PublisherScope) = Nothing, Optional networkServiceDesignGroupName As String = Nothing, Optional networkServiceDesignVersionName As String = Nothing, Optional networkServiceDesignVersionOfferingLocation As Nullable(Of AzureLocation) = Nothing, Optional networkServiceDesignVersionResourceReference As DeploymentResourceIdReference = Nothing, Optional desiredStateConfigurationGroupValueReferencedResources As IDictionary(Of String, ReferencedResourceById) = Nothing, Optional lastStateNetworkServiceDesignVersionName As String = Nothing, Optional lastStateConfigurationGroupValueReferencedResources As IReadOnlyDictionary(Of String, ReferencedResourceById) = Nothing) As SiteNetworkServicePropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member SiteNetworkServicePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * Azure.ResourceManager.HybridNetwork.Models.ManagedResourceGroupConfiguration * Azure.Core.ResourceIdentifier * string * Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt; * string * string * Nullable&lt;Azure.Core.AzureLocation&gt; * Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference * System.Collections.Generic.IDictionary&lt;string, Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SiteNetworkServicePropertiesFormat (provisioningState, managedResourceGroupConfiguration, siteReferenceId, publisherName, publisherScope, networkServiceDesignGroupName, networkServiceDesignVersionName, networkServiceDesignVersionOfferingLocation, networkServiceDesignVersionResourceReference, desiredStateConfigurationGroupValueReferencedResources, lastStateNetworkServiceDesignVersionName, lastStateConfigurationGroupValueReferencedResources)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1595,40 +1792,36 @@
         <Parameter Name="publisherScope" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.PublisherScope&gt;" />
         <Parameter Name="networkServiceDesignGroupName" Type="System.String" />
         <Parameter Name="networkServiceDesignVersionName" Type="System.String" />
-        <Parameter Name="networkServiceDesignVersionOfferingLocation" Type="System.String" />
+        <Parameter Name="networkServiceDesignVersionOfferingLocation" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" />
         <Parameter Name="networkServiceDesignVersionResourceReference" Type="Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" />
-        <Parameter Name="desiredStateConfigurationGroupValueReferences" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" />
+        <Parameter Name="desiredStateConfigurationGroupValueReferencedResources" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
         <Parameter Name="lastStateNetworkServiceDesignVersionName" Type="System.String" />
-        <Parameter Name="lastStateConfigurationGroupValueReferences" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" />
+        <Parameter Name="lastStateConfigurationGroupValueReferencedResources" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
       </Parameters>
       <Docs>
         <param name="provisioningState"> The provisioning state of the site network service resource. </param>
         <param name="managedResourceGroupConfiguration"> Managed resource group configuration. </param>
-        <param name="siteReferenceId"> The site details. </param>
+        <param name="siteReferenceId"> Resource ID. </param>
         <param name="publisherName"> The publisher name for the site network service. </param>
         <param name="publisherScope"> The scope of the publisher. </param>
         <param name="networkServiceDesignGroupName"> The network service design group name for the site network service. </param>
         <param name="networkServiceDesignVersionName"> The network service design version for the site network service. </param>
         <param name="networkServiceDesignVersionOfferingLocation"> The location of the network service design offering. </param>
-        <param name="networkServiceDesignVersionResourceReference">
-            The network service design version resource reference.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.DeploymentResourceIdReference" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.OpenDeploymentResourceReference" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SecretDeploymentResourceReference" />.
-            </param>
-        <param name="desiredStateConfigurationGroupValueReferences"> The goal state of the site network service resource. This has references to the configuration group value objects that describe the desired state of the site network service. </param>
+        <param name="networkServiceDesignVersionResourceReference"> The network service design version resource reference. </param>
+        <param name="desiredStateConfigurationGroupValueReferencedResources"> The goal state of the site network service resource. This has references to the configuration group value objects that describe the desired state of the site network service. </param>
         <param name="lastStateNetworkServiceDesignVersionName"> The network service design version for the site network service. </param>
-        <param name="lastStateConfigurationGroupValueReferences"> The last state of the site network service resource. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat" />. </summary>
+        <param name="lastStateConfigurationGroupValueReferencedResources"> The last state of the site network service resource. </param>
+        <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SiteNetworkServicePropertiesFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SitePropertiesFormat">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat SitePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.NFVIs&gt; nfvis = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; siteNetworkServiceReferences = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat SitePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.NFVIs&gt; nfvis, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Resources.Models.WritableSubResource&gt; siteNetworkServiceReferences) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SitePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.NFVIs},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Resources.Models.WritableSubResource})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SitePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional nfvis As IEnumerable(Of NFVIs) = Nothing, Optional siteNetworkServiceReferences As IEnumerable(Of WritableSubResource) = Nothing) As SitePropertiesFormat" />
-      <MemberSignature Language="F#" Value="static member SitePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * seq&lt;Azure.ResourceManager.HybridNetwork.Models.NFVIs&gt; * seq&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SitePropertiesFormat (provisioningState, nfvis, siteNetworkServiceReferences)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat SitePropertiesFormat (Azure.ResourceManager.HybridNetwork.Models.ProvisioningState? provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; nfvis = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; referencedSiteNetworkServices = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat SitePropertiesFormat(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; nfvis, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; referencedSiteNetworkServices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SitePropertiesFormat(System.Nullable{Azure.ResourceManager.HybridNetwork.Models.ProvisioningState},System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.NfviDetails},System.Collections.Generic.IEnumerable{Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SitePropertiesFormat (Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional nfvis As IEnumerable(Of NfviDetails) = Nothing, Optional referencedSiteNetworkServices As IEnumerable(Of ReferencedResourceById) = Nothing) As SitePropertiesFormat" />
+      <MemberSignature Language="F#" Value="static member SitePropertiesFormat : Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt; * seq&lt;Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt; * seq&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.SitePropertiesFormat (provisioningState, nfvis, referencedSiteNetworkServices)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
@@ -1639,19 +1832,39 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.HybridNetwork.Models.ProvisioningState&gt;" />
-        <Parameter Name="nfvis" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.NFVIs&gt;" />
-        <Parameter Name="siteNetworkServiceReferences" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Resources.Models.WritableSubResource&gt;" />
+        <Parameter Name="nfvis" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.NfviDetails&gt;" />
+        <Parameter Name="referencedSiteNetworkServices" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.HybridNetwork.Models.ReferencedResourceById&gt;" />
       </Parameters>
       <Docs>
-        <param name="provisioningState"> The provisioning state of the site resource. **TODO**: Confirm if this is needed. </param>
-        <param name="nfvis">
-            List of NFVIs
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.NFVIs" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureArcK8SClusterNfviDetails" />, <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureCoreNfviDetails" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusClusterNfviDetails" />.
-            </param>
-        <param name="siteNetworkServiceReferences"> The list of site network services on the site. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat" />. </summary>
+        <param name="provisioningState"> The provisioning state of the site resource. <b>TODO</b>: Confirm if this is needed. </param>
+        <param name="nfvis"> List of NFVIs. </param>
+        <param name="referencedSiteNetworkServices"> The list of site network services on the site. </param>
+        <summary> Site properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.SitePropertiesFormat" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagsObject">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.HybridNetwork.Models.TagsObject TagsObject (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.HybridNetwork.Models.TagsObject TagsObject(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.TagsObject(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TagsObject (Optional tags As IDictionary(Of String, String) = Nothing) As TagsObject" />
+      <MemberSignature Language="F#" Value="static member TagsObject : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.HybridNetwork.Models.TagsObject" Usage="Azure.ResourceManager.HybridNetwork.Models.ArmHybridNetworkModelFactory.TagsObject tags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.HybridNetwork.Models.TagsObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Resource tags. </param>
+        <summary> Tags object for patch operations. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.TagsObject" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1681,12 +1894,8 @@
         <param name="versionState"> The network function definition version state. </param>
         <param name="description"> The network function definition version description. </param>
         <param name="deployParameters"> The deployment parameters of the network function definition version. </param>
-        <param name="networkFunctionTemplate">
-            Virtual network function template.
-            Please note <see cref="T:Azure.ResourceManager.HybridNetwork.Models.VirtualNetworkFunctionTemplate" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureCoreNetworkFunctionTemplate" /> and <see cref="T:Azure.ResourceManager.HybridNetwork.Models.AzureOperatorNexusNetworkFunctionTemplate" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.HybridNetwork.Models.VirtualNetworkFunctionDefinitionVersion" />. </summary>
+        <param name="networkFunctionTemplate"> Virtual network function template. </param>
+        <summary> Virtual network function network function definition version properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.HybridNetwork.Models.VirtualNetworkFunctionDefinitionVersion" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>

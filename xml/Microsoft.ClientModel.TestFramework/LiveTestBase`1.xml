@@ -1,0 +1,118 @@
+<Type Name="LiveTestBase&lt;TEnvironment&gt;" FullName="Microsoft.ClientModel.TestFramework.LiveTestBase&lt;TEnvironment&gt;">
+  <TypeSignature Language="C#" Value="public class LiveTestBase&lt;TEnvironment&gt; where TEnvironment : TestEnvironment, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiveTestBase`1&lt;.ctor (class Microsoft.ClientModel.TestFramework.TestEnvironment) TEnvironment&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.LiveTestBase`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class LiveTestBase(Of TEnvironment)" />
+  <TypeSignature Language="F#" Value="type LiveTestBase&lt;'Environment (requires 'Environment :&gt; TestEnvironment and 'Environment : (new : unit -&gt; 'Environment))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEnvironment">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.ClientModel.TestFramework.TestEnvironment</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[Microsoft.ClientModel.TestFramework.LiveOnly(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;Microsoft.ClientModel.TestFramework.LiveOnly(false)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TEnvironment">The <see cref="P:Microsoft.ClientModel.TestFramework.LiveTestBase`1.TestEnvironment" /> implementation to use.</typeparam>
+    <summary>
+            Base class for tests that need to run live but are not recorded and don't need sync/async testing support of <see cref="T:Microsoft.ClientModel.TestFramework.ClientTestBase" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LiveTestBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.LiveTestBase`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.LiveTestBase`1" /> class.
+            Creates a new test environment instance and sets it to Live mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestEnvironment">
+      <MemberSignature Language="C#" Value="protected TEnvironment TestEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TEnvironment TestEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.LiveTestBase`1.TestEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property TestEnvironment As TEnvironment" />
+      <MemberSignature Language="F#" Value="member this.TestEnvironment : 'Environment" Usage="Microsoft.ClientModel.TestFramework.LiveTestBase&lt;'Environment (requires 'Environment :&gt; Microsoft.ClientModel.TestFramework.TestEnvironment and 'Environment : (new : unit -&gt; 'Environment))&gt;.TestEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the test environment instance configured for live testing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEnvironment">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask WaitForEnvironment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask WaitForEnvironment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.LiveTestBase`1.WaitForEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForEnvironment () As ValueTask" />
+      <MemberSignature Language="F#" Value="member this.WaitForEnvironment : unit -&gt; System.Threading.Tasks.ValueTask" Usage="liveTestBase.WaitForEnvironment " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[NUnit.Framework.OneTimeSetUp]</AttributeName>
+          <AttributeName Language="F#">[&lt;NUnit.Framework.OneTimeSetUp&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Waits for the test environment to be ready for testing.
+            This method is called once before any tests in the class are executed.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask" /> representing the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

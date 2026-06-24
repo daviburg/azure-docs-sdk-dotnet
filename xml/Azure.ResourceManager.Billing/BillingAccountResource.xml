@@ -9,6 +9,7 @@
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
@@ -26,10 +27,9 @@
   </Interfaces>
   <Docs>
     <summary>
-            A Class representing a BillingAccount along with the instance operations that can be performed on it.
-            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />
-            from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetBillingAccountResource method.
-            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Resources.TenantResource" /> using the GetBillingAccount method.
+            A class representing a BillingAccount along with the instance operations that can be performed on it.
+            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /> from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetResource method.
+            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Resources.TenantResource" /> using the GetBillingAccounts method.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -43,10 +43,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of BillingAccountResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -60,6 +61,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -76,7 +78,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Adds payment terms to all the billing profiles under the billing account. Currently, payment terms can be added only on billing accounts that have Agreement Type as 'Microsoft Customer Agreement' and AccountType as 'Enterprise'. This action needs pre-authorization and only Field Sellers are authorized to add the payment terms and is not a self-serve action.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/addPaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_AddPaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/addPaymentTerms. </description></item><item><term> Operation Id. </term><description> BillingAccounts_AddPaymentTerms. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -93,6 +95,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -109,7 +112,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Adds payment terms to all the billing profiles under the billing account. Currently, payment terms can be added only on billing accounts that have Agreement Type as 'Microsoft Customer Agreement' and AccountType as 'Enterprise'. This action needs pre-authorization and only Field Sellers are authorized to add the payment terms and is not a self-serve action.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/addPaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_AddPaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/addPaymentTerms. </description></item><item><term> Operation Id. </term><description> BillingAccounts_AddPaymentTerms. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -126,6 +129,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -139,9 +143,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -158,6 +160,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -171,9 +174,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -181,63 +182,73 @@
       </Docs>
     </Member>
     <Member MemberName="CancelPaymentTerms">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms (Azure.WaitUntil waitUntil, DateTimeOffset dateTime, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset dateTime, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms (Azure.WaitUntil waitUntil, DateTimeOffset dateTime, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset dateTime, valuetype System.Threading.CancellationToken cancellationToken) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.CancelPaymentTerms(Azure.WaitUntil,System.DateTimeOffset,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTerms (waitUntil As WaitUntil, dateTime As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of BillingAccountResource)" />
-      <MemberSignature Language="F#" Value="abstract member CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&#xA;override this.CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;" Usage="billingAccountResource.CancelPaymentTerms (waitUntil, dateTime, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTerms (waitUntil As WaitUntil, dateTime As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of BillingAccountResource)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="abstract member CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&#xA;override this.CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;" Usage="billingAccountResource.CancelPaymentTerms (waitUntil, dateTime, cancellationToken)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms (Azure.WaitUntil waitUntil, DateTimeOffset parameters, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt; CancelPaymentTerms(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTerms (waitUntil As WaitUntil, parameters As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of BillingAccountResource)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&#xA;override this.CancelPaymentTerms : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;" Usage="billingAccountResource.CancelPaymentTerms (waitUntil, parameters, cancellationToken)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
-        <Parameter Name="dateTime" Type="System.DateTimeOffset" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" />
+        <Parameter Name="dateTime" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="parameters" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="dateTime"> Date after which any payment terms that needs to be cancelled. </param>
+        <param name="parameters">To be added.</param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Cancels all the payment terms on billing account that falls after the cancellation date in the request. Currently, cancel payment terms is only served by admin actions and is not a self-serve action.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/cancelPaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_CancelPaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Cancels payment terms on a billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CancelPaymentTermsAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync (Azure.WaitUntil waitUntil, DateTimeOffset dateTime, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset dateTime, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync (Azure.WaitUntil waitUntil, DateTimeOffset dateTime, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset dateTime, valuetype System.Threading.CancellationToken cancellationToken) cil managed" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.CancelPaymentTermsAsync(Azure.WaitUntil,System.DateTimeOffset,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTermsAsync (waitUntil As WaitUntil, dateTime As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of BillingAccountResource))" />
-      <MemberSignature Language="F#" Value="abstract member CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;&#xA;override this.CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;" Usage="billingAccountResource.CancelPaymentTermsAsync (waitUntil, dateTime, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTermsAsync (waitUntil As WaitUntil, dateTime As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of BillingAccountResource))" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="abstract member CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;&#xA;override this.CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;" Usage="billingAccountResource.CancelPaymentTermsAsync (waitUntil, dateTime, cancellationToken)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync (Azure.WaitUntil waitUntil, DateTimeOffset parameters, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt; CancelPaymentTermsAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.DateTimeOffset parameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelPaymentTermsAsync (waitUntil As WaitUntil, parameters As DateTimeOffset, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of BillingAccountResource))" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="abstract member CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;&#xA;override this.CancelPaymentTermsAsync : Azure.WaitUntil * DateTimeOffset * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;" Usage="billingAccountResource.CancelPaymentTermsAsync (waitUntil, parameters, cancellationToken)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
-        <Parameter Name="dateTime" Type="System.DateTimeOffset" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" />
+        <Parameter Name="dateTime" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="parameters" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="dateTime"> Date after which any payment terms that needs to be cancelled. </param>
+        <param name="parameters">To be added.</param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Cancels all the payment terms on billing account that falls after the cancellation date in the request. Currently, cancel payment terms is only served by admin actions and is not a self-serve action.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/cancelPaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_CancelPaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Cancels payment terms on a billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -252,6 +263,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.Models.BillingCheckAccessResult&gt;</ReturnType>
@@ -265,7 +277,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Provides a list of check access response objects for a billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/checkAccess</description></item><item><term>Operation Id</term><description>BillingPermissions_CheckAccessByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/checkAccess. </description></item><item><term> Operation Id. </term><description> BillingAccounts_CheckAccessByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingCheckAccessResult" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -282,6 +294,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.Models.BillingCheckAccessResult&gt;</ReturnType>
@@ -295,8 +308,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Provides a list of check access response objects for a billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/checkAccess</description></item><item><term>Operation Id</term><description>BillingPermissions_CheckAccessByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingCheckAccessResult" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/checkAccess. </description></item><item><term> Operation Id. </term><description> BillingAccounts_CheckAccessByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingCheckAccessResult" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="content" /> is null. </exception>
@@ -312,6 +325,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.Models.BillingTransitionDetails&gt;</ReturnType>
@@ -323,7 +337,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets the transition details for a billing account that has transitioned from agreement type Microsoft Online Services Program to agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/confirmTransition</description></item><item><term>Operation Id</term><description>BillingAccounts_ConfirmTransition</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/confirmTransition. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ConfirmTransition. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -338,6 +352,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.Models.BillingTransitionDetails&gt;&gt;</ReturnType>
@@ -349,7 +364,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets the transition details for a billing account that has transitioned from agreement type Microsoft Online Services Program to agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/confirmTransition</description></item><item><term>Operation Id</term><description>BillingAccounts_ConfirmTransition</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/confirmTransition. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ConfirmTransition. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -364,6 +379,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingRoleAssignmentData&gt;</ReturnType>
@@ -380,7 +396,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Adds a role assignment on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement or Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/createBillingRoleAssignment</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_CreateByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/createBillingRoleAssignment. </description></item><item><term> Operation Id. </term><description> BillingAccounts_CreateByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -397,6 +413,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingRoleAssignmentData&gt;&gt;</ReturnType>
@@ -413,7 +430,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Adds a role assignment on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement or Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/createBillingRoleAssignment</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_CreateByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/createBillingRoleAssignment. </description></item><item><term> Operation Id. </term><description> BillingAccounts_CreateByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -430,6 +447,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceIdentifier</ReturnType>
@@ -439,7 +457,7 @@
       </Parameters>
       <Docs>
         <param name="billingAccountName"> The billingAccountName. </param>
-        <summary> Generate the resource identifier of a <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /> instance. </summary>
+        <summary> Generate the resource identifier for this resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -454,6 +472,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAccountData</ReturnType>
@@ -475,6 +494,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.Models.BillingDocumentDownloadResult&gt;</ReturnType>
@@ -491,7 +511,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a URL to download multiple invoice documents (invoice pdf, tax receipts, credit notes) as a zip file. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement or Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/downloadDocuments</description></item><item><term>Operation Id</term><description>Invoices_DownloadDocumentsByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/downloadDocuments. </description></item><item><term> Operation Id. </term><description> BillingAccounts_DownloadDocumentsByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -508,6 +528,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.Models.BillingDocumentDownloadResult&gt;&gt;</ReturnType>
@@ -524,7 +545,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a URL to download multiple invoice documents (invoice pdf, tax receipts, credit notes) as a zip file. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement or Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/downloadDocuments</description></item><item><term>Operation Id</term><description>Invoices_DownloadDocumentsByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/downloadDocuments. </description></item><item><term> Operation Id. </term><description> BillingAccounts_DownloadDocumentsByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -541,6 +562,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -552,7 +574,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a billing account by its ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}. </description></item><item><term> Operation Id. </term><description> BillingAccounts_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -567,6 +589,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -578,7 +601,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a billing account by its ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}. </description></item><item><term> Operation Id. </term><description> BillingAccounts_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -593,6 +616,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.Models.BillingAvailableBalanceData&gt;</ReturnType>
@@ -604,7 +628,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The Available Credit or Payment on Account Balance for a billing account. The credit balance can be used to settle due or past due invoices and is supported for billing accounts with agreement type Microsoft Customer Agreement. The payment on account balance is supported for billing accounts with agreement type Microsoft Customer Agreement or Microsoft Online Services Program.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/availableBalance/default</description></item><item><term>Operation Id</term><description>AvailableBalances_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/availableBalance/default. </description></item><item><term> Operation Id. </term><description> AvailableBalances_GetByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -619,6 +643,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.Models.BillingAvailableBalanceData&gt;&gt;</ReturnType>
@@ -630,7 +655,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The Available Credit or Payment on Account Balance for a billing account. The credit balance can be used to settle due or past due invoices and is supported for billing accounts with agreement type Microsoft Customer Agreement. The payment on account balance is supported for billing accounts with agreement type Microsoft Customer Agreement or Microsoft Online Services Program.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/availableBalance/default</description></item><item><term>Operation Id</term><description>AvailableBalances_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/availableBalance/default. </description></item><item><term> Operation Id. </term><description> AvailableBalances_GetByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -645,6 +670,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountPaymentMethodResource&gt;</ReturnType>
@@ -656,9 +682,7 @@
       <Docs>
         <param name="paymentMethodName"> The ID that uniquely identifies a payment method. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a payment method available for a billing account. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/paymentMethods/{paymentMethodName}</description></item><item><term>Operation Id</term><description>PaymentMethods_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountPaymentMethodResource" /></description></item></list></summary>
+        <summary> Gets a payment method available for a billing account. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -677,6 +701,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountPaymentMethodResource&gt;&gt;</ReturnType>
@@ -688,9 +713,7 @@
       <Docs>
         <param name="paymentMethodName"> The ID that uniquely identifies a payment method. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a payment method available for a billing account. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/paymentMethods/{paymentMethodName}</description></item><item><term>Operation Id</term><description>PaymentMethods_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountPaymentMethodResource" /></description></item></list></summary>
+        <summary> Gets a payment method available for a billing account. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -709,14 +732,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAccountPaymentMethodCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingAccountPaymentMethodResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingAccountPaymentMethodResources and their operations over a BillingAccountPaymentMethodResource. </returns>
+        <summary> Gets a collection of BillingAccountPaymentMethods in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingAccountPaymentMethods and their operations over a BillingAccountPaymentMethodResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -730,13 +754,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAccountPolicyResource</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets an object representing a BillingAccountPolicyResource along with the instance operations that can be performed on it in the BillingAccount. </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Billing.BillingAccountPolicyResource" /> along with the instance operations that can be performed on it in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Billing.BillingAccountPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -751,6 +776,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAgreementResource&gt;</ReturnType>
@@ -762,9 +788,7 @@
       <Docs>
         <param name="agreementName"> The ID that uniquely identifies an agreement. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an agreement by ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/agreements/{agreementName}</description></item><item><term>Operation Id</term><description>Agreements_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAgreementResource" /></description></item></list></summary>
+        <summary> Gets an agreement by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -783,6 +807,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAgreementResource&gt;&gt;</ReturnType>
@@ -794,9 +819,7 @@
       <Docs>
         <param name="agreementName"> The ID that uniquely identifies an agreement. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an agreement by ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/agreements/{agreementName}</description></item><item><term>Operation Id</term><description>Agreements_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAgreementResource" /></description></item></list></summary>
+        <summary> Gets an agreement by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -815,14 +838,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAgreementCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingAgreementResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingAgreementResources and their operations over a BillingAgreementResource. </returns>
+        <summary> Gets a collection of BillingAgreements in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingAgreements and their operations over a BillingAgreementResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -836,6 +860,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAssociatedTenantResource&gt;</ReturnType>
@@ -847,9 +872,7 @@
       <Docs>
         <param name="associatedTenantName"> The ID that uniquely identifies a tenant. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an associated tenant by ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants/{associatedTenantName}</description></item><item><term>Operation Id</term><description>AssociatedTenants_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAssociatedTenantResource" /></description></item></list></summary>
+        <summary> Gets an associated tenant by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -868,6 +891,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAssociatedTenantResource&gt;&gt;</ReturnType>
@@ -879,9 +903,7 @@
       <Docs>
         <param name="associatedTenantName"> The ID that uniquely identifies a tenant. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an associated tenant by ID.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants/{associatedTenantName}</description></item><item><term>Operation Id</term><description>AssociatedTenants_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAssociatedTenantResource" /></description></item></list></summary>
+        <summary> Gets an associated tenant by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -900,14 +922,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAssociatedTenantCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingAssociatedTenantResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingAssociatedTenantResources and their operations over a BillingAssociatedTenantResource. </returns>
+        <summary> Gets a collection of BillingAssociatedTenants in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingAssociatedTenants and their operations over a BillingAssociatedTenantResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -921,6 +944,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingCustomerResource&gt;</ReturnType>
@@ -932,9 +956,7 @@
       <Docs>
         <param name="customerName"> The ID that uniquely identifies a customer. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a customer by its ID at billing account level. The operation is supported only for billing accounts with agreement type Microsoft Partner Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/customers/{customerName}</description></item><item><term>Operation Id</term><description>Customers_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingCustomerResource" /></description></item></list></summary>
+        <summary> Gets a customer by its ID at billing account level. The operation is supported only for billing accounts with agreement type Microsoft Partner Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -953,6 +975,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingCustomerResource&gt;&gt;</ReturnType>
@@ -964,9 +987,7 @@
       <Docs>
         <param name="customerName"> The ID that uniquely identifies a customer. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a customer by its ID at billing account level. The operation is supported only for billing accounts with agreement type Microsoft Partner Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/customers/{customerName}</description></item><item><term>Operation Id</term><description>Customers_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingCustomerResource" /></description></item></list></summary>
+        <summary> Gets a customer by its ID at billing account level. The operation is supported only for billing accounts with agreement type Microsoft Partner Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -985,14 +1006,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingCustomerCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingCustomerResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingCustomerResources and their operations over a BillingCustomerResource. </returns>
+        <summary> Gets a collection of BillingCustomers in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingCustomers and their operations over a BillingCustomerResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1006,6 +1028,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingDepartmentResource&gt;</ReturnType>
@@ -1017,9 +1040,7 @@
       <Docs>
         <param name="departmentName"> The name of the department. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a department by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}</description></item><item><term>Operation Id</term><description>Departments_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingDepartmentResource" /></description></item></list></summary>
+        <summary> Gets a department by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1038,6 +1059,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingDepartmentResource&gt;&gt;</ReturnType>
@@ -1049,9 +1071,7 @@
       <Docs>
         <param name="departmentName"> The name of the department. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a department by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}</description></item><item><term>Operation Id</term><description>Departments_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingDepartmentResource" /></description></item></list></summary>
+        <summary> Gets a department by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1070,14 +1090,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingDepartmentCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingDepartmentResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingDepartmentResources and their operations over a BillingDepartmentResource. </returns>
+        <summary> Gets a collection of BillingDepartments in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingDepartments and their operations over a BillingDepartmentResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1091,6 +1112,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingEnrollmentAccountResource&gt;</ReturnType>
@@ -1102,9 +1124,7 @@
       <Docs>
         <param name="enrollmentAccountName"> The name of the enrollment account. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an enrollment account by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}</description></item><item><term>Operation Id</term><description>EnrollmentAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingEnrollmentAccountResource" /></description></item></list></summary>
+        <summary> Gets an enrollment account by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1123,6 +1143,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingEnrollmentAccountResource&gt;&gt;</ReturnType>
@@ -1134,9 +1155,7 @@
       <Docs>
         <param name="enrollmentAccountName"> The name of the enrollment account. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an enrollment account by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}</description></item><item><term>Operation Id</term><description>EnrollmentAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingEnrollmentAccountResource" /></description></item></list></summary>
+        <summary> Gets an enrollment account by ID. The operation is supported only for billing accounts with agreement type Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1155,14 +1174,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingEnrollmentAccountCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingEnrollmentAccountResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingEnrollmentAccountResources and their operations over a BillingEnrollmentAccountResource. </returns>
+        <summary> Gets a collection of BillingEnrollmentAccounts in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingEnrollmentAccounts and their operations over a BillingEnrollmentAccountResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1176,6 +1196,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingInvoiceResource&gt;</ReturnType>
@@ -1187,9 +1208,7 @@
       <Docs>
         <param name="invoiceName"> The ID that uniquely identifies an invoice. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an invoice by billing account name and ID. The operation is supported for all billing account types.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/invoices/{invoiceName}</description></item><item><term>Operation Id</term><description>Invoices_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingInvoiceResource" /></description></item></list></summary>
+        <summary> Gets an invoice by billing account name and ID. The operation is supported for all billing account types. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1208,6 +1227,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingInvoiceResource&gt;&gt;</ReturnType>
@@ -1219,9 +1239,7 @@
       <Docs>
         <param name="invoiceName"> The ID that uniquely identifies an invoice. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets an invoice by billing account name and ID. The operation is supported for all billing account types.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/invoices/{invoiceName}</description></item><item><term>Operation Id</term><description>Invoices_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingInvoiceResource" /></description></item></list></summary>
+        <summary> Gets an invoice by billing account name and ID. The operation is supported for all billing account types. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1240,14 +1258,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingInvoiceCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingInvoiceResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingInvoiceResources and their operations over a BillingInvoiceResource. </returns>
+        <summary> Gets a collection of BillingInvoices in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingInvoices and their operations over a BillingInvoiceResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1261,6 +1280,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.Models.BillingPermission&gt;</ReturnType>
@@ -1272,7 +1292,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the billing permissions the caller has on a billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingPermissions</description></item><item><term>Operation Id</term><description>BillingPermissions_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingPermissions. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingPermission" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1287,6 +1307,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.Models.BillingPermission&gt;</ReturnType>
@@ -1298,8 +1319,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the billing permissions the caller has on a billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingPermissions</description></item><item><term>Operation Id</term><description>BillingPermissions_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingPermission" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingPermissions. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.BillingPermission" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1313,6 +1334,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingProductResource&gt;</ReturnType>
@@ -1324,9 +1346,7 @@
       <Docs>
         <param name="productName"> The ID that uniquely identifies a product. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a product by ID. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/products/{productName}</description></item><item><term>Operation Id</term><description>Products_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingProductResource" /></description></item></list></summary>
+        <summary> Gets a product by ID. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1345,6 +1365,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingProductResource&gt;&gt;</ReturnType>
@@ -1356,9 +1377,7 @@
       <Docs>
         <param name="productName"> The ID that uniquely identifies a product. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a product by ID. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/products/{productName}</description></item><item><term>Operation Id</term><description>Products_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingProductResource" /></description></item></list></summary>
+        <summary> Gets a product by ID. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1377,14 +1396,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingProductCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingProductResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingProductResources and their operations over a BillingProductResource. </returns>
+        <summary> Gets a collection of BillingProducts in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingProducts and their operations over a BillingProductResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1398,6 +1418,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingProfileResource&gt;</ReturnType>
@@ -1409,9 +1430,7 @@
       <Docs>
         <param name="billingProfileName"> The ID that uniquely identifies a billing profile. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a billing profile by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement and Microsoft Partner Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}</description></item><item><term>Operation Id</term><description>BillingProfiles_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingProfileResource" /></description></item></list></summary>
+        <summary> Gets a billing profile by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement and Microsoft Partner Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1430,6 +1449,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingProfileResource&gt;&gt;</ReturnType>
@@ -1441,9 +1461,7 @@
       <Docs>
         <param name="billingProfileName"> The ID that uniquely identifies a billing profile. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a billing profile by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement and Microsoft Partner Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}</description></item><item><term>Operation Id</term><description>BillingProfiles_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingProfileResource" /></description></item></list></summary>
+        <summary> Gets a billing profile by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement and Microsoft Partner Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1462,14 +1480,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingProfileCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingProfileResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingProfileResources and their operations over a BillingProfileResource. </returns>
+        <summary> Gets a collection of BillingProfiles in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingProfiles and their operations over a BillingProfileResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1483,7 +1502,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;</ReturnType>
       </ReturnValue>
@@ -1494,9 +1520,7 @@
       <Docs>
         <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The list of billing requests submitted for the billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRequests</description></item><item><term>Operation Id</term><description>BillingRequests_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /></description></item></list></summary>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1511,7 +1535,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;</ReturnType>
       </ReturnValue>
@@ -1522,9 +1553,7 @@
       <Docs>
         <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The list of billing requests submitted for the billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRequests</description></item><item><term>Operation Id</term><description>BillingRequests_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /></description></item></list></summary>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1539,6 +1568,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingReservationOrderResource&gt;</ReturnType>
@@ -1552,9 +1582,7 @@
         <param name="reservationOrderId"> Order Id of the reservation. </param>
         <param name="expand"> May be used to expand the detail information of some properties. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get the details of the ReservationOrder in the billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservationOrders/{reservationOrderId}</description></item><item><term>Operation Id</term><description>ReservationOrders_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingReservationOrderResource" /></description></item></list></summary>
+        <summary> Get the details of the ReservationOrder in the billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1573,6 +1601,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingReservationOrderResource&gt;&gt;</ReturnType>
@@ -1586,9 +1615,7 @@
         <param name="reservationOrderId"> Order Id of the reservation. </param>
         <param name="expand"> May be used to expand the detail information of some properties. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get the details of the ReservationOrder in the billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservationOrders/{reservationOrderId}</description></item><item><term>Operation Id</term><description>ReservationOrders_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingReservationOrderResource" /></description></item></list></summary>
+        <summary> Get the details of the ReservationOrder in the billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1607,14 +1634,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingReservationOrderCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingReservationOrderResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingReservationOrderResources and their operations over a BillingReservationOrderResource. </returns>
+        <summary> Gets a collection of BillingReservationOrders in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingReservationOrders and their operations over a BillingReservationOrderResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1628,6 +1656,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingRoleAssignmentResource&gt;</ReturnType>
@@ -1639,9 +1668,7 @@
       <Docs>
         <param name="billingRoleAssignmentName"> The ID that uniquely identifies a role assignment. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a role assignment for the caller on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments/{billingRoleAssignmentName}</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRoleAssignmentResource" /></description></item></list></summary>
+        <summary> Gets a role assignment for the caller on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1660,6 +1687,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingRoleAssignmentResource&gt;&gt;</ReturnType>
@@ -1671,9 +1699,7 @@
       <Docs>
         <param name="billingRoleAssignmentName"> The ID that uniquely identifies a role assignment. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a role assignment for the caller on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments/{billingRoleAssignmentName}</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRoleAssignmentResource" /></description></item></list></summary>
+        <summary> Gets a role assignment for the caller on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1692,14 +1718,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingRoleAssignmentCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingRoleAssignmentResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingRoleAssignmentResources and their operations over a BillingRoleAssignmentResource. </returns>
+        <summary> Gets a collection of BillingRoleAssignments in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingRoleAssignments and their operations over a BillingRoleAssignmentResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1713,6 +1740,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingRoleDefinitionResource&gt;</ReturnType>
@@ -1724,9 +1752,7 @@
       <Docs>
         <param name="roleDefinitionName"> The ID that uniquely identifies a role definition. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets the definition for a role on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleDefinitions/{roleDefinitionName}</description></item><item><term>Operation Id</term><description>BillingRoleDefinition_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRoleDefinitionResource" /></description></item></list></summary>
+        <summary> Gets the definition for a role on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1745,6 +1771,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingRoleDefinitionResource&gt;&gt;</ReturnType>
@@ -1756,9 +1783,7 @@
       <Docs>
         <param name="roleDefinitionName"> The ID that uniquely identifies a role definition. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets the definition for a role on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleDefinitions/{roleDefinitionName}</description></item><item><term>Operation Id</term><description>BillingRoleDefinition_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingRoleDefinitionResource" /></description></item></list></summary>
+        <summary> Gets the definition for a role on a billing account. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1777,14 +1802,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingRoleDefinitionCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingRoleDefinitionResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingRoleDefinitionResources and their operations over a BillingRoleDefinitionResource. </returns>
+        <summary> Gets a collection of BillingRoleDefinitions in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingRoleDefinitions and their operations over a BillingRoleDefinitionResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1798,6 +1824,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionResource&gt;</ReturnType>
@@ -1811,9 +1838,7 @@
         <param name="billingSubscriptionName"> The ID that uniquely identifies a subscription. </param>
         <param name="expand"> Can be used to expand `Reseller`, `ConsumptionCostCenter`, `LastMonthCharges` and `MonthToDateCharges`. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a subscription by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement,  Microsoft Partner Agreement, and Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptions/{billingSubscriptionName}</description></item><item><term>Operation Id</term><description>BillingSubscriptions_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionResource" /></description></item></list></summary>
+        <summary> Gets a subscription by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement,  Microsoft Partner Agreement, and Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1832,6 +1857,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
@@ -1843,9 +1869,7 @@
       <Docs>
         <param name="aliasName"> The ID that uniquely identifies a subscription alias. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+        <summary> Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1864,6 +1888,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&gt;</ReturnType>
@@ -1875,9 +1900,7 @@
       <Docs>
         <param name="aliasName"> The ID that uniquely identifies a subscription alias. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+        <summary> Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1896,14 +1919,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingSubscriptionAliasResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingSubscriptionAliasResources and their operations over a BillingSubscriptionAliasResource. </returns>
+        <summary> Gets a collection of BillingSubscriptionAliases in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingSubscriptionAliases and their operations over a BillingSubscriptionAliasResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1917,6 +1941,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionResource&gt;&gt;</ReturnType>
@@ -1930,9 +1955,7 @@
         <param name="billingSubscriptionName"> The ID that uniquely identifies a subscription. </param>
         <param name="expand"> Can be used to expand `Reseller`, `ConsumptionCostCenter`, `LastMonthCharges` and `MonthToDateCharges`. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a subscription by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement,  Microsoft Partner Agreement, and Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptions/{billingSubscriptionName}</description></item><item><term>Operation Id</term><description>BillingSubscriptions_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionResource" /></description></item></list></summary>
+        <summary> Gets a subscription by its ID. The operation is supported for billing accounts with agreement type Microsoft Customer Agreement,  Microsoft Partner Agreement, and Enterprise Agreement. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1951,14 +1974,167 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingSubscriptionCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of BillingSubscriptionResources in the BillingAccount. </summary>
-        <returns> An object representing collection of BillingSubscriptionResources and their operations over a BillingSubscriptionResource. </returns>
+        <summary> Gets a collection of BillingSubscriptions in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of BillingSubscriptions and their operations over a BillingSubscriptionResource. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByBillingAccount">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt; GetByBillingAccount (string filter = default, string orderBy = default, long? maxCount = default, long? skip = default, bool? count = default, string search = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Billing.BillingRequestResource&gt; GetByBillingAccount(string filter, string orderBy, valuetype System.Nullable`1&lt;int64&gt; maxCount, valuetype System.Nullable`1&lt;int64&gt; skip, valuetype System.Nullable`1&lt;bool&gt; count, string search, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.GetByBillingAccount(System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByBillingAccount (Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional maxCount As Nullable(Of Long) = Nothing, Optional skip As Nullable(Of Long) = Nothing, Optional count As Nullable(Of Boolean) = Nothing, Optional search As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of BillingRequestResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetByBillingAccount : string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;&#xA;override this.GetByBillingAccount : string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;" Usage="billingAccountResource.GetByBillingAccount (filter, orderBy, maxCount, skip, count, search, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int64&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="count" Type="System.Nullable&lt;System.Boolean&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="search" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="maxCount"> The top query option requests the number of items in the queried collection to be included in the result. The maximum supported value for top is 50. </param>
+        <param name="skip"> The skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. </param>
+        <param name="count"> The count query option allows clients to request a count of the matching resources included with the resources in the response. </param>
+        <param name="search"> The search query option allows clients to request items within a collection matching a free-text search expression. search is only supported for string fields. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The list of billing requests submitted for the billing account.
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRequests. </description></item><item><term> Operation Id. </term><description> BillingAccounts_BillingRequestsListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByBillingAccount">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt; GetByBillingAccount (string filter = default, string orderBy = default, float? skiptoken = default, string refreshSummary = default, string selectedState = default, float? take = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Billing.BillingReservationResource&gt; GetByBillingAccount(string filter, string orderBy, valuetype System.Nullable`1&lt;float32&gt; skiptoken, string refreshSummary, string selectedState, valuetype System.Nullable`1&lt;float32&gt; take, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.GetByBillingAccount(System.String,System.String,System.Nullable{System.Single},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByBillingAccount (Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional skiptoken As Nullable(Of Single) = Nothing, Optional refreshSummary As String = Nothing, Optional selectedState As String = Nothing, Optional take As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of BillingReservationResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetByBillingAccount : string * string * Nullable&lt;single&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;&#xA;override this.GetByBillingAccount : string * string * Nullable&lt;single&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;" Usage="billingAccountResource.GetByBillingAccount (filter, orderBy, skiptoken, refreshSummary, selectedState, take, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skiptoken" Type="System.Nullable&lt;System.Single&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="refreshSummary" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="selectedState" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="take" Type="System.Nullable&lt;System.Single&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="skiptoken"> The number of reservations to skip from the list before returning results. </param>
+        <param name="refreshSummary"> To indicate whether to refresh the roll up counts of the reservations group by provisioning states. </param>
+        <param name="selectedState"> The selected provisioning state. </param>
+        <param name="take"> The number of reservations to return in API response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the reservations in the billing account and the roll up counts of reservations group by provisioning states.
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservations. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ReservationsListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByBillingAccountAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt; GetByBillingAccountAsync (string filter = default, string orderBy = default, long? maxCount = default, long? skip = default, bool? count = default, string search = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Billing.BillingRequestResource&gt; GetByBillingAccountAsync(string filter, string orderBy, valuetype System.Nullable`1&lt;int64&gt; maxCount, valuetype System.Nullable`1&lt;int64&gt; skip, valuetype System.Nullable`1&lt;bool&gt; count, string search, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.GetByBillingAccountAsync(System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByBillingAccountAsync (Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional maxCount As Nullable(Of Long) = Nothing, Optional skip As Nullable(Of Long) = Nothing, Optional count As Nullable(Of Boolean) = Nothing, Optional search As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of BillingRequestResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetByBillingAccountAsync : string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;&#xA;override this.GetByBillingAccountAsync : string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;" Usage="billingAccountResource.GetByBillingAccountAsync (filter, orderBy, maxCount, skip, count, search, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingRequestResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int64&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="count" Type="System.Nullable&lt;System.Boolean&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="search" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="maxCount"> The top query option requests the number of items in the queried collection to be included in the result. The maximum supported value for top is 50. </param>
+        <param name="skip"> The skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. </param>
+        <param name="count"> The count query option allows clients to request a count of the matching resources included with the resources in the response. </param>
+        <param name="search"> The search query option allows clients to request items within a collection matching a free-text search expression. search is only supported for string fields. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The list of billing requests submitted for the billing account.
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRequests. </description></item><item><term> Operation Id. </term><description> BillingAccounts_BillingRequestsListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingRequestResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByBillingAccountAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt; GetByBillingAccountAsync (string filter = default, string orderBy = default, float? skiptoken = default, string refreshSummary = default, string selectedState = default, float? take = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Billing.BillingReservationResource&gt; GetByBillingAccountAsync(string filter, string orderBy, valuetype System.Nullable`1&lt;float32&gt; skiptoken, string refreshSummary, string selectedState, valuetype System.Nullable`1&lt;float32&gt; take, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingAccountResource.GetByBillingAccountAsync(System.String,System.String,System.Nullable{System.Single},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByBillingAccountAsync (Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional skiptoken As Nullable(Of Single) = Nothing, Optional refreshSummary As String = Nothing, Optional selectedState As String = Nothing, Optional take As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of BillingReservationResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetByBillingAccountAsync : string * string * Nullable&lt;single&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;&#xA;override this.GetByBillingAccountAsync : string * string * Nullable&lt;single&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;" Usage="billingAccountResource.GetByBillingAccountAsync (filter, orderBy, skiptoken, refreshSummary, selectedState, take, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skiptoken" Type="System.Nullable&lt;System.Single&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="refreshSummary" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="selectedState" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="take" Type="System.Nullable&lt;System.Single&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="skiptoken"> The number of reservations to skip from the list before returning results. </param>
+        <param name="refreshSummary"> To indicate whether to refresh the roll up counts of the reservations group by provisioning states. </param>
+        <param name="selectedState"> The selected provisioning state. </param>
+        <param name="take"> The number of reservations to return in API response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the reservations in the billing account and the roll up counts of reservations group by provisioning states.
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservations. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ReservationsListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1972,6 +2148,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSavingsPlanModelResource&gt;</ReturnType>
@@ -2000,6 +2177,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSavingsPlanModelResource&gt;</ReturnType>
@@ -2028,6 +2206,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.Models.InvoiceSectionWithCreateSubPermission&gt;</ReturnType>
@@ -2041,7 +2220,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the invoice sections for which the user has permission to create Azure subscriptions. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/listInvoiceSectionsWithCreateSubscriptionPermission</description></item><item><term>Operation Id</term><description>BillingAccounts_ListInvoiceSectionsByCreateSubscriptionPermission</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/listInvoiceSectionsWithCreateSubscriptionPermission. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ListInvoiceSectionsByCreateSubscriptionPermission. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.InvoiceSectionWithCreateSubPermission" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2056,6 +2235,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.Models.InvoiceSectionWithCreateSubPermission&gt;</ReturnType>
@@ -2069,8 +2249,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the invoice sections for which the user has permission to create Azure subscriptions. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/listInvoiceSectionsWithCreateSubscriptionPermission</description></item><item><term>Operation Id</term><description>BillingAccounts_ListInvoiceSectionsByCreateSubscriptionPermission</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.Models.InvoiceSectionWithCreateSubPermission" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/listInvoiceSectionsWithCreateSubscriptionPermission. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ListInvoiceSectionsByCreateSubscriptionPermission. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.Models.InvoiceSectionWithCreateSubPermission" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2084,7 +2264,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;</ReturnType>
       </ReturnValue>
@@ -2095,9 +2282,7 @@
       <Docs>
         <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations in the billing account and the roll up counts of reservations group by provisioning states.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservations</description></item><item><term>Operation Id</term><description>Reservations_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /></description></item></list></summary>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2112,7 +2297,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingReservationResource&gt;</ReturnType>
       </ReturnValue>
@@ -2123,9 +2315,7 @@
       <Docs>
         <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations in the billing account and the roll up counts of reservations group by provisioning states.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/reservations</description></item><item><term>Operation Id</term><description>Reservations_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /></description></item></list></summary>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.BillingReservationResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2140,6 +2330,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.SavingsPlanOrderModelResource&gt;</ReturnType>
@@ -2153,9 +2344,7 @@
         <param name="savingsPlanOrderId"> Order ID of the savings plan. </param>
         <param name="expand"> May be used to expand the planInformation. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get a savings plan order by billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/savingsPlanOrders/{savingsPlanOrderId}</description></item><item><term>Operation Id</term><description>SavingsPlanOrders_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.SavingsPlanOrderModelResource" /></description></item></list></summary>
+        <summary> Get a savings plan order by billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2174,6 +2363,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.SavingsPlanOrderModelResource&gt;&gt;</ReturnType>
@@ -2187,9 +2377,7 @@
         <param name="savingsPlanOrderId"> Order ID of the savings plan. </param>
         <param name="expand"> May be used to expand the planInformation. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get a savings plan order by billing account.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/savingsPlanOrders/{savingsPlanOrderId}</description></item><item><term>Operation Id</term><description>SavingsPlanOrders_GetByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.SavingsPlanOrderModelResource" /></description></item></list></summary>
+        <summary> Get a savings plan order by billing account. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2208,14 +2396,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.SavingsPlanOrderModelCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of SavingsPlanOrderModelResources in the BillingAccount. </summary>
-        <returns> An object representing collection of SavingsPlanOrderModelResources and their operations over a SavingsPlanOrderModelResource. </returns>
+        <summary> Gets a collection of SavingsPlanOrderModels in the <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </summary>
+        <returns> An object representing collection of SavingsPlanOrderModels and their operations over a SavingsPlanOrderModelResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2229,6 +2418,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -2249,6 +2439,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -2260,9 +2451,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2279,6 +2468,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -2290,9 +2480,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2309,6 +2497,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.Models.BillingRoleAssignmentListResult&gt;</ReturnType>
@@ -2327,7 +2516,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the role assignments for the caller on a billing account while fetching user info for each role assignment. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/resolveBillingRoleAssignments</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_ResolveByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/resolveBillingRoleAssignments. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ResolveByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2342,6 +2531,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.Models.BillingRoleAssignmentListResult&gt;&gt;</ReturnType>
@@ -2360,7 +2550,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the role assignments for the caller on a billing account while fetching user info for each role assignment. The operation is supported for billing accounts with agreement type Microsoft Partner Agreement, Microsoft Customer Agreement or Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/resolveBillingRoleAssignments</description></item><item><term>Operation Id</term><description>BillingRoleAssignments_ResolveByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/resolveBillingRoleAssignments. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ResolveByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2375,6 +2565,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>
@@ -2394,6 +2585,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -2403,11 +2595,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2424,6 +2614,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -2433,11 +2624,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2457,6 +2646,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAccountData</ReturnType>
@@ -2466,8 +2656,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="reader">The <see cref="T:System.Text.Json.Utf8JsonReader" /> to read.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="reader"> The reader for deserializing the model. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Reads one JSON value (including objects or arrays) from the provided reader and converts it to a model.
             </summary>
@@ -2489,6 +2679,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2498,8 +2689,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="writer">The <see cref="T:System.Text.Json.Utf8JsonWriter" /> to write into.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="writer"> The writer to serialize the model to. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Writes the model to the provided <see cref="T:System.Text.Json.Utf8JsonWriter" />.
             </summary>
@@ -2520,6 +2711,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Billing.BillingAccountData</ReturnType>
@@ -2529,8 +2721,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="data">The <see cref="T:System.BinaryData" /> to parse.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="data"> The binary data to be processed. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Converts the provided <see cref="T:System.BinaryData" /> into a model.
             </summary>
@@ -2552,6 +2744,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -2560,7 +2753,7 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to consider when serializing and deserializing the model.</param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Gets the data interchange format (JSON, Xml, etc) that the model uses when communicating with the service.
             </summary>
@@ -2581,6 +2774,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -2589,7 +2783,7 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Writes the model into a <see cref="T:System.BinaryData" />.
             </summary>
@@ -2608,6 +2802,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;</ReturnType>
@@ -2624,7 +2819,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates the properties of a billing account. Currently, displayName and address can be updated for billing accounts with agreement type Microsoft Customer Agreement. Currently address and notification email address can be updated for billing accounts with agreement type Microsoft Online Services Agreement. Currently, purchase order number can be edited for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Update</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}. </description></item><item><term> Operation Id. </term><description> BillingAccounts_Update. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2641,6 +2836,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingAccountResource&gt;&gt;</ReturnType>
@@ -2657,7 +2853,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates the properties of a billing account. Currently, displayName and address can be updated for billing accounts with agreement type Microsoft Customer Agreement. Currently address and notification email address can be updated for billing accounts with agreement type Microsoft Online Services Agreement. Currently, purchase order number can be edited for billing accounts with agreement type Enterprise Agreement.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}</description></item><item><term>Operation Id</term><description>BillingAccounts_Update</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}. </description></item><item><term> Operation Id. </term><description> BillingAccounts_Update. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2674,6 +2870,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.Models.PaymentTermsEligibilityResult&gt;</ReturnType>
@@ -2687,7 +2884,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Validates payment terms on a billing account with agreement type 'Microsoft Customer Agreement' and account type 'Enterprise'.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/validatePaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_ValidatePaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/validatePaymentTerms. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ValidatePaymentTerms. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -2704,6 +2901,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.Models.PaymentTermsEligibilityResult&gt;&gt;</ReturnType>
@@ -2717,7 +2915,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Validates payment terms on a billing account with agreement type 'Microsoft Customer Agreement' and account type 'Enterprise'.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/validatePaymentTerms</description></item><item><term>Operation Id</term><description>BillingAccounts_ValidatePaymentTerms</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/validatePaymentTerms. </description></item><item><term> Operation Id. </term><description> BillingAccounts_ValidatePaymentTerms. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

@@ -53,6 +53,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DependencyMapDateTimeFilter">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter DependencyMapDateTimeFilter (DateTimeOffset? startOn = default, DateTimeOffset? endOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter DependencyMapDateTimeFilter(valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; startOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; endOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.DependencyMapDateTimeFilter(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DependencyMapDateTimeFilter (Optional startOn As Nullable(Of DateTimeOffset) = Nothing, Optional endOn As Nullable(Of DateTimeOffset) = Nothing) As DependencyMapDateTimeFilter" />
+      <MemberSignature Language="F#" Value="static member DependencyMapDateTimeFilter : Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter" Usage="Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.DependencyMapDateTimeFilter (startOn, endOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DependencyMap</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="endOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="startOn"> Start date time for dependency map visualization query. </param>
+        <param name="endOn"> End date time for dependency map visualization query. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DependencyMapDiscoverySourceData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DependencyMap.DependencyMapDiscoverySourceData DependencyMapDiscoverySourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.DependencyMap.Models.DependencyMapDiscoverySourceProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DependencyMap.DependencyMapDiscoverySourceData DependencyMapDiscoverySourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.DependencyMap.Models.DependencyMapDiscoverySourceProperties properties) cil managed" />
@@ -191,6 +217,32 @@
         <param name="processNames"> List of process names on which the operator should be applied. </param>
         <summary> Process name filter for dependency map visualization apis. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyMapVisualizationFilter">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DependencyMap.Models.DependencyMapVisualizationFilter DependencyMapVisualizationFilter (Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter dateTime = default, Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter processNameFilter = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DependencyMap.Models.DependencyMapVisualizationFilter DependencyMapVisualizationFilter(class Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter dateTime, class Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter processNameFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.DependencyMapVisualizationFilter(Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter,Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DependencyMapVisualizationFilter (Optional dateTime As DependencyMapDateTimeFilter = Nothing, Optional processNameFilter As DependencyMapProcessNameFilter = Nothing) As DependencyMapVisualizationFilter" />
+      <MemberSignature Language="F#" Value="static member DependencyMapVisualizationFilter : Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter * Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter -&gt; Azure.ResourceManager.DependencyMap.Models.DependencyMapVisualizationFilter" Usage="Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.DependencyMapVisualizationFilter (dateTime, processNameFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DependencyMap</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DependencyMap.Models.DependencyMapVisualizationFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="Azure.ResourceManager.DependencyMap.Models.DependencyMapDateTimeFilter" />
+        <Parameter Name="processNameFilter" Type="Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime"> DateTime filter. </param>
+        <param name="processNameFilter"> Process name filter. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DependencyMap.Models.DependencyMapVisualizationFilter" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -339,6 +391,30 @@
         <param name="filters"> Filters for GetNetworkConnectionsBetweenMachines. </param>
         <summary> GetConnectionsWithConnectedMachineForFocusedMachine request model. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DependencyMap.Models.GetConnectionsWithConnectedMachineForFocusedMachineContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDependencyViewForAllMachinesContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DependencyMap.Models.GetDependencyViewForAllMachinesContent GetDependencyViewForAllMachinesContent (Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter processNameFilter = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DependencyMap.Models.GetDependencyViewForAllMachinesContent GetDependencyViewForAllMachinesContent(class Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter processNameFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.GetDependencyViewForAllMachinesContent(Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetDependencyViewForAllMachinesContent (Optional processNameFilter As DependencyMapProcessNameFilter = Nothing) As GetDependencyViewForAllMachinesContent" />
+      <MemberSignature Language="F#" Value="static member GetDependencyViewForAllMachinesContent : Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter -&gt; Azure.ResourceManager.DependencyMap.Models.GetDependencyViewForAllMachinesContent" Usage="Azure.ResourceManager.DependencyMap.Models.ArmDependencyMapModelFactory.GetDependencyViewForAllMachinesContent processNameFilter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DependencyMap</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DependencyMap.Models.GetDependencyViewForAllMachinesContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="processNameFilter" Type="Azure.ResourceManager.DependencyMap.Models.DependencyMapProcessNameFilter" />
+      </Parameters>
+      <Docs>
+        <param name="processNameFilter"> Process name filter. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DependencyMap.Models.GetDependencyViewForAllMachinesContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -9,15 +9,28 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("This type is obsolete and will be removed in a future release.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This type is obsolete and will be removed in a future release.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            A class extending from the ReservationOrderResource in Azure.ResourceManager.Consumption along with the instance operations that can be performed on it.
-            You can only construct a <see cref="T:Azure.ResourceManager.Consumption.ReservationOrderConsumptionResource" /> from a <see cref="T:Azure.Core.ResourceIdentifier" /> with a resource type of Microsoft.Capacity/reservationorders.
+            Obsolete backward-compatibility stub for the reservation-order scoped consumption resource that
+            existed in the v1.1.0 surface. The TypeSpec migration replaced this wrapper with scope-based
+            extension methods on <see cref="T:Azure.ResourceManager.ArmClient" />; this type now throws on every member and is
+            hidden from IntelliSense.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -31,6 +44,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +62,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionReservationDetail&gt;</ReturnType>
       </ReturnValue>
@@ -57,11 +78,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="filter"> Filter reservation details by date range. The properties/UsageDate for start date and end date. The filter supports 'le' and  'ge'. </param>
+        <param name="filter"> Required OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations details for provided date range. Note: ARM has a payload size limit of 12MB, so currently callers get 502 when the response size exceeds the ARM limit. In such cases, API call should be made with smaller date ranges.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Capacity/reservationorders/{reservationOrderId}/providers/Microsoft.Consumption/reservationDetails</description></item><item><term>Operation Id</term><description>ReservationsDetails_ListByReservationOrder</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use the scope-based <c>GetConsumptionReservationDetails</c> extension method on <see cref="T:Azure.ResourceManager.ArmClient" /> instead. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionReservationDetail" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -78,7 +97,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionReservationDetail&gt;</ReturnType>
       </ReturnValue>
@@ -87,11 +113,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="filter"> Filter reservation details by date range. The properties/UsageDate for start date and end date. The filter supports 'le' and  'ge'. </param>
+        <param name="filter"> Required OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations details for provided date range. Note: ARM has a payload size limit of 12MB, so currently callers get 502 when the response size exceeds the ARM limit. In such cases, API call should be made with smaller date ranges.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Capacity/reservationorders/{reservationOrderId}/providers/Microsoft.Consumption/reservationDetails</description></item><item><term>Operation Id</term><description>ReservationsDetails_ListByReservationOrder</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use the scope-based <c>GetConsumptionReservationDetailsAsync</c> extension method on <see cref="T:Azure.ResourceManager.ArmClient" /> instead. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionReservationDetail" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -108,7 +132,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionReservationSummary&gt;</ReturnType>
       </ReturnValue>
@@ -118,12 +149,10 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="grain"> Can be daily or monthly. </param>
-        <param name="filter"> Required only for daily grain. The properties/UsageDate for start date and end date. The filter supports 'le' and  'ge'. </param>
+        <param name="grain"> Reservation summary data grain (daily/monthly). </param>
+        <param name="filter"> Optional OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations summaries for daily or monthly grain.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Capacity/reservationorders/{reservationOrderId}/providers/Microsoft.Consumption/reservationSummaries</description></item><item><term>Operation Id</term><description>ReservationsSummaries_ListByReservationOrder</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use the scope-based <c>GetConsumptionReservationSummaries</c> extension method on <see cref="T:Azure.ResourceManager.ArmClient" /> instead. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionReservationSummary" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -138,7 +167,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Consumption.Models.ConsumptionReservationSummary&gt;</ReturnType>
       </ReturnValue>
@@ -148,12 +184,10 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="grain"> Can be daily or monthly. </param>
-        <param name="filter"> Required only for daily grain. The properties/UsageDate for start date and end date. The filter supports 'le' and  'ge'. </param>
+        <param name="grain"> Reservation summary data grain (daily/monthly). </param>
+        <param name="filter"> Optional OData filter expression. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the reservations summaries for daily or monthly grain.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Capacity/reservationorders/{reservationOrderId}/providers/Microsoft.Consumption/reservationSummaries</description></item><item><term>Operation Id</term><description>ReservationsSummaries_ListByReservationOrder</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use the scope-based <c>GetConsumptionReservationSummariesAsync</c> extension method on <see cref="T:Azure.ResourceManager.ArmClient" /> instead. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Consumption.Models.ConsumptionReservationSummary" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -168,6 +202,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>

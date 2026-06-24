@@ -10,16 +10,41 @@
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="CommunicationAcceptTags">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationAcceptTags CommunicationAcceptTags (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationAcceptTags CommunicationAcceptTags(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationAcceptTags(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationAcceptTags (Optional tags As IDictionary(Of String, String) = Nothing) As CommunicationAcceptTags" />
+      <MemberSignature Language="F#" Value="static member CommunicationAcceptTags : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Communication.Models.CommunicationAcceptTags" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationAcceptTags tags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationAcceptTags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Tags of the service which is a list of key value pairs that describe the resource. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationAcceptTags" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CommunicationDomainResourceData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationDomainResourceData CommunicationDomainResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Communication.Models.DomainProvisioningState? provisioningState = default, string dataLocation = default, string fromSenderDomain = default, string mailFromSenderDomain = default, Azure.ResourceManager.Communication.Models.DomainManagement? domainManagement = default, Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationStates verificationStates = default, Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationRecords verificationRecords = default, Azure.ResourceManager.Communication.Models.UserEngagementTracking? userEngagementTracking = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationDomainResourceData CommunicationDomainResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.DomainProvisioningState&gt; provisioningState, string dataLocation, string fromSenderDomain, string mailFromSenderDomain, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.DomainManagement&gt; domainManagement, class Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationStates verificationStates, class Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationRecords verificationRecords, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.UserEngagementTracking&gt; userEngagementTracking) cil managed" />
@@ -29,8 +54,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.CommunicationDomainResourceData</ReturnType>
@@ -52,12 +77,12 @@
         <Parameter Name="userEngagementTracking" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.UserEngagementTracking&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="provisioningState"> Provisioning state of the resource. </param>
         <param name="dataLocation"> The location where the Domains resource data is stored at rest. </param>
         <param name="fromSenderDomain"> P2 sender domain that is displayed to the email recipients [RFC 5322]. </param>
@@ -71,6 +96,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CommunicationDomainResourcePatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationDomainResourcePatch CommunicationDomainResourcePatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.ResourceManager.Communication.Models.UserEngagementTracking? userEngagementTracking = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationDomainResourcePatch CommunicationDomainResourcePatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.UserEngagementTracking&gt; userEngagementTracking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationDomainResourcePatch(System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{Azure.ResourceManager.Communication.Models.UserEngagementTracking})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationDomainResourcePatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional userEngagementTracking As Nullable(Of UserEngagementTracking) = Nothing) As CommunicationDomainResourcePatch" />
+      <MemberSignature Language="F#" Value="static member CommunicationDomainResourcePatch : System.Collections.Generic.IDictionary&lt;string, string&gt; * Nullable&lt;Azure.ResourceManager.Communication.Models.UserEngagementTracking&gt; -&gt; Azure.ResourceManager.Communication.Models.CommunicationDomainResourcePatch" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationDomainResourcePatch (tags, userEngagementTracking)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationDomainResourcePatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userEngagementTracking" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.UserEngagementTracking&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Tags of the service which is a list of key value pairs that describe the resource. </param>
+        <param name="userEngagementTracking"> Describes whether user engagement tracking is enabled or disabled. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationDomainResourcePatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommunicationNameAvailabilityContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityContent CommunicationNameAvailabilityContent (string name = default, Azure.Core.ResourceType? resourceType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityContent CommunicationNameAvailabilityContent(string name, valuetype System.Nullable`1&lt;valuetype Azure.Core.ResourceType&gt; resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationNameAvailabilityContent(System.String,System.Nullable{Azure.Core.ResourceType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationNameAvailabilityContent (Optional name As String = Nothing, Optional resourceType As Nullable(Of ResourceType) = Nothing) As CommunicationNameAvailabilityContent" />
+      <MemberSignature Language="F#" Value="static member CommunicationNameAvailabilityContent : string * Nullable&lt;Azure.Core.ResourceType&gt; -&gt; Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityContent" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationNameAvailabilityContent (name, resourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="System.Nullable&lt;Azure.Core.ResourceType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the resource for which availability needs to be checked. </param>
+        <param name="resourceType"> The resource type. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CommunicationNameAvailabilityResult">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityResult CommunicationNameAvailabilityResult (bool? isNameAvailable = default, Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityReason? reason = default, string message = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityResult CommunicationNameAvailabilityResult(valuetype System.Nullable`1&lt;bool&gt; isNameAvailable, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityReason&gt; reason, string message) cil managed" />
@@ -80,8 +157,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityResult</ReturnType>
@@ -94,7 +171,7 @@
       <Docs>
         <param name="isNameAvailable"> Indicates if the resource name is available. </param>
         <param name="reason"> The reason why the given name is not available. </param>
-        <param name="message"> Detailed reason why the given name is available. </param>
+        <param name="message"> Detailed reason why the given name is not available. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityResult" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationNameAvailabilityResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -109,8 +186,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationServiceKeys</ReturnType>
@@ -131,22 +208,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="CommunicationServiceResourceData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState, string hostName, string dataLocation, Azure.Core.ResourceIdentifier notificationHubId, string version, Guid? immutableResourceId, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains);" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; provisioningState, string hostName, string dataLocation, class Azure.Core.ResourceIdentifier notificationHubId, string version, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; immutableResourceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; linkedDomains) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState},System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, provisioningState As Nullable(Of CommunicationServicesProvisioningState), hostName As String, dataLocation As String, notificationHubId As ResourceIdentifier, version As String, immutableResourceId As Nullable(Of Guid), linkedDomains As IEnumerable(Of String)) As CommunicationServiceResourceData" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member CommunicationServiceResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; * string * string * Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * seq&lt;string&gt; -&gt; Azure.ResourceManager.Communication.CommunicationServiceResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData (id, name, resourceType, systemData, tags, location, provisioningState, hostName, dataLocation, notificationHubId, version, immutableResourceId, linkedDomains)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState = default, string hostName = default, string dataLocation = default, Azure.Core.ResourceIdentifier notificationHubId = default, string version = default, Guid? immutableResourceId = default, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional provisioningState As Nullable(Of CommunicationServicesProvisioningState) = Nothing, Optional hostName As String = Nothing, Optional dataLocation As String = Nothing, Optional notificationHubId As ResourceIdentifier = Nothing, Optional version As String = Nothing, Optional immutableResourceId As Nullable(Of Guid) = Nothing, Optional linkedDomains As IEnumerable(Of String) = Nothing) As CommunicationServiceResourceData" FrameworkAlternate="azure-dotnet-preview" />
+    <Member MemberName="CommunicationServiceNameAvailabilityContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationServiceNameAvailabilityContent CommunicationServiceNameAvailabilityContent (string name = default, Azure.Core.ResourceType? resourceType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationServiceNameAvailabilityContent CommunicationServiceNameAvailabilityContent(string name, valuetype System.Nullable`1&lt;valuetype Azure.Core.ResourceType&gt; resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceNameAvailabilityContent(System.String,System.Nullable{Azure.Core.ResourceType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceNameAvailabilityContent (Optional name As String = Nothing, Optional resourceType As Nullable(Of ResourceType) = Nothing) As CommunicationServiceNameAvailabilityContent" />
+      <MemberSignature Language="F#" Value="static member CommunicationServiceNameAvailabilityContent : string * Nullable&lt;Azure.Core.ResourceType&gt; -&gt; Azure.ResourceManager.Communication.Models.CommunicationServiceNameAvailabilityContent" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceNameAvailabilityContent (name, resourceType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationServiceNameAvailabilityContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="System.Nullable&lt;Azure.Core.ResourceType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the resource for which availability needs to be checked. </param>
+        <param name="resourceType"> The resource type. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationServiceNameAvailabilityContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommunicationServiceResourceData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState, string hostName, string dataLocation, Azure.Core.ResourceIdentifier notificationHubId, string version, Guid? immutableResourceId, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; provisioningState, string hostName, string dataLocation, class Azure.Core.ResourceIdentifier notificationHubId, string version, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; immutableResourceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; linkedDomains) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState},System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, provisioningState As Nullable(Of CommunicationServicesProvisioningState), hostName As String, dataLocation As String, notificationHubId As ResourceIdentifier, version As String, immutableResourceId As Nullable(Of Guid), linkedDomains As IEnumerable(Of String)) As CommunicationServiceResourceData" />
+      <MemberSignature Language="F#" Value="static member CommunicationServiceResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; * string * string * Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * seq&lt;string&gt; -&gt; Azure.ResourceManager.Communication.CommunicationServiceResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData (id, name, resourceType, systemData, tags, location, provisioningState, hostName, dataLocation, notificationHubId, version, immutableResourceId, linkedDomains)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -189,21 +290,19 @@
       </Docs>
     </Member>
     <Member MemberName="CommunicationServiceResourceData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Models.ManagedServiceIdentity identity, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState, string hostName, string dataLocation, Azure.Core.ResourceIdentifier notificationHubId, string version, Guid? immutableResourceId, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Models.ManagedServiceIdentity identity, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState, string hostName, string dataLocation, Azure.Core.ResourceIdentifier notificationHubId, string version, Guid? immutableResourceId, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; provisioningState, string hostName, string dataLocation, class Azure.Core.ResourceIdentifier notificationHubId, string version, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; immutableResourceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; linkedDomains) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.Models.ManagedServiceIdentity,System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState},System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, identity As ManagedServiceIdentity, provisioningState As Nullable(Of CommunicationServicesProvisioningState), hostName As String, dataLocation As String, notificationHubId As ResourceIdentifier, version As String, immutableResourceId As Nullable(Of Guid), linkedDomains As IEnumerable(Of String)) As CommunicationServiceResourceData" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, identity As ManagedServiceIdentity, provisioningState As Nullable(Of CommunicationServicesProvisioningState), hostName As String, dataLocation As String, notificationHubId As ResourceIdentifier, version As String, immutableResourceId As Nullable(Of Guid), linkedDomains As IEnumerable(Of String)) As CommunicationServiceResourceData" />
       <MemberSignature Language="F#" Value="static member CommunicationServiceResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.Models.ManagedServiceIdentity * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; * string * string * Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * seq&lt;string&gt; -&gt; Azure.ResourceManager.Communication.CommunicationServiceResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData (id, name, resourceType, systemData, tags, location, identity, provisioningState, hostName, dataLocation, notificationHubId, version, immutableResourceId, linkedDomains)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState = default, string hostName = default, string dataLocation = default, Azure.Core.ResourceIdentifier notificationHubId = default, string version = default, Guid? immutableResourceId = default, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional identity As ManagedServiceIdentity = Nothing, Optional provisioningState As Nullable(Of CommunicationServicesProvisioningState) = Nothing, Optional hostName As String = Nothing, Optional dataLocation As String = Nothing, Optional notificationHubId As ResourceIdentifier = Nothing, Optional version As String = Nothing, Optional immutableResourceId As Nullable(Of Guid) = Nothing, Optional linkedDomains As IEnumerable(Of String) = Nothing) As CommunicationServiceResourceData" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -242,7 +341,7 @@
         <param name="version"> Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs. </param>
         <param name="immutableResourceId"> The immutable resource Id of the communication service. </param>
         <param name="linkedDomains"> List of email Domain resource Ids. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Communication.CommunicationServiceResourceData" />. </summary>
+        <summary> Initializes a new instance of CommunicationServiceResourceData. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Communication.CommunicationServiceResourceData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,27 +356,34 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.CommunicationServiceResourceData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="hostName" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataLocation" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="notificationHubId" Type="Azure.Core.ResourceIdentifier" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="version" Type="System.String" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="immutableResourceId" Type="System.Nullable&lt;System.Guid&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="linkedDomains" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt;" Index="14" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="isLocalAuthDisabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="15" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt;" />
+        <Parameter Name="hostName" Type="System.String" />
+        <Parameter Name="dataLocation" Type="System.String" />
+        <Parameter Name="notificationHubId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="immutableResourceId" Type="System.Nullable&lt;System.Guid&gt;" />
+        <Parameter Name="linkedDomains" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt;" />
+        <Parameter Name="isLocalAuthDisabled" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="id"> The id. </param>
@@ -301,6 +407,92 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CommunicationServiceResourceData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState? provisioningState = default, string hostName = default, string dataLocation = default, Azure.Core.ResourceIdentifier notificationHubId = default, string version = default, Guid? immutableResourceId = default, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains = default, Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess? publicNetworkAccess = default, bool? isLocalAuthDisabled = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationServiceResourceData CommunicationServiceResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; provisioningState, string hostName, string dataLocation, class Azure.Core.ResourceIdentifier notificationHubId, string version, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; immutableResourceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; linkedDomains, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt; publicNetworkAccess, valuetype System.Nullable`1&lt;bool&gt; isLocalAuthDisabled, class Azure.ResourceManager.Models.ManagedServiceIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState},System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess},System.Nullable{System.Boolean},Azure.ResourceManager.Models.ManagedServiceIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional provisioningState As Nullable(Of CommunicationServicesProvisioningState) = Nothing, Optional hostName As String = Nothing, Optional dataLocation As String = Nothing, Optional notificationHubId As ResourceIdentifier = Nothing, Optional version As String = Nothing, Optional immutableResourceId As Nullable(Of Guid) = Nothing, Optional linkedDomains As IEnumerable(Of String) = Nothing, Optional publicNetworkAccess As Nullable(Of CommunicationPublicNetworkAccess) = Nothing, Optional isLocalAuthDisabled As Nullable(Of Boolean) = Nothing, Optional identity As ManagedServiceIdentity = Nothing) As CommunicationServiceResourceData" />
+      <MemberSignature Language="F#" Value="static member CommunicationServiceResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt; * string * string * Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt; * Nullable&lt;bool&gt; * Azure.ResourceManager.Models.ManagedServiceIdentity -&gt; Azure.ResourceManager.Communication.CommunicationServiceResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourceData (id, name, resourceType, systemData, tags, location, provisioningState, hostName, dataLocation, notificationHubId, version, immutableResourceId, linkedDomains, publicNetworkAccess, isLocalAuthDisabled, identity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.CommunicationServiceResourceData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServicesProvisioningState&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="hostName" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataLocation" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="notificationHubId" Type="Azure.Core.ResourceIdentifier" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.String" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="immutableResourceId" Type="System.Nullable&lt;System.Guid&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="linkedDomains" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isLocalAuthDisabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="15" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="provisioningState"> Provisioning state of the resource. </param>
+        <param name="hostName"> FQDN of the CommunicationService instance. </param>
+        <param name="dataLocation"> The location where the communication service stores its data at rest. </param>
+        <param name="notificationHubId"> Resource ID of an Azure Notification Hub linked to this resource. </param>
+        <param name="version"> Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs. </param>
+        <param name="immutableResourceId"> The immutable resource Id of the communication service. </param>
+        <param name="linkedDomains"> List of email Domain resource Ids. </param>
+        <param name="publicNetworkAccess"> Allow, disallow, or let network security perimeter configuration control public network access to the protected resource. Value is optional but if passed in, it must be 'Enabled', 'Disabled' or 'SecuredByPerimeter'. </param>
+        <param name="isLocalAuthDisabled"> Disable local authentication for the CommunicationService. </param>
+        <param name="identity"> The managed service identities assigned to this resource. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.CommunicationServiceResourceData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommunicationServiceResourcePatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.CommunicationServiceResourcePatch CommunicationServiceResourcePatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, System.Collections.Generic.IEnumerable&lt;string&gt; linkedDomains = default, Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess? publicNetworkAccess = default, bool? disableLocalAuth = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.CommunicationServiceResourcePatch CommunicationServiceResourcePatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class System.Collections.Generic.IEnumerable`1&lt;string&gt; linkedDomains, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt; publicNetworkAccess, valuetype System.Nullable`1&lt;bool&gt; disableLocalAuth, class Azure.ResourceManager.Models.ManagedServiceIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourcePatch(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess},System.Nullable{System.Boolean},Azure.ResourceManager.Models.ManagedServiceIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CommunicationServiceResourcePatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional linkedDomains As IEnumerable(Of String) = Nothing, Optional publicNetworkAccess As Nullable(Of CommunicationPublicNetworkAccess) = Nothing, Optional disableLocalAuth As Nullable(Of Boolean) = Nothing, Optional identity As ManagedServiceIdentity = Nothing) As CommunicationServiceResourcePatch" />
+      <MemberSignature Language="F#" Value="static member CommunicationServiceResourcePatch : System.Collections.Generic.IDictionary&lt;string, string&gt; * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt; * Nullable&lt;bool&gt; * Azure.ResourceManager.Models.ManagedServiceIdentity -&gt; Azure.ResourceManager.Communication.Models.CommunicationServiceResourcePatch" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.CommunicationServiceResourcePatch (tags, linkedDomains, publicNetworkAccess, disableLocalAuth, identity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.CommunicationServiceResourcePatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="linkedDomains" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="publicNetworkAccess" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationPublicNetworkAccess&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="disableLocalAuth" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Tags of the service which is a list of key value pairs that describe the resource. </param>
+        <param name="linkedDomains"> List of email Domain resource Ids. </param>
+        <param name="publicNetworkAccess"> Allow, disallow, or let network security perimeter configuration control public network access to the protected resource. Value is optional but if passed in, it must be 'Enabled', 'Disabled' or 'SecuredByPerimeter'. </param>
+        <param name="disableLocalAuth"> Disable local authentication for the CommunicationService. </param>
+        <param name="identity"> Managed service identity (system assigned and/or user assigned identities). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.CommunicationServiceResourcePatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CommunicationSmtpUsernameData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.CommunicationSmtpUsernameData CommunicationSmtpUsernameData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string username = default, string entraApplicationId = default, Guid? tenantId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.CommunicationSmtpUsernameData CommunicationSmtpUsernameData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string username, string entraApplicationId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; tenantId) cil managed" />
@@ -311,24 +503,25 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.CommunicationSmtpUsernameData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="username" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="entraApplicationId" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="entraApplicationId" Type="System.String" />
+        <Parameter Name="tenantId" Type="System.Nullable&lt;System.Guid&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="username"> The SMTP username. Could be free form or in the email address format. </param>
         <param name="entraApplicationId"> The application Id for the linked Entra Application. </param>
         <param name="tenantId"> The tenant of the linked Entra Application. </param>
@@ -346,8 +539,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationRecords</ReturnType>
@@ -379,8 +572,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.DomainPropertiesVerificationStates</ReturnType>
@@ -403,6 +596,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DomainsRecordVerificationContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.DomainsRecordVerificationContent DomainsRecordVerificationContent (Azure.ResourceManager.Communication.Models.DomainRecordVerificationType verificationType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.DomainsRecordVerificationContent DomainsRecordVerificationContent(valuetype Azure.ResourceManager.Communication.Models.DomainRecordVerificationType verificationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.DomainsRecordVerificationContent(Azure.ResourceManager.Communication.Models.DomainRecordVerificationType)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DomainsRecordVerificationContent (Optional verificationType As DomainRecordVerificationType = Nothing) As DomainsRecordVerificationContent" />
+      <MemberSignature Language="F#" Value="static member DomainsRecordVerificationContent : Azure.ResourceManager.Communication.Models.DomainRecordVerificationType -&gt; Azure.ResourceManager.Communication.Models.DomainsRecordVerificationContent" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.DomainsRecordVerificationContent verificationType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.DomainsRecordVerificationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verificationType" Type="Azure.ResourceManager.Communication.Models.DomainRecordVerificationType" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="verificationType"> Type of verification. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.DomainsRecordVerificationContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DomainVerificationStatusRecord">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.DomainVerificationStatusRecord DomainVerificationStatusRecord (Azure.ResourceManager.Communication.Models.DomainRecordVerificationStatus? status = default, string errorCode = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.DomainVerificationStatusRecord DomainVerificationStatusRecord(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.DomainRecordVerificationStatus&gt; status, string errorCode) cil managed" />
@@ -412,8 +629,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.DomainVerificationStatusRecord</ReturnType>
@@ -439,8 +656,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.EmailServiceResourceData</ReturnType>
@@ -456,16 +673,40 @@
         <Parameter Name="dataLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
         <param name="provisioningState"> Provisioning state of the resource. </param>
         <param name="dataLocation"> The location where the email service stores its data at rest. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Communication.EmailServiceResourceData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Communication.EmailServiceResourceData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailServiceResourcePatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.EmailServiceResourcePatch EmailServiceResourcePatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.EmailServiceResourcePatch EmailServiceResourcePatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.EmailServiceResourcePatch(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EmailServiceResourcePatch (Optional tags As IDictionary(Of String, String) = Nothing) As EmailServiceResourcePatch" />
+      <MemberSignature Language="F#" Value="static member EmailServiceResourcePatch : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Communication.Models.EmailServiceResourcePatch" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.EmailServiceResourcePatch tags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.EmailServiceResourcePatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tags"> Tags of the service which is a list of key value pairs that describe the resource. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.EmailServiceResourcePatch" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -479,27 +720,28 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.EmailSuppressionListAddressData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="email" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="firstName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastName" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="notes" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastModified" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataLocation" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="email" Type="System.String" />
+        <Parameter Name="firstName" Type="System.String" />
+        <Parameter Name="lastName" Type="System.String" />
+        <Parameter Name="notes" Type="System.String" />
+        <Parameter Name="lastModified" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="dataLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="email"> Email address of the recipient. </param>
         <param name="firstName"> The first name of the email recipient. </param>
         <param name="lastName"> The last name of the email recipient. </param>
@@ -521,25 +763,26 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.EmailSuppressionListData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="listName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataLocation" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="listName" Type="System.String" />
+        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="dataLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="listName"> The name of the suppression list. This value must match one of the valid sender usernames of the sending domain. </param>
         <param name="lastUpdatedOn"> The date the resource was last updated. </param>
         <param name="createdOn"> The date the resource was created. </param>
@@ -558,8 +801,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.LinkedNotificationHub</ReturnType>
@@ -574,6 +817,56 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LinkNotificationHubContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.LinkNotificationHubContent LinkNotificationHubContent (Azure.Core.ResourceIdentifier resourceId = default, string connectionString = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.LinkNotificationHubContent LinkNotificationHubContent(class Azure.Core.ResourceIdentifier resourceId, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.LinkNotificationHubContent(Azure.Core.ResourceIdentifier,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LinkNotificationHubContent (Optional resourceId As ResourceIdentifier = Nothing, Optional connectionString As String = Nothing) As LinkNotificationHubContent" />
+      <MemberSignature Language="F#" Value="static member LinkNotificationHubContent : Azure.Core.ResourceIdentifier * string -&gt; Azure.ResourceManager.Communication.Models.LinkNotificationHubContent" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.LinkNotificationHubContent (resourceId, connectionString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.LinkNotificationHubContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="connectionString" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId"> The resource ID of the notification hub. </param>
+        <param name="connectionString"> Connection string for the notification hub. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.LinkNotificationHubContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegenerateCommunicationServiceKeyContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.Models.RegenerateCommunicationServiceKeyContent RegenerateCommunicationServiceKeyContent (Azure.ResourceManager.Communication.Models.CommunicationServiceKeyType? keyType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.Models.RegenerateCommunicationServiceKeyContent RegenerateCommunicationServiceKeyContent(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServiceKeyType&gt; keyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.RegenerateCommunicationServiceKeyContent(System.Nullable{Azure.ResourceManager.Communication.Models.CommunicationServiceKeyType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RegenerateCommunicationServiceKeyContent (Optional keyType As Nullable(Of CommunicationServiceKeyType) = Nothing) As RegenerateCommunicationServiceKeyContent" />
+      <MemberSignature Language="F#" Value="static member RegenerateCommunicationServiceKeyContent : Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServiceKeyType&gt; -&gt; Azure.ResourceManager.Communication.Models.RegenerateCommunicationServiceKeyContent" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.RegenerateCommunicationServiceKeyContent keyType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Communication.Models.RegenerateCommunicationServiceKeyContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyType" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServiceKeyType&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="keyType"> The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Communication.Models.RegenerateCommunicationServiceKeyContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SenderUsernameResourceData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.SenderUsernameResourceData SenderUsernameResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string dataLocation = default, string username = default, string displayName = default, Azure.ResourceManager.Communication.Models.CommunicationServiceProvisioningState? provisioningState = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.SenderUsernameResourceData SenderUsernameResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string dataLocation, string username, string displayName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Communication.Models.CommunicationServiceProvisioningState&gt; provisioningState) cil managed" />
@@ -583,8 +876,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.SenderUsernameResourceData</ReturnType>
@@ -600,96 +893,16 @@
         <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Communication.Models.CommunicationServiceProvisioningState&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="dataLocation"> The location where the SenderUsername resource data is stored at rest. </param>
         <param name="username"> A sender senderUsername to be used when sending emails. </param>
         <param name="displayName"> The display name for the senderUsername. </param>
         <param name="provisioningState"> Provisioning state of the resource. Unknown is the default state for Communication Services. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Communication.SenderUsernameResourceData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Communication.SenderUsernameResourceData" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SuppressionListAddressResourceData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.SuppressionListAddressResourceData SuppressionListAddressResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string email = default, string firstName = default, string lastName = default, string notes = default, DateTimeOffset? lastModified = default, string dataLocation = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.SuppressionListAddressResourceData SuppressionListAddressResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string email, string firstName, string lastName, string notes, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastModified, string dataLocation) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.SuppressionListAddressResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SuppressionListAddressResourceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional email As String = Nothing, Optional firstName As String = Nothing, Optional lastName As String = Nothing, Optional notes As String = Nothing, Optional lastModified As Nullable(Of DateTimeOffset) = Nothing, Optional dataLocation As String = Nothing) As SuppressionListAddressResourceData" />
-      <MemberSignature Language="F#" Value="static member SuppressionListAddressResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * string * string * string * Nullable&lt;DateTimeOffset&gt; * string -&gt; Azure.ResourceManager.Communication.SuppressionListAddressResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.SuppressionListAddressResourceData (id, name, resourceType, systemData, email, firstName, lastName, notes, lastModified, dataLocation)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Communication.SuppressionListAddressResourceData</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="email" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="firstName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="lastName" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="notes" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="lastModified" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="dataLocation" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="email"> Email address of the recipient. </param>
-        <param name="firstName"> The first name of the email recipient. </param>
-        <param name="lastName"> The last name of the email recipient. </param>
-        <param name="notes"> An optional property to provide contextual notes or a description for an address. </param>
-        <param name="lastModified"> The date the address was last updated in a suppression list. </param>
-        <param name="dataLocation"> The location where the SuppressionListAddress data is stored at rest. This value is inherited from the parent Domains resource. </param>
-        <summary> Initializes a new instance of SuppressionListAddressResourceData. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Communication.SuppressionListAddressResourceData" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SuppressionListResourceData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Communication.SuppressionListResourceData SuppressionListResourceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string listName = default, DateTimeOffset? lastUpdatedTimeStamp = default, DateTimeOffset? createdTimeStamp = default, string dataLocation = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Communication.SuppressionListResourceData SuppressionListResourceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string listName, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedTimeStamp, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdTimeStamp, string dataLocation) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.SuppressionListResourceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SuppressionListResourceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional listName As String = Nothing, Optional lastUpdatedTimeStamp As Nullable(Of DateTimeOffset) = Nothing, Optional createdTimeStamp As Nullable(Of DateTimeOffset) = Nothing, Optional dataLocation As String = Nothing) As SuppressionListResourceData" />
-      <MemberSignature Language="F#" Value="static member SuppressionListResourceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string -&gt; Azure.ResourceManager.Communication.SuppressionListResourceData" Usage="Azure.ResourceManager.Communication.Models.ArmCommunicationModelFactory.SuppressionListResourceData (id, name, resourceType, systemData, listName, lastUpdatedTimeStamp, createdTimeStamp, dataLocation)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Communication.SuppressionListResourceData</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="listName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="lastUpdatedTimeStamp" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="createdTimeStamp" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="dataLocation" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="listName"> The the name of the suppression list. This value must match one of the valid sender usernames of the sending domain. </param>
-        <param name="lastUpdatedTimeStamp"> The date the resource was last updated. </param>
-        <param name="createdTimeStamp"> The date the resource was created. </param>
-        <param name="dataLocation"> The location where the SuppressionListAddress data is stored at rest. This value is inherited from the parent Domains resource. </param>
-        <summary> Initializes a new instance of SuppressionListResourceData. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Communication.SuppressionListResourceData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -702,8 +915,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Communication</AssemblyName>
-        <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Communication.Models.VerificationDnsRecord</ReturnType>

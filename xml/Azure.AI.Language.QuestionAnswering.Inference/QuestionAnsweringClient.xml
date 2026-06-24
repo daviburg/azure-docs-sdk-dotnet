@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> The QuestionAnswering service client. </summary>
+    <summary> The QuestionAnsweringClient. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -30,6 +30,26 @@
       <Parameters />
       <Docs>
         <summary> Initializes a new instance of QuestionAnsweringClient for mocking. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QuestionAnsweringClient (Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient.#ctor(Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As QuestionAnsweringClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient : Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings -&gt; Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient" Usage="new Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for QuestionAnsweringClient. </param>
+        <summary> Initializes a new instance of QuestionAnsweringClient from a <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClientSettings" />. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,12 +269,15 @@
         <param name="projectName"> The name of the project to use. </param>
         <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="knowledgeBaseQueryOptions"> Post body of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Answers the specified question using your knowledge base. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="knowledgeBaseQueryOptions" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnswers">
@@ -281,18 +304,16 @@
         <param name="projectName"> The name of the project to use. </param>
         <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Answers the specified question using your knowledge base.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient.GetAnswers(System.String,System.String,Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
@@ -392,12 +413,15 @@
         <param name="projectName"> The name of the project to use. </param>
         <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="knowledgeBaseQueryOptions"> Post body of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Answers the specified question using your knowledge base. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="knowledgeBaseQueryOptions" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnswersAsync">
@@ -424,18 +448,16 @@
         <param name="projectName"> The name of the project to use. </param>
         <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Answers the specified question using your knowledge base.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient.GetAnswersAsync(System.String,System.String,Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
@@ -459,12 +481,13 @@
       </Parameters>
       <Docs>
         <param name="textQueryOptions"> Post body of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Answers the specified question using the provided text in the body. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="textQueryOptions" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnswersFromText">
@@ -487,14 +510,10 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Answers the specified question using the provided text in the body.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient.GetAnswersFromText(Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -602,12 +621,13 @@
       </Parameters>
       <Docs>
         <param name="textQueryOptions"> Post body of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Answers the specified question using the provided text in the body. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="textQueryOptions" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAnswersFromTextAsync">
@@ -630,14 +650,10 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Answers the specified question using the provided text in the body.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringClient.GetAnswersFromTextAsync(Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

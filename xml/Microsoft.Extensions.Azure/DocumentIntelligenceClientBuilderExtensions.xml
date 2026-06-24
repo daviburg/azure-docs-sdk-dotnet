@@ -7,13 +7,14 @@
   <AssemblyInfo>
     <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Extension methods to add <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" />, <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> to client builder. </summary>
+    <summary> Extension methods to add clients to <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,6 +28,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -45,10 +47,12 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The Document Intelligence service endpoint. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> instance. </summary>
+        <param name="endpoint"> Service endpoint. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddDocumentIntelligenceAdministrationClient&lt;TBuilder&gt;">
@@ -61,6 +65,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -80,11 +85,13 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The Document Intelligence service endpoint. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> instance. </summary>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> or <paramref name="credential" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddDocumentIntelligenceAdministrationClient&lt;TBuilder,TConfiguration&gt;">
@@ -97,6 +104,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -117,8 +125,8 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceAdministrationClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -133,6 +141,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -151,10 +160,12 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The Document Intelligence service endpoint. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> instance. </summary>
+        <param name="endpoint"> Service endpoint. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddDocumentIntelligenceClient&lt;TBuilder&gt;">
@@ -167,6 +178,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -186,11 +198,13 @@
       <Docs>
         <typeparam name="TBuilder">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="endpoint"> The Document Intelligence service endpoint. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> instance. </summary>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> or <paramref name="credential" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddDocumentIntelligenceClient&lt;TBuilder,TConfiguration&gt;">
@@ -203,6 +217,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.DocumentIntelligence</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.Extensions.IAzureClientBuilder&lt;Azure.AI.DocumentIntelligence.DocumentIntelligenceClient,Azure.AI.DocumentIntelligence.DocumentIntelligenceClientOptions&gt;</ReturnType>
@@ -223,8 +238,8 @@
         <typeparam name="TBuilder">To be added.</typeparam>
         <typeparam name="TConfiguration">To be added.</typeparam>
         <param name="builder"> The builder to register with. </param>
-        <param name="configuration"> The configuration values. </param>
-        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> instance. </summary>
+        <param name="configuration"> The configuration to use for the client. </param>
+        <summary> Registers a <see cref="T:Azure.AI.DocumentIntelligence.DocumentIntelligenceClient" /> client with the specified <see cref="T:Azure.Core.Extensions.IAzureClientBuilder`2" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

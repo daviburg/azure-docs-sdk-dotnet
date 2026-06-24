@@ -1,0 +1,144 @@
+<Type Name="DisposableConfig" FullName="Microsoft.ClientModel.TestFramework.DisposableConfig">
+  <TypeSignature Language="C#" Value="public abstract class DisposableConfig : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DisposableConfig extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.DisposableConfig" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DisposableConfig&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type DisposableConfig = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Abstract base class for test configuration utilities that need to temporarily modify system state
+            and ensure proper cleanup when disposed. This class provides thread-safe access to configuration
+            changes and automatically restores original values on disposal.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisposableConfig (System.Collections.Generic.Dictionary&lt;string,string&gt; values, System.Threading.SemaphoreSlim sem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.Dictionary`2&lt;string, string&gt; values, class System.Threading.SemaphoreSlim sem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.DisposableConfig.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},System.Threading.SemaphoreSlim)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (values As Dictionary(Of String, String), sem As SemaphoreSlim)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.DisposableConfig : System.Collections.Generic.Dictionary&lt;string, string&gt; * System.Threading.SemaphoreSlim -&gt; Microsoft.ClientModel.TestFramework.DisposableConfig" Usage="new Microsoft.ClientModel.TestFramework.DisposableConfig (values, sem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="sem" Type="System.Threading.SemaphoreSlim" />
+      </Parameters>
+      <Docs>
+        <param name="values">A dictionary containing the configuration items to modify (key-value pairs).</param>
+        <param name="sem">The semaphore to use for thread synchronization.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.DisposableConfig" /> class with multiple configuration items.
+            Acquires a lock to ensure thread-safe modification and stores the original values for later restoration.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            Thrown when the semaphore cannot be acquired immediately, indicating that another instance
+            is currently modifying configuration. Consider marking conflicting tests as NonParallelizable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisposableConfig (string name, string value, System.Threading.SemaphoreSlim sem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string value, class System.Threading.SemaphoreSlim sem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.DisposableConfig.#ctor(System.String,System.String,System.Threading.SemaphoreSlim)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As String, sem As SemaphoreSlim)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.DisposableConfig : string * string * System.Threading.SemaphoreSlim -&gt; Microsoft.ClientModel.TestFramework.DisposableConfig" Usage="new Microsoft.ClientModel.TestFramework.DisposableConfig (name, value, sem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="sem" Type="System.Threading.SemaphoreSlim" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name/key of the configuration item to modify.</param>
+        <param name="value">The new value to set for the configuration item.</param>
+        <param name="sem">The semaphore to use for thread synchronization.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.DisposableConfig" /> class with a single configuration item.
+            Acquires a lock to ensure thread-safe modification and stores the original value for later restoration.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            Thrown when the semaphore cannot be acquired immediately, indicating that another instance
+            is currently modifying configuration. Consider marking conflicting tests as NonParallelizable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.DisposableConfig.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="disposableConfig.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Restores the original configuration values and releases the semaphore lock.
+            This method is automatically called when the instance is disposed, ensuring
+            that the system state is properly restored even if an exception occurs during testing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalValues">
+      <MemberSignature Language="C#" Value="protected readonly System.Collections.Generic.Dictionary&lt;string,string&gt; OriginalValues;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Collections.Generic.Dictionary`2&lt;string, string&gt; OriginalValues" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.DisposableConfig.OriginalValues" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly OriginalValues As Dictionary(Of String, String) " />
+      <MemberSignature Language="F#" Value="val mutable OriginalValues : System.Collections.Generic.Dictionary&lt;string, string&gt;" Usage="Microsoft.ClientModel.TestFramework.DisposableConfig.OriginalValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dictionary storing the original values of configuration items before they were modified.
+            Used to restore the original state when the instance is disposed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

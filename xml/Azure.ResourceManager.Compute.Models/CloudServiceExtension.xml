@@ -39,8 +39,18 @@
       <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("CloudService operations are no longer supported.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("CloudService operations are no longer supported.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary> Describes a cloud service Extension. </summary>
+    <summary> This type is obsolete. Cloud Services (classic) are no longer supported for new customers. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -57,7 +67,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Compute.Models.CloudServiceExtension" />. </summary>
+        <summary> Initializes a new instance of CloudServiceExtension. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -77,7 +87,7 @@
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available. </summary>
+        <summary> Whether to auto-upgrade minor version. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -98,7 +108,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Specifies the type of the extension. </summary>
+        <summary> The extension type. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,13 +129,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Tag to force apply the provided public and protected settings.
-            Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
-            If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
-            If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
-            it is up to handler implementation whether to re-run it or not
-            </summary>
+        <summary> The force update tag. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -172,7 +176,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The name of the extension. </summary>
+        <summary> The name. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -193,15 +197,7 @@
         <ReturnType>System.BinaryData</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Protected settings for the extension which are encrypted before sent to the role instance.
-            <para>
-            To assign an object to this property use <see cref="M:System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions)" />.
-            </para><para>
-            To assign an already formatted json string to this property use <see cref="M:System.BinaryData.FromString(System.String)" />.
-            </para><para>
-            Examples:
-            <list type="bullet"><item><term>BinaryData.FromObjectAsJson("foo")</term><description>Creates a payload of "foo".</description></item><item><term>BinaryData.FromString("\"foo\"")</term><description>Creates a payload of "foo".</description></item><item><term>BinaryData.FromObjectAsJson(new { key = "value" })</term><description>Creates a payload of { "key": "value" }.</description></item><item><term>BinaryData.FromString("{\"key\": \"value\"}")</term><description>Creates a payload of { "key": "value" }.</description></item></list></para></summary>
+        <summary> The protected settings. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -222,7 +218,7 @@
         <ReturnType>Azure.ResourceManager.Compute.Models.CloudServiceVaultAndSecretReference</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Protected settings for the extension, referenced using KeyVault which are encrypted before sent to the role instance. </summary>
+        <summary> The protected settings from key vault. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -243,7 +239,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The provisioning state, which only appears in the response. </summary>
+        <summary> The provisioning state. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -264,17 +260,20 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The name of the extension handler publisher. </summary>
+        <summary> The publisher. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="RolesAppliedTo">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; RolesAppliedTo { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; RolesAppliedTo { get; }" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; RolesAppliedTo" />
       <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.Compute.Models.CloudServiceExtension.RolesAppliedTo" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RolesAppliedTo As IList(Of String)" />
-      <MemberSignature Language="F#" Value="member this.RolesAppliedTo : System.Collections.Generic.IList&lt;string&gt;" Usage="Azure.ResourceManager.Compute.Models.CloudServiceExtension.RolesAppliedTo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RolesAppliedTo As IList(Of String)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="member this.RolesAppliedTo : System.Collections.Generic.IList&lt;string&gt;" Usage="Azure.ResourceManager.Compute.Models.CloudServiceExtension.RolesAppliedTo" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; RolesAppliedTo { get; set; }" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Property RolesAppliedTo As IList(Of String)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="member this.RolesAppliedTo : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Azure.ResourceManager.Compute.Models.CloudServiceExtension.RolesAppliedTo" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Compute</AssemblyName>
@@ -285,7 +284,7 @@
         <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service. </summary>
+        <summary> The roles applied to. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -306,15 +305,7 @@
         <ReturnType>System.BinaryData</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
-            <para>
-            To assign an object to this property use <see cref="M:System.BinaryData.FromObjectAsJson``1(``0,System.Text.Json.JsonSerializerOptions)" />.
-            </para><para>
-            To assign an already formatted json string to this property use <see cref="M:System.BinaryData.FromString(System.String)" />.
-            </para><para>
-            Examples:
-            <list type="bullet"><item><term>BinaryData.FromObjectAsJson("foo")</term><description>Creates a payload of "foo".</description></item><item><term>BinaryData.FromString("\"foo\"")</term><description>Creates a payload of "foo".</description></item><item><term>BinaryData.FromObjectAsJson(new { key = "value" })</term><description>Creates a payload of { "key": "value" }.</description></item><item><term>BinaryData.FromString("{\"key\": \"value\"}")</term><description>Creates a payload of { "key": "value" }.</description></item></list></para></summary>
+        <summary> The settings. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -494,7 +485,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance. </summary>
+        <summary> The type handler version. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

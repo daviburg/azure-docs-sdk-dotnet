@@ -1,0 +1,95 @@
+<Type Name="RetryOnErrorAttribute" FullName="Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute">
+  <TypeSignature Language="C#" Value="public abstract class RetryOnErrorAttribute : NUnit.Framework.NUnitAttribute, NUnit.Framework.Interfaces.IRepeatTest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RetryOnErrorAttribute extends NUnit.Framework.NUnitAttribute implements class NUnit.Framework.Interfaces.ICommandWrapper, class NUnit.Framework.Interfaces.IRepeatTest" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RetryOnErrorAttribute&#xA;Inherits NUnitAttribute&#xA;Implements IRepeatTest" />
+  <TypeSignature Language="F#" Value="type RetryOnErrorAttribute = class&#xA;    inherit NUnitAttribute&#xA;    interface IRepeatTest&#xA;    interface ICommandWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.NUnitAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.ICommandWrapper</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IRepeatTest</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute used to specify that a test must be retried in the specific case of a known error. If the test
+            continues to fail due to this particular issue after reaching the specified limit of tries, the test result is
+            marked as inconclusive.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RetryOnErrorAttribute (int tryCount, Func&lt;NUnit.Framework.Internal.TestExecutionContext,bool&gt; shouldRetry);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 tryCount, class System.Func`2&lt;class NUnit.Framework.Internal.TestExecutionContext, bool&gt; shouldRetry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute.#ctor(System.Int32,System.Func{NUnit.Framework.Internal.TestExecutionContext,System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (tryCount As Integer, shouldRetry As Func(Of TestExecutionContext, Boolean))" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute : int * Func&lt;NUnit.Framework.Internal.TestExecutionContext, bool&gt; -&gt; Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute" Usage="new Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute (tryCount, shouldRetry)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tryCount" Type="System.Int32" />
+        <Parameter Name="shouldRetry" Type="System.Func&lt;NUnit.Framework.Internal.TestExecutionContext,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tryCount">The number of times that the test can be executed.</param>
+        <param name="shouldRetry">The function that determines whether the test should be retried.</param>
+        <summary>
+            Initializes a <see cref="T:Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute" /> instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public NUnit.Framework.Internal.Commands.TestCommand Wrap (NUnit.Framework.Internal.Commands.TestCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class NUnit.Framework.Internal.Commands.TestCommand Wrap(class NUnit.Framework.Internal.Commands.TestCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RetryOnErrorAttribute.Wrap(NUnit.Framework.Internal.Commands.TestCommand)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Wrap (command As TestCommand) As TestCommand" />
+      <MemberSignature Language="F#" Value="abstract member Wrap : NUnit.Framework.Internal.Commands.TestCommand -&gt; NUnit.Framework.Internal.Commands.TestCommand&#xA;override this.Wrap : NUnit.Framework.Internal.Commands.TestCommand -&gt; NUnit.Framework.Internal.Commands.TestCommand" Usage="retryOnErrorAttribute.Wrap command" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.ICommandWrapper.Wrap(NUnit.Framework.Internal.Commands.TestCommand)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>NUnit.Framework.Internal.Commands.TestCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="NUnit.Framework.Internal.Commands.TestCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command to wrap.</param>
+        <summary>
+            Wrap a command and return the result.
+            </summary>
+        <returns>The wrapped command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

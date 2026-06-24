@@ -18,6 +18,104 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="CustomerManagedKeyEncryption">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption CustomerManagedKeyEncryption (Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity keyEncryptionKeyIdentity = default, Uri keyEncryptionKeyUri = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption CustomerManagedKeyEncryption(class Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity keyEncryptionKeyIdentity, class System.Uri keyEncryptionKeyUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.CustomerManagedKeyEncryption(Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity,System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CustomerManagedKeyEncryption (Optional keyEncryptionKeyIdentity As CustomerManagedKeyEncryptionKeyIdentity = Nothing, Optional keyEncryptionKeyUri As Uri = Nothing) As CustomerManagedKeyEncryption" />
+      <MemberSignature Language="F#" Value="static member CustomerManagedKeyEncryption : Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity * Uri -&gt; Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.CustomerManagedKeyEncryption (keyEncryptionKeyIdentity, keyEncryptionKeyUri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyEncryptionKeyIdentity" Type="Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="keyEncryptionKeyUri" Type="System.Uri" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="keyEncryptionKeyIdentity"> All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault. </param>
+        <param name="keyEncryptionKeyUri"> key encryption key Url, versioned or non-versioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomerManagedKeyEncryptionKeyIdentity">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity CustomerManagedKeyEncryptionKeyIdentity (Azure.ResourceManager.Maps.Models.MapsIdentityType? identityType = default, Azure.Core.ResourceIdentifier userAssignedIdentityResourceId = default, Guid? federatedClientId = default, Guid? delegatedIdentityClientId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity CustomerManagedKeyEncryptionKeyIdentity(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsIdentityType&gt; identityType, class Azure.Core.ResourceIdentifier userAssignedIdentityResourceId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; federatedClientId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; delegatedIdentityClientId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.CustomerManagedKeyEncryptionKeyIdentity(System.Nullable{Azure.ResourceManager.Maps.Models.MapsIdentityType},Azure.Core.ResourceIdentifier,System.Nullable{System.Guid},System.Nullable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CustomerManagedKeyEncryptionKeyIdentity (Optional identityType As Nullable(Of MapsIdentityType) = Nothing, Optional userAssignedIdentityResourceId As ResourceIdentifier = Nothing, Optional federatedClientId As Nullable(Of Guid) = Nothing, Optional delegatedIdentityClientId As Nullable(Of Guid) = Nothing) As CustomerManagedKeyEncryptionKeyIdentity" />
+      <MemberSignature Language="F#" Value="static member CustomerManagedKeyEncryptionKeyIdentity : Nullable&lt;Azure.ResourceManager.Maps.Models.MapsIdentityType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;Guid&gt; * Nullable&lt;Guid&gt; -&gt; Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.CustomerManagedKeyEncryptionKeyIdentity (identityType, userAssignedIdentityResourceId, federatedClientId, delegatedIdentityClientId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityType" Type="System.Nullable&lt;Azure.ResourceManager.Maps.Models.MapsIdentityType&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="userAssignedIdentityResourceId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="federatedClientId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="delegatedIdentityClientId" Type="System.Nullable&lt;System.Guid&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="identityType"> The type of identity to use. Values can be systemAssignedIdentity, userAssignedIdentity, or delegatedResourceIdentity. </param>
+        <param name="userAssignedIdentityResourceId"> User assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/&lt;resource group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId. Mutually exclusive with identityType systemAssignedIdentity. </param>
+        <param name="federatedClientId"> application client identity to use for accessing key encryption key Url in a different tenant. Ex: f83c6b1b-4d34-47e4-bb34-9d83df58b540. </param>
+        <param name="delegatedIdentityClientId"> delegated identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/&lt;resource group&gt;/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId. Mutually exclusive with identityType systemAssignedIdentity and userAssignedIdentity - internal use only. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryptionKeyIdentity" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapsAccountData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.MapsAccountData MapsAccountData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Maps.Models.MapsAccountProperties properties = default, Azure.ResourceManager.Maps.Models.MapsSku sku = default, Azure.ResourceManager.Maps.Models.MapsAccountKind? kind = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.MapsAccountData MapsAccountData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Maps.Models.MapsAccountProperties properties, class Azure.ResourceManager.Maps.Models.MapsSku sku, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsAccountKind&gt; kind, class Azure.ResourceManager.Models.ManagedServiceIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.Maps.Models.MapsAccountProperties,Azure.ResourceManager.Maps.Models.MapsSku,System.Nullable{Azure.ResourceManager.Maps.Models.MapsAccountKind},Azure.ResourceManager.Models.ManagedServiceIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional properties As MapsAccountProperties = Nothing, Optional sku As MapsSku = Nothing, Optional kind As Nullable(Of MapsAccountKind) = Nothing, Optional identity As ManagedServiceIdentity = Nothing) As MapsAccountData" />
+      <MemberSignature Language="F#" Value="static member MapsAccountData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.Maps.Models.MapsAccountProperties * Azure.ResourceManager.Maps.Models.MapsSku * Nullable&lt;Azure.ResourceManager.Maps.Models.MapsAccountKind&gt; * Azure.ResourceManager.Models.ManagedServiceIdentity -&gt; Azure.ResourceManager.Maps.MapsAccountData" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountData (id, name, resourceType, systemData, tags, location, properties, sku, kind, identity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.MapsAccountData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.Maps.Models.MapsAccountProperties" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sku" Type="Azure.ResourceManager.Maps.Models.MapsSku" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="kind" Type="System.Nullable&lt;Azure.ResourceManager.Maps.Models.MapsAccountKind&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> The map account properties. </param>
+        <param name="sku"> The SKU of this account. </param>
+        <param name="kind"> Get or Set Kind property. </param>
+        <param name="identity"> The managed service identities assigned to this resource. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.MapsAccountData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MapsAccountData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.MapsAccountData MapsAccountData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Maps.Models.MapsSku sku = default, Azure.ResourceManager.Maps.Models.MapsAccountKind? kind = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Azure.ResourceManager.Maps.Models.MapsAccountProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.MapsAccountData MapsAccountData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Maps.Models.MapsSku sku, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsAccountKind&gt; kind, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, class Azure.ResourceManager.Maps.Models.MapsAccountProperties properties) cil managed" />
@@ -30,6 +128,12 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Maps.MapsAccountData</ReturnType>
       </ReturnValue>
@@ -93,13 +197,11 @@
       </Docs>
     </Member>
     <Member MemberName="MapsAccountPatch">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountPatch MapsAccountPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.ResourceManager.Maps.Models.MapsAccountKind? kind = default, Azure.ResourceManager.Maps.Models.MapsSku sku = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Guid? uniqueId = default, bool? disableLocalAuth = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue = default, Azure.ResourceManager.Maps.Models.MapsEncryption encryption = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountPatch MapsAccountPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.ResourceManager.Maps.Models.MapsAccountKind? kind = default, Azure.ResourceManager.Maps.Models.MapsSku sku = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Guid? uniqueId = default, bool? disableLocalAuth = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue = default, Azure.ResourceManager.Maps.Models.MapsEncryption encryption = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsAccountPatch MapsAccountPatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsAccountKind&gt; kind, class Azure.ResourceManager.Maps.Models.MapsSku sku, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; uniqueId, valuetype System.Nullable`1&lt;bool&gt; disableLocalAuth, string provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue, class Azure.ResourceManager.Maps.Models.MapsEncryption encryption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountPatch(System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{Azure.ResourceManager.Maps.Models.MapsAccountKind},Azure.ResourceManager.Maps.Models.MapsSku,Azure.ResourceManager.Models.ManagedServiceIdentity,System.Nullable{System.Guid},System.Nullable{System.Boolean},System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Maps.Models.MapsLinkedResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Maps.Models.MapsCorsRule},Azure.ResourceManager.Maps.Models.MapsEncryption)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountPatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional kind As Nullable(Of MapsAccountKind) = Nothing, Optional sku As MapsSku = Nothing, Optional identity As ManagedServiceIdentity = Nothing, Optional uniqueId As Nullable(Of Guid) = Nothing, Optional disableLocalAuth As Nullable(Of Boolean) = Nothing, Optional provisioningState As String = Nothing, Optional linkedResources As IEnumerable(Of MapsLinkedResource) = Nothing, Optional corsRulesValue As IEnumerable(Of MapsCorsRule) = Nothing, Optional encryption As MapsEncryption = Nothing) As MapsAccountPatch" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountPatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional kind As Nullable(Of MapsAccountKind) = Nothing, Optional sku As MapsSku = Nothing, Optional identity As ManagedServiceIdentity = Nothing, Optional uniqueId As Nullable(Of Guid) = Nothing, Optional disableLocalAuth As Nullable(Of Boolean) = Nothing, Optional provisioningState As String = Nothing, Optional linkedResources As IEnumerable(Of MapsLinkedResource) = Nothing, Optional corsRulesValue As IEnumerable(Of MapsCorsRule) = Nothing, Optional encryption As MapsEncryption = Nothing) As MapsAccountPatch" />
       <MemberSignature Language="F#" Value="static member MapsAccountPatch : System.Collections.Generic.IDictionary&lt;string, string&gt; * Nullable&lt;Azure.ResourceManager.Maps.Models.MapsAccountKind&gt; * Azure.ResourceManager.Maps.Models.MapsSku * Azure.ResourceManager.Models.ManagedServiceIdentity * Nullable&lt;Guid&gt; * Nullable&lt;bool&gt; * string * seq&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; * seq&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; * Azure.ResourceManager.Maps.Models.MapsEncryption -&gt; Azure.ResourceManager.Maps.Models.MapsAccountPatch" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountPatch (tags, kind, sku, identity, uniqueId, disableLocalAuth, provisioningState, linkedResources, corsRulesValue, encryption)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountPatch MapsAccountPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.ResourceManager.Maps.Models.MapsAccountKind? kind, Azure.ResourceManager.Maps.Models.MapsSku sku, Azure.ResourceManager.Models.ManagedServiceIdentity identity, Guid? uniqueId, bool? disableLocalAuth, string provisioningState, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue, Azure.ResourceManager.Maps.Models.MapsEncryption encryption);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountPatch (tags As IDictionary(Of String, String), kind As Nullable(Of MapsAccountKind), sku As MapsSku, identity As ManagedServiceIdentity, uniqueId As Nullable(Of Guid), disableLocalAuth As Nullable(Of Boolean), provisioningState As String, linkedResources As IEnumerable(Of MapsLinkedResource), corsRulesValue As IEnumerable(Of MapsCorsRule), encryption As MapsEncryption) As MapsAccountPatch" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
@@ -194,13 +296,11 @@
       </Docs>
     </Member>
     <Member MemberName="MapsAccountProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountProperties MapsAccountProperties (Guid? uniqueId = default, bool? disableLocalAuth = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue = default, Azure.ResourceManager.Maps.Models.MapsEncryption encryption = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountProperties MapsAccountProperties (Guid? uniqueId = default, bool? disableLocalAuth = default, string provisioningState = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue = default, Azure.ResourceManager.Maps.Models.MapsEncryption encryption = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsAccountProperties MapsAccountProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; uniqueId, valuetype System.Nullable`1&lt;bool&gt; disableLocalAuth, string provisioningState, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue, class Azure.ResourceManager.Maps.Models.MapsEncryption encryption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountProperties(System.Nullable{System.Guid},System.Nullable{System.Boolean},System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Maps.Models.MapsLinkedResource},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Maps.Models.MapsCorsRule},Azure.ResourceManager.Maps.Models.MapsEncryption)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountProperties (Optional uniqueId As Nullable(Of Guid) = Nothing, Optional disableLocalAuth As Nullable(Of Boolean) = Nothing, Optional provisioningState As String = Nothing, Optional linkedResources As IEnumerable(Of MapsLinkedResource) = Nothing, Optional corsRulesValue As IEnumerable(Of MapsCorsRule) = Nothing, Optional encryption As MapsEncryption = Nothing) As MapsAccountProperties" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountProperties (Optional uniqueId As Nullable(Of Guid) = Nothing, Optional disableLocalAuth As Nullable(Of Boolean) = Nothing, Optional provisioningState As String = Nothing, Optional linkedResources As IEnumerable(Of MapsLinkedResource) = Nothing, Optional corsRulesValue As IEnumerable(Of MapsCorsRule) = Nothing, Optional encryption As MapsEncryption = Nothing) As MapsAccountProperties" />
       <MemberSignature Language="F#" Value="static member MapsAccountProperties : Nullable&lt;Guid&gt; * Nullable&lt;bool&gt; * string * seq&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; * seq&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; * Azure.ResourceManager.Maps.Models.MapsEncryption -&gt; Azure.ResourceManager.Maps.Models.MapsAccountProperties" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsAccountProperties (uniqueId, disableLocalAuth, provisioningState, linkedResources, corsRulesValue, encryption)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsAccountProperties MapsAccountProperties (Guid? uniqueId, bool? disableLocalAuth, string provisioningState, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsLinkedResource&gt; linkedResources, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Maps.Models.MapsCorsRule&gt; corsRulesValue, Azure.ResourceManager.Maps.Models.MapsEncryption encryption);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsAccountProperties (uniqueId As Nullable(Of Guid), disableLocalAuth As Nullable(Of Boolean), provisioningState As String, linkedResources As IEnumerable(Of MapsLinkedResource), corsRulesValue As IEnumerable(Of MapsCorsRule), encryption As MapsEncryption) As MapsAccountProperties" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
@@ -398,13 +498,11 @@
       </Docs>
     </Member>
     <Member MemberName="MapsCreatorPatch">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorPatch MapsCreatorPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, string provisioningState = default, int? storageUnits = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorPatch MapsCreatorPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, string provisioningState = default, int? storageUnits = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsCreatorPatch MapsCreatorPatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, string provisioningState, valuetype System.Nullable`1&lt;int32&gt; storageUnits) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsCreatorPatch(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorPatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional provisioningState As String = Nothing, Optional storageUnits As Nullable(Of Integer) = Nothing) As MapsCreatorPatch" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorPatch (Optional tags As IDictionary(Of String, String) = Nothing, Optional provisioningState As String = Nothing, Optional storageUnits As Nullable(Of Integer) = Nothing) As MapsCreatorPatch" />
       <MemberSignature Language="F#" Value="static member MapsCreatorPatch : System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Nullable&lt;int&gt; -&gt; Azure.ResourceManager.Maps.Models.MapsCreatorPatch" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsCreatorPatch (tags, provisioningState, storageUnits)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorPatch MapsCreatorPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags, string provisioningState, int? storageUnits);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorPatch (tags As IDictionary(Of String, String), provisioningState As String, storageUnits As Nullable(Of Integer)) As MapsCreatorPatch" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
@@ -467,13 +565,11 @@
       </Docs>
     </Member>
     <Member MemberName="MapsCreatorProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorProperties MapsCreatorProperties (string provisioningState = default, int storageUnits = 0);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorProperties MapsCreatorProperties (string provisioningState = default, int storageUnits = 0);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsCreatorProperties MapsCreatorProperties(string provisioningState, int32 storageUnits) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsCreatorProperties(System.String,System.Int32)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorProperties (Optional provisioningState As String = Nothing, Optional storageUnits As Integer = 0) As MapsCreatorProperties" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorProperties (Optional provisioningState As String = Nothing, Optional storageUnits As Integer = 0) As MapsCreatorProperties" />
       <MemberSignature Language="F#" Value="static member MapsCreatorProperties : string * int -&gt; Azure.ResourceManager.Maps.Models.MapsCreatorProperties" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsCreatorProperties (provisioningState, storageUnits)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsCreatorProperties MapsCreatorProperties (string provisioningState, int storageUnits);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsCreatorProperties (provisioningState As String, storageUnits As Integer) As MapsCreatorProperties" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
@@ -531,6 +627,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MapsEncryption">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsEncryption MapsEncryption (Azure.ResourceManager.Maps.Models.MapsInfrastructureEncryption? infrastructureEncryption = default, Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption customerManagedKeyEncryption = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsEncryption MapsEncryption(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsInfrastructureEncryption&gt; infrastructureEncryption, class Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption customerManagedKeyEncryption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsEncryption(System.Nullable{Azure.ResourceManager.Maps.Models.MapsInfrastructureEncryption},Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsEncryption (Optional infrastructureEncryption As Nullable(Of MapsInfrastructureEncryption) = Nothing, Optional customerManagedKeyEncryption As CustomerManagedKeyEncryption = Nothing) As MapsEncryption" />
+      <MemberSignature Language="F#" Value="static member MapsEncryption : Nullable&lt;Azure.ResourceManager.Maps.Models.MapsInfrastructureEncryption&gt; * Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption -&gt; Azure.ResourceManager.Maps.Models.MapsEncryption" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsEncryption (infrastructureEncryption, customerManagedKeyEncryption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.MapsEncryption</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="infrastructureEncryption" Type="System.Nullable&lt;Azure.ResourceManager.Maps.Models.MapsInfrastructureEncryption&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="customerManagedKeyEncryption" Type="Azure.ResourceManager.Maps.Models.CustomerManagedKeyEncryption" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="infrastructureEncryption"> Values are enabled and disabled. </param>
+        <param name="customerManagedKeyEncryption"> All Customer-managed key encryption properties for the resource. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.MapsEncryption" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MapsKeySpecification">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsKeySpecification MapsKeySpecification (Azure.ResourceManager.Maps.Models.MapsKeyType keyType = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsKeySpecification MapsKeySpecification(valuetype Azure.ResourceManager.Maps.Models.MapsKeyType keyType) cil managed" />
@@ -552,6 +674,56 @@
         <param name="keyType"> Whether the operation refers to the primary or secondary key. </param>
         <summary> Whether the operation refers to the primary or secondary key. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.MapsKeySpecification" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapsLinkedResource">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsLinkedResource MapsLinkedResource (string uniqueName = default, string id = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsLinkedResource MapsLinkedResource(string uniqueName, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsLinkedResource(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsLinkedResource (Optional uniqueName As String = Nothing, Optional id As String = Nothing) As MapsLinkedResource" />
+      <MemberSignature Language="F#" Value="static member MapsLinkedResource : string * string -&gt; Azure.ResourceManager.Maps.Models.MapsLinkedResource" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsLinkedResource (uniqueName, id)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.MapsLinkedResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uniqueName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="id" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="uniqueName"> A provided name which uniquely identifies the linked resource. </param>
+        <param name="id"> ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/accounts/{storageName}'. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.MapsLinkedResource" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapsLocationItem">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsLocationItem MapsLocationItem (string locationName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsLocationItem MapsLocationItem(string locationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsLocationItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsLocationItem (Optional locationName As String = Nothing) As MapsLocationItem" />
+      <MemberSignature Language="F#" Value="static member MapsLocationItem : string -&gt; Azure.ResourceManager.Maps.Models.MapsLocationItem" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsLocationItem locationName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.MapsLocationItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="locationName"> The location name. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.MapsLocationItem" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -626,6 +798,34 @@
         <param name="requiredZoneNames"> The private link resource private link DNS zone name. </param>
         <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Maps.MapsPrivateLinkResourceData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapsPrivateLinkServiceConnectionState">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Maps.Models.MapsPrivateLinkServiceConnectionState MapsPrivateLinkServiceConnectionState (Azure.ResourceManager.Maps.Models.MapsPrivateEndpointServiceConnectionStatus? status = default, string description = default, string actionsRequired = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Maps.Models.MapsPrivateLinkServiceConnectionState MapsPrivateLinkServiceConnectionState(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Maps.Models.MapsPrivateEndpointServiceConnectionStatus&gt; status, string description, string actionsRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsPrivateLinkServiceConnectionState(System.Nullable{Azure.ResourceManager.Maps.Models.MapsPrivateEndpointServiceConnectionStatus},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapsPrivateLinkServiceConnectionState (Optional status As Nullable(Of MapsPrivateEndpointServiceConnectionStatus) = Nothing, Optional description As String = Nothing, Optional actionsRequired As String = Nothing) As MapsPrivateLinkServiceConnectionState" />
+      <MemberSignature Language="F#" Value="static member MapsPrivateLinkServiceConnectionState : Nullable&lt;Azure.ResourceManager.Maps.Models.MapsPrivateEndpointServiceConnectionStatus&gt; * string * string -&gt; Azure.ResourceManager.Maps.Models.MapsPrivateLinkServiceConnectionState" Usage="Azure.ResourceManager.Maps.Models.ArmMapsModelFactory.MapsPrivateLinkServiceConnectionState (status, description, actionsRequired)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Maps</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Maps.Models.MapsPrivateLinkServiceConnectionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.Maps.Models.MapsPrivateEndpointServiceConnectionStatus&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionsRequired" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="status"> Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. </param>
+        <param name="description"> The reason for approval/rejection of the connection. </param>
+        <param name="actionsRequired"> A message indicating if changes on the service provider require any updates on the consumer. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Maps.Models.MapsPrivateLinkServiceConnectionState" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

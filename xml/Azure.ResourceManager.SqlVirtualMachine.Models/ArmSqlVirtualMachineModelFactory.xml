@@ -9,6 +9,7 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +29,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.AvailabilityGroupListenerData</ReturnType>
@@ -74,16 +75,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerLoadBalancerConfiguration</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="privateIPAddress" Type="Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="publicIPAddressResourceId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="loadBalancerResourceId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="probePort" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlVmInstances" Type="System.Collections.Generic.IEnumerable&lt;Azure.Core.ResourceIdentifier&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="privateIPAddress" Type="Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress" />
+        <Parameter Name="publicIPAddressResourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="loadBalancerResourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="probePort" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="sqlVmInstances" Type="System.Collections.Generic.IEnumerable&lt;Azure.Core.ResourceIdentifier&gt;" />
       </Parameters>
       <Docs>
         <param name="privateIPAddress"> Private IP address. </param>
@@ -93,6 +95,190 @@
         <param name="sqlVmInstances"> List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener. </param>
         <summary> A load balancer configuration for an availability group listener. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerLoadBalancerConfiguration" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailabilityGroupListenerPrivateIPAddress">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress AvailabilityGroupListenerPrivateIPAddress (System.Net.IPAddress ipAddress = default, Azure.Core.ResourceIdentifier subnetResourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress AvailabilityGroupListenerPrivateIPAddress(class System.Net.IPAddress ipAddress, class Azure.Core.ResourceIdentifier subnetResourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.AvailabilityGroupListenerPrivateIPAddress(System.Net.IPAddress,Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AvailabilityGroupListenerPrivateIPAddress (Optional ipAddress As IPAddress = Nothing, Optional subnetResourceId As ResourceIdentifier = Nothing) As AvailabilityGroupListenerPrivateIPAddress" />
+      <MemberSignature Language="F#" Value="static member AvailabilityGroupListenerPrivateIPAddress : System.Net.IPAddress * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.AvailabilityGroupListenerPrivateIPAddress (ipAddress, subnetResourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipAddress" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subnetResourceId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="ipAddress"> Private IP address bound to the availability group listener. </param>
+        <param name="subnetResourceId"> Subnet used to include private IP. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailabilityGroupReplica">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplica AvailabilityGroupReplica (Azure.Core.ResourceIdentifier sqlVmInstanceId = default, Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaRole? role = default, Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaCommitMode? commit = default, Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaFailoverMode? failover = default, Azure.ResourceManager.SqlVirtualMachine.Models.ReadableSecondaryMode? readableSecondary = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplica AvailabilityGroupReplica(class Azure.Core.ResourceIdentifier sqlVmInstanceId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaRole&gt; role, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaCommitMode&gt; commit, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaFailoverMode&gt; failover, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.ReadableSecondaryMode&gt; readableSecondary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.AvailabilityGroupReplica(Azure.Core.ResourceIdentifier,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaRole},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaCommitMode},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaFailoverMode},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.ReadableSecondaryMode})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AvailabilityGroupReplica (Optional sqlVmInstanceId As ResourceIdentifier = Nothing, Optional role As Nullable(Of AvailabilityGroupReplicaRole) = Nothing, Optional commit As Nullable(Of AvailabilityGroupReplicaCommitMode) = Nothing, Optional failover As Nullable(Of AvailabilityGroupReplicaFailoverMode) = Nothing, Optional readableSecondary As Nullable(Of ReadableSecondaryMode) = Nothing) As AvailabilityGroupReplica" />
+      <MemberSignature Language="F#" Value="static member AvailabilityGroupReplica : Azure.Core.ResourceIdentifier * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaRole&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaCommitMode&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaFailoverMode&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.ReadableSecondaryMode&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplica" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.AvailabilityGroupReplica (sqlVmInstanceId, role, commit, failover, readableSecondary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplica</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sqlVmInstanceId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="role" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaRole&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="commit" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaCommitMode&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="failover" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplicaFailoverMode&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="readableSecondary" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.ReadableSecondaryMode&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="sqlVmInstanceId"> Sql VirtualMachine Instance Id. </param>
+        <param name="role"> Replica Role in availability group. </param>
+        <param name="commit"> Replica commit mode in availability group. </param>
+        <param name="failover"> Replica failover mode in availability group. </param>
+        <param name="readableSecondary"> Replica readable secondary mode in availability group. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupReplica" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiSubnetIPConfiguration">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.MultiSubnetIPConfiguration MultiSubnetIPConfiguration (Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress privateIPAddress = default, string sqlVmInstance = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.MultiSubnetIPConfiguration MultiSubnetIPConfiguration(class Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress privateIPAddress, string sqlVmInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.MultiSubnetIPConfiguration(Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MultiSubnetIPConfiguration (Optional privateIPAddress As AvailabilityGroupListenerPrivateIPAddress = Nothing, Optional sqlVmInstance As String = Nothing) As MultiSubnetIPConfiguration" />
+      <MemberSignature Language="F#" Value="static member MultiSubnetIPConfiguration : Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.MultiSubnetIPConfiguration" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.MultiSubnetIPConfiguration (privateIPAddress, sqlVmInstance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.MultiSubnetIPConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="privateIPAddress" Type="Azure.ResourceManager.SqlVirtualMachine.Models.AvailabilityGroupListenerPrivateIPAddress" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlVmInstance" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="privateIPAddress"> Private IP address. </param>
+        <param name="sqlVmInstance"> SQL virtual machine instance resource id that are enrolled into the availability group listener. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.MultiSubnetIPConfiguration" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlConnectivityUpdateSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings SqlConnectivityUpdateSettings (Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConnectivityType? connectivityType = default, int? port = default, string sqlAuthUpdateUserName = default, string sqlAuthUpdatePassword = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings SqlConnectivityUpdateSettings(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConnectivityType&gt; connectivityType, valuetype System.Nullable`1&lt;int32&gt; port, string sqlAuthUpdateUserName, string sqlAuthUpdatePassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlConnectivityUpdateSettings(System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConnectivityType},System.Nullable{System.Int32},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlConnectivityUpdateSettings (Optional connectivityType As Nullable(Of SqlServerConnectivityType) = Nothing, Optional port As Nullable(Of Integer) = Nothing, Optional sqlAuthUpdateUserName As String = Nothing, Optional sqlAuthUpdatePassword As String = Nothing) As SqlConnectivityUpdateSettings" />
+      <MemberSignature Language="F#" Value="static member SqlConnectivityUpdateSettings : Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConnectivityType&gt; * Nullable&lt;int&gt; * string * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlConnectivityUpdateSettings (connectivityType, port, sqlAuthUpdateUserName, sqlAuthUpdatePassword)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectivityType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConnectivityType&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="port" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlAuthUpdateUserName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlAuthUpdatePassword" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="connectivityType"> SQL Server connectivity option. </param>
+        <param name="port"> SQL Server port. </param>
+        <param name="sqlAuthUpdateUserName"> SQL Server sysadmin login to create. </param>
+        <param name="sqlAuthUpdatePassword"> SQL Server sysadmin login password. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlInstanceSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings SqlInstanceSettings (string collation = default, int? maxDop = default, bool? isOptimizeForAdHocWorkloadsEnabled = default, int? minServerMemoryInMB = default, int? maxServerMemoryInMB = default, bool? isLpimEnabled = default, bool? isIfiEnabled = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings SqlInstanceSettings(string collation, valuetype System.Nullable`1&lt;int32&gt; maxDop, valuetype System.Nullable`1&lt;bool&gt; isOptimizeForAdHocWorkloadsEnabled, valuetype System.Nullable`1&lt;int32&gt; minServerMemoryInMB, valuetype System.Nullable`1&lt;int32&gt; maxServerMemoryInMB, valuetype System.Nullable`1&lt;bool&gt; isLpimEnabled, valuetype System.Nullable`1&lt;bool&gt; isIfiEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlInstanceSettings(System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlInstanceSettings (Optional collation As String = Nothing, Optional maxDop As Nullable(Of Integer) = Nothing, Optional isOptimizeForAdHocWorkloadsEnabled As Nullable(Of Boolean) = Nothing, Optional minServerMemoryInMB As Nullable(Of Integer) = Nothing, Optional maxServerMemoryInMB As Nullable(Of Integer) = Nothing, Optional isLpimEnabled As Nullable(Of Boolean) = Nothing, Optional isIfiEnabled As Nullable(Of Boolean) = Nothing) As SqlInstanceSettings" />
+      <MemberSignature Language="F#" Value="static member SqlInstanceSettings : string * Nullable&lt;int&gt; * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlInstanceSettings (collation, maxDop, isOptimizeForAdHocWorkloadsEnabled, minServerMemoryInMB, maxServerMemoryInMB, isLpimEnabled, isIfiEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collation" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxDop" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isOptimizeForAdHocWorkloadsEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="minServerMemoryInMB" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxServerMemoryInMB" Type="System.Nullable&lt;System.Int32&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isLpimEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isIfiEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="collation"> SQL Server Collation. </param>
+        <param name="maxDop"> SQL Server MAXDOP. </param>
+        <param name="isOptimizeForAdHocWorkloadsEnabled"> SQL Server Optimize for Adhoc workloads. </param>
+        <param name="minServerMemoryInMB"> SQL Server minimum memory. </param>
+        <param name="maxServerMemoryInMB"> SQL Server maximum memory. </param>
+        <param name="isLpimEnabled"> SQL Server LPIM. </param>
+        <param name="isIfiEnabled"> SQL Server IFI. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlServerConfigurationsManagementSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings SqlServerConfigurationsManagementSettings (Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings sqlConnectivityUpdateSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlWorkloadType? sqlWorkloadType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings sqlStorageUpdateSettings = default, bool? isRServicesEnabled = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings sqlInstanceSettings = default, string azureAdAuthenticationClientId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings SqlServerConfigurationsManagementSettings(class Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings sqlConnectivityUpdateSettings, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlWorkloadType&gt; sqlWorkloadType, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings sqlStorageUpdateSettings, valuetype System.Nullable`1&lt;bool&gt; isRServicesEnabled, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings sqlInstanceSettings, string azureAdAuthenticationClientId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlServerConfigurationsManagementSettings(Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlWorkloadType},Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings,System.Nullable{System.Boolean},Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlServerConfigurationsManagementSettings (Optional sqlConnectivityUpdateSettings As SqlConnectivityUpdateSettings = Nothing, Optional sqlWorkloadType As Nullable(Of SqlWorkloadType) = Nothing, Optional sqlStorageUpdateSettings As SqlStorageUpdateSettings = Nothing, Optional isRServicesEnabled As Nullable(Of Boolean) = Nothing, Optional sqlInstanceSettings As SqlInstanceSettings = Nothing, Optional azureAdAuthenticationClientId As String = Nothing) As SqlServerConfigurationsManagementSettings" />
+      <MemberSignature Language="F#" Value="static member SqlServerConfigurationsManagementSettings : Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlWorkloadType&gt; * Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings * Nullable&lt;bool&gt; * Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlServerConfigurationsManagementSettings (sqlConnectivityUpdateSettings, sqlWorkloadType, sqlStorageUpdateSettings, isRServicesEnabled, sqlInstanceSettings, azureAdAuthenticationClientId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sqlConnectivityUpdateSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlConnectivityUpdateSettings" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlWorkloadType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlWorkloadType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlStorageUpdateSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isRServicesEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlInstanceSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlInstanceSettings" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="azureAdAuthenticationClientId" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="sqlConnectivityUpdateSettings"> SQL connectivity type settings. </param>
+        <param name="sqlWorkloadType"> SQL Server workload type. </param>
+        <param name="sqlStorageUpdateSettings"> SQL storage update settings. </param>
+        <param name="isRServicesEnabled"> Enable or disable R services (SQL 2016 onwards). </param>
+        <param name="sqlInstanceSettings"> SQL Instance settings. </param>
+        <param name="azureAdAuthenticationClientId"> The client Id of the Managed Identity to query Microsoft Graph API. An empty string must be used for the system assigned Managed Identity. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,14 +292,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="luns" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="defaultFilePath" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="useStoragePool" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="luns" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="defaultFilePath" Type="System.String" />
+        <Parameter Name="useStoragePool" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="luns"> Logical Unit Numbers for the disks. </param>
@@ -121,6 +308,34 @@
         <param name="useStoragePool"> Use storage pool to build a drive if true or not provided. </param>
         <summary> Set disk storage settings for SQL Server. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlStorageUpdateSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings SqlStorageUpdateSettings (int? diskCount = default, int? startingDeviceId = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType? diskConfigurationType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings SqlStorageUpdateSettings(valuetype System.Nullable`1&lt;int32&gt; diskCount, valuetype System.Nullable`1&lt;int32&gt; startingDeviceId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt; diskConfigurationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlStorageUpdateSettings(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlStorageUpdateSettings (Optional diskCount As Nullable(Of Integer) = Nothing, Optional startingDeviceId As Nullable(Of Integer) = Nothing, Optional diskConfigurationType As Nullable(Of SqlVmDiskConfigurationType) = Nothing) As SqlStorageUpdateSettings" />
+      <MemberSignature Language="F#" Value="static member SqlStorageUpdateSettings : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlStorageUpdateSettings (diskCount, startingDeviceId, diskConfigurationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diskCount" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="startingDeviceId" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="diskConfigurationType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="diskCount"> Virtual machine disk count. </param>
+        <param name="startingDeviceId"> Device id of the first disk to be updated. </param>
+        <param name="diskConfigurationType"> Disk configuration to apply to SQL Server. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageUpdateSettings" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,21 +349,22 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="dataFileSize" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataGrowth" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="logFileSize" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="logGrowth" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="dataFileCount" Type="System.Nullable&lt;System.Int32&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="persistFolder" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="persistFolderPath" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="logicalUnitNumbers" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="defaultFilePath" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="useStoragePool" Type="System.Nullable&lt;System.Boolean&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="dataFileSize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="dataGrowth" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="logFileSize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="logGrowth" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="dataFileCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="persistFolder" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="persistFolderPath" Type="System.String" />
+        <Parameter Name="logicalUnitNumbers" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="defaultFilePath" Type="System.String" />
+        <Parameter Name="useStoragePool" Type="System.Nullable&lt;System.Boolean&gt;" />
       </Parameters>
       <Docs>
         <param name="dataFileSize"> SQL Server tempdb data file size. </param>
@@ -166,6 +382,66 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SqlVmAssessmentSchedule">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule SqlVmAssessmentSchedule (bool? isEnabled = default, int? weeklyInterval = default, int? monthlyOccurrence = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentDayOfWeek? dayOfWeek = default, string startTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule SqlVmAssessmentSchedule(valuetype System.Nullable`1&lt;bool&gt; isEnabled, valuetype System.Nullable`1&lt;int32&gt; weeklyInterval, valuetype System.Nullable`1&lt;int32&gt; monthlyOccurrence, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentDayOfWeek&gt; dayOfWeek, string startTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAssessmentSchedule(System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentDayOfWeek},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmAssessmentSchedule (Optional isEnabled As Nullable(Of Boolean) = Nothing, Optional weeklyInterval As Nullable(Of Integer) = Nothing, Optional monthlyOccurrence As Nullable(Of Integer) = Nothing, Optional dayOfWeek As Nullable(Of SqlVmAssessmentDayOfWeek) = Nothing, Optional startTime As String = Nothing) As SqlVmAssessmentSchedule" />
+      <MemberSignature Language="F#" Value="static member SqlVmAssessmentSchedule : Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentDayOfWeek&gt; * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAssessmentSchedule (isEnabled, weeklyInterval, monthlyOccurrence, dayOfWeek, startTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="weeklyInterval" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="monthlyOccurrence" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dayOfWeek" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentDayOfWeek&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="startTime" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isEnabled"> Enable or disable assessment schedule on SQL virtual machine. </param>
+        <param name="weeklyInterval"> Number of weeks to schedule between 2 assessment runs. Takes value from 1-6. </param>
+        <param name="monthlyOccurrence"> Occurrence of the DayOfWeek day within a month to schedule assessment. Takes values: 1,2,3,4 and -1. Use -1 for last DayOfWeek day of the month. </param>
+        <param name="dayOfWeek"> Day of the week to run assessment. </param>
+        <param name="startTime"> Time of the day in HH:mm format. Eg. 17:30. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmAssessmentSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings SqlVmAssessmentSettings (bool? isEnabled = default, bool? runImmediately = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule schedule = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings SqlVmAssessmentSettings(valuetype System.Nullable`1&lt;bool&gt; isEnabled, valuetype System.Nullable`1&lt;bool&gt; runImmediately, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule schedule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAssessmentSettings(System.Nullable{System.Boolean},System.Nullable{System.Boolean},Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmAssessmentSettings (Optional isEnabled As Nullable(Of Boolean) = Nothing, Optional runImmediately As Nullable(Of Boolean) = Nothing, Optional schedule As SqlVmAssessmentSchedule = Nothing) As SqlVmAssessmentSettings" />
+      <MemberSignature Language="F#" Value="static member SqlVmAssessmentSettings : Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAssessmentSettings (isEnabled, runImmediately, schedule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="runImmediately" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="schedule" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSchedule" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isEnabled"> Enable or disable SQL best practices Assessment feature on SQL virtual machine. </param>
+        <param name="runImmediately"> Run SQL best practices Assessment immediately on SQL virtual machine. </param>
+        <param name="schedule"> Schedule for SQL best practices Assessment. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SqlVmAutoBackupSettings">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings SqlVmAutoBackupSettings (bool? isEnabled = default, bool? isEncryptionEnabled = default, int? retentionPeriodInDays = default, Uri storageAccountUri = default, string storageContainerName = default, string storageAccessKey = default, string password = default, bool? areSystemDbsIncludedInBackup = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqVmBackupScheduleType? backupScheduleType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmFullBackupFrequency? fullBackupFrequency = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupDayOfWeek&gt; daysOfWeek = default, int? fullBackupStartHour = default, int? fullBackupWindowHours = default, int? logBackupFrequency = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings SqlVmAutoBackupSettings(valuetype System.Nullable`1&lt;bool&gt; isEnabled, valuetype System.Nullable`1&lt;bool&gt; isEncryptionEnabled, valuetype System.Nullable`1&lt;int32&gt; retentionPeriodInDays, class System.Uri storageAccountUri, string storageContainerName, string storageAccessKey, string password, valuetype System.Nullable`1&lt;bool&gt; areSystemDbsIncludedInBackup, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqVmBackupScheduleType&gt; backupScheduleType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmFullBackupFrequency&gt; fullBackupFrequency, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupDayOfWeek&gt; daysOfWeek, valuetype System.Nullable`1&lt;int32&gt; fullBackupStartHour, valuetype System.Nullable`1&lt;int32&gt; fullBackupWindowHours, valuetype System.Nullable`1&lt;int32&gt; logBackupFrequency) cil managed" />
@@ -176,25 +452,26 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="isEncryptionEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="retentionPeriodInDays" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageAccountUri" Type="System.Uri" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageContainerName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageAccessKey" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="password" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="areSystemDbsIncludedInBackup" Type="System.Nullable&lt;System.Boolean&gt;" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="backupScheduleType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqVmBackupScheduleType&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="fullBackupFrequency" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmFullBackupFrequency&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="daysOfWeek" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupDayOfWeek&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="fullBackupStartHour" Type="System.Nullable&lt;System.Int32&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="fullBackupWindowHours" Type="System.Nullable&lt;System.Int32&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="logBackupFrequency" Type="System.Nullable&lt;System.Int32&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="isEncryptionEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="retentionPeriodInDays" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="storageAccountUri" Type="System.Uri" />
+        <Parameter Name="storageContainerName" Type="System.String" />
+        <Parameter Name="storageAccessKey" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="areSystemDbsIncludedInBackup" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="backupScheduleType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqVmBackupScheduleType&gt;" />
+        <Parameter Name="fullBackupFrequency" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmFullBackupFrequency&gt;" />
+        <Parameter Name="daysOfWeek" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupDayOfWeek&gt;" />
+        <Parameter Name="fullBackupStartHour" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="fullBackupWindowHours" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="logBackupFrequency" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
         <param name="isEnabled"> Enable or disable autobackup on SQL virtual machine. </param>
@@ -216,22 +493,52 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SqlVmData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmData SqlVmData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Models.ManagedServiceIdentity identity, Azure.Core.ResourceIdentifier virtualMachineResourceId, string provisioningState, string sqlImageOffer, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType? sqlServerLicenseType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode? sqlManagement, Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku? sqlImageSku, Azure.Core.ResourceIdentifier sqlVmGroupResourceId, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials windowsServerFailoverClusterDomainCredentials, System.Net.IPAddress windowsServerFailoverClusterStaticIP, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings autoPatchingSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings autoBackupSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings keyVaultCredentialSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings serverConfigurationsManagementSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings storageConfigurationSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings assessmentSettings);" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.SqlVmData SqlVmData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, class Azure.Core.ResourceIdentifier virtualMachineResourceId, string provisioningState, string sqlImageOffer, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt; sqlServerLicenseType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt; sqlManagement, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt; sqlImageSku, class Azure.Core.ResourceIdentifier sqlVmGroupResourceId, class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials windowsServerFailoverClusterDomainCredentials, class System.Net.IPAddress windowsServerFailoverClusterStaticIP, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings autoPatchingSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings autoBackupSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings keyVaultCredentialSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings serverConfigurationsManagementSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings storageConfigurationSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings assessmentSettings) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.Models.ManagedServiceIdentity,Azure.Core.ResourceIdentifier,System.String,System.String,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku},Azure.Core.ResourceIdentifier,Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials,System.Net.IPAddress,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, identity As ManagedServiceIdentity, virtualMachineResourceId As ResourceIdentifier, provisioningState As String, sqlImageOffer As String, sqlServerLicenseType As Nullable(Of SqlServerLicenseType), sqlManagement As Nullable(Of SqlManagementMode), sqlImageSku As Nullable(Of SqlImageSku), sqlVmGroupResourceId As ResourceIdentifier, windowsServerFailoverClusterDomainCredentials As WindowsServerFailoverClusterDomainCredentials, windowsServerFailoverClusterStaticIP As IPAddress, autoPatchingSettings As SqlVmAutoPatchingSettings, autoBackupSettings As SqlVmAutoBackupSettings, keyVaultCredentialSettings As SqlVmKeyVaultCredentialSettings, serverConfigurationsManagementSettings As SqlServerConfigurationsManagementSettings, storageConfigurationSettings As SqlVmStorageConfigurationSettings, assessmentSettings As SqlVmAssessmentSettings) As SqlVmData" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member SqlVmData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.Models.ManagedServiceIdentity * Azure.Core.ResourceIdentifier * string * string * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt; * Azure.Core.ResourceIdentifier * Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials * System.Net.IPAddress * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings -&gt; Azure.ResourceManager.SqlVirtualMachine.SqlVmData" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmData (id, name, resourceType, systemData, tags, location, identity, virtualMachineResourceId, provisioningState, sqlImageOffer, sqlServerLicenseType, sqlManagement, sqlImageSku, sqlVmGroupResourceId, windowsServerFailoverClusterDomainCredentials, windowsServerFailoverClusterStaticIP, autoPatchingSettings, autoBackupSettings, keyVaultCredentialSettings, serverConfigurationsManagementSettings, storageConfigurationSettings, assessmentSettings)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmData SqlVmData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.Models.ManagedServiceIdentity identity = default, Azure.Core.ResourceIdentifier virtualMachineResourceId = default, string provisioningState = default, string sqlImageOffer = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType? sqlServerLicenseType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode? sqlManagement = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku? sqlImageSku = default, Azure.Core.ResourceIdentifier sqlVmGroupResourceId = default, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials windowsServerFailoverClusterDomainCredentials = default, System.Net.IPAddress windowsServerFailoverClusterStaticIP = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings autoPatchingSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings autoBackupSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings keyVaultCredentialSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings serverConfigurationsManagementSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings storageConfigurationSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings assessmentSettings = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional identity As ManagedServiceIdentity = Nothing, Optional virtualMachineResourceId As ResourceIdentifier = Nothing, Optional provisioningState As String = Nothing, Optional sqlImageOffer As String = Nothing, Optional sqlServerLicenseType As Nullable(Of SqlServerLicenseType) = Nothing, Optional sqlManagement As Nullable(Of SqlManagementMode) = Nothing, Optional sqlImageSku As Nullable(Of SqlImageSku) = Nothing, Optional sqlVmGroupResourceId As ResourceIdentifier = Nothing, Optional windowsServerFailoverClusterDomainCredentials As WindowsServerFailoverClusterDomainCredentials = Nothing, Optional windowsServerFailoverClusterStaticIP As IPAddress = Nothing, Optional autoPatchingSettings As SqlVmAutoPatchingSettings = Nothing, Optional autoBackupSettings As SqlVmAutoBackupSettings = Nothing, Optional keyVaultCredentialSettings As SqlVmKeyVaultCredentialSettings = Nothing, Optional serverConfigurationsManagementSettings As SqlServerConfigurationsManagementSettings = Nothing, Optional storageConfigurationSettings As SqlVmStorageConfigurationSettings = Nothing, Optional assessmentSettings As SqlVmAssessmentSettings = Nothing) As SqlVmData" FrameworkAlternate="azure-dotnet-preview" />
+    <Member MemberName="SqlVmAutoPatchingSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings SqlVmAutoPatchingSettings (bool? isEnabled = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingDayOfWeek? dayOfWeek = default, int? maintenanceWindowStartingHour = default, int? maintenanceWindowDurationInMinutes = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalVmPatch? additionalVmPatch = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings SqlVmAutoPatchingSettings(valuetype System.Nullable`1&lt;bool&gt; isEnabled, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingDayOfWeek&gt; dayOfWeek, valuetype System.Nullable`1&lt;int32&gt; maintenanceWindowStartingHour, valuetype System.Nullable`1&lt;int32&gt; maintenanceWindowDurationInMinutes, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalVmPatch&gt; additionalVmPatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAutoPatchingSettings(System.Nullable{System.Boolean},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingDayOfWeek},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalVmPatch})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmAutoPatchingSettings (Optional isEnabled As Nullable(Of Boolean) = Nothing, Optional dayOfWeek As Nullable(Of SqlVmAutoPatchingDayOfWeek) = Nothing, Optional maintenanceWindowStartingHour As Nullable(Of Integer) = Nothing, Optional maintenanceWindowDurationInMinutes As Nullable(Of Integer) = Nothing, Optional additionalVmPatch As Nullable(Of SqlVmAdditionalVmPatch) = Nothing) As SqlVmAutoPatchingSettings" />
+      <MemberSignature Language="F#" Value="static member SqlVmAutoPatchingSettings : Nullable&lt;bool&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingDayOfWeek&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalVmPatch&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmAutoPatchingSettings (isEnabled, dayOfWeek, maintenanceWindowStartingHour, maintenanceWindowDurationInMinutes, additionalVmPatch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dayOfWeek" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingDayOfWeek&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maintenanceWindowStartingHour" Type="System.Nullable&lt;System.Int32&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maintenanceWindowDurationInMinutes" Type="System.Nullable&lt;System.Int32&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="additionalVmPatch" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalVmPatch&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isEnabled"> Enable or disable autopatching on SQL virtual machine. </param>
+        <param name="dayOfWeek"> Day of week to apply the patch on. </param>
+        <param name="maintenanceWindowStartingHour"> Hour of the day when patching is initiated. Local VM time. </param>
+        <param name="maintenanceWindowDurationInMinutes"> Duration of patching. </param>
+        <param name="additionalVmPatch"> Additional Patch to be enable or enabled on the SQL Virtual Machine. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmData SqlVmData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, Azure.ResourceManager.Models.ManagedServiceIdentity identity, Azure.Core.ResourceIdentifier virtualMachineResourceId, string provisioningState, string sqlImageOffer, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType? sqlServerLicenseType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode? sqlManagement, Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku? sqlImageSku, Azure.Core.ResourceIdentifier sqlVmGroupResourceId, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials windowsServerFailoverClusterDomainCredentials, System.Net.IPAddress windowsServerFailoverClusterStaticIP, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings autoPatchingSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings autoBackupSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings keyVaultCredentialSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings serverConfigurationsManagementSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings storageConfigurationSettings, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings assessmentSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.SqlVmData SqlVmData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.Models.ManagedServiceIdentity identity, class Azure.Core.ResourceIdentifier virtualMachineResourceId, string provisioningState, string sqlImageOffer, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt; sqlServerLicenseType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt; sqlManagement, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt; sqlImageSku, class Azure.Core.ResourceIdentifier sqlVmGroupResourceId, class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials windowsServerFailoverClusterDomainCredentials, class System.Net.IPAddress windowsServerFailoverClusterStaticIP, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings autoPatchingSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings autoBackupSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings keyVaultCredentialSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings serverConfigurationsManagementSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings storageConfigurationSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings assessmentSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.Models.ManagedServiceIdentity,Azure.Core.ResourceIdentifier,System.String,System.String,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku},Azure.Core.ResourceIdentifier,Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials,System.Net.IPAddress,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, identity As ManagedServiceIdentity, virtualMachineResourceId As ResourceIdentifier, provisioningState As String, sqlImageOffer As String, sqlServerLicenseType As Nullable(Of SqlServerLicenseType), sqlManagement As Nullable(Of SqlManagementMode), sqlImageSku As Nullable(Of SqlImageSku), sqlVmGroupResourceId As ResourceIdentifier, windowsServerFailoverClusterDomainCredentials As WindowsServerFailoverClusterDomainCredentials, windowsServerFailoverClusterStaticIP As IPAddress, autoPatchingSettings As SqlVmAutoPatchingSettings, autoBackupSettings As SqlVmAutoBackupSettings, keyVaultCredentialSettings As SqlVmKeyVaultCredentialSettings, serverConfigurationsManagementSettings As SqlServerConfigurationsManagementSettings, storageConfigurationSettings As SqlVmStorageConfigurationSettings, assessmentSettings As SqlVmAssessmentSettings) As SqlVmData" />
+      <MemberSignature Language="F#" Value="static member SqlVmData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.Models.ManagedServiceIdentity * Azure.Core.ResourceIdentifier * string * string * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt; * Azure.Core.ResourceIdentifier * Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials * System.Net.IPAddress * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings -&gt; Azure.ResourceManager.SqlVirtualMachine.SqlVmData" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmData (id, name, resourceType, systemData, tags, location, identity, virtualMachineResourceId, provisioningState, sqlImageOffer, sqlServerLicenseType, sqlManagement, sqlImageSku, sqlVmGroupResourceId, windowsServerFailoverClusterDomainCredentials, windowsServerFailoverClusterStaticIP, autoPatchingSettings, autoBackupSettings, keyVaultCredentialSettings, serverConfigurationsManagementSettings, storageConfigurationSettings, assessmentSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -301,40 +608,41 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.SqlVmData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="virtualMachineResourceId" Type="Azure.Core.ResourceIdentifier" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="provisioningState" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlImageOffer" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlServerLicenseType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlManagement" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="leastPrivilegeMode" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmLeastPrivilegeMode&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlImageSku" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlVmGroupResourceId" Type="Azure.Core.ResourceIdentifier" Index="13" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="windowsServerFailoverClusterDomainCredentials" Type="Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials" Index="14" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="windowsServerFailoverClusterStaticIP" Type="System.Net.IPAddress" Index="15" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="autoPatchingSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings" Index="16" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="autoBackupSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings" Index="17" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="keyVaultCredentialSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings" Index="18" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="serverConfigurationsManagementSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings" Index="19" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageConfigurationSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings" Index="20" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="troubleshootingStatus" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingStatus" Index="21" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="assessmentSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings" Index="22" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="enableAutomaticUpgrade" Type="System.Nullable&lt;System.Boolean&gt;" Index="23" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="additionalVmPatch" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalOsPatch&gt;" Index="24" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="virtualMachineIdentitySettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity" Index="25" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="osType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmOsType&gt;" Index="26" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlVmName" Type="System.String" Index="27" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" Index="28" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" />
+        <Parameter Name="virtualMachineResourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="provisioningState" Type="System.String" />
+        <Parameter Name="sqlImageOffer" Type="System.String" />
+        <Parameter Name="sqlServerLicenseType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerLicenseType&gt;" />
+        <Parameter Name="sqlManagement" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlManagementMode&gt;" />
+        <Parameter Name="leastPrivilegeMode" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmLeastPrivilegeMode&gt;" />
+        <Parameter Name="sqlImageSku" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlImageSku&gt;" />
+        <Parameter Name="sqlVmGroupResourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="windowsServerFailoverClusterDomainCredentials" Type="Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials" />
+        <Parameter Name="windowsServerFailoverClusterStaticIP" Type="System.Net.IPAddress" />
+        <Parameter Name="autoPatchingSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoPatchingSettings" />
+        <Parameter Name="autoBackupSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAutoBackupSettings" />
+        <Parameter Name="keyVaultCredentialSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings" />
+        <Parameter Name="serverConfigurationsManagementSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlServerConfigurationsManagementSettings" />
+        <Parameter Name="storageConfigurationSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings" />
+        <Parameter Name="troubleshootingStatus" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingStatus" />
+        <Parameter Name="assessmentSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAssessmentSettings" />
+        <Parameter Name="enableAutomaticUpgrade" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="additionalVmPatch" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmAdditionalOsPatch&gt;" />
+        <Parameter Name="virtualMachineIdentitySettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity" />
+        <Parameter Name="osType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmOsType&gt;" />
+        <Parameter Name="sqlVmName" Type="System.String" />
+        <Parameter Name="identity" Type="Azure.ResourceManager.Models.ManagedServiceIdentity" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -371,22 +679,44 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SqlVmGroupData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData SqlVmGroupData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, string provisioningState, string sqlImageOffer, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku? sqlImageSku, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType? scaleType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType? clusterManagerType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration? clusterConfiguration, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile windowsServerFailoverClusterDomainProfile);" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData SqlVmGroupData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, string provisioningState, string sqlImageOffer, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt; sqlImageSku, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt; scaleType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt; clusterManagerType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt; clusterConfiguration, class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile windowsServerFailoverClusterDomainProfile) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmGroupData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.String,System.String,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration},Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmGroupData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, provisioningState As String, sqlImageOffer As String, sqlImageSku As Nullable(Of SqlVmGroupImageSku), scaleType As Nullable(Of SqlVmGroupScaleType), clusterManagerType As Nullable(Of SqlVmClusterManagerType), clusterConfiguration As Nullable(Of SqlVmClusterConfiguration), windowsServerFailoverClusterDomainProfile As WindowsServerFailoverClusterDomainProfile) As SqlVmGroupData" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member SqlVmGroupData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * string * string * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt; * Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile -&gt; Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmGroupData (id, name, resourceType, systemData, tags, location, provisioningState, sqlImageOffer, sqlImageSku, scaleType, clusterManagerType, clusterConfiguration, windowsServerFailoverClusterDomainProfile)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData SqlVmGroupData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, string provisioningState = default, string sqlImageOffer = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku? sqlImageSku = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType? scaleType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType? clusterManagerType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration? clusterConfiguration = default, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile windowsServerFailoverClusterDomainProfile = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmGroupData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional provisioningState As String = Nothing, Optional sqlImageOffer As String = Nothing, Optional sqlImageSku As Nullable(Of SqlVmGroupImageSku) = Nothing, Optional scaleType As Nullable(Of SqlVmGroupScaleType) = Nothing, Optional clusterManagerType As Nullable(Of SqlVmClusterManagerType) = Nothing, Optional clusterConfiguration As Nullable(Of SqlVmClusterConfiguration) = Nothing, Optional windowsServerFailoverClusterDomainProfile As WindowsServerFailoverClusterDomainProfile = Nothing) As SqlVmGroupData" FrameworkAlternate="azure-dotnet-preview" />
+    <Member MemberName="SqlVmDiskConfigAssessmentContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigAssessmentContent SqlVmDiskConfigAssessmentContent (bool? runDiskConfigRules = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigAssessmentContent SqlVmDiskConfigAssessmentContent(valuetype System.Nullable`1&lt;bool&gt; runDiskConfigRules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmDiskConfigAssessmentContent(System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmDiskConfigAssessmentContent (Optional runDiskConfigRules As Nullable(Of Boolean) = Nothing) As SqlVmDiskConfigAssessmentContent" />
+      <MemberSignature Language="F#" Value="static member SqlVmDiskConfigAssessmentContent : Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigAssessmentContent" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmDiskConfigAssessmentContent runDiskConfigRules" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigAssessmentContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runDiskConfigRules" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="runDiskConfigRules"> Boolean to run disk config Assessment. Use false to fetch past Assessment. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigAssessmentContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmGroupData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData SqlVmGroupData (Azure.Core.ResourceIdentifier id, string name, Azure.Core.ResourceType resourceType, Azure.ResourceManager.Models.SystemData systemData, System.Collections.Generic.IDictionary&lt;string,string&gt; tags, Azure.Core.AzureLocation location, string provisioningState, string sqlImageOffer, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku? sqlImageSku, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType? scaleType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType? clusterManagerType, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration? clusterConfiguration, Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile windowsServerFailoverClusterDomainProfile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData SqlVmGroupData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, string provisioningState, string sqlImageOffer, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt; sqlImageSku, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt; scaleType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt; clusterManagerType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt; clusterConfiguration, class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile windowsServerFailoverClusterDomainProfile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmGroupData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,System.String,System.String,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration},Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmGroupData (id As ResourceIdentifier, name As String, resourceType As ResourceType, systemData As SystemData, tags As IDictionary(Of String, String), location As AzureLocation, provisioningState As String, sqlImageOffer As String, sqlImageSku As Nullable(Of SqlVmGroupImageSku), scaleType As Nullable(Of SqlVmGroupScaleType), clusterManagerType As Nullable(Of SqlVmClusterManagerType), clusterConfiguration As Nullable(Of SqlVmClusterConfiguration), windowsServerFailoverClusterDomainProfile As WindowsServerFailoverClusterDomainProfile) As SqlVmGroupData" />
+      <MemberSignature Language="F#" Value="static member SqlVmGroupData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * string * string * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt; * Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile -&gt; Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmGroupData (id, name, resourceType, systemData, tags, location, provisioningState, sqlImageOffer, sqlImageSku, scaleType, clusterManagerType, clusterConfiguration, windowsServerFailoverClusterDomainProfile)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -438,25 +768,26 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.SqlVmGroupData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="provisioningState" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlImageOffer" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlImageSku" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt;" Index="8" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="scaleType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt;" Index="9" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterManagerType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt;" Index="10" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="clusterConfiguration" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt;" Index="11" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="windowsServerFailoverClusterDomainProfile" Type="Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile" Index="12" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sqlVmGroupName" Type="System.String" Index="13" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="location" Type="Azure.Core.AzureLocation" />
+        <Parameter Name="provisioningState" Type="System.String" />
+        <Parameter Name="sqlImageOffer" Type="System.String" />
+        <Parameter Name="sqlImageSku" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupImageSku&gt;" />
+        <Parameter Name="scaleType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupScaleType&gt;" />
+        <Parameter Name="clusterManagerType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterManagerType&gt;" />
+        <Parameter Name="clusterConfiguration" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterConfiguration&gt;" />
+        <Parameter Name="windowsServerFailoverClusterDomainProfile" Type="Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile" />
+        <Parameter Name="sqlVmGroupName" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -488,17 +819,76 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupPatch</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="tags"> Resource tags. </param>
         <summary> An update to a SQL virtual machine group. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmGroupPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmIdentity">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity SqlVmIdentity (Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmVmIdentityType? type = default, Azure.Core.ResourceIdentifier resourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity SqlVmIdentity(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmVmIdentityType&gt; type, class Azure.Core.ResourceIdentifier resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmIdentity(System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmVmIdentityType},Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmIdentity (Optional type As Nullable(Of SqlVmVmIdentityType) = Nothing, Optional resourceId As ResourceIdentifier = Nothing) As SqlVmIdentity" />
+      <MemberSignature Language="F#" Value="static member SqlVmIdentity : Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmVmIdentityType&gt; * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmIdentity (type, resourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmVmIdentityType&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="type"> Identity type of the virtual machine. Specify None to opt-out of Managed Identities. </param>
+        <param name="resourceId"> ARM Resource Id of the identity. Only required when UserAssigned identity is selected. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmIdentity" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmKeyVaultCredentialSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings SqlVmKeyVaultCredentialSettings (bool? isEnabled = default, string credentialName = default, Uri azureKeyVaultUri = default, string servicePrincipalName = default, string servicePrincipalSecret = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings SqlVmKeyVaultCredentialSettings(valuetype System.Nullable`1&lt;bool&gt; isEnabled, string credentialName, class System.Uri azureKeyVaultUri, string servicePrincipalName, string servicePrincipalSecret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmKeyVaultCredentialSettings(System.Nullable{System.Boolean},System.String,System.Uri,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmKeyVaultCredentialSettings (Optional isEnabled As Nullable(Of Boolean) = Nothing, Optional credentialName As String = Nothing, Optional azureKeyVaultUri As Uri = Nothing, Optional servicePrincipalName As String = Nothing, Optional servicePrincipalSecret As String = Nothing) As SqlVmKeyVaultCredentialSettings" />
+      <MemberSignature Language="F#" Value="static member SqlVmKeyVaultCredentialSettings : Nullable&lt;bool&gt; * string * Uri * string * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmKeyVaultCredentialSettings (isEnabled, credentialName, azureKeyVaultUri, servicePrincipalName, servicePrincipalSecret)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="credentialName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="azureKeyVaultUri" Type="System.Uri" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="servicePrincipalName" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="servicePrincipalSecret" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isEnabled"> Enable or disable key vault credential setting. </param>
+        <param name="credentialName"> Credential name. </param>
+        <param name="azureKeyVaultUri"> Azure Key Vault url. </param>
+        <param name="servicePrincipalName"> Service principal name to access key vault. </param>
+        <param name="servicePrincipalSecret"> Service principal name secret to access key vault. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmKeyVaultCredentialSettings" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -512,17 +902,54 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmPatch</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="tags"> Resource tags. </param>
         <summary> An update to a SQL virtual machine. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlVmStorageConfigurationSettings">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings SqlVmStorageConfigurationSettings (Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings sqlDataSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings sqlLogSettings = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings sqlTempDBSettings = default, bool? isSqlSystemDBOnDataDisk = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType? diskConfigurationType = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageWorkloadType? storageWorkloadType = default, bool? enableStorageConfigBlade = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings SqlVmStorageConfigurationSettings(class Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings sqlDataSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings sqlLogSettings, class Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings sqlTempDBSettings, valuetype System.Nullable`1&lt;bool&gt; isSqlSystemDBOnDataDisk, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt; diskConfigurationType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageWorkloadType&gt; storageWorkloadType, valuetype System.Nullable`1&lt;bool&gt; enableStorageConfigBlade) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmStorageConfigurationSettings(Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings,Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings,System.Nullable{System.Boolean},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType},System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageWorkloadType},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SqlVmStorageConfigurationSettings (Optional sqlDataSettings As SqlStorageSettings = Nothing, Optional sqlLogSettings As SqlStorageSettings = Nothing, Optional sqlTempDBSettings As SqlTempDBSettings = Nothing, Optional isSqlSystemDBOnDataDisk As Nullable(Of Boolean) = Nothing, Optional diskConfigurationType As Nullable(Of SqlVmDiskConfigurationType) = Nothing, Optional storageWorkloadType As Nullable(Of SqlVmStorageWorkloadType) = Nothing, Optional enableStorageConfigBlade As Nullable(Of Boolean) = Nothing) As SqlVmStorageConfigurationSettings" />
+      <MemberSignature Language="F#" Value="static member SqlVmStorageConfigurationSettings : Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings * Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings * Nullable&lt;bool&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt; * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageWorkloadType&gt; * Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.SqlVmStorageConfigurationSettings (sqlDataSettings, sqlLogSettings, sqlTempDBSettings, isSqlSystemDBOnDataDisk, diskConfigurationType, storageWorkloadType, enableStorageConfigBlade)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sqlDataSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlLogSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlStorageSettings" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlTempDBSettings" Type="Azure.ResourceManager.SqlVirtualMachine.Models.SqlTempDBSettings" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isSqlSystemDBOnDataDisk" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="diskConfigurationType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmDiskConfigurationType&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="storageWorkloadType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageWorkloadType&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="enableStorageConfigBlade" Type="System.Nullable&lt;System.Boolean&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="sqlDataSettings"> SQL Server Data Storage Settings. </param>
+        <param name="sqlLogSettings"> SQL Server Log Storage Settings. </param>
+        <param name="sqlTempDBSettings"> SQL Server TempDb Storage Settings. </param>
+        <param name="isSqlSystemDBOnDataDisk"> SQL Server SystemDb Storage on DataPool if true. </param>
+        <param name="diskConfigurationType"> Disk configuration to apply to SQL Server. </param>
+        <param name="storageWorkloadType"> Storage workload type. </param>
+        <param name="enableStorageConfigBlade"> Enable SQL IaaS Agent storage configuration blade in Azure Portal. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmStorageConfigurationSettings" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -536,16 +963,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshooting</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="endTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="troubleshootingScenario" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingScenario&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="troubleshootingAdditionalUnhealthyReplicaInfoAvailabilityGroupName" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="virtualMachineResourceId" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="startTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="endTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="troubleshootingScenario" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingScenario&gt;" />
+        <Parameter Name="troubleshootingAdditionalUnhealthyReplicaInfoAvailabilityGroupName" Type="System.String" />
+        <Parameter Name="virtualMachineResourceId" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="startTimeUtc"> Start time in UTC timezone. </param>
@@ -568,17 +996,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingStatus</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="rootCause" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="lastTriggerTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="startTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="endTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="troubleshootingScenario" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingScenario&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="troubleshootingAdditionalUnhealthyReplicaInfoAvailabilityGroupName" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="rootCause" Type="System.String" />
+        <Parameter Name="lastTriggerTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="startTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="endTimeUtc" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="troubleshootingScenario" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingScenario&gt;" />
+        <Parameter Name="troubleshootingAdditionalUnhealthyReplicaInfoAvailabilityGroupName" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="rootCause"> Root cause of the issue. </param>
@@ -589,6 +1018,76 @@
         <param name="troubleshootingAdditionalUnhealthyReplicaInfoAvailabilityGroupName"> The name of the availability group. </param>
         <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmTroubleshootingStatus" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsServerFailoverClusterDomainCredentials">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials WindowsServerFailoverClusterDomainCredentials (string clusterBootstrapAccountPassword = default, string clusterOperatorAccountPassword = default, string sqlServiceAccountPassword = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials WindowsServerFailoverClusterDomainCredentials(string clusterBootstrapAccountPassword, string clusterOperatorAccountPassword, string sqlServiceAccountPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.WindowsServerFailoverClusterDomainCredentials(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WindowsServerFailoverClusterDomainCredentials (Optional clusterBootstrapAccountPassword As String = Nothing, Optional clusterOperatorAccountPassword As String = Nothing, Optional sqlServiceAccountPassword As String = Nothing) As WindowsServerFailoverClusterDomainCredentials" />
+      <MemberSignature Language="F#" Value="static member WindowsServerFailoverClusterDomainCredentials : string * string * string -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.WindowsServerFailoverClusterDomainCredentials (clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clusterBootstrapAccountPassword" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clusterOperatorAccountPassword" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlServiceAccountPassword" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="clusterBootstrapAccountPassword"> Cluster bootstrap account password. </param>
+        <param name="clusterOperatorAccountPassword"> Cluster operator account password. </param>
+        <param name="sqlServiceAccountPassword"> SQL service account password. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainCredentials" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsServerFailoverClusterDomainProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile WindowsServerFailoverClusterDomainProfile (string domainFqdn = default, string organizationalUnitPath = default, string clusterBootstrapAccount = default, string clusterOperatorAccount = default, string sqlServiceAccount = default, bool? isSqlServiceAccountGmsa = default, string fileShareWitnessPath = default, Uri storageAccountUri = default, string storageAccountPrimaryKey = default, Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterSubnetType? clusterSubnetType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile WindowsServerFailoverClusterDomainProfile(string domainFqdn, string organizationalUnitPath, string clusterBootstrapAccount, string clusterOperatorAccount, string sqlServiceAccount, valuetype System.Nullable`1&lt;bool&gt; isSqlServiceAccountGmsa, string fileShareWitnessPath, class System.Uri storageAccountUri, string storageAccountPrimaryKey, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterSubnetType&gt; clusterSubnetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.WindowsServerFailoverClusterDomainProfile(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.String,System.Uri,System.String,System.Nullable{Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterSubnetType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WindowsServerFailoverClusterDomainProfile (Optional domainFqdn As String = Nothing, Optional organizationalUnitPath As String = Nothing, Optional clusterBootstrapAccount As String = Nothing, Optional clusterOperatorAccount As String = Nothing, Optional sqlServiceAccount As String = Nothing, Optional isSqlServiceAccountGmsa As Nullable(Of Boolean) = Nothing, Optional fileShareWitnessPath As String = Nothing, Optional storageAccountUri As Uri = Nothing, Optional storageAccountPrimaryKey As String = Nothing, Optional clusterSubnetType As Nullable(Of SqlVmClusterSubnetType) = Nothing) As WindowsServerFailoverClusterDomainProfile" />
+      <MemberSignature Language="F#" Value="static member WindowsServerFailoverClusterDomainProfile : string * string * string * string * string * Nullable&lt;bool&gt; * string * Uri * string * Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterSubnetType&gt; -&gt; Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile" Usage="Azure.ResourceManager.SqlVirtualMachine.Models.ArmSqlVirtualMachineModelFactory.WindowsServerFailoverClusterDomainProfile (domainFqdn, organizationalUnitPath, clusterBootstrapAccount, clusterOperatorAccount, sqlServiceAccount, isSqlServiceAccountGmsa, fileShareWitnessPath, storageAccountUri, storageAccountPrimaryKey, clusterSubnetType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.SqlVirtualMachine</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domainFqdn" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="organizationalUnitPath" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clusterBootstrapAccount" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clusterOperatorAccount" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sqlServiceAccount" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isSqlServiceAccountGmsa" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="fileShareWitnessPath" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="storageAccountUri" Type="System.Uri" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="storageAccountPrimaryKey" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clusterSubnetType" Type="System.Nullable&lt;Azure.ResourceManager.SqlVirtualMachine.Models.SqlVmClusterSubnetType&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="domainFqdn"> Fully qualified name of the domain. </param>
+        <param name="organizationalUnitPath"> Organizational Unit path in which the nodes and cluster will be present. </param>
+        <param name="clusterBootstrapAccount"> Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain). </param>
+        <param name="clusterOperatorAccount"> Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster. </param>
+        <param name="sqlServiceAccount"> Account name under which SQL service will run on all participating SQL virtual machines in the cluster. </param>
+        <param name="isSqlServiceAccountGmsa"> The flag to check if SQL service account is GMSA. </param>
+        <param name="fileShareWitnessPath"> Optional path for fileshare witness. </param>
+        <param name="storageAccountUri"> Fully qualified ARM resource id of the witness storage account. </param>
+        <param name="storageAccountPrimaryKey"> Primary key of the witness storage account. </param>
+        <param name="clusterSubnetType"> Cluster subnet type. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.SqlVirtualMachine.Models.WindowsServerFailoverClusterDomainProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

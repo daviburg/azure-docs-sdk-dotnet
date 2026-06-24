@@ -1,0 +1,1053 @@
+<Type Name="TaskExtensions" FullName="Microsoft.ClientModel.TestFramework.TaskExtensions">
+  <TypeSignature Language="C#" Value="public static class TaskExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TaskExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TaskExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module TaskExtensions" />
+  <TypeSignature Language="F#" Value="type TaskExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Provides extension methods for working with asynchronous operations in testing scenarios,
+            including timeout handling, task completion verification, and synchronous execution patterns.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AwaitWithCancellation">
+      <MemberSignature Language="C#" Value="public static Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable AwaitWithCancellation (this System.Threading.Tasks.Task task, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.ClientModel.TestFramework.TaskExtensions/WithCancellationTaskAwaitable AwaitWithCancellation(class System.Threading.Tasks.Task task, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation(System.Threading.Tasks.Task,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AwaitWithCancellation (task As Task, cancellationToken As CancellationToken) As TaskExtensions.WithCancellationTaskAwaitable" />
+      <MemberSignature Language="F#" Value="static member AwaitWithCancellation : System.Threading.Tasks.Task * System.Threading.CancellationToken -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation (task, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationTaskAwaitable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" RefType="this" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="task">The task to wrap with cancellation support.</param>
+        <param name="cancellationToken">The cancellation token to observe.</param>
+        <summary>
+            Creates an awaitable wrapper that allows a <see cref="T:System.Threading.Tasks.Task" /> to be awaited with cancellation support.
+            The returned awaitable will complete when either the task completes or the cancellation token is triggered.
+            </summary>
+        <returns>An awaitable that supports cancellation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AwaitWithCancellation&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable&lt;T&gt; AwaitWithCancellation&lt;T&gt; (this System.Threading.Tasks.Task&lt;T&gt; task, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.ClientModel.TestFramework.TaskExtensions/WithCancellationTaskAwaitable`1&lt;!!T&gt; AwaitWithCancellation&lt;T&gt;(class System.Threading.Tasks.Task`1&lt;!!T&gt; task, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation``1(System.Threading.Tasks.Task{``0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AwaitWithCancellation(Of T) (task As Task(Of T), cancellationToken As CancellationToken) As TaskExtensions.WithCancellationTaskAwaitable(Of T)" />
+      <MemberSignature Language="F#" Value="static member AwaitWithCancellation : System.Threading.Tasks.Task&lt;'T&gt; * System.Threading.CancellationToken -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation (task, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationTaskAwaitable&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;T&gt;" RefType="this" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The task to wrap with cancellation support.</param>
+        <param name="cancellationToken">The cancellation token to observe.</param>
+        <summary>
+            Creates an awaitable wrapper that allows a <see cref="T:System.Threading.Tasks.Task`1" /> to be awaited with cancellation support.
+            The returned awaitable will complete when either the task completes or the cancellation token is triggered.
+            </summary>
+        <returns>An awaitable that supports cancellation and returns the task result.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AwaitWithCancellation&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationValueTaskAwaitable&lt;T&gt; AwaitWithCancellation&lt;T&gt; (this System.Threading.Tasks.ValueTask&lt;T&gt; task, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.ClientModel.TestFramework.TaskExtensions/WithCancellationValueTaskAwaitable`1&lt;!!T&gt; AwaitWithCancellation&lt;T&gt;(valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; task, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation``1(System.Threading.Tasks.ValueTask{``0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AwaitWithCancellation(Of T) (task As ValueTask(Of T), cancellationToken As CancellationToken) As TaskExtensions.WithCancellationValueTaskAwaitable(Of T)" />
+      <MemberSignature Language="F#" Value="static member AwaitWithCancellation : System.Threading.Tasks.ValueTask&lt;'T&gt; * System.Threading.CancellationToken -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationValueTaskAwaitable&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.AwaitWithCancellation (task, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationValueTaskAwaitable&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask&lt;T&gt;" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask`1" /> to wrap with cancellation support.</param>
+        <param name="cancellationToken">The cancellation token to observe.</param>
+        <summary>
+            Creates an awaitable wrapper that allows a <see cref="T:System.Threading.Tasks.ValueTask`1" /> to be awaited with cancellation support.
+            The returned awaitable will complete when either the task completes or the cancellation token is triggered.
+            </summary>
+        <returns>An awaitable that supports cancellation and returns the task result.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTimeout">
+      <MemberSignature Language="C#" Value="public static TimeSpan DefaultTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan DefaultTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TaskExtensions.DefaultTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="static member DefaultTimeout : TimeSpan" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.DefaultTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the default timeout duration used by timeout extension methods when no specific timeout is provided.
+            </summary>
+        <value>A <see cref="T:System.TimeSpan" /> representing 10 seconds.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted">
+      <MemberSignature Language="C#" Value="public static void EnsureCompleted (this System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsureCompleted(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted(System.Threading.Tasks.Task)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub EnsureCompleted (task As Task)" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Threading.Tasks.Task -&gt; unit" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted task" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="task">The task to wait for completion.</param>
+        <summary>
+            Synchronously waits for a <see cref="T:System.Threading.Tasks.Task" /> to complete.
+            This method is compliant with Azure SDK guidelines (AZC0102) and includes debug-time
+            verification that the task is already completed to avoid blocking.
+            </summary>
+        <remarks>
+            This method should only be used when the task is expected to be already completed.
+            In debug builds, it verifies this assumption to help catch potential deadlock issues.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds if the task is not already completed, indicating a potential deadlock scenario.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted">
+      <MemberSignature Language="C#" Value="public static void EnsureCompleted (this System.Threading.Tasks.ValueTask task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsureCompleted(valuetype System.Threading.Tasks.ValueTask task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted(System.Threading.Tasks.ValueTask)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub EnsureCompleted (task As ValueTask)" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Threading.Tasks.ValueTask -&gt; unit" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted task" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask" /> to wait for completion.</param>
+        <summary>
+            Synchronously waits for a <see cref="T:System.Threading.Tasks.ValueTask" /> to complete.
+            This method is compliant with Azure SDK guidelines (AZC0102) and includes debug-time
+            verification that the task is already completed to avoid blocking.
+            </summary>
+        <remarks>
+            This method should only be used when the task is expected to be already completed.
+            In debug builds, it verifies this assumption to help catch potential deadlock issues.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds if the task is not already completed, indicating a potential deadlock scenario.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable EnsureCompleted (this System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable awaitable, bool async);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable EnsureCompleted(valuetype System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable awaitable, bool async) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted(System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnsureCompleted (awaitable As ConfiguredValueTaskAwaitable, async As Boolean) As ConfiguredValueTaskAwaitable" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable * bool -&gt; System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted (awaitable, async)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="awaitable" Type="System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable" RefType="this" />
+        <Parameter Name="async" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="awaitable">The configured awaitable to check.</param>
+        <param name="async">If <see langword="true" />, no verification is performed. If <see langword="false" />, verifies the awaitable is completed in debug builds.</param>
+        <summary>
+            Conditionally verifies that a <see cref="T:System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable" /> is completed when not running asynchronously.
+            This method is used in dual sync/async patterns to ensure tasks are completed before synchronous access.
+            </summary>
+        <returns>The original awaitable, unchanged.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds when <paramref name="async" /> is <see langword="false" /> and the awaitable is not completed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureCompleted&lt;T&gt; (this System.Threading.Tasks.Task&lt;T&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureCompleted&lt;T&gt;(class System.Threading.Tasks.Task`1&lt;!!T&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted``1(System.Threading.Tasks.Task{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnsureCompleted(Of T) (task As Task(Of T)) As T" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Threading.Tasks.Task&lt;'T&gt; -&gt; 'T" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted task" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;T&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The task to wait for completion.</param>
+        <summary>
+            Synchronously waits for a <see cref="T:System.Threading.Tasks.Task`1" /> to complete and returns its result.
+            This method is compliant with Azure SDK guidelines (AZC0102) and includes debug-time
+            verification that the task is already completed to avoid blocking.
+            </summary>
+        <returns>The result of the completed task.</returns>
+        <remarks>
+            This method should only be used when the task is expected to be already completed.
+            In debug builds, it verifies this assumption to help catch potential deadlock issues.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds if the task is not already completed, indicating a potential deadlock scenario.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T EnsureCompleted&lt;T&gt; (this System.Threading.Tasks.ValueTask&lt;T&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T EnsureCompleted&lt;T&gt;(valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted``1(System.Threading.Tasks.ValueTask{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnsureCompleted(Of T) (task As ValueTask(Of T)) As T" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Threading.Tasks.ValueTask&lt;'T&gt; -&gt; 'T" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted task" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask&lt;T&gt;" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask`1" /> to wait for completion.</param>
+        <summary>
+            Synchronously waits for a <see cref="T:System.Threading.Tasks.ValueTask`1" /> to complete and returns its result.
+            This method is compliant with Azure SDK guidelines (AZC0102) and includes debug-time
+            verification that the task is already completed to avoid blocking.
+            </summary>
+        <returns>The result of the completed task.</returns>
+        <remarks>
+            This method should only be used when the task is expected to be already completed.
+            In debug builds, it verifies this assumption to help catch potential deadlock issues.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds if the task is not already completed, indicating a potential deadlock scenario.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureCompleted&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;T&gt; EnsureCompleted&lt;T&gt; (this System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;T&gt; awaitable, bool async);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1&lt;!!T&gt; EnsureCompleted&lt;T&gt;(valuetype System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1&lt;!!T&gt; awaitable, bool async) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted``1(System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable{``0},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnsureCompleted(Of T) (awaitable As ConfiguredValueTaskAwaitable(Of T), async As Boolean) As ConfiguredValueTaskAwaitable(Of T)" />
+      <MemberSignature Language="F#" Value="static member EnsureCompleted : System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;'T&gt; * bool -&gt; System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureCompleted (awaitable, async)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="awaitable" Type="System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable&lt;T&gt;" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="async" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the awaitable result.</typeparam>
+        <param name="awaitable">The configured awaitable to check.</param>
+        <param name="async">If <see langword="true" />, no verification is performed. If <see langword="false" />, verifies the awaitable is completed in debug builds.</param>
+        <summary>
+            Conditionally verifies that a <see cref="T:System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1" /> is completed when not running asynchronously.
+            This method is used in dual sync/async patterns to ensure tasks are completed before synchronous access.
+            </summary>
+        <returns>The original awaitable, unchanged.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown in debug builds when <paramref name="async" /> is <see langword="false" /> and the awaitable is not completed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureSyncEnumerable&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.ClientModel.TestFramework.TaskExtensions.Enumerable&lt;T&gt; EnsureSyncEnumerable&lt;T&gt; (this System.Collections.Generic.IAsyncEnumerable&lt;T&gt; asyncEnumerable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.ClientModel.TestFramework.TaskExtensions/Enumerable`1&lt;!!T&gt; EnsureSyncEnumerable&lt;T&gt;(class System.Collections.Generic.IAsyncEnumerable`1&lt;!!T&gt; asyncEnumerable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureSyncEnumerable``1(System.Collections.Generic.IAsyncEnumerable{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EnsureSyncEnumerable(Of T) (asyncEnumerable As IAsyncEnumerable(Of T)) As TaskExtensions.Enumerable(Of T)" />
+      <MemberSignature Language="F#" Value="static member EnsureSyncEnumerable : System.Collections.Generic.IAsyncEnumerable&lt;'T&gt; -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.Enumerable&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.EnsureSyncEnumerable asyncEnumerable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TaskExtensions+Enumerable&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="asyncEnumerable" Type="System.Collections.Generic.IAsyncEnumerable&lt;T&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of elements in the enumerable.</typeparam>
+        <param name="asyncEnumerable">The asynchronous enumerable to convert.</param>
+        <summary>
+            Converts an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to a synchronous enumerable that can be used
+            in scenarios where async enumeration is not supported. This method provides a bridge between
+            asynchronous and synchronous enumeration patterns.
+            </summary>
+        <returns>A synchronous enumerable that wraps the async enumerable.</returns>
+        <remarks>
+            The returned enumerable will synchronously wait for each <c>MoveNextAsync</c> call,
+            which may cause blocking if the async enumerable is not ready.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultFromTask">
+      <MemberSignature Language="C#" Value="public static object? GetResultFromTask (object returnValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetResultFromTask(object returnValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.GetResultFromTask(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResultFromTask (returnValue As Object) As Object" />
+      <MemberSignature Language="F#" Value="static member GetResultFromTask : obj -&gt; obj" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.GetResultFromTask returnValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="returnValue">The object to extract a result from, which may be a task or a regular value.</param>
+        <summary>
+            Extracts the result value from a task object using reflection. This method handles both
+            regular objects and task types, unwrapping task results and properly handling exceptions.
+            </summary>
+        <returns>
+            The unwrapped result value. For non-task objects, returns the object itself.
+            For task objects, returns the task's Result property value.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            Throws the original exception if the task is faulted, unwrapping <see cref="T:System.Reflection.TargetInvocationException" />
+            and <see cref="T:System.AggregateException" /> to expose the underlying cause.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueFromTask">
+      <MemberSignature Language="C#" Value="public static object? GetValueFromTask (Type taskResultType, object instrumentedResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetValueFromTask(class System.Type taskResultType, object instrumentedResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.GetValueFromTask(System.Type,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetValueFromTask (taskResultType As Type, instrumentedResult As Object) As Object" />
+      <MemberSignature Language="F#" Value="static member GetValueFromTask : Type * obj -&gt; obj" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.GetValueFromTask (taskResultType, instrumentedResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskResultType" Type="System.Type" />
+        <Parameter Name="instrumentedResult" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="taskResultType">The type of the result value that will be wrapped in a task.</param>
+        <param name="instrumentedResult">The result value to wrap in a completed task.</param>
+        <summary>
+            Creates a <see cref="T:System.Threading.Tasks.Task" /> from a result value using <see cref="M:System.Threading.Tasks.Task.FromResult``1(``0)" /> via reflection.
+            This method is used when the result type is determined at runtime.
+            </summary>
+        <returns>
+            A completed <see cref="T:System.Threading.Tasks.Task`1" /> containing the provided result value, or <see langword="null" />
+            if reflection fails to create the generic method.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTaskFaulted">
+      <MemberSignature Language="C#" Value="public static bool? IsTaskFaulted (object taskObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Nullable`1&lt;bool&gt; IsTaskFaulted(object taskObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.IsTaskFaulted(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsTaskFaulted (taskObj As Object) As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="static member IsTaskFaulted : obj -&gt; Nullable&lt;bool&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.IsTaskFaulted taskObj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="taskObj">The task object to inspect.</param>
+        <summary>
+            Determines whether a task object is in a faulted state using reflection.
+            This method is used for runtime task inspection when the exact task type is not known at compile time.
+            </summary>
+        <returns>
+          <see langword="true" /> if the task is faulted; <see langword="false" /> if the task is not faulted;
+            <see langword="null" /> if the object does not have an IsFaulted property or reflection fails.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTaskType">
+      <MemberSignature Language="C#" Value="public static bool IsTaskType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTaskType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.IsTaskType(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsTaskType (type As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsTaskType : Type -&gt; bool" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.IsTaskType type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type to check.</param>
+        <summary>
+            Determines whether a given type represents a task-like type that can be awaited.
+            This includes <see cref="T:System.Threading.Tasks.Task" />, <see cref="T:System.Threading.Tasks.ValueTask" />, and their generic variants,
+            as well as internal .NET types like AsyncStateMachineBox used in .NET 5+.
+            </summary>
+        <returns>
+          <see langword="true" /> if the type represents a task-like type; otherwise, <see langword="false" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfter">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task TimeoutAfter (this System.Threading.Tasks.Task task, TimeSpan timeout, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task TimeoutAfter(class System.Threading.Tasks.Task task, valuetype System.TimeSpan timeout, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter(System.Threading.Tasks.Task,System.TimeSpan,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfter (task As Task, timeout As TimeSpan, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As Task" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfter : System.Threading.Tasks.Task * TimeSpan * string * int -&gt; System.Threading.Tasks.Task" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter (task, timeout, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="task">The task to apply the timeout to.</param>
+        <param name="timeout">The maximum time to wait for the task to complete.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies a custom timeout to a task. If the task does not complete within
+            the specified timeout period, a <see cref="T:System.TimeoutException" /> is thrown. The timeout is ignored
+            if a debugger is attached or if the task is already completed.
+            </summary>
+        <returns>A task that completes when the original task completes or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the specified timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfter">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask TimeoutAfter (this System.Threading.Tasks.ValueTask task, TimeSpan timeout, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask TimeoutAfter(valuetype System.Threading.Tasks.ValueTask task, valuetype System.TimeSpan timeout, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter(System.Threading.Tasks.ValueTask,System.TimeSpan,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfter (task As ValueTask, timeout As TimeSpan, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As ValueTask" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfter : System.Threading.Tasks.ValueTask * TimeSpan * string * int -&gt; System.Threading.Tasks.ValueTask" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter (task, timeout, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask" /> to apply the timeout to.</param>
+        <param name="timeout">The maximum time to wait for the task to complete.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies a custom timeout to a <see cref="T:System.Threading.Tasks.ValueTask" />. This method converts the <see cref="T:System.Threading.Tasks.ValueTask" />
+            to a <see cref="T:System.Threading.Tasks.Task" /> and applies the timeout logic.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask" /> that completes when the original task completes or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the specified timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfter&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;T&gt; TimeoutAfter&lt;T&gt; (this System.Threading.Tasks.Task&lt;T&gt; task, TimeSpan timeout, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!T&gt; TimeoutAfter&lt;T&gt;(class System.Threading.Tasks.Task`1&lt;!!T&gt; task, valuetype System.TimeSpan timeout, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter``1(System.Threading.Tasks.Task{``0},System.TimeSpan,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfter(Of T) (task As Task(Of T), timeout As TimeSpan, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfter : System.Threading.Tasks.Task&lt;'T&gt; * TimeSpan * string * int -&gt; System.Threading.Tasks.Task&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter (task, timeout, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;T&gt;" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The task to apply the timeout to.</param>
+        <param name="timeout">The maximum time to wait for the task to complete.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies a custom timeout to a task that returns a value. If the task does not complete within
+            the specified timeout period, a <see cref="T:System.TimeoutException" /> is thrown. The timeout is ignored
+            if a debugger is attached or if the task is already completed.
+            </summary>
+        <returns>A task that completes with the original task's result or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the specified timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfter&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask&lt;T&gt; TimeoutAfter&lt;T&gt; (this System.Threading.Tasks.ValueTask&lt;T&gt; task, TimeSpan timeout, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; TimeoutAfter&lt;T&gt;(valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; task, valuetype System.TimeSpan timeout, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter``1(System.Threading.Tasks.ValueTask{``0},System.TimeSpan,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfter(Of T) (task As ValueTask(Of T), timeout As TimeSpan, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As ValueTask(Of T)" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfter : System.Threading.Tasks.ValueTask&lt;'T&gt; * TimeSpan * string * int -&gt; System.Threading.Tasks.ValueTask&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfter (task, timeout, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask&lt;T&gt;" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask`1" /> to apply the timeout to.</param>
+        <param name="timeout">The maximum time to wait for the task to complete.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies a custom timeout to a <see cref="T:System.Threading.Tasks.ValueTask`1" />. This method converts the <see cref="T:System.Threading.Tasks.ValueTask`1" />
+            to a <see cref="T:System.Threading.Tasks.Task`1" /> and applies the timeout logic.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask`1" /> that completes with the original task's result or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the specified timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfterDefault">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task TimeoutAfterDefault (this System.Threading.Tasks.Task task, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task TimeoutAfterDefault(class System.Threading.Tasks.Task task, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault(System.Threading.Tasks.Task,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfterDefault (task As Task, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As Task" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfterDefault : System.Threading.Tasks.Task * string * int -&gt; System.Threading.Tasks.Task" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault (task, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" RefType="this" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="task">The task to apply the timeout to.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies the default timeout to a task. If the task does not complete within
+            the default timeout period, a <see cref="T:System.TimeoutException" /> is thrown with caller information.
+            </summary>
+        <returns>A task that completes when the original task completes or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the default timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfterDefault">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask TimeoutAfterDefault (this System.Threading.Tasks.ValueTask task, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask TimeoutAfterDefault(valuetype System.Threading.Tasks.ValueTask task, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault(System.Threading.Tasks.ValueTask,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfterDefault (task As ValueTask, Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As ValueTask" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfterDefault : System.Threading.Tasks.ValueTask * string * int -&gt; System.Threading.Tasks.ValueTask" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault (task, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask" RefType="this" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask" /> to apply the timeout to.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies the default timeout to a <see cref="T:System.Threading.Tasks.ValueTask" />. If the task does not complete within
+            the default timeout period, a <see cref="T:System.TimeoutException" /> is thrown with caller information.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask" /> that completes when the original task completes or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the default timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfterDefault&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;T&gt; TimeoutAfterDefault&lt;T&gt; (this System.Threading.Tasks.Task&lt;T&gt; task, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!T&gt; TimeoutAfterDefault&lt;T&gt;(class System.Threading.Tasks.Task`1&lt;!!T&gt; task, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault``1(System.Threading.Tasks.Task{``0},System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfterDefault(Of T) (task As Task(Of T), Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfterDefault : System.Threading.Tasks.Task&lt;'T&gt; * string * int -&gt; System.Threading.Tasks.Task&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault (task, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;T&gt;" RefType="this" />
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The task to apply the timeout to.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies the default timeout to a task that returns a value. If the task does not complete within
+            the default timeout period, a <see cref="T:System.TimeoutException" /> is thrown with caller information.
+            </summary>
+        <returns>A task that completes with the original task's result or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the default timeout period.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutAfterDefault&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask&lt;T&gt; TimeoutAfterDefault&lt;T&gt; (this System.Threading.Tasks.ValueTask&lt;T&gt; task, string? filePath = default, int lineNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; TimeoutAfterDefault&lt;T&gt;(valuetype System.Threading.Tasks.ValueTask`1&lt;!!T&gt; task, string filePath, int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault``1(System.Threading.Tasks.ValueTask{``0},System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TimeoutAfterDefault(Of T) (task As ValueTask(Of T), Optional filePath As String = Nothing, Optional lineNumber As Integer = 0) As ValueTask(Of T)" />
+      <MemberSignature Language="F#" Value="static member TimeoutAfterDefault : System.Threading.Tasks.ValueTask&lt;'T&gt; * string * int -&gt; System.Threading.Tasks.ValueTask&lt;'T&gt;" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.TimeoutAfterDefault (task, filePath, lineNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.ValueTask&lt;T&gt;" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerFilePath]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerFilePath&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="lineNumber" Type="System.Int32">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerLineNumber]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerLineNumber&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the task result.</typeparam>
+        <param name="task">The <see cref="T:System.Threading.Tasks.ValueTask`1" /> to apply the timeout to.</param>
+        <param name="filePath">The source file path of the caller. This parameter is automatically populated by the compiler.</param>
+        <param name="lineNumber">The line number in the source file of the caller. This parameter is automatically populated by the compiler.</param>
+        <summary>
+            Applies the default timeout to a <see cref="T:System.Threading.Tasks.ValueTask`1" /> that returns a value. If the task does not complete within
+            the default timeout period, a <see cref="T:System.TimeoutException" /> is thrown with caller information.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask`1" /> that completes with the original task's result or throws a <see cref="T:System.TimeoutException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">Thrown when the task does not complete within the default timeout period.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

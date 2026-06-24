@@ -1,0 +1,766 @@
+<Type Name="ComputeBulkActionsVMAttributes" FullName="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes">
+  <TypeSignature Language="C#" Value="public class ComputeBulkActionsVMAttributes : System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;, System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComputeBulkActionsVMAttributes extends System.Object implements class System.ClientModel.Primitives.IJsonModel`1&lt;class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;, class System.ClientModel.Primitives.IPersistableModel`1&lt;class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;" />
+  <TypeSignature Language="DocId" Value="T:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" />
+  <TypeSignature Language="VB.NET" Value="Public Class ComputeBulkActionsVMAttributes&#xA;Implements IJsonModel(Of ComputeBulkActionsVMAttributes), IPersistableModel(Of ComputeBulkActionsVMAttributes)" />
+  <TypeSignature Language="F#" Value="type ComputeBulkActionsVMAttributes = class&#xA;    interface IJsonModel&lt;ComputeBulkActionsVMAttributes&gt;&#xA;    interface IPersistableModel&lt;ComputeBulkActionsVMAttributes&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary> VMAttributes that will be used to filter VMSizes which will be used to launch instances. </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComputeBulkActionsVMAttributes (Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger vCpuCount, Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble memoryInGiB, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt; architectureTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger vCpuCount, class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble memoryInGiB, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt; architectureTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.#ctor(Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger,Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble,System.Collections.Generic.IEnumerable{Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (vCpuCount As ComputeBulkActionsVMAttributeMinMaxInteger, memoryInGiB As ComputeBulkActionsVMAttributeMinMaxDouble, architectureTypes As IEnumerable(Of ComputeBulkActionsArchitectureType))" />
+      <MemberSignature Language="F#" Value="new Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger * Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble * seq&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt; -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" Usage="new Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes (vCpuCount, memoryInGiB, architectureTypes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vCpuCount" Type="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger" />
+        <Parameter Name="memoryInGiB" Type="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble" />
+        <Parameter Name="architectureTypes" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="vCpuCount"> The range of vCpuCount specified from Min to Max. Must be specified if VMAttributes are specified, either Min or Max is required if specified. </param>
+        <param name="memoryInGiB"> The range of memory specified from Min to Max. Must be specified if VMAttributes are specified, either Min or Max is required if specified. </param>
+        <param name="architectureTypes"> The VM architecture types specified as a list. Must be specified if VMAttributes are specified. Must be compatible with image used. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" />. </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="vCpuCount" />, <paramref name="memoryInGiB" /> or <paramref name="architectureTypes" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceleratorCount">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger AcceleratorCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger AcceleratorCount" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property AcceleratorCount As ComputeBulkActionsVMAttributeMinMaxInteger" />
+      <MemberSignature Language="F#" Value="member this.AcceleratorCount : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The range of accelerator count specified from min to max. Optional parameter. Either Min or Max is required if specified.
+            acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceleratorManufacturers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorManufacturer&gt; AcceleratorManufacturers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorManufacturer&gt; AcceleratorManufacturers" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorManufacturers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceleratorManufacturers As IList(Of ComputeBulkActionsAcceleratorManufacturer)" />
+      <MemberSignature Language="F#" Value="member this.AcceleratorManufacturers : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorManufacturer&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorManufacturers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorManufacturer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The accelerator manufacturers specified as a list. 
+            acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceleratorSupport">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport? AcceleratorSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; AcceleratorSupport" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property AcceleratorSupport As Nullable(Of ComputeBulkActionsVMAttributeSupport)" />
+      <MemberSignature Language="F#" Value="member this.AcceleratorSupport : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorSupport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether the VMSize supporting accelerator should be used to launch instances or not.
+            acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceleratorTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorType&gt; AcceleratorTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorType&gt; AcceleratorTypes" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceleratorTypes As IList(Of ComputeBulkActionsAcceleratorType)" />
+      <MemberSignature Language="F#" Value="member this.AcceleratorTypes : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorType&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AcceleratorTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsAcceleratorType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The accelerator types specified as a list. acceleratorSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If acceleratorSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedVMSizes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; AllowedVMSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; AllowedVMSizes" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AllowedVMSizes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedVMSizes As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AllowedVMSizes : System.Collections.Generic.IList&lt;string&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.AllowedVMSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies which VMSizes should be allowed while filtering on VMAttributes. Cannot be specified together with excludedVMSizes. Maximum of 10 VM sizes allowed. Optional parameter. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArchitectureTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt; ArchitectureTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt; ArchitectureTypes" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.ArchitectureTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ArchitectureTypes As IList(Of ComputeBulkActionsArchitectureType)" />
+      <MemberSignature Language="F#" Value="member this.ArchitectureTypes : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.ArchitectureTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsArchitectureType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The VM architecture types specified as a list. Must be specified if VMAttributes are specified. Must be compatible with image used. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BurstableSupport">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport? BurstableSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; BurstableSupport" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.BurstableSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property BurstableSupport As Nullable(Of ComputeBulkActionsVMAttributeSupport)" />
+      <MemberSignature Language="F#" Value="member this.BurstableSupport : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.BurstableSupport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies whether the VMSize supporting burstable capability should be used to launch instances or not. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CpuManufacturers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCpuManufacturer&gt; CpuManufacturers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCpuManufacturer&gt; CpuManufacturers" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.CpuManufacturers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CpuManufacturers As IList(Of ComputeBulkActionsCpuManufacturer)" />
+      <MemberSignature Language="F#" Value="member this.CpuManufacturers : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCpuManufacturer&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.CpuManufacturers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCpuManufacturer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The VM CPU manufacturers specified as a list. Optional parameter. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataDiskCount">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger DataDiskCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger DataDiskCount" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.DataDiskCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataDiskCount As ComputeBulkActionsVMAttributeMinMaxInteger" />
+      <MemberSignature Language="F#" Value="member this.DataDiskCount : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.DataDiskCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of data disk count specified from Min to Max. Optional parameter. Either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedVMSizes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; ExcludedVMSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; ExcludedVMSizes" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.ExcludedVMSizes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExcludedVMSizes As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExcludedVMSizes : System.Collections.Generic.IList&lt;string&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.ExcludedVMSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies which VMSizes should be excluded while filtering on VMAttributes. Cannot be specified together with allowedVMSizes. Maximum of 10 VM sizes allowed. Optional parameter. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HyperVGenerations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsHyperVGeneration&gt; HyperVGenerations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsHyperVGeneration&gt; HyperVGenerations" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.HyperVGenerations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HyperVGenerations As IList(Of ComputeBulkActionsHyperVGeneration)" />
+      <MemberSignature Language="F#" Value="member this.HyperVGenerations : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsHyperVGeneration&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.HyperVGenerations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsHyperVGeneration&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The hyperV generations specified as a list. Optional parameter. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes JsonModelCreateCore (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes JsonModelCreateCore(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.JsonModelCreateCore(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function JsonModelCreateCore (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As ComputeBulkActionsVMAttributes" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&#xA;override this.JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" Usage="computeBulkActionsVMAttributes.JsonModelCreateCore (reader, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual void JsonModelWriteCore (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void JsonModelWriteCore(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.JsonModelWriteCore(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub JsonModelWriteCore (writer As Utf8JsonWriter, options As ModelReaderWriterOptions)" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="computeBulkActionsVMAttributes.JsonModelWriteCore (writer, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalStorageDiskTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsLocalStorageDiskType&gt; LocalStorageDiskTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsLocalStorageDiskType&gt; LocalStorageDiskTypes" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageDiskTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalStorageDiskTypes As IList(Of ComputeBulkActionsLocalStorageDiskType)" />
+      <MemberSignature Language="F#" Value="member this.LocalStorageDiskTypes : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsLocalStorageDiskType&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageDiskTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsLocalStorageDiskType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The local storage disk types specified as a list. LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If localStorageSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalStorageInGiB">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble LocalStorageInGiB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble LocalStorageInGiB" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageInGiB" />
+      <MemberSignature Language="VB.NET" Value="Public Property LocalStorageInGiB As ComputeBulkActionsVMAttributeMinMaxDouble" />
+      <MemberSignature Language="F#" Value="member this.LocalStorageInGiB : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageInGiB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            LocalStorageSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If localStorageSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalStorageSupport">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport? LocalStorageSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; LocalStorageSupport" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property LocalStorageSupport As Nullable(Of ComputeBulkActionsVMAttributeSupport)" />
+      <MemberSignature Language="F#" Value="member this.LocalStorageSupport : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.LocalStorageSupport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether the VMSize supporting local storage should be used to launch instances or not.
+            Included - Default if not specified as most Azure VMs support local storage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryInGiB">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble MemoryInGiB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble MemoryInGiB" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.MemoryInGiB" />
+      <MemberSignature Language="VB.NET" Value="Public Property MemoryInGiB As ComputeBulkActionsVMAttributeMinMaxDouble" />
+      <MemberSignature Language="F#" Value="member this.MemoryInGiB : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.MemoryInGiB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of memory specified from Min to Max. Must be specified if VMAttributes are specified, either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryInGiBPerVCpu">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble MemoryInGiBPerVCpu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble MemoryInGiBPerVCpu" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.MemoryInGiBPerVCpu" />
+      <MemberSignature Language="VB.NET" Value="Public Property MemoryInGiBPerVCpu As ComputeBulkActionsVMAttributeMinMaxDouble" />
+      <MemberSignature Language="F#" Value="member this.MemoryInGiBPerVCpu : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.MemoryInGiBPerVCpu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of memory in GiB per vCPU specified from min to max. Optional parameter. Either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkBandwidthInMbps">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble NetworkBandwidthInMbps { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble NetworkBandwidthInMbps" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.NetworkBandwidthInMbps" />
+      <MemberSignature Language="VB.NET" Value="Public Property NetworkBandwidthInMbps As ComputeBulkActionsVMAttributeMinMaxDouble" />
+      <MemberSignature Language="F#" Value="member this.NetworkBandwidthInMbps : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.NetworkBandwidthInMbps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxDouble</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of network bandwidth in Mbps specified from Min to Max. Optional parameter. Either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkInterfaceCount">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger NetworkInterfaceCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger NetworkInterfaceCount" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.NetworkInterfaceCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property NetworkInterfaceCount As ComputeBulkActionsVMAttributeMinMaxInteger" />
+      <MemberSignature Language="F#" Value="member this.NetworkInterfaceCount : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.NetworkInterfaceCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of network interface count specified from Min to Max. Optional parameter. Either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes PersistableModelCreateCore (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes PersistableModelCreateCore(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.PersistableModelCreateCore(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelCreateCore (data As BinaryData, options As ModelReaderWriterOptions) As ComputeBulkActionsVMAttributes" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&#xA;override this.PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" Usage="computeBulkActionsVMAttributes.PersistableModelCreateCore (data, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual BinaryData PersistableModelWriteCore (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.BinaryData PersistableModelWriteCore(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.PersistableModelWriteCore(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelWriteCore (options As ModelReaderWriterOptions) As BinaryData" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="computeBulkActionsVMAttributes.PersistableModelWriteCore options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RdmaNetworkInterfaceCount">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger RdmaNetworkInterfaceCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger RdmaNetworkInterfaceCount" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.RdmaNetworkInterfaceCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property RdmaNetworkInterfaceCount As ComputeBulkActionsVMAttributeMinMaxInteger" />
+      <MemberSignature Language="F#" Value="member this.RdmaNetworkInterfaceCount : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.RdmaNetworkInterfaceCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The range of RDMA (Remote Direct Memory Access) network interface count specified from Min to Max. Optional parameter. Either Min or Max is required if specified.
+            rdmaSupport should be set to "Included" or "Required" to use this VMAttribute. 
+            If rdmaSupport is "Excluded", this VMAttribute can not be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RdmaSupport">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport? RdmaSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; RdmaSupport" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.RdmaSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property RdmaSupport As Nullable(Of ComputeBulkActionsVMAttributeSupport)" />
+      <MemberSignature Language="F#" Value="member this.RdmaSupport : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.RdmaSupport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeSupport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies whether the VMSize supporting RDMA (Remote Direct Memory Access) should be used to build launch instances or not. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes IJsonModel&lt;ComputeBulkActionsVMAttributes&gt;.Create (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsVMAttributes&gt;#Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As ComputeBulkActionsVMAttributes Implements IJsonModel(Of ComputeBulkActionsVMAttributes).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" Usage="computeBulkActionsVMAttributes.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create (reader, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write">
+      <MemberSignature Language="C#" Value="void IJsonModel&lt;ComputeBulkActionsVMAttributes&gt;.Write (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsVMAttributes&gt;#Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Sub Write (writer As Utf8JsonWriter, options As ModelReaderWriterOptions) Implements IJsonModel(Of ComputeBulkActionsVMAttributes).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="computeBulkActionsVMAttributes.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write (writer, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes IPersistableModel&lt;ComputeBulkActionsVMAttributes&gt;.Create (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsVMAttributes&gt;#Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (data As BinaryData, options As ModelReaderWriterOptions) As ComputeBulkActionsVMAttributes Implements IPersistableModel(Of ComputeBulkActionsVMAttributes).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes" Usage="computeBulkActionsVMAttributes.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Create (data, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions">
+      <MemberSignature Language="C#" Value="string IPersistableModel&lt;ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsVMAttributes&gt;#GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function GetFormatFromOptions (options As ModelReaderWriterOptions) As String Implements IPersistableModel(Of ComputeBulkActionsVMAttributes).GetFormatFromOptions" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string" Usage="computeBulkActionsVMAttributes.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.GetFormatFromOptions options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write">
+      <MemberSignature Language="C#" Value="BinaryData IPersistableModel&lt;ComputeBulkActionsVMAttributes&gt;.Write (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.BinaryData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsVMAttributes&gt;#Write(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Write (options As ModelReaderWriterOptions) As BinaryData Implements IPersistableModel(Of ComputeBulkActionsVMAttributes).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="computeBulkActionsVMAttributes.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes&gt;.Write options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Write(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VCpuCount">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger VCpuCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger VCpuCount" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.VCpuCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property VCpuCount As ComputeBulkActionsVMAttributeMinMaxInteger" />
+      <MemberSignature Language="F#" Value="member this.VCpuCount : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.VCpuCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributeMinMaxInteger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The range of vCpuCount specified from Min to Max. Must be specified if VMAttributes are specified, either Min or Max is required if specified. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VmCategories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMCategory&gt; VmCategories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMCategory&gt; VmCategories" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.VmCategories" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VmCategories As IList(Of ComputeBulkActionsVMCategory)" />
+      <MemberSignature Language="F#" Value="member this.VmCategories : System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMCategory&gt;" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMAttributes.VmCategories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsVMCategory&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The VM category specified as a list. Optional parameter. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,95 @@
+<Type Name="ShareChangeFeedSnapshotStatus" FullName="Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus">
+  <TypeSignature Language="C#" Value="public enum ShareChangeFeedSnapshotStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ShareChangeFeedSnapshotStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ShareChangeFeedSnapshotStatus" />
+  <TypeSignature Language="F#" Value="type ShareChangeFeedSnapshotStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Azure.Storage.Files.Shares.ChangeFeed</AssemblyName>
+    <AssemblyVersion>12.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Describes the state of a file share snapshot as recorded in the Azure Files
+            change feed. Returned by
+            <see cref="M:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedClient.GetSnapshotStatus(System.String,System.Threading.CancellationToken)" />
+            and its async counterpart.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Finalized">
+      <MemberSignature Language="C#" Value="Finalized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus Finalized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.Finalized" />
+      <MemberSignature Language="VB.NET" Value="Finalized" />
+      <MemberSignature Language="F#" Value="Finalized = 2" Usage="Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.Finalized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares.ChangeFeed</AssemblyName>
+        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Snapshot metadata exists in the change feed and the snapshot has been finalized.
+            The snapshot can be used as an endpoint for
+            <see cref="M:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedClient.GetChangesBetweenSnapshots(System.String,System.String)" />
+            queries.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotFound">
+      <MemberSignature Language="C#" Value="NotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus NotFound = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.NotFound" />
+      <MemberSignature Language="VB.NET" Value="NotFound" />
+      <MemberSignature Language="F#" Value="NotFound = 0" Usage="Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.NotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares.ChangeFeed</AssemblyName>
+        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No snapshot metadata was found in the change feed for the requested timestamp.
+            Either the snapshot was never taken, the change feed has not yet published its
+            metadata, or the timestamp does not correspond to a share snapshot.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="Pending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus Pending = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.Pending" />
+      <MemberSignature Language="VB.NET" Value="Pending" />
+      <MemberSignature Language="F#" Value="Pending = 1" Usage="Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus.Pending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Storage.Files.Shares.ChangeFeed</AssemblyName>
+        <AssemblyVersion>12.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Storage.Files.Shares.ChangeFeed.ShareChangeFeedSnapshotStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Snapshot metadata exists in the change feed but the snapshot has not yet been
+            finalized. Querying change feed events that reference this snapshot may return
+            incomplete results until finalization completes.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -8,6 +8,7 @@
     <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -20,6 +21,30 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="BatchOptions">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Translation.Document.BatchOptions BatchOptions (bool? translateTextWithinImage = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Translation.Document.BatchOptions BatchOptions(valuetype System.Nullable`1&lt;bool&gt; translateTextWithinImage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Translation.Document.DocumentTranslationModelFactory.BatchOptions(System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BatchOptions (Optional translateTextWithinImage As Nullable(Of Boolean) = Nothing) As BatchOptions" />
+      <MemberSignature Language="F#" Value="static member BatchOptions : Nullable&lt;bool&gt; -&gt; Azure.AI.Translation.Document.BatchOptions" Usage="Azure.AI.Translation.Document.DocumentTranslationModelFactory.BatchOptions translateTextWithinImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Translation.Document.BatchOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="translateTextWithinImage" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="translateTextWithinImage"> Translation text within an image option. </param>
+        <summary> Translation batch request options. </summary>
+        <returns> A new <see cref="T:Azure.AI.Translation.Document.BatchOptions" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DocumentStatusResult">
       <MemberSignature Language="C#" Value="public static Azure.AI.Translation.Document.DocumentStatusResult DocumentStatusResult (string id, Uri sourceDocumentUri, BinaryData error, DateTimeOffset createdOn, DateTimeOffset lastModified, Azure.AI.Translation.Document.DocumentTranslationStatus status, string translatedTo, float progress, long charactersCharged);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Translation.Document.DocumentStatusResult DocumentStatusResult(string id, class System.Uri sourceDocumentUri, class System.BinaryData error, valuetype System.DateTimeOffset createdOn, valuetype System.DateTimeOffset lastModified, valuetype Azure.AI.Translation.Document.DocumentTranslationStatus status, string translatedTo, float32 progress, int64 charactersCharged) cil managed" />
@@ -30,6 +55,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.DocumentStatusResult</ReturnType>
@@ -72,6 +98,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.DocumentStatusResult</ReturnType>
@@ -114,6 +141,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.DocumentTranslateContent</ReturnType>
@@ -140,17 +168,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.DocumentTranslationFileFormat</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="format" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="fileExtensions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="contentTypes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="defaultFormatVersion" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="formatVersions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="type" Type="System.Nullable&lt;Azure.AI.Translation.Document.FileFormatType&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="fileExtensions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="contentTypes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="defaultFormatVersion" Type="System.String" />
+        <Parameter Name="formatVersions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="type" Type="System.Nullable&lt;Azure.AI.Translation.Document.FileFormatType&gt;" />
       </Parameters>
       <Docs>
         <param name="format"> Name of the format. </param>
@@ -159,41 +188,7 @@
         <param name="defaultFormatVersion"> Default version if none is specified. </param>
         <param name="formatVersions"> Supported Version. </param>
         <param name="type"> Supported Type for this format. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.DocumentTranslationFileFormat" />. </summary>
-        <returns> A new <see cref="T:Azure.AI.Translation.Document.DocumentTranslationFileFormat" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="DocumentTranslationFileFormat">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Translation.Document.DocumentTranslationFileFormat DocumentTranslationFileFormat (string format = default, System.Collections.Generic.IEnumerable&lt;string&gt; fileExtensions = default, System.Collections.Generic.IEnumerable&lt;string&gt; contentTypes = default, string defaultFormatVersion = default, System.Collections.Generic.IEnumerable&lt;string&gt; formatVersions = default, string type = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Translation.Document.DocumentTranslationFileFormat DocumentTranslationFileFormat(string format, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fileExtensions, class System.Collections.Generic.IEnumerable`1&lt;string&gt; contentTypes, string defaultFormatVersion, class System.Collections.Generic.IEnumerable`1&lt;string&gt; formatVersions, string type) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Translation.Document.DocumentTranslationModelFactory.DocumentTranslationFileFormat(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DocumentTranslationFileFormat (Optional format As String = Nothing, Optional fileExtensions As IEnumerable(Of String) = Nothing, Optional contentTypes As IEnumerable(Of String) = Nothing, Optional defaultFormatVersion As String = Nothing, Optional formatVersions As IEnumerable(Of String) = Nothing, Optional type As String = Nothing) As DocumentTranslationFileFormat" />
-      <MemberSignature Language="F#" Value="static member DocumentTranslationFileFormat : string * seq&lt;string&gt; * seq&lt;string&gt; * string * seq&lt;string&gt; * string -&gt; Azure.AI.Translation.Document.DocumentTranslationFileFormat" Usage="Azure.AI.Translation.Document.DocumentTranslationModelFactory.DocumentTranslationFileFormat (format, fileExtensions, contentTypes, defaultFormatVersion, formatVersions, type)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.AI.Translation.Document.DocumentTranslationFileFormat</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="format" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="fileExtensions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="contentTypes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="defaultFormatVersion" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="formatVersions" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="type" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="format"> Name of the format. </param>
-        <param name="fileExtensions"> Supported file extension for this format. </param>
-        <param name="contentTypes"> Supported Content-Types for this format. </param>
-        <param name="defaultFormatVersion"> Default version if none is specified. </param>
-        <param name="formatVersions"> Supported Version. </param>
-        <param name="type"> Supported Type for this format. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.DocumentTranslationFileFormat" />. </summary>
+        <summary> File Format. </summary>
         <returns> A new <see cref="T:Azure.AI.Translation.Document.DocumentTranslationFileFormat" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,6 +203,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.DocumentTranslationInput</ReturnType>
@@ -221,7 +217,7 @@
         <param name="source"> Source of the input documents. </param>
         <param name="targets"> Location of the destination for the output. </param>
         <param name="storageUriKind"> Storage type of the input documents source string. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.DocumentTranslationInput" />. </summary>
+        <summary> Definition for the input batch translation request. </summary>
         <returns> A new <see cref="T:Azure.AI.Translation.Document.DocumentTranslationInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -236,6 +232,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.SupportedFileFormats</ReturnType>
@@ -245,8 +242,34 @@
       </Parameters>
       <Docs>
         <param name="value"> list of objects. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.SupportedFileFormats" />. </summary>
+        <summary> List of supported file formats. </summary>
         <returns> A new <see cref="T:Azure.AI.Translation.Document.SupportedFileFormats" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslationBatch">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Translation.Document.TranslationBatch TranslationBatch (System.Collections.Generic.IEnumerable&lt;Azure.AI.Translation.Document.DocumentTranslationInput&gt; inputs = default, Azure.AI.Translation.Document.BatchOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Translation.Document.TranslationBatch TranslationBatch(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Translation.Document.DocumentTranslationInput&gt; inputs, class Azure.AI.Translation.Document.BatchOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Translation.Document.DocumentTranslationModelFactory.TranslationBatch(System.Collections.Generic.IEnumerable{Azure.AI.Translation.Document.DocumentTranslationInput},Azure.AI.Translation.Document.BatchOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TranslationBatch (Optional inputs As IEnumerable(Of DocumentTranslationInput) = Nothing, Optional options As BatchOptions = Nothing) As TranslationBatch" />
+      <MemberSignature Language="F#" Value="static member TranslationBatch : seq&lt;Azure.AI.Translation.Document.DocumentTranslationInput&gt; * Azure.AI.Translation.Document.BatchOptions -&gt; Azure.AI.Translation.Document.TranslationBatch" Usage="Azure.AI.Translation.Document.DocumentTranslationModelFactory.TranslationBatch (inputs, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Translation.Document.TranslationBatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Translation.Document.DocumentTranslationInput&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="Azure.AI.Translation.Document.BatchOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="inputs"> The input list of documents or folders containing documents. </param>
+        <param name="options"> The batch operation options. </param>
+        <summary> Translation job submission batch request. </summary>
+        <returns> A new <see cref="T:Azure.AI.Translation.Document.TranslationBatch" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -260,29 +283,29 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.TranslationGlossary</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="glossaryUri" Type="System.Uri" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="format" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="formatVersion" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageSource" Type="System.Nullable&lt;Azure.AI.Translation.Document.TranslationStorageSource&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="glossaryUri" Type="System.Uri" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatVersion" Type="System.String" />
+        <Parameter Name="storageSource" Type="System.Nullable&lt;Azure.AI.Translation.Document.TranslationStorageSource&gt;" />
       </Parameters>
       <Docs>
         <param name="glossaryUri">
-             Location of the glossary.
-             We will use the file extension to extract the
-             formatting if the format parameter is not supplied.
-            
-             If the translation
-             language pair is not present in the glossary, it will not be applied
-             </param>
+            Location of the glossary. 
+            We will use the file extension to extract the
+            formatting if the format parameter is not supplied.
+            If the translation
+            language pair is not present in the glossary, it will not be applied
+            </param>
         <param name="format"> Format. </param>
         <param name="formatVersion"> Optional Version.  If not specified, default is used. </param>
         <param name="storageSource"> Storage Source. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.TranslationGlossary" />. </summary>
+        <summary> Glossary / translation memory for the request. </summary>
         <returns> A new <see cref="T:Azure.AI.Translation.Document.TranslationGlossary" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -297,6 +320,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.TranslationStatusResult</ReturnType>
@@ -345,16 +369,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Translation.Document</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AI.Translation.Document.TranslationTarget</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetUri" Type="System.Uri" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="categoryId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="languageCode" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="glossaries" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Translation.Document.TranslationGlossary&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="storageSource" Type="System.Nullable&lt;Azure.AI.Translation.Document.TranslationStorageSource&gt;" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="categoryId" Type="System.String" />
+        <Parameter Name="languageCode" Type="System.String" />
+        <Parameter Name="glossaries" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Translation.Document.TranslationGlossary&gt;" />
+        <Parameter Name="storageSource" Type="System.Nullable&lt;Azure.AI.Translation.Document.TranslationStorageSource&gt;" />
       </Parameters>
       <Docs>
         <param name="targetUri"> Location of the folder / container with your documents. </param>
@@ -362,7 +387,7 @@
         <param name="languageCode"> Target Language. </param>
         <param name="glossaries"> List of Glossary. </param>
         <param name="storageSource"> Storage Source. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Translation.Document.TranslationTarget" />. </summary>
+        <summary> Destination for the finished translated documents. </summary>
         <returns> A new <see cref="T:Azure.AI.Translation.Document.TranslationTarget" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>

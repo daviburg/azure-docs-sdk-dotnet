@@ -17,83 +17,169 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="AadProfile">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.AadProfile AadProfile (bool? enableAzureRBAC = default, System.Collections.Generic.IEnumerable&lt;string&gt; adminGroupObjectIDs = default, string tenantID = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.AadProfile AadProfile(valuetype System.Nullable`1&lt;bool&gt; enableAzureRBAC, class System.Collections.Generic.IEnumerable`1&lt;string&gt; adminGroupObjectIDs, string tenantID) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.AadProfile(System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function AadProfile (Optional enableAzureRBAC As Nullable(Of Boolean) = Nothing, Optional adminGroupObjectIDs As IEnumerable(Of String) = Nothing, Optional tenantID As String = Nothing) As AadProfile" />
-      <MemberSignature Language="F#" Value="static member AadProfile : Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.AadProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.AadProfile (enableAzureRBAC, adminGroupObjectIDs, tenantID)" />
+    <Member MemberName="ClusterUserCredentialHybridConnectionConfig">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig ClusterUserCredentialHybridConnectionConfig (long? expirationTimeInSeconds = default, string hybridConnectionName = default, string relay = default, string token = default, string relayTid = default, string relayType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig ClusterUserCredentialHybridConnectionConfig(valuetype System.Nullable`1&lt;int64&gt; expirationTimeInSeconds, string hybridConnectionName, string relay, string token, string relayTid, string relayType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialHybridConnectionConfig(System.Nullable{System.Int64},System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ClusterUserCredentialHybridConnectionConfig (Optional expirationTimeInSeconds As Nullable(Of Long) = Nothing, Optional hybridConnectionName As String = Nothing, Optional relay As String = Nothing, Optional token As String = Nothing, Optional relayTid As String = Nothing, Optional relayType As String = Nothing) As ClusterUserCredentialHybridConnectionConfig" />
+      <MemberSignature Language="F#" Value="static member ClusterUserCredentialHybridConnectionConfig : Nullable&lt;int64&gt; * string * string * string * string * string -&gt; Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialHybridConnectionConfig (expirationTimeInSeconds, hybridConnectionName, relay, token, relayTid, relayType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.AadProfile</ReturnType>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="enableAzureRBAC" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="adminGroupObjectIDs" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="tenantID" Type="System.String" />
+        <Parameter Name="expirationTimeInSeconds" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="hybridConnectionName" Type="System.String" />
+        <Parameter Name="relay" Type="System.String" />
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="relayTid" Type="System.String" />
+        <Parameter Name="relayType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="enableAzureRBAC"> Whether to enable Azure RBAC for Kubernetes authorization. </param>
-        <param name="adminGroupObjectIDs"> The list of AAD group object IDs that will have admin role of the cluster. </param>
-        <param name="tenantID"> The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription. </param>
-        <summary> AAD Profile specifies attributes for Azure Active Directory integration. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.AadProfile" /> instance for mocking. </returns>
+        <param name="expirationTimeInSeconds"> Timestamp when this token will be expired. </param>
+        <param name="hybridConnectionName"> Name of the connection. </param>
+        <param name="relay"> Name of the relay. </param>
+        <param name="token"> Sender access token. </param>
+        <param name="relayTid"> TenantID of the relay. </param>
+        <param name="relayType"> Type of relay. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="AgentError">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.AgentError AgentError (string message = default, string severity = default, string component = default, DateTimeOffset? time = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.AgentError AgentError(string message, string severity, string component, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; time) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.AgentError(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function AgentError (Optional message As String = Nothing, Optional severity As String = Nothing, Optional component As String = Nothing, Optional time As Nullable(Of DateTimeOffset) = Nothing) As AgentError" />
-      <MemberSignature Language="F#" Value="static member AgentError : string * string * string * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.AgentError" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.AgentError (message, severity, component, time)" />
+    <Member MemberName="ClusterUserCredentialResult">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult ClusterUserCredentialResult (string name = default, BinaryData value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult ClusterUserCredentialResult(string name, class System.BinaryData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialResult(System.String,System.BinaryData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ClusterUserCredentialResult (Optional name As String = Nothing, Optional value As BinaryData = Nothing) As ClusterUserCredentialResult" />
+      <MemberSignature Language="F#" Value="static member ClusterUserCredentialResult : string * BinaryData -&gt; Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialResult (name, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.AgentError</ReturnType>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.BinaryData" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the credential. </param>
+        <param name="value"> Base64-encoded Kubernetes configuration file. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClusterUserCredentialsResult">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialsResult ClusterUserCredentialsResult (Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig hybridConnectionConfig = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult&gt; kubeconfigs = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialsResult ClusterUserCredentialsResult(class Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig hybridConnectionConfig, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult&gt; kubeconfigs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialsResult(Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ClusterUserCredentialsResult (Optional hybridConnectionConfig As ClusterUserCredentialHybridConnectionConfig = Nothing, Optional kubeconfigs As IEnumerable(Of ClusterUserCredentialResult) = Nothing) As ClusterUserCredentialsResult" />
+      <MemberSignature Language="F#" Value="static member ClusterUserCredentialsResult : Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig * seq&lt;Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialsResult" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ClusterUserCredentialsResult (hybridConnectionConfig, kubeconfigs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialsResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hybridConnectionConfig" Type="Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialHybridConnectionConfig" />
+        <Parameter Name="kubeconfigs" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialResult&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="hybridConnectionConfig"> Contains the REP (rendezvous endpoint) and “Sender” access token. </param>
+        <param name="kubeconfigs"> Base64-encoded Kubernetes configuration file. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialsResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectedClusterAadProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile ConnectedClusterAadProfile (bool? enableAzureRbac = default, System.Collections.Generic.IEnumerable&lt;string&gt; adminGroupObjectIds = default, string tenantId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile ConnectedClusterAadProfile(valuetype System.Nullable`1&lt;bool&gt; enableAzureRbac, class System.Collections.Generic.IEnumerable`1&lt;string&gt; adminGroupObjectIds, string tenantId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterAadProfile(System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterAadProfile (Optional enableAzureRbac As Nullable(Of Boolean) = Nothing, Optional adminGroupObjectIds As IEnumerable(Of String) = Nothing, Optional tenantId As String = Nothing) As ConnectedClusterAadProfile" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterAadProfile : Nullable&lt;bool&gt; * seq&lt;string&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterAadProfile (enableAzureRbac, adminGroupObjectIds, tenantId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enableAzureRbac" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="adminGroupObjectIds" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="tenantId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="enableAzureRbac"> Whether to enable Azure RBAC for Kubernetes authorization. </param>
+        <param name="adminGroupObjectIds"> The list of AAD group object IDs that will have admin role of the cluster. </param>
+        <param name="tenantId"> The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectedClusterAgentError">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError ConnectedClusterAgentError (string message = default, string severity = default, string component = default, DateTimeOffset? occurredOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError ConnectedClusterAgentError(string message, string severity, string component, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; occurredOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterAgentError(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterAgentError (Optional message As String = Nothing, Optional severity As String = Nothing, Optional component As String = Nothing, Optional occurredOn As Nullable(Of DateTimeOffset) = Nothing) As ConnectedClusterAgentError" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterAgentError : string * string * string * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterAgentError (message, severity, component, occurredOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
         <Parameter Name="severity" Type="System.String" />
         <Parameter Name="component" Type="System.String" />
-        <Parameter Name="time" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
+        <Parameter Name="occurredOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
       </Parameters>
       <Docs>
         <param name="message"> Agent error message. </param>
         <param name="severity"> Severity of the error message. </param>
         <param name="component"> Agent component where error message occured. </param>
-        <param name="time"> The timestamp of error occured (UTC). </param>
-        <summary> Agent Errors if any during agent or system component upgrade. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.AgentError" /> instance for mocking. </returns>
+        <param name="occurredOn"> The timestamp of error occured (UTC). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ArcAgentProfile">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile ArcAgentProfile (string desiredAgentVersion = default, Azure.ResourceManager.Kubernetes.Models.AutoUpgradeOptions? agentAutoUpgrade = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.SystemComponent&gt; systemComponents = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.AgentError&gt; agentErrors = default, string agentState = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile ArcAgentProfile(string desiredAgentVersion, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.AutoUpgradeOptions&gt; agentAutoUpgrade, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.SystemComponent&gt; systemComponents, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.AgentError&gt; agentErrors, string agentState) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ArcAgentProfile(System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.AutoUpgradeOptions},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.SystemComponent},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.AgentError},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ArcAgentProfile (Optional desiredAgentVersion As String = Nothing, Optional agentAutoUpgrade As Nullable(Of AutoUpgradeOptions) = Nothing, Optional systemComponents As IEnumerable(Of SystemComponent) = Nothing, Optional agentErrors As IEnumerable(Of AgentError) = Nothing, Optional agentState As String = Nothing) As ArcAgentProfile" />
-      <MemberSignature Language="F#" Value="static member ArcAgentProfile : string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.AutoUpgradeOptions&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.SystemComponent&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.AgentError&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ArcAgentProfile (desiredAgentVersion, agentAutoUpgrade, systemComponents, agentErrors, agentState)" />
+    <Member MemberName="ConnectedClusterArcAgentProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile ConnectedClusterArcAgentProfile (string desiredAgentVersion = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAutoUpgradeMode? agentAutoUpgrade = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent&gt; systemComponents = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError&gt; agentErrors = default, string agentState = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile ConnectedClusterArcAgentProfile(string desiredAgentVersion, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAutoUpgradeMode&gt; agentAutoUpgrade, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent&gt; systemComponents, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError&gt; agentErrors, string agentState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterArcAgentProfile(System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAutoUpgradeMode},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterArcAgentProfile (Optional desiredAgentVersion As String = Nothing, Optional agentAutoUpgrade As Nullable(Of ConnectedClusterAutoUpgradeMode) = Nothing, Optional systemComponents As IEnumerable(Of ConnectedClusterSystemComponent) = Nothing, Optional agentErrors As IEnumerable(Of ConnectedClusterAgentError) = Nothing, Optional agentState As String = Nothing) As ConnectedClusterArcAgentProfile" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterArcAgentProfile : string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAutoUpgradeMode&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterArcAgentProfile (desiredAgentVersion, agentAutoUpgrade, systemComponents, agentErrors, agentState)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile</ReturnType>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="desiredAgentVersion" Type="System.String" />
-        <Parameter Name="agentAutoUpgrade" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.AutoUpgradeOptions&gt;" />
-        <Parameter Name="systemComponents" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.SystemComponent&gt;" />
-        <Parameter Name="agentErrors" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.AgentError&gt;" />
+        <Parameter Name="agentAutoUpgrade" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAutoUpgradeMode&gt;" />
+        <Parameter Name="systemComponents" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent&gt;" />
+        <Parameter Name="agentErrors" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAgentError&gt;" />
         <Parameter Name="agentState" Type="System.String" />
       </Parameters>
       <Docs>
@@ -102,8 +188,36 @@
         <param name="systemComponents"> List of system extensions that are installed on the cluster resource. </param>
         <param name="agentErrors"> List of arc agentry and system components errors on the cluster resource. </param>
         <param name="agentState"> Represents the current state of the Arc agentry and its dependent components. </param>
-        <summary> Defines the Arc Agent properties for the clusters. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile" /> instance for mocking. </returns>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectedClusterArcAgentryConfiguration">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration ConnectedClusterArcAgentryConfiguration (string feature = default, System.Collections.Generic.IDictionary&lt;string,string&gt; settings = default, System.Collections.Generic.IDictionary&lt;string,string&gt; protectedSettings = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration ConnectedClusterArcAgentryConfiguration(string feature, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; settings, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; protectedSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterArcAgentryConfiguration(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterArcAgentryConfiguration (Optional feature As String = Nothing, Optional settings As IDictionary(Of String, String) = Nothing, Optional protectedSettings As IDictionary(Of String, String) = Nothing) As ConnectedClusterArcAgentryConfiguration" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterArcAgentryConfiguration : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterArcAgentryConfiguration (feature, settings, protectedSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.String" />
+        <Parameter Name="settings" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="protectedSettings" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="feature"> Specifies the name of the feature for the configuration setting. </param>
+        <param name="settings"> The configuration settings for the feature that do not contain any sensitive or secret information. </param>
+        <param name="protectedSettings"> The configuration settings for the feature that contain any sensitive or secret information. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -147,6 +261,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ConnectedClusterOidcIssuerProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile ConnectedClusterOidcIssuerProfile (bool? enabled = default, string issuerUri = default, string selfHostedIssuerUri = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile ConnectedClusterOidcIssuerProfile(valuetype System.Nullable`1&lt;bool&gt; enabled, string issuerUri, string selfHostedIssuerUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterOidcIssuerProfile(System.Nullable{System.Boolean},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterOidcIssuerProfile (Optional enabled As Nullable(Of Boolean) = Nothing, Optional issuerUri As String = Nothing, Optional selfHostedIssuerUri As String = Nothing) As ConnectedClusterOidcIssuerProfile" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterOidcIssuerProfile : Nullable&lt;bool&gt; * string * string -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterOidcIssuerProfile (enabled, issuerUri, selfHostedIssuerUri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="issuerUri" Type="System.String" />
+        <Parameter Name="selfHostedIssuerUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="enabled"> Whether to enable oidc issuer for workload identity integration. </param>
+        <param name="issuerUri"> The issuer url for hybrid clusters connected to Arc used for the workload identity feature. </param>
+        <param name="selfHostedIssuerUri"> The issuer url for public cloud clusters - AKS, EKS, GKE - used for the workload identity feature. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ConnectedClusterPatch">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatch ConnectedClusterPatch (System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatch ConnectedClusterPatch(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties properties) cil managed" />
@@ -173,12 +315,42 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ConnectedClusterPatchProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties ConnectedClusterPatchProperties (string distribution = default, string distributionVersion = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit? azureHybridBenefit = default, bool? isGatewayEnabled = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties ConnectedClusterPatchProperties(string distribution, string distributionVersion, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt; azureHybridBenefit, valuetype System.Nullable`1&lt;bool&gt; isGatewayEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterPatchProperties(System.String,System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterPatchProperties (Optional distribution As String = Nothing, Optional distributionVersion As String = Nothing, Optional azureHybridBenefit As Nullable(Of ConnectedClusterAzureHybridBenefit) = Nothing, Optional isGatewayEnabled As Nullable(Of Boolean) = Nothing) As ConnectedClusterPatchProperties" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterPatchProperties : string * string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt; * Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterPatchProperties (distribution, distributionVersion, azureHybridBenefit, isGatewayEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="distribution" Type="System.String" />
+        <Parameter Name="distributionVersion" Type="System.String" />
+        <Parameter Name="azureHybridBenefit" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt;" />
+        <Parameter Name="isGatewayEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="distribution"> Represents the distribution of the connected cluster. </param>
+        <param name="distributionVersion"> Represents the Kubernetes distribution version on this connected cluster. </param>
+        <param name="azureHybridBenefit"> Indicates whether Azure Hybrid Benefit is opted in. </param>
+        <param name="isGatewayEnabled"> Indicates whether the gateway for arc router connectivity is enabled. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPatchProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ConnectedClusterProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties ConnectedClusterProperties (string agentPublicKeyCertificate = default, string kubernetesVersion = default, int? totalNodeCount = default, int? totalCoreCount = default, string agentVersion = default, Azure.ResourceManager.Kubernetes.Models.ProvisioningState? provisioningState = default, string distribution = default, string distributionVersion = default, string infrastructure = default, string offering = default, DateTimeOffset? managedIdentityCertificateExpirationOn = default, DateTimeOffset? lastConnectivityOn = default, Azure.ResourceManager.Kubernetes.Models.ConnectivityStatus? connectivityStatus = default, Azure.ResourceManager.Kubernetes.Models.PrivateLinkState? privateLinkState = default, string privateLinkScopeResourceId = default, Azure.ResourceManager.Kubernetes.Models.AzureHybridBenefit? azureHybridBenefit = default, Azure.ResourceManager.Kubernetes.Models.AadProfile aadProfile = default, Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile arcAgentProfile = default, bool? workloadIdentityEnabled = default, Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile oidcIssuerProfile = default, bool? gatewayEnabled = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ArcAgentryConfigurations&gt; arcAgentryConfigurations = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; miscellaneousProperties = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties ConnectedClusterProperties(string agentPublicKeyCertificate, string kubernetesVersion, valuetype System.Nullable`1&lt;int32&gt; totalNodeCount, valuetype System.Nullable`1&lt;int32&gt; totalCoreCount, string agentVersion, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ProvisioningState&gt; provisioningState, string distribution, string distributionVersion, string infrastructure, string offering, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; managedIdentityCertificateExpirationOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastConnectivityOn, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectivityStatus&gt; connectivityStatus, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.PrivateLinkState&gt; privateLinkState, string privateLinkScopeResourceId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.AzureHybridBenefit&gt; azureHybridBenefit, class Azure.ResourceManager.Kubernetes.Models.AadProfile aadProfile, class Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile arcAgentProfile, valuetype System.Nullable`1&lt;bool&gt; workloadIdentityEnabled, class Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile oidcIssuerProfile, valuetype System.Nullable`1&lt;bool&gt; gatewayEnabled, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.ArcAgentryConfigurations&gt; arcAgentryConfigurations, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; miscellaneousProperties) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterProperties(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.ProvisioningState},System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectivityStatus},System.Nullable{Azure.ResourceManager.Kubernetes.Models.PrivateLinkState},System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.AzureHybridBenefit},Azure.ResourceManager.Kubernetes.Models.AadProfile,Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile,System.Nullable{System.Boolean},Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.ArcAgentryConfigurations},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterProperties (Optional agentPublicKeyCertificate As String = Nothing, Optional kubernetesVersion As String = Nothing, Optional totalNodeCount As Nullable(Of Integer) = Nothing, Optional totalCoreCount As Nullable(Of Integer) = Nothing, Optional agentVersion As String = Nothing, Optional provisioningState As Nullable(Of ProvisioningState) = Nothing, Optional distribution As String = Nothing, Optional distributionVersion As String = Nothing, Optional infrastructure As String = Nothing, Optional offering As String = Nothing, Optional managedIdentityCertificateExpirationOn As Nullable(Of DateTimeOffset) = Nothing, Optional lastConnectivityOn As Nullable(Of DateTimeOffset) = Nothing, Optional connectivityStatus As Nullable(Of ConnectivityStatus) = Nothing, Optional privateLinkState As Nullable(Of PrivateLinkState) = Nothing, Optional privateLinkScopeResourceId As String = Nothing, Optional azureHybridBenefit As Nullable(Of AzureHybridBenefit) = Nothing, Optional aadProfile As AadProfile = Nothing, Optional arcAgentProfile As ArcAgentProfile = Nothing, Optional workloadIdentityEnabled As Nullable(Of Boolean) = Nothing, Optional oidcIssuerProfile As OidcIssuerProfile = Nothing, Optional gatewayEnabled As Nullable(Of Boolean) = Nothing, Optional arcAgentryConfigurations As IEnumerable(Of ArcAgentryConfigurations) = Nothing, Optional miscellaneousProperties As IReadOnlyDictionary(Of String, String) = Nothing) As ConnectedClusterProperties" />
-      <MemberSignature Language="F#" Value="static member ConnectedClusterProperties : string * string * Nullable&lt;int&gt; * Nullable&lt;int&gt; * string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ProvisioningState&gt; * string * string * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectivityStatus&gt; * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.PrivateLinkState&gt; * string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.AzureHybridBenefit&gt; * Azure.ResourceManager.Kubernetes.Models.AadProfile * Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile * Nullable&lt;bool&gt; * Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile * Nullable&lt;bool&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.ArcAgentryConfigurations&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterProperties (agentPublicKeyCertificate, kubernetesVersion, totalNodeCount, totalCoreCount, agentVersion, provisioningState, distribution, distributionVersion, infrastructure, offering, managedIdentityCertificateExpirationOn, lastConnectivityOn, connectivityStatus, privateLinkState, privateLinkScopeResourceId, azureHybridBenefit, aadProfile, arcAgentProfile, workloadIdentityEnabled, oidcIssuerProfile, gatewayEnabled, arcAgentryConfigurations, miscellaneousProperties)" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties ConnectedClusterProperties (string agentPublicKeyCertificate = default, string kubernetesVersion = default, int? totalNodeCount = default, int? totalCoreCount = default, string agentVersion = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProvisioningState? provisioningState = default, string distribution = default, string distributionVersion = default, string infrastructure = default, string offering = default, DateTimeOffset? managedIdentityCertificateExpirationOn = default, DateTimeOffset? lastConnectivityOn = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterConnectivityStatus? connectivityStatus = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPrivateLinkState? privateLinkState = default, Azure.Core.ResourceIdentifier privateLinkScopeResourceId = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit? azureHybridBenefit = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile aadProfile = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile arcAgentProfile = default, bool? isWorkloadIdentityEnabled = default, Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile oidcIssuerProfile = default, bool? isGatewayEnabled = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration&gt; arcAgentryConfigurations = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; miscellaneousProperties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties ConnectedClusterProperties(string agentPublicKeyCertificate, string kubernetesVersion, valuetype System.Nullable`1&lt;int32&gt; totalNodeCount, valuetype System.Nullable`1&lt;int32&gt; totalCoreCount, string agentVersion, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProvisioningState&gt; provisioningState, string distribution, string distributionVersion, string infrastructure, string offering, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; managedIdentityCertificateExpirationOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastConnectivityOn, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterConnectivityStatus&gt; connectivityStatus, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPrivateLinkState&gt; privateLinkState, class Azure.Core.ResourceIdentifier privateLinkScopeResourceId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt; azureHybridBenefit, class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile aadProfile, class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile arcAgentProfile, valuetype System.Nullable`1&lt;bool&gt; isWorkloadIdentityEnabled, class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile oidcIssuerProfile, valuetype System.Nullable`1&lt;bool&gt; isGatewayEnabled, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration&gt; arcAgentryConfigurations, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; miscellaneousProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterProperties(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProvisioningState},System.String,System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterConnectivityStatus},System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPrivateLinkState},Azure.Core.ResourceIdentifier,System.Nullable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit},Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile,Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile,System.Nullable{System.Boolean},Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterProperties (Optional agentPublicKeyCertificate As String = Nothing, Optional kubernetesVersion As String = Nothing, Optional totalNodeCount As Nullable(Of Integer) = Nothing, Optional totalCoreCount As Nullable(Of Integer) = Nothing, Optional agentVersion As String = Nothing, Optional provisioningState As Nullable(Of ConnectedClusterProvisioningState) = Nothing, Optional distribution As String = Nothing, Optional distributionVersion As String = Nothing, Optional infrastructure As String = Nothing, Optional offering As String = Nothing, Optional managedIdentityCertificateExpirationOn As Nullable(Of DateTimeOffset) = Nothing, Optional lastConnectivityOn As Nullable(Of DateTimeOffset) = Nothing, Optional connectivityStatus As Nullable(Of ConnectedClusterConnectivityStatus) = Nothing, Optional privateLinkState As Nullable(Of ConnectedClusterPrivateLinkState) = Nothing, Optional privateLinkScopeResourceId As ResourceIdentifier = Nothing, Optional azureHybridBenefit As Nullable(Of ConnectedClusterAzureHybridBenefit) = Nothing, Optional aadProfile As ConnectedClusterAadProfile = Nothing, Optional arcAgentProfile As ConnectedClusterArcAgentProfile = Nothing, Optional isWorkloadIdentityEnabled As Nullable(Of Boolean) = Nothing, Optional oidcIssuerProfile As ConnectedClusterOidcIssuerProfile = Nothing, Optional isGatewayEnabled As Nullable(Of Boolean) = Nothing, Optional arcAgentryConfigurations As IEnumerable(Of ConnectedClusterArcAgentryConfiguration) = Nothing, Optional miscellaneousProperties As IReadOnlyDictionary(Of String, String) = Nothing) As ConnectedClusterProperties" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterProperties : string * string * Nullable&lt;int&gt; * Nullable&lt;int&gt; * string * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProvisioningState&gt; * string * string * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterConnectivityStatus&gt; * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPrivateLinkState&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt; * Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile * Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile * Nullable&lt;bool&gt; * Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile * Nullable&lt;bool&gt; * seq&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProperties" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterProperties (agentPublicKeyCertificate, kubernetesVersion, totalNodeCount, totalCoreCount, agentVersion, provisioningState, distribution, distributionVersion, infrastructure, offering, managedIdentityCertificateExpirationOn, lastConnectivityOn, connectivityStatus, privateLinkState, privateLinkScopeResourceId, azureHybridBenefit, aadProfile, arcAgentProfile, isWorkloadIdentityEnabled, oidcIssuerProfile, isGatewayEnabled, arcAgentryConfigurations, miscellaneousProperties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
@@ -193,23 +365,23 @@
         <Parameter Name="totalNodeCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="totalCoreCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="agentVersion" Type="System.String" />
-        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ProvisioningState&gt;" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterProvisioningState&gt;" />
         <Parameter Name="distribution" Type="System.String" />
         <Parameter Name="distributionVersion" Type="System.String" />
         <Parameter Name="infrastructure" Type="System.String" />
         <Parameter Name="offering" Type="System.String" />
         <Parameter Name="managedIdentityCertificateExpirationOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
         <Parameter Name="lastConnectivityOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="connectivityStatus" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectivityStatus&gt;" />
-        <Parameter Name="privateLinkState" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.PrivateLinkState&gt;" />
-        <Parameter Name="privateLinkScopeResourceId" Type="System.String" />
-        <Parameter Name="azureHybridBenefit" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.AzureHybridBenefit&gt;" />
-        <Parameter Name="aadProfile" Type="Azure.ResourceManager.Kubernetes.Models.AadProfile" />
-        <Parameter Name="arcAgentProfile" Type="Azure.ResourceManager.Kubernetes.Models.ArcAgentProfile" />
-        <Parameter Name="workloadIdentityEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="oidcIssuerProfile" Type="Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile" />
-        <Parameter Name="gatewayEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="arcAgentryConfigurations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ArcAgentryConfigurations&gt;" />
+        <Parameter Name="connectivityStatus" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterConnectivityStatus&gt;" />
+        <Parameter Name="privateLinkState" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterPrivateLinkState&gt;" />
+        <Parameter Name="privateLinkScopeResourceId" Type="Azure.Core.ResourceIdentifier" />
+        <Parameter Name="azureHybridBenefit" Type="System.Nullable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAzureHybridBenefit&gt;" />
+        <Parameter Name="aadProfile" Type="Azure.ResourceManager.Kubernetes.Models.ConnectedClusterAadProfile" />
+        <Parameter Name="arcAgentProfile" Type="Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentProfile" />
+        <Parameter Name="isWorkloadIdentityEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="oidcIssuerProfile" Type="Azure.ResourceManager.Kubernetes.Models.ConnectedClusterOidcIssuerProfile" />
+        <Parameter Name="isGatewayEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="arcAgentryConfigurations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.ConnectedClusterArcAgentryConfiguration&gt;" />
         <Parameter Name="miscellaneousProperties" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
       </Parameters>
       <Docs>
@@ -231,9 +403,9 @@
         <param name="azureHybridBenefit"> Indicates whether Azure Hybrid Benefit is opted in. </param>
         <param name="aadProfile"> AAD profile for the connected cluster. </param>
         <param name="arcAgentProfile"> Arc agentry configuration for the provisioned cluster. </param>
-        <param name="workloadIdentityEnabled"> Whether to enable or disable the workload identity Webhook. </param>
+        <param name="isWorkloadIdentityEnabled"> Whether to enable or disable the workload identity Webhook. </param>
         <param name="oidcIssuerProfile"> Open ID Connect (OIDC) Issuer Profile for the connected cluster. </param>
-        <param name="gatewayEnabled"> Indicates whether the gateway for arc router connectivity is enabled. </param>
+        <param name="isGatewayEnabled"> Indicates whether the gateway for arc router connectivity is enabled. </param>
         <param name="arcAgentryConfigurations"> Configuration settings for customizing the behavior of the connected cluster. </param>
         <param name="miscellaneousProperties"> More properties related to the Connected Cluster. </param>
         <summary>To be added.</summary>
@@ -241,159 +413,19 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="CredentialResult">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.CredentialResult CredentialResult (string name = default, BinaryData value = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.CredentialResult CredentialResult(string name, class System.BinaryData value) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.CredentialResult(System.String,System.BinaryData)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CredentialResult (Optional name As String = Nothing, Optional value As BinaryData = Nothing) As CredentialResult" />
-      <MemberSignature Language="F#" Value="static member CredentialResult : string * BinaryData -&gt; Azure.ResourceManager.Kubernetes.Models.CredentialResult" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.CredentialResult (name, value)" />
+    <Member MemberName="ConnectedClusterSystemComponent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent ConnectedClusterSystemComponent (string type = default, string userSpecifiedVersion = default, int? majorVersion = default, string currentVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent ConnectedClusterSystemComponent(string type, string userSpecifiedVersion, valuetype System.Nullable`1&lt;int32&gt; majorVersion, string currentVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterSystemComponent(System.String,System.String,System.Nullable{System.Int32},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConnectedClusterSystemComponent (Optional type As String = Nothing, Optional userSpecifiedVersion As String = Nothing, Optional majorVersion As Nullable(Of Integer) = Nothing, Optional currentVersion As String = Nothing) As ConnectedClusterSystemComponent" />
+      <MemberSignature Language="F#" Value="static member ConnectedClusterSystemComponent : string * string * Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ConnectedClusterSystemComponent (type, userSpecifiedVersion, majorVersion, currentVersion)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.CredentialResult</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="value" Type="System.BinaryData" />
-      </Parameters>
-      <Docs>
-        <param name="name"> The name of the credential. </param>
-        <param name="value"> Base64-encoded Kubernetes configuration file. </param>
-        <summary> The credential result response. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.CredentialResult" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CredentialResults">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.CredentialResults CredentialResults (Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig hybridConnectionConfig = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.CredentialResult&gt; kubeconfigs = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.CredentialResults CredentialResults(class Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig hybridConnectionConfig, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Kubernetes.Models.CredentialResult&gt; kubeconfigs) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.CredentialResults(Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Kubernetes.Models.CredentialResult})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CredentialResults (Optional hybridConnectionConfig As HybridConnectionConfig = Nothing, Optional kubeconfigs As IEnumerable(Of CredentialResult) = Nothing) As CredentialResults" />
-      <MemberSignature Language="F#" Value="static member CredentialResults : Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig * seq&lt;Azure.ResourceManager.Kubernetes.Models.CredentialResult&gt; -&gt; Azure.ResourceManager.Kubernetes.Models.CredentialResults" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.CredentialResults (hybridConnectionConfig, kubeconfigs)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.CredentialResults</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="hybridConnectionConfig" Type="Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig" />
-        <Parameter Name="kubeconfigs" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Kubernetes.Models.CredentialResult&gt;" />
-      </Parameters>
-      <Docs>
-        <param name="hybridConnectionConfig"> Contains the REP (rendezvous endpoint) and “Sender” access token. </param>
-        <param name="kubeconfigs"> Base64-encoded Kubernetes configuration file. </param>
-        <summary> The list of credential result response. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.CredentialResults" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="HybridConnectionConfig">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig HybridConnectionConfig (long? expirationTime = default, string hybridConnectionName = default, string relay = default, string token = default, string relayTid = default, string relayType = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig HybridConnectionConfig(valuetype System.Nullable`1&lt;int64&gt; expirationTime, string hybridConnectionName, string relay, string token, string relayTid, string relayType) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.HybridConnectionConfig(System.Nullable{System.Int64},System.String,System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function HybridConnectionConfig (Optional expirationTime As Nullable(Of Long) = Nothing, Optional hybridConnectionName As String = Nothing, Optional relay As String = Nothing, Optional token As String = Nothing, Optional relayTid As String = Nothing, Optional relayType As String = Nothing) As HybridConnectionConfig" />
-      <MemberSignature Language="F#" Value="static member HybridConnectionConfig : Nullable&lt;int64&gt; * string * string * string * string * string -&gt; Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.HybridConnectionConfig (expirationTime, hybridConnectionName, relay, token, relayTid, relayType)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="expirationTime" Type="System.Nullable&lt;System.Int64&gt;" />
-        <Parameter Name="hybridConnectionName" Type="System.String" />
-        <Parameter Name="relay" Type="System.String" />
-        <Parameter Name="token" Type="System.String" />
-        <Parameter Name="relayTid" Type="System.String" />
-        <Parameter Name="relayType" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="expirationTime"> Timestamp when this token will be expired. </param>
-        <param name="hybridConnectionName"> Name of the connection. </param>
-        <param name="relay"> Name of the relay. </param>
-        <param name="token"> Sender access token. </param>
-        <param name="relayTid"> TenantID of the relay. </param>
-        <param name="relayType"> Type of relay. </param>
-        <summary> Contains the REP (rendezvous endpoint) and “Sender” access token. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.HybridConnectionConfig" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ListClusterUserCredentialProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.ListClusterUserCredentialProperties ListClusterUserCredentialProperties (Azure.ResourceManager.Kubernetes.Models.AuthenticationMethod authenticationMethod = default, bool clientProxy = false);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.ListClusterUserCredentialProperties ListClusterUserCredentialProperties(valuetype Azure.ResourceManager.Kubernetes.Models.AuthenticationMethod authenticationMethod, bool clientProxy) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ListClusterUserCredentialProperties(Azure.ResourceManager.Kubernetes.Models.AuthenticationMethod,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ListClusterUserCredentialProperties (Optional authenticationMethod As AuthenticationMethod = Nothing, Optional clientProxy As Boolean = false) As ListClusterUserCredentialProperties" />
-      <MemberSignature Language="F#" Value="static member ListClusterUserCredentialProperties : Azure.ResourceManager.Kubernetes.Models.AuthenticationMethod * bool -&gt; Azure.ResourceManager.Kubernetes.Models.ListClusterUserCredentialProperties" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.ListClusterUserCredentialProperties (authenticationMethod, clientProxy)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ListClusterUserCredentialProperties</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="authenticationMethod" Type="Azure.ResourceManager.Kubernetes.Models.AuthenticationMethod" />
-        <Parameter Name="clientProxy" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="authenticationMethod"> The mode of client authentication. </param>
-        <param name="clientProxy"> Boolean value to indicate whether the request is for client side proxy or not. </param>
-        <summary> The ListClusterUserCredentialProperties. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ListClusterUserCredentialProperties" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="OidcIssuerProfile">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile OidcIssuerProfile (bool? enabled = default, string issuerUri = default, string selfHostedIssuerUri = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile OidcIssuerProfile(valuetype System.Nullable`1&lt;bool&gt; enabled, string issuerUri, string selfHostedIssuerUri) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.OidcIssuerProfile(System.Nullable{System.Boolean},System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function OidcIssuerProfile (Optional enabled As Nullable(Of Boolean) = Nothing, Optional issuerUri As String = Nothing, Optional selfHostedIssuerUri As String = Nothing) As OidcIssuerProfile" />
-      <MemberSignature Language="F#" Value="static member OidcIssuerProfile : Nullable&lt;bool&gt; * string * string -&gt; Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.OidcIssuerProfile (enabled, issuerUri, selfHostedIssuerUri)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="enabled" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="issuerUri" Type="System.String" />
-        <Parameter Name="selfHostedIssuerUri" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="enabled"> Whether to enable oidc issuer for workload identity integration. </param>
-        <param name="issuerUri"> The issuer url for hybrid clusters connected to Arc used for the workload identity feature. </param>
-        <param name="selfHostedIssuerUri"> The issuer url for public cloud clusters - AKS, EKS, GKE - used for the workload identity feature. </param>
-        <summary> OIDC Issuer Profile specifies attributes for workload identity integration. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.OidcIssuerProfile" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SystemComponent">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.SystemComponent SystemComponent (string type = default, string userSpecifiedVersion = default, int? majorVersion = default, string currentVersion = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.SystemComponent SystemComponent(string type, string userSpecifiedVersion, valuetype System.Nullable`1&lt;int32&gt; majorVersion, string currentVersion) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.SystemComponent(System.String,System.String,System.Nullable{System.Int32},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SystemComponent (Optional type As String = Nothing, Optional userSpecifiedVersion As String = Nothing, Optional majorVersion As Nullable(Of Integer) = Nothing, Optional currentVersion As String = Nothing) As SystemComponent" />
-      <MemberSignature Language="F#" Value="static member SystemComponent : string * string * Nullable&lt;int&gt; * string -&gt; Azure.ResourceManager.Kubernetes.Models.SystemComponent" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.SystemComponent (type, userSpecifiedVersion, majorVersion, currentVersion)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.Kubernetes.Models.SystemComponent</ReturnType>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="type" Type="System.String" />
@@ -406,8 +438,34 @@
         <param name="userSpecifiedVersion"> Version of the system extension to be installed on the cluster resource. </param>
         <param name="majorVersion"> Major Version of the system extension that is currently installed on the cluster resource. </param>
         <param name="currentVersion"> Version of the system extension that is currently installed on the cluster resource. </param>
-        <summary> System extensions and its current versions installed on the cluster resource. </summary>
-        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.SystemComponent" /> instance for mocking. </returns>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.ConnectedClusterSystemComponent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClusterUserCredentialContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Kubernetes.Models.GetClusterUserCredentialContent GetClusterUserCredentialContent (Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialAuthenticationMethod authenticationMethod = default, bool useClientProxy = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Kubernetes.Models.GetClusterUserCredentialContent GetClusterUserCredentialContent(valuetype Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialAuthenticationMethod authenticationMethod, bool useClientProxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.GetClusterUserCredentialContent(Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialAuthenticationMethod,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetClusterUserCredentialContent (Optional authenticationMethod As ClusterUserCredentialAuthenticationMethod = Nothing, Optional useClientProxy As Boolean = false) As GetClusterUserCredentialContent" />
+      <MemberSignature Language="F#" Value="static member GetClusterUserCredentialContent : Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialAuthenticationMethod * bool -&gt; Azure.ResourceManager.Kubernetes.Models.GetClusterUserCredentialContent" Usage="Azure.ResourceManager.Kubernetes.Models.ArmKubernetesModelFactory.GetClusterUserCredentialContent (authenticationMethod, useClientProxy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Kubernetes</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Kubernetes.Models.GetClusterUserCredentialContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationMethod" Type="Azure.ResourceManager.Kubernetes.Models.ClusterUserCredentialAuthenticationMethod" />
+        <Parameter Name="useClientProxy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationMethod"> The mode of client authentication. </param>
+        <param name="useClientProxy"> Boolean value to indicate whether the request is for client side proxy or not. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Kubernetes.Models.GetClusterUserCredentialContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

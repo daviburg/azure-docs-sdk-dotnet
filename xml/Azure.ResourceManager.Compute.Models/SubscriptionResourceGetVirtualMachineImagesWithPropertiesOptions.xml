@@ -36,7 +36,7 @@
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -80,12 +80,12 @@
         <Parameter Name="expandOption" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="location"> The name of Azure region. </param>
+        <param name="location"> The name of a supported Azure region. </param>
         <param name="publisherName"> A valid image publisher. </param>
         <param name="offer"> A valid image publisher offer. </param>
         <param name="skus"> A valid image SKU. </param>
-        <param name="expandOption"> The expand expression to apply on the operation. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Compute.Models.SubscriptionResourceGetVirtualMachineImagesWithPropertiesOptions" />. </summary>
+        <param name="expandOption"> The expand expression to apply on the operation, as a raw string value. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Compute.Models.SubscriptionResourceGetVirtualMachineImagesWithPropertiesOptions" /> using a raw expand-option string. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="publisherName" />, <paramref name="offer" />, <paramref name="skus" /> or <paramref name="expandOption" /> is null. </exception>
@@ -128,7 +128,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The expand expression to apply on the operation. </summary>
+        <summary> The expand expression to apply on the operation, as a raw string value. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,7 +149,7 @@
         <ReturnType>Azure.Core.AzureLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The name of Azure region. </summary>
+        <summary> The name of a supported Azure region. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -191,7 +191,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The orderby. </summary>
+        <summary> Specifies the order of the results returned. Formatted as an OData query. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -254,7 +254,7 @@
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The top. </summary>
+        <summary> An integer value specifying the number of images to return that matches supplied values. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

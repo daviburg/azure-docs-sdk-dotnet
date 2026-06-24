@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,6 +28,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource&gt;</ReturnType>
@@ -37,18 +39,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="configTemplateName"> The name of the ConfigTemplate. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Config Template Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}</description></item><item><term>Operation Id</term><description>ConfigTemplate_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplate(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplate(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="configTemplateName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="configTemplateName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeConfigTemplateAsync">
@@ -61,6 +63,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource&gt;&gt;</ReturnType>
@@ -71,18 +74,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="configTemplateName"> The name of the ConfigTemplate. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Config Template Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}</description></item><item><term>Operation Id</term><description>ConfigTemplate_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplateAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplateAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="configTemplateName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="configTemplateName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeConfigTemplateResource">
@@ -95,6 +98,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource</ReturnType>
@@ -104,12 +108,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeConfigTemplateResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeConfigTemplateResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -126,6 +129,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateCollection</ReturnType>
@@ -134,11 +138,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeConfigTemplateResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplates" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeConfigTemplateResources and their operations over a EdgeConfigTemplateResource. </returns>
+            Gets a collection of EdgeConfigTemplates in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeConfigTemplates" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeConfigTemplates and their operations over a EdgeConfigTemplateResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -154,6 +157,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource&gt;</ReturnType>
@@ -163,11 +167,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/configTemplates</description></item><item><term>Operation Id</term><description>ConfigTemplate_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeConfigTemplates(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeConfigTemplates(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -184,6 +188,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource&gt;</ReturnType>
@@ -193,12 +198,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/configTemplates</description></item><item><term>Operation Id</term><description>ConfigTemplate_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeConfigTemplates(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeConfigTemplatesAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -214,6 +219,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource</ReturnType>
@@ -223,12 +229,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeConfigTemplateVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeConfigTemplateVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeConfigTemplateVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -245,6 +250,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource&gt;</ReturnType>
@@ -255,18 +261,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="contextName"> The name of the Context. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Context Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}</description></item><item><term>Operation Id</term><description>Context_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContext(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContext(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="contextName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="contextName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeContextAsync">
@@ -279,6 +285,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource&gt;&gt;</ReturnType>
@@ -289,18 +296,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="contextName"> The name of the Context. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Context Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}</description></item><item><term>Operation Id</term><description>Context_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContextAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContextAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="contextName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="contextName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeContextResource">
@@ -313,6 +320,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource</ReturnType>
@@ -322,12 +330,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeContextResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeContextResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -344,6 +351,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeContextCollection</ReturnType>
@@ -352,11 +360,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeContextResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContexts" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeContextResources and their operations over a EdgeContextResource. </returns>
+            Gets a collection of EdgeContexts in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeContexts" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeContexts and their operations over a EdgeContextResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -372,6 +379,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource&gt;</ReturnType>
@@ -381,11 +389,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/contexts</description></item><item><term>Operation Id</term><description>Context_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeContexts(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeContexts(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -402,6 +410,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource&gt;</ReturnType>
@@ -411,12 +420,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/contexts</description></item><item><term>Operation Id</term><description>Context_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeContexts(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeContextsAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeContextResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -432,6 +441,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource</ReturnType>
@@ -441,12 +451,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDeploymentInstanceHistoryResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDeploymentInstanceHistoryResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceHistoryResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -463,6 +472,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource</ReturnType>
@@ -472,12 +482,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDeploymentInstanceResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDeploymentInstanceResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDeploymentInstanceResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -494,6 +503,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource&gt;</ReturnType>
@@ -504,18 +514,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="diagnosticName"> Name of Diagnostic. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Returns details of specified Diagnostic resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/diagnostics/{diagnosticName}</description></item><item><term>Operation Id</term><description>Diagnostic_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnostic(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnostic(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="diagnosticName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="diagnosticName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeDiagnosticAsync">
@@ -528,6 +538,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource&gt;&gt;</ReturnType>
@@ -538,18 +549,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="diagnosticName"> Name of Diagnostic. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Returns details of specified Diagnostic resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/diagnostics/{diagnosticName}</description></item><item><term>Operation Id</term><description>Diagnostic_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnosticAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnosticAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="diagnosticName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="diagnosticName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeDiagnosticResource">
@@ -562,6 +573,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource</ReturnType>
@@ -571,12 +583,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDiagnosticResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDiagnosticResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -593,6 +604,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticCollection</ReturnType>
@@ -601,11 +613,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeDiagnosticResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnostics" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeDiagnosticResources and their operations over a EdgeDiagnosticResource. </returns>
+            Gets a collection of EdgeDiagnostics in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeDiagnostics" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeDiagnostics and their operations over a EdgeDiagnosticResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -621,6 +632,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource&gt;</ReturnType>
@@ -630,11 +642,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists Diagnostics resources within an Azure subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/diagnostics</description></item><item><term>Operation Id</term><description>Diagnostic_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeDiagnostics(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeDiagnostics(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -651,6 +663,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource&gt;</ReturnType>
@@ -660,12 +673,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists Diagnostics resources within an Azure subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/diagnostics</description></item><item><term>Operation Id</term><description>Diagnostic_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeDiagnostics(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeDiagnosticsAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDiagnosticResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -681,6 +694,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource</ReturnType>
@@ -690,12 +704,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDynamicSchemaResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDynamicSchemaResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -712,6 +725,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource</ReturnType>
@@ -721,12 +735,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDynamicSchemaVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeDynamicSchemaVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeDynamicSchemaVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -743,6 +756,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource</ReturnType>
@@ -752,12 +766,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeExecutionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeExecutionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeExecutionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -774,6 +787,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource&gt;</ReturnType>
@@ -785,19 +799,19 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <param name="jobName"> The name of the Job. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Job resource
-            <list type="bullet"><item><term>Request Path</term><description>/{resourceUri}/providers/Microsoft.Edge/jobs/{jobName}</description></item><item><term>Operation Id</term><description>Job_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJob(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJob(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="client" /> or <paramref name="jobName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="jobName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="client" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeJobAsync">
@@ -810,6 +824,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource&gt;&gt;</ReturnType>
@@ -821,19 +836,19 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <param name="jobName"> The name of the Job. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Job resource
-            <list type="bullet"><item><term>Request Path</term><description>/{resourceUri}/providers/Microsoft.Edge/jobs/{jobName}</description></item><item><term>Operation Id</term><description>Job_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="client" /> or <paramref name="jobName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="jobName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="client" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeJobResource">
@@ -846,6 +861,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource</ReturnType>
@@ -855,12 +871,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource.CreateResourceIdentifier(System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -877,6 +892,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeJobCollection</ReturnType>
@@ -886,12 +902,12 @@
         <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <summary>
-            Gets a collection of EdgeJobResources in the ArmClient.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobs(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeJobResources and their operations over a EdgeJobResource. </returns>
+            Gets a collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobCollection" /> objects within the specified scope.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeJobs(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeJobResource" /> objects. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="client" /> is null. </exception>
@@ -907,6 +923,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource&gt;</ReturnType>
@@ -917,18 +934,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="schemaName"> The name of the Schema. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Schema Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}</description></item><item><term>Operation Id</term><description>Schema_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchema(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchema(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="schemaName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="schemaName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSchemaAsync">
@@ -941,6 +958,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource&gt;&gt;</ReturnType>
@@ -951,18 +969,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="schemaName"> The name of the Schema. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Schema Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}</description></item><item><term>Operation Id</term><description>Schema_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchemaAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchemaAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="schemaName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="schemaName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSchemaReference">
@@ -975,6 +993,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource&gt;</ReturnType>
@@ -986,19 +1005,19 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <param name="schemaReferenceName"> The name of the SchemaReference. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Schema Reference Resource
-            <list type="bullet"><item><term>Request Path</term><description>/{resourceUri}/providers/Microsoft.Edge/schemaReferences/{schemaReferenceName}</description></item><item><term>Operation Id</term><description>SchemaReference_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReference(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReference(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="client" /> or <paramref name="schemaReferenceName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="schemaReferenceName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="client" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSchemaReferenceAsync">
@@ -1011,6 +1030,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource&gt;&gt;</ReturnType>
@@ -1022,19 +1042,19 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <param name="schemaReferenceName"> The name of the SchemaReference. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Schema Reference Resource
-            <list type="bullet"><item><term>Request Path</term><description>/{resourceUri}/providers/Microsoft.Edge/schemaReferences/{schemaReferenceName}</description></item><item><term>Operation Id</term><description>SchemaReference_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferenceAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferenceAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="client" /> or <paramref name="schemaReferenceName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="schemaReferenceName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="client" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSchemaReferenceResource">
@@ -1047,6 +1067,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource</ReturnType>
@@ -1056,12 +1077,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource.CreateResourceIdentifier(System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferenceResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferenceResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1078,6 +1098,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceCollection</ReturnType>
@@ -1087,12 +1108,12 @@
         <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
-        <param name="scope"> The scope that the resource will apply against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
+        <param name="scope"> The scope of the resource collection to get. </param>
         <summary>
-            Gets a collection of EdgeSchemaReferenceResources in the ArmClient.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferences(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeSchemaReferenceResources and their operations over a EdgeSchemaReferenceResource. </returns>
+            Gets a collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceCollection" /> objects within the specified scope.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaReferences(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaReferenceResource" /> objects. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="client" /> is null. </exception>
@@ -1108,6 +1129,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource</ReturnType>
@@ -1117,12 +1139,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1139,6 +1160,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaCollection</ReturnType>
@@ -1147,11 +1169,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeSchemaResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchemas" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeSchemaResources and their operations over a EdgeSchemaResource. </returns>
+            Gets a collection of EdgeSchemas in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSchemas" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeSchemas and their operations over a EdgeSchemaResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -1167,6 +1188,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource&gt;</ReturnType>
@@ -1176,11 +1198,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/schemas</description></item><item><term>Operation Id</term><description>Schema_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSchemas(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSchemas(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1197,6 +1219,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource&gt;</ReturnType>
@@ -1206,12 +1229,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/schemas</description></item><item><term>Operation Id</term><description>Schema_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSchemas(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSchemasAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -1227,6 +1250,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource</ReturnType>
@@ -1236,12 +1260,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSchemaVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSchemaVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1258,6 +1281,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource</ReturnType>
@@ -1267,12 +1291,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSiteReferenceResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSiteReferenceResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSiteReferenceResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1289,6 +1312,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource</ReturnType>
@@ -1298,12 +1322,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1320,6 +1343,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource&gt;</ReturnType>
@@ -1330,18 +1354,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="solutionTemplateName"> The name of the SolutionTemplate. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Solution Template Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/solutionTemplates/{solutionTemplateName}</description></item><item><term>Operation Id</term><description>SolutionTemplate_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplate(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplate(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="solutionTemplateName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="solutionTemplateName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSolutionTemplateAsync">
@@ -1354,6 +1378,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource&gt;&gt;</ReturnType>
@@ -1364,18 +1389,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="solutionTemplateName"> The name of the SolutionTemplate. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Solution Template Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/solutionTemplates/{solutionTemplateName}</description></item><item><term>Operation Id</term><description>SolutionTemplate_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplateAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplateAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="solutionTemplateName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="solutionTemplateName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeSolutionTemplateResource">
@@ -1388,6 +1413,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource</ReturnType>
@@ -1397,12 +1423,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionTemplateResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionTemplateResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1419,6 +1444,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateCollection</ReturnType>
@@ -1427,11 +1453,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeSolutionTemplateResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplates" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeSolutionTemplateResources and their operations over a EdgeSolutionTemplateResource. </returns>
+            Gets a collection of EdgeSolutionTemplates in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeSolutionTemplates" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeSolutionTemplates and their operations over a EdgeSolutionTemplateResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -1447,6 +1472,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource&gt;</ReturnType>
@@ -1456,11 +1482,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/solutionTemplates</description></item><item><term>Operation Id</term><description>SolutionTemplate_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSolutionTemplates(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSolutionTemplates(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1477,6 +1503,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource&gt;</ReturnType>
@@ -1486,12 +1513,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/solutionTemplates</description></item><item><term>Operation Id</term><description>SolutionTemplate_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSolutionTemplates(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeSolutionTemplatesAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -1507,6 +1534,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource</ReturnType>
@@ -1516,12 +1544,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionTemplateVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionTemplateVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionTemplateVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1538,6 +1565,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource</ReturnType>
@@ -1547,12 +1575,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeSolutionVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeSolutionVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1569,6 +1596,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource&gt;</ReturnType>
@@ -1579,18 +1607,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="targetName"> Name of the target. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Target Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}</description></item><item><term>Operation Id</term><description>Target_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTarget(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTarget(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="targetName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="targetName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeTargetAsync">
@@ -1603,6 +1631,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource&gt;&gt;</ReturnType>
@@ -1613,18 +1642,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <param name="targetName"> Name of the target. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Target Resource
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}</description></item><item><term>Operation Id</term><description>Target_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTargetAsync(System.String,System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTargetAsync(System.String,System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="resourceGroupResource" /> or <paramref name="targetName" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="targetName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceGroupResource" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetEdgeTargetResource">
@@ -1637,6 +1666,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource</ReturnType>
@@ -1646,12 +1676,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeTargetResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeTargetResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1668,6 +1697,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeTargetCollection</ReturnType>
@@ -1676,11 +1706,10 @@
         <Parameter Name="resourceGroupResource" Type="Azure.ResourceManager.Resources.ResourceGroupResource" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> instance the method will execute against. </param>
+        <param name="resourceGroupResource"> The <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> the method will execute against. </param>
         <summary>
-            Gets a collection of EdgeTargetResources in the ResourceGroupResource.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTargets" /> instead.</description></item></summary>
-        <returns> An object representing collection of EdgeTargetResources and their operations over a EdgeTargetResource. </returns>
+            Gets a collection of EdgeTargets in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /><item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationResourceGroupResource.GetEdgeTargets" /> instead. </description></item></summary>
+        <returns> An object representing collection of EdgeTargets and their operations over a EdgeTargetResource. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="resourceGroupResource" /> is null. </exception>
@@ -1696,6 +1725,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource&gt;</ReturnType>
@@ -1705,11 +1735,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/targets</description></item><item><term>Operation Id</term><description>Target_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeTargets(System.Threading.CancellationToken)" /> instead.</description></item></summary>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeTargets(System.Threading.CancellationToken)" /> instead. </description></item></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1726,6 +1756,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource&gt;</ReturnType>
@@ -1735,12 +1766,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> instance the method will execute against. </param>
+        <param name="subscriptionResource"> The <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" /> the method will execute against. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             List by subscription
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Edge/targets</description></item><item><term>Operation Id</term><description>Target_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /></description></item></list><item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeTargets(System.Threading.CancellationToken)" /> instead.</description></item></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> that may take multiple service requests to iterate over. </returns>
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationSubscriptionResource.GetEdgeTargetsAsync(System.Threading.CancellationToken)" /> instead. </description></item></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeTargetResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionResource" /> is null. </exception>
@@ -1756,6 +1787,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource</ReturnType>
@@ -1765,12 +1797,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeWorkflowResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeWorkflowResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1787,6 +1818,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.WorkloadOrchestration</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource</ReturnType>
@@ -1796,12 +1828,11 @@
         <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" />
       </Parameters>
       <Docs>
-        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> instance the method will execute against. </param>
+        <param name="client"> The <see cref="T:Azure.ResourceManager.ArmClient" /> the method will execute against. </param>
         <param name="id"> The resource ID of the resource to get. </param>
         <summary>
-            Gets an object representing an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create an <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            <item><term>Mocking</term><description>To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeWorkflowVersionResource(Azure.Core.ResourceIdentifier)" /> instead.</description></item></summary>
+            Gets an object representing a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource" /> along with the instance operations that can be performed on it but with no data.
+            <item><term> Mocking. </term><description> To mock this method, please mock <see cref="M:Azure.ResourceManager.WorkloadOrchestration.Mocking.MockableWorkloadOrchestrationArmClient.GetEdgeWorkflowVersionResource(Azure.Core.ResourceIdentifier)" /> instead. </description></item></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.WorkloadOrchestration.EdgeWorkflowVersionResource" /> object. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

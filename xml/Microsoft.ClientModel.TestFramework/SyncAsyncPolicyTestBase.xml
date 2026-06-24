@@ -1,0 +1,346 @@
+<Type Name="SyncAsyncPolicyTestBase" FullName="Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase">
+  <TypeSignature Language="C#" Value="public class SyncAsyncPolicyTestBase : Microsoft.ClientModel.TestFramework.SyncAsyncTestBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyncAsyncPolicyTestBase extends Microsoft.ClientModel.TestFramework.SyncAsyncTestBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class SyncAsyncPolicyTestBase&#xA;Inherits SyncAsyncTestBase" />
+  <TypeSignature Language="F#" Value="type SyncAsyncPolicyTestBase = class&#xA;    inherit SyncAsyncTestBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.ClientModel.TestFramework.SyncAsyncTestBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[NUnit.Framework.TestFixture(new System.Object[] { Mono.Cecil.CustomAttributeArgument })]</AttributeName>
+      <AttributeName Language="F#">[&lt;NUnit.Framework.TestFixture(new System.Object[] { Mono.Cecil.CustomAttributeArgument })&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Base class for testing pipeline policies in both synchronous and asynchronous scenarios.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyncAsyncPolicyTestBase (bool isAsync);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isAsync) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (isAsync As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase : bool -&gt; Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase" Usage="new Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase isAsync" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isAsync" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isAsync">Whether to use asynchronous pipeline operations.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendGetRequest">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt; SendGetRequest (System.ClientModel.Primitives.HttpClientPipelineTransport transport, System.ClientModel.Primitives.PipelinePolicy policy, System.ClientModel.Primitives.PipelineMessageClassifier? responseClassifier = default, bool bufferResponse = true, Uri? uri = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineResponse&gt; SendGetRequest(class System.ClientModel.Primitives.HttpClientPipelineTransport transport, class System.ClientModel.Primitives.PipelinePolicy policy, class System.ClientModel.Primitives.PipelineMessageClassifier responseClassifier, bool bufferResponse, class System.Uri uri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendGetRequest(System.ClientModel.Primitives.HttpClientPipelineTransport,System.ClientModel.Primitives.PipelinePolicy,System.ClientModel.Primitives.PipelineMessageClassifier,System.Boolean,System.Uri,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendGetRequest (transport As HttpClientPipelineTransport, policy As PipelinePolicy, Optional responseClassifier As PipelineMessageClassifier = Nothing, Optional bufferResponse As Boolean = true, Optional uri As Uri = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineResponse)" />
+      <MemberSignature Language="F#" Value="member this.SendGetRequest : System.ClientModel.Primitives.HttpClientPipelineTransport * System.ClientModel.Primitives.PipelinePolicy * System.ClientModel.Primitives.PipelineMessageClassifier * bool * Uri * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;" Usage="syncAsyncPolicyTestBase.SendGetRequest (transport, policy, responseClassifier, bufferResponse, uri, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transport" Type="System.ClientModel.Primitives.HttpClientPipelineTransport" />
+        <Parameter Name="policy" Type="System.ClientModel.Primitives.PipelinePolicy" />
+        <Parameter Name="responseClassifier" Type="System.ClientModel.Primitives.PipelineMessageClassifier">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="uri" Type="System.Uri">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="transport">The HTTP transport to use.</param>
+        <param name="policy">The pipeline policy to apply.</param>
+        <param name="responseClassifier">Optional classifier for response handling.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="uri">The URI to send the GET request to, or null to use http://example.com.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends a GET request through a transport with a custom policy applied.
+            </summary>
+        <returns>The pipeline response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessageGetRequest">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt; SendMessageGetRequest (System.ClientModel.Primitives.ClientPipeline pipeline, System.ClientModel.Primitives.PipelineMessage message, System.ClientModel.Primitives.PipelineMessageClassifier? responseClassifier = default, bool bufferResponse = true, Uri? uri = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineMessage&gt; SendMessageGetRequest(class System.ClientModel.Primitives.ClientPipeline pipeline, class System.ClientModel.Primitives.PipelineMessage message, class System.ClientModel.Primitives.PipelineMessageClassifier responseClassifier, bool bufferResponse, class System.Uri uri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendMessageGetRequest(System.ClientModel.Primitives.ClientPipeline,System.ClientModel.Primitives.PipelineMessage,System.ClientModel.Primitives.PipelineMessageClassifier,System.Boolean,System.Uri,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendMessageGetRequest (pipeline As ClientPipeline, message As PipelineMessage, Optional responseClassifier As PipelineMessageClassifier = Nothing, Optional bufferResponse As Boolean = true, Optional uri As Uri = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineMessage)" />
+      <MemberSignature Language="F#" Value="member this.SendMessageGetRequest : System.ClientModel.Primitives.ClientPipeline * System.ClientModel.Primitives.PipelineMessage * System.ClientModel.Primitives.PipelineMessageClassifier * bool * Uri * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt;" Usage="syncAsyncPolicyTestBase.SendMessageGetRequest (pipeline, message, responseClassifier, bufferResponse, uri, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipeline" Type="System.ClientModel.Primitives.ClientPipeline" />
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage" />
+        <Parameter Name="responseClassifier" Type="System.ClientModel.Primitives.PipelineMessageClassifier">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="uri" Type="System.Uri">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pipeline">The client pipeline to send the request through.</param>
+        <param name="message">The pipeline message to use for the request.</param>
+        <param name="responseClassifier">Optional classifier for response handling.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="uri">The URI to send the GET request to, or null to use http://example.com.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends a GET request through a pipeline and returns the complete message with response.
+            </summary>
+        <returns>The pipeline message containing both request and response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessageRequestAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt; SendMessageRequestAsync (System.ClientModel.Primitives.ClientPipeline pipeline, Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; messageAction, bool bufferResponse = true, System.ClientModel.Primitives.PipelineMessage? message = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineMessage&gt; SendMessageRequestAsync(class System.ClientModel.Primitives.ClientPipeline pipeline, class System.Action`1&lt;class System.ClientModel.Primitives.PipelineMessage&gt; messageAction, bool bufferResponse, class System.ClientModel.Primitives.PipelineMessage message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendMessageRequestAsync(System.ClientModel.Primitives.ClientPipeline,System.Action{System.ClientModel.Primitives.PipelineMessage},System.Boolean,System.ClientModel.Primitives.PipelineMessage,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendMessageRequestAsync (pipeline As ClientPipeline, messageAction As Action(Of PipelineMessage), Optional bufferResponse As Boolean = true, Optional message As PipelineMessage = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineMessage)" />
+      <MemberSignature Language="F#" Value="member this.SendMessageRequestAsync : System.ClientModel.Primitives.ClientPipeline * Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; * bool * System.ClientModel.Primitives.PipelineMessage * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt;" Usage="syncAsyncPolicyTestBase.SendMessageRequestAsync (pipeline, messageAction, bufferResponse, message, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipeline" Type="System.ClientModel.Primitives.ClientPipeline" />
+        <Parameter Name="messageAction" Type="System.Action&lt;System.ClientModel.Primitives.PipelineMessage&gt;" />
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pipeline">The client pipeline to send the request through.</param>
+        <param name="messageAction">Action to configure the pipeline message.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="message">Optional existing message to use, or null to create a new one.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends an HTTP request through the pipeline and returns the complete message with response.
+            </summary>
+        <returns>The pipeline message containing both request and response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequestAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync (System.ClientModel.Primitives.ClientPipeline pipeline, Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; messageAction, bool bufferResponse = true, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync(class System.ClientModel.Primitives.ClientPipeline pipeline, class System.Action`1&lt;class System.ClientModel.Primitives.PipelineMessage&gt; messageAction, bool bufferResponse, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendRequestAsync(System.ClientModel.Primitives.ClientPipeline,System.Action{System.ClientModel.Primitives.PipelineMessage},System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendRequestAsync (pipeline As ClientPipeline, messageAction As Action(Of PipelineMessage), Optional bufferResponse As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineResponse)" />
+      <MemberSignature Language="F#" Value="member this.SendRequestAsync : System.ClientModel.Primitives.ClientPipeline * Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;" Usage="syncAsyncPolicyTestBase.SendRequestAsync (pipeline, messageAction, bufferResponse, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipeline" Type="System.ClientModel.Primitives.ClientPipeline" />
+        <Parameter Name="messageAction" Type="System.Action&lt;System.ClientModel.Primitives.PipelineMessage&gt;" />
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pipeline">The client pipeline to send the request through.</param>
+        <param name="messageAction">Action to configure the pipeline message.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends an HTTP request through the specified pipeline using a message configuration action.
+            </summary>
+        <returns>The pipeline response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequestAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync (System.ClientModel.Primitives.ClientPipeline pipeline, Action&lt;System.ClientModel.Primitives.PipelineRequest&gt; requestAction, bool bufferResponse = true, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync(class System.ClientModel.Primitives.ClientPipeline pipeline, class System.Action`1&lt;class System.ClientModel.Primitives.PipelineRequest&gt; requestAction, bool bufferResponse, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendRequestAsync(System.ClientModel.Primitives.ClientPipeline,System.Action{System.ClientModel.Primitives.PipelineRequest},System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendRequestAsync (pipeline As ClientPipeline, requestAction As Action(Of PipelineRequest), Optional bufferResponse As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineResponse)" />
+      <MemberSignature Language="F#" Value="member this.SendRequestAsync : System.ClientModel.Primitives.ClientPipeline * Action&lt;System.ClientModel.Primitives.PipelineRequest&gt; * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;" Usage="syncAsyncPolicyTestBase.SendRequestAsync (pipeline, requestAction, bufferResponse, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipeline" Type="System.ClientModel.Primitives.ClientPipeline" />
+        <Parameter Name="requestAction" Type="System.Action&lt;System.ClientModel.Primitives.PipelineRequest&gt;" />
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pipeline">The client pipeline to send the request through.</param>
+        <param name="requestAction">Action to configure the pipeline request.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends an HTTP request through the specified pipeline using a request configuration action.
+            </summary>
+        <returns>The pipeline response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequestAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync (System.ClientModel.Primitives.HttpClientPipelineTransport transport, Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; messageAction, System.ClientModel.Primitives.PipelinePolicy policy, System.ClientModel.Primitives.PipelineMessageClassifier? responseClassifier = default, bool bufferResponse = true, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync(class System.ClientModel.Primitives.HttpClientPipelineTransport transport, class System.Action`1&lt;class System.ClientModel.Primitives.PipelineMessage&gt; messageAction, class System.ClientModel.Primitives.PipelinePolicy policy, class System.ClientModel.Primitives.PipelineMessageClassifier responseClassifier, bool bufferResponse, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendRequestAsync(System.ClientModel.Primitives.HttpClientPipelineTransport,System.Action{System.ClientModel.Primitives.PipelineMessage},System.ClientModel.Primitives.PipelinePolicy,System.ClientModel.Primitives.PipelineMessageClassifier,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendRequestAsync (transport As HttpClientPipelineTransport, messageAction As Action(Of PipelineMessage), policy As PipelinePolicy, Optional responseClassifier As PipelineMessageClassifier = Nothing, Optional bufferResponse As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineResponse)" />
+      <MemberSignature Language="F#" Value="member this.SendRequestAsync : System.ClientModel.Primitives.HttpClientPipelineTransport * Action&lt;System.ClientModel.Primitives.PipelineMessage&gt; * System.ClientModel.Primitives.PipelinePolicy * System.ClientModel.Primitives.PipelineMessageClassifier * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;" Usage="syncAsyncPolicyTestBase.SendRequestAsync (transport, messageAction, policy, responseClassifier, bufferResponse, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transport" Type="System.ClientModel.Primitives.HttpClientPipelineTransport" />
+        <Parameter Name="messageAction" Type="System.Action&lt;System.ClientModel.Primitives.PipelineMessage&gt;" />
+        <Parameter Name="policy" Type="System.ClientModel.Primitives.PipelinePolicy" />
+        <Parameter Name="responseClassifier" Type="System.ClientModel.Primitives.PipelineMessageClassifier">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="transport">The HTTP transport to use.</param>
+        <param name="messageAction">Action to configure the pipeline message.</param>
+        <param name="policy">The pipeline policy to apply.</param>
+        <param name="responseClassifier">Optional classifier for response handling.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends an HTTP request through a transport with a custom policy applied.
+            </summary>
+        <returns>The pipeline response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequestAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync (System.ClientModel.Primitives.HttpClientPipelineTransport transport, Action&lt;System.ClientModel.Primitives.PipelineRequest&gt; requestAction, System.ClientModel.Primitives.PipelinePolicy policy, System.ClientModel.Primitives.PipelineMessageClassifier? responseClassifier = default, bool bufferResponse = true, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.Primitives.PipelineResponse&gt; SendRequestAsync(class System.ClientModel.Primitives.HttpClientPipelineTransport transport, class System.Action`1&lt;class System.ClientModel.Primitives.PipelineRequest&gt; requestAction, class System.ClientModel.Primitives.PipelinePolicy policy, class System.ClientModel.Primitives.PipelineMessageClassifier responseClassifier, bool bufferResponse, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.SyncAsyncPolicyTestBase.SendRequestAsync(System.ClientModel.Primitives.HttpClientPipelineTransport,System.Action{System.ClientModel.Primitives.PipelineRequest},System.ClientModel.Primitives.PipelinePolicy,System.ClientModel.Primitives.PipelineMessageClassifier,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendRequestAsync (transport As HttpClientPipelineTransport, requestAction As Action(Of PipelineRequest), policy As PipelinePolicy, Optional responseClassifier As PipelineMessageClassifier = Nothing, Optional bufferResponse As Boolean = true, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PipelineResponse)" />
+      <MemberSignature Language="F#" Value="member this.SendRequestAsync : System.ClientModel.Primitives.HttpClientPipelineTransport * Action&lt;System.ClientModel.Primitives.PipelineRequest&gt; * System.ClientModel.Primitives.PipelinePolicy * System.ClientModel.Primitives.PipelineMessageClassifier * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;" Usage="syncAsyncPolicyTestBase.SendRequestAsync (transport, requestAction, policy, responseClassifier, bufferResponse, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.Primitives.PipelineResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transport" Type="System.ClientModel.Primitives.HttpClientPipelineTransport" />
+        <Parameter Name="requestAction" Type="System.Action&lt;System.ClientModel.Primitives.PipelineRequest&gt;" />
+        <Parameter Name="policy" Type="System.ClientModel.Primitives.PipelinePolicy" />
+        <Parameter Name="responseClassifier" Type="System.ClientModel.Primitives.PipelineMessageClassifier">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="transport">The HTTP transport to use.</param>
+        <param name="requestAction">Action to configure the pipeline request.</param>
+        <param name="policy">The pipeline policy to apply.</param>
+        <param name="responseClassifier">Optional classifier for response handling.</param>
+        <param name="bufferResponse">Whether to buffer the response content in memory.</param>
+        <param name="cancellationToken">Token to cancel the operation.</param>
+        <summary>
+            Sends an HTTP request through a transport with a custom policy applied using a request configuration action.
+            </summary>
+        <returns>The pipeline response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -9,16 +9,41 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AcceptOwnershipContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent AcceptOwnershipContent (Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent AcceptOwnershipContent(class Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.AcceptOwnershipContent(Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AcceptOwnershipContent (Optional properties As AcceptOwnershipRequestProperties = Nothing) As AcceptOwnershipContent" />
+      <MemberSignature Language="F#" Value="static member AcceptOwnershipContent : Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties -&gt; Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.AcceptOwnershipContent properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="properties"> Accept subscription ownership request properties. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AcceptOwnershipRequestProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties AcceptOwnershipRequestProperties (string displayName = default, string managementGroupId = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties AcceptOwnershipRequestProperties(string displayName, string managementGroupId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
@@ -29,14 +54,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.AcceptOwnershipRequestProperties</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="displayName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="managementGroupId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="managementGroupId" Type="System.String" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
       </Parameters>
       <Docs>
         <param name="displayName"> The friendly name of the subscription. </param>
@@ -56,8 +82,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.AcceptOwnershipStatus</ReturnType>
@@ -93,8 +119,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.BillingAccountPolicyData</ReturnType>
@@ -107,10 +133,10 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.BillingAccountPolicyProperties" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> Billing account policies response properties. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyData" /> instance for mocking. </returns>
@@ -126,8 +152,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.BillingAccountPolicyProperties</ReturnType>
@@ -153,8 +179,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.CanceledSubscriptionId</ReturnType>
@@ -178,8 +204,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.EnabledSubscriptionId</ReturnType>
@@ -203,8 +229,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.RenamedSubscriptionId</ReturnType>
@@ -228,8 +254,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.ServiceTenant</ReturnType>
@@ -246,6 +272,75 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SubscriptionAliasAdditionalProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties SubscriptionAliasAdditionalProperties (string managementGroupId = default, Guid? subscriptionTenantId = default, string subscriptionOwnerId = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties SubscriptionAliasAdditionalProperties(string managementGroupId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; subscriptionTenantId, string subscriptionOwnerId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionAliasAdditionalProperties(System.String,System.Nullable{System.Guid},System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SubscriptionAliasAdditionalProperties (Optional managementGroupId As String = Nothing, Optional subscriptionTenantId As Nullable(Of Guid) = Nothing, Optional subscriptionOwnerId As String = Nothing, Optional tags As IDictionary(Of String, String) = Nothing) As SubscriptionAliasAdditionalProperties" />
+      <MemberSignature Language="F#" Value="static member SubscriptionAliasAdditionalProperties : string * Nullable&lt;Guid&gt; * string * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionAliasAdditionalProperties (managementGroupId, subscriptionTenantId, subscriptionOwnerId, tags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managementGroupId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subscriptionTenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subscriptionOwnerId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="managementGroupId"> Management group Id for the subscription. </param>
+        <param name="subscriptionTenantId"> Tenant Id of the subscription. </param>
+        <param name="subscriptionOwnerId"> Owner Id of the subscription. </param>
+        <param name="tags"> Tags for the subscription. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionAliasCreateOrUpdateContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.SubscriptionAliasCreateOrUpdateContent SubscriptionAliasCreateOrUpdateContent (string displayName = default, Azure.ResourceManager.Subscription.Models.SubscriptionWorkload? workload = default, string billingScope = default, string subscriptionId = default, string resellerId = default, Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties additionalProperties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.SubscriptionAliasCreateOrUpdateContent SubscriptionAliasCreateOrUpdateContent(string displayName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Subscription.Models.SubscriptionWorkload&gt; workload, string billingScope, string subscriptionId, string resellerId, class Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties additionalProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionAliasCreateOrUpdateContent(System.String,System.Nullable{Azure.ResourceManager.Subscription.Models.SubscriptionWorkload},System.String,System.String,System.String,Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SubscriptionAliasCreateOrUpdateContent (Optional displayName As String = Nothing, Optional workload As Nullable(Of SubscriptionWorkload) = Nothing, Optional billingScope As String = Nothing, Optional subscriptionId As String = Nothing, Optional resellerId As String = Nothing, Optional additionalProperties As SubscriptionAliasAdditionalProperties = Nothing) As SubscriptionAliasCreateOrUpdateContent" />
+      <MemberSignature Language="F#" Value="static member SubscriptionAliasCreateOrUpdateContent : string * Nullable&lt;Azure.ResourceManager.Subscription.Models.SubscriptionWorkload&gt; * string * string * string * Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties -&gt; Azure.ResourceManager.Subscription.Models.SubscriptionAliasCreateOrUpdateContent" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionAliasCreateOrUpdateContent (displayName, workload, billingScope, subscriptionId, resellerId, additionalProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.SubscriptionAliasCreateOrUpdateContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="workload" Type="System.Nullable&lt;Azure.ResourceManager.Subscription.Models.SubscriptionWorkload&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingScope" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subscriptionId" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resellerId" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="additionalProperties" Type="Azure.ResourceManager.Subscription.Models.SubscriptionAliasAdditionalProperties" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="displayName"> The friendly name of the subscription. </param>
+        <param name="workload"> The workload type of the subscription. It can be either Production or DevTest. </param>
+        <param name="billingScope">
+            Billing scope of the subscription.
+            For CustomerLed and FieldLed - /billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}
+            For PartnerLed - /billingAccounts/{billingAccountName}/customers/{customerName}
+            For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}
+            </param>
+        <param name="subscriptionId"> This parameter can be used to create alias for existing subscription Id. </param>
+        <param name="resellerId"> Reseller Id. </param>
+        <param name="additionalProperties"> Put alias request additional properties. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.SubscriptionAliasCreateOrUpdateContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SubscriptionAliasData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.SubscriptionAliasData SubscriptionAliasData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Subscription.Models.SubscriptionAliasProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.SubscriptionAliasData SubscriptionAliasData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Subscription.Models.SubscriptionAliasProperties properties) cil managed" />
@@ -255,8 +350,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.SubscriptionAliasData</ReturnType>
@@ -269,10 +364,10 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.SubscriptionAliasProperties" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> Subscription Alias response properties. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasData" /> instance for mocking. </returns>
@@ -288,8 +383,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.SubscriptionAliasProperties</ReturnType>
@@ -331,6 +426,182 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SubscriptionName">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.SubscriptionName SubscriptionName (string subscriptionNameValue = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.SubscriptionName SubscriptionName(string subscriptionNameValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SubscriptionName (Optional subscriptionNameValue As String = Nothing) As SubscriptionName" />
+      <MemberSignature Language="F#" Value="static member SubscriptionName : string -&gt; Azure.ResourceManager.Subscription.Models.SubscriptionName" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.SubscriptionName subscriptionNameValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.SubscriptionName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionNameValue" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionNameValue"> New subscription name. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.SubscriptionName" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.TargetDirectoryContent TargetDirectoryContent (Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.TargetDirectoryContent TargetDirectoryContent(class Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryContent(Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TargetDirectoryContent (Optional properties As TargetDirectoryProperties = Nothing) As TargetDirectoryContent" />
+      <MemberSignature Language="F#" Value="static member TargetDirectoryContent : Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties -&gt; Azure.ResourceManager.Subscription.Models.TargetDirectoryContent" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryContent properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.TargetDirectoryContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="properties"> Target Directory request properties. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.TargetDirectoryContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties TargetDirectoryProperties (Guid? destinationOwnerId = default, Guid? destinationTenantId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties TargetDirectoryProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; destinationOwnerId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; destinationTenantId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryProperties(System.Nullable{System.Guid},System.Nullable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TargetDirectoryProperties (Optional destinationOwnerId As Nullable(Of Guid) = Nothing, Optional destinationTenantId As Nullable(Of Guid) = Nothing) As TargetDirectoryProperties" />
+      <MemberSignature Language="F#" Value="static member TargetDirectoryProperties : Nullable&lt;Guid&gt; * Nullable&lt;Guid&gt; -&gt; Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryProperties (destinationOwnerId, destinationTenantId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationOwnerId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="destinationTenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="destinationOwnerId"> The destination OwnerId, can be object id or email address. </param>
+        <param name="destinationTenantId"> The destination Tenant id where subscription needs to be accepted. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.TargetDirectoryProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryResultData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.TargetDirectoryResultData TargetDirectoryResultData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.TargetDirectoryResultData TargetDirectoryResultData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryResultData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TargetDirectoryResultData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional properties As TargetDirectoryResultProperties = Nothing) As TargetDirectoryResultData" />
+      <MemberSignature Language="F#" Value="static member TargetDirectoryResultData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties -&gt; Azure.ResourceManager.Subscription.TargetDirectoryResultData" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryResultData (id, name, resourceType, systemData, properties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.TargetDirectoryResultData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="properties"> Subscription Changed Target Directory response properties. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.TargetDirectoryResultData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryResultProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties TargetDirectoryResultProperties (Guid? destinationTenantId = default, Guid? destinationOwnerId = default, string subscriptionId = default, DateTimeOffset? createdOn = default, DateTimeOffset? acceptedOn = default, string sourceOwnerEmail = default, Guid? sourceOwnerId = default, Guid? sourceTenantId = default, Azure.ResourceManager.Subscription.Models.ChangeDirectoryOperationStatus? status = default, DateTimeOffset? expiresOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties TargetDirectoryResultProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; destinationTenantId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; destinationOwnerId, string subscriptionId, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; acceptedOn, string sourceOwnerEmail, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; sourceOwnerId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; sourceTenantId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Subscription.Models.ChangeDirectoryOperationStatus&gt; status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiresOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryResultProperties(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{Azure.ResourceManager.Subscription.Models.ChangeDirectoryOperationStatus},System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TargetDirectoryResultProperties (Optional destinationTenantId As Nullable(Of Guid) = Nothing, Optional destinationOwnerId As Nullable(Of Guid) = Nothing, Optional subscriptionId As String = Nothing, Optional createdOn As Nullable(Of DateTimeOffset) = Nothing, Optional acceptedOn As Nullable(Of DateTimeOffset) = Nothing, Optional sourceOwnerEmail As String = Nothing, Optional sourceOwnerId As Nullable(Of Guid) = Nothing, Optional sourceTenantId As Nullable(Of Guid) = Nothing, Optional status As Nullable(Of ChangeDirectoryOperationStatus) = Nothing, Optional expiresOn As Nullable(Of DateTimeOffset) = Nothing) As TargetDirectoryResultProperties" />
+      <MemberSignature Language="F#" Value="static member TargetDirectoryResultProperties : Nullable&lt;Guid&gt; * Nullable&lt;Guid&gt; * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * Nullable&lt;Guid&gt; * Nullable&lt;Guid&gt; * Nullable&lt;Azure.ResourceManager.Subscription.Models.ChangeDirectoryOperationStatus&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TargetDirectoryResultProperties (destinationTenantId, destinationOwnerId, subscriptionId, createdOn, acceptedOn, sourceOwnerEmail, sourceOwnerId, sourceTenantId, status, expiresOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationTenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="destinationOwnerId" Type="System.Nullable&lt;System.Guid&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subscriptionId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acceptedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sourceOwnerEmail" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sourceOwnerId" Type="System.Nullable&lt;System.Guid&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sourceTenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.Subscription.Models.ChangeDirectoryOperationStatus&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="destinationTenantId"> Destination Tenant Id where Subscription will be accepted. </param>
+        <param name="destinationOwnerId"> Destination Owner Id where Subscription will be accepted. </param>
+        <param name="subscriptionId"> The id of the subscription being transferred. </param>
+        <param name="createdOn"> The UTC date and time when the transfer request was created. </param>
+        <param name="acceptedOn"> The UTC date and time when the transfer request was accepted. </param>
+        <param name="sourceOwnerEmail"> The email address of the user who initiated the transfer request. If the request was generated by a Service Principal, this field may be null. </param>
+        <param name="sourceOwnerId"> The object id of the user who initiated the transfer request. </param>
+        <param name="sourceTenantId"> The id of the tenant where the subscription originally resided. </param>
+        <param name="status"> Status of the subscription transfer operation. </param>
+        <param name="expiresOn"> Subscription Initiate Request Expiry time. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TenantPolicyCreateOrUpdateContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.Models.TenantPolicyCreateOrUpdateContent TenantPolicyCreateOrUpdateContent (bool? blockSubscriptionsLeavingTenant = default, bool? blockSubscriptionsIntoTenant = default, System.Collections.Generic.IEnumerable&lt;Guid&gt; exemptedPrincipals = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.Models.TenantPolicyCreateOrUpdateContent TenantPolicyCreateOrUpdateContent(valuetype System.Nullable`1&lt;bool&gt; blockSubscriptionsLeavingTenant, valuetype System.Nullable`1&lt;bool&gt; blockSubscriptionsIntoTenant, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Guid&gt; exemptedPrincipals) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TenantPolicyCreateOrUpdateContent(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TenantPolicyCreateOrUpdateContent (Optional blockSubscriptionsLeavingTenant As Nullable(Of Boolean) = Nothing, Optional blockSubscriptionsIntoTenant As Nullable(Of Boolean) = Nothing, Optional exemptedPrincipals As IEnumerable(Of Guid) = Nothing) As TenantPolicyCreateOrUpdateContent" />
+      <MemberSignature Language="F#" Value="static member TenantPolicyCreateOrUpdateContent : Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * seq&lt;Guid&gt; -&gt; Azure.ResourceManager.Subscription.Models.TenantPolicyCreateOrUpdateContent" Usage="Azure.ResourceManager.Subscription.Models.ArmSubscriptionModelFactory.TenantPolicyCreateOrUpdateContent (blockSubscriptionsLeavingTenant, blockSubscriptionsIntoTenant, exemptedPrincipals)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.Models.TenantPolicyCreateOrUpdateContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockSubscriptionsLeavingTenant" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="blockSubscriptionsIntoTenant" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="exemptedPrincipals" Type="System.Collections.Generic.IEnumerable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="blockSubscriptionsLeavingTenant"> Blocks the leaving of subscriptions from user's tenant. </param>
+        <param name="blockSubscriptionsIntoTenant"> Blocks the entering of subscriptions into user's tenant. </param>
+        <param name="exemptedPrincipals"> List of user objectIds that are exempted from the set subscription tenant policies for the user's tenant. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Subscription.Models.TenantPolicyCreateOrUpdateContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TenantPolicyData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Subscription.TenantPolicyData TenantPolicyData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Subscription.Models.TenantPolicyProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Subscription.TenantPolicyData TenantPolicyData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Subscription.Models.TenantPolicyProperties properties) cil managed" />
@@ -340,8 +611,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.TenantPolicyData</ReturnType>
@@ -354,10 +625,10 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.Subscription.Models.TenantPolicyProperties" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> Tenant policy properties. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyData" /> instance for mocking. </returns>
@@ -373,8 +644,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.Models.TenantPolicyProperties</ReturnType>

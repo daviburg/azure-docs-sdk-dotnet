@@ -1,0 +1,121 @@
+<Type Name="TestRecordingMismatchException" FullName="Microsoft.ClientModel.TestFramework.TestRecordingMismatchException">
+  <TypeSignature Language="C#" Value="public class TestRecordingMismatchException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestRecordingMismatchException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestRecordingMismatchException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type TestRecordingMismatchException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            The exception that is thrown when there is a mismatch between the expected test recording
+            and the actual network requests made during test playback.
+            </summary>
+    <remarks>
+      <para>
+            This exception occurs during test playback when the test framework cannot find a matching
+            recorded HTTP request/response pair for an actual network request made by the test.
+            This typically happens when:
+            </para>
+      <list type="bullet">
+        <item>The test code has changed and makes different network requests than what was recorded</item>
+        <item>The test recording is outdated or missing</item>
+        <item>The request matching logic cannot find a suitable recorded response</item>
+        <item>There are differences in request headers, parameters, or body content</item>
+      </list>
+      <para>
+            To resolve this exception, you typically need to re-record the test by running it in
+            Record mode to capture the updated network interactions.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRecordingMismatchException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" /> class
+            with a default error message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRecordingMismatchException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TestRecordingMismatchException : string -&gt; Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" Usage="new Microsoft.ClientModel.TestFramework.TestRecordingMismatchException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+            The message that describes the recording mismatch error.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" /> class
+            with a specified error message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRecordingMismatchException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TestRecordingMismatchException : string * Exception -&gt; Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" Usage="new Microsoft.ClientModel.TestFramework.TestRecordingMismatchException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+            The message that describes the recording mismatch error.
+            </param>
+        <param name="innerException">
+            The exception that is the cause of the current exception, or <see langword="null" />
+            if no inner exception is specified.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException" /> class
+            with a specified error message and a reference to the inner exception that is the
+            cause of this exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

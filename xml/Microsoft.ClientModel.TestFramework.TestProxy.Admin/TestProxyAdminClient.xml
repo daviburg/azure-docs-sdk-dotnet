@@ -1,0 +1,593 @@
+<Type Name="TestProxyAdminClient" FullName="Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient">
+  <TypeSignature Language="C#" Value="public class TestProxyAdminClient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestProxyAdminClient extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestProxyAdminClient" />
+  <TypeSignature Language="F#" Value="type TestProxyAdminClient = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary> The TestProxyAdminClient sub-client. </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TestProxyAdminClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary> Initializes a new instance of TestProxyAdminClient for mocking. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult AddSanitizers (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult AddSanitizers(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.AddSanitizers(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AddSanitizers (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member AddSanitizers : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.AddSanitizers : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.AddSanitizers (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Add sanitizers to the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be added only for that session. Otherwise, they will be added globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult AddSanitizers (System.Collections.Generic.IEnumerable&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; sanitizers, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult AddSanitizers(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; sanitizers, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.AddSanitizers(System.Collections.Generic.IEnumerable{Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AddSanitizers (sanitizers As IEnumerable(Of SanitizerAddition), Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member AddSanitizers : seq&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&#xA;override this.AddSanitizers : seq&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.AddSanitizers (sanitizers, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sanitizers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt;" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="sanitizers" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Add sanitizers to the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be added only for that session. Otherwise, they will be added globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sanitizers" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSanitizersAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; AddSanitizersAsync (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; AddSanitizersAsync(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.AddSanitizersAsync(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AddSanitizersAsync (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member AddSanitizersAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.AddSanitizersAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.AddSanitizersAsync (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Add sanitizers to the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be added only for that session. Otherwise, they will be added globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSanitizersAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; AddSanitizersAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; sanitizers, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; AddSanitizersAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; sanitizers, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.AddSanitizersAsync(System.Collections.Generic.IEnumerable{Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AddSanitizersAsync (sanitizers As IEnumerable(Of SanitizerAddition), Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member AddSanitizersAsync : seq&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.AddSanitizersAsync : seq&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.AddSanitizersAsync (sanitizers, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sanitizers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt;" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="sanitizers" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Add sanitizers to the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be added only for that session. Otherwise, they will be added globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sanitizers" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipeline">
+      <MemberSignature Language="C#" Value="public System.ClientModel.Primitives.ClientPipeline Pipeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ClientModel.Primitives.ClientPipeline Pipeline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.Pipeline" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipeline As ClientPipeline" />
+      <MemberSignature Language="F#" Value="member this.Pipeline : System.ClientModel.Primitives.ClientPipeline" Usage="Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.Pipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.Primitives.ClientPipeline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The HTTP pipeline for sending and receiving REST requests and responses. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt; RemoveSanitizers (Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList sanitizers, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt; RemoveSanitizers(class Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList sanitizers, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.RemoveSanitizers(Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RemoveSanitizers (sanitizers As SanitizerList, Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As ClientResult(Of RemovedSanitizers)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveSanitizers : Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&#xA;override this.RemoveSanitizers : Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;" Usage="testProxyAdminClient.RemoveSanitizers (sanitizers, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sanitizers" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="sanitizers" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Remove sanitizers from the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be removed only for that session. Otherwise, they will be removed globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sanitizers" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult RemoveSanitizers (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult RemoveSanitizers(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.RemoveSanitizers(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RemoveSanitizers (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member RemoveSanitizers : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.RemoveSanitizers : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.RemoveSanitizers (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Remove sanitizers from the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be removed only for that session. Otherwise, they will be removed globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSanitizersAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&gt; RemoveSanitizersAsync (Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList sanitizers, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&gt; RemoveSanitizersAsync(class Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList sanitizers, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.RemoveSanitizersAsync(Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RemoveSanitizersAsync (sanitizers As SanitizerList, Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult(Of RemovedSanitizers))" />
+      <MemberSignature Language="F#" Value="abstract member RemoveSanitizersAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&gt;&#xA;override this.RemoveSanitizersAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&gt;" Usage="testProxyAdminClient.RemoveSanitizersAsync (sanitizers, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.RemovedSanitizers&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sanitizers" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerList" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="sanitizers" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Remove sanitizers from the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be removed only for that session. Otherwise, they will be removed globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sanitizers" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSanitizersAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; RemoveSanitizersAsync (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; RemoveSanitizersAsync(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.RemoveSanitizersAsync(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RemoveSanitizersAsync (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveSanitizersAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.RemoveSanitizersAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.RemoveSanitizersAsync (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Remove sanitizers from the test proxy. If a recording ID is provided in the header,
+            the sanitizers will be removed only for that session. Otherwise, they will be removed globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMatcher">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult SetMatcher (Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType matcherType, Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher matcher = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult SetMatcher(valuetype Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType matcherType, class Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher matcher, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetMatcher(Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType,Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMatcher (matcherType As MatcherType, Optional matcher As CustomDefaultMatcher = Nothing, Optional cancellationToken As CancellationToken = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member SetMatcher : Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType * Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&#xA;override this.SetMatcher : Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType * Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.SetMatcher (matcherType, matcher, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matcherType" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType" />
+        <Parameter Name="matcher" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="matcherType"> The type of matcher to set. </param>
+        <param name="matcher"> The matcher configuration. Only required if matcherType is CustomDefaultMatcher. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Set the matcher for the test proxy. If a recording ID is provided in the header,
+            the matcher will be set only for that session. Otherwise, it will be set globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMatcher">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult SetMatcher (string matcherType, System.ClientModel.BinaryContent content = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult SetMatcher(string matcherType, class System.ClientModel.BinaryContent content, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetMatcher(System.String,System.ClientModel.BinaryContent,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMatcher (matcherType As String, Optional content As BinaryContent = Nothing, Optional options As RequestOptions = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member SetMatcher : string * System.ClientModel.BinaryContent * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.SetMatcher : string * System.ClientModel.BinaryContent * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.SetMatcher (matcherType, content, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matcherType" Type="System.String" />
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="matcherType"> The type of matcher to set. </param>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Set the matcher for the test proxy. If a recording ID is provided in the header,
+            the matcher will be set only for that session. Otherwise, it will be set globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMatcherAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; SetMatcherAsync (Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType matcherType, Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher matcher = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; SetMatcherAsync(valuetype Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType matcherType, class Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher matcher, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetMatcherAsync(Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType,Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMatcherAsync (matcherType As MatcherType, Optional matcher As CustomDefaultMatcher = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member SetMatcherAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType * Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.SetMatcherAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType * Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.SetMatcherAsync (matcherType, matcher, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matcherType" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.MatcherType" />
+        <Parameter Name="matcher" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.CustomDefaultMatcher" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="matcherType"> The type of matcher to set. </param>
+        <param name="matcher"> The matcher configuration. Only required if matcherType is CustomDefaultMatcher. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Set the matcher for the test proxy. If a recording ID is provided in the header,
+            the matcher will be set only for that session. Otherwise, it will be set globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMatcherAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; SetMatcherAsync (string matcherType, System.ClientModel.BinaryContent content = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; SetMatcherAsync(string matcherType, class System.ClientModel.BinaryContent content, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetMatcherAsync(System.String,System.ClientModel.BinaryContent,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetMatcherAsync (matcherType As String, Optional content As BinaryContent = Nothing, Optional options As RequestOptions = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member SetMatcherAsync : string * System.ClientModel.BinaryContent * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.SetMatcherAsync : string * System.ClientModel.BinaryContent * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.SetMatcherAsync (matcherType, content, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matcherType" Type="System.String" />
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="matcherType"> The type of matcher to set. </param>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Set the matcher for the test proxy. If a recording ID is provided in the header,
+            the matcher will be set only for that session. Otherwise, it will be set globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRecordingOptions">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult SetRecordingOptions (Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions body, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult SetRecordingOptions(class Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions body, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetRecordingOptions(Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetRecordingOptions (body As RecordingOptions, Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member SetRecordingOptions : Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult&#xA;override this.SetRecordingOptions : Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions * string * System.Threading.CancellationToken -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.SetRecordingOptions (body, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="body" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="body" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Set recording options for the test proxy. If a recording ID is provided in the header,
+            the options will be set only for that session. Otherwise, they will be set globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="body" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRecordingOptions">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.ClientResult SetRecordingOptions (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.ClientResult SetRecordingOptions(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetRecordingOptions(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetRecordingOptions (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As ClientResult" />
+      <MemberSignature Language="F#" Value="abstract member SetRecordingOptions : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult&#xA;override this.SetRecordingOptions : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.ClientModel.ClientResult" Usage="testProxyAdminClient.SetRecordingOptions (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.ClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Set recording options for the test proxy. If a recording ID is provided in the header,
+            the options will be set only for that session. Otherwise, they will be set globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRecordingOptionsAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; SetRecordingOptionsAsync (Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions body, string recordingId = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; SetRecordingOptionsAsync(class Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions body, string recordingId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetRecordingOptionsAsync(Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetRecordingOptionsAsync (body As RecordingOptions, Optional recordingId As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member SetRecordingOptionsAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.SetRecordingOptionsAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.SetRecordingOptionsAsync (body, recordingId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="body" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="body" />
+        <param name="recordingId" />
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary>
+            Set recording options for the test proxy. If a recording ID is provided in the header,
+            the options will be set only for that session. Otherwise, they will be set globally.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="body" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRecordingOptionsAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt; SetRecordingOptionsAsync (System.ClientModel.BinaryContent content, string recordingId = default, System.ClientModel.Primitives.RequestOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.ClientModel.ClientResult&gt; SetRecordingOptionsAsync(class System.ClientModel.BinaryContent content, string recordingId, class System.ClientModel.Primitives.RequestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxy.Admin.TestProxyAdminClient.SetRecordingOptionsAsync(System.ClientModel.BinaryContent,System.String,System.ClientModel.Primitives.RequestOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SetRecordingOptionsAsync (content As BinaryContent, Optional recordingId As String = Nothing, Optional options As RequestOptions = Nothing) As Task(Of ClientResult)" />
+      <MemberSignature Language="F#" Value="abstract member SetRecordingOptionsAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;&#xA;override this.SetRecordingOptionsAsync : System.ClientModel.BinaryContent * string * System.ClientModel.Primitives.RequestOptions -&gt; System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;" Usage="testProxyAdminClient.SetRecordingOptionsAsync (content, recordingId, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.ClientModel.ClientResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+        <Parameter Name="recordingId" Type="System.String" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.RequestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="content"> The content to send as the body of the request. </param>
+        <param name="recordingId" />
+        <param name="options"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Set recording options for the test proxy. If a recording ID is provided in the header,
+            the options will be set only for that session. Otherwise, they will be set globally.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ClientModel.ClientResultException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

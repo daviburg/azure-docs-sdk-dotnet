@@ -9,6 +9,7 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
@@ -42,6 +43,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -59,6 +61,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;</ReturnType>
@@ -89,6 +92,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;&gt;</ReturnType>
@@ -109,72 +113,6 @@
           <paramref name="key" /> or <paramref name="value" /> is null. </exception>
       </Docs>
     </Member>
-    <Member MemberName="Backup">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt; Backup (Azure.WaitUntil waitUntil, Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent content, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt; Backup(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource.Backup(Azure.WaitUntil,Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Backup (waitUntil As WaitUntil, content As ConfidentialLedgerBackupContent, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of ConfidentialLedgerBackupResult)" />
-      <MemberSignature Language="F#" Value="abstract member Backup : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&#xA;override this.Backup : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;" Usage="confidentialLedgerResource.Backup (waitUntil, content, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="content"> Confidential Ledger Backup Request Body. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Backs up a Confidential Ledger Resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConfidentialLedger/ledgers/{ledgerName}/backup</description></item><item><term>Operation Id</term><description>Ledger_Backup</description></item><item><term>Default Api Version</term><description>2024-09-19-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName="BackupAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&gt; BackupAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent content, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&gt; BackupAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource.BackupAsync(Azure.WaitUntil,Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function BackupAsync (waitUntil As WaitUntil, content As ConfidentialLedgerBackupContent, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of ConfidentialLedgerBackupResult))" />
-      <MemberSignature Language="F#" Value="abstract member BackupAsync : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&gt;&#xA;override this.BackupAsync : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&gt;" Usage="confidentialLedgerResource.BackupAsync (waitUntil, content, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupResult&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerBackupContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="content"> Confidential Ledger Backup Request Body. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Backs up a Confidential Ledger Resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConfidentialLedger/ledgers/{ledgerName}/backup</description></item><item><term>Operation Id</term><description>Ledger_Backup</description></item><item><term>Default Api Version</term><description>2024-09-19-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-      </Docs>
-    </Member>
     <Member MemberName="CreateResourceIdentifier">
       <MemberSignature Language="C#" Value="public static Azure.Core.ResourceIdentifier CreateResourceIdentifier (string subscriptionId, string resourceGroupName, string ledgerName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Core.ResourceIdentifier CreateResourceIdentifier(string subscriptionId, string resourceGroupName, string ledgerName) cil managed" />
@@ -185,6 +123,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceIdentifier</ReturnType>
@@ -213,6 +152,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerData</ReturnType>
@@ -234,6 +174,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
@@ -263,6 +204,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
@@ -292,14 +234,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportContent" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
@@ -325,14 +268,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportResult&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportContent" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerFilesExportContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
@@ -358,6 +302,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;</ReturnType>
@@ -384,6 +329,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;&gt;</ReturnType>
@@ -410,6 +356,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -430,6 +377,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;</ReturnType>
@@ -458,6 +406,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;&gt;</ReturnType>
@@ -486,6 +435,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>
@@ -493,72 +443,6 @@
       <Docs>
         <summary> Gets the resource type for the operations. </summary>
         <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Restore">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt; Restore (Azure.WaitUntil waitUntil, Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent content, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt; Restore(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource.Restore(Azure.WaitUntil,Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function Restore (waitUntil As WaitUntil, content As ConfidentialLedgerRestoreContent, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of ConfidentialLedgerRestoreResult)" />
-      <MemberSignature Language="F#" Value="abstract member Restore : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&#xA;override this.Restore : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;" Usage="confidentialLedgerResource.Restore (waitUntil, content, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="content"> Confidential Ledger Restore Request Body. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Restores a Confidential Ledger Resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConfidentialLedger/ledgers/{ledgerName}/restore</description></item><item><term>Operation Id</term><description>Ledger_Restore</description></item><item><term>Default Api Version</term><description>2024-09-19-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName="RestoreAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&gt; RestoreAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent content, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&gt; RestoreAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource.RestoreAsync(Azure.WaitUntil,Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function RestoreAsync (waitUntil As WaitUntil, content As ConfidentialLedgerRestoreContent, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of ConfidentialLedgerRestoreResult))" />
-      <MemberSignature Language="F#" Value="abstract member RestoreAsync : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&gt;&#xA;override this.RestoreAsync : Azure.WaitUntil * Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&gt;" Usage="confidentialLedgerResource.RestoreAsync (waitUntil, content, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreResult&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="content" Type="Azure.ResourceManager.ConfidentialLedger.Models.ConfidentialLedgerRestoreContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="waitUntil">
-          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="content"> Confidential Ledger Restore Request Body. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Restores a Confidential Ledger Resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConfidentialLedger/ledgers/{ledgerName}/restore</description></item><item><term>Operation Id</term><description>Ledger_Restore</description></item><item><term>Default Api Version</term><description>2024-09-19-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SetTags">
@@ -571,6 +455,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;</ReturnType>
@@ -599,6 +484,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;&gt;</ReturnType>
@@ -630,6 +516,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerData</ReturnType>
@@ -662,6 +549,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -693,6 +581,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerData</ReturnType>
@@ -725,6 +614,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -754,6 +644,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -781,6 +672,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;</ReturnType>
@@ -814,6 +706,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.ConfidentialLedger</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.ConfidentialLedger.ConfidentialLedgerResource&gt;&gt;</ReturnType>

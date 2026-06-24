@@ -1,0 +1,1165 @@
+<Type Name="RecordedTestBase" FullName="Microsoft.ClientModel.TestFramework.RecordedTestBase">
+  <TypeSignature Language="C#" Value="public abstract class RecordedTestBase : Microsoft.ClientModel.TestFramework.ClientTestBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RecordedTestBase extends Microsoft.ClientModel.TestFramework.ClientTestBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.RecordedTestBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RecordedTestBase&#xA;Inherits ClientTestBase" />
+  <TypeSignature Language="F#" Value="type RecordedTestBase = class&#xA;    inherit ClientTestBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.ClientModel.TestFramework.ClientTestBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[NUnit.Framework.NonParallelizable]</AttributeName>
+      <AttributeName Language="F#">[&lt;NUnit.Framework.NonParallelizable&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Base class for recorded tests that provides functionality for recording, replaying, and managing HTTP interactions.
+             This class handles test proxy integration, session recording, and client instrumentation for consistent testing
+             across different modes (Live, Record, Playback).
+             </summary>
+    <remarks>
+             Recorded tests allow you to:
+             - Record HTTP interactions during live testing
+             - Replay recorded interactions for fast, deterministic tests
+             - Sanitize sensitive data in recordings
+             - Instrument client options for test scenarios
+            
+             The class automatically manages test proxy lifecycle and recording sessions based on the test mode.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RecordedTestBase (bool isAsync, Microsoft.ClientModel.TestFramework.RecordedTestMode? mode = default);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isAsync, valuetype System.Nullable`1&lt;valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode&gt; mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.#ctor(System.Boolean,System.Nullable{Microsoft.ClientModel.TestFramework.RecordedTestMode})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (isAsync As Boolean, Optional mode As Nullable(Of RecordedTestMode) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.RecordedTestBase : bool * Nullable&lt;Microsoft.ClientModel.TestFramework.RecordedTestMode&gt; -&gt; Microsoft.ClientModel.TestFramework.RecordedTestBase" Usage="new Microsoft.ClientModel.TestFramework.RecordedTestBase (isAsync, mode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isAsync" Type="System.Boolean" />
+        <Parameter Name="mode" Type="System.Nullable&lt;Microsoft.ClientModel.TestFramework.RecordedTestMode&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="isAsync">
+            true if this instance is testing the async API variants; false for synchronous API variants.
+            </param>
+        <param name="mode">
+            The recording mode for this test instance. If null, uses the global test mode from the environment.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.RecordedTestBase" /> class.
+            </summary>
+        <remarks>
+            The constructor automatically determines the assets.json path by searching up the directory hierarchy
+            from the test location. The recording mode defaults to the global test mode if not explicitly specified.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssetsJson">
+      <MemberSignature Language="C#" Value="public const string AssetsJson;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AssetsJson" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestBase.AssetsJson" />
+      <MemberSignature Language="VB.NET" Value="Public Const AssetsJson As String " />
+      <MemberSignature Language="F#" Value="val mutable AssetsJson : string" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.AssetsJson" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The filename for the assets configuration file that contains external test asset definitions.
+            This file is used to manage test assets that are shared across multiple tests or repositories.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssetsJsonPath">
+      <MemberSignature Language="C#" Value="public virtual string? AssetsJsonPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssetsJsonPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.AssetsJsonPath" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property AssetsJsonPath As String" />
+      <MemberSignature Language="F#" Value="member this.AssetsJsonPath : string" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.AssetsJsonPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the path to the assets.json file if it exists in the test directory hierarchy.
+            This file contains configuration for external test assets and dependencies.
+            </summary>
+        <value>
+            The full path to the assets.json file, or null if no assets file is found.
+            The search traverses up the directory tree until it finds an assets.json file or reaches the git root.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyKeySanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyKeySanitizer&gt; BodyKeySanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyKeySanitizer&gt; BodyKeySanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.BodyKeySanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property BodyKeySanitizers As List(Of BodyKeySanitizer)" />
+      <MemberSignature Language="F#" Value="member this.BodyKeySanitizers : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyKeySanitizer&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.BodyKeySanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyKeySanitizer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyKeySanitizer" /> to use while sanitizing request and response bodies. This is similar to
+            <see cref="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.JsonPathSanitizers" />, but provides additional features such as regex matching, and customizing the sanitization replacement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyRegexSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyRegexSanitizer&gt; BodyRegexSanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyRegexSanitizer&gt; BodyRegexSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.BodyRegexSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property BodyRegexSanitizers As List(Of BodyRegexSanitizer)" />
+      <MemberSignature Language="F#" Value="member this.BodyRegexSanitizers : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyRegexSanitizer&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.BodyRegexSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyRegexSanitizer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.BodyRegexSanitizer" /> to use while sanitizing request and response bodies. This allows you to specify a
+            regex for matching on specific content in the body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareBodies">
+      <MemberSignature Language="C#" Value="public bool CompareBodies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompareBodies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.CompareBodies" />
+      <MemberSignature Language="VB.NET" Value="Public Property CompareBodies As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CompareBodies : bool with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.CompareBodies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether to compare request bodies during playback.
+            When enabled, the test framework validates that request bodies match between recorded and replayed requests.
+            </summary>
+        <value>
+            true to compare request bodies during playback; otherwise, false. The default is true.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProxyFromClient">
+      <MemberSignature Language="C#" Value="protected internal override object CreateProxyFromClient (Type clientType, object client, System.Collections.Generic.IEnumerable&lt;Castle.DynamicProxy.IInterceptor&gt;? preInterceptors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateProxyFromClient(class System.Type clientType, object client, class System.Collections.Generic.IEnumerable`1&lt;class Castle.DynamicProxy.IInterceptor&gt; preInterceptors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.CreateProxyFromClient(System.Type,System.Object,System.Collections.Generic.IEnumerable{Castle.DynamicProxy.IInterceptor})" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateProxyFromClient (clientType As Type, client As Object, preInterceptors As IEnumerable(Of IInterceptor)) As Object" />
+      <MemberSignature Language="F#" Value="override this.CreateProxyFromClient : Type * obj * seq&lt;Castle.DynamicProxy.IInterceptor&gt; -&gt; obj" Usage="recordedTestBase.CreateProxyFromClient (clientType, client, preInterceptors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientType" Type="System.Type" />
+        <Parameter Name="client" Type="System.Object" />
+        <Parameter Name="preInterceptors" Type="System.Collections.Generic.IEnumerable&lt;Castle.DynamicProxy.IInterceptor&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="clientType">The type of the client being instrumented.</param>
+        <param name="client">The client instance to instrument with test recording capabilities.</param>
+        <param name="preInterceptors">
+             Optional collection of interceptors to apply before the standard test recording interceptors.
+             These interceptors are applied in the order specified before test framework interceptors.
+             </param>
+        <summary>
+             Instruments a client instance to work with the test recording infrastructure.
+             This method applies interceptors and configuration needed for proper test recording and playback.
+             </summary>
+        <returns>
+             An instrumented proxy instance of the client that captures HTTP interactions for recording
+             or replays recorded interactions during playback.
+             </returns>
+        <remarks>
+             This method is typically called automatically by the test framework when clients are created
+             through InstrumentClientOptions. It disables client instrumentation validation since a client
+             has been properly configured for test recording.
+            
+             The instrumented client maintains the same API surface as the original client but routes
+             HTTP requests through the test recording infrastructure for capture and replay.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTestRecordingAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt; CreateTestRecordingAsync (Microsoft.ClientModel.TestFramework.RecordedTestMode mode, string sessionFile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.ClientModel.TestFramework.TestRecording&gt; CreateTestRecordingAsync(valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode mode, string sessionFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.CreateTestRecordingAsync(Microsoft.ClientModel.TestFramework.RecordedTestMode,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function CreateTestRecordingAsync (mode As RecordedTestMode, sessionFile As String) As Task(Of TestRecording)" />
+      <MemberSignature Language="F#" Value="member this.CreateTestRecordingAsync : Microsoft.ClientModel.TestFramework.RecordedTestMode * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt;" Usage="recordedTestBase.CreateTestRecordingAsync (mode, sessionFile)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+        <Parameter Name="sessionFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The recording mode (Live, Record, or Playback) for this recording session.</param>
+        <param name="sessionFile">The path to the session file where recordings are stored or read from.</param>
+        <summary>
+            Creates a new test recording instance for capturing or replaying HTTP interactions.
+            </summary>
+        <returns>A task that represents the asynchronous operation and contains the created TestRecording instance.</returns>
+        <remarks>
+            This method requires that the test proxy is running when creating recordings in Record or Playback modes.
+            The session file path should be relative to the repository root for consistency across environments.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the test proxy has not been started and is required for recording operations.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; CustomSanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt; CustomSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.CustomSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CustomSanitizers As List(Of SanitizerAddition)" />
+      <MemberSignature Language="F#" Value="member this.CustomSanitizers : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.CustomSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.SanitizerAddition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of custom sanitizers to use while sanitizing request and response bodies.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delay">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task Delay (int milliseconds = 1000, int? playbackDelayMilliseconds = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task Delay(int32 milliseconds, valuetype System.Nullable`1&lt;int32&gt; playbackDelayMilliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.Delay(System.Int32,System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Delay (Optional milliseconds As Integer = 1000, Optional playbackDelayMilliseconds As Nullable(Of Integer) = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="member this.Delay : int * Nullable&lt;int&gt; -&gt; System.Threading.Tasks.Task" Usage="recordedTestBase.Delay (milliseconds, playbackDelayMilliseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="milliseconds" Type="System.Int32" />
+        <Parameter Name="playbackDelayMilliseconds" Type="System.Nullable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="milliseconds">The number of milliseconds to wait in Live and Record modes. Default is 1000ms.</param>
+        <param name="playbackDelayMilliseconds">
+            An optional number of milliseconds to wait in Playback mode. If null, no delay occurs in Playback mode.
+            This is useful for allowing client-side events to process during playback.
+            </param>
+        <summary>
+            Provides convenient access to mode-aware delay functionality for the current test instance.
+            This method automatically uses the current test's recording mode to determine appropriate delay behavior.
+            </summary>
+        <returns>
+            A task that represents the delay operation. The task completes immediately in Playback mode
+            (unless playbackDelayMilliseconds is specified), or after the specified delay in other modes.
+            </returns>
+        <remarks>
+            This method is a convenience wrapper that calls the static Delay method with the current test's Mode.
+            Use this method when you need to wait for service operations to complete but want fast playback execution.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delay">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task Delay (Microsoft.ClientModel.TestFramework.RecordedTestMode mode, int milliseconds = 1000, int? playbackDelayMilliseconds = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task Delay(valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode mode, int32 milliseconds, valuetype System.Nullable`1&lt;int32&gt; playbackDelayMilliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.Delay(Microsoft.ClientModel.TestFramework.RecordedTestMode,System.Int32,System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Delay (mode As RecordedTestMode, Optional milliseconds As Integer = 1000, Optional playbackDelayMilliseconds As Nullable(Of Integer) = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="static member Delay : Microsoft.ClientModel.TestFramework.RecordedTestMode * int * Nullable&lt;int&gt; -&gt; System.Threading.Tasks.Task" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.Delay (mode, milliseconds, playbackDelayMilliseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+        <Parameter Name="milliseconds" Type="System.Int32" />
+        <Parameter Name="playbackDelayMilliseconds" Type="System.Nullable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The recording mode that determines delay behavior.</param>
+        <param name="milliseconds">The number of milliseconds to wait in Live and Record modes. Default is 1000ms.</param>
+        <param name="playbackDelayMilliseconds">
+            An optional number of milliseconds to wait in Playback mode. If null, no delay occurs in Playback mode.
+            This parameter allows fine-tuning of playback timing when some delay is necessary for proper test execution.
+            </param>
+        <summary>
+            Provides mode-aware delay functionality that adapts behavior based on the specified recording mode.
+            This static method allows delay behavior to be controlled independently of a test instance.
+            </summary>
+        <returns>
+            A task that represents the delay operation:
+            - In Live and Record modes: delays for the specified milliseconds
+            - In Playback mode: completes immediately (unless playbackDelayMilliseconds is specified)
+            </returns>
+        <remarks>
+            This method enables tests to include realistic delays during live execution and recording
+            while maintaining fast execution during playback. Use this for operations that require
+            waiting for service-side processing to complete.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSessionFilePath">
+      <MemberSignature Language="C#" Value="protected internal string GetSessionFilePath ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance string GetSessionFilePath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.GetSessionFilePath" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function GetSessionFilePath () As String" />
+      <MemberSignature Language="F#" Value="member this.GetSessionFilePath : unit -&gt; string" Usage="recordedTestBase.GetSessionFilePath " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the file path for the current test's recording session.
+            The path is constructed based on the test name, async mode, and class hierarchy.
+            </summary>
+        <returns>
+            A string representing the relative path to the session file for the current test.
+            The path is relative to the repository root and includes the test class and method names.
+            </returns>
+        <remarks>
+            The session file path follows the pattern: SessionRecords/{ClassName}/{TestName}[Async].json
+            Invalid filename characters are replaced with '%' to ensure valid file paths.
+            When an assets.json file is present, the path is made relative to the repository root.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when TestEnvironment.RepositoryRoot is null and cannot determine the repository root.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalTimeoutTearDown">
+      <MemberSignature Language="C#" Value="public override void GlobalTimeoutTearDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GlobalTimeoutTearDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.GlobalTimeoutTearDown" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub GlobalTimeoutTearDown ()" />
+      <MemberSignature Language="F#" Value="override this.GlobalTimeoutTearDown : unit -&gt; unit" Usage="recordedTestBase.GlobalTimeoutTearDown " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Applies global timeout enforcement only for playback mode tests.
+            Live and record mode tests are not subject to timeout enforcement to allow for varying service response times.
+            </summary>
+        <remarks>
+            This override ensures that only playback tests, which should execute quickly and deterministically,
+            are subject to timeout constraints. Live tests may legitimately take longer due to network latency
+            and service processing times.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderRegexSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer&gt; HeaderRegexSanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer&gt; HeaderRegexSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.HeaderRegexSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property HeaderRegexSanitizers As List(Of HeaderRegexSanitizer)" />
+      <MemberSignature Language="F#" Value="member this.HeaderRegexSanitizers : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.HeaderRegexSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer" /> to apply to the request and response headers. This allows you to specify
+            a regex for matching on the header values. For simple use cases where you need to sanitize based solely on header key, use
+            <see cref="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedHeaders" /> instead. <seealso cref="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParametersInHeaders" /> is a convenience property that allows
+            you to sanitize query parameters out of specific headers without constructing the <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.HeaderRegexSanitizer" /> yourself.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoredHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.HashSet&lt;string&gt; IgnoredHeaders;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.Collections.Generic.HashSet`1&lt;string&gt; IgnoredHeaders" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestBase.IgnoredHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public IgnoredHeaders As HashSet(Of String) " />
+      <MemberSignature Language="F#" Value="val mutable IgnoredHeaders : System.Collections.Generic.HashSet&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.IgnoredHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a collection of request headers whose values can change between recording and playback
+            without causing request matching to fail. The presence or absence of the header itself is still respected.
+            </summary>
+        <returns>
+            A <see cref="T:System.Collections.Generic.HashSet`1" /> containing header names to ignore during request matching.
+            Common headers like Date, User-Agent, and request tracking headers are included by default.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoredQueryParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.HashSet&lt;string&gt; IgnoredQueryParameters;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.Collections.Generic.HashSet`1&lt;string&gt; IgnoredQueryParameters" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestBase.IgnoredQueryParameters" />
+      <MemberSignature Language="VB.NET" Value="Public IgnoredQueryParameters As HashSet(Of String) " />
+      <MemberSignature Language="F#" Value="val mutable IgnoredQueryParameters : System.Collections.Generic.HashSet&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.IgnoredQueryParameters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a collection of query parameters whose values can change between recording and playback
+            without causing URI matching to fail. The presence or absence of the parameter itself is still respected.
+            </summary>
+        <returns>
+            A <see cref="T:System.Collections.Generic.HashSet`1" /> containing query parameter names to ignore during URI matching.
+            By default, this collection is empty, but can be populated with parameters that vary between runs.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRecordedTestClass">
+      <MemberSignature Language="C#" Value="public void InitializeRecordedTestClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeRecordedTestClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.InitializeRecordedTestClass" />
+      <MemberSignature Language="VB.NET" Value="Public Sub InitializeRecordedTestClass ()" />
+      <MemberSignature Language="F#" Value="member this.InitializeRecordedTestClass : unit -&gt; unit" Usage="recordedTestBase.InitializeRecordedTestClass " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[NUnit.Framework.OneTimeSetUp]</AttributeName>
+          <AttributeName Language="F#">[&lt;NUnit.Framework.OneTimeSetUp&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Initializes the recorded test class by setting up logging and starting the test proxy if needed.
+             This method runs once before any tests in the class are executed.
+             </summary>
+        <remarks>
+             The initialization process:
+             - Sets up console logging in Live mode or when debugging
+             - Starts the test proxy for Record and Playback modes
+             - Configures the proxy to use local debug ports if UseLocalDebugProxy is enabled
+            
+             The test proxy is not started in Live mode since direct service communication is used.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstrumentClientOptions&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T InstrumentClientOptions&lt;T&gt; (T clientOptions, Microsoft.ClientModel.TestFramework.TestRecording? recording = default) where T : System.ClientModel.Primitives.ClientPipelineOptions;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T InstrumentClientOptions&lt;(class System.ClientModel.Primitives.ClientPipelineOptions) T&gt;(!!T clientOptions, class Microsoft.ClientModel.TestFramework.TestRecording recording) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.InstrumentClientOptions``1(``0,Microsoft.ClientModel.TestFramework.TestRecording)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InstrumentClientOptions(Of T As ClientPipelineOptions) (clientOptions As T, Optional recording As TestRecording = Nothing) As T" />
+      <MemberSignature Language="F#" Value="member this.InstrumentClientOptions : 'T * Microsoft.ClientModel.TestFramework.TestRecording -&gt; 'T (requires 'T :&gt; System.ClientModel.Primitives.ClientPipelineOptions)" Usage="recordedTestBase.InstrumentClientOptions (clientOptions, recording)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+          <Constraints>
+            <BaseTypeName>System.ClientModel.Primitives.ClientPipelineOptions</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="clientOptions" Type="T" />
+        <Parameter Name="recording" Type="Microsoft.ClientModel.TestFramework.TestRecording">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of client options, which must inherit from <see cref="T:System.ClientModel.Primitives.ClientPipelineOptions" />.</typeparam>
+        <param name="clientOptions">The client options instance to instrument.</param>
+        <param name="recording">
+            The test recording to associate with the client options. If null, uses the current Recording property.
+            </param>
+        <summary>
+            Instruments client options to work properly with the test recording infrastructure.
+            This method configures the client pipeline to use the test proxy transport and applies test-specific settings.
+            </summary>
+        <returns>The instrumented client options instance.</returns>
+        <remarks>
+            In Playback mode, this method configures optimized settings for faster test execution.
+            In Record mode, it sets up the transport to capture HTTP interactions through the test proxy.
+            In Live mode, the original transport is preserved for direct service communication.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when clientOptions.Transport is null in Record or Playback modes.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonPathSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; JsonPathSanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; JsonPathSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.JsonPathSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property JsonPathSanitizers As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.JsonPathSanitizers : System.Collections.Generic.List&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.JsonPathSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of JSON path sanitizers to use when sanitizing a JSON request or response body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.RecordedTestMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.Mode" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mode As RecordedTestMode" />
+      <MemberSignature Language="F#" Value="member this.Mode : Microsoft.ClientModel.TestFramework.RecordedTestMode with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.RecordedTestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the recording mode for the current test execution.
+            This determines whether the test runs against live services, records interactions, or replays recorded data.
+            </summary>
+        <value>
+            The current <see cref="T:Microsoft.ClientModel.TestFramework.RecordedTestMode" /> which can be Live, Record, or Playback.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recording">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.TestRecording? Recording { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ClientModel.TestFramework.TestRecording Recording" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.Recording" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Recording As TestRecording" />
+      <MemberSignature Language="F#" Value="member this.Recording : Microsoft.ClientModel.TestFramework.TestRecording" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.Recording" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestRecording</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current test recording instance that manages HTTP request/response capture and replay.
+            This property is automatically set during test setup and provides access to recording functionality.
+            </summary>
+        <value>
+            The active TestRecording instance, or null if no recording is currently active.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SanitizedHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; SanitizedHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; SanitizedHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SanitizedHeaders As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SanitizedHeaders : System.Collections.Generic.List&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of headers that will be sanitized on the request and response. By default, the "Authorization" header is included.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SanitizedQueryParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; SanitizedQueryParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; SanitizedQueryParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SanitizedQueryParameters As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SanitizedQueryParameters : System.Collections.Generic.List&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of query parameters that will be sanitized on the request and response URIs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SanitizedQueryParametersInHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;(string Header, string QueryParameter)&gt; SanitizedQueryParametersInHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;valuetype System.ValueTuple`2&lt;string, string&gt;&gt; SanitizedQueryParametersInHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParametersInHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SanitizedQueryParametersInHeaders As List(Of ValueTuple(Of String, String))" />
+      <MemberSignature Language="F#" Value="member this.SanitizedQueryParametersInHeaders : System.Collections.Generic.List&lt;ValueTuple&lt;string, string&gt;&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParametersInHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 0, 1, 1 })&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Header", "QueryParameter" })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Header", "QueryParameter" })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.ValueTuple&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of header keys and query parameter tuples where the associated query parameter that should be sanitized from the corresponding
+            request and response headers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SanitizersToRemove">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; SanitizersToRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; SanitizersToRemove" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizersToRemove" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SanitizersToRemove As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SanitizersToRemove : System.Collections.Generic.List&lt;string&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizersToRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of sanitizers to remove. Sanitizer IDs can be found in Test Proxy docs.
+            https://github.com/Azure/azure-sdk-tools/blob/main/tools/test-proxy/Azure.Sdk.Tools.TestProxy/README.md
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SanitizeValue">
+      <MemberSignature Language="C#" Value="public const string SanitizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SanitizeValue" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizeValue" />
+      <MemberSignature Language="VB.NET" Value="Public Const SanitizeValue As String " />
+      <MemberSignature Language="F#" Value="val mutable SanitizeValue : string" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A constant value used for sanitizing sensitive data in recordings.
+            This value replaces actual sensitive information like secrets, keys, and tokens.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveDebugRecordingsOnFailure">
+      <MemberSignature Language="C#" Value="public bool SaveDebugRecordingsOnFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveDebugRecordingsOnFailure" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SaveDebugRecordingsOnFailure" />
+      <MemberSignature Language="VB.NET" Value="Public Property SaveDebugRecordingsOnFailure As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SaveDebugRecordingsOnFailure : bool with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.SaveDebugRecordingsOnFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether to save debug recordings when tests fail.
+            This is useful for debugging test failures by preserving the recorded interactions.
+            </summary>
+        <value>
+            true to save recordings on test failure; otherwise, false.
+            This flag is typically used during development and debugging scenarios.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProxyOptionsAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task SetProxyOptionsAsync (Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task SetProxyOptionsAsync(class Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.SetProxyOptionsAsync(Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SetProxyOptionsAsync (options As RecordingOptions) As Task" />
+      <MemberSignature Language="F#" Value="member this.SetProxyOptionsAsync : Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions -&gt; System.Threading.Tasks.Task" Usage="recordedTestBase.SetProxyOptionsAsync options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.ClientModel.TestFramework.TestProxy.Admin.RecordingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            The proxy options to apply to the current recording session.
+            These options control proxy behavior such as request matching, response handling, and transport settings.
+            </param>
+        <summary>
+            Sets proxy-specific options for the test recording session.
+            This method allows customization of how the test proxy handles requests and responses during recording.
+            </summary>
+        <returns>A task that represents the asynchronous operation of setting proxy options.</returns>
+        <remarks>
+            This method only applies options during Record mode. Options are ignored in Live and Playback modes.
+            The proxy must be running and a recording session must be active before calling this method.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the test proxy has not been started or when not in Record mode.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTestRecordingAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task StartTestRecordingAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task StartTestRecordingAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.StartTestRecordingAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StartTestRecordingAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member StartTestRecordingAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.StartTestRecordingAsync : unit -&gt; System.Threading.Tasks.Task" Usage="recordedTestBase.StartTestRecordingAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[NUnit.Framework.SetUp]</AttributeName>
+          <AttributeName Language="F#">[&lt;NUnit.Framework.SetUp&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Starts a new test recording session for the current test method.
+             This method initializes the recording infrastructure and prepares for HTTP interaction capture or replay.
+             </summary>
+        <returns>A task that represents the asynchronous operation of starting the test recording.</returns>
+        <remarks>
+             This method is automatically called by the NUnit framework before each test method execution.
+             It performs the following operations:
+             - Checks for test skip conditions based on recording settings
+             - Creates a new test recording session for the current test
+             - Initializes client instrumentation validation
+             - Records the actual test start time (excluding proxy setup overhead)
+            
+             The recording session file path is automatically determined based on the test class and method names.
+             Tests may be skipped if they have skip attributes for specific recording modes.
+             </remarks>
+        <exception cref="T:NUnit.Framework.IgnoreException">
+             Thrown when the test should be skipped based on recording skip conditions or live test skip conditions.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopTestRecordingAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task StopTestRecordingAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task StopTestRecordingAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.StopTestRecordingAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function StopTestRecordingAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member StopTestRecordingAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.StopTestRecordingAsync : unit -&gt; System.Threading.Tasks.Task" Usage="recordedTestBase.StopTestRecordingAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[NUnit.Framework.TearDown]</AttributeName>
+          <AttributeName Language="F#">[&lt;NUnit.Framework.TearDown&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Stops the current test recording session and performs cleanup operations.
+             This method finalizes the recording session and validates test execution requirements.
+             </summary>
+        <returns>A task that represents the asynchronous operation of stopping the test recording.</returns>
+        <remarks>
+             This method is automatically called by the NUnit framework after each test method execution.
+             It performs the following operations:
+             - Validates that clients were properly instrumented if recordings were made
+             - Saves or discards the recording based on test outcome and debug settings
+             - Ensures the test proxy tool is installed when recordings are saved
+             - Checks for any proxy output or errors during test execution
+            
+             Recordings are saved when tests pass, or in debug builds when SaveDebugRecordingsOnFailure is enabled.
+             Client instrumentation validation ensures proper test setup and helps catch configuration issues.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Thrown when client instrumentation validation fails, indicating that the test had recordings
+             but didn't properly instrument any clients using the InstrumentClient method.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TearDownRecordedTestClass">
+      <MemberSignature Language="C#" Value="public void TearDownRecordedTestClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TearDownRecordedTestClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestBase.TearDownRecordedTestClass" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TearDownRecordedTestClass ()" />
+      <MemberSignature Language="F#" Value="member this.TearDownRecordedTestClass : unit -&gt; unit" Usage="recordedTestBase.TearDownRecordedTestClass " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[NUnit.Framework.OneTimeTearDown]</AttributeName>
+          <AttributeName Language="F#">[&lt;NUnit.Framework.OneTimeTearDown&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Performs cleanup operations after all tests in the class have completed.
+             This method runs once after all test methods have finished execution.
+             </summary>
+        <remarks>
+             The cleanup process includes:
+             - Disposing of logging resources
+             - Cleaning up unused test recording files in Record mode
+             - Removing session files for tests that no longer exist
+            
+             File cleanup helps maintain a clean test directory by removing recordings for deleted or renamed tests.
+             Only files that don't match any known test method names are removed to prevent accidental deletion.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestRetryHelper">
+      <MemberSignature Language="C#" Value="protected Microsoft.ClientModel.TestFramework.TestRetryHelper TestRetryHelper { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ClientModel.TestFramework.TestRetryHelper TestRetryHelper" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.TestRetryHelper" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property TestRetryHelper As TestRetryHelper" />
+      <MemberSignature Language="F#" Value="member this.TestRetryHelper : Microsoft.ClientModel.TestFramework.TestRetryHelper" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.TestRetryHelper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestRetryHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provides a helper for implementing retry logic in tests that accounts for the current recording mode.
+            The retry behavior adapts based on whether the test is running in Live, Record, or Playback mode.
+            </summary>
+        <value>
+            A <see cref="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.TestRetryHelper" /> instance configured for the current test mode.
+            In Playback mode, retries execute immediately for faster test execution.
+            In Live and Record modes, retries include appropriate delays for real service interactions.
+            </value>
+        <remarks>
+            This property provides mode-aware retry functionality that ensures tests run efficiently
+            in playback while maintaining realistic retry behavior during live execution and recording.
+            Use this helper instead of implementing custom retry logic to ensure consistency across test modes.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestStartTime">
+      <MemberSignature Language="C#" Value="protected override DateTime TestStartTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TestStartTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.TestStartTime" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property TestStartTime As DateTime" />
+      <MemberSignature Language="F#" Value="member this.TestStartTime : DateTime" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.TestStartTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the timestamp when the current test started execution.
+            This excludes test proxy setup overhead and provides accurate test timing measurements.
+            </summary>
+        <value>
+            A <see cref="T:System.DateTime" /> representing when the test logic began executing.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriRegexSanitizers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer&gt; UriRegexSanitizers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer&gt; UriRegexSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.UriRegexSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property UriRegexSanitizers As List(Of UriRegexSanitizer)" />
+      <MemberSignature Language="F#" Value="member this.UriRegexSanitizers : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer&gt;" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.UriRegexSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer" /> to use while sanitizing request and response URIs. This allows you to specify
+            a regex for matching on the URI. <seealso cref="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.SanitizedQueryParameters" /> is a convenience property that allows you to sanitize
+            query parameters without constructing the <see cref="T:Microsoft.ClientModel.TestFramework.TestProxy.Admin.UriRegexSanitizer" /> yourself.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultSanitizers">
+      <MemberSignature Language="C#" Value="public bool UseDefaultSanitizers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultSanitizers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.UseDefaultSanitizers" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseDefaultSanitizers As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseDefaultSanitizers : bool with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.UseDefaultSanitizers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether to use all default sanitizers that are automatically added
+            in the test proxy. Turning this off can be helpful to improve performance in scenarios where libraries have very large
+            request bodies that are expensive to sanitize.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Turning off this setting should be used with caution as it may lead to sensitive data being recorded. All sanitization
+            will have to be manually added as a custom sanitizer if this is disabled. The only sanitizer left by default
+            is the Authorization header sanitizer.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLocalDebugProxy">
+      <MemberSignature Language="C#" Value="protected bool UseLocalDebugProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseLocalDebugProxy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.UseLocalDebugProxy" />
+      <MemberSignature Language="VB.NET" Value="Protected Property UseLocalDebugProxy As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseLocalDebugProxy : bool with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.UseLocalDebugProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether to use a local debug proxy for testing.
+            When enabled, the proxy connects on ports 5000 and 5001 for local debugging scenarios.
+            </summary>
+        <value>
+            true to use the local debug proxy; otherwise, false.
+            This is useful when running the proxy locally for debugging recorded test issues.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateClientInstrumentation">
+      <MemberSignature Language="C#" Value="protected bool ValidateClientInstrumentation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateClientInstrumentation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordedTestBase.ValidateClientInstrumentation" />
+      <MemberSignature Language="VB.NET" Value="Protected Property ValidateClientInstrumentation As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ValidateClientInstrumentation : bool with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordedTestBase.ValidateClientInstrumentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value indicating whether client instrumentation validation should be performed.
+            When enabled, the test framework verifies that all clients used during testing are properly instrumented.
+            </summary>
+        <value>
+            true if client instrumentation should be validated; otherwise, false.
+            This is automatically set based on whether the recording has captured any requests.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

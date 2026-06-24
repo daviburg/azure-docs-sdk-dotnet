@@ -119,14 +119,10 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Returns information about a specific file. Does not retrieve file content.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.GetFile(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -157,7 +153,7 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Returns information about a specific file. Does not retrieve file content. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -165,6 +161,7 @@
           <paramref name="fileId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="fileId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetFileAsync">
@@ -188,14 +185,10 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Returns information about a specific file. Does not retrieve file content.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.GetFileAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -226,7 +219,7 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Returns information about a specific file. Does not retrieve file content. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -234,6 +227,7 @@
           <paramref name="fileId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="fileId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetFileContent">
@@ -257,14 +251,10 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves the raw content of a specific file.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.GetFileContent(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -295,7 +285,7 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves the raw content of a specific file. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -303,6 +293,7 @@
           <paramref name="fileId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="fileId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetFileContentAsync">
@@ -326,14 +317,10 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves the raw content of a specific file.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.GetFileContentAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -364,7 +351,7 @@
       </Parameters>
       <Docs>
         <param name="fileId"> The ID of the file to retrieve. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves the raw content of a specific file. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -372,6 +359,7 @@
           <paramref name="fileId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="fileId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetFiles">
@@ -471,19 +459,17 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="contentType"> The name of the file to upload. Allowed values: "multipart/form-data". </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="contentType"> The contentType to use which has the multipart/form-data boundary. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Uploads a file for use by other operations.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.UploadFile(Azure.AI.Agents.Persistent.UploadFileRequest,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
+          <paramref name="content" /> or <paramref name="contentType" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contentType" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
@@ -573,19 +559,17 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="contentType"> The name of the file to upload. Allowed values: "multipart/form-data". </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="contentType"> The contentType to use which has the multipart/form-data boundary. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Uploads a file for use by other operations.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsFiles.UploadFileAsync(Azure.AI.Agents.Persistent.UploadFileRequest,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
+          <paramref name="content" /> or <paramref name="contentType" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contentType" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>

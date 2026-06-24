@@ -1,0 +1,465 @@
+<Type Name="MockPipelineResponse" FullName="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse">
+  <TypeSignature Language="C#" Value="public class MockPipelineResponse : System.ClientModel.Primitives.PipelineResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MockPipelineResponse extends System.ClientModel.Primitives.PipelineResponse" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class MockPipelineResponse&#xA;Inherits PipelineResponse" />
+  <TypeSignature Language="F#" Value="type MockPipelineResponse = class&#xA;    inherit PipelineResponse" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ClientModel.Primitives.PipelineResponse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A mock of <see cref="T:System.ClientModel.Primitives.PipelineResponse" /> to use for testing.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MockPipelineResponse (int status = 0, string reasonPhrase = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 status, string reasonPhrase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.#ctor(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional status As Integer = 0, Optional reasonPhrase As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse : int * string -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" Usage="new Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse (status, reasonPhrase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="status" Type="System.Int32" />
+        <Parameter Name="reasonPhrase" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="status">The status code of the mock HTTP response.</param>
+        <param name="reasonPhrase">The reason phrase of the mock HTTP response.</param>
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" /> to use for testing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferContent">
+      <MemberSignature Language="C#" Value="public override BinaryData BufferContent (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.BinaryData BufferContent(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.BufferContent(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function BufferContent (Optional cancellationToken As CancellationToken = Nothing) As BinaryData" />
+      <MemberSignature Language="F#" Value="override this.BufferContent : System.Threading.CancellationToken -&gt; BinaryData" Usage="mockPipelineResponse.BufferContent cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to
+            use while buffering the content.</param>
+        <summary>
+            Transfer the contents of the response network stream from
+            <see cref="P:System.ClientModel.Primitives.PipelineResponse.ContentStream" /> to a buffered cache on this
+            <see cref="T:System.ClientModel.Primitives.PipelineResponse" /> instance.
+            </summary>
+        <returns>The buffered content.</returns>
+        <remarks>
+            This method will read the full content from the response content
+            network stream into memory. Please be sure the contents will fit into
+            memory before calling this method.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferContentAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.ValueTask&lt;BinaryData&gt; BufferContentAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Threading.Tasks.ValueTask`1&lt;class System.BinaryData&gt; BufferContentAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.BufferContentAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function BufferContentAsync (Optional cancellationToken As CancellationToken = Nothing) As ValueTask(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="override this.BufferContentAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;BinaryData&gt;" Usage="mockPipelineResponse.BufferContentAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.BinaryData&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to
+            use while buffering the content.</param>
+        <summary>
+            Transfer the contents of the response network stream from
+            <see cref="P:System.ClientModel.Primitives.PipelineResponse.ContentStream" /> to a buffered cache on this
+            <see cref="T:System.ClientModel.Primitives.PipelineResponse" /> instance.
+            </summary>
+        <returns>The buffered content.</returns>
+        <remarks>
+            This method will read the full content from the response content
+            network stream into memory. Please be sure the contents will fit into
+            memory before calling this method.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public override BinaryData Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.BinaryData Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Content As BinaryData" />
+      <MemberSignature Language="F#" Value="member this.Content : BinaryData" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the contents of the HTTP response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <see cref="P:System.ClientModel.Primitives.PipelineResponse.Content" /> holds the in-memory contents of the HTTP response
+            when <see cref="P:System.ClientModel.Primitives.PipelineMessage.BufferResponse" /> is <c>true</c> on
+            the message sent via <see cref="M:System.ClientModel.Primitives.ClientPipeline.Send(System.ClientModel.Primitives.PipelineMessage)" />.
+            If this <see cref="T:System.ClientModel.Primitives.PipelineResponse" /> instance was obtained from the
+            return value of a client's service method, please refer to the
+            documentation for the service method to understand whether this property
+            can be accessed without throwing an exception. If this instance is
+            accessed from a <see cref="T:System.ClientModel.Primitives.PipelinePolicy" />, please check the value of
+            <see cref="P:System.ClientModel.Primitives.PipelineMessage.BufferResponse" /> to determine whether to
+            obtain the response content from <see cref="P:System.ClientModel.Primitives.PipelineResponse.Content" /> or
+            <see cref="P:System.ClientModel.Primitives.PipelineResponse.ContentStream" />.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if the response is
+            not buffered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream? ContentStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream ContentStream" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.ContentStream" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ContentStream As Stream" />
+      <MemberSignature Language="F#" Value="member this.ContentStream : System.IO.Stream with get, set" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.ContentStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the contents of the HTTP response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <see cref="P:System.ClientModel.Primitives.PipelineResponse.ContentStream" /> may be a stream that contains the buffered
+            contents transferred from the network stream that originally held the
+            contents of the service response; or it may be the live network stream
+            itself, depending on the value of
+            <see cref="P:System.ClientModel.Primitives.PipelineMessage.BufferResponse" /> on the message sent via
+            <see cref="M:System.ClientModel.Primitives.ClientPipeline.Send(System.ClientModel.Primitives.PipelineMessage)" />. Please refer to the
+            documentation for a client's service method if needed to understand
+            whether this <see cref="T:System.ClientModel.Primitives.PipelineResponse" /> instance must be disposed
+            to close the network stream.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="override this.Dispose : unit -&gt; unit" Usage="mockPipelineResponse.Dispose " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="mockPipelineResponse.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" /> and optionally releases the managed resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadersCore">
+      <MemberSignature Language="C#" Value="protected override System.ClientModel.Primitives.PipelineResponseHeaders HeadersCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ClientModel.Primitives.PipelineResponseHeaders HeadersCore" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.HeadersCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property HeadersCore As PipelineResponseHeaders" />
+      <MemberSignature Language="F#" Value="member this.HeadersCore : System.ClientModel.Primitives.PipelineResponseHeaders" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.HeadersCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.Primitives.PipelineResponseHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the derived-type's value of the response's
+            <see cref="P:System.ClientModel.Primitives.PipelineResponse.Headers" /> collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="public bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.IsDisposed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDisposed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDisposed : bool" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether this mock response has been disposed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReasonPhrase">
+      <MemberSignature Language="C#" Value="public override string ReasonPhrase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReasonPhrase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.ReasonPhrase" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReasonPhrase As String" />
+      <MemberSignature Language="F#" Value="member this.ReasonPhrase : string" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.ReasonPhrase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason phrase that accompanies the status code on the HTTP
+            response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsError">
+      <MemberSignature Language="C#" Value="public void SetIsError (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIsError(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.SetIsError(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetIsError (value As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SetIsError : bool -&gt; unit" Usage="mockPipelineResponse.SetIsError value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">A boolean value indicating if the response is an error.</param>
+        <summary>
+            Sets <see cref="P:System.ClientModel.Primitives.PipelineResponse.IsError" /> to <paramref name="value" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public override int Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Status As Integer" />
+      <MemberSignature Language="F#" Value="member this.Status : int" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status code of the HTTP response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithContent">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent (byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent(unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.WithContent(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithContent (content As Byte()) As MockPipelineResponse" />
+      <MemberSignature Language="F#" Value="member this.WithContent : byte[] -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" Usage="mockPipelineResponse.WithContent content" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="content">The byte array content to add.</param>
+        <summary>
+            Sets the content of the <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.
+            </summary>
+        <returns>The modified <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithContent">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent (System.ClientModel.BinaryContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent(class System.ClientModel.BinaryContent content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.WithContent(System.ClientModel.BinaryContent)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithContent (content As BinaryContent) As MockPipelineResponse" />
+      <MemberSignature Language="F#" Value="member this.WithContent : System.ClientModel.BinaryContent -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" Usage="mockPipelineResponse.WithContent content" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.ClientModel.BinaryContent" />
+      </Parameters>
+      <Docs>
+        <param name="content">The byte array content to add.</param>
+        <summary>
+            Sets the content of the <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.
+            </summary>
+        <returns>The modified <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithContent">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithContent(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.WithContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithContent (content As String) As MockPipelineResponse" />
+      <MemberSignature Language="F#" Value="member this.WithContent : string -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" Usage="mockPipelineResponse.WithContent content" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">The string content to add.</param>
+        <summary>
+            Sets the content of the <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.
+            </summary>
+        <returns>The modified <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithHeader">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse WithHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse.WithHeader(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithHeader (name As String, value As String) As MockPipelineResponse" />
+      <MemberSignature Language="F#" Value="member this.WithHeader : string * string -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" Usage="mockPipelineResponse.WithHeader (name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the header to add.</param>
+        <param name="value">The value of the header to add.</param>
+        <summary>
+            Adds an HTTP header to the <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.
+            </summary>
+        <returns>The modified <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

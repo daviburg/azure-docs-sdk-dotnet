@@ -1,0 +1,144 @@
+<Type Name="ProxyTransport" FullName="Microsoft.ClientModel.TestFramework.ProxyTransport">
+  <TypeSignature Language="C#" Value="public class ProxyTransport : System.ClientModel.Primitives.PipelineTransport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProxyTransport extends System.ClientModel.Primitives.PipelineTransport" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.ProxyTransport" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProxyTransport&#xA;Inherits PipelineTransport" />
+  <TypeSignature Language="F#" Value="type ProxyTransport = class&#xA;    inherit PipelineTransport" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ClientModel.Primitives.PipelineTransport</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A transport that routes HTTP requests through a test proxy for recording and playback.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProxyTransport (Microsoft.ClientModel.TestFramework.TestProxyProcess proxyProcess, System.ClientModel.Primitives.PipelineTransport innerTransport, Microsoft.ClientModel.TestFramework.TestRecording recording, Func&lt;Microsoft.ClientModel.TestFramework.EntryRecordModel&gt; getRecordingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.ClientModel.TestFramework.TestProxyProcess proxyProcess, class System.ClientModel.Primitives.PipelineTransport innerTransport, class Microsoft.ClientModel.TestFramework.TestRecording recording, class System.Func`1&lt;valuetype Microsoft.ClientModel.TestFramework.EntryRecordModel&gt; getRecordingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ProxyTransport.#ctor(Microsoft.ClientModel.TestFramework.TestProxyProcess,System.ClientModel.Primitives.PipelineTransport,Microsoft.ClientModel.TestFramework.TestRecording,System.Func{Microsoft.ClientModel.TestFramework.EntryRecordModel})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (proxyProcess As TestProxyProcess, innerTransport As PipelineTransport, recording As TestRecording, getRecordingMode As Func(Of EntryRecordModel))" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.ProxyTransport : Microsoft.ClientModel.TestFramework.TestProxyProcess * System.ClientModel.Primitives.PipelineTransport * Microsoft.ClientModel.TestFramework.TestRecording * Func&lt;Microsoft.ClientModel.TestFramework.EntryRecordModel&gt; -&gt; Microsoft.ClientModel.TestFramework.ProxyTransport" Usage="new Microsoft.ClientModel.TestFramework.ProxyTransport (proxyProcess, innerTransport, recording, getRecordingMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="proxyProcess" Type="Microsoft.ClientModel.TestFramework.TestProxyProcess" />
+        <Parameter Name="innerTransport" Type="System.ClientModel.Primitives.PipelineTransport" />
+        <Parameter Name="recording" Type="Microsoft.ClientModel.TestFramework.TestRecording" />
+        <Parameter Name="getRecordingMode" Type="System.Func&lt;Microsoft.ClientModel.TestFramework.EntryRecordModel&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="proxyProcess">The test proxy process.</param>
+        <param name="innerTransport">The inner transport to wrap.</param>
+        <param name="recording">The test recording instance.</param>
+        <param name="getRecordingMode">Function to get the current recording mode.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.ProxyTransport" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageCore">
+      <MemberSignature Language="C#" Value="protected override System.ClientModel.Primitives.PipelineMessage CreateMessageCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ClientModel.Primitives.PipelineMessage CreateMessageCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ProxyTransport.CreateMessageCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateMessageCore () As PipelineMessage" />
+      <MemberSignature Language="F#" Value="override this.CreateMessageCore : unit -&gt; System.ClientModel.Primitives.PipelineMessage" Usage="proxyTransport.CreateMessageCore " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.Primitives.PipelineMessage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new transport-specific instance of <see cref="T:System.ClientModel.Primitives.PipelineMessage" />.
+            Types that derive from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this
+            method to provide transport-specific functionality.
+            </summary>
+        <returns>A <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> that can be passed to
+            <see cref="M:System.ClientModel.Primitives.PipelineTransport.Process(System.ClientModel.Primitives.PipelineMessage)" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCore">
+      <MemberSignature Language="C#" Value="protected override void ProcessCore (System.ClientModel.Primitives.PipelineMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessCore(class System.ClientModel.Primitives.PipelineMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ProxyTransport.ProcessCore(System.ClientModel.Primitives.PipelineMessage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessCore (message As PipelineMessage)" />
+      <MemberSignature Language="F#" Value="override this.ProcessCore : System.ClientModel.Primitives.PipelineMessage -&gt; unit" Usage="proxyTransport.ProcessCore message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">The <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> containing the
+            request that was sent and response that was received by the transport.</param>
+        <summary>
+            Transport-specific implementation used to sends the HTTP request
+            contained by <see cref="P:System.ClientModel.Primitives.PipelineMessage.Request" /> and set the
+            value of <see cref="P:System.ClientModel.Primitives.PipelineMessage.Response" />. Types that derive
+            from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this method to
+            provide transport-specific functionality.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCoreAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.ValueTask ProcessCoreAsync (System.ClientModel.Primitives.PipelineMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Threading.Tasks.ValueTask ProcessCoreAsync(class System.ClientModel.Primitives.PipelineMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ProxyTransport.ProcessCoreAsync(System.ClientModel.Primitives.PipelineMessage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ProcessCoreAsync (message As PipelineMessage) As ValueTask" />
+      <MemberSignature Language="F#" Value="override this.ProcessCoreAsync : System.ClientModel.Primitives.PipelineMessage -&gt; System.Threading.Tasks.ValueTask" Usage="proxyTransport.ProcessCoreAsync message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">The <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> containing the
+            request that was sent and response that was received by the transport.</param>
+        <summary>
+            Transport-specific implementation used to sends the HTTP request
+            contained by <see cref="P:System.ClientModel.Primitives.PipelineMessage.Request" /> and set the
+            value of <see cref="P:System.ClientModel.Primitives.PipelineMessage.Response" />. Types that derive
+            from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this method to
+            provide transport-specific functionality.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="LiveParallelizableAttribute" FullName="Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute">
+  <TypeSignature Language="C#" Value="public class LiveParallelizableAttribute : NUnit.Framework.ParallelizableAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiveParallelizableAttribute extends NUnit.Framework.ParallelizableAttribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class LiveParallelizableAttribute&#xA;Inherits ParallelizableAttribute" />
+  <TypeSignature Language="F#" Value="type LiveParallelizableAttribute = class&#xA;    inherit ParallelizableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.ParallelizableAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=false, Inherited=true)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=false, Inherited=true)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute on test assemblies, classes, or methods that defines parallelization behavior when tests are run in <see cref="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Live" /> mode.
+            In other modes it will enforce no parallelization.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiveParallelizableAttribute (NUnit.Framework.ParallelScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype NUnit.Framework.ParallelScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute.#ctor(NUnit.Framework.ParallelScope)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scope As ParallelScope)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute : NUnit.Framework.ParallelScope -&gt; Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute" Usage="new Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute scope" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="NUnit.Framework.ParallelScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">The scope of parallelization to apply when in Live mode.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.LiveParallelizableAttribute" /> class.
+            The parallelization scope is applied only when tests are running in Live mode; otherwise, no parallelization is used.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to SubscriptionResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -29,8 +29,74 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.HybridNetwork.Mocking.MockableHybridNetworkSubscriptionResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableHybridNetworkSubscriptionResource for mocking. </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelOperation">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation CancelOperation (Azure.WaitUntil waitUntil, Azure.ResourceManager.HybridNetwork.Models.CancelInformation cancelInformation, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation CancelOperation(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.HybridNetwork.Models.CancelInformation cancelInformation, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Mocking.MockableHybridNetworkSubscriptionResource.CancelOperation(Azure.WaitUntil,Azure.ResourceManager.HybridNetwork.Models.CancelInformation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelOperation (waitUntil As WaitUntil, cancelInformation As CancelInformation, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation" />
+      <MemberSignature Language="F#" Value="abstract member CancelOperation : Azure.WaitUntil * Azure.ResourceManager.HybridNetwork.Models.CancelInformation * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&#xA;override this.CancelOperation : Azure.WaitUntil * Azure.ResourceManager.HybridNetwork.Models.CancelInformation * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation" Usage="mockableHybridNetworkSubscriptionResource.CancelOperation (waitUntil, cancelInformation, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="cancelInformation" Type="Azure.ResourceManager.HybridNetwork.Models.CancelInformation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="cancelInformation"> The SiteNetworkService detail and an optional operation which defaults to 'Put'. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Cancels an ongoing long-running PUT operation for the specified Site Network Service resource. Other operations are not supported for cancellation at this time.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/cancelSiteNetworkServiceOperation. </description></item><item><term> Operation Id. </term><description> SiteNetworkServicesOperationGroup_CancelOperation. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cancelInformation" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelOperationAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt; CancelOperationAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.HybridNetwork.Models.CancelInformation cancelInformation, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation&gt; CancelOperationAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.HybridNetwork.Models.CancelInformation cancelInformation, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.HybridNetwork.Mocking.MockableHybridNetworkSubscriptionResource.CancelOperationAsync(Azure.WaitUntil,Azure.ResourceManager.HybridNetwork.Models.CancelInformation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CancelOperationAsync (waitUntil As WaitUntil, cancelInformation As CancelInformation, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation)" />
+      <MemberSignature Language="F#" Value="abstract member CancelOperationAsync : Azure.WaitUntil * Azure.ResourceManager.HybridNetwork.Models.CancelInformation * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;&#xA;override this.CancelOperationAsync : Azure.WaitUntil * Azure.ResourceManager.HybridNetwork.Models.CancelInformation * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;" Usage="mockableHybridNetworkSubscriptionResource.CancelOperationAsync (waitUntil, cancelInformation, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.HybridNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="cancelInformation" Type="Azure.ResourceManager.HybridNetwork.Models.CancelInformation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="cancelInformation"> The SiteNetworkService detail and an optional operation which defaults to 'Put'. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Cancels an ongoing long-running PUT operation for the specified Site Network Service resource. Other operations are not supported for cancellation at this time.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/cancelSiteNetworkServiceOperation. </description></item><item><term> Operation Id. </term><description> SiteNetworkServicesOperationGroup_CancelOperation. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cancelInformation" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetConfigurationGroupValues">
@@ -54,7 +120,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the configuration group value in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/configurationGroupValues</description></item><item><term>Operation Id</term><description>ConfigurationGroupValues_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/configurationGroupValues. </description></item><item><term> Operation Id. </term><description> ConfigurationGroupValues_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,8 +146,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the configuration group value in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/configurationGroupValues</description></item><item><term>Operation Id</term><description>ConfigurationGroupValues_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/configurationGroupValues. </description></item><item><term> Operation Id. </term><description> ConfigurationGroupValues_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.ConfigurationGroupValueResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,7 +172,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all the network functions in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/networkFunctions</description></item><item><term>Operation Id</term><description>NetworkFunctions_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/networkFunctions. </description></item><item><term> Operation Id. </term><description> NetworkFunctions_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -132,8 +198,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all the network functions in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/networkFunctions</description></item><item><term>Operation Id</term><description>NetworkFunctions_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/networkFunctions. </description></item><item><term> Operation Id. </term><description> NetworkFunctions_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.NetworkFunctionResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -158,7 +224,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all the publishers in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/publishers</description></item><item><term>Operation Id</term><description>Publishers_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.PublisherResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/publishers. </description></item><item><term> Operation Id. </term><description> Publishers_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.PublisherResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -184,8 +250,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all the publishers in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/publishers</description></item><item><term>Operation Id</term><description>Publishers_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.PublisherResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.HybridNetwork.PublisherResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/publishers. </description></item><item><term> Operation Id. </term><description> Publishers_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.PublisherResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -210,7 +276,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the network service in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/siteNetworkServices</description></item><item><term>Operation Id</term><description>SiteNetworkServices_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/siteNetworkServices. </description></item><item><term> Operation Id. </term><description> SiteNetworkServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -236,8 +302,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the network service in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/siteNetworkServices</description></item><item><term>Operation Id</term><description>SiteNetworkServices_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/siteNetworkServices. </description></item><item><term> Operation Id. </term><description> SiteNetworkServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteNetworkServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,7 +328,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the network service in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/sites</description></item><item><term>Operation Id</term><description>Sites_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.SiteResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/sites. </description></item><item><term> Operation Id. </term><description> Sites_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -288,8 +354,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists all sites in the network service in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/sites</description></item><item><term>Operation Id</term><description>Sites_ListBySubscription</description></item><item><term>Default Api Version</term><description>2023-09-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.HybridNetwork.SiteResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/sites. </description></item><item><term> Operation Id. </term><description> Sites_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-03-30. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.HybridNetwork.SiteResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

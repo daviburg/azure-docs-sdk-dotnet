@@ -65,7 +65,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessage(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessage(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -77,17 +77,74 @@
       </Docs>
     </Member>
     <Member MemberName="CreateMessage">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage(string threadId, valuetype Azure.AI.Agents.Persistent.MessageRole role, class System.BinaryData content, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessage(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessage (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" />
+      <MemberSignature Language="F#" Value="abstract member CreateMessage : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&#xA;override this.CreateMessage : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;" Usage="threadMessages.CreateMessage (threadId, role, content, attachments, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="role" Type="Azure.AI.Agents.Persistent.MessageRole" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="System.BinaryData" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="attachments" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="role">
+            The role of the entity that is creating the message. Allowed values include:
+            `user`, which indicates the message is sent by an actual user (and should be
+            used in most cases to represent user-generated messages), and `assistant`,
+            which indicates the message is generated by the agent (use this value to insert
+            messages from the agent into the conversation).
+            </param>
+        <param name="content">
+            The content of the initial message. This may be a basic string (if you only
+            need text) or an array of typed content blocks (for example, text, image_file,
+            image_url, and so on).
+            </param>
+        <param name="attachments"> A list of files attached to the message, and the tools they should be added to. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new message on a specified thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage(string threadId, valuetype Azure.AI.Agents.Persistent.MessageRole role, class System.BinaryData content, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessage(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessage (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessage (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateMessage : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&#xA;override this.CreateMessage : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;" Usage="threadMessages.CreateMessage (threadId, role, content, attachments, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; CreateMessage (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessage (threadId As String, role As MessageRole, content As BinaryData, attachments As IEnumerable(Of MessageAttachment), metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentThreadMessage)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;</ReturnType>
       </ReturnValue>
@@ -116,7 +173,7 @@
         <param name="attachments"> A list of files attached to the message, and the tools they should be added to. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new message on a specified thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -246,7 +303,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessageAsync(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessageAsync(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -258,17 +315,74 @@
       </Docs>
     </Member>
     <Member MemberName="CreateMessageAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync(string threadId, valuetype Azure.AI.Agents.Persistent.MessageRole role, class System.BinaryData content, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessageAsync(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessageAsync (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" />
+      <MemberSignature Language="F#" Value="abstract member CreateMessageAsync : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;&#xA;override this.CreateMessageAsync : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;" Usage="threadMessages.CreateMessageAsync (threadId, role, content, attachments, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="role" Type="Azure.AI.Agents.Persistent.MessageRole" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="System.BinaryData" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="attachments" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="role">
+            The role of the entity that is creating the message. Allowed values include:
+            `user`, which indicates the message is sent by an actual user (and should be
+            used in most cases to represent user-generated messages), and `assistant`,
+            which indicates the message is generated by the agent (use this value to insert
+            messages from the agent into the conversation).
+            </param>
+        <param name="content">
+            The content of the initial message. This may be a basic string (if you only
+            need text) or an array of typed content blocks (for example, text, image_file,
+            image_url, and so on).
+            </param>
+        <param name="attachments"> A list of files attached to the message, and the tools they should be added to. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new message on a specified thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync(string threadId, valuetype Azure.AI.Agents.Persistent.MessageRole role, class System.BinaryData content, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.CreateMessageAsync(System.String,Azure.AI.Agents.Persistent.MessageRole,System.BinaryData,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.MessageAttachment},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessageAsync (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessageAsync (threadId As String, role As MessageRole, content As BinaryData, Optional attachments As IEnumerable(Of MessageAttachment) = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateMessageAsync : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;&#xA;override this.CreateMessageAsync : string * Azure.AI.Agents.Persistent.MessageRole * BinaryData * seq&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;" Usage="threadMessages.CreateMessageAsync (threadId, role, content, attachments, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; CreateMessageAsync (string threadId, Azure.AI.Agents.Persistent.MessageRole role, BinaryData content, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.MessageAttachment&gt; attachments, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateMessageAsync (threadId As String, role As MessageRole, content As BinaryData, attachments As IEnumerable(Of MessageAttachment), metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentThreadMessage))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -297,7 +411,7 @@
         <param name="attachments"> A list of files attached to the message, and the tools they should be added to. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new message on a specified thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -486,14 +600,10 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves an existing message.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.GetMessage(System.String,System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -526,7 +636,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves an existing message. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -534,6 +644,7 @@
           <paramref name="threadId" /> or <paramref name="messageId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="messageId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessageAsync">
@@ -559,14 +670,10 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves an existing message.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.GetMessageAsync(System.String,System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -599,7 +706,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves an existing message. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -607,6 +714,7 @@
           <paramref name="threadId" /> or <paramref name="messageId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="messageId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessages">
@@ -737,14 +845,10 @@
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing message on an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessage(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -755,17 +859,60 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateMessage">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage (string threadId, string messageId, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage(string threadId, string messageId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessage(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessage (threadId As String, messageId As String, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" />
+      <MemberSignature Language="F#" Value="abstract member UpdateMessage : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&#xA;override this.UpdateMessage : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;" Usage="threadMessages.UpdateMessage (threadId, messageId, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="messageId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="messageId"> Identifier of the message. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing message on an existing thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="messageId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> or <paramref name="messageId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMessage">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage(string threadId, string messageId, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessage(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessage (threadId As String, messageId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessage (threadId As String, messageId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentThreadMessage)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateMessage : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&#xA;override this.UpdateMessage : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;" Usage="threadMessages.UpdateMessage (threadId, messageId, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt; UpdateMessage (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessage (threadId As String, messageId As String, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentThreadMessage)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;</ReturnType>
       </ReturnValue>
@@ -780,7 +927,7 @@
         <param name="messageId"> Identifier of the message. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing message on an existing thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -814,14 +961,10 @@
         <param name="threadId"> Identifier of the thread. </param>
         <param name="messageId"> Identifier of the message. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing message on an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessageAsync(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -832,17 +975,60 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateMessageAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync (string threadId, string messageId, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync(string threadId, string messageId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessageAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessageAsync (threadId As String, messageId As String, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" />
+      <MemberSignature Language="F#" Value="abstract member UpdateMessageAsync : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;&#xA;override this.UpdateMessageAsync : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;" Usage="threadMessages.UpdateMessageAsync (threadId, messageId, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="messageId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="messageId"> Identifier of the message. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing message on an existing thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="messageId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> or <paramref name="messageId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMessageAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync(string threadId, string messageId, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadMessages.UpdateMessageAsync(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessageAsync (threadId As String, messageId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessageAsync (threadId As String, messageId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentThreadMessage))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateMessageAsync : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;&#xA;override this.UpdateMessageAsync : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;" Usage="threadMessages.UpdateMessageAsync (threadId, messageId, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt; UpdateMessageAsync (string threadId, string messageId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateMessageAsync (threadId As String, messageId As String, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentThreadMessage))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentThreadMessage&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -857,7 +1043,7 @@
         <param name="messageId"> Identifier of the message. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing message on an existing thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

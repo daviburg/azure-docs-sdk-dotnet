@@ -18,13 +18,14 @@
     <AssemblyVersion>1.56.0.0</AssemblyVersion>
     <AssemblyVersion>1.57.0.0</AssemblyVersion>
     <AssemblyVersion>1.58.0.0</AssemblyVersion>
+    <AssemblyVersion>1.60.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="azure-dotnet">
+    <Attribute>
       <AttributeName Language="C#">[System.Runtime.CompilerServices.TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TypeForwardedFrom("Azure.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8")&gt;]</AttributeName>
     </Attribute>
@@ -37,15 +38,11 @@
   </Docs>
   <Members>
     <Member MemberName="AddAzureClient&lt;TClient,TSettings&gt;">
-      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Identity.ConfigurationExtensions.AddAzureClient``2(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String) As IClientBuilder" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName)" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.Hosting.IHostApplicationBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.Hosting.IHostApplicationBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String) As IHostApplicationBuilder" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string -&gt; Microsoft.Extensions.Hosting.IHostApplicationBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String) As IClientBuilder" />
+      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Identity</AssemblyName>
@@ -55,18 +52,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="azure-dotnet">System.ClientModel.Primitives.IClientBuilder</ReturnType>
-        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Extensions.Hosting.IHostApplicationBuilder</ReturnType>
+        <ReturnType>System.ClientModel.Primitives.IClientBuilder</ReturnType>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TClient">
+        <TypeParameter Name="TClient" Index="0" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
           </Constraints>
         </TypeParameter>
-        <TypeParameter Name="TSettings">
+        <TypeParameter Name="TSettings" Index="1" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
             <BaseTypeName>System.ClientModel.Primitives.ClientSettings</BaseTypeName>
@@ -74,8 +71,8 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <typeparam name="TClient">The type of Azure client.</typeparam>
@@ -90,15 +87,11 @@
       </Docs>
     </Member>
     <Member MemberName="AddAzureClient&lt;TClient,TSettings&gt;">
-      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Identity.ConfigurationExtensions.AddAzureClient``2(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String,System.Action{``1})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String, configureSettings As Action(Of TSettings)) As IClientBuilder" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName, configureSettings)" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.Hosting.IHostApplicationBuilder AddAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.Hosting.IHostApplicationBuilder AddAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String, configureSettings As Action(Of TSettings)) As IHostApplicationBuilder" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; Microsoft.Extensions.Hosting.IHostApplicationBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName, configureSettings)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, sectionName As String, configureSettings As Action(Of TSettings)) As IClientBuilder" />
+      <MemberSignature Language="F#" Value="static member AddAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddAzureClient (host, sectionName, configureSettings)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Identity</AssemblyName>
@@ -108,18 +101,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="azure-dotnet">System.ClientModel.Primitives.IClientBuilder</ReturnType>
-        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Extensions.Hosting.IHostApplicationBuilder</ReturnType>
+        <ReturnType>System.ClientModel.Primitives.IClientBuilder</ReturnType>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TClient">
+        <TypeParameter Name="TClient" Index="0" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
           </Constraints>
         </TypeParameter>
-        <TypeParameter Name="TSettings">
+        <TypeParameter Name="TSettings" Index="1" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
             <BaseTypeName>System.ClientModel.Primitives.ClientSettings</BaseTypeName>
@@ -127,9 +120,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" />
-        <Parameter Name="configureSettings" Type="System.Action&lt;TSettings&gt;" />
+        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="configureSettings" Type="System.Action&lt;TSettings&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <typeparam name="TClient">The type of Azure client.</typeparam>
@@ -154,12 +147,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
       </Parameters>
       <Docs>
         <param name="services">The service collection to register on.</param>
@@ -182,12 +176,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Hosting.IHostApplicationBuilder</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="builder" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
+        <Parameter Name="builder" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" />
       </Parameters>
       <Docs>
         <param name="builder">The host builder to register on.</param>
@@ -201,15 +196,11 @@
       </Docs>
     </Member>
     <Member MemberName="AddKeyedAzureClient&lt;TClient,TSettings&gt;">
-      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient``2(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String) As IClientBuilder" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName)" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.Hosting.IHostApplicationBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.Hosting.IHostApplicationBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String) As IHostApplicationBuilder" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string -&gt; Microsoft.Extensions.Hosting.IHostApplicationBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String) As IClientBuilder" />
+      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Identity</AssemblyName>
@@ -219,18 +210,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="azure-dotnet">System.ClientModel.Primitives.IClientBuilder</ReturnType>
-        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Extensions.Hosting.IHostApplicationBuilder</ReturnType>
+        <ReturnType>System.ClientModel.Primitives.IClientBuilder</ReturnType>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TClient">
+        <TypeParameter Name="TClient" Index="0" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
           </Constraints>
         </TypeParameter>
-        <TypeParameter Name="TSettings">
+        <TypeParameter Name="TSettings" Index="1" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
             <BaseTypeName>System.ClientModel.Primitives.ClientSettings</BaseTypeName>
@@ -238,9 +229,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" />
-        <Parameter Name="key" Type="System.String" />
-        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sectionName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <typeparam name="TClient">The type of Azure client.</typeparam>
@@ -256,15 +247,11 @@
       </Docs>
     </Member>
     <Member MemberName="AddKeyedAzureClient&lt;TClient,TSettings&gt;">
-      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ClientModel.Primitives.IClientBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient``2(Microsoft.Extensions.Hosting.IHostApplicationBuilder,System.String,System.String,System.Action{``1})" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String, configureSettings As Action(Of TSettings)) As IClientBuilder" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName, configureSettings)" FrameworkAlternate="azure-dotnet" />
-      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.Hosting.IHostApplicationBuilder AddKeyedAzureClient&lt;TClient,TSettings&gt; (this Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, Action&lt;TSettings&gt; configureSettings) where TClient : class where TSettings : System.ClientModel.Primitives.ClientSettings, new();" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.Hosting.IHostApplicationBuilder AddKeyedAzureClient&lt;class TClient, .ctor (class System.ClientModel.Primitives.ClientSettings) TSettings&gt;(class Microsoft.Extensions.Hosting.IHostApplicationBuilder host, string key, string sectionName, class System.Action`1&lt;!!TSettings&gt; configureSettings) cil managed" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String, configureSettings As Action(Of TSettings)) As IHostApplicationBuilder" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; Microsoft.Extensions.Hosting.IHostApplicationBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName, configureSettings)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddKeyedAzureClient(Of TClient As Class, TSettings As Class) (host As IHostApplicationBuilder, key As String, sectionName As String, configureSettings As Action(Of TSettings)) As IClientBuilder" />
+      <MemberSignature Language="F#" Value="static member AddKeyedAzureClient : Microsoft.Extensions.Hosting.IHostApplicationBuilder * string * string * Action&lt;'Settings (requires 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))&gt; -&gt; System.ClientModel.Primitives.IClientBuilder (requires 'Client : null and 'Settings :&gt; System.ClientModel.Primitives.ClientSettings and 'Settings : (new : unit -&gt; 'Settings))" Usage="Azure.Identity.ConfigurationExtensions.AddKeyedAzureClient (host, key, sectionName, configureSettings)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Identity</AssemblyName>
@@ -274,18 +261,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="azure-dotnet">System.ClientModel.Primitives.IClientBuilder</ReturnType>
-        <ReturnType FrameworkAlternate="azure-dotnet-preview">Microsoft.Extensions.Hosting.IHostApplicationBuilder</ReturnType>
+        <ReturnType>System.ClientModel.Primitives.IClientBuilder</ReturnType>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="TClient">
+        <TypeParameter Name="TClient" Index="0" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
           </Constraints>
         </TypeParameter>
-        <TypeParameter Name="TSettings">
+        <TypeParameter Name="TSettings" Index="1" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
             <BaseTypeName>System.ClientModel.Primitives.ClientSettings</BaseTypeName>
@@ -293,10 +280,10 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" />
-        <Parameter Name="key" Type="System.String" />
-        <Parameter Name="sectionName" Type="System.String" />
-        <Parameter Name="configureSettings" Type="System.Action&lt;TSettings&gt;" />
+        <Parameter Name="host" Type="Microsoft.Extensions.Hosting.IHostApplicationBuilder" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sectionName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="configureSettings" Type="System.Action&lt;TSettings&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <typeparam name="TClient">The type of Azure client.</typeparam>
@@ -327,12 +314,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
       </ReturnValue>
       <TypeParameters>
-        <TypeParameter Name="T">
+        <TypeParameter Name="T" Index="0" FrameworkAlternate="azure-dotnet-preview">
           <Constraints>
             <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
             <BaseTypeName>System.ClientModel.Primitives.ClientSettings</BaseTypeName>
@@ -340,8 +328,8 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of <see cref="T:System.ClientModel.Primitives.ClientSettings" /> to create.</typeparam>
@@ -364,6 +352,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -377,9 +366,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resolvers" Type="System.ClientModel.Primitives.CredentialResolver[]" Index="2" FrameworkAlternate="azure-dotnet">
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
+        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="resolvers" Type="System.ClientModel.Primitives.CredentialResolver[]">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -414,6 +403,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -427,10 +417,10 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resolvers" Type="System.Collections.Generic.IEnumerable&lt;System.ClientModel.Primitives.CredentialResolver&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="configureOverrides" Type="System.Action&lt;Microsoft.Extensions.Configuration.IConfigurationSection&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
+        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="resolvers" Type="System.Collections.Generic.IEnumerable&lt;System.ClientModel.Primitives.CredentialResolver&gt;" />
+        <Parameter Name="configureOverrides" Type="System.Action&lt;Microsoft.Extensions.Configuration.IConfigurationSection&gt;" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of <see cref="T:System.ClientModel.Primitives.ClientSettings" /> to create.</typeparam>
@@ -463,13 +453,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ClientModel.Primitives.CredentialSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
+        <Parameter Name="sectionName" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="configuration">The configuration to resolve from.</param>
@@ -500,14 +491,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ClientModel.Primitives.CredentialSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resolvers" Type="System.ClientModel.Primitives.CredentialResolver[]" Index="2" FrameworkAlternate="azure-dotnet">
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
+        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="resolvers" Type="System.ClientModel.Primitives.CredentialResolver[]">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -546,15 +538,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Core</AssemblyName>
         <AssemblyVersion>1.58.0.0</AssemblyVersion>
+        <AssemblyVersion>1.60.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ClientModel.Primitives.CredentialSettings</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" Index="0" FrameworkAlternate="azure-dotnet" RefType="this" />
-        <Parameter Name="sectionName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resolvers" Type="System.Collections.Generic.IEnumerable&lt;System.ClientModel.Primitives.CredentialResolver&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="configureOverrides" Type="System.Action&lt;Microsoft.Extensions.Configuration.IConfigurationSection&gt;" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" RefType="this" />
+        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="resolvers" Type="System.Collections.Generic.IEnumerable&lt;System.ClientModel.Primitives.CredentialResolver&gt;" />
+        <Parameter Name="configureOverrides" Type="System.Action&lt;Microsoft.Extensions.Configuration.IConfigurationSection&gt;" />
       </Parameters>
       <Docs>
         <param name="configuration">To be added.</param>

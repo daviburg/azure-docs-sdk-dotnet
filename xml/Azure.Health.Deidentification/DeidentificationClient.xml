@@ -36,6 +36,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeidentificationClient (Azure.Health.Deidentification.DeidentificationClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Health.Deidentification.DeidentificationClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Health.Deidentification.DeidentificationClient.#ctor(Azure.Health.Deidentification.DeidentificationClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As DeidentificationClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.Health.Deidentification.DeidentificationClient : Azure.Health.Deidentification.DeidentificationClientSettings -&gt; Azure.Health.Deidentification.DeidentificationClient" Usage="new Azure.Health.Deidentification.DeidentificationClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Health.Deidentification</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.Health.Deidentification.DeidentificationClientSettings" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for DeidentificationClient. </param>
+        <summary> Initializes a new instance of DeidentificationClient from a <see cref="T:Azure.Health.Deidentification.DeidentificationClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DeidentificationClient (Uri endpoint, Azure.Core.TokenCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.Core.TokenCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Health.Deidentification.DeidentificationClient.#ctor(System.Uri,Azure.Core.TokenCredential)" />
@@ -111,9 +131,7 @@
         <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Cancels a job that is in progress. 
-            
             The job will be marked as canceled and the service will stop processing the job. The service will not delete any documents that have already been processed.
-            
             If the job is already complete, this will have no effect. 
             <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
@@ -168,9 +186,7 @@ Console.WriteLine(result.GetProperty("createdAt").ToString());
         <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
             Cancels a job that is in progress. 
-            
             The job will be marked as canceled and the service will stop processing the job. The service will not delete any documents that have already been processed.
-            
             If the job is already complete, this will have no effect. 
             </summary>
         <returns>To be added.</returns>
@@ -221,9 +237,7 @@ Response<DeidentificationJob> response = client.CancelJob("job_smith_documents_1
         <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Cancels a job that is in progress. 
-            
             The job will be marked as canceled and the service will stop processing the job. The service will not delete any documents that have already been processed.
-            
             If the job is already complete, this will have no effect. 
             <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
@@ -278,9 +292,7 @@ Console.WriteLine(result.GetProperty("createdAt").ToString());
         <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary>
             Cancels a job that is in progress. 
-            
             The job will be marked as canceled and the service will stop processing the job. The service will not delete any documents that have already been processed.
-            
             If the job is already complete, this will have no effect. 
             </summary>
         <returns>To be added.</returns>

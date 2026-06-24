@@ -13,7 +13,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary>
+            Model factory for read-only models in the Conversations namespace.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -38,7 +40,7 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The Age Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AgeResolution" />. </summary>
+        <summary> Represents the Age entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AgeResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -66,8 +68,120 @@
         <param name="projectName"> The name of the project to use. </param>
         <param name="deploymentName"> The name of the deployment to use. </param>
         <param name="stringIndexType"> Specifies the method used to interpret string offsets.  Defaults to Text Elements (Graphemes) according to Unicode v8.0.0. For additional information see https://aka.ms/text-analytics-offsets. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AIConversationLanguageUnderstandingActionContent" />. </summary>
+        <summary> Input parameters base for a Conversation task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AIConversationLanguageUnderstandingActionContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalysisConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.AnalysisConfig AnalysisConfig (string targetProjectKind = default, string apiVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.AnalysisConfig AnalysisConfig(string targetProjectKind, string apiVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.AnalysisConfig(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AnalysisConfig (Optional targetProjectKind As String = Nothing, Optional apiVersion As String = Nothing) As AnalysisConfig" />
+      <MemberSignature Language="F#" Value="static member AnalysisConfig : string * string -&gt; Azure.AI.Language.Conversations.Models.AnalysisConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.AnalysisConfig (targetProjectKind, apiVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.AnalysisConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetProjectKind" Type="System.String" />
+        <Parameter Name="apiVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetProjectKind"> The type of a target service. </param>
+        <param name="apiVersion"> The API version to use when call a specific target service. </param>
+        <summary>
+            This is the parameter set of either the Orchestration project itself or one of the target services.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.LuisConfig" />, <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig" />, and <see cref="T:Azure.AI.Language.Conversations.Models.ConversationConfig" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalysisConfig" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeConversationActionResult">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.AnalyzeConversationActionResult AnalyzeConversationActionResult (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.AnalyzeConversationActionResult AnalyzeConversationActionResult(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationActionResult(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AnalyzeConversationActionResult (Optional kind As String = Nothing) As AnalyzeConversationActionResult" />
+      <MemberSignature Language="F#" Value="static member AnalyzeConversationActionResult : string -&gt; Azure.AI.Language.Conversations.Models.AnalyzeConversationActionResult" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationActionResult kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.AnalyzeConversationActionResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The base class of a conversation input task result. </param>
+        <summary>
+            The base class of a conversation input task result.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITaskResult" /> and <see cref="T:Azure.AI.Language.Conversations.Models.ConversationActionResult" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationActionResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeConversationInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.AnalyzeConversationInput AnalyzeConversationInput (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.AnalyzeConversationInput AnalyzeConversationInput(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationInput(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AnalyzeConversationInput (Optional kind As String = Nothing) As AnalyzeConversationInput" />
+      <MemberSignature Language="F#" Value="static member AnalyzeConversationInput : string -&gt; Azure.AI.Language.Conversations.Models.AnalyzeConversationInput" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationInput kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.AnalyzeConversationInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The base class of a conversation input task. </param>
+        <summary>
+            The base class of a conversation input task.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITask" /> and <see cref="T:Azure.AI.Language.Conversations.Models.ConversationLanguageUnderstandingInput" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationInput" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeConversationOperationAction">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction AnalyzeConversationOperationAction (string name = default, string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction AnalyzeConversationOperationAction(string name, string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationOperationAction(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AnalyzeConversationOperationAction (Optional name As String = Nothing, Optional kind As String = Nothing) As AnalyzeConversationOperationAction" />
+      <MemberSignature Language="F#" Value="static member AnalyzeConversationOperationAction : string * string -&gt; Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.AnalyzeConversationOperationAction (name, kind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="kind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name"> task name. </param>
+        <param name="kind"> Enumeration of supported analysis tasks on a collection of conversations. </param>
+        <summary>
+            Base class for a long-running conversation input task.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction" />, <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationAction" />, and <see cref="T:Azure.AI.Language.Conversations.Models.PiiOperationAction" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,13 +208,9 @@
       <Docs>
         <param name="displayName"> Display name for the analysis job. </param>
         <param name="conversationInput"> Analysis Input. </param>
-        <param name="actions">
-            Set of tasks to execute on the input conversation.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationAction" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.PiiOperationAction" />, <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationAction" /> and <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction" />.
-            </param>
+        <param name="actions"> Set of tasks to execute on the input conversation. </param>
         <param name="cancelAfter"> Optional duration in seconds after which the job will be canceled if not completed. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput" />. </summary>
+        <summary> It is a wrap up a Question Answering KB response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -130,7 +240,10 @@
         <param name="status"> The status of the task at the mentioned last update time. </param>
         <param name="name"> task name. </param>
         <param name="kind"> discriminator kind. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationResult" />. </summary>
+        <summary>
+            Container for results of all tasks in the conversation job.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationResult" />, and <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiOperationResult" />.
+            </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -172,7 +285,7 @@
         <param name="nextLink"> next link. </param>
         <param name="actions"> Contains the state for the tasks that are being executed as part of the submitted job for analyzing a conversation. </param>
         <param name="statistics"> Contains the statistics for the submitted job. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationState" />. </summary>
+        <summary> Contains the status of the submitted job for analyzing a conversation, along with related statistics. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationState" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,12 +312,8 @@
       <Docs>
         <param name="query"> The conversation utterance given by the caller. </param>
         <param name="detectedLanguage"> The system detected language for the query in BCP 47 language representation.. </param>
-        <param name="prediction">
-            The prediction result of a conversation project.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.PredictionBase" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPrediction" /> and <see cref="T:Azure.AI.Language.Conversations.Models.OrchestrationPrediction" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationResult" />. </summary>
+        <param name="prediction"> The prediction result of a conversation project. </param>
+        <summary> Represents a conversation analysis response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -234,7 +343,7 @@
         <param name="confidenceScore"> Predicted score of answer span, value ranges from 0 to 1. </param>
         <param name="offset"> The answer span offset from the start of answer. </param>
         <param name="length"> The length of the answer span. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnswerSpan" />. </summary>
+        <summary> Answer span object of QnA. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnswerSpan" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,7 +367,7 @@
       </Parameters>
       <Docs>
         <param name="answers"> Represents Answer Result list. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AnswersResult" />. </summary>
+        <summary> Represents List of Question Answers. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AnswersResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,7 +393,7 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The area Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AreaResolution" />. </summary>
+        <summary> Represents the area entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AreaResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -310,8 +419,35 @@
       <Docs>
         <param name="offset"> Offset from the start of speech audio, in ticks. 1 tick = 100 nanoseconds. </param>
         <param name="duration"> Duration of word articulation, in ticks. 1 tick = 100 nanoseconds. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.AudioTiming" />. </summary>
+        <summary> Audio timing information. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.AudioTiming" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseRedactionPolicy">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.BaseRedactionPolicy BaseRedactionPolicy (string policyKind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.BaseRedactionPolicy BaseRedactionPolicy(string policyKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.BaseRedactionPolicy(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BaseRedactionPolicy (Optional policyKind As String = Nothing) As BaseRedactionPolicy" />
+      <MemberSignature Language="F#" Value="static member BaseRedactionPolicy : string -&gt; Azure.AI.Language.Conversations.Models.BaseRedactionPolicy" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.BaseRedactionPolicy policyKind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.BaseRedactionPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policyKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="policyKind"> The entity RedactionPolicy object kind. </param>
+        <summary>
+            The abstract base class for RedactionPolicy.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType" />, <see cref="T:Azure.AI.Language.Conversations.Models.NoMaskPolicyType" />, and <see cref="T:Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.BaseRedactionPolicy" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -334,8 +470,32 @@
       </Parameters>
       <Docs>
         <param name="value"> A resolution for boolean expressions. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.BooleanResolution" />. </summary>
+        <summary> A resolution for boolean expressions. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.BooleanResolution" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterMaskPolicyType">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType CharacterMaskPolicyType (Azure.AI.Language.Conversations.Models.RedactionCharacter? redactionCharacter = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType CharacterMaskPolicyType(valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.RedactionCharacter&gt; redactionCharacter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.CharacterMaskPolicyType(System.Nullable{Azure.AI.Language.Conversations.Models.RedactionCharacter})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CharacterMaskPolicyType (Optional redactionCharacter As Nullable(Of RedactionCharacter) = Nothing) As CharacterMaskPolicyType" />
+      <MemberSignature Language="F#" Value="static member CharacterMaskPolicyType : Nullable&lt;Azure.AI.Language.Conversations.Models.RedactionCharacter&gt; -&gt; Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.CharacterMaskPolicyType redactionCharacter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="redactionCharacter" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.RedactionCharacter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="redactionCharacter"> Optional parameter to use a Custom Character to be used for redaction in PII responses. Default character will be * as before. We allow specific ascii characters for redaction. </param>
+        <summary> Represents the policy of masking with a redaction character. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CharacterMaskPolicyType" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -358,7 +518,7 @@
       </Parameters>
       <Docs>
         <param name="result"> Represents a conversation analysis response. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationActionResult" />. </summary>
+        <summary> The results of a Conversation task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationActionResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -389,12 +549,8 @@
         <param name="failed"> Count of tasks that failed. </param>
         <param name="inProgress"> Count of tasks that are currently in progress. </param>
         <param name="total"> Total count of tasks submitted as part of the job. </param>
-        <param name="items">
-            List of results from tasks (if available).
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.AnalyzeConversationOperationResult" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiOperationResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationResult" /> and <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationResult" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationActions" />. </summary>
+        <param name="items"> List of results from tasks (if available). </param>
+        <summary> Contains the state for the tasks that are being executed as part of the submitted job for analyzing a conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationActions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -422,8 +578,32 @@
         <param name="id"> The ID of the conversation. </param>
         <param name="intents"> The intent classification results for this conversation. </param>
         <param name="entities"> Global entities that are matched but not associated with any specific intent. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIAnalysis" />. </summary>
+        <summary> Multiple multi-turn conversations analyzed. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIAnalysis" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationalAIAnalysisInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationalAIAnalysisInput ConversationalAIAnalysisInput (System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.TextConversation&gt; conversations = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationalAIAnalysisInput ConversationalAIAnalysisInput(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Conversations.Models.TextConversation&gt; conversations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationalAIAnalysisInput(System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.TextConversation})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationalAIAnalysisInput (Optional conversations As IEnumerable(Of TextConversation) = Nothing) As ConversationalAIAnalysisInput" />
+      <MemberSignature Language="F#" Value="static member ConversationalAIAnalysisInput : seq&lt;Azure.AI.Language.Conversations.Models.TextConversation&gt; -&gt; Azure.AI.Language.Conversations.Models.ConversationalAIAnalysisInput" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationalAIAnalysisInput conversations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationalAIAnalysisInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversations" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.TextConversation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="conversations"> List of multiple conversations. </param>
+        <summary> The input ConversationItem and its optional parameters. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIAnalysisInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -460,17 +640,9 @@
         <param name="length"> The length of the detected entity text. </param>
         <param name="conversationItemId"> The ID of the conversation item where the entity appears. </param>
         <param name="conversationItemIndex"> The index of the conversation item where the entity appears. </param>
-        <param name="resolutions">
-            Entity resolution details, if available.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.ResolutionBase" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.AgeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.AreaResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.BooleanResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.CurrencyResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.DateTimeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.InformationResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.LengthResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.NumberResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.NumericRangeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.OrdinalResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.SpeedResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemperatureResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemporalSpanResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.VolumeResolution" /> and <see cref="T:Azure.AI.Language.Conversations.Models.WeightResolution" />.
-            </param>
-        <param name="extraInformation">
-            Additional entity metadata.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.EntitySubtype" />, <see cref="T:Azure.AI.Language.Conversations.Models.ListKey" /> and <see cref="T:Azure.AI.Language.Conversations.Models.RegexKey" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIEntity" />. </summary>
+        <param name="resolutions"> Entity resolution details, if available. </param>
+        <param name="extraInformation"> Additional entity metadata. </param>
+        <summary> The entity associated with this intent. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIEntity" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -500,7 +672,7 @@
         <param name="type"> The type of intent, either "action" or "question". </param>
         <param name="conversationItemRanges"> The ranges of conversation items where this intent was identified. </param>
         <param name="entities"> The entities associated with this intent. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIIntent" />. </summary>
+        <summary> The intent classification result for this conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIIntent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -526,7 +698,7 @@
       <Docs>
         <param name="conversations"> Multiple multi-turn conversations analyzed. </param>
         <param name="warnings"> Any warnings encountered during processing. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIResult" />. </summary>
+        <summary> Represents the conversational analysis response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAIResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -552,7 +724,7 @@
       <Docs>
         <param name="analysisInput"> The input ConversationItem and its optional parameters. </param>
         <param name="parameters"> Input parameters necessary for a Conversation language understanding task. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITask" />. </summary>
+        <summary> A conversational AI task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITask" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -576,7 +748,7 @@
       </Parameters>
       <Docs>
         <param name="result"> Represents the conversational analysis response. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITaskResult" />. </summary>
+        <summary> The results of a ConversationalAI task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalAITaskResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -606,8 +778,86 @@
         <param name="warnings"> Warnings encountered in processing the document. </param>
         <param name="statistics"> If showStats=true was specified in the request this field will contain information about the conversation payload. </param>
         <param name="conversationItems"> List of conversationItems. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalPiiResult" />. </summary>
+        <summary> Conversation PII result item. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationalPiiResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationAnalysisInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationAnalysisInput ConversationAnalysisInput (Azure.AI.Language.Conversations.Models.TextConversationItem conversationItem = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationAnalysisInput ConversationAnalysisInput(class Azure.AI.Language.Conversations.Models.TextConversationItem conversationItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationAnalysisInput(Azure.AI.Language.Conversations.Models.TextConversationItem)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationAnalysisInput (Optional conversationItem As TextConversationItem = Nothing) As ConversationAnalysisInput" />
+      <MemberSignature Language="F#" Value="static member ConversationAnalysisInput : Azure.AI.Language.Conversations.Models.TextConversationItem -&gt; Azure.AI.Language.Conversations.Models.ConversationAnalysisInput" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationAnalysisInput conversationItem" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationAnalysisInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversationItem" Type="Azure.AI.Language.Conversations.Models.TextConversationItem" />
+      </Parameters>
+      <Docs>
+        <param name="conversationItem"> The abstract base for a user input formatted conversation (e.g., Text, Transcript). </param>
+        <summary> The input ConversationItem and its optional parameters. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationAnalysisInput" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationCallingConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationCallingConfig ConversationCallingConfig (string language = default, bool? verbose = default, bool? isLoggingEnabled = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationCallingConfig ConversationCallingConfig(string language, valuetype System.Nullable`1&lt;bool&gt; verbose, valuetype System.Nullable`1&lt;bool&gt; isLoggingEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationCallingConfig(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationCallingConfig (Optional language As String = Nothing, Optional verbose As Nullable(Of Boolean) = Nothing, Optional isLoggingEnabled As Nullable(Of Boolean) = Nothing) As ConversationCallingConfig" />
+      <MemberSignature Language="F#" Value="static member ConversationCallingConfig : string * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; -&gt; Azure.AI.Language.Conversations.Models.ConversationCallingConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationCallingConfig (language, verbose, isLoggingEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationCallingConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="verbose" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="isLoggingEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="language"> The language of the query in BCP 47 language representation. </param>
+        <param name="verbose"> If true, the service will return more detailed information. </param>
+        <param name="isLoggingEnabled"> If true, the query will be saved for customers to further review in authoring, to improve the model quality. </param>
+        <summary> The option to set to call a Conversation project. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationCallingConfig" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationConfig ConversationConfig (string apiVersion = default, Azure.AI.Language.Conversations.Models.ConversationCallingConfig callingOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationConfig ConversationConfig(string apiVersion, class Azure.AI.Language.Conversations.Models.ConversationCallingConfig callingOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationConfig(System.String,Azure.AI.Language.Conversations.Models.ConversationCallingConfig)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationConfig (Optional apiVersion As String = Nothing, Optional callingOptions As ConversationCallingConfig = Nothing) As ConversationConfig" />
+      <MemberSignature Language="F#" Value="static member ConversationConfig : string * Azure.AI.Language.Conversations.Models.ConversationCallingConfig -&gt; Azure.AI.Language.Conversations.Models.ConversationConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationConfig (apiVersion, callingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="apiVersion" Type="System.String" />
+        <Parameter Name="callingOptions" Type="Azure.AI.Language.Conversations.Models.ConversationCallingConfig" />
+      </Parameters>
+      <Docs>
+        <param name="apiVersion"> The API version to use when call a specific target service. </param>
+        <param name="callingOptions"> The option to set to call a Conversation project. </param>
+        <summary> This is a set of request parameters for Customized Conversation projects. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -640,18 +890,37 @@
         <param name="offset"> The starting index of this entity in the query. </param>
         <param name="length"> The length of the text. </param>
         <param name="confidence"> The entity confidence score. </param>
-        <param name="resolutions">
-            The collection of entity resolution objects.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.ResolutionBase" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.AgeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.AreaResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.BooleanResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.CurrencyResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.DateTimeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.InformationResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.LengthResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.NumberResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.NumericRangeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.OrdinalResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.SpeedResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemperatureResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemporalSpanResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.VolumeResolution" /> and <see cref="T:Azure.AI.Language.Conversations.Models.WeightResolution" />.
-            </param>
-        <param name="extraInformation">
-            The collection of entity extra information objects.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.EntitySubtype" />, <see cref="T:Azure.AI.Language.Conversations.Models.ListKey" /> and <see cref="T:Azure.AI.Language.Conversations.Models.RegexKey" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationEntity" />. </summary>
+        <param name="resolutions"> The collection of entity resolution objects. </param>
+        <param name="extraInformation"> The collection of entity extra information objects. </param>
+        <summary> The entity extraction result of a Conversation project. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationEntity" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationEntityExtraInformation">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation ConversationEntityExtraInformation (string extraInformationKind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation ConversationEntityExtraInformation(string extraInformationKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationEntityExtraInformation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationEntityExtraInformation (Optional extraInformationKind As String = Nothing) As ConversationEntityExtraInformation" />
+      <MemberSignature Language="F#" Value="static member ConversationEntityExtraInformation : string -&gt; Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationEntityExtraInformation extraInformationKind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extraInformationKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extraInformationKind"> The extra information object kind. </param>
+        <summary>
+            The abstract base object for entity extra information.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.EntitySubtype" />, <see cref="T:Azure.AI.Language.Conversations.Models.ListKey" />, and <see cref="T:Azure.AI.Language.Conversations.Models.RegexKey" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationEntityExtraInformation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -682,7 +951,7 @@
         <param name="target"> The target of the error. </param>
         <param name="details"> An array of details about specific errors that led to this reported error. </param>
         <param name="innererror"> An object containing more specific information than the current object about the error. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationError" />. </summary>
+        <summary> The error object. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationError" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -712,7 +981,10 @@
         <param name="language"> Language of the conversation item in BCP-47 format. </param>
         <param name="modality"> modality. </param>
         <param name="domain"> domain. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationInput" />. </summary>
+        <summary>
+            Complete ordered set of utterances (spoken or written) by one or more speakers to be used for analysis.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.TextConversation" /> and <see cref="T:Azure.AI.Language.Conversations.Models.TranscriptConversation" />.
+            </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -738,8 +1010,34 @@
       <Docs>
         <param name="category"> A predicted class. </param>
         <param name="confidence"> The confidence score of the class from 0.0 to 1.0. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationIntent" />. </summary>
+        <summary> The intent classification result of a Conversation project. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationIntent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationItemLevelTiming">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationItemLevelTiming ConversationItemLevelTiming (long? offset = default, long? duration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationItemLevelTiming ConversationItemLevelTiming(valuetype System.Nullable`1&lt;int64&gt; offset, valuetype System.Nullable`1&lt;int64&gt; duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationItemLevelTiming(System.Nullable{System.Int64},System.Nullable{System.Int64})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationItemLevelTiming (Optional offset As Nullable(Of Long) = Nothing, Optional duration As Nullable(Of Long) = Nothing) As ConversationItemLevelTiming" />
+      <MemberSignature Language="F#" Value="static member ConversationItemLevelTiming : Nullable&lt;int64&gt; * Nullable&lt;int64&gt; -&gt; Azure.AI.Language.Conversations.Models.ConversationItemLevelTiming" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationItemLevelTiming (offset, duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationItemLevelTiming</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="duration" Type="System.Nullable&lt;System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="offset"> Offset from the start of speech audio, in ticks. 1 tick = 100 nanoseconds. </param>
+        <param name="duration"> Duration of word articulation, in ticks. 1 tick = 100 nanoseconds. </param>
+        <summary> Audio timing at the conversation item level. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationItemLevelTiming" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -764,7 +1062,7 @@
       <Docs>
         <param name="offset"> The starting index of the intent occurrence within the conversation. </param>
         <param name="count"> The number of continuous conversation items for this intent. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationItemRange" />. </summary>
+        <summary> The ranges of conversation items where this intent was identified. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationItemRange" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -799,12 +1097,8 @@
         <param name="isLoggingEnabled"> If true, the service will keep the query for further review. </param>
         <param name="stringIndexType"> Specifies the method used to interpret string offsets.  Defaults to Text Elements (Graphemes) according to Unicode v8.0.0. For additional information see https://aka.ms/text-analytics-offsets. </param>
         <param name="directTarget"> The name of a target project to forward the request to. </param>
-        <param name="targetProjectParameters">
-            A dictionary representing the parameters for each target project.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.AnalysisConfig" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.ConversationConfig" />, <see cref="T:Azure.AI.Language.Conversations.Models.LuisConfig" /> and <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationLanguageUnderstandingActionContent" />. </summary>
+        <param name="targetProjectParameters"> A dictionary representing the parameters for each target project. </param>
+        <summary> Input parameters necessary for a Conversation task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationLanguageUnderstandingActionContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -830,8 +1124,46 @@
       <Docs>
         <param name="conversationInput"> The input ConversationItem and its optional parameters. </param>
         <param name="actionContent"> Input parameters necessary for a Conversation language understanding task. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationLanguageUnderstandingInput" />. </summary>
+        <summary> The input for a conversation language understanding task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationLanguageUnderstandingInput" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationPiiActionContent">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationPiiActionContent ConversationPiiActionContent (bool? loggingOptOut = default, string modelVersion = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategories&gt; piiCategories = default, bool? redactAudioTiming = default, Azure.AI.Language.Conversations.Models.TranscriptContentType? redactionSource = default, Azure.AI.Language.Conversations.Models.RedactionCharacter? redactionCharacter = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategoryExclusions&gt; excludePiiCategories = default, Azure.AI.Language.Conversations.Models.BaseRedactionPolicy redactionPolicy = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationPiiActionContent ConversationPiiActionContent(valuetype System.Nullable`1&lt;bool&gt; loggingOptOut, string modelVersion, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Language.Conversations.Models.ConversationPiiCategories&gt; piiCategories, valuetype System.Nullable`1&lt;bool&gt; redactAudioTiming, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.TranscriptContentType&gt; redactionSource, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.RedactionCharacter&gt; redactionCharacter, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Language.Conversations.Models.ConversationPiiCategoryExclusions&gt; excludePiiCategories, class Azure.AI.Language.Conversations.Models.BaseRedactionPolicy redactionPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationPiiActionContent(System.Nullable{System.Boolean},System.String,System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.ConversationPiiCategories},System.Nullable{System.Boolean},System.Nullable{Azure.AI.Language.Conversations.Models.TranscriptContentType},System.Nullable{Azure.AI.Language.Conversations.Models.RedactionCharacter},System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.ConversationPiiCategoryExclusions},Azure.AI.Language.Conversations.Models.BaseRedactionPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationPiiActionContent (Optional loggingOptOut As Nullable(Of Boolean) = Nothing, Optional modelVersion As String = Nothing, Optional piiCategories As IEnumerable(Of ConversationPiiCategories) = Nothing, Optional redactAudioTiming As Nullable(Of Boolean) = Nothing, Optional redactionSource As Nullable(Of TranscriptContentType) = Nothing, Optional redactionCharacter As Nullable(Of RedactionCharacter) = Nothing, Optional excludePiiCategories As IEnumerable(Of ConversationPiiCategoryExclusions) = Nothing, Optional redactionPolicy As BaseRedactionPolicy = Nothing) As ConversationPiiActionContent" />
+      <MemberSignature Language="F#" Value="static member ConversationPiiActionContent : Nullable&lt;bool&gt; * string * seq&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategories&gt; * Nullable&lt;bool&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.TranscriptContentType&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.RedactionCharacter&gt; * seq&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategoryExclusions&gt; * Azure.AI.Language.Conversations.Models.BaseRedactionPolicy -&gt; Azure.AI.Language.Conversations.Models.ConversationPiiActionContent" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationPiiActionContent (loggingOptOut, modelVersion, piiCategories, redactAudioTiming, redactionSource, redactionCharacter, excludePiiCategories, redactionPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationPiiActionContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggingOptOut" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="modelVersion" Type="System.String" />
+        <Parameter Name="piiCategories" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategories&gt;" />
+        <Parameter Name="redactAudioTiming" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="redactionSource" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.TranscriptContentType&gt;" />
+        <Parameter Name="redactionCharacter" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.RedactionCharacter&gt;" />
+        <Parameter Name="excludePiiCategories" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationPiiCategoryExclusions&gt;" />
+        <Parameter Name="redactionPolicy" Type="Azure.AI.Language.Conversations.Models.BaseRedactionPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="loggingOptOut"> logging opt out. </param>
+        <param name="modelVersion"> model version. </param>
+        <param name="piiCategories"> Array of ConversationPIICategories. </param>
+        <param name="redactAudioTiming"> Flag to indicate if response should include audio stream offset and duration for any detected entities to be redacted. By default, audio timing of redacted entities are not included. </param>
+        <param name="redactionSource"> For transcript conversations, this parameter provides information regarding which content type (ITN, Text, Lexical, Masked ITN) should be used for entity detection. The details of the entities detected - like the offset, length and the text itself - will correspond to the text type selected here. </param>
+        <param name="redactionCharacter"> Optional parameter to use a Custom Character to be used for redaction in PII responses. Default character will be * as before. We allow specific ascii characters for redaction. </param>
+        <param name="excludePiiCategories"> List of categories that need to be excluded instead of included. </param>
+        <param name="redactionPolicy"> Optional parameter determine what type of redaction to use. </param>
+        <summary> Supported parameters for a conversational pii task. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiActionContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -858,7 +1190,7 @@
         <param name="id"> Id of the result. </param>
         <param name="redactedContent"> Transcript content response that the service generates, with all necessary personally identifiable information redacted. </param>
         <param name="entities"> Array of Entities. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiItemResult" />. </summary>
+        <summary> The result from PII detection and redaction operation for each conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiItemResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -888,7 +1220,7 @@
         <param name="status"> The status of the task at the mentioned last update time. </param>
         <param name="name"> task name. </param>
         <param name="results"> results. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiOperationResult" />. </summary>
+        <summary> Result from the personally identifiable information detection and redaction operation performed on a list of conversations. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiOperationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -918,7 +1250,7 @@
         <param name="statistics"> statistics. </param>
         <param name="modelVersion"> This field indicates which model is used for scoring. </param>
         <param name="conversations"> array of conversations. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiResults" />. </summary>
+        <summary> The result from PII detection and redaction operation for each conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPiiResults" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -946,7 +1278,7 @@
         <param name="topIntent"> The intent with the highest score. </param>
         <param name="intents"> The intent classification results. </param>
         <param name="entities"> The entity extraction results. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPrediction" />. </summary>
+        <summary> Represents the prediction section of a Conversation project. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPrediction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -982,7 +1314,7 @@
         <param name="conversationsCount"> Number of conversations submitted in the request. </param>
         <param name="validConversationsCount"> Number of conversation documents. This excludes documents that are empty, over the size limit, or in unsupported languages. </param>
         <param name="erroneousConversationsCount"> Number of invalid documents. This includes documents that are empty, over the size limit, or in unsupported languages. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationRequestStatistics" />. </summary>
+        <summary> if showStats=true was specified in the request, this field contains information about the request payload. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationRequestStatistics" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1010,7 +1342,7 @@
         <param name="query"> The same query given in request. </param>
         <param name="detectedLanguage"> The detected language from the query in BCP 47 language representation. </param>
         <param name="prediction"> The predicted result for the query. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationResult" />. </summary>
+        <summary> The response returned by a Conversation project. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1040,7 +1372,7 @@
         <param name="warnings"> Warnings encountered in processing the document. </param>
         <param name="statistics"> If showStats=true was specified in the request this field will contain information about the conversation payload. </param>
         <param name="summaries"> array of summaries. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationsSummaryResult" />. </summary>
+        <summary> Conversations Summary Result. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationsSummaryResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1064,8 +1396,44 @@
       </Parameters>
       <Docs>
         <param name="transactionsCount"> Number of text units for the request. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationStatistics" />. </summary>
+        <summary> If showStats=true was specified in the request, this field contains information about the conversation payload. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationStatistics" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationSummarizationActionContent">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent ConversationSummarizationActionContent (bool? loggingOptOut = default, string modelVersion = default, int? sentenceCount = default, Azure.AI.Language.Conversations.Models.StringIndexType? stringIndexType = default, Azure.AI.Language.Conversations.Models.SummaryLengthBucket? summaryLength = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.SummaryAspect&gt; summaryAspects = default, string instruction = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent ConversationSummarizationActionContent(valuetype System.Nullable`1&lt;bool&gt; loggingOptOut, string modelVersion, valuetype System.Nullable`1&lt;int32&gt; sentenceCount, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.StringIndexType&gt; stringIndexType, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.SummaryLengthBucket&gt; summaryLength, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Language.Conversations.Models.SummaryAspect&gt; summaryAspects, string instruction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationSummarizationActionContent(System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Nullable{Azure.AI.Language.Conversations.Models.StringIndexType},System.Nullable{Azure.AI.Language.Conversations.Models.SummaryLengthBucket},System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.SummaryAspect},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConversationSummarizationActionContent (Optional loggingOptOut As Nullable(Of Boolean) = Nothing, Optional modelVersion As String = Nothing, Optional sentenceCount As Nullable(Of Integer) = Nothing, Optional stringIndexType As Nullable(Of StringIndexType) = Nothing, Optional summaryLength As Nullable(Of SummaryLengthBucket) = Nothing, Optional summaryAspects As IEnumerable(Of SummaryAspect) = Nothing, Optional instruction As String = Nothing) As ConversationSummarizationActionContent" />
+      <MemberSignature Language="F#" Value="static member ConversationSummarizationActionContent : Nullable&lt;bool&gt; * string * Nullable&lt;int&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.StringIndexType&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.SummaryLengthBucket&gt; * seq&lt;Azure.AI.Language.Conversations.Models.SummaryAspect&gt; * string -&gt; Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ConversationSummarizationActionContent (loggingOptOut, modelVersion, sentenceCount, stringIndexType, summaryLength, summaryAspects, instruction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggingOptOut" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="modelVersion" Type="System.String" />
+        <Parameter Name="sentenceCount" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="stringIndexType" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.StringIndexType&gt;" />
+        <Parameter Name="summaryLength" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.SummaryLengthBucket&gt;" />
+        <Parameter Name="summaryAspects" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.SummaryAspect&gt;" />
+        <Parameter Name="instruction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="loggingOptOut"> logging opt out. </param>
+        <param name="modelVersion"> model version. </param>
+        <param name="sentenceCount"> It controls the approximate number of sentences in the output summaries. </param>
+        <param name="stringIndexType"> String index type. </param>
+        <param name="summaryLength"> (NOTE: Recommended to use summaryLength over sentenceCount) Controls the approximate length of the output summaries. </param>
+        <param name="summaryAspects"> Array of Summary Aspects. </param>
+        <param name="instruction"> a text field to allow customers to use natural language to describe their needs for summarization. </param>
+        <summary> Supported parameters for pre-build conversational summarization task. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1092,7 +1460,7 @@
         <param name="apiVersion"> The API version used to call a target service. </param>
         <param name="confidence"> The prediction score and it ranges from 0.0 to 1.0. </param>
         <param name="result"> The actual response from a Conversation project. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ConversationTargetIntentResult" />. </summary>
+        <summary> A wrap up of Conversation project response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ConversationTargetIntentResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1120,7 +1488,7 @@
         <param name="iso4217"> The alphabetic code based on another ISO standard, ISO 3166, which lists the codes for country names. The first two letters of the ISO 4217 three-letter code are the same as the code for the country name, and, where possible, the third letter corresponds to the first letter of the currency name. </param>
         <param name="value"> The money amount captured in the extracted entity. </param>
         <param name="unit"> The unit of the amount captured in the extracted entity. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.CurrencyResolution" />. </summary>
+        <summary> Represents the currency entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CurrencyResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1156,8 +1524,34 @@
         <param name="stringIndexType"> String index type. </param>
         <param name="summaryLength"> Controls the approximate length of the output summaries. Recommended to use summaryLength over sentenceCount. </param>
         <param name="summaryAspects"> Array of Summary Aspects. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent" />. </summary>
+        <summary> Supported parameters for a custom conversation summarization task. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomSummarizationOperationAction">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction CustomSummarizationOperationAction (string name = default, Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent actionContent = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction CustomSummarizationOperationAction(string name, class Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent actionContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.CustomSummarizationOperationAction(System.String,Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CustomSummarizationOperationAction (Optional name As String = Nothing, Optional actionContent As CustomConversationSummarizationActionContent = Nothing) As CustomSummarizationOperationAction" />
+      <MemberSignature Language="F#" Value="static member CustomSummarizationOperationAction : string * Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent -&gt; Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.CustomSummarizationOperationAction (name, actionContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="actionContent" Type="Azure.AI.Language.Conversations.Models.CustomConversationSummarizationActionContent" />
+      </Parameters>
+      <Docs>
+        <param name="name"> task name. </param>
+        <param name="actionContent"> parameters. </param>
+        <summary> Task definition for custom conversational summarization. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1186,7 +1580,7 @@
         <param name="status"> The status of the task at the mentioned last update time. </param>
         <param name="name"> task name. </param>
         <param name="results"> Custom Summary Result. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationResult" />. </summary>
+        <summary> Result for the custom summarization task on the conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummarizationOperationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1218,7 +1612,7 @@
         <param name="statistics"> if showStats=true was specified in the request this field will contain information about the request payload. </param>
         <param name="projectName"> This field indicates the project name for the model. </param>
         <param name="deploymentName"> This field indicates the deployment name for the model. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummaryResult" />. </summary>
+        <summary> Custom Summary Results. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.CustomSummaryResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1248,7 +1642,7 @@
         <param name="dateTimeSubKind"> The DateTime SubKind. </param>
         <param name="value"> The actual time that the extracted text denote. </param>
         <param name="modifier"> An optional modifier of a date/time instance. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.DateTimeResolution" />. </summary>
+        <summary> A resolution for datetime entity instances. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.DateTimeResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1274,8 +1668,29 @@
       <Docs>
         <param name="id"> The ID of the input document. </param>
         <param name="error"> Error encountered. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.DocumentError" />. </summary>
+        <summary> Contains details of errors encountered during a job execution. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.DocumentError" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityMaskTypePolicyType">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType EntityMaskTypePolicyType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType EntityMaskTypePolicyType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.EntityMaskTypePolicyType" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EntityMaskTypePolicyType () As EntityMaskTypePolicyType" />
+      <MemberSignature Language="F#" Value="static member EntityMaskTypePolicyType : unit -&gt; Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.EntityMaskTypePolicyType " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Represents the policy of masking PII with the entity type. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.EntityMaskTypePolicyType" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1300,7 +1715,7 @@
       <Docs>
         <param name="value"> The Subtype of an extracted entity type. </param>
         <param name="tags"> List of entity tags. Tags express similarities between entity categories for the extracted entity type. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.EntitySubtype" />. </summary>
+        <summary> The concrete entity Subtype model of extra information. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.EntitySubtype" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1326,7 +1741,7 @@
       <Docs>
         <param name="name"> The name of the tag. </param>
         <param name="confidenceScore"> The confidence score of the tag for the extracted entity between 0.0 and 1.0. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.EntityTag" />. </summary>
+        <summary> Tags express similarities between entity categories for the extracted entity type. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.EntityTag" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1352,17 +1767,17 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The information (data) Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.InformationResolution" />. </summary>
+        <summary> Represents the information (data) entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.InformationResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="InnerErrorModel">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.InnerErrorModel InnerErrorModel (Azure.AI.Language.Conversations.Models.InnerErrorCode code = default, string message = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; details = default, string target = default, Azure.AI.Language.Conversations.Models.InnerErrorModel innererror = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.InnerErrorModel InnerErrorModel(valuetype Azure.AI.Language.Conversations.Models.InnerErrorCode code, string message, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; details, string target, class Azure.AI.Language.Conversations.Models.InnerErrorModel innererror) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.InnerErrorModel(Azure.AI.Language.Conversations.Models.InnerErrorCode,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.String,Azure.AI.Language.Conversations.Models.InnerErrorModel)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function InnerErrorModel (Optional code As InnerErrorCode = Nothing, Optional message As String = Nothing, Optional details As IReadOnlyDictionary(Of String, String) = Nothing, Optional target As String = Nothing, Optional innererror As InnerErrorModel = Nothing) As InnerErrorModel" />
-      <MemberSignature Language="F#" Value="static member InnerErrorModel : Azure.AI.Language.Conversations.Models.InnerErrorCode * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * string * Azure.AI.Language.Conversations.Models.InnerErrorModel -&gt; Azure.AI.Language.Conversations.Models.InnerErrorModel" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.InnerErrorModel (code, message, details, target, innererror)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.InnerErrorModel InnerErrorModel (Azure.AI.Language.Conversations.Models.InnerErrorCode code = default, string message = default, System.Collections.Generic.IDictionary&lt;string,string&gt; details = default, string target = default, Azure.AI.Language.Conversations.Models.InnerErrorModel innererror = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.InnerErrorModel InnerErrorModel(valuetype Azure.AI.Language.Conversations.Models.InnerErrorCode code, string message, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; details, string target, class Azure.AI.Language.Conversations.Models.InnerErrorModel innererror) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.InnerErrorModel(Azure.AI.Language.Conversations.Models.InnerErrorCode,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Azure.AI.Language.Conversations.Models.InnerErrorModel)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function InnerErrorModel (Optional code As InnerErrorCode = Nothing, Optional message As String = Nothing, Optional details As IDictionary(Of String, String) = Nothing, Optional target As String = Nothing, Optional innererror As InnerErrorModel = Nothing) As InnerErrorModel" />
+      <MemberSignature Language="F#" Value="static member InnerErrorModel : Azure.AI.Language.Conversations.Models.InnerErrorCode * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Azure.AI.Language.Conversations.Models.InnerErrorModel -&gt; Azure.AI.Language.Conversations.Models.InnerErrorModel" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.InnerErrorModel (code, message, details, target, innererror)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
@@ -1374,7 +1789,7 @@
       <Parameters>
         <Parameter Name="code" Type="Azure.AI.Language.Conversations.Models.InnerErrorCode" />
         <Parameter Name="message" Type="System.String" />
-        <Parameter Name="details" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="details" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="target" Type="System.String" />
         <Parameter Name="innererror" Type="Azure.AI.Language.Conversations.Models.InnerErrorModel" />
       </Parameters>
@@ -1384,7 +1799,7 @@
         <param name="details"> Error details. </param>
         <param name="target"> Error target. </param>
         <param name="innererror"> An object containing more specific information than the current object about the error. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.InnerErrorModel" />. </summary>
+        <summary> An object containing more specific information about the error. As per Microsoft One API guidelines - https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md#7102-error-condition-responses. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.InnerErrorModel" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1412,7 +1827,7 @@
         <param name="code"> Warning code. </param>
         <param name="message"> Warning message. </param>
         <param name="targetRef"> A JSON pointer reference indicating the target object. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.InputWarning" />. </summary>
+        <summary> Contains details of warnings encountered during a job execution. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.InputWarning" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1440,17 +1855,17 @@
         <param name="offset"> Start position for the context. Use of different 'stringIndexType' values can affect the offset returned. </param>
         <param name="length"> The length of the context. Use of different 'stringIndexType' values can affect the length returned. </param>
         <param name="conversationItemId"> Reference to the ID of ConversationItem. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ItemizedSummaryContext" />. </summary>
+        <summary> Context of the summary with a conversation item ID. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ItemizedSummaryContext" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="KnowledgeBaseAnswer">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer KnowledgeBaseAnswer (System.Collections.Generic.IEnumerable&lt;string&gt; questions = default, string answer = default, double? confidence = default, int? qnaId = default, string source = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog dialog = default, Azure.AI.Language.Conversations.Models.AnswerSpan shortAnswer = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer KnowledgeBaseAnswer(class System.Collections.Generic.IEnumerable`1&lt;string&gt; questions, string answer, valuetype System.Nullable`1&lt;float64&gt; confidence, valuetype System.Nullable`1&lt;int32&gt; qnaId, string source, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, class Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog dialog, class Azure.AI.Language.Conversations.Models.AnswerSpan shortAnswer) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.KnowledgeBaseAnswer(System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.Double},System.Nullable{System.Int32},System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog,Azure.AI.Language.Conversations.Models.AnswerSpan)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswer (Optional questions As IEnumerable(Of String) = Nothing, Optional answer As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional qnaId As Nullable(Of Integer) = Nothing, Optional source As String = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional dialog As KnowledgeBaseAnswerDialog = Nothing, Optional shortAnswer As AnswerSpan = Nothing) As KnowledgeBaseAnswer" />
-      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswer : seq&lt;string&gt; * string * Nullable&lt;double&gt; * Nullable&lt;int&gt; * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog * Azure.AI.Language.Conversations.Models.AnswerSpan -&gt; Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.KnowledgeBaseAnswer (questions, answer, confidence, qnaId, source, metadata, dialog, shortAnswer)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer KnowledgeBaseAnswer (System.Collections.Generic.IEnumerable&lt;string&gt; questions = default, string answer = default, double? confidence = default, int? qnaId = default, string source = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog dialog = default, Azure.AI.Language.Conversations.Models.AnswerSpan shortAnswer = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer KnowledgeBaseAnswer(class System.Collections.Generic.IEnumerable`1&lt;string&gt; questions, string answer, valuetype System.Nullable`1&lt;float64&gt; confidence, valuetype System.Nullable`1&lt;int32&gt; qnaId, string source, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, class Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog dialog, class Azure.AI.Language.Conversations.Models.AnswerSpan shortAnswer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.KnowledgeBaseAnswer(System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.Double},System.Nullable{System.Int32},System.String,System.Collections.Generic.IDictionary{System.String,System.String},Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog,Azure.AI.Language.Conversations.Models.AnswerSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswer (Optional questions As IEnumerable(Of String) = Nothing, Optional answer As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional qnaId As Nullable(Of Integer) = Nothing, Optional source As String = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional dialog As KnowledgeBaseAnswerDialog = Nothing, Optional shortAnswer As AnswerSpan = Nothing) As KnowledgeBaseAnswer" />
+      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswer : seq&lt;string&gt; * string * Nullable&lt;double&gt; * Nullable&lt;int&gt; * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog * Azure.AI.Language.Conversations.Models.AnswerSpan -&gt; Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.KnowledgeBaseAnswer (questions, answer, confidence, qnaId, source, metadata, dialog, shortAnswer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
@@ -1465,7 +1880,7 @@
         <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" />
         <Parameter Name="qnaId" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="source" Type="System.String" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="dialog" Type="Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog" />
         <Parameter Name="shortAnswer" Type="Azure.AI.Language.Conversations.Models.AnswerSpan" />
       </Parameters>
@@ -1478,7 +1893,7 @@
         <param name="metadata"> Metadata associated with the answer, useful to categorize or filter question answers. </param>
         <param name="dialog"> Dialog associated with Answer. </param>
         <param name="shortAnswer"> Answer span object of QnA with respect to user's question. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer" />. </summary>
+        <summary> Represents knowledge base answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswer" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1504,7 +1919,7 @@
       <Docs>
         <param name="previousQnaId"> Previous turn top answer result QnA ID. </param>
         <param name="previousQuestion"> Previous user query. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext" />. </summary>
+        <summary> Context object with previous QnA's information. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1530,7 +1945,7 @@
       <Docs>
         <param name="isContextOnly"> To mark if a prompt is relevant only with a previous question or not. If true, do not include this QnA as search result for queries without context; otherwise, if false, ignores context and includes this QnA in search result. </param>
         <param name="prompts"> List of prompts associated with the answer. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog" />. </summary>
+        <summary> Dialog associated with Answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerDialog" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1558,7 +1973,7 @@
         <param name="displayOrder"> Index of the prompt - used in ordering of the prompts. </param>
         <param name="qnaId"> QnA ID corresponding to the prompt. </param>
         <param name="displayText"> Text displayed to represent a follow up question prompt. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerPrompt" />. </summary>
+        <summary> Prompt for an answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerPrompt" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1584,7 +1999,7 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The length Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.LengthResolution" />. </summary>
+        <summary> Represents the length entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.LengthResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1608,8 +2023,70 @@
       </Parameters>
       <Docs>
         <param name="key"> The canonical form of the extracted entity. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.ListKey" />. </summary>
+        <summary> The list key extra data kind. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ListKey" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LuisCallingConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.LuisCallingConfig LuisCallingConfig (bool? verbose = default, bool? log = default, bool? showAllIntents = default, int? timezoneOffset = default, bool? spellCheck = default, string bingSpellCheckSubscriptionKey = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.LuisCallingConfig LuisCallingConfig(valuetype System.Nullable`1&lt;bool&gt; verbose, valuetype System.Nullable`1&lt;bool&gt; log, valuetype System.Nullable`1&lt;bool&gt; showAllIntents, valuetype System.Nullable`1&lt;int32&gt; timezoneOffset, valuetype System.Nullable`1&lt;bool&gt; spellCheck, string bingSpellCheckSubscriptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.LuisCallingConfig(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LuisCallingConfig (Optional verbose As Nullable(Of Boolean) = Nothing, Optional log As Nullable(Of Boolean) = Nothing, Optional showAllIntents As Nullable(Of Boolean) = Nothing, Optional timezoneOffset As Nullable(Of Integer) = Nothing, Optional spellCheck As Nullable(Of Boolean) = Nothing, Optional bingSpellCheckSubscriptionKey As String = Nothing) As LuisCallingConfig" />
+      <MemberSignature Language="F#" Value="static member LuisCallingConfig : Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;bool&gt; * string -&gt; Azure.AI.Language.Conversations.Models.LuisCallingConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.LuisCallingConfig (verbose, log, showAllIntents, timezoneOffset, spellCheck, bingSpellCheckSubscriptionKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.LuisCallingConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbose" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="log" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="showAllIntents" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="timezoneOffset" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="spellCheck" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="bingSpellCheckSubscriptionKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="verbose"> Enable verbose response. </param>
+        <param name="log"> Save log to add in training utterances later. </param>
+        <param name="showAllIntents"> Set true to show all intents. </param>
+        <param name="timezoneOffset"> The timezone offset for the location of the request. </param>
+        <param name="spellCheck"> Enable spell checking. </param>
+        <param name="bingSpellCheckSubscriptionKey"> The subscription key to use when enabling Bing spell check. </param>
+        <summary> This customizes how the service calls LUIS Generally Available projects. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.LuisCallingConfig" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LuisConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.LuisConfig LuisConfig (string apiVersion = default, string query = default, Azure.AI.Language.Conversations.Models.LuisCallingConfig callingOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.LuisConfig LuisConfig(string apiVersion, string query, class Azure.AI.Language.Conversations.Models.LuisCallingConfig callingOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.LuisConfig(System.String,System.String,Azure.AI.Language.Conversations.Models.LuisCallingConfig)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LuisConfig (Optional apiVersion As String = Nothing, Optional query As String = Nothing, Optional callingOptions As LuisCallingConfig = Nothing) As LuisConfig" />
+      <MemberSignature Language="F#" Value="static member LuisConfig : string * string * Azure.AI.Language.Conversations.Models.LuisCallingConfig -&gt; Azure.AI.Language.Conversations.Models.LuisConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.LuisConfig (apiVersion, query, callingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.LuisConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="apiVersion" Type="System.String" />
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="callingOptions" Type="Azure.AI.Language.Conversations.Models.LuisCallingConfig" />
+      </Parameters>
+      <Docs>
+        <param name="apiVersion"> The API version to use when call a specific target service. </param>
+        <param name="query"> The utterance to predict. </param>
+        <param name="callingOptions"> This customizes how the service calls LUIS Generally Available projects. </param>
+        <summary> This is a set of request parameters for LUIS Generally Available projects. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.LuisConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1631,8 +2108,8 @@
         <Parameter Name="additionalProperties" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.BinaryData&gt;" />
       </Parameters>
       <Docs>
-        <param name="additionalProperties"> Additional Properties. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.LuisResult" />. </summary>
+        <param name="additionalProperties" />
+        <summary> It is the response from a LUIS Generally Available application. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.LuisResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1660,8 +2137,84 @@
         <param name="apiVersion"> The API version used to call a target service. </param>
         <param name="confidence"> The prediction score and it ranges from 0.0 to 1.0. </param>
         <param name="result"> The actual response from a LUIS Generally Available application. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.LuisTargetIntentResult" />. </summary>
+        <summary> It is a wrap up of LUIS Generally Available response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.LuisTargetIntentResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataFilter">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.MetadataFilter MetadataFilter (System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.MetadataRecord&gt; metadata = default, Azure.AI.Language.Conversations.Models.LogicalOperationKind? logicalOperation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.MetadataFilter MetadataFilter(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Conversations.Models.MetadataRecord&gt; metadata, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt; logicalOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.MetadataFilter(System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.MetadataRecord},System.Nullable{Azure.AI.Language.Conversations.Models.LogicalOperationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MetadataFilter (Optional metadata As IEnumerable(Of MetadataRecord) = Nothing, Optional logicalOperation As Nullable(Of LogicalOperationKind) = Nothing) As MetadataFilter" />
+      <MemberSignature Language="F#" Value="static member MetadataFilter : seq&lt;Azure.AI.Language.Conversations.Models.MetadataRecord&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt; -&gt; Azure.AI.Language.Conversations.Models.MetadataFilter" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.MetadataFilter (metadata, logicalOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.MetadataFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.MetadataRecord&gt;" />
+        <Parameter Name="logicalOperation" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadata"> List of metadata. </param>
+        <param name="logicalOperation"> Operation used to join metadata filters. </param>
+        <summary> Find QnAs that are associated with the given list of metadata. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.MetadataFilter" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataRecord">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.MetadataRecord MetadataRecord (string key = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.MetadataRecord MetadataRecord(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.MetadataRecord(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MetadataRecord (Optional key As String = Nothing, Optional value As String = Nothing) As MetadataRecord" />
+      <MemberSignature Language="F#" Value="static member MetadataRecord : string * string -&gt; Azure.AI.Language.Conversations.Models.MetadataRecord" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.MetadataRecord (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.MetadataRecord</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key"> Metadata Key from Metadata dictionary used in the QnA. </param>
+        <param name="value"> Metadata Value from Metadata dictionary used in the QnA. </param>
+        <summary> Object to provide the key value pair for each metadata. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.MetadataRecord" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiLanguageConversationInput">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.MultiLanguageConversationInput MultiLanguageConversationInput (System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationInput&gt; conversations = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.MultiLanguageConversationInput MultiLanguageConversationInput(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Conversations.Models.ConversationInput&gt; conversations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.MultiLanguageConversationInput(System.Collections.Generic.IEnumerable{Azure.AI.Language.Conversations.Models.ConversationInput})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MultiLanguageConversationInput (Optional conversations As IEnumerable(Of ConversationInput) = Nothing) As MultiLanguageConversationInput" />
+      <MemberSignature Language="F#" Value="static member MultiLanguageConversationInput : seq&lt;Azure.AI.Language.Conversations.Models.ConversationInput&gt; -&gt; Azure.AI.Language.Conversations.Models.MultiLanguageConversationInput" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.MultiLanguageConversationInput conversations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.MultiLanguageConversationInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversations" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Conversations.Models.ConversationInput&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="conversations"> Array of conversation items. </param>
+        <summary> Multi Language Conversation Analysis Input. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.MultiLanguageConversationInput" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1700,8 +2253,29 @@
         <param name="mask"> Exact mask text to mask the PII entity. </param>
         <param name="maskOffset"> Offset of the mask text. </param>
         <param name="maskLength"> Length of the mask text. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.NamedEntity" />. </summary>
+        <summary> Text that has been categorized into pre-defined classes or types such as: person, location, event, product, and organization. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.NamedEntity" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMaskPolicyType">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.NoMaskPolicyType NoMaskPolicyType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.NoMaskPolicyType NoMaskPolicyType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.NoMaskPolicyType" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NoMaskPolicyType () As NoMaskPolicyType" />
+      <MemberSignature Language="F#" Value="static member NoMaskPolicyType : unit -&gt; Azure.AI.Language.Conversations.Models.NoMaskPolicyType" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.NoMaskPolicyType " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.NoMaskPolicyType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Represents the policy of not masking found PII. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.NoMaskPolicyType" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1728,7 +2302,7 @@
         <param name="apiVersion"> The API version used to call a target service. </param>
         <param name="confidence"> The prediction score and it ranges from 0.0 to 1.0. </param>
         <param name="result"> The actual response from a Conversation project. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.NoneLinkedTargetIntentResult" />. </summary>
+        <summary> A wrap up of non-linked intent response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.NoneLinkedTargetIntentResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1754,7 +2328,7 @@
       <Docs>
         <param name="numberKind"> The type of the extracted number entity. </param>
         <param name="value"> A numeric representation of what the extracted text denotes. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.NumberResolution" />. </summary>
+        <summary> A resolution for numeric entity instances. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.NumberResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1782,17 +2356,17 @@
         <param name="rangeKind"> The kind of range that the resolution object represents. </param>
         <param name="minimum"> The beginning value of  the interval. </param>
         <param name="maximum"> The ending value of the interval. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.NumericRangeResolution" />. </summary>
+        <summary> represents the resolution of numeric intervals. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.NumericRangeResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="OrchestrationPrediction">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.OrchestrationPrediction OrchestrationPrediction (string topIntent = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; intents = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.OrchestrationPrediction OrchestrationPrediction(string topIntent, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; intents) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.OrchestrationPrediction(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,Azure.AI.Language.Conversations.Models.TargetIntentResult})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function OrchestrationPrediction (Optional topIntent As String = Nothing, Optional intents As IReadOnlyDictionary(Of String, TargetIntentResult) = Nothing) As OrchestrationPrediction" />
-      <MemberSignature Language="F#" Value="static member OrchestrationPrediction : string * System.Collections.Generic.IReadOnlyDictionary&lt;string, Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; -&gt; Azure.AI.Language.Conversations.Models.OrchestrationPrediction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.OrchestrationPrediction (topIntent, intents)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.OrchestrationPrediction OrchestrationPrediction (string topIntent = default, System.Collections.Generic.IDictionary&lt;string,Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; intents = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.OrchestrationPrediction OrchestrationPrediction(string topIntent, class System.Collections.Generic.IDictionary`2&lt;string, class Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; intents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.OrchestrationPrediction(System.String,System.Collections.Generic.IDictionary{System.String,Azure.AI.Language.Conversations.Models.TargetIntentResult})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OrchestrationPrediction (Optional topIntent As String = Nothing, Optional intents As IDictionary(Of String, TargetIntentResult) = Nothing) As OrchestrationPrediction" />
+      <MemberSignature Language="F#" Value="static member OrchestrationPrediction : string * System.Collections.Generic.IDictionary&lt;string, Azure.AI.Language.Conversations.Models.TargetIntentResult&gt; -&gt; Azure.AI.Language.Conversations.Models.OrchestrationPrediction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.OrchestrationPrediction (topIntent, intents)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
@@ -1803,16 +2377,12 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="topIntent" Type="System.String" />
-        <Parameter Name="intents" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Azure.AI.Language.Conversations.Models.TargetIntentResult&gt;" />
+        <Parameter Name="intents" Type="System.Collections.Generic.IDictionary&lt;System.String,Azure.AI.Language.Conversations.Models.TargetIntentResult&gt;" />
       </Parameters>
       <Docs>
         <param name="topIntent"> The intent with the highest score. </param>
-        <param name="intents">
-            A dictionary that contains all intents. A key is an intent name and a value is its confidence score and target type. The top intent's value also contains the actual response from the target project.
-            Please note <see cref="T:Azure.AI.Language.Conversations.Models.TargetIntentResult" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.AI.Language.Conversations.Models.ConversationTargetIntentResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.LuisTargetIntentResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.NoneLinkedTargetIntentResult" /> and <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringTargetIntentResult" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.OrchestrationPrediction" />. </summary>
+        <param name="intents"> A dictionary that contains all intents. A key is an intent name and a value is its confidence score and target type. The top intent's value also contains the actual response from the target project. </param>
+        <summary> This represents the prediction result of an Orchestration project. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.OrchestrationPrediction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1840,8 +2410,34 @@
         <param name="offset"> The offset with respect to the reference (e.g., offset = -1 indicates the second to last). </param>
         <param name="relativeTo"> The reference point that the ordinal number denotes. </param>
         <param name="value"> A simple arithmetic expression that the ordinal denotes. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.OrdinalResolution" />. </summary>
+        <summary> A resolution for ordinal numbers entity instances. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.OrdinalResolution" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PiiOperationAction">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.PiiOperationAction PiiOperationAction (string name = default, Azure.AI.Language.Conversations.Models.ConversationPiiActionContent actionContent = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.PiiOperationAction PiiOperationAction(string name, class Azure.AI.Language.Conversations.Models.ConversationPiiActionContent actionContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.PiiOperationAction(System.String,Azure.AI.Language.Conversations.Models.ConversationPiiActionContent)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PiiOperationAction (Optional name As String = Nothing, Optional actionContent As ConversationPiiActionContent = Nothing) As PiiOperationAction" />
+      <MemberSignature Language="F#" Value="static member PiiOperationAction : string * Azure.AI.Language.Conversations.Models.ConversationPiiActionContent -&gt; Azure.AI.Language.Conversations.Models.PiiOperationAction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.PiiOperationAction (name, actionContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.PiiOperationAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="actionContent" Type="Azure.AI.Language.Conversations.Models.ConversationPiiActionContent" />
+      </Parameters>
+      <Docs>
+        <param name="name"> task name. </param>
+        <param name="actionContent"> parameters. </param>
+        <summary> Task definition for a PII redaction in conversations. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.PiiOperationAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1866,8 +2462,65 @@
       <Docs>
         <param name="projectKind"> The type of the project. </param>
         <param name="topIntent"> The intent with the highest score. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.PredictionBase" />. </summary>
+        <summary>
+            This is the base class of prediction
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.ConversationPrediction" /> and <see cref="T:Azure.AI.Language.Conversations.Models.OrchestrationPrediction" />.
+            </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.PredictionBase" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryFilters">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.QueryFilters QueryFilters (Azure.AI.Language.Conversations.Models.MetadataFilter metadataFilter = default, System.Collections.Generic.IEnumerable&lt;string&gt; sourceFilter = default, Azure.AI.Language.Conversations.Models.LogicalOperationKind? logicalOperation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.QueryFilters QueryFilters(class Azure.AI.Language.Conversations.Models.MetadataFilter metadataFilter, class System.Collections.Generic.IEnumerable`1&lt;string&gt; sourceFilter, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt; logicalOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.QueryFilters(Azure.AI.Language.Conversations.Models.MetadataFilter,System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.AI.Language.Conversations.Models.LogicalOperationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueryFilters (Optional metadataFilter As MetadataFilter = Nothing, Optional sourceFilter As IEnumerable(Of String) = Nothing, Optional logicalOperation As Nullable(Of LogicalOperationKind) = Nothing) As QueryFilters" />
+      <MemberSignature Language="F#" Value="static member QueryFilters : Azure.AI.Language.Conversations.Models.MetadataFilter * seq&lt;string&gt; * Nullable&lt;Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt; -&gt; Azure.AI.Language.Conversations.Models.QueryFilters" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.QueryFilters (metadataFilter, sourceFilter, logicalOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.QueryFilters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataFilter" Type="Azure.AI.Language.Conversations.Models.MetadataFilter" />
+        <Parameter Name="sourceFilter" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="logicalOperation" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.LogicalOperationKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadataFilter"> filters over knowledge base. </param>
+        <param name="sourceFilter"> filters over knowledge base. </param>
+        <param name="logicalOperation"> Logical operation used to join metadata filter with source filter. </param>
+        <summary> filters over knowledge base. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.QueryFilters" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuestionAnsweringConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig QuestionAnsweringConfig (string apiVersion = default, Azure.AI.Language.Conversations.Models.QuestionAnswersConfig callingOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig QuestionAnsweringConfig(string apiVersion, class Azure.AI.Language.Conversations.Models.QuestionAnswersConfig callingOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.QuestionAnsweringConfig(System.String,Azure.AI.Language.Conversations.Models.QuestionAnswersConfig)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QuestionAnsweringConfig (Optional apiVersion As String = Nothing, Optional callingOptions As QuestionAnswersConfig = Nothing) As QuestionAnsweringConfig" />
+      <MemberSignature Language="F#" Value="static member QuestionAnsweringConfig : string * Azure.AI.Language.Conversations.Models.QuestionAnswersConfig -&gt; Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.QuestionAnsweringConfig (apiVersion, callingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="apiVersion" Type="System.String" />
+        <Parameter Name="callingOptions" Type="Azure.AI.Language.Conversations.Models.QuestionAnswersConfig" />
+      </Parameters>
+      <Docs>
+        <param name="apiVersion"> The API version to use when call a specific target service. </param>
+        <param name="callingOptions"> The options sent to a Question Answering KB. </param>
+        <summary> This is a set of request parameters for Question Answering knowledge bases. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1894,8 +2547,50 @@
         <param name="apiVersion"> The API version used to call a target service. </param>
         <param name="confidence"> The prediction score and it ranges from 0.0 to 1.0. </param>
         <param name="result"> The generated answer by a Question Answering KB. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringTargetIntentResult" />. </summary>
+        <summary> It is a wrap up a Question Answering KB response. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringTargetIntentResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuestionAnswersConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.QuestionAnswersConfig QuestionAnswersConfig (int? qnaId = default, string question = default, int? top = default, string userId = default, double? confidenceThreshold = default, Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext answerContext = default, Azure.AI.Language.Conversations.Models.RankerKind? rankerKind = default, Azure.AI.Language.Conversations.Models.QueryFilters filters = default, Azure.AI.Language.Conversations.Models.ShortAnswerConfig shortAnswerOptions = default, bool? includeUnstructuredSources = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.QuestionAnswersConfig QuestionAnswersConfig(valuetype System.Nullable`1&lt;int32&gt; qnaId, string question, valuetype System.Nullable`1&lt;int32&gt; top, string userId, valuetype System.Nullable`1&lt;float64&gt; confidenceThreshold, class Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext answerContext, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.Conversations.Models.RankerKind&gt; rankerKind, class Azure.AI.Language.Conversations.Models.QueryFilters filters, class Azure.AI.Language.Conversations.Models.ShortAnswerConfig shortAnswerOptions, valuetype System.Nullable`1&lt;bool&gt; includeUnstructuredSources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.QuestionAnswersConfig(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Double},Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext,System.Nullable{Azure.AI.Language.Conversations.Models.RankerKind},Azure.AI.Language.Conversations.Models.QueryFilters,Azure.AI.Language.Conversations.Models.ShortAnswerConfig,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QuestionAnswersConfig (Optional qnaId As Nullable(Of Integer) = Nothing, Optional question As String = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional userId As String = Nothing, Optional confidenceThreshold As Nullable(Of Double) = Nothing, Optional answerContext As KnowledgeBaseAnswerContext = Nothing, Optional rankerKind As Nullable(Of RankerKind) = Nothing, Optional filters As QueryFilters = Nothing, Optional shortAnswerOptions As ShortAnswerConfig = Nothing, Optional includeUnstructuredSources As Nullable(Of Boolean) = Nothing) As QuestionAnswersConfig" />
+      <MemberSignature Language="F#" Value="static member QuestionAnswersConfig : Nullable&lt;int&gt; * string * Nullable&lt;int&gt; * string * Nullable&lt;double&gt; * Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext * Nullable&lt;Azure.AI.Language.Conversations.Models.RankerKind&gt; * Azure.AI.Language.Conversations.Models.QueryFilters * Azure.AI.Language.Conversations.Models.ShortAnswerConfig * Nullable&lt;bool&gt; -&gt; Azure.AI.Language.Conversations.Models.QuestionAnswersConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.QuestionAnswersConfig (qnaId, question, top, userId, confidenceThreshold, answerContext, rankerKind, filters, shortAnswerOptions, includeUnstructuredSources)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.QuestionAnswersConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qnaId" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="question" Type="System.String" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="confidenceThreshold" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="answerContext" Type="Azure.AI.Language.Conversations.Models.KnowledgeBaseAnswerContext" />
+        <Parameter Name="rankerKind" Type="System.Nullable&lt;Azure.AI.Language.Conversations.Models.RankerKind&gt;" />
+        <Parameter Name="filters" Type="Azure.AI.Language.Conversations.Models.QueryFilters" />
+        <Parameter Name="shortAnswerOptions" Type="Azure.AI.Language.Conversations.Models.ShortAnswerConfig" />
+        <Parameter Name="includeUnstructuredSources" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="qnaId"> Exact QnA ID to fetch from the knowledge base, this field takes priority over question. </param>
+        <param name="question"> User question to query against the knowledge base. </param>
+        <param name="top"> Max number of answers to be returned for the question. </param>
+        <param name="userId"> Unique identifier for the user. </param>
+        <param name="confidenceThreshold"> Minimum threshold score for answers, value ranges from 0 to 1. </param>
+        <param name="answerContext"> Context object with previous QnA's information. </param>
+        <param name="rankerKind"> Type of ranker to be used. </param>
+        <param name="filters"> Filter QnAs based on given metadata list and knowledge base sources. </param>
+        <param name="shortAnswerOptions"> To configure Answer span prediction feature. </param>
+        <param name="includeUnstructuredSources"> (Optional) Flag to enable Query over Unstructured Sources. </param>
+        <summary> Parameters to query a knowledge base. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnswersConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1926,7 +2621,7 @@
         <param name="text"> Redacted output for input in text (Microsoft's speech-to-text 'display') format. </param>
         <param name="lexical"> Redacted output for input in lexical format. </param>
         <param name="audioTimings"> List of redacted audio segments. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.RedactedTranscriptContent" />. </summary>
+        <summary> Transcript content response that the service generates, with all necessary personally identifiable information redacted. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.RedactedTranscriptContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1952,7 +2647,7 @@
       <Docs>
         <param name="key"> The key of the regex pattern used in extracting the entity. </param>
         <param name="regexPattern"> The .NET regex pattern used in extracting the entity. Please visit https://learn.microsoft.com/dotnet/standard/base-types/regular-expressions for more information about .NET regular expressions. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.RegexKey" />. </summary>
+        <summary> The regex key extra data kind. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.RegexKey" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1982,8 +2677,63 @@
         <param name="validDocumentsCount"> Number of valid documents. This excludes empty, over-size limit or non-supported languages documents. </param>
         <param name="erroneousDocumentsCount"> Number of invalid documents. This includes empty, over-size limit or non-supported languages documents. </param>
         <param name="transactionsCount"> Number of transactions for the request. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.RequestStatistics" />. </summary>
+        <summary> if showStats=true was specified in the request this field will contain information about the request payload. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.RequestStatistics" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolutionBase">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ResolutionBase ResolutionBase (string resolutionKind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ResolutionBase ResolutionBase(string resolutionKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ResolutionBase(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ResolutionBase (Optional resolutionKind As String = Nothing) As ResolutionBase" />
+      <MemberSignature Language="F#" Value="static member ResolutionBase : string -&gt; Azure.AI.Language.Conversations.Models.ResolutionBase" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ResolutionBase resolutionKind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ResolutionBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolutionKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resolutionKind"> The entity resolution object kind. </param>
+        <summary>
+            The abstract base class for entity resolutions.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.AgeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.VolumeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.SpeedResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.AreaResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.LengthResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.InformationResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemperatureResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.WeightResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.CurrencyResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.BooleanResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.DateTimeResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.NumberResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.OrdinalResolution" />, <see cref="T:Azure.AI.Language.Conversations.Models.TemporalSpanResolution" />, and <see cref="T:Azure.AI.Language.Conversations.Models.NumericRangeResolution" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ResolutionBase" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortAnswerConfig">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.ShortAnswerConfig ShortAnswerConfig (bool? enable = default, double? confidenceThreshold = default, int? top = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.ShortAnswerConfig ShortAnswerConfig(valuetype System.Nullable`1&lt;bool&gt; enable, valuetype System.Nullable`1&lt;float64&gt; confidenceThreshold, valuetype System.Nullable`1&lt;int32&gt; top) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.ShortAnswerConfig(System.Nullable{System.Boolean},System.Nullable{System.Double},System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ShortAnswerConfig (Optional enable As Nullable(Of Boolean) = Nothing, Optional confidenceThreshold As Nullable(Of Double) = Nothing, Optional top As Nullable(Of Integer) = Nothing) As ShortAnswerConfig" />
+      <MemberSignature Language="F#" Value="static member ShortAnswerConfig : Nullable&lt;bool&gt; * Nullable&lt;double&gt; * Nullable&lt;int&gt; -&gt; Azure.AI.Language.Conversations.Models.ShortAnswerConfig" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.ShortAnswerConfig (enable, confidenceThreshold, top)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.ShortAnswerConfig</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="confidenceThreshold" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="enable"> Enable or disable Answer Span prediction. </param>
+        <param name="confidenceThreshold"> Minimum threshold score required to include an answer span, value ranges from 0 to 1. </param>
+        <param name="top"> Number of Top answers to be considered for span prediction from 1 to 10. </param>
+        <summary> To configure Answer span prediction feature. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.ShortAnswerConfig" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2008,8 +2758,34 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The speed Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.SpeedResolution" />. </summary>
+        <summary> Represents the speed entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.SpeedResolution" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SummarizationOperationAction">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.SummarizationOperationAction SummarizationOperationAction (string name = default, Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent actionContent = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.SummarizationOperationAction SummarizationOperationAction(string name, class Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent actionContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.SummarizationOperationAction(System.String,Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SummarizationOperationAction (Optional name As String = Nothing, Optional actionContent As ConversationSummarizationActionContent = Nothing) As SummarizationOperationAction" />
+      <MemberSignature Language="F#" Value="static member SummarizationOperationAction : string * Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent -&gt; Azure.AI.Language.Conversations.Models.SummarizationOperationAction" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.SummarizationOperationAction (name, actionContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.SummarizationOperationAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="actionContent" Type="Azure.AI.Language.Conversations.Models.ConversationSummarizationActionContent" />
+      </Parameters>
+      <Docs>
+        <param name="name"> task name. </param>
+        <param name="actionContent"> parameters. </param>
+        <summary> Task definition for conversational summarization. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2038,7 +2814,7 @@
         <param name="status"> The status of the task at the mentioned last update time. </param>
         <param name="name"> task name. </param>
         <param name="results"> results. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationResult" />. </summary>
+        <summary> Result for the summarization task on the conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.SummarizationOperationResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2068,7 +2844,7 @@
         <param name="errors"> Errors by document id. </param>
         <param name="statistics"> statistics. </param>
         <param name="modelVersion"> This field indicates which model is used for scoring. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.SummaryResult" />. </summary>
+        <summary> Summary Results. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.SummaryResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2096,7 +2872,7 @@
         <param name="aspect"> aspect. </param>
         <param name="text"> text. </param>
         <param name="contexts"> Context list of the summary. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.SummaryResultItem" />. </summary>
+        <summary> Summary Result Item. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.SummaryResultItem" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2124,7 +2900,10 @@
         <param name="targetProjectKind"> This is the base class of an intent prediction. </param>
         <param name="apiVersion"> The API version used to call a target service. </param>
         <param name="confidence"> The prediction score and it ranges from 0.0 to 1.0. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TargetIntentResult" />. </summary>
+        <summary>
+            This is the base class of an intent prediction
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.Conversations.Models.LuisTargetIntentResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.QuestionAnsweringTargetIntentResult" />, <see cref="T:Azure.AI.Language.Conversations.Models.NoneLinkedTargetIntentResult" />, and <see cref="T:Azure.AI.Language.Conversations.Models.ConversationTargetIntentResult" />.
+            </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TargetIntentResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2150,7 +2929,7 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The temperature Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TemperatureResolution" />. </summary>
+        <summary> Represents the temperature entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TemperatureResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2182,7 +2961,7 @@
         <param name="duration"> An optional duration value formatted based on the ISO 8601 (https://en.wikipedia.org/wiki/ISO_8601#Durations). </param>
         <param name="modifier"> An optional modifier of a date/time instance. </param>
         <param name="timex"> An optional triplet containing the beginning, the end, and the duration all stated as ISO 8601 formatted strings. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TemporalSpanResolution" />. </summary>
+        <summary> represents the resolution of a date and/or time span. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TemporalSpanResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2212,7 +2991,7 @@
         <param name="language"> Language of the conversation item in BCP-47 format. </param>
         <param name="domain"> domain. </param>
         <param name="conversationItems"> Ordered list of text conversation items in the conversation. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TextConversation" />. </summary>
+        <summary> model for text conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TextConversation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2246,7 +3025,7 @@
         <param name="modality"> Enumeration of supported conversational modalities. </param>
         <param name="role"> Role of the participant. </param>
         <param name="text"> The text input. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TextConversationItem" />. </summary>
+        <summary> The text modality of an input conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TextConversationItem" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2276,7 +3055,7 @@
         <param name="language"> Language of the conversation item in BCP-47 format. </param>
         <param name="domain"> domain. </param>
         <param name="conversationItems"> Ordered list of transcript conversation items in the conversation. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TranscriptConversation" />. </summary>
+        <summary> model for transcript conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TranscriptConversation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2320,7 +3099,7 @@
         <param name="lexical"> Lexical form of the recognized text from the speech-to-text API, with the actual words recognized. </param>
         <param name="wordLevelTimings"> List of word-level audio timing information. </param>
         <param name="conversationItemLevelTiming"> Audio timing at the conversation item level. This still can help with AI quality if word-level audio timings are not available. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.TranscriptConversationItem" />. </summary>
+        <summary> Additional properties for supporting transcript conversation. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.TranscriptConversationItem" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2346,7 +3125,7 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The Volume Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.VolumeResolution" />. </summary>
+        <summary> Represents the volume entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.VolumeResolution" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2372,8 +3151,36 @@
       <Docs>
         <param name="value"> The numeric value that the extracted text denotes. </param>
         <param name="unit"> The weight Unit of measurement. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.Conversations.Models.WeightResolution" />. </summary>
+        <summary> Represents the weight entity resolution model. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.WeightResolution" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WordLevelTiming">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.Conversations.Models.WordLevelTiming WordLevelTiming (long? offset = default, long? duration = default, string word = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.Conversations.Models.WordLevelTiming WordLevelTiming(valuetype System.Nullable`1&lt;int64&gt; offset, valuetype System.Nullable`1&lt;int64&gt; duration, string word) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.ConversationsModelFactory.WordLevelTiming(System.Nullable{System.Int64},System.Nullable{System.Int64},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WordLevelTiming (Optional offset As Nullable(Of Long) = Nothing, Optional duration As Nullable(Of Long) = Nothing, Optional word As String = Nothing) As WordLevelTiming" />
+      <MemberSignature Language="F#" Value="static member WordLevelTiming : Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * string -&gt; Azure.AI.Language.Conversations.Models.WordLevelTiming" Usage="Azure.AI.Language.Conversations.ConversationsModelFactory.WordLevelTiming (offset, duration, word)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.Conversations.Models.WordLevelTiming</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="duration" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="word" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="offset"> Offset from the start of speech audio, in ticks. 1 tick = 100 nanoseconds. </param>
+        <param name="duration"> Duration of word articulation, in ticks. 1 tick = 100 nanoseconds. </param>
+        <param name="word"> Recognized word. </param>
+        <summary> Word-level timing information that the speech-to-text API generates. The words in this object should have 1:1 correspondence with the lexical input to allow for audio redaction. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.Conversations.Models.WordLevelTiming" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

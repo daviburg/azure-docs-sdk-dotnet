@@ -1,9 +1,13 @@
 <Type Name="DnsSrvRecordResource" FullName="Azure.ResourceManager.Dns.DnsSrvRecordResource">
-  <TypeSignature Language="C#" Value="public class DnsSrvRecordResource : Azure.ResourceManager.ArmResource" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsSrvRecordResource extends Azure.ResourceManager.ArmResource" />
+  <TypeSignature Language="C#" Value="public class DnsSrvRecordResource : Azure.ResourceManager.ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsSrvRecordResource extends Azure.ResourceManager.ArmResource" FrameworkAlternate="azure-dotnet" />
   <TypeSignature Language="DocId" Value="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />
-  <TypeSignature Language="VB.NET" Value="Public Class DnsSrvRecordResource&#xA;Inherits ArmResource" />
-  <TypeSignature Language="F#" Value="type DnsSrvRecordResource = class&#xA;    inherit ArmResource" />
+  <TypeSignature Language="VB.NET" Value="Public Class DnsSrvRecordResource&#xA;Inherits ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="F#" Value="type DnsSrvRecordResource = class&#xA;    inherit ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="C#" Value="public class DnsSrvRecordResource : Azure.ResourceManager.ArmResource, System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;, System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsSrvRecordResource extends Azure.ResourceManager.ArmResource implements class System.ClientModel.Primitives.IJsonModel`1&lt;class Azure.ResourceManager.Dns.DnsSrvRecordData&gt;, class System.ClientModel.Primitives.IPersistableModel`1&lt;class Azure.ResourceManager.Dns.DnsSrvRecordData&gt;" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="VB.NET" Value="Public Class DnsSrvRecordResource&#xA;Inherits ArmResource&#xA;Implements IJsonModel(Of DnsSrvRecordData), IPersistableModel(Of DnsSrvRecordData)" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="F#" Value="type DnsSrvRecordResource = class&#xA;    inherit ArmResource&#xA;    interface IJsonModel&lt;DnsSrvRecordData&gt;&#xA;    interface IPersistableModel&lt;DnsSrvRecordData&gt;" FrameworkAlternate="azure-dotnet-preview" />
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -15,13 +19,22 @@
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
-            A Class representing a DnsSrvRecord along with the instance operations that can be performed on it.
-            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />
-            from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetDnsSrvRecordResource method.
-            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> using the GetDnsSrvRecord method.
+            A class representing a DnsSrvRecord along with the instance operations that can be performed on it.
+            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" /> from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetResource method.
+            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> using the GetDnsSrvRecords method.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -39,7 +52,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of DnsSrvRecordResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -65,11 +78,11 @@
         <Parameter Name="srvRecordName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="subscriptionId">To be added.</param>
-        <param name="resourceGroupName">To be added.</param>
-        <param name="zoneName">To be added.</param>
-        <param name="srvRecordName">To be added.</param>
-        <summary> Generate the resource identifier of a <see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" /> instance. </summary>
+        <param name="subscriptionId"> The subscriptionId. </param>
+        <param name="resourceGroupName"> The resourceGroupName. </param>
+        <param name="zoneName"> The zoneName. </param>
+        <param name="srvRecordName"> The srvRecordName. </param>
+        <summary> Generate the resource identifier for this resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -122,8 +135,8 @@
         <param name="ifMatch"> The etag of the record set. Omit this value to always delete the current record set. Specify the last-seen etag value to prevent accidentally deleting any concurrent changes. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
-            Deletes a record set from a DNS zone. This operation cannot be undone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Delete</description></item></list></summary>
+            Deletes a record set from a DNS zone. This operation cannot be undone. Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Delete. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,8 +167,8 @@
         <param name="ifMatch"> The etag of the record set. Omit this value to always delete the current record set. Specify the last-seen etag value to prevent accidentally deleting any concurrent changes. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
-            Deletes a record set from a DNS zone. This operation cannot be undone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Delete</description></item></list></summary>
+            Deletes a record set from a DNS zone. This operation cannot be undone. Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Delete. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,7 +195,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Get. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,7 +222,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Get. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -255,6 +268,146 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.Dns.DnsSrvRecordData IJsonModel&lt;DnsSrvRecordData&gt;.Create (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.Dns.DnsSrvRecordData System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsSrvRecordResource.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#Dns#DnsSrvRecordData&gt;#Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As DnsSrvRecordData Implements IJsonModel(Of DnsSrvRecordData).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsSrvRecordData&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsSrvRecordData" Usage="dnsSrvRecordResource.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create (reader, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.DnsSrvRecordData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The reader for deserializing the model. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write">
+      <MemberSignature Language="C#" Value="void IJsonModel&lt;DnsSrvRecordData&gt;.Write (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsSrvRecordResource.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#Dns#DnsSrvRecordData&gt;#Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Sub Write (writer As Utf8JsonWriter, options As ModelReaderWriterOptions) Implements IJsonModel(Of DnsSrvRecordData).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="dnsSrvRecordResource.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write (writer, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The writer to serialize the model to. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.Dns.DnsSrvRecordData IPersistableModel&lt;DnsSrvRecordData&gt;.Create (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.Dns.DnsSrvRecordData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsSrvRecordResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsSrvRecordData&gt;#Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (data As BinaryData, options As ModelReaderWriterOptions) As DnsSrvRecordData Implements IPersistableModel(Of DnsSrvRecordData).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsSrvRecordData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsSrvRecordData" Usage="dnsSrvRecordResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Create (data, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.DnsSrvRecordData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The binary data to be processed. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.GetFormatFromOptions">
+      <MemberSignature Language="C#" Value="string IPersistableModel&lt;DnsSrvRecordData&gt;.GetFormatFromOptions (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.GetFormatFromOptions(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsSrvRecordResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsSrvRecordData&gt;#GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function GetFormatFromOptions (options As ModelReaderWriterOptions) As String Implements IPersistableModel(Of DnsSrvRecordData).GetFormatFromOptions" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string" Usage="dnsSrvRecordResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.GetFormatFromOptions options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write">
+      <MemberSignature Language="C#" Value="BinaryData IPersistableModel&lt;DnsSrvRecordData&gt;.Write (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.BinaryData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsSrvRecordResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsSrvRecordData&gt;#Write(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Write (options As ModelReaderWriterOptions) As BinaryData Implements IPersistableModel(Of DnsSrvRecordData).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="dnsSrvRecordResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsSrvRecordData&gt;.Write options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Write(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.Dns.DnsSrvRecordResource&gt; Update (Azure.ResourceManager.Dns.DnsSrvRecordData data, Azure.ETag? ifMatch = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.Dns.DnsSrvRecordResource&gt; Update(class Azure.ResourceManager.Dns.DnsSrvRecordData data, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; ifMatch, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -281,7 +434,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates a record set within a DNS zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Update</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Update. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -314,7 +467,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates a record set within a DNS zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}</description></item><item><term>Operation Id</term><description>RecordSets_Update</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}. </description></item><item><term> Operation Id. </term><description> RecordSets_Update. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsSrvRecordResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

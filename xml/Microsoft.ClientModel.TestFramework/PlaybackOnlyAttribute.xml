@@ -1,0 +1,87 @@
+<Type Name="PlaybackOnlyAttribute" FullName="Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute">
+  <TypeSignature Language="C#" Value="public class PlaybackOnlyAttribute : NUnit.Framework.NUnitAttribute, NUnit.Framework.Interfaces.IApplyToTest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PlaybackOnlyAttribute extends NUnit.Framework.NUnitAttribute implements class NUnit.Framework.Interfaces.IApplyToTest" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class PlaybackOnlyAttribute&#xA;Inherits NUnitAttribute&#xA;Implements IApplyToTest" />
+  <TypeSignature Language="F#" Value="type PlaybackOnlyAttribute = class&#xA;    inherit NUnitAttribute&#xA;    interface IApplyToTest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.NUnitAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IApplyToTest</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute on test assemblies, classes, or methods that run only against playback resources.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PlaybackOnlyAttribute (string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (reason As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute : string -&gt; Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute" Usage="new Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute reason" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reason">To be added.</param>
+        <summary>
+            Constructs the attribute giving a reason the associated tests is playback only.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyToTest">
+      <MemberSignature Language="C#" Value="public void ApplyToTest (NUnit.Framework.Internal.Test test);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyToTest(class NUnit.Framework.Internal.Test test) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.PlaybackOnlyAttribute.ApplyToTest(NUnit.Framework.Internal.Test)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ApplyToTest (test As Test)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyToTest : NUnit.Framework.Internal.Test -&gt; unit&#xA;override this.ApplyToTest : NUnit.Framework.Internal.Test -&gt; unit" Usage="playbackOnlyAttribute.ApplyToTest test" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IApplyToTest.ApplyToTest(NUnit.Framework.Internal.Test)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="test" Type="NUnit.Framework.Internal.Test" />
+      </Parameters>
+      <Docs>
+        <param name="test">The <see cref="T:NUnit.Framework.Internal.Test" /> to modify.</param>
+        <summary>
+            Modifies the <paramref name="test" /> by adding categories to it and changing the run state as needed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

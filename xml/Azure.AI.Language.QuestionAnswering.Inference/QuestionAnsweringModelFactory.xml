@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
             Elements (Graphemes) according to Unicode v8.0.0. For additional information
             see https://aka.ms/text-analytics-offsets.
             </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextOptions" />. </summary>
+        <summary> The question and text record parameters to answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,8 +74,55 @@
       </Parameters>
       <Docs>
         <param name="answers"> Represents the answer results. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextResult" />. </summary>
+        <summary> Represents the answer results. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersFromTextResult" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnswersOptions">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions AnswersOptions (int? qnaId = default, string question = default, int? size = default, string userId = default, double? confidenceThreshold = default, Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext answerContext = default, Azure.AI.Language.QuestionAnswering.Inference.RankerKind? rankerKind = default, Azure.AI.Language.QuestionAnswering.Inference.QueryFilters filters = default, Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions shortAnswerOptions = default, bool? includeUnstructuredSources = default, Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences queryPreferences = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions AnswersOptions(valuetype System.Nullable`1&lt;int32&gt; qnaId, string question, valuetype System.Nullable`1&lt;int32&gt; size, string userId, valuetype System.Nullable`1&lt;float64&gt; confidenceThreshold, class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext answerContext, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.QuestionAnswering.Inference.RankerKind&gt; rankerKind, class Azure.AI.Language.QuestionAnswering.Inference.QueryFilters filters, class Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions shortAnswerOptions, valuetype System.Nullable`1&lt;bool&gt; includeUnstructuredSources, class Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences queryPreferences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.AnswersOptions(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Double},Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext,System.Nullable{Azure.AI.Language.QuestionAnswering.Inference.RankerKind},Azure.AI.Language.QuestionAnswering.Inference.QueryFilters,Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions,System.Nullable{System.Boolean},Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AnswersOptions (Optional qnaId As Nullable(Of Integer) = Nothing, Optional question As String = Nothing, Optional size As Nullable(Of Integer) = Nothing, Optional userId As String = Nothing, Optional confidenceThreshold As Nullable(Of Double) = Nothing, Optional answerContext As KnowledgeBaseAnswerContext = Nothing, Optional rankerKind As Nullable(Of RankerKind) = Nothing, Optional filters As QueryFilters = Nothing, Optional shortAnswerOptions As ShortAnswerOptions = Nothing, Optional includeUnstructuredSources As Nullable(Of Boolean) = Nothing, Optional queryPreferences As QueryPreferences = Nothing) As AnswersOptions" />
+      <MemberSignature Language="F#" Value="static member AnswersOptions : Nullable&lt;int&gt; * string * Nullable&lt;int&gt; * string * Nullable&lt;double&gt; * Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext * Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.RankerKind&gt; * Azure.AI.Language.QuestionAnswering.Inference.QueryFilters * Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions * Nullable&lt;bool&gt; * Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences -&gt; Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.AnswersOptions (qnaId, question, size, userId, confidenceThreshold, answerContext, rankerKind, filters, shortAnswerOptions, includeUnstructuredSources, queryPreferences)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qnaId" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="question" Type="System.String" />
+        <Parameter Name="size" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="confidenceThreshold" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="answerContext" Type="Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext" />
+        <Parameter Name="rankerKind" Type="System.Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.RankerKind&gt;" />
+        <Parameter Name="filters" Type="Azure.AI.Language.QuestionAnswering.Inference.QueryFilters" />
+        <Parameter Name="shortAnswerOptions" Type="Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions" />
+        <Parameter Name="includeUnstructuredSources" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="queryPreferences" Type="Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences" />
+      </Parameters>
+      <Docs>
+        <param name="qnaId">
+            Exact QnA ID to fetch from the knowledge base, this field takes priority over
+            question.
+            </param>
+        <param name="question"> User question to query against the knowledge base. </param>
+        <param name="size"> Max number of answers to be returned for the question. </param>
+        <param name="userId"> Unique identifier for the user. </param>
+        <param name="confidenceThreshold"> Minimum threshold score for answers, value ranges from 0 to 1. </param>
+        <param name="answerContext"> Context object with previous QnA's information. </param>
+        <param name="rankerKind"> Type of ranker to be used. </param>
+        <param name="filters"> Filter QnAs based on given metadata list and knowledge base sources. </param>
+        <param name="shortAnswerOptions"> To configure Answer span prediction feature. </param>
+        <param name="includeUnstructuredSources"> (Optional) Flag to enable Query over Unstructured Sources. </param>
+        <param name="queryPreferences"> To fine tune query results. </param>
+        <summary> Parameters to query a knowledge base. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -104,7 +151,7 @@
         <param name="confidence"> Predicted score of answer span, value ranges from 0 to 1. </param>
         <param name="offset"> The answer span offset from the start of answer. </param>
         <param name="length"> The length of the answer span. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan" />. </summary>
+        <summary> Answer span object of QnA. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -128,17 +175,17 @@
       </Parameters>
       <Docs>
         <param name="answers"> Represents Answer Result list. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersResult" />. </summary>
+        <summary> Represents List of Question Answers. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.AnswersResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="KnowledgeBaseAnswer">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer KnowledgeBaseAnswer (System.Collections.Generic.IEnumerable&lt;string&gt; questions = default, string answer = default, double? confidence = default, int? qnaId = default, string source = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog dialog = default, Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan shortAnswer = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer KnowledgeBaseAnswer(class System.Collections.Generic.IEnumerable`1&lt;string&gt; questions, string answer, valuetype System.Nullable`1&lt;float64&gt; confidence, valuetype System.Nullable`1&lt;int32&gt; qnaId, string source, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog dialog, class Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan shortAnswer) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswer(System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.Double},System.Nullable{System.Int32},System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog,Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswer (Optional questions As IEnumerable(Of String) = Nothing, Optional answer As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional qnaId As Nullable(Of Integer) = Nothing, Optional source As String = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional dialog As KnowledgeBaseAnswerDialog = Nothing, Optional shortAnswer As AnswerSpan = Nothing) As KnowledgeBaseAnswer" />
-      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswer : seq&lt;string&gt; * string * Nullable&lt;double&gt; * Nullable&lt;int&gt; * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog * Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan -&gt; Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswer (questions, answer, confidence, qnaId, source, metadata, dialog, shortAnswer)" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer KnowledgeBaseAnswer (System.Collections.Generic.IEnumerable&lt;string&gt; questions = default, string answer = default, double? confidence = default, int? qnaId = default, string source = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog dialog = default, Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan shortAnswer = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer KnowledgeBaseAnswer(class System.Collections.Generic.IEnumerable`1&lt;string&gt; questions, string answer, valuetype System.Nullable`1&lt;float64&gt; confidence, valuetype System.Nullable`1&lt;int32&gt; qnaId, string source, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog dialog, class Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan shortAnswer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswer(System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.Double},System.Nullable{System.Int32},System.String,System.Collections.Generic.IDictionary{System.String,System.String},Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog,Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswer (Optional questions As IEnumerable(Of String) = Nothing, Optional answer As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional qnaId As Nullable(Of Integer) = Nothing, Optional source As String = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional dialog As KnowledgeBaseAnswerDialog = Nothing, Optional shortAnswer As AnswerSpan = Nothing) As KnowledgeBaseAnswer" />
+      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswer : seq&lt;string&gt; * string * Nullable&lt;double&gt; * Nullable&lt;int&gt; * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog * Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan -&gt; Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswer (questions, answer, confidence, qnaId, source, metadata, dialog, shortAnswer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
@@ -153,7 +200,7 @@
         <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" />
         <Parameter Name="qnaId" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="source" Type="System.String" />
-        <Parameter Name="metadata" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
         <Parameter Name="dialog" Type="Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog" />
         <Parameter Name="shortAnswer" Type="Azure.AI.Language.QuestionAnswering.Inference.AnswerSpan" />
       </Parameters>
@@ -169,7 +216,7 @@
             </param>
         <param name="dialog"> Dialog associated with Answer. </param>
         <param name="shortAnswer"> Answer span object of QnA with respect to user's question. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer" />. </summary>
+        <summary> Represents knowledge base answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswer" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -195,7 +242,7 @@
       <Docs>
         <param name="previousQnaId"> Previous turn top answer result QnA ID. </param>
         <param name="previousQuestion"> Previous user query. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext" />. </summary>
+        <summary> Context object with previous QnA's information. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerContext" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -225,17 +272,17 @@
             otherwise, if false, ignores context and includes this QnA in search result.
             </param>
         <param name="prompts"> List of prompts associated with the answer. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog" />. </summary>
+        <summary> Dialog associated with Answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerDialog" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="KnowledgeBaseAnswerPrompt">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt KnowledgeBaseAnswerPrompt (int? displayOrder = default, int? id = default, string displayText = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt KnowledgeBaseAnswerPrompt(valuetype System.Nullable`1&lt;int32&gt; displayOrder, valuetype System.Nullable`1&lt;int32&gt; id, string displayText) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt KnowledgeBaseAnswerPrompt (int? displayOrder = default, int? qnaId = default, string displayText = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt KnowledgeBaseAnswerPrompt(valuetype System.Nullable`1&lt;int32&gt; displayOrder, valuetype System.Nullable`1&lt;int32&gt; qnaId, string displayText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswerPrompt(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswerPrompt (Optional displayOrder As Nullable(Of Integer) = Nothing, Optional id As Nullable(Of Integer) = Nothing, Optional displayText As String = Nothing) As KnowledgeBaseAnswerPrompt" />
-      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswerPrompt : Nullable&lt;int&gt; * Nullable&lt;int&gt; * string -&gt; Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswerPrompt (displayOrder, id, displayText)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function KnowledgeBaseAnswerPrompt (Optional displayOrder As Nullable(Of Integer) = Nothing, Optional qnaId As Nullable(Of Integer) = Nothing, Optional displayText As String = Nothing) As KnowledgeBaseAnswerPrompt" />
+      <MemberSignature Language="F#" Value="static member KnowledgeBaseAnswerPrompt : Nullable&lt;int&gt; * Nullable&lt;int&gt; * string -&gt; Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.KnowledgeBaseAnswerPrompt (displayOrder, qnaId, displayText)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
@@ -246,24 +293,186 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="displayOrder" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="id" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="qnaId" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="displayText" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="displayOrder"> Index of the prompt - used in ordering of the prompts. </param>
-        <param name="id"> QnA ID corresponding to the prompt. </param>
+        <param name="qnaId"> QnA ID corresponding to the prompt. </param>
         <param name="displayText"> Text displayed to represent a follow up question prompt. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt" />. </summary>
+        <summary> Prompt for an answer. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.KnowledgeBaseAnswerPrompt" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MatchingPolicy">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy MatchingPolicy (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy MatchingPolicy(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MatchingPolicy(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MatchingPolicy (Optional kind As String = Nothing) As MatchingPolicy" />
+      <MemberSignature Language="F#" Value="static member MatchingPolicy : string -&gt; Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MatchingPolicy kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> Kind of matching policy to be applied. </param>
+        <summary>
+            Specify parameters for query matching
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataFilter">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter MetadataFilter (System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord&gt; metadata = default, Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind? logicalOperation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter MetadataFilter(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord&gt; metadata, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt; logicalOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MetadataFilter(System.Collections.Generic.IEnumerable{Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord},System.Nullable{Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MetadataFilter (Optional metadata As IEnumerable(Of MetadataRecord) = Nothing, Optional logicalOperation As Nullable(Of LogicalOperationKind) = Nothing) As MetadataFilter" />
+      <MemberSignature Language="F#" Value="static member MetadataFilter : seq&lt;Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord&gt; * Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt; -&gt; Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MetadataFilter (metadata, logicalOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord&gt;" />
+        <Parameter Name="logicalOperation" Type="System.Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadata"> Dictionary of string. </param>
+        <param name="logicalOperation"> Operation used to join metadata filters. </param>
+        <summary> Find QnAs that are associated with the given list of metadata. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataRecord">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord MetadataRecord (string key = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord MetadataRecord(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MetadataRecord(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MetadataRecord (Optional key As String = Nothing, Optional value As String = Nothing) As MetadataRecord" />
+      <MemberSignature Language="F#" Value="static member MetadataRecord : string * string -&gt; Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.MetadataRecord (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key"> Metadata Key from Metadata dictionary used in the QnA. </param>
+        <param name="value"> Metadata Value from Metadata dictionary used in the QnA. </param>
+        <summary> Object to provide the key value pair for each metadata. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.MetadataRecord" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrebuiltQueryMatchingPolicy">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy PrebuiltQueryMatchingPolicy (System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicyFieldsType&gt; fields = default, bool? disableFullMatch = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy PrebuiltQueryMatchingPolicy(class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicyFieldsType&gt; fields, valuetype System.Nullable`1&lt;bool&gt; disableFullMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.PrebuiltQueryMatchingPolicy(System.Collections.Generic.IEnumerable{Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicyFieldsType},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PrebuiltQueryMatchingPolicy (Optional fields As IEnumerable(Of MatchingPolicyFieldsType) = Nothing, Optional disableFullMatch As Nullable(Of Boolean) = Nothing) As PrebuiltQueryMatchingPolicy" />
+      <MemberSignature Language="F#" Value="static member PrebuiltQueryMatchingPolicy : seq&lt;Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicyFieldsType&gt; * Nullable&lt;bool&gt; -&gt; Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.PrebuiltQueryMatchingPolicy (fields, disableFullMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicyFieldsType&gt;" />
+        <Parameter Name="disableFullMatch" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fields"> List of fields to filter during query. For ex if only "questions" is used then query will be filtered on that column. </param>
+        <param name="disableFullMatch"> Disabling full match on query. Enabling this will give preference to qna pairs that have exact match. </param>
+        <summary> Represents fields for Prebuilt query matching. Prebuilt weights will be used for giving preference to question and answer columns when quering AI search. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.PrebuiltQueryMatchingPolicy" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryFilters">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.QueryFilters QueryFilters (Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter metadataFilter = default, System.Collections.Generic.IEnumerable&lt;string&gt; sourceFilter = default, Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind? logicalOperation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.QueryFilters QueryFilters(class Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter metadataFilter, class System.Collections.Generic.IEnumerable`1&lt;string&gt; sourceFilter, valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt; logicalOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.QueryFilters(Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter,System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueryFilters (Optional metadataFilter As MetadataFilter = Nothing, Optional sourceFilter As IEnumerable(Of String) = Nothing, Optional logicalOperation As Nullable(Of LogicalOperationKind) = Nothing) As QueryFilters" />
+      <MemberSignature Language="F#" Value="static member QueryFilters : Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter * seq&lt;string&gt; * Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt; -&gt; Azure.AI.Language.QuestionAnswering.Inference.QueryFilters" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.QueryFilters (metadataFilter, sourceFilter, logicalOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.QueryFilters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataFilter" Type="Azure.AI.Language.QuestionAnswering.Inference.MetadataFilter" />
+        <Parameter Name="sourceFilter" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="logicalOperation" Type="System.Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.LogicalOperationKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadataFilter"> Find QnAs that are associated with the given list of metadata. </param>
+        <param name="sourceFilter">
+            Find QnAs that are associated with any of the given list of sources in
+            knowledge base.
+            </param>
+        <param name="logicalOperation"> Logical operation used to join metadata filter with source filter. </param>
+        <summary> filters over knowledge base. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.QueryFilters" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryPreferences">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences QueryPreferences (Azure.AI.Language.QuestionAnswering.Inference.Scorer? scorer = default, Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy matchingPolicy = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences QueryPreferences(valuetype System.Nullable`1&lt;valuetype Azure.AI.Language.QuestionAnswering.Inference.Scorer&gt; scorer, class Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy matchingPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.QueryPreferences(System.Nullable{Azure.AI.Language.QuestionAnswering.Inference.Scorer},Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueryPreferences (Optional scorer As Nullable(Of Scorer) = Nothing, Optional matchingPolicy As MatchingPolicy = Nothing) As QueryPreferences" />
+      <MemberSignature Language="F#" Value="static member QueryPreferences : Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.Scorer&gt; * Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy -&gt; Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.QueryPreferences (scorer, matchingPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scorer" Type="System.Nullable&lt;Azure.AI.Language.QuestionAnswering.Inference.Scorer&gt;" />
+        <Parameter Name="matchingPolicy" Type="Azure.AI.Language.QuestionAnswering.Inference.MatchingPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="scorer"> To specify what scoring algorithm is preferred. </param>
+        <param name="matchingPolicy"> Policy for controling exact query match behavior. </param>
+        <summary> Additional properties to fine tune query results. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.QueryPreferences" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ShortAnswerOptions">
-      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions ShortAnswerOptions (bool isEnabled = false, double? confidenceThreshold = default, int? size = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions ShortAnswerOptions(bool isEnabled, valuetype System.Nullable`1&lt;float64&gt; confidenceThreshold, valuetype System.Nullable`1&lt;int32&gt; size) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions ShortAnswerOptions (bool enable = false, double? confidenceThreshold = default, int? size = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions ShortAnswerOptions(bool enable, valuetype System.Nullable`1&lt;float64&gt; confidenceThreshold, valuetype System.Nullable`1&lt;int32&gt; size) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.ShortAnswerOptions(System.Boolean,System.Nullable{System.Double},System.Nullable{System.Int32})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ShortAnswerOptions (Optional isEnabled As Boolean = false, Optional confidenceThreshold As Nullable(Of Double) = Nothing, Optional size As Nullable(Of Integer) = Nothing) As ShortAnswerOptions" />
-      <MemberSignature Language="F#" Value="static member ShortAnswerOptions : bool * Nullable&lt;double&gt; * Nullable&lt;int&gt; -&gt; Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.ShortAnswerOptions (isEnabled, confidenceThreshold, size)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ShortAnswerOptions (Optional enable As Boolean = false, Optional confidenceThreshold As Nullable(Of Double) = Nothing, Optional size As Nullable(Of Integer) = Nothing) As ShortAnswerOptions" />
+      <MemberSignature Language="F#" Value="static member ShortAnswerOptions : bool * Nullable&lt;double&gt; * Nullable&lt;int&gt; -&gt; Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.ShortAnswerOptions (enable, confidenceThreshold, size)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
@@ -273,18 +482,18 @@
         <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="isEnabled" Type="System.Boolean" />
+        <Parameter Name="enable" Type="System.Boolean" />
         <Parameter Name="confidenceThreshold" Type="System.Nullable&lt;System.Double&gt;" />
         <Parameter Name="size" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
-        <param name="isEnabled"> Enable or disable Answer Span prediction. </param>
+        <param name="enable"> Enable or disable Answer Span prediction. </param>
         <param name="confidenceThreshold">
             Minimum threshold score required to include an answer span, value ranges from 0
             to 1.
             </param>
         <param name="size"> Number of Top answers to be considered for span prediction from 1 to 10. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions" />. </summary>
+        <summary> To configure Answer span prediction feature. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.ShortAnswerOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -318,8 +527,34 @@
         <param name="shortAnswer"> Answer span object with respect to user's question. </param>
         <param name="offset"> The sentence offset from the start of the document. </param>
         <param name="length"> The length of the sentence. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.TextAnswer" />. </summary>
+        <summary> Represents answer result. </summary>
         <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.TextAnswer" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDocument">
+      <MemberSignature Language="C#" Value="public static Azure.AI.Language.QuestionAnswering.Inference.TextDocument TextDocument (string id = default, string text = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.AI.Language.QuestionAnswering.Inference.TextDocument TextDocument(string id, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.TextDocument(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TextDocument (Optional id As String = Nothing, Optional text As String = Nothing) As TextDocument" />
+      <MemberSignature Language="F#" Value="static member TextDocument : string * string -&gt; Azure.AI.Language.QuestionAnswering.Inference.TextDocument" Usage="Azure.AI.Language.QuestionAnswering.Inference.QuestionAnsweringModelFactory.TextDocument (id, text)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.QuestionAnswering.Inference</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.Language.QuestionAnswering.Inference.TextDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Unique identifier for the text record. </param>
+        <param name="text"> Text contents of the record. </param>
+        <summary> Represent input text record to be queried. </summary>
+        <returns> A new <see cref="T:Azure.AI.Language.QuestionAnswering.Inference.TextDocument" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

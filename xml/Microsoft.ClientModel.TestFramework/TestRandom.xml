@@ -1,0 +1,106 @@
+<Type Name="TestRandom" FullName="Microsoft.ClientModel.TestFramework.TestRandom">
+  <TypeSignature Language="C#" Value="public class TestRandom : Random" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestRandom extends System.Random" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestRandom" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestRandom&#xA;Inherits Random" />
+  <TypeSignature Language="F#" Value="type TestRandom = class&#xA;    inherit Random" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Random</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A deterministic random number generator designed for use in recorded tests.
+            This class extends <see cref="T:System.Random" /> to provide predictable behavior during
+            test playback while maintaining randomness during live test execution.
+            </summary>
+    <remarks>
+            When running in <see cref="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Live" /> mode, this class behaves
+            like a standard random number generator. In other modes (Record/Playback),
+            it uses a seeded random number generator to ensure deterministic behavior
+            across test runs.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRandom (Microsoft.ClientModel.TestFramework.RecordedTestMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRandom.#ctor(Microsoft.ClientModel.TestFramework.RecordedTestMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mode As RecordedTestMode)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TestRandom : Microsoft.ClientModel.TestFramework.RecordedTestMode -&gt; Microsoft.ClientModel.TestFramework.TestRandom" Usage="new Microsoft.ClientModel.TestFramework.TestRandom mode" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The recorded test mode that determines the random behavior.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRandom" /> class with the specified
+            test mode and a system-generated seed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRandom (Microsoft.ClientModel.TestFramework.RecordedTestMode mode, int seed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode mode, int32 seed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRandom.#ctor(Microsoft.ClientModel.TestFramework.RecordedTestMode,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mode As RecordedTestMode, seed As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TestRandom : Microsoft.ClientModel.TestFramework.RecordedTestMode * int -&gt; Microsoft.ClientModel.TestFramework.TestRandom" Usage="new Microsoft.ClientModel.TestFramework.TestRandom (mode, seed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+        <Parameter Name="seed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The recorded test mode that determines the random behavior.</param>
+        <param name="seed">The seed value used to initialize the random number generator.
+            This ensures deterministic behavior in Record and Playback modes.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRandom" /> class with the specified
+            test mode and seed value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewGuid">
+      <MemberSignature Language="C#" Value="public Guid NewGuid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Guid NewGuid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRandom.NewGuid" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewGuid () As Guid" />
+      <MemberSignature Language="F#" Value="member this.NewGuid : unit -&gt; Guid" Usage="testRandom.NewGuid " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a new <see cref="T:System.Guid" /> value with behavior that depends on the test mode.
+            </summary>
+        <returns>
+            A new <see cref="T:System.Guid" /> value. In <see cref="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Live" /> mode,
+            returns a truly random GUID. In other modes, returns a deterministic GUID
+            generated from the seeded random number generator.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

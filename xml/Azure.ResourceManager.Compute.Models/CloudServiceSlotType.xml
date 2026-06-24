@@ -33,12 +33,18 @@
       <InterfaceName>System.IEquatable&lt;Azure.ResourceManager.Compute.Models.CloudServiceSlotType&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("CloudService operations are no longer supported.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("CloudService operations are no longer supported.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary>
-            Slot type for the cloud service.
-            Possible values are &lt;br /&gt;&lt;br /&gt;**Production**&lt;br /&gt;&lt;br /&gt;**Staging**&lt;br /&gt;&lt;br /&gt;
-            If not specified, the default value is Production.
-            </summary>
+    <summary> The CloudServiceSlotType. This type is obsolete. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -58,7 +64,7 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="value">To be added.</param>
+        <param name="value"> The value. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Compute.Models.CloudServiceSlotType" />. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -201,7 +207,7 @@
       </Parameters>
       <Docs>
         <param name="value">To be added.</param>
-        <summary> Converts a <see cref="T:System.String" /> to a <see cref="T:Azure.ResourceManager.Compute.Models.CloudServiceSlotType" />. </summary>
+        <summary> Converts a string to a <see cref="T:Azure.ResourceManager.Compute.Models.CloudServiceSlotType" />. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

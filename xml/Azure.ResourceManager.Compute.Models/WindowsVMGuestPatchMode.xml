@@ -34,7 +34,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary> Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true. </summary>
+    <summary> Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; <b>Manual</b> - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; <b>AutomaticByOS</b> - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; <b>AutomaticByPlatform</b> - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,7 +54,7 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="value">To be added.</param>
+        <param name="value"> The value. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" />. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -77,7 +77,7 @@
         <ReturnType>Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> AutomaticByOS. </summary>
+        <summary> Gets the AutomaticByOS. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -98,7 +98,7 @@
         <ReturnType>Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> AutomaticByPlatform. </summary>
+        <summary> Gets the AutomaticByPlatform. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,7 +208,7 @@
         <ReturnType>Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Manual. </summary>
+        <summary> Gets the Manual. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -233,8 +233,8 @@
         <Parameter Name="right" Type="Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" />
       </Parameters>
       <Docs>
-        <param name="left">To be added.</param>
-        <param name="right">To be added.</param>
+        <param name="left"> The left value to compare. </param>
+        <param name="right"> The right value to compare. </param>
         <summary> Determines if two <see cref="T:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" /> values are the same. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -259,8 +259,32 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
+        <param name="value"> The value. </param>
+        <summary> Converts a string to a <see cref="T:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" />. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode? (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode&gt; op_Implicit(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode.op_Implicit(System.String)~System.Nullable{Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (value As String) As Nullable(Of WindowsVmGuestPatchMode)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : string -&gt; Nullable&lt;Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode&gt;" Usage="Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode.op_Implicit value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Compute</AssemblyName>
+        <AssemblyVersion>1.15.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
         <param name="value">To be added.</param>
-        <summary> Converts a <see cref="T:System.String" /> to a <see cref="T:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" />. </summary>
+        <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -285,8 +309,8 @@
         <Parameter Name="right" Type="Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" />
       </Parameters>
       <Docs>
-        <param name="left">To be added.</param>
-        <param name="right">To be added.</param>
+        <param name="left"> The left value to compare. </param>
+        <param name="right"> The right value to compare. </param>
         <summary> Determines if two <see cref="T:Azure.ResourceManager.Compute.Models.WindowsVmGuestPatchMode" /> values are not the same. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

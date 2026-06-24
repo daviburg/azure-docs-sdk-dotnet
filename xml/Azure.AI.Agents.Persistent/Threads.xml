@@ -63,7 +63,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.CreateThread(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.CreateThread(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -73,17 +73,60 @@
       </Docs>
     </Member>
     <Member MemberName="CreateThread">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.CreateThread(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThread (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" />
+      <MemberSignature Language="F#" Value="abstract member CreateThread : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&#xA;override this.CreateThread : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;" Usage="threads.CreateThread (messages, toolResources, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="messages"> The initial messages to associate with the new thread. </param>
+        <param name="toolResources">
+            A set of resources that are made available to the agent's tools in this thread. The resources are specific to the
+            type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires
+            a list of vector store IDs.
+            </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new thread. Threads contain messages and can be run by agents. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateThread">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.CreateThread(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThread (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThread (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateThread : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&#xA;override this.CreateThread : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;" Usage="threads.CreateThread (messages, toolResources, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; CreateThread (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, Azure.AI.Agents.Persistent.ToolResources toolResources, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThread (messages As IEnumerable(Of ThreadMessageOptions), toolResources As ToolResources, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgentThread)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;</ReturnType>
       </ReturnValue>
@@ -102,7 +145,7 @@
             </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new thread. Threads contain messages and can be run by agents. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -134,7 +177,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.CreateThreadAsync(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.CreateThreadAsync(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -144,17 +187,60 @@
       </Docs>
     </Member>
     <Member MemberName="CreateThreadAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.CreateThreadAsync(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThreadAsync (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" />
+      <MemberSignature Language="F#" Value="abstract member CreateThreadAsync : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;&#xA;override this.CreateThreadAsync : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;" Usage="threads.CreateThreadAsync (messages, toolResources, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="messages"> The initial messages to associate with the new thread. </param>
+        <param name="toolResources">
+            A set of resources that are made available to the agent's tools in this thread. The resources are specific to the
+            type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires
+            a list of vector store IDs.
+            </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new thread. Threads contain messages and can be run by agents. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateThreadAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync(class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.CreateThreadAsync(System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThreadAsync (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThreadAsync (Optional messages As IEnumerable(Of ThreadMessageOptions) = Nothing, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateThreadAsync : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;&#xA;override this.CreateThreadAsync : seq&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;" Usage="threads.CreateThreadAsync (messages, toolResources, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; CreateThreadAsync (System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ThreadMessageOptions&gt; messages, Azure.AI.Agents.Persistent.ToolResources toolResources, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateThreadAsync (messages As IEnumerable(Of ThreadMessageOptions), toolResources As ToolResources, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgentThread))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -173,7 +259,7 @@
             </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new thread. Threads contain messages and can be run by agents. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -261,14 +347,10 @@
       </Parameters>
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets information about an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.GetThread(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -299,7 +381,7 @@
       </Parameters>
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets information about an existing thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -307,6 +389,7 @@
           <paramref name="threadId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetThreadAsync">
@@ -330,14 +413,10 @@
       </Parameters>
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets information about an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.GetThreadAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -368,7 +447,7 @@
       </Parameters>
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets information about an existing thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -376,6 +455,7 @@
           <paramref name="threadId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetThreads">
@@ -488,14 +568,10 @@
       <Docs>
         <param name="threadId"> The ID of the thread to modify. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.UpdateThread(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -506,17 +582,64 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateThread">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread(string threadId, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.UpdateThread(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThread (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" />
+      <MemberSignature Language="F#" Value="abstract member UpdateThread : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&#xA;override this.UpdateThread : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;" Usage="threads.UpdateThread (threadId, toolResources, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> The ID of the thread to modify. </param>
+        <param name="toolResources">
+            A set of resources that are made available to the agent's tools in this thread. The resources are specific to the
+            type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires
+            a list of vector store IDs
+            </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateThread">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread(string threadId, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.UpdateThread(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThread (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThread (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentThread)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateThread : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&#xA;override this.UpdateThread : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;" Usage="threads.UpdateThread (threadId, toolResources, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt; UpdateThread (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThread (threadId As String, toolResources As ToolResources, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgentThread)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;</ReturnType>
       </ReturnValue>
@@ -535,7 +658,7 @@
             </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -567,14 +690,10 @@
       <Docs>
         <param name="threadId"> The ID of the thread to modify. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.Threads.UpdateThreadAsync(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -585,17 +704,64 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateThreadAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync(string threadId, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.UpdateThreadAsync(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThreadAsync (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" />
+      <MemberSignature Language="F#" Value="abstract member UpdateThreadAsync : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;&#xA;override this.UpdateThreadAsync : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;" Usage="threads.UpdateThreadAsync (threadId, toolResources, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> The ID of the thread to modify. </param>
+        <param name="toolResources">
+            A set of resources that are made available to the agent's tools in this thread. The resources are specific to the
+            type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires
+            a list of vector store IDs
+            </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing thread. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateThreadAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync(string threadId, class Azure.AI.Agents.Persistent.ToolResources toolResources, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.Threads.UpdateThreadAsync(System.String,Azure.AI.Agents.Persistent.ToolResources,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThreadAsync (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThreadAsync (threadId As String, Optional toolResources As ToolResources = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentThread))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateThreadAsync : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;&#xA;override this.UpdateThreadAsync : string * Azure.AI.Agents.Persistent.ToolResources * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;" Usage="threads.UpdateThreadAsync (threadId, toolResources, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt; UpdateThreadAsync (string threadId, Azure.AI.Agents.Persistent.ToolResources toolResources, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateThreadAsync (threadId As String, toolResources As ToolResources, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgentThread))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentThread&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -614,7 +780,7 @@
             </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing thread. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

@@ -12,6 +12,7 @@
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmCollection</BaseTypeName>
@@ -30,8 +31,8 @@
   <Docs>
     <summary>
             A class representing a collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> and their operations.
-            Each <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> in the collection will belong to the same instance of <see cref="T:Azure.ResourceManager.Resources.TenantResource" />.
-            To get a <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection" /> instance call the GetBillingSubscriptionAliases method from an instance of <see cref="T:Azure.ResourceManager.Resources.TenantResource" />.
+            Each <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> in the collection will belong to the same instance of <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />.
+            To get a <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection" /> instance call the GetBillingSubscriptionAliases method from an instance of <see cref="T:Azure.ResourceManager.Billing.BillingAccountResource" />.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -44,12 +45,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection" /> class for mocking. </summary>
+        <summary> Initializes a new instance of BillingSubscriptionAliasCollection for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -62,8 +63,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
@@ -82,13 +83,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Creates or updates a billing subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_CreateOrUpdate</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_CreateOrUpdate. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> or <paramref name="data" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateAsync">
@@ -100,8 +101,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&gt;</ReturnType>
@@ -120,13 +121,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Creates or updates a billing subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_CreateOrUpdate</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_CreateOrUpdate. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> or <paramref name="data" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="Exists">
@@ -138,8 +139,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.Boolean&gt;</ReturnType>
@@ -153,13 +154,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Checks to see if the resource exists in azure.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="ExistsAsync">
@@ -171,8 +172,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.Boolean&gt;&gt;</ReturnType>
@@ -186,13 +187,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Checks to see if the resource exists in azure.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="Get">
@@ -204,8 +205,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
@@ -219,31 +220,29 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAll">
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll (System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection.GetAll(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAll (cancellationToken As CancellationToken) As Pageable(Of BillingSubscriptionAliasResource)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAll (cancellationToken As CancellationToken) As Pageable(Of BillingSubscriptionAliasResource)" />
       <MemberSignature Language="F#" Value="abstract member GetAll : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&#xA;override this.GetAll : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;" Usage="billingSubscriptionAliasCollection.GetAll cancellationToken" />
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll (System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAll (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of BillingSubscriptionAliasResource)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -256,9 +255,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the subscription aliases for a billing account. The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+        <summary> Back-compat parameterless overload for GA 1.2.2 callers. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -273,40 +270,83 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Azure.ResourceManager.Billing.Models.BillingSubscriptionAliasCollectionGetAllOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll (bool? includeDeleted = default, string filter = default, string orderBy = default, long? maxCount = default, long? skip = default, bool? count = default, string search = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAll(valuetype System.Nullable`1&lt;bool&gt; includeDeleted, string filter, string orderBy, valuetype System.Nullable`1&lt;int64&gt; maxCount, valuetype System.Nullable`1&lt;int64&gt; skip, valuetype System.Nullable`1&lt;bool&gt; count, string search, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection.GetAll(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAll (Optional includeDeleted As Nullable(Of Boolean) = Nothing, Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional maxCount As Nullable(Of Long) = Nothing, Optional skip As Nullable(Of Long) = Nothing, Optional count As Nullable(Of Boolean) = Nothing, Optional search As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of BillingSubscriptionAliasResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetAll : Nullable&lt;bool&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&#xA;override this.GetAll : Nullable&lt;bool&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;" Usage="billingSubscriptionAliasCollection.GetAll (includeDeleted, filter, orderBy, maxCount, skip, count, search, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="options" Type="Azure.ResourceManager.Billing.Models.BillingSubscriptionAliasCollectionGetAllOptions" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="includeDeleted" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="filter" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int64&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="count" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="search" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="7" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
-        <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
+        <param name="includeDeleted"> Can be used to get deleted billing subscriptions. </param>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="maxCount"> The top query option requests the number of items in the queried collection to be included in the result. The maximum supported value for top is 50. </param>
+        <param name="skip"> The skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. </param>
+        <param name="count"> The count query option allows clients to request a count of the matching resources included with the resources in the response. </param>
+        <param name="search"> The search query option allows clients to request items within a collection matching a free-text search expression. search is only supported for string fields. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the subscription aliases for a billing account. The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_ListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetAllAsync">
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync (System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection.GetAllAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAllAsync (cancellationToken As CancellationToken) As AsyncPageable(Of BillingSubscriptionAliasResource)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAllAsync (cancellationToken As CancellationToken) As AsyncPageable(Of BillingSubscriptionAliasResource)" />
       <MemberSignature Language="F#" Value="abstract member GetAllAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&#xA;override this.GetAllAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;" Usage="billingSubscriptionAliasCollection.GetAllAsync cancellationToken" />
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync (System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAllAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of BillingSubscriptionAliasResource)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="azure-dotnet">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -319,9 +359,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists the subscription aliases for a billing account. The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+        <summary> Back-compat parameterless overload for GA 1.2.2 callers. </summary>
         <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -336,21 +374,66 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Azure.ResourceManager.Billing.Models.BillingSubscriptionAliasCollectionGetAllOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Back-compat overload for GA 1.2.2 callers that pass an Options aggregate. </summary>
+        <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync (bool? includeDeleted = default, string filter = default, string orderBy = default, long? maxCount = default, long? skip = default, bool? count = default, string search = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt; GetAllAsync(valuetype System.Nullable`1&lt;bool&gt; includeDeleted, string filter, string orderBy, valuetype System.Nullable`1&lt;int64&gt; maxCount, valuetype System.Nullable`1&lt;int64&gt; skip, valuetype System.Nullable`1&lt;bool&gt; count, string search, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Billing.BillingSubscriptionAliasCollection.GetAllAsync(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAllAsync (Optional includeDeleted As Nullable(Of Boolean) = Nothing, Optional filter As String = Nothing, Optional orderBy As String = Nothing, Optional maxCount As Nullable(Of Long) = Nothing, Optional skip As Nullable(Of Long) = Nothing, Optional count As Nullable(Of Boolean) = Nothing, Optional search As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of BillingSubscriptionAliasResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetAllAsync : Nullable&lt;bool&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&#xA;override this.GetAllAsync : Nullable&lt;bool&gt; * string * string * Nullable&lt;int64&gt; * Nullable&lt;int64&gt; * Nullable&lt;bool&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;" Usage="billingSubscriptionAliasCollection.GetAllAsync (includeDeleted, filter, orderBy, maxCount, skip, count, search, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="options" Type="Azure.ResourceManager.Billing.Models.BillingSubscriptionAliasCollectionGetAllOptions" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="includeDeleted" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="filter" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="orderBy" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int64&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="count" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="search" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="7" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
-        <param name="options"> A property bag which contains all the parameters of this method except the LRO qualifier and request context parameter. </param>
+        <param name="includeDeleted"> Can be used to get deleted billing subscriptions. </param>
+        <param name="filter"> The filter query option allows clients to filter a collection of resources that are addressed by a request URL. </param>
+        <param name="orderBy"> The orderby query option allows clients to request resources in a particular order. </param>
+        <param name="maxCount"> The top query option requests the number of items in the queried collection to be included in the result. The maximum supported value for top is 50. </param>
+        <param name="skip"> The skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. </param>
+        <param name="count"> The count query option allows clients to request a count of the matching resources included with the resources in the response. </param>
+        <param name="search"> The search query option allows clients to request items within a collection matching a free-text search expression. search is only supported for string fields. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Lists the subscription aliases for a billing account. The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_ListByBillingAccount</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_ListByBillingAccount. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -363,8 +446,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&gt;</ReturnType>
@@ -378,13 +461,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a subscription by its alias ID.  The operation is supported for seat based billing subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetIfExists">
@@ -397,26 +480,27 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.NullableResponse&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="aliasName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="aliasName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="aliasName"> The ID that uniquely identifies a subscription alias. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Tries to get details for this resource from the service.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetIfExistsAsync">
@@ -429,26 +513,27 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.NullableResponse&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="aliasName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="aliasName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="aliasName"> The ID that uniquely identifies a subscription alias. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Tries to get details for this resource from the service.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}</description></item><item><term>Operation Id</term><description>BillingSubscriptionsAliases_Get</description></item><item><term>Default Api Version</term><description>2024-04-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Billing.BillingSubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptionAliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> BillingSubscriptionAliases_Get. </description></item><item><term> Default Api Version. </term><description> 2024-04-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aliasName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aliasName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.Generic.IAsyncEnumerable&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;.GetAsyncEnumerator">
@@ -463,8 +548,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IAsyncEnumerator&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
@@ -473,7 +558,7 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> that may be used to cancel the asynchronous iteration.</param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>Returns an enumerator that iterates asynchronously through the collection.</summary>
         <returns>An enumerator that can be used to iterate asynchronously through the collection.</returns>
         <remarks>To be added.</remarks>
@@ -491,8 +576,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;Azure.ResourceManager.Billing.BillingSubscriptionAliasResource&gt;</ReturnType>
@@ -516,8 +601,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Billing</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.2.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>

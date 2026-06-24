@@ -7,13 +7,14 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to ResourceGroupResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,95 +27,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.SiteManager.Mocking.MockableSiteManagerResourceGroupResource" /> class for mocking. </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetEdgeSite">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt; GetEdgeSite (string siteName, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.SiteManager.EdgeSiteResource&gt; GetEdgeSite(string siteName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SiteManager.Mocking.MockableSiteManagerResourceGroupResource.GetEdgeSite(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEdgeSite (siteName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of EdgeSiteResource)" />
-      <MemberSignature Language="F#" Value="abstract member GetEdgeSite : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&#xA;override this.GetEdgeSite : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;" Usage="mockableSiteManagerResourceGroupResource.GetEdgeSite (siteName, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="siteName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="siteName"> Name of Site resource. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get a Site
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}</description></item><item><term>Operation Id</term><description>Site_Get</description></item><item><term>Default Api Version</term><description>2025-03-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.SiteManager.EdgeSiteResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="siteName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="siteName" /> is an empty string, and was expected to be non-empty. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName="GetEdgeSiteAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&gt; GetEdgeSiteAsync (string siteName, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&gt; GetEdgeSiteAsync(string siteName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SiteManager.Mocking.MockableSiteManagerResourceGroupResource.GetEdgeSiteAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEdgeSiteAsync (siteName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of EdgeSiteResource))" />
-      <MemberSignature Language="F#" Value="abstract member GetEdgeSiteAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&gt;&#xA;override this.GetEdgeSiteAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&gt;" Usage="mockableSiteManagerResourceGroupResource.GetEdgeSiteAsync (siteName, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.SiteManager.EdgeSiteResource&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="siteName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="siteName"> Name of Site resource. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get a Site
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}</description></item><item><term>Operation Id</term><description>Site_Get</description></item><item><term>Default Api Version</term><description>2025-03-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.SiteManager.EdgeSiteResource" /></description></item></list></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="siteName" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="siteName" /> is an empty string, and was expected to be non-empty. </exception>
-      </Docs>
-    </Member>
-    <Member MemberName="GetEdgeSites">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.SiteManager.EdgeSiteCollection GetEdgeSites ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.SiteManager.EdgeSiteCollection GetEdgeSites() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.SiteManager.Mocking.MockableSiteManagerResourceGroupResource.GetEdgeSites" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEdgeSites () As EdgeSiteCollection" />
-      <MemberSignature Language="F#" Value="abstract member GetEdgeSites : unit -&gt; Azure.ResourceManager.SiteManager.EdgeSiteCollection&#xA;override this.GetEdgeSites : unit -&gt; Azure.ResourceManager.SiteManager.EdgeSiteCollection" Usage="mockableSiteManagerResourceGroupResource.GetEdgeSites " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.ResourceManager.SiteManager.EdgeSiteCollection</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary> Gets a collection of EdgeSiteResources in the ResourceGroupResource. </summary>
-        <returns> An object representing collection of EdgeSiteResources and their operations over a EdgeSiteResource. </returns>
+        <summary> Initializes a new instance of MockableSiteManagerResourceGroupResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,20 +45,21 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.SiteManager.ResourceGroupEdgeSiteResource&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="siteName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="siteName"> The name of the Site. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Site
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}</description></item><item><term>Operation Id</term><description>Site_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.SiteManager.ResourceGroupEdgeSiteResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}. </description></item><item><term> Operation Id. </term><description> Sites_Get. </description></item><item><term> Default Api Version. </term><description> 2025-06-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -160,20 +78,21 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.SiteManager.ResourceGroupEdgeSiteResource&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="siteName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="siteName"> The name of the Site. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get a Site
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}</description></item><item><term>Operation Id</term><description>Site_Get</description></item><item><term>Default Api Version</term><description>2025-06-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.SiteManager.ResourceGroupEdgeSiteResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}. </description></item><item><term> Operation Id. </term><description> Sites_Get. </description></item><item><term> Default Api Version. </term><description> 2025-06-01. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -192,14 +111,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.SiteManager</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.SiteManager.ResourceGroupEdgeSiteCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of ResourceGroupEdgeSiteResources in the ResourceGroupResource. </summary>
-        <returns> An object representing collection of ResourceGroupEdgeSiteResources and their operations over a ResourceGroupEdgeSiteResource. </returns>
+        <summary> Gets a collection of ResourceGroupEdgeSites in the <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" />. </summary>
+        <returns> An object representing collection of ResourceGroupEdgeSites and their operations over a ResourceGroupEdgeSiteResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

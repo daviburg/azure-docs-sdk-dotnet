@@ -1,0 +1,248 @@
+<Type Name="ClientTestFixtureAttribute" FullName="Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute">
+  <TypeSignature Language="C#" Value="public class ClientTestFixtureAttribute : NUnit.Framework.NUnitAttribute, NUnit.Framework.Interfaces.IFixtureBuilder2, NUnit.Framework.Interfaces.IPreFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientTestFixtureAttribute extends NUnit.Framework.NUnitAttribute implements class NUnit.Framework.Interfaces.IFixtureBuilder, class NUnit.Framework.Interfaces.IFixtureBuilder2, class NUnit.Framework.Interfaces.IPreFilter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class ClientTestFixtureAttribute&#xA;Inherits NUnitAttribute&#xA;Implements IFixtureBuilder2, IPreFilter" />
+  <TypeSignature Language="F#" Value="type ClientTestFixtureAttribute = class&#xA;    inherit NUnitAttribute&#xA;    interface IFixtureBuilder2&#xA;    interface IFixtureBuilder&#xA;    interface IPreFilter" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.NUnitAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IFixtureBuilder</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IFixtureBuilder2</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IPreFilter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A test fixture attribute that automatically generates both synchronous and asynchronous variants of test classes.
+            This attribute creates separate test suites for sync and async execution modes, allowing tests to validate
+            both synchronous and asynchronous code paths without duplicating test logic.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientTestFixtureAttribute (params object[] additionalParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object[] additionalParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.#ctor(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ParamArray additionalParameters As Object())" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute : obj[] -&gt; Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute" Usage="new Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute additionalParameters" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="additionalParameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="additionalParameters">
+            Optional additional parameters that will be passed to the test class constructor.
+            When provided, creates separate test fixtures for each parameter value combined with sync/async modes.
+            This is useful for testing different client configurations or service versions.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildFrom">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;NUnit.Framework.Internal.TestSuite&gt; BuildFrom (NUnit.Framework.Interfaces.ITypeInfo typeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class NUnit.Framework.Internal.TestSuite&gt; BuildFrom(class NUnit.Framework.Interfaces.ITypeInfo typeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.BuildFrom(NUnit.Framework.Interfaces.ITypeInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BuildFrom (typeInfo As ITypeInfo) As IEnumerable(Of TestSuite)" />
+      <MemberSignature Language="F#" Value="abstract member BuildFrom : NUnit.Framework.Interfaces.ITypeInfo -&gt; seq&lt;NUnit.Framework.Internal.TestSuite&gt;&#xA;override this.BuildFrom : NUnit.Framework.Interfaces.ITypeInfo -&gt; seq&lt;NUnit.Framework.Internal.TestSuite&gt;" Usage="clientTestFixtureAttribute.BuildFrom typeInfo" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IFixtureBuilder.BuildFrom(NUnit.Framework.Interfaces.ITypeInfo)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;NUnit.Framework.Internal.TestSuite&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeInfo" Type="NUnit.Framework.Interfaces.ITypeInfo" />
+      </Parameters>
+      <Docs>
+        <param name="typeInfo">The type information for the test class.</param>
+        <summary>
+            Builds test suites from the specified type information using this attribute as the filter.
+            </summary>
+        <returns>An enumerable collection of test suites generated for sync and async execution modes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildFrom">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;NUnit.Framework.Internal.TestSuite&gt; BuildFrom (NUnit.Framework.Interfaces.ITypeInfo typeInfo, NUnit.Framework.Interfaces.IPreFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class NUnit.Framework.Internal.TestSuite&gt; BuildFrom(class NUnit.Framework.Interfaces.ITypeInfo typeInfo, class NUnit.Framework.Interfaces.IPreFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.BuildFrom(NUnit.Framework.Interfaces.ITypeInfo,NUnit.Framework.Interfaces.IPreFilter)" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function BuildFrom (typeInfo As ITypeInfo, filter As IPreFilter) As IEnumerable(Of TestSuite)" />
+      <MemberSignature Language="F#" Value="abstract member BuildFrom : NUnit.Framework.Interfaces.ITypeInfo * NUnit.Framework.Interfaces.IPreFilter -&gt; seq&lt;NUnit.Framework.Internal.TestSuite&gt;&#xA;override this.BuildFrom : NUnit.Framework.Interfaces.ITypeInfo * NUnit.Framework.Interfaces.IPreFilter -&gt; seq&lt;NUnit.Framework.Internal.TestSuite&gt;" Usage="clientTestFixtureAttribute.BuildFrom (typeInfo, filter)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IFixtureBuilder2.BuildFrom(NUnit.Framework.Interfaces.ITypeInfo,NUnit.Framework.Interfaces.IPreFilter)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute+&lt;BuildFrom&gt;d__5))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute+&lt;BuildFrom&gt;d__5))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;NUnit.Framework.Internal.TestSuite&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeInfo" Type="NUnit.Framework.Interfaces.ITypeInfo" />
+        <Parameter Name="filter" Type="NUnit.Framework.Interfaces.IPreFilter" />
+      </Parameters>
+      <Docs>
+        <param name="typeInfo">The type information for the test class.</param>
+        <param name="filter">The pre-filter to apply when building test suites.</param>
+        <summary>
+            Builds test suites from the specified type information, creating separate fixtures for synchronous
+            and asynchronous execution modes based on the class and method attributes.
+            </summary>
+        <returns>
+            An enumerable collection of test suites. Each suite represents either synchronous or asynchronous
+            execution mode, potentially combined with additional parameter variations.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NUnit.Framework.Interfaces.IPreFilter.IsMatch">
+      <MemberSignature Language="C#" Value="bool IPreFilter.IsMatch (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool NUnit.Framework.Interfaces.IPreFilter.IsMatch(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.NUnit#Framework#Interfaces#IPreFilter#IsMatch(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Function IsMatch (type As Type) As Boolean Implements IPreFilter.IsMatch" />
+      <MemberSignature Language="F#" Value="abstract member NUnit.Framework.Interfaces.IPreFilter.IsMatch : Type -&gt; bool&#xA;override this.NUnit.Framework.Interfaces.IPreFilter.IsMatch : Type -&gt; bool" Usage="clientTestFixtureAttribute.NUnit.Framework.Interfaces.IPreFilter.IsMatch type" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IPreFilter.IsMatch(System.Type)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type to evaluate.</param>
+        <summary>
+            Determines if a type is suitable for test fixture generation.
+            </summary>
+        <returns>Always returns <c>true</c> as all types are considered suitable for fixture generation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NUnit.Framework.Interfaces.IPreFilter.IsMatch">
+      <MemberSignature Language="C#" Value="bool IPreFilter.IsMatch (Type type, System.Reflection.MethodInfo method);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool NUnit.Framework.Interfaces.IPreFilter.IsMatch(class System.Type type, class System.Reflection.MethodInfo method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.NUnit#Framework#Interfaces#IPreFilter#IsMatch(System.Type,System.Reflection.MethodInfo)" />
+      <MemberSignature Language="VB.NET" Value="Function IsMatch (type As Type, method As MethodInfo) As Boolean Implements IPreFilter.IsMatch" />
+      <MemberSignature Language="F#" Value="abstract member NUnit.Framework.Interfaces.IPreFilter.IsMatch : Type * System.Reflection.MethodInfo -&gt; bool&#xA;override this.NUnit.Framework.Interfaces.IPreFilter.IsMatch : Type * System.Reflection.MethodInfo -&gt; bool" Usage="clientTestFixtureAttribute.NUnit.Framework.Interfaces.IPreFilter.IsMatch (type, method)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IPreFilter.IsMatch(System.Type,System.Reflection.MethodInfo)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="type">The containing type of the method.</param>
+        <param name="method">The method to evaluate.</param>
+        <summary>
+            Determines if a method is suitable for test generation.
+            </summary>
+        <returns>Always returns <c>true</c> as all methods are considered suitable for test generation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordingDirectorySuffixKey">
+      <MemberSignature Language="C#" Value="public static readonly string RecordingDirectorySuffixKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string RecordingDirectorySuffixKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.RecordingDirectorySuffixKey" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly RecordingDirectorySuffixKey As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable RecordingDirectorySuffixKey : string" Usage="Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.RecordingDirectorySuffixKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property key used to store the recording directory suffix for tests with additional parameters.
+            This helps organize test recordings when multiple parameter variations exist.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncOnlyKey">
+      <MemberSignature Language="C#" Value="public static readonly string SyncOnlyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SyncOnlyKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.SyncOnlyKey" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly SyncOnlyKey As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable SyncOnlyKey : string" Usage="Microsoft.ClientModel.TestFramework.ClientTestFixtureAttribute.SyncOnlyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property key used to mark tests that should only run synchronously.
+            This is set when a test or class is decorated with <see cref="T:Microsoft.ClientModel.TestFramework.SyncOnlyAttribute" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

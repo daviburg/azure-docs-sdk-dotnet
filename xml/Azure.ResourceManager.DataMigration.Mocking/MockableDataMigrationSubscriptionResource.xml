@@ -8,13 +8,14 @@
     <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to SubscriptionResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.SubscriptionResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,12 +27,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationSubscriptionResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableDataMigrationSubscriptionResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -44,8 +45,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationServiceNameAvailabilityResult&gt;</ReturnType>
@@ -56,12 +57,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="location"> The Azure region of the operation. </param>
-        <param name="content"> Requested name to validate. </param>
+        <param name="location"> The name of the Azure region. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             This method checks whether a proposed top-level resource name is valid and available.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/checkNameAvailability</description></item><item><term>Operation Id</term><description>Services_CheckNameAvailability</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/checkNameAvailability. </description></item><item><term> Operation Id. </term><description> ServicesOperationGroup_CheckNameAvailability. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -77,8 +78,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationServiceNameAvailabilityResult&gt;&gt;</ReturnType>
@@ -89,12 +90,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="location"> The Azure region of the operation. </param>
-        <param name="content"> Requested name to validate. </param>
+        <param name="location"> The name of the Azure region. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             This method checks whether a proposed top-level resource name is valid and available.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/checkNameAvailability</description></item><item><term>Operation Id</term><description>Services_CheckNameAvailability</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/checkNameAvailability. </description></item><item><term> Operation Id. </term><description> ServicesOperationGroup_CheckNameAvailability. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -110,8 +111,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.DataMigration.DataMigrationServiceResource&gt;</ReturnType>
@@ -123,7 +124,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/services</description></item><item><term>Operation Id</term><description>Services_List</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/services. </description></item><item><term> Operation Id. </term><description> DataMigrationServices_List. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -137,8 +138,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.DataMigrationServiceResource&gt;</ReturnType>
@@ -150,8 +151,60 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/services</description></item><item><term>Operation Id</term><description>Services_List</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/services. </description></item><item><term> Operation Id. </term><description> DataMigrationServices_List. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMigrationServices">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt; GetMigrationServices (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.DataMigration.MigrationServiceResource&gt; GetMigrationServices(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationSubscriptionResource.GetMigrationServices(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMigrationServices (Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of MigrationServiceResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetMigrationServices : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;&#xA;override this.GetMigrationServices : System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;" Usage="mockableDataMigrationSubscriptionResource.GetMigrationServices cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Retrieve all migration services in the subscriptions.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/migrationServices. </description></item><item><term> Operation Id. </term><description> MigrationServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.MigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMigrationServicesAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt; GetMigrationServicesAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.DataMigration.MigrationServiceResource&gt; GetMigrationServicesAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationSubscriptionResource.GetMigrationServicesAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMigrationServicesAsync (Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of MigrationServiceResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetMigrationServicesAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;&#xA;override this.GetMigrationServicesAsync : System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;" Usage="mockableDataMigrationSubscriptionResource.GetMigrationServicesAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.MigrationServiceResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Retrieve all migration services in the subscriptions.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/migrationServices. </description></item><item><term> Operation Id. </term><description> MigrationServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.MigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,8 +217,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationSku&gt;</ReturnType>
@@ -177,7 +230,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The skus action returns the list of SKUs that DMS (classic) supports.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/skus</description></item><item><term>Operation Id</term><description>ResourceSkus_ListSkus</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/skus. </description></item><item><term> Operation Id. </term><description> ResourceSkusOperationGroup_ListSkus. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationSku" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -191,8 +244,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationSku&gt;</ReturnType>
@@ -204,8 +257,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             The skus action returns the list of SKUs that DMS (classic) supports.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/skus</description></item><item><term>Operation Id</term><description>ResourceSkus_ListSkus</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationSku" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/skus. </description></item><item><term> Operation Id. </term><description> ResourceSkusOperationGroup_ListSkus. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationSku" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -218,8 +271,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.DataMigration.SqlMigrationServiceResource&gt;</ReturnType>
@@ -231,7 +284,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Retrieve all SQL migration services in the subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/sqlMigrationServices</description></item><item><term>Operation Id</term><description>SqlMigrationServices_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/sqlMigrationServices. </description></item><item><term> Operation Id. </term><description> SqlMigrationServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -245,8 +298,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.SqlMigrationServiceResource&gt;</ReturnType>
@@ -258,8 +311,8 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Retrieve all SQL migration services in the subscriptions.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/sqlMigrationServices</description></item><item><term>Operation Id</term><description>SqlMigrationServices_ListBySubscription</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /></description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/sqlMigrationServices. </description></item><item><term> Operation Id. </term><description> SqlMigrationServices_ListBySubscription. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -272,8 +325,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationQuota&gt;</ReturnType>
@@ -283,11 +336,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="location"> The Azure region of the operation. </param>
+        <param name="location"> The name of the Azure region. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             This method returns region-specific quotas and resource usage information for the Azure Database Migration Service (classic).
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/usages</description></item><item><term>Operation Id</term><description>Usages_List</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/usages. </description></item><item><term> Operation Id. </term><description> UsagesOperationGroup_List. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationQuota" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -301,8 +354,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.DataMigration.Models.DataMigrationQuota&gt;</ReturnType>
@@ -312,12 +365,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="location"> The Azure region of the operation. </param>
+        <param name="location"> The name of the Azure region. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             This method returns region-specific quotas and resource usage information for the Azure Database Migration Service (classic).
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/usages</description></item><item><term>Operation Id</term><description>Usages_List</description></item><item><term>Default Api Version</term><description>2025-06-30</description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationQuota" /> that may take multiple service requests to iterate over. </returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.DataMigration/locations/{location}/usages. </description></item><item><term> Operation Id. </term><description> UsagesOperationGroup_List. </description></item><item><term> Default Api Version. </term><description> 2025-09-01-preview. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.DataMigration.Models.DataMigrationQuota" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

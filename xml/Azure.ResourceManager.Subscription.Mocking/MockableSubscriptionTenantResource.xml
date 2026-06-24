@@ -9,13 +9,14 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to TenantResource. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.Resources.TenantResource" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,10 +29,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionTenantResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableSubscriptionTenantResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -45,6 +47,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
@@ -59,17 +62,17 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="subscriptionId"> Subscription Id. </param>
-        <param name="content"> The <see cref="T:Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent" /> to use. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Accept subscription ownership.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership</description></item><item><term>Operation Id</term><description>Subscription_AcceptOwnership</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership. </description></item><item><term> Operation Id. </term><description> SubscriptionOperationGroup_AcceptOwnership. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="AcceptSubscriptionOwnershipAsync">
@@ -82,6 +85,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
@@ -96,17 +100,81 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="subscriptionId"> Subscription Id. </param>
-        <param name="content"> The <see cref="T:Azure.ResourceManager.Subscription.Models.AcceptOwnershipContent" /> to use. </param>
+        <param name="content"> The request body. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Accept subscription ownership.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership</description></item><item><term>Operation Id</term><description>Subscription_AcceptOwnership</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership. </description></item><item><term> Operation Id. </term><description> SubscriptionOperationGroup_AcceptOwnership. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTargetDirectory">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response AcceptTargetDirectory (string subscriptionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response AcceptTargetDirectory(string subscriptionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionTenantResource.AcceptTargetDirectory(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AcceptTargetDirectory (subscriptionId As String, Optional cancellationToken As CancellationToken = Nothing) As Response" />
+      <MemberSignature Language="F#" Value="abstract member AcceptTargetDirectory : string * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.AcceptTargetDirectory : string * System.Threading.CancellationToken -&gt; Azure.Response" Usage="mockableSubscriptionTenantResource.AcceptTargetDirectory (subscriptionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionId"> Subscription Id. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The operation to accept Subscription Changed Request
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptChangeTenant. </description></item><item><term> Operation Id. </term><description> SubscriptionsOperationGroup_AcceptTargetDirectory. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTargetDirectoryAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; AcceptTargetDirectoryAsync (string subscriptionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; AcceptTargetDirectoryAsync(string subscriptionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionTenantResource.AcceptTargetDirectoryAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AcceptTargetDirectoryAsync (subscriptionId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member AcceptTargetDirectoryAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.AcceptTargetDirectoryAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="mockableSubscriptionTenantResource.AcceptTargetDirectoryAsync (subscriptionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionId"> Subscription Id. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The operation to accept Subscription Changed Request
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptChangeTenant. </description></item><item><term> Operation Id. </term><description> SubscriptionsOperationGroup_AcceptTargetDirectory. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAcceptOwnershipStatus">
@@ -119,6 +187,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Subscription.Models.AcceptOwnershipStatus&gt;</ReturnType>
@@ -132,13 +201,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Accept subscription ownership status.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnershipStatus</description></item><item><term>Operation Id</term><description>Subscription_AcceptOwnershipStatus</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnershipStatus. </description></item><item><term> Operation Id. </term><description> SubscriptionOperationGroup_AcceptOwnershipStatus. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAcceptOwnershipStatusAsync">
@@ -151,6 +220,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.Models.AcceptOwnershipStatus&gt;&gt;</ReturnType>
@@ -164,13 +234,13 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Accept subscription ownership status.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnershipStatus</description></item><item><term>Operation Id</term><description>Subscription_AcceptOwnershipStatus</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnershipStatus. </description></item><item><term> Operation Id. </term><description> SubscriptionOperationGroup_AcceptOwnershipStatus. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetBillingAccountPolicies">
@@ -183,7 +253,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.BillingAccountPolicyCollection</ReturnType>
       </ReturnValue>
@@ -204,7 +281,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Subscription.BillingAccountPolicyResource&gt;</ReturnType>
       </ReturnValue>
@@ -217,7 +301,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Billing Account Policy.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Subscription/policies/default</description></item><item><term>Operation Id</term><description>BillingAccount_GetPolicy</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /></description></item></list></summary>
+            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Subscription/policies/default</description></item><item><term>Operation Id</term><description>BillingAccount_GetPolicy</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /></description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -236,7 +320,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.BillingAccountPolicyResource&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -249,7 +340,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Billing Account Policy.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Subscription/policies/default</description></item><item><term>Operation Id</term><description>BillingAccount_GetPolicy</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /></description></item></list></summary>
+            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Subscription/policies/default</description></item><item><term>Operation Id</term><description>BillingAccount_GetPolicy</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /></description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -268,6 +359,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Subscription.SubscriptionAliasResource&gt;</ReturnType>
@@ -281,7 +373,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Alias Subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/aliases/{aliasName}</description></item><item><term>Operation Id</term><description>Alias_Get</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/aliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> SubscriptionAliasResponses_Get. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -300,6 +392,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.SubscriptionAliasResource&gt;&gt;</ReturnType>
@@ -313,7 +406,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Get Alias Subscription.
-            <list type="bullet"><item><term>Request Path</term><description>/providers/Microsoft.Subscription/aliases/{aliasName}</description></item><item><term>Operation Id</term><description>Alias_Get</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/aliases/{aliasName}. </description></item><item><term> Operation Id. </term><description> SubscriptionAliasResponses_Get. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -332,14 +425,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.SubscriptionAliasCollection</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of SubscriptionAliasResources in the TenantResource. </summary>
-        <returns> An object representing collection of SubscriptionAliasResources and their operations over a SubscriptionAliasResource. </returns>
+        <summary> Gets a collection of SubscriptionAliases in the <see cref="T:Azure.ResourceManager.Resources.TenantResource" />. </summary>
+        <returns> An object representing collection of SubscriptionAliases and their operations over a SubscriptionAliasResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -353,15 +447,82 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.TenantPolicyResource</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets an object representing a TenantPolicyResource along with the instance operations that can be performed on it in the TenantResource. </summary>
+        <summary>
+            Get the subscription tenant policy for the user's tenant.
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/policies/default. </description></item><item><term> Operation Id. </term><description> GetTenantPolicyResponses_GetPolicyForTenant. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" />. </description></item></list></summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryStatus">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt; TargetDirectoryStatus (string subscriptionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt; TargetDirectoryStatus(string subscriptionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionTenantResource.TargetDirectoryStatus(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function TargetDirectoryStatus (subscriptionId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of TargetDirectoryResultProperties)" />
+      <MemberSignature Language="F#" Value="abstract member TargetDirectoryStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&#xA;override this.TargetDirectoryStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;" Usage="mockableSubscriptionTenantResource.TargetDirectoryStatus (subscriptionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionId"> Subscription Id. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The operation for Acceptor to view the accepted request
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/changeTenantStatus. </description></item><item><term> Operation Id. </term><description> SubscriptionsOperationGroup_TargetDirectoryStatus. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDirectoryStatusAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&gt; TargetDirectoryStatusAsync (string subscriptionId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&gt; TargetDirectoryStatusAsync(string subscriptionId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionTenantResource.TargetDirectoryStatusAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function TargetDirectoryStatusAsync (subscriptionId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of TargetDirectoryResultProperties))" />
+      <MemberSignature Language="F#" Value="abstract member TargetDirectoryStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&gt;&#xA;override this.TargetDirectoryStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&gt;" Usage="mockableSubscriptionTenantResource.TargetDirectoryStatusAsync (subscriptionId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Subscription.Models.TargetDirectoryResultProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionId"> Subscription Id. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            The operation for Acceptor to view the accepted request
+            <list type="bullet"><item><term> Request Path. </term><description> /providers/Microsoft.Subscription/subscriptions/{subscriptionId}/changeTenantStatus. </description></item><item><term> Operation Id. </term><description> SubscriptionsOperationGroup_TargetDirectoryStatus. </description></item><item><term> Default Api Version. </term><description> 2025-11-01-preview. </description></item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subscriptionId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subscriptionId" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,532 @@
+<Type Name="ComputeBulkActionsOSDisk" FullName="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk">
+  <TypeSignature Language="C#" Value="public class ComputeBulkActionsOSDisk : System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;, System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComputeBulkActionsOSDisk extends System.Object implements class System.ClientModel.Primitives.IJsonModel`1&lt;class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;, class System.ClientModel.Primitives.IPersistableModel`1&lt;class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;" />
+  <TypeSignature Language="DocId" Value="T:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" />
+  <TypeSignature Language="VB.NET" Value="Public Class ComputeBulkActionsOSDisk&#xA;Implements IJsonModel(Of ComputeBulkActionsOSDisk), IPersistableModel(Of ComputeBulkActionsOSDisk)" />
+  <TypeSignature Language="F#" Value="type ComputeBulkActionsOSDisk = class&#xA;    interface IJsonModel&lt;ComputeBulkActionsOSDisk&gt;&#xA;    interface IPersistableModel&lt;ComputeBulkActionsOSDisk&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary> Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview). </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComputeBulkActionsOSDisk (Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType createOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType createOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.#ctor(Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (createOption As ComputeBulkActionsDiskCreateOptionType)" />
+      <MemberSignature Language="F#" Value="new Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" Usage="new Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk createOption" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="createOption" Type="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType" />
+      </Parameters>
+      <Docs>
+        <param name="createOption"> Specifies how the virtual machine disk should be created. Possible values are Attach, FromImage. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described. </param>
+        <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caching">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCachingType? Caching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCachingType&gt; Caching" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.Caching" />
+      <MemberSignature Language="VB.NET" Value="Public Property Caching As Nullable(Of ComputeBulkActionsCachingType)" />
+      <MemberSignature Language="F#" Value="member this.Caching : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCachingType&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.Caching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsCachingType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the caching requirements. Possible values are: None, ReadOnly, ReadWrite. The defaulting behavior is: None for Standard storage. ReadOnly for Premium storage. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOption">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType CreateOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType CreateOption" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.CreateOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property CreateOption As ComputeBulkActionsDiskCreateOptionType" />
+      <MemberSignature Language="F#" Value="member this.CreateOption : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.CreateOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskCreateOptionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies how the virtual machine disk should be created. Possible values are Attach, FromImage. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteOption">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskDeleteOptionType? DeleteOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskDeleteOptionType&gt; DeleteOption" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DeleteOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeleteOption As Nullable(Of ComputeBulkActionsDiskDeleteOptionType)" />
+      <MemberSignature Language="F#" Value="member this.DeleteOption : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskDeleteOptionType&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DeleteOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskDeleteOptionType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies whether OS Disk should be deleted or detached upon VM deletion. Possible values are: Delete, Detach. The default value is set to Detach. For an ephemeral OS Disk, the default value is set to Delete. The user cannot change the delete option for an ephemeral OS Disk. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiffDiskSettings">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiffDiskSettings DiffDiskSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiffDiskSettings DiffDiskSettings" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DiffDiskSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property DiffDiskSettings As ComputeBulkActionsDiffDiskSettings" />
+      <MemberSignature Language="F#" Value="member this.DiffDiskSettings : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiffDiskSettings with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DiffDiskSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiffDiskSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiskSizeGB">
+      <MemberSignature Language="C#" Value="public int? DiskSizeGB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; DiskSizeGB" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DiskSizeGB" />
+      <MemberSignature Language="VB.NET" Value="Public Property DiskSizeGB As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.DiskSizeGB : Nullable&lt;int&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.DiskSizeGB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. The property 'diskSizeGB' is the number of bytes x 1024^3 for the disk and the value cannot be larger than 1023. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionSettings">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskEncryptionSettings EncryptionSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskEncryptionSettings EncryptionSettings" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.EncryptionSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property EncryptionSettings As ComputeBulkActionsDiskEncryptionSettings" />
+      <MemberSignature Language="F#" Value="member this.EncryptionSettings : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskEncryptionSettings with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.EncryptionSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsDiskEncryptionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the encryption settings for the OS Disk. Minimum compute api-version: 2015-06-15. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUri">
+      <MemberSignature Language="C#" Value="public string ImageUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUri" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.ImageUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ImageUri As String" />
+      <MemberSignature Language="F#" Value="member this.ImageUri : string with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.ImageUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the virtual hard disk's uri. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWriteAcceleratorEnabled">
+      <MemberSignature Language="C#" Value="public bool? IsWriteAcceleratorEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsWriteAcceleratorEnabled" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.IsWriteAcceleratorEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsWriteAcceleratorEnabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.IsWriteAcceleratorEnabled : Nullable&lt;bool&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.IsWriteAcceleratorEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies whether writeAccelerator should be enabled or disabled on the disk. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk JsonModelCreateCore (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk JsonModelCreateCore(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.JsonModelCreateCore(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function JsonModelCreateCore (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As ComputeBulkActionsOSDisk" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&#xA;override this.JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" Usage="computeBulkActionsOSDisk.JsonModelCreateCore (reader, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual void JsonModelWriteCore (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void JsonModelWriteCore(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.JsonModelWriteCore(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub JsonModelWriteCore (writer As Utf8JsonWriter, options As ModelReaderWriterOptions)" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="computeBulkActionsOSDisk.JsonModelWriteCore (writer, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagedDisk">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsManagedDiskInfo ManagedDisk { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsManagedDiskInfo ManagedDisk" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.ManagedDisk" />
+      <MemberSignature Language="VB.NET" Value="Public Property ManagedDisk As ComputeBulkActionsManagedDiskInfo" />
+      <MemberSignature Language="F#" Value="member this.ManagedDisk : Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsManagedDiskInfo with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.ManagedDisk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsManagedDiskInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The managed disk parameters. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> The disk name. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OsType">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOperatingSystemType? OsType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOperatingSystemType&gt; OsType" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.OsType" />
+      <MemberSignature Language="VB.NET" Value="Public Property OsType As Nullable(Of ComputeBulkActionsOperatingSystemType)" />
+      <MemberSignature Language="F#" Value="member this.OsType : Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOperatingSystemType&gt; with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.OsType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOperatingSystemType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. Possible values are: Windows, Linux. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk PersistableModelCreateCore (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk PersistableModelCreateCore(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.PersistableModelCreateCore(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelCreateCore (data As BinaryData, options As ModelReaderWriterOptions) As ComputeBulkActionsOSDisk" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&#xA;override this.PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" Usage="computeBulkActionsOSDisk.PersistableModelCreateCore (data, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual BinaryData PersistableModelWriteCore (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.BinaryData PersistableModelWriteCore(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.PersistableModelWriteCore(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelWriteCore (options As ModelReaderWriterOptions) As BinaryData" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="computeBulkActionsOSDisk.PersistableModelWriteCore options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk IJsonModel&lt;ComputeBulkActionsOSDisk&gt;.Create (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsOSDisk&gt;#Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As ComputeBulkActionsOSDisk Implements IJsonModel(Of ComputeBulkActionsOSDisk).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" Usage="computeBulkActionsOSDisk.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create (reader, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write">
+      <MemberSignature Language="C#" Value="void IJsonModel&lt;ComputeBulkActionsOSDisk&gt;.Write (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsOSDisk&gt;#Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Sub Write (writer As Utf8JsonWriter, options As ModelReaderWriterOptions) Implements IJsonModel(Of ComputeBulkActionsOSDisk).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="computeBulkActionsOSDisk.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write (writer, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk IPersistableModel&lt;ComputeBulkActionsOSDisk&gt;.Create (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsOSDisk&gt;#Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (data As BinaryData, options As ModelReaderWriterOptions) As ComputeBulkActionsOSDisk Implements IPersistableModel(Of ComputeBulkActionsOSDisk).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk" Usage="computeBulkActionsOSDisk.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Create (data, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions">
+      <MemberSignature Language="C#" Value="string IPersistableModel&lt;ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsOSDisk&gt;#GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function GetFormatFromOptions (options As ModelReaderWriterOptions) As String Implements IPersistableModel(Of ComputeBulkActionsOSDisk).GetFormatFromOptions" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string" Usage="computeBulkActionsOSDisk.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.GetFormatFromOptions options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write">
+      <MemberSignature Language="C#" Value="BinaryData IPersistableModel&lt;ComputeBulkActionsOSDisk&gt;.Write (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.BinaryData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#ComputeBulkActions#Models#ComputeBulkActionsOSDisk&gt;#Write(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Write (options As ModelReaderWriterOptions) As BinaryData Implements IPersistableModel(Of ComputeBulkActionsOSDisk).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="computeBulkActionsOSDisk.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk&gt;.Write options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Write(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VhdUri">
+      <MemberSignature Language="C#" Value="public string VhdUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VhdUri" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.VhdUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property VhdUri As String" />
+      <MemberSignature Language="F#" Value="member this.VhdUri : string with get, set" Usage="Azure.ResourceManager.ComputeBulkActions.Models.ComputeBulkActionsOSDisk.VhdUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.ComputeBulkActions</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary> Specifies the virtual hard disk's uri. </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

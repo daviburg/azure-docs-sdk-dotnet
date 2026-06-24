@@ -34,6 +34,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextAnalysisClient (Azure.AI.Language.Text.TextAnalysisClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.AI.Language.Text.TextAnalysisClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.#ctor(Azure.AI.Language.Text.TextAnalysisClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As TextAnalysisClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.AI.Language.Text.TextAnalysisClient : Azure.AI.Language.Text.TextAnalysisClientSettings -&gt; Azure.AI.Language.Text.TextAnalysisClient" Usage="new Azure.AI.Language.Text.TextAnalysisClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.AI.Language.Text.TextAnalysisClientSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for TextAnalysisClient. </param>
+        <summary> Initializes a new instance of TextAnalysisClient from a <see cref="T:Azure.AI.Language.Text.TextAnalysisClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public TextAnalysisClient (Uri endpoint, Azure.AzureKeyCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.AzureKeyCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.#ctor(System.Uri,Azure.AzureKeyCredential)" />
@@ -49,8 +69,8 @@
         <Parameter Name="credential" Type="Azure.AzureKeyCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of TextAnalysisClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -73,8 +93,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of TextAnalysisClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -98,8 +118,8 @@
         <Parameter Name="options" Type="Azure.AI.Language.Text.TextAnalysisClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Supported Cognitive Services endpoint (e.g., https://&lt;resource-name&gt;.api.cognitiveservices.azure.com). </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of TextAnalysisClient. </summary>
         <remarks>To be added.</remarks>
@@ -155,12 +175,10 @@
       <Docs>
         <param name="analyzeTextInput"> The input documents to analyze. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Request text analysis over a collection of documents. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeTextInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeText.
 <code><![CDATA[
@@ -502,6 +520,9 @@ AnalyzeTextInput analyzeTextInput = new TextSentimentAnalysisInput
 };
 Response<AnalyzeTextResult> response = client.AnalyzeText(analyzeTextInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeTextInput" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeText">
@@ -526,19 +547,12 @@ Response<AnalyzeTextResult> response = client.AnalyzeText(analyzeTextInput);
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Request text analysis over a collection of documents.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeText(Azure.AI.Language.Text.AnalyzeTextInput,System.Nullable{System.Boolean},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeText and parse the result.
 <code><![CDATA[
@@ -1084,6 +1098,9 @@ Response response = client.AnalyzeText(content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("kind").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeTextAsync">
@@ -1108,12 +1125,10 @@ Console.WriteLine(result.GetProperty("kind").ToString());
       <Docs>
         <param name="analyzeTextInput"> The input documents to analyze. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Request text analysis over a collection of documents. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="analyzeTextInput" /> is null. </exception>
         <example>
 This sample shows how to call AnalyzeTextAsync.
 <code><![CDATA[
@@ -1455,6 +1470,9 @@ AnalyzeTextInput analyzeTextInput = new TextSentimentAnalysisInput
 };
 Response<AnalyzeTextResult> response = await client.AnalyzeTextAsync(analyzeTextInput);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="analyzeTextInput" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeTextAsync">
@@ -1479,19 +1497,12 @@ Response<AnalyzeTextResult> response = await client.AnalyzeTextAsync(analyzeText
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="showStatistics"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Request text analysis over a collection of documents.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextAsync(Azure.AI.Language.Text.AnalyzeTextInput,System.Nullable{System.Boolean},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeTextAsync and parse the result.
 <code><![CDATA[
@@ -2037,14 +2048,17 @@ Response response = await client.AnalyzeTextAsync(content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("kind").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextCancelOperation">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextCancelOperation (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextCancelOperation(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelOperation(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelOperation (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelOperation : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.AnalyzeTextCancelOperation : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextCancelOperation (waitUntil, jobId, context)" />
+    <Member MemberName="AnalyzeTextCancelJob">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextCancelJob (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextCancelJob(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelJob(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelJob (waitUntil As WaitUntil, jobId As Guid, context As RequestContext) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelJob : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.AnalyzeTextCancelJob : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextCancelJob (waitUntil, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -2062,32 +2076,47 @@ Console.WriteLine(result.GetProperty("kind").ToString());
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="jobId"> The job ID to cancel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Cancel a long-running Text Analysis job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Cancel a long-running Text Analysis job. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextCancelOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Operation operation = client.AnalyzeTextCancelOperation(WaitUntil.Completed, Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code></example>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextCancelOperationAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextCancelOperationAsync (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextCancelOperationAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelOperationAsync(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelOperationAsync (waitUntil As WaitUntil, jobId As Guid, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelOperationAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextCancelOperationAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextCancelOperationAsync (waitUntil, jobId, context)" />
+    <Member MemberName="AnalyzeTextCancelJob">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextCancelJob (Azure.WaitUntil waitUntil, Guid jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextCancelJob(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelJob(Azure.WaitUntil,System.Guid,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelJob (waitUntil As WaitUntil, jobId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelJob : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.AnalyzeTextCancelJob : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextCancelJob (waitUntil, jobId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Operation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="jobId"> The job ID to cancel. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Cancel a long-running Text Analysis job. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextCancelJobAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextCancelJobAsync (Azure.WaitUntil waitUntil, Guid jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextCancelJobAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelJobAsync(Azure.WaitUntil,System.Guid,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelJobAsync (waitUntil As WaitUntil, jobId As Guid, context As RequestContext) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelJobAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextCancelJobAsync : Azure.WaitUntil * Guid * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextCancelJobAsync (waitUntil, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -2105,39 +2134,190 @@ Operation operation = client.AnalyzeTextCancelOperation(WaitUntil.Completed, Gui
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="jobId"> The job ID to cancel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Cancel a long-running Text Analysis job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Cancel a long-running Text Analysis job. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextCancelOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Operation operation = await client.AnalyzeTextCancelOperationAsync(WaitUntil.Completed, Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code></example>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextOperation">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt; AnalyzeTextOperation (Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationState&gt; AnalyzeTextOperation(class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperation(Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperation (textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of AnalyzeTextOperationState)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperation : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&#xA;override this.AnalyzeTextOperation : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;" Usage="textAnalysisClient.AnalyzeTextOperation (textInput, actions, displayName, defaultLanguage, cancellationToken)" />
+    <Member MemberName="AnalyzeTextCancelJobAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextCancelJobAsync (Azure.WaitUntil waitUntil, Guid jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextCancelJobAsync(valuetype Azure.WaitUntil waitUntil, valuetype System.Guid jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextCancelJobAsync(Azure.WaitUntil,System.Guid,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextCancelJobAsync (waitUntil As WaitUntil, jobId As Guid, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextCancelJobAsync : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextCancelJobAsync : Azure.WaitUntil * Guid * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextCancelJobAsync (waitUntil, jobId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Operation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="jobId"> The job ID to cancel. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Cancel a long-running Text Analysis job. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextJobStatus">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response AnalyzeTextJobStatus (Guid jobId, bool? showStats, int? top, int? skip, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response AnalyzeTextJobStatus(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextJobStatus(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextJobStatus (jobId As Guid, showStats As Nullable(Of Boolean), top As Nullable(Of Integer), skip As Nullable(Of Integer), context As RequestContext) As Response" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextJobStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Response&#xA;override this.AnalyzeTextJobStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Response" Usage="textAnalysisClient.AnalyzeTextJobStatus (jobId, showStats, top, skip, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="context" Type="Azure.RequestContext" />
+      </Parameters>
+      <Docs>
+        <param name="jobId"> job ID. </param>
+        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
+        <param name="top"> The maximum number of resources to return from the collection. </param>
+        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextJobStatus">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt; AnalyzeTextJobStatus (Guid jobId, bool? showStats = default, int? top = default, int? skip = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextJobState&gt; AnalyzeTextJobStatus(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextJobStatus(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextJobStatus (jobId As Guid, Optional showStats As Nullable(Of Boolean) = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of AnalyzeTextJobState)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextJobStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&#xA;override this.AnalyzeTextJobStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;" Usage="textAnalysisClient.AnalyzeTextJobStatus (jobId, showStats, top, skip, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="jobId"> job ID. </param>
+        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
+        <param name="top"> The maximum number of resources to return from the collection. </param>
+        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextJobStatusAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; AnalyzeTextJobStatusAsync (Guid jobId, bool? showStats, int? top, int? skip, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; AnalyzeTextJobStatusAsync(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextJobStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextJobStatusAsync (jobId As Guid, showStats As Nullable(Of Boolean), top As Nullable(Of Integer), skip As Nullable(Of Integer), context As RequestContext) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextJobStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.AnalyzeTextJobStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="textAnalysisClient.AnalyzeTextJobStatusAsync (jobId, showStats, top, skip, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="context" Type="Azure.RequestContext" />
+      </Parameters>
+      <Docs>
+        <param name="jobId"> job ID. </param>
+        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
+        <param name="top"> The maximum number of resources to return from the collection. </param>
+        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary>
+            [Protocol Method] Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task.
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextJobStatusAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt; AnalyzeTextJobStatusAsync (Guid jobId, bool? showStats = default, int? top = default, int? skip = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt; AnalyzeTextJobStatusAsync(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextJobStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextJobStatusAsync (jobId As Guid, Optional showStats As Nullable(Of Boolean) = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of AnalyzeTextJobState))" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextJobStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;&#xA;override this.AnalyzeTextJobStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;" Usage="textAnalysisClient.AnalyzeTextJobStatusAsync (jobId, showStats, top, skip, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Guid" />
+        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="jobId"> job ID. </param>
+        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
+        <param name="top"> The maximum number of resources to return from the collection. </param>
+        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeTextOperation">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt; AnalyzeTextOperation (Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextJobState&gt; AnalyzeTextOperation(class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperation(Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperation (textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of AnalyzeTextJobState)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperation : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&#xA;override this.AnalyzeTextOperation : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;" Usage="textAnalysisClient.AnalyzeTextOperation (textInput, actions, displayName, defaultLanguage, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="textInput" Type="Azure.AI.Language.Text.MultiLanguageTextInput" />
@@ -2160,18 +2340,18 @@ Operation operation = await client.AnalyzeTextCancelOperationAsync(WaitUntil.Com
       </Docs>
     </Member>
     <Member MemberName="AnalyzeTextOperationAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt; AnalyzeTextOperationAsync (Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt; AnalyzeTextOperationAsync(class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt; AnalyzeTextOperationAsync (Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt; AnalyzeTextOperationAsync(class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationAsync(Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationAsync (textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of AnalyzeTextOperationState))" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationAsync : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;&#xA;override this.AnalyzeTextOperationAsync : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;" Usage="textAnalysisClient.AnalyzeTextOperationAsync (textInput, actions, displayName, defaultLanguage, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationAsync (textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of AnalyzeTextJobState))" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationAsync : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;&#xA;override this.AnalyzeTextOperationAsync : Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;" Usage="textAnalysisClient.AnalyzeTextOperationAsync (textInput, actions, displayName, defaultLanguage, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextJobState&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="textInput" Type="Azure.AI.Language.Text.MultiLanguageTextInput" />
@@ -2193,418 +2373,12 @@ Operation operation = await client.AnalyzeTextCancelOperationAsync(WaitUntil.Com
           <paramref name="textInput" /> or <paramref name="actions" /> is null. </exception>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextOperationStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response AnalyzeTextOperationStatus (Guid jobId, bool? showStats, int? top, int? skip, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response AnalyzeTextOperationStatus(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatus(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationStatus (jobId As Guid, showStats As Nullable(Of Boolean), top As Nullable(Of Integer), skip As Nullable(Of Integer), context As RequestContext) As Response" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Response&#xA;override this.AnalyzeTextOperationStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Response" Usage="textAnalysisClient.AnalyzeTextOperationStatus (jobId, showStats, top, skip, context)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Response</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="jobId" Type="System.Guid" />
-        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="context" Type="Azure.RequestContext" />
-      </Parameters>
-      <Docs>
-        <param name="jobId"> job ID. </param>
-        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="top"> The maximum number of resources to return from the collection. </param>
-        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Get analysis status and results
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatus(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The response returned from the service. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextOperationStatus and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = client.AnalyzeTextOperationStatus(Guid.Parse("15e4a46b-62e2-4386-8d36-9c2a92bb45dd"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = client.AnalyzeTextOperationStatus(Guid.Parse("1780194a-e9c1-4298-b0d4-fdc59ba818a0"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code></example>
-      </Docs>
-    </Member>
-    <Member MemberName="AnalyzeTextOperationStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt; AnalyzeTextOperationStatus (Guid jobId, bool? showStats = default, int? top = default, int? skip = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationState&gt; AnalyzeTextOperationStatus(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatus(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationStatus (jobId As Guid, Optional showStats As Nullable(Of Boolean) = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of AnalyzeTextOperationState)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&#xA;override this.AnalyzeTextOperationStatus : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;" Usage="textAnalysisClient.AnalyzeTextOperationStatus (jobId, showStats, top, skip, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="jobId" Type="System.Guid" />
-        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="jobId"> job ID. </param>
-        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="top"> The maximum number of resources to return from the collection. </param>
-        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Get analysis status and results. </summary>
-        <returns>To be added.</returns>
-        <remarks> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </remarks>
-        <example>
-This sample shows how to call AnalyzeTextOperationStatus.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = client.AnalyzeTextOperationStatus(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = client.AnalyzeTextOperationStatus(Guid.Parse("15e4a46b-62e2-4386-8d36-9c2a92bb45dd"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatus.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = client.AnalyzeTextOperationStatus(Guid.Parse("1780194a-e9c1-4298-b0d4-fdc59ba818a0"));
-]]></code></example>
-      </Docs>
-    </Member>
-    <Member MemberName="AnalyzeTextOperationStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; AnalyzeTextOperationStatusAsync (Guid jobId, bool? showStats, int? top, int? skip, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; AnalyzeTextOperationStatusAsync(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationStatusAsync (jobId As Guid, showStats As Nullable(Of Boolean), top As Nullable(Of Integer), skip As Nullable(Of Integer), context As RequestContext) As Task(Of Response)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.AnalyzeTextOperationStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="textAnalysisClient.AnalyzeTextOperationStatusAsync (jobId, showStats, top, skip, context)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="jobId" Type="System.Guid" />
-        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="context" Type="Azure.RequestContext" />
-      </Parameters>
-      <Docs>
-        <param name="jobId"> job ID. </param>
-        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="top"> The maximum number of resources to return from the collection. </param>
-        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Get analysis status and results
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The response returned from the service. </returns>
-        <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextOperationStatusAsync and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("15e4a46b-62e2-4386-8d36-9c2a92bb45dd"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync and parse the result.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("1780194a-e9c1-4298-b0d4-fdc59ba818a0"), null, null, null, null);
-
-JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
-Console.WriteLine(result.GetProperty("createdDateTime").ToString());
-Console.WriteLine(result.GetProperty("jobId").ToString());
-Console.WriteLine(result.GetProperty("lastUpdatedDateTime").ToString());
-Console.WriteLine(result.GetProperty("status").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("completed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("failed").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("inProgress").ToString());
-Console.WriteLine(result.GetProperty("tasks").GetProperty("total").ToString());
-]]></code></example>
-      </Docs>
-    </Member>
-    <Member MemberName="AnalyzeTextOperationStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt; AnalyzeTextOperationStatusAsync (Guid jobId, bool? showStats = default, int? top = default, int? skip = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt; AnalyzeTextOperationStatusAsync(valuetype System.Guid jobId, valuetype System.Nullable`1&lt;bool&gt; showStats, valuetype System.Nullable`1&lt;int32&gt; top, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextOperationStatusAsync(System.Guid,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextOperationStatusAsync (jobId As Guid, Optional showStats As Nullable(Of Boolean) = Nothing, Optional top As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of AnalyzeTextOperationState))" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextOperationStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;&#xA;override this.AnalyzeTextOperationStatusAsync : Guid * Nullable&lt;bool&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;" Usage="textAnalysisClient.AnalyzeTextOperationStatusAsync (jobId, showStats, top, skip, cancellationToken)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.AI.Language.Text</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Text.AnalyzeTextOperationState&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="jobId" Type="System.Guid" />
-        <Parameter Name="showStats" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
-      </Parameters>
-      <Docs>
-        <param name="jobId"> job ID. </param>
-        <param name="showStats"> (Optional) if set to true, response will contain request and document level statistics. </param>
-        <param name="top"> The maximum number of resources to return from the collection. </param>
-        <param name="skip"> An offset into the collection of the first resource to be returned. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Get analysis status and results. </summary>
-        <returns>To be added.</returns>
-        <remarks> Get the status of an analysis job. A job can consist of one or more tasks. After all tasks succeed, the job transitions to the succeeded state and results are available for each task. </remarks>
-        <example>
-This sample shows how to call AnalyzeTextOperationStatusAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("c0f2a446-05d9-48fc-ba8f-3ef4af8d0b18"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("15e4a46b-62e2-4386-8d36-9c2a92bb45dd"));
-]]></code>
-This sample shows how to call AnalyzeTextOperationStatusAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperationStatusAsync(Guid.Parse("1780194a-e9c1-4298-b0d4-fdc59ba818a0"));
-]]></code></example>
-      </Docs>
-    </Member>
-    <Member MemberName="AnalyzeTextSubmitOperation">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextSubmitOperation (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextSubmitOperation(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperation(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitOperation (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitOperation : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.AnalyzeTextSubmitOperation : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextSubmitOperation (waitUntil, content, context)" />
+    <Member MemberName="AnalyzeTextSubmitJob">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextSubmitJob (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextSubmitJob(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitJob(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitJob (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitJob : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.AnalyzeTextSubmitJob : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextSubmitJob (waitUntil, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -2622,223 +2396,20 @@ Response<AnalyzeTextOperationState> response = await client.AnalyzeTextOperation
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperation(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Document Abstractive Summarization Task Example",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "AbstractiveSummarization",
-            taskName = "Document Abstractive Summarization Task 1",
-            parameters = new
-            {
-                summaryLength = "medium",
-                instruction = "XYZ-code",
-            },
-        }
-    },
-});
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Document Abstractive Summarization Task Example",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "AbstractiveSummarization",
-            taskName = "Document Abstractive Summarization Task 1",
-            parameters = new
-            {
-                sentenceCount = 1,
-            },
-        }
-    },
-});
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Extracting Location & US Region",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "I had a wonderful trip to Seattle last week.",
-            },
-            new
-            {
-                id = "2",
-                language = "en",
-                text = "I'm flying to NYC tomorrow. See you there.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "EntityRecognition",
-            taskName = "Recognize Entities",
-            parameters = new
-            {
-                modelVersion = "latest",
-            },
-        },
-        new
-        {
-            kind = "CustomEntityRecognition",
-            taskName = "Recognize US Regions",
-            parameters = new
-            {
-                projectName = "MyProject",
-                deploymentName = "MyDeployment",
-            },
-        }
-    },
-});
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                text = "Prescribed 100mg ibuprofen, taken twice daily.",
-                id = "1",
-                language = "en",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "Healthcare",
-            parameters = new
-            {
-                modelVersion = "latest",
-                fhirVersion = "4.0.1",
-                documentType = "DischargeSummary",
-            },
-        }
-    },
-});
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                text = "Prescribed 100mg ibuprofen, taken twice daily.",
-                id = "1",
-                language = "en",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "Healthcare",
-            parameters = new
-            {
-                modelVersion = "latest",
-            },
-        }
-    },
-});
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, content);
-]]></code></example>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextSubmitOperation">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextSubmitOperation (Azure.WaitUntil waitUntil, Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, float? cancelAfter = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextSubmitOperation(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Nullable`1&lt;float32&gt; cancelAfter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperation(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitOperation (waitUntil As WaitUntil, textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancelAfter As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitOperation : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.AnalyzeTextSubmitOperation : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextSubmitOperation (waitUntil, textInput, actions, displayName, defaultLanguage, cancelAfter, cancellationToken)" />
+    <Member MemberName="AnalyzeTextSubmitJob">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation AnalyzeTextSubmitJob (Azure.WaitUntil waitUntil, Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, float? cancelAfter = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation AnalyzeTextSubmitJob(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Nullable`1&lt;float32&gt; cancelAfter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitJob(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitJob (waitUntil As WaitUntil, textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancelAfter As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitJob : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.AnalyzeTextSubmitJob : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="textAnalysisClient.AnalyzeTextSubmitJob (waitUntil, textInput, actions, displayName, defaultLanguage, cancelAfter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -2864,155 +2435,20 @@ Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, con
         <param name="displayName"> Name for the task. </param>
         <param name="defaultLanguage"> Default language to use for records requesting automatic language detection. </param>
         <param name="cancelAfter"> Optional duration in seconds after which the job will be canceled if not completed. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="textInput" /> or <paramref name="actions" /> is null. </exception>
-        <example>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new AbstractiveSummarizationOperationAction
-    {
-        ActionContent = new AbstractiveSummarizationActionContent
-        {
-            SummaryLength = SummaryLengthBucket.Medium,
-            Instruction = "XYZ-code",
-        },
-        Name = "Document Abstractive Summarization Task 1",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new AbstractiveSummarizationOperationAction
-    {
-        ActionContent = new AbstractiveSummarizationActionContent
-        {
-            SentenceCount = 1,
-        },
-        Name = "Document Abstractive Summarization Task 1",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "I had a wonderful trip to Seattle last week.")
-    {
-        Language = "en",
-    }, new MultiLanguageInput("2", "I'm flying to NYC tomorrow. See you there.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new EntitiesOperationAction
-    {
-        ActionContent = new EntitiesActionContent
-        {
-            ModelVersion = "latest",
-        },
-        Name = "Recognize Entities",
-    },
-    new CustomEntitiesOperationAction
-    {
-        ActionContent = new CustomEntitiesActionContent("MyProject", "MyDeployment"),
-        Name = "Recognize US Regions",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "Prescribed 100mg ibuprofen, taken twice daily.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new HealthcareOperationAction
-    {
-        ActionContent = new HealthcareActionContent
-        {
-            ModelVersion = "latest",
-            FhirVersion = FhirVersion._401,
-            DocumentType = HealthcareDocumentType.DischargeSummary,
-        },
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperation.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "Prescribed 100mg ibuprofen, taken twice daily.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new HealthcareOperationAction
-    {
-        ActionContent = new HealthcareActionContent
-        {
-            ModelVersion = "latest",
-        },
-    }
-});
-]]></code></example>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextSubmitOperationAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextSubmitOperationAsync (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextSubmitOperationAsync(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperationAsync(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitOperationAsync (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitOperationAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextSubmitOperationAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextSubmitOperationAsync (waitUntil, content, context)" />
+    <Member MemberName="AnalyzeTextSubmitJobAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextSubmitJobAsync (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextSubmitJobAsync(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitJobAsync(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitJobAsync (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitJobAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextSubmitJobAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextSubmitJobAsync (waitUntil, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -3030,223 +2466,20 @@ Operation operation = client.AnalyzeTextSubmitOperation(WaitUntil.Completed, tex
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperationAsync(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
-        <example>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Document Abstractive Summarization Task Example",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "AbstractiveSummarization",
-            taskName = "Document Abstractive Summarization Task 1",
-            parameters = new
-            {
-                summaryLength = "medium",
-                instruction = "XYZ-code",
-            },
-        }
-    },
-});
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Document Abstractive Summarization Task Example",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "AbstractiveSummarization",
-            taskName = "Document Abstractive Summarization Task 1",
-            parameters = new
-            {
-                sentenceCount = 1,
-            },
-        }
-    },
-});
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    displayName = "Extracting Location & US Region",
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                id = "1",
-                language = "en",
-                text = "I had a wonderful trip to Seattle last week.",
-            },
-            new
-            {
-                id = "2",
-                language = "en",
-                text = "I'm flying to NYC tomorrow. See you there.",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "EntityRecognition",
-            taskName = "Recognize Entities",
-            parameters = new
-            {
-                modelVersion = "latest",
-            },
-        },
-        new
-        {
-            kind = "CustomEntityRecognition",
-            taskName = "Recognize US Regions",
-            parameters = new
-            {
-                projectName = "MyProject",
-                deploymentName = "MyDeployment",
-            },
-        }
-    },
-});
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                text = "Prescribed 100mg ibuprofen, taken twice daily.",
-                id = "1",
-                language = "en",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "Healthcare",
-            parameters = new
-            {
-                modelVersion = "latest",
-                fhirVersion = "4.0.1",
-                documentType = "DischargeSummary",
-            },
-        }
-    },
-});
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, content);
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-using RequestContent content = RequestContent.Create(new
-{
-    analysisInput = new
-    {
-        documents = new object[]
-        {
-            new
-            {
-                text = "Prescribed 100mg ibuprofen, taken twice daily.",
-                id = "1",
-                language = "en",
-            }
-        },
-    },
-    tasks = new object[]
-    {
-        new
-        {
-            kind = "Healthcare",
-            parameters = new
-            {
-                modelVersion = "latest",
-            },
-        }
-    },
-});
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, content);
-]]></code></example>
       </Docs>
     </Member>
-    <Member MemberName="AnalyzeTextSubmitOperationAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextSubmitOperationAsync (Azure.WaitUntil waitUntil, Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, float? cancelAfter = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextSubmitOperationAsync(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Nullable`1&lt;float32&gt; cancelAfter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitOperationAsync(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitOperationAsync (waitUntil As WaitUntil, textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancelAfter As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitOperationAsync : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextSubmitOperationAsync : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextSubmitOperationAsync (waitUntil, textInput, actions, displayName, defaultLanguage, cancelAfter, cancellationToken)" />
+    <Member MemberName="AnalyzeTextSubmitJobAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; AnalyzeTextSubmitJobAsync (Azure.WaitUntil waitUntil, Azure.AI.Language.Text.MultiLanguageTextInput textInput, System.Collections.Generic.IEnumerable&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName = default, string defaultLanguage = default, float? cancelAfter = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; AnalyzeTextSubmitJobAsync(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Text.MultiLanguageTextInput textInput, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; actions, string displayName, string defaultLanguage, valuetype System.Nullable`1&lt;float32&gt; cancelAfter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Text.TextAnalysisClient.AnalyzeTextSubmitJobAsync(Azure.WaitUntil,Azure.AI.Language.Text.MultiLanguageTextInput,System.Collections.Generic.IEnumerable{Azure.AI.Language.Text.AnalyzeTextOperationAction},System.String,System.String,System.Nullable{System.Single},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AnalyzeTextSubmitJobAsync (waitUntil As WaitUntil, textInput As MultiLanguageTextInput, actions As IEnumerable(Of AnalyzeTextOperationAction), Optional displayName As String = Nothing, Optional defaultLanguage As String = Nothing, Optional cancelAfter As Nullable(Of Single) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeTextSubmitJobAsync : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.AnalyzeTextSubmitJobAsync : Azure.WaitUntil * Azure.AI.Language.Text.MultiLanguageTextInput * seq&lt;Azure.AI.Language.Text.AnalyzeTextOperationAction&gt; * string * string * Nullable&lt;single&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="textAnalysisClient.AnalyzeTextSubmitJobAsync (waitUntil, textInput, actions, displayName, defaultLanguage, cancelAfter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Text</AssemblyName>
@@ -3272,147 +2505,12 @@ Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Com
         <param name="displayName"> Name for the task. </param>
         <param name="defaultLanguage"> Default language to use for records requesting automatic language detection. </param>
         <param name="cancelAfter"> Optional duration in seconds after which the job will be canceled if not completed. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Submit a collection of text documents for analysis. Specify one or more unique tasks to be executed as a long-running operation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="textInput" /> or <paramref name="actions" /> is null. </exception>
-        <example>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new AbstractiveSummarizationOperationAction
-    {
-        ActionContent = new AbstractiveSummarizationActionContent
-        {
-            SummaryLength = SummaryLengthBucket.Medium,
-            Instruction = "XYZ-code",
-        },
-        Name = "Document Abstractive Summarization Task 1",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "At Microsoft, we have been on a quest to advance AI beyond existing techniques, by taking a more holistic, human-centric approach to learning and understanding. As Chief Technology Officer of Azure AI Cognitive Services, I have been working with a team of amazing scientists and engineers to turn this quest into a reality. In my role, I enjoy a unique perspective in viewing the relationship among three attributes of human cognition: monolingual text (X), audio or visual sensory signals, (Y) and multilingual (Z). At the intersection of all three, there is magic—what we call XYZ-code as illustrated in Figure 1—a joint representation to create more powerful AI that can speak, hear, see, and understand humans better. We believe XYZ-code will enable us to fulfill our long-term vision: cross-domain transfer learning, spanning modalities and languages. The goal is to have pre-trained models that can jointly learn representations to support a broad range of downstream AI tasks, much in the way humans do today. Over the past five years, we have achieved human performance on benchmarks in conversational speech recognition, machine translation, conversational question answering, machine reading comprehension, and image captioning. These five breakthroughs provided us with strong signals toward our more ambitious aspiration to produce a leap in AI capabilities, achieving multi-sensory and multilingual learning that is closer in line with how humans learn and understand. I believe the joint XYZ-code is a foundational component of this aspiration, if grounded with external knowledge sources in the downstream AI tasks.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new AbstractiveSummarizationOperationAction
-    {
-        ActionContent = new AbstractiveSummarizationActionContent
-        {
-            SentenceCount = 1,
-        },
-        Name = "Document Abstractive Summarization Task 1",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "I had a wonderful trip to Seattle last week.")
-    {
-        Language = "en",
-    }, new MultiLanguageInput("2", "I'm flying to NYC tomorrow. See you there.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new EntitiesOperationAction
-    {
-        ActionContent = new EntitiesActionContent
-        {
-            ModelVersion = "latest",
-        },
-        Name = "Recognize Entities",
-    },
-    new CustomEntitiesOperationAction
-    {
-        ActionContent = new CustomEntitiesActionContent("MyProject", "MyDeployment"),
-        Name = "Recognize US Regions",
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "Prescribed 100mg ibuprofen, taken twice daily.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new HealthcareOperationAction
-    {
-        ActionContent = new HealthcareActionContent
-        {
-            ModelVersion = "latest",
-            FhirVersion = FhirVersion._401,
-            DocumentType = HealthcareDocumentType.DischargeSummary,
-        },
-    }
-});
-]]></code>
-This sample shows how to call AnalyzeTextSubmitOperationAsync.
-<code><![CDATA[
-Uri endpoint = new Uri("<endpoint>");
-AzureKeyCredential credential = new AzureKeyCredential("<key>");
-TextAnalysisClient client = new TextAnalysisClient(endpoint, credential);
-
-MultiLanguageTextInput textInput = new MultiLanguageTextInput
-{
-    MultiLanguageInputs = {new MultiLanguageInput("1", "Prescribed 100mg ibuprofen, taken twice daily.")
-    {
-        Language = "en",
-    }},
-};
-Operation operation = await client.AnalyzeTextSubmitOperationAsync(WaitUntil.Completed, textInput, new AnalyzeTextOperationAction[]
-{
-    new HealthcareOperationAction
-    {
-        ActionContent = new HealthcareActionContent
-        {
-            ModelVersion = "latest",
-        },
-    }
-});
-]]></code></example>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">

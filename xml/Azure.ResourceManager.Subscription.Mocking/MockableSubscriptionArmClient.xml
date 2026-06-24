@@ -9,13 +9,14 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to ArmClient. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.ArmClient" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,10 +29,35 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionArmClient" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableSubscriptionArmClient for mocking. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBillingAccountPolicy">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.Subscription.BillingAccountPolicyResource GetBillingAccountPolicy (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.Subscription.BillingAccountPolicyResource GetBillingAccountPolicy(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionArmClient.GetBillingAccountPolicy(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetBillingAccountPolicy (scope As ResourceIdentifier) As BillingAccountPolicyResource" />
+      <MemberSignature Language="F#" Value="abstract member GetBillingAccountPolicy : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.Subscription.BillingAccountPolicyResource&#xA;override this.GetBillingAccountPolicy : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.Subscription.BillingAccountPolicyResource" Usage="mockableSubscriptionArmClient.GetBillingAccountPolicy scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.BillingAccountPolicyResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope that the resource will apply against. </param>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /> along with the instance operations that can be performed on it in the ArmClient. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -45,6 +71,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.BillingAccountPolicyResource</ReturnType>
@@ -54,10 +81,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.Subscription.BillingAccountPolicyResource.CreateResourceIdentifier(System.String)" /> to create a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.BillingAccountPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -72,6 +96,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.SubscriptionAliasResource</ReturnType>
@@ -81,11 +106,32 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.Subscription.SubscriptionAliasResource.CreateResourceIdentifier(System.String)" /> to create a <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.SubscriptionAliasResource" /> object. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetDirectoryResultResource">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.Subscription.TargetDirectoryResultResource GetTargetDirectoryResultResource (Azure.Core.ResourceIdentifier id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.Subscription.TargetDirectoryResultResource GetTargetDirectoryResultResource(class Azure.Core.ResourceIdentifier id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Subscription.Mocking.MockableSubscriptionArmClient.GetTargetDirectoryResultResource(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetTargetDirectoryResultResource (id As ResourceIdentifier) As TargetDirectoryResultResource" />
+      <MemberSignature Language="F#" Value="abstract member GetTargetDirectoryResultResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.Subscription.TargetDirectoryResultResource&#xA;override this.GetTargetDirectoryResultResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.Subscription.TargetDirectoryResultResource" Usage="mockableSubscriptionArmClient.GetTargetDirectoryResultResource id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Subscription.TargetDirectoryResultResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The resource ID of the resource to get. </param>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.TargetDirectoryResultResource" /> along with the instance operations that can be performed on it but with no data. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.TargetDirectoryResultResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,6 +145,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Subscription</AssemblyName>
         <AssemblyVersion>1.1.2.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Subscription.TenantPolicyResource</ReturnType>
@@ -108,10 +155,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.Subscription.TenantPolicyResource.CreateResourceIdentifier" /> to create a <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.Subscription.TenantPolicyResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>

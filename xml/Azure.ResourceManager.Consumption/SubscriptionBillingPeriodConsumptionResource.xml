@@ -9,16 +9,24 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("This type is obsolete. Use ArmClient.GetPriceSheet(scope) extension method instead.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This type is obsolete. Use ArmClient.GetPriceSheet(scope) extension method instead.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary>
-            A class extending from the SubscriptionBillingPeriodResource in Azure.ResourceManager.Consumption along with the instance operations that can be performed on it.
-            You can only construct a <see cref="T:Azure.ResourceManager.Consumption.SubscriptionBillingPeriodConsumptionResource" /> from a <see cref="T:Azure.Core.ResourceIdentifier" /> with a resource type of Microsoft.Billing/billingPeriods.
-            </summary>
+    <summary> Obsolete. Use <see cref="T:Azure.ResourceManager.Consumption.PriceSheetResource" /> via <c>ArmClient.GetPriceSheet(scope)</c> instead. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -31,6 +39,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,7 +57,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Consumption.Models.PriceSheetResult&gt;</ReturnType>
       </ReturnValue>
@@ -63,9 +79,7 @@
         <param name="skipToken"> Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. </param>
         <param name="top"> May be used to limit the number of results to the top N results. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get the price sheet for a scope by subscriptionId and billing period. Price sheet is available via this API only for May 1, 2014 or later.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}/providers/Microsoft.Consumption/pricesheets/default</description></item><item><term>Operation Id</term><description>PriceSheet_GetByBillingPeriod</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use <see cref="T:Azure.ResourceManager.Consumption.PriceSheetResource" /> via <c>ArmClient.GetPriceSheet(scope)</c> instead. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,7 +94,14 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Consumption.Models.PriceSheetResult&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -95,9 +116,7 @@
         <param name="skipToken"> Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. </param>
         <param name="top"> May be used to limit the number of results to the top N results. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Get the price sheet for a scope by subscriptionId and billing period. Price sheet is available via this API only for May 1, 2014 or later.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}/providers/Microsoft.Consumption/pricesheets/default</description></item><item><term>Operation Id</term><description>PriceSheet_GetByBillingPeriod</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use <see cref="T:Azure.ResourceManager.Consumption.PriceSheetResource" /> via <c>ArmClient.GetPriceSheet(scope)</c> instead. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -112,12 +131,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Gets the resource type for the operations. </summary>
+        <summary> Resource type for the corresponding ARM resource id segment shipped by v1.1.0. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

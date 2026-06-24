@@ -7,13 +7,20 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to SubscriptionResource. </summary>
+    <summary>
+            Backward-compat stubs on the generated <see cref="T:Azure.ResourceManager.Consumption.Mocking.MockableConsumptionSubscriptionResource" />
+            partial class. The shipped v1.1.0 SDK exposed <c>GetPriceSheet</c> on the subscription scope;
+            the TypeSpec migration moved this to a dedicated <c>PriceSheet</c> resource. These overloads
+            throw <see cref="T:System.NotSupportedException" /> and are hidden from IntelliSense — kept solely for
+            ApiCompat against the shipped surface.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,10 +33,11 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Consumption.Mocking.MockableConsumptionSubscriptionResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableConsumptionSubscriptionResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -43,7 +51,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use GetPriceSheetResult/GetPriceSheetResultAsync on the generated surface instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetPriceSheetResult/GetPriceSheetResultAsync on the generated surface instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Consumption.Models.PriceSheetResult&gt;</ReturnType>
       </ReturnValue>
@@ -54,13 +73,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="expand"> May be used to expand the properties/meterDetails within a price sheet. By default, these fields are not included when returning price sheet. </param>
-        <param name="skipToken"> Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. </param>
-        <param name="top"> May be used to limit the number of results to the top N results. </param>
+        <param name="expand"> Optional expand expression. </param>
+        <param name="skipToken"> Optional pagination skip-token. </param>
+        <param name="top"> Optional maximum number of records to return. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets the price sheet for a subscription. Price sheet is available via this API only for May 1, 2014 or later.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Consumption/pricesheets/default</description></item><item><term>Operation Id</term><description>PriceSheet_Get</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
+        <summary> Obsolete. Use <c>GetPriceSheetResult</c>/<c>GetPriceSheetResultAsync</c> on the generated surface instead. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -75,7 +92,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("Use GetPriceSheetResult/GetPriceSheetResultAsync on the generated surface instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetPriceSheetResult/GetPriceSheetResultAsync on the generated surface instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Consumption.Models.PriceSheetResult&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -86,14 +114,35 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="expand"> May be used to expand the properties/meterDetails within a price sheet. By default, these fields are not included when returning price sheet. </param>
-        <param name="skipToken"> Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. </param>
-        <param name="top"> May be used to limit the number of results to the top N results. </param>
+        <param name="expand"> Optional expand expression. </param>
+        <param name="skipToken"> Optional pagination skip-token. </param>
+        <param name="top"> Optional maximum number of records to return. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Obsolete. Use <c>GetPriceSheetResult</c>/<c>GetPriceSheetResultAsync</c> on the generated surface instead. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPriceSheetResult">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.Consumption.PriceSheetResultResource GetPriceSheetResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.Consumption.PriceSheetResultResource GetPriceSheetResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Consumption.Mocking.MockableConsumptionSubscriptionResource.GetPriceSheetResult" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPriceSheetResult () As PriceSheetResultResource" />
+      <MemberSignature Language="F#" Value="abstract member GetPriceSheetResult : unit -&gt; Azure.ResourceManager.Consumption.PriceSheetResultResource&#xA;override this.GetPriceSheetResult : unit -&gt; Azure.ResourceManager.Consumption.PriceSheetResultResource" Usage="mockableConsumptionSubscriptionResource.GetPriceSheetResult " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Consumption</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Consumption.PriceSheetResultResource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
         <summary>
             Gets the price sheet for a subscription. Price sheet is available via this API only for May 1, 2014 or later.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/providers/Microsoft.Consumption/pricesheets/default</description></item><item><term>Operation Id</term><description>PriceSheet_Get</description></item><item><term>Default Api Version</term><description>2021-10-01</description></item></list></summary>
-        <returns>To be added.</returns>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/providers/Microsoft.Consumption/pricesheets/default. </description></item><item><term> Operation Id. </term><description> PriceSheetResults_Get. </description></item><item><term> Default Api Version. </term><description> 2024-08-01. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Consumption.PriceSheetResultResource" />. </description></item></list></summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.Consumption.PriceSheetResultResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

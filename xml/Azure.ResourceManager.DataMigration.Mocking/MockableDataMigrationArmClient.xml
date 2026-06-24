@@ -8,13 +8,14 @@
     <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> A class to add extension methods to ArmClient. </summary>
+    <summary> A class to add extension methods to <see cref="T:Azure.ResourceManager.ArmClient" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,13 +27,309 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient" /> class for mocking. </summary>
+        <summary> Initializes a new instance of MockableDataMigrationArmClient for mocking. </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbRUMongo">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt; GetDatabaseMigrationsMongoToCosmosDbRUMongo (Azure.Core.ResourceIdentifier scope, string migrationName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt; GetDatabaseMigrationsMongoToCosmosDbRUMongo(class Azure.Core.ResourceIdentifier scope, string migrationName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongo(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbRUMongo (scope As ResourceIdentifier, migrationName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DatabaseMigrationsMongoToCosmosDbRUMongoResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbRUMongo : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbRUMongo : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongo (scope, migrationName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="migrationName"> Name of the migration. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Get Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="migrationName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="migrationName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&gt; GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync (Azure.Core.ResourceIdentifier scope, string migrationName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&gt; GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync(class Azure.Core.ResourceIdentifier scope, string migrationName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync (scope As ResourceIdentifier, migrationName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DatabaseMigrationsMongoToCosmosDbRUMongoResource))" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&gt;&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongoAsync (scope, migrationName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="migrationName"> Name of the migration. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Get Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="migrationName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="migrationName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbRUMongoResource">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource GetDatabaseMigrationsMongoToCosmosDbRUMongoResource (Azure.Core.ResourceIdentifier id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource GetDatabaseMigrationsMongoToCosmosDbRUMongoResource(class Azure.Core.ResourceIdentifier id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongoResource(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbRUMongoResource (id As ResourceIdentifier) As DatabaseMigrationsMongoToCosmosDbRUMongoResource" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbRUMongoResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbRUMongoResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongoResource id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The resource ID of the resource to get. </param>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource" /> along with the instance operations that can be performed on it but with no data. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource" /> object. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbRUMongos">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection GetDatabaseMigrationsMongoToCosmosDbRUMongos (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection GetDatabaseMigrationsMongoToCosmosDbRUMongos(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongos(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbRUMongos (scope As ResourceIdentifier) As DatabaseMigrationsMongoToCosmosDbRUMongoCollection" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbRUMongos : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbRUMongos : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbRUMongos scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <summary> Gets a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoCollection" /> objects within the specified scope. </summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbRUMongoResource" /> objects. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbvCoreMongo">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt; GetDatabaseMigrationsMongoToCosmosDbvCoreMongo (Azure.Core.ResourceIdentifier scope, string migrationName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt; GetDatabaseMigrationsMongoToCosmosDbvCoreMongo(class Azure.Core.ResourceIdentifier scope, string migrationName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongo(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbvCoreMongo (scope As ResourceIdentifier, migrationName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DatabaseMigrationsMongoToCosmosDbvCoreMongoResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbvCoreMongo : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbvCoreMongo : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongo (scope, migrationName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="migrationName"> Name of the migration. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Get Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="migrationName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="migrationName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&gt; GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync (Azure.Core.ResourceIdentifier scope, string migrationName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&gt; GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync(class Azure.Core.ResourceIdentifier scope, string migrationName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync(Azure.Core.ResourceIdentifier,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync (scope As ResourceIdentifier, migrationName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DatabaseMigrationsMongoToCosmosDbvCoreMongoResource))" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&gt;&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync : Azure.Core.ResourceIdentifier * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoAsync (scope, migrationName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="migrationName"> Name of the migration. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Get Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="migrationName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="migrationName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource (Azure.Core.ResourceIdentifier id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource(class Azure.Core.ResourceIdentifier id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource (id As ResourceIdentifier) As DatabaseMigrationsMongoToCosmosDbvCoreMongoResource" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongoResource id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The resource ID of the resource to get. </param>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource" /> along with the instance operations that can be performed on it but with no data. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource" /> object. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationsMongoToCosmosDbvCoreMongos">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection GetDatabaseMigrationsMongoToCosmosDbvCoreMongos (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection GetDatabaseMigrationsMongoToCosmosDbvCoreMongos(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongos(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationsMongoToCosmosDbvCoreMongos (scope As ResourceIdentifier) As DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationsMongoToCosmosDbvCoreMongos : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection&#xA;override this.GetDatabaseMigrationsMongoToCosmosDbvCoreMongos : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationsMongoToCosmosDbvCoreMongos scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <summary> Gets a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoCollection" /> objects within the specified scope. </summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationsMongoToCosmosDbvCoreMongoResource" /> objects. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlDB">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt; GetDatabaseMigrationSqlDB (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt; GetDatabaseMigrationSqlDB(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlDB(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlDB (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DatabaseMigrationSqlDBResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlDB : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&#xA;override this.GetDatabaseMigrationSqlDB : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlDB (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlDBAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&gt; GetDatabaseMigrationSqlDBAsync (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&gt; GetDatabaseMigrationSqlDBAsync(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlDBAsync(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlDBAsync (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DatabaseMigrationSqlDBResource))" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlDBAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&gt;&#xA;override this.GetDatabaseMigrationSqlDBAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlDBAsync (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the Database Migration resource. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDatabaseMigrationSqlDBResource">
@@ -44,8 +341,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource</ReturnType>
@@ -55,12 +352,105 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource" /> object. </returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlDBs">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection GetDatabaseMigrationSqlDBs (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection GetDatabaseMigrationSqlDBs(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlDBs(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlDBs (scope As ResourceIdentifier) As DatabaseMigrationSqlDBCollection" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlDBs : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection&#xA;override this.GetDatabaseMigrationSqlDBs : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlDBs scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <summary> Gets a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBCollection" /> objects within the specified scope. </summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlDBResource" /> objects. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlMI">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt; GetDatabaseMigrationSqlMI (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt; GetDatabaseMigrationSqlMI(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlMI(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlMI (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DatabaseMigrationSqlMIResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlMI : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&#xA;override this.GetDatabaseMigrationSqlMI : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlMI (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the specified database migration for a given SQL Managed Instance. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlMIAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&gt; GetDatabaseMigrationSqlMIAsync (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&gt; GetDatabaseMigrationSqlMIAsync(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlMIAsync(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlMIAsync (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DatabaseMigrationSqlMIResource))" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlMIAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&gt;&#xA;override this.GetDatabaseMigrationSqlMIAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlMIAsync (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the specified database migration for a given SQL Managed Instance. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDatabaseMigrationSqlMIResource">
@@ -72,8 +462,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource</ReturnType>
@@ -83,12 +473,105 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource" /> object. </returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlMIs">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection GetDatabaseMigrationSqlMIs (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection GetDatabaseMigrationSqlMIs(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlMIs(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlMIs (scope As ResourceIdentifier) As DatabaseMigrationSqlMICollection" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlMIs : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection&#xA;override this.GetDatabaseMigrationSqlMIs : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlMIs scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <summary> Gets a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMICollection" /> objects within the specified scope. </summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlMIResource" /> objects. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlVm">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt; GetDatabaseMigrationSqlVm (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt; GetDatabaseMigrationSqlVm(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlVm(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlVm (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of DatabaseMigrationSqlVmResource)" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlVm : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&#xA;override this.GetDatabaseMigrationSqlVm : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlVm (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the specified database migration for a given SQL VM. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlVmAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&gt; GetDatabaseMigrationSqlVmAsync (Azure.Core.ResourceIdentifier scope, string targetDbName, Guid? migrationOperationId = default, string expand = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&gt; GetDatabaseMigrationSqlVmAsync(class Azure.Core.ResourceIdentifier scope, string targetDbName, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; migrationOperationId, string expand, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlVmAsync(Azure.Core.ResourceIdentifier,System.String,System.Nullable{System.Guid},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlVmAsync (scope As ResourceIdentifier, targetDbName As String, Optional migrationOperationId As Nullable(Of Guid) = Nothing, Optional expand As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of DatabaseMigrationSqlVmResource))" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlVmAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&gt;&#xA;override this.GetDatabaseMigrationSqlVmAsync : Azure.Core.ResourceIdentifier * string * Nullable&lt;Guid&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&gt;" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlVmAsync (scope, targetDbName, migrationOperationId, expand, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetDbName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="migrationOperationId" Type="System.Nullable&lt;System.Guid&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expand" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <param name="targetDbName"> The name of the target database. </param>
+        <param name="migrationOperationId"> Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved. </param>
+        <param name="expand"> Complete migration details be included in the response. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary> Retrieve the specified database migration for a given SQL VM. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDbName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDbName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDatabaseMigrationSqlVmResource">
@@ -100,8 +583,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource</ReturnType>
@@ -111,11 +594,32 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource" /> object. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDatabaseMigrationSqlVms">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection GetDatabaseMigrationSqlVms (Azure.Core.ResourceIdentifier scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection GetDatabaseMigrationSqlVms(class Azure.Core.ResourceIdentifier scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetDatabaseMigrationSqlVms(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDatabaseMigrationSqlVms (scope As ResourceIdentifier) As DatabaseMigrationSqlVmCollection" />
+      <MemberSignature Language="F#" Value="abstract member GetDatabaseMigrationSqlVms : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection&#xA;override this.GetDatabaseMigrationSqlVms : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection" Usage="mockableDataMigrationArmClient.GetDatabaseMigrationSqlVms scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the resource collection to get. </param>
+        <summary> Gets a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmCollection" /> objects within the specified scope. </summary>
+        <returns> Returns a collection of <see cref="T:Azure.ResourceManager.DataMigration.DatabaseMigrationSqlVmResource" /> objects. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,8 +632,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource</ReturnType>
@@ -139,10 +643,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectFileResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -156,8 +657,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DataMigrationProjectResource</ReturnType>
@@ -167,10 +668,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DataMigrationProjectResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationProjectResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -184,8 +682,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DataMigrationServiceResource</ReturnType>
@@ -195,10 +693,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DataMigrationServiceResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -212,8 +707,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource</ReturnType>
@@ -223,11 +718,32 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.DataMigrationServiceTaskResource" /> object. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMigrationServiceResource">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.DataMigration.MigrationServiceResource GetMigrationServiceResource (Azure.Core.ResourceIdentifier id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.DataMigration.MigrationServiceResource GetMigrationServiceResource(class Azure.Core.ResourceIdentifier id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DataMigration.Mocking.MockableDataMigrationArmClient.GetMigrationServiceResource(Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMigrationServiceResource (id As ResourceIdentifier) As MigrationServiceResource" />
+      <MemberSignature Language="F#" Value="abstract member GetMigrationServiceResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.MigrationServiceResource&#xA;override this.GetMigrationServiceResource : Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.DataMigration.MigrationServiceResource" Usage="mockableDataMigrationArmClient.GetMigrationServiceResource id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DataMigration.MigrationServiceResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The resource ID of the resource to get. </param>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.MigrationServiceResource" /> along with the instance operations that can be performed on it but with no data. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.MigrationServiceResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -240,8 +756,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.ServiceServiceTaskResource</ReturnType>
@@ -251,10 +767,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.ServiceServiceTaskResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.ServiceServiceTaskResource.CreateResourceIdentifier(System.String,System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.ServiceServiceTaskResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.ServiceServiceTaskResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.ServiceServiceTaskResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -268,8 +781,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DataMigration</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.DataMigration.SqlMigrationServiceResource</ReturnType>
@@ -279,10 +792,7 @@
       </Parameters>
       <Docs>
         <param name="id"> The resource ID of the resource to get. </param>
-        <summary>
-            Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> along with the instance operations that can be performed on it but with no data.
-            You can use <see cref="M:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource.CreateResourceIdentifier(System.String,System.String,System.String)" /> to create a <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /><see cref="T:Azure.Core.ResourceIdentifier" /> from its components.
-            </summary>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> along with the instance operations that can be performed on it but with no data. </summary>
         <returns> Returns a <see cref="T:Azure.ResourceManager.DataMigration.SqlMigrationServiceResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>

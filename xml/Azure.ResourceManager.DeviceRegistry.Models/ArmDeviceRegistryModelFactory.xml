@@ -69,6 +69,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AssetEndpointProfileUpdateProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.AssetEndpointProfileUpdateProperties AssetEndpointProfileUpdateProperties (Uri targetAddress = default, string endpointProfileType = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication authentication = default, string additionalConfiguration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.AssetEndpointProfileUpdateProperties AssetEndpointProfileUpdateProperties(class System.Uri targetAddress, string endpointProfileType, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication authentication, string additionalConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.AssetEndpointProfileUpdateProperties(System.Uri,System.String,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AssetEndpointProfileUpdateProperties (Optional targetAddress As Uri = Nothing, Optional endpointProfileType As String = Nothing, Optional authentication As DeviceRegistryAuthentication = Nothing, Optional additionalConfiguration As String = Nothing) As AssetEndpointProfileUpdateProperties" />
+      <MemberSignature Language="F#" Value="static member AssetEndpointProfileUpdateProperties : Uri * string * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.AssetEndpointProfileUpdateProperties" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.AssetEndpointProfileUpdateProperties (targetAddress, endpointProfileType, authentication, additionalConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.AssetEndpointProfileUpdateProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetAddress" Type="System.Uri" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="endpointProfileType" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authentication" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="additionalConfiguration" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="targetAddress"> The local valid URI specifying the network address/DNS name of a southbound device. The scheme part of the targetAddress URI specifies the type of the device. The additionalConfiguration field holds further connector type specific configuration. </param>
+        <param name="endpointProfileType"> Defines the configuration for the connector type that is being used with the endpoint profile. </param>
+        <param name="authentication"> Defines the client authentication mechanism to the server. </param>
+        <param name="additionalConfiguration"> Stringified JSON that contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.AssetEndpointProfileUpdateProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AssetProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.AssetProperties AssetProperties (string uuid = default, bool? isEnabled = default, string externalAssetId = default, string displayName = default, string description = default, string assetEndpointProfileRef = default, long? version = default, string manufacturer = default, Uri manufacturerUri = default, string model = default, string productCode = default, string hardwareRevision = default, string softwareRevision = default, Uri documentationUri = default, string serialNumber = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; attributes = default, System.Collections.Generic.IEnumerable&lt;string&gt; discoveredAssetRefs = default, string defaultDatasetsConfiguration = default, string defaultEventsConfiguration = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic defaultTopic = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataset&gt; datasets = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent&gt; events = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAssetStatus status = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState? provisioningState = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.AssetProperties AssetProperties(string uuid, valuetype System.Nullable`1&lt;bool&gt; isEnabled, string externalAssetId, string displayName, string description, string assetEndpointProfileRef, valuetype System.Nullable`1&lt;int64&gt; version, string manufacturer, class System.Uri manufacturerUri, string model, string productCode, string hardwareRevision, string softwareRevision, class System.Uri documentationUri, string serialNumber, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; attributes, class System.Collections.Generic.IEnumerable`1&lt;string&gt; discoveredAssetRefs, string defaultDatasetsConfiguration, string defaultEventsConfiguration, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic defaultTopic, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataset&gt; datasets, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent&gt; events, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAssetStatus status, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState&gt; provisioningState) cil managed" />
@@ -258,6 +288,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CertificateConfiguration">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration CertificateConfiguration (Azure.ResourceManager.DeviceRegistry.Models.CertificateAuthorityConfiguration certificateAuthorityConfiguration = default, int leafCertificateValidityPeriodInDays = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration CertificateConfiguration(class Azure.ResourceManager.DeviceRegistry.Models.CertificateAuthorityConfiguration certificateAuthorityConfiguration, int32 leafCertificateValidityPeriodInDays) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.CertificateConfiguration(Azure.ResourceManager.DeviceRegistry.Models.CertificateAuthorityConfiguration,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CertificateConfiguration (Optional certificateAuthorityConfiguration As CertificateAuthorityConfiguration = Nothing, Optional leafCertificateValidityPeriodInDays As Integer = 0) As CertificateConfiguration" />
+      <MemberSignature Language="F#" Value="static member CertificateConfiguration : Azure.ResourceManager.DeviceRegistry.Models.CertificateAuthorityConfiguration * int -&gt; Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.CertificateConfiguration (certificateAuthorityConfiguration, leafCertificateValidityPeriodInDays)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateAuthorityConfiguration" Type="Azure.ResourceManager.DeviceRegistry.Models.CertificateAuthorityConfiguration" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="leafCertificateValidityPeriodInDays" Type="System.Int32" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="certificateAuthorityConfiguration"> The configuration to set up an ICA. </param>
+        <param name="leafCertificateValidityPeriodInDays"> The validity period in days. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CredentialData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.CredentialData CredentialData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState? credentialProvisioningState = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.CredentialData CredentialData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState&gt; credentialProvisioningState) cil managed" />
@@ -315,6 +371,182 @@
         <param name="tags"> Resource tags. </param>
         <summary> The type used for update operations of the Credential. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.CredentialPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatasetBrokerStateStoreDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DatasetBrokerStateStoreDestination DatasetBrokerStateStoreDestination (string key = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DatasetBrokerStateStoreDestination DatasetBrokerStateStoreDestination(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetBrokerStateStoreDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DatasetBrokerStateStoreDestination (Optional key As String = Nothing) As DatasetBrokerStateStoreDestination" />
+      <MemberSignature Language="F#" Value="static member DatasetBrokerStateStoreDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DatasetBrokerStateStoreDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetBrokerStateStoreDestination key" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DatasetBrokerStateStoreDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="key"> The MQTT broker state store destination key. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DatasetBrokerStateStoreDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DatasetDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DatasetDestination DatasetDestination (string target = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DatasetDestination DatasetDestination(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DatasetDestination (Optional target As String = Nothing) As DatasetDestination" />
+      <MemberSignature Language="F#" Value="static member DatasetDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DatasetDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetDestination target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DatasetDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="target"> Target destination. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DatasetDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatasetMqttDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DatasetMqttDestination DatasetMqttDestination (Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DatasetMqttDestination DatasetMqttDestination(class Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetMqttDestination(Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DatasetMqttDestination (Optional configuration As MqttDestinationConfiguration = Nothing) As DatasetMqttDestination" />
+      <MemberSignature Language="F#" Value="static member DatasetMqttDestination : Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration -&gt; Azure.ResourceManager.DeviceRegistry.Models.DatasetMqttDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetMqttDestination configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DatasetMqttDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="configuration"> The MQTT destination configuration. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DatasetMqttDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatasetStorageDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DatasetStorageDestination DatasetStorageDestination (string path = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DatasetStorageDestination DatasetStorageDestination(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetStorageDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DatasetStorageDestination (Optional path As String = Nothing) As DatasetStorageDestination" />
+      <MemberSignature Language="F#" Value="static member DatasetStorageDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DatasetStorageDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DatasetStorageDestination path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DatasetStorageDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="path"> The storage destination path. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DatasetStorageDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceCredentialsRevokeRequest">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceCredentialsRevokeRequest DeviceCredentialsRevokeRequest (bool? disable = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceCredentialsRevokeRequest DeviceCredentialsRevokeRequest(valuetype System.Nullable`1&lt;bool&gt; disable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceCredentialsRevokeRequest(System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceCredentialsRevokeRequest (Optional disable As Nullable(Of Boolean) = Nothing) As DeviceCredentialsRevokeRequest" />
+      <MemberSignature Language="F#" Value="static member DeviceCredentialsRevokeRequest : Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceCredentialsRevokeRequest" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceCredentialsRevokeRequest disable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceCredentialsRevokeRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disable" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="disable"> Indicates whether to disable the device(s) after revoking credentials. Prevents new credentials to be issued. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceCredentialsRevokeRequest" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceMessagingEndpoint">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceMessagingEndpoint DeviceMessagingEndpoint (string endpointType = default, string address = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceMessagingEndpoint DeviceMessagingEndpoint(string endpointType, string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceMessagingEndpoint(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceMessagingEndpoint (Optional endpointType As String = Nothing, Optional address As String = Nothing) As DeviceMessagingEndpoint" />
+      <MemberSignature Language="F#" Value="static member DeviceMessagingEndpoint : string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceMessagingEndpoint" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceMessagingEndpoint (endpointType, address)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceMessagingEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="address" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="endpointType"> Type of connection used for the messaging endpoint. </param>
+        <param name="address"> The endpoint address to connect to. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceMessagingEndpoint" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRef">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRef DeviceRef (string deviceName = default, string endpointName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRef DeviceRef(string deviceName, string endpointName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRef(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRef (Optional deviceName As String = Nothing, Optional endpointName As String = Nothing) As DeviceRef" />
+      <MemberSignature Language="F#" Value="static member DeviceRef : string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRef" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRef (deviceName, endpointName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="endpointName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="deviceName"> Name of the device resource. </param>
+        <param name="endpointName"> The name of endpoint to use. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRef" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -599,6 +831,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DeviceRegistryAuthentication">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication DeviceRegistryAuthentication (Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod method = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials usernamePasswordCredentials = default, string x509CredentialsCertificateSecretName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication DeviceRegistryAuthentication(valuetype Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod method, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials usernamePasswordCredentials, string x509CredentialsCertificateSecretName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryAuthentication(Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryAuthentication (Optional method As AuthenticationMethod = Nothing, Optional usernamePasswordCredentials As DeviceRegistryUsernamePasswordCredentials = Nothing, Optional x509CredentialsCertificateSecretName As String = Nothing) As DeviceRegistryAuthentication" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryAuthentication : Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryAuthentication (method, usernamePasswordCredentials, x509CredentialsCertificateSecretName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="usernamePasswordCredentials" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="x509CredentialsCertificateSecretName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="method"> Defines the method to authenticate the user of the client at the server. </param>
+        <param name="usernamePasswordCredentials"> Defines the username and password references when UsernamePassword user authentication mode is selected. </param>
+        <param name="x509CredentialsCertificateSecretName"> The name of the secret containing the certificate and private key (e.g. stored as .der/.pem or .der/.pfx). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryAuthentication" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DeviceRegistryBillingContainerData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.DeviceRegistryBillingContainerData DeviceRegistryBillingContainerData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState? billingContainerProvisioningState = default, Azure.ETag? etag = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.DeviceRegistryBillingContainerData DeviceRegistryBillingContainerData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState&gt; billingContainerProvisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag) cil managed" />
@@ -631,6 +891,64 @@
         <param name="etag"> Resource ETag. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.DeviceRegistry.DeviceRegistryBillingContainerData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.DeviceRegistryBillingContainerData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryDataPoint">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPoint DeviceRegistryDataPoint (string name = default, string dataSource = default, string dataPointConfiguration = default, Azure.ResourceManager.DeviceRegistry.Models.DataPointObservabilityMode? observabilityMode = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPoint DeviceRegistryDataPoint(string name, string dataSource, string dataPointConfiguration, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DataPointObservabilityMode&gt; observabilityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryDataPoint(System.String,System.String,System.String,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.DataPointObservabilityMode})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryDataPoint (Optional name As String = Nothing, Optional dataSource As String = Nothing, Optional dataPointConfiguration As String = Nothing, Optional observabilityMode As Nullable(Of DataPointObservabilityMode) = Nothing) As DeviceRegistryDataPoint" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryDataPoint : string * string * string * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DataPointObservabilityMode&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPoint" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryDataPoint (name, dataSource, dataPointConfiguration, observabilityMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataSource" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataPointConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="observabilityMode" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DataPointObservabilityMode&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the data point. </param>
+        <param name="dataSource"> The address of the source of the data in the asset (e.g. URL) so that a client can access the data source on the asset. </param>
+        <param name="dataPointConfiguration"> Stringified JSON that contains connector-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <param name="observabilityMode"> An indication of how the data point should be mapped to OpenTelemetry. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPoint" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryDataPointBase">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPointBase DeviceRegistryDataPointBase (string name = default, string dataSource = default, string dataPointConfiguration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPointBase DeviceRegistryDataPointBase(string name, string dataSource, string dataPointConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryDataPointBase(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryDataPointBase (Optional name As String = Nothing, Optional dataSource As String = Nothing, Optional dataPointConfiguration As String = Nothing) As DeviceRegistryDataPointBase" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryDataPointBase : string * string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPointBase" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryDataPointBase (name, dataSource, dataPointConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPointBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataSource" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataPointConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the data point. </param>
+        <param name="dataSource"> The address of the source of the data in the asset (e.g. URL) so that a client can access the data source on the asset. </param>
+        <param name="dataPointConfiguration"> Stringified JSON that contains connector-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryDataPointBase" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -691,6 +1009,94 @@
         <param name="correlationId"> Unique identifier for the transaction to aid in debugging. </param>
         <summary> Defines the error details properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryErrorDetails" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryEvent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent DeviceRegistryEvent (string name = default, string eventNotifier = default, string eventConfiguration = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic topic = default, Azure.ResourceManager.DeviceRegistry.Models.EventObservabilityMode? observabilityMode = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent DeviceRegistryEvent(string name, string eventNotifier, string eventConfiguration, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic topic, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.EventObservabilityMode&gt; observabilityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryEvent(System.String,System.String,System.String,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.EventObservabilityMode})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryEvent (Optional name As String = Nothing, Optional eventNotifier As String = Nothing, Optional eventConfiguration As String = Nothing, Optional topic As DeviceRegistryTopic = Nothing, Optional observabilityMode As Nullable(Of EventObservabilityMode) = Nothing) As DeviceRegistryEvent" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryEvent : string * string * string * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.EventObservabilityMode&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryEvent (name, eventNotifier, eventConfiguration, topic, observabilityMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventNotifier" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topic" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="observabilityMode" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.EventObservabilityMode&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the event. </param>
+        <param name="eventNotifier"> The address of the notifier of the event in the asset (e.g. URL) so that a client can access the event on the asset. </param>
+        <param name="eventConfiguration"> Stringified JSON that contains connector-specific configuration for the event. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <param name="topic"> Object that describes the topic information for the specific event. </param>
+        <param name="observabilityMode"> An indication of how the event should be mapped to OpenTelemetry. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEvent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryEventBase">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEventBase DeviceRegistryEventBase (string name = default, string eventNotifier = default, string eventConfiguration = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic topic = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEventBase DeviceRegistryEventBase(string name, string eventNotifier, string eventConfiguration, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic topic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryEventBase(System.String,System.String,System.String,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryEventBase (Optional name As String = Nothing, Optional eventNotifier As String = Nothing, Optional eventConfiguration As String = Nothing, Optional topic As DeviceRegistryTopic = Nothing) As DeviceRegistryEventBase" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryEventBase : string * string * string * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEventBase" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryEventBase (name, eventNotifier, eventConfiguration, topic)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEventBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventNotifier" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eventConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topic" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the event. </param>
+        <param name="eventNotifier"> The address of the notifier of the event in the asset (e.g. URL) so that a client can access the event on the asset. </param>
+        <param name="eventConfiguration"> Stringified JSON that contains connector-specific configuration for the event. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <param name="topic"> Object that describes the topic information for the specific event. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryEventBase" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryExtendedLocation">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation DeviceRegistryExtendedLocation (string extendedLocationType = default, string name = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation DeviceRegistryExtendedLocation(string extendedLocationType, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryExtendedLocation(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryExtendedLocation (Optional extendedLocationType As String = Nothing, Optional name As String = Nothing) As DeviceRegistryExtendedLocation" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryExtendedLocation : string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryExtendedLocation (extendedLocationType, name)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extendedLocationType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="extendedLocationType"> The extended location type. </param>
+        <param name="name"> The extended location name. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1081,11 +1487,11 @@
       </Docs>
     </Member>
     <Member MemberName="DeviceRegistryNamespaceDeviceData">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData DeviceRegistryNamespaceDeviceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties properties = default, string etag = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation extendedLocation = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData DeviceRegistryNamespaceDeviceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties properties, string etag, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation extendedLocation) cil managed" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData DeviceRegistryNamespaceDeviceData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, System.Collections.Generic.IDictionary&lt;string,string&gt; tags = default, Azure.Core.AzureLocation location = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties properties = default, string eTag = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation extendedLocation = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData DeviceRegistryNamespaceDeviceData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; tags, valuetype Azure.Core.AzureLocation location, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties properties, string eTag, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation extendedLocation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryNamespaceDeviceData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Collections.Generic.IDictionary{System.String,System.String},Azure.Core.AzureLocation,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties,System.String,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryNamespaceDeviceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional properties As DeviceRegistryNamespaceDeviceProperties = Nothing, Optional etag As String = Nothing, Optional extendedLocation As DeviceRegistryExtendedLocation = Nothing) As DeviceRegistryNamespaceDeviceData" />
-      <MemberSignature Language="F#" Value="static member DeviceRegistryNamespaceDeviceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties * string * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation -&gt; Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryNamespaceDeviceData (id, name, resourceType, systemData, tags, location, properties, etag, extendedLocation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryNamespaceDeviceData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional tags As IDictionary(Of String, String) = Nothing, Optional location As AzureLocation = Nothing, Optional properties As DeviceRegistryNamespaceDeviceProperties = Nothing, Optional eTag As String = Nothing, Optional extendedLocation As DeviceRegistryExtendedLocation = Nothing) As DeviceRegistryNamespaceDeviceData" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryNamespaceDeviceData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * System.Collections.Generic.IDictionary&lt;string, string&gt; * Azure.Core.AzureLocation * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties * string * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation -&gt; Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryNamespaceDeviceData (id, name, resourceType, systemData, tags, location, properties, eTag, extendedLocation)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
@@ -1102,7 +1508,7 @@
         <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="location" Type="Azure.Core.AzureLocation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="properties" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryNamespaceDeviceProperties" Index="6" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="etag" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="eTag" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="extendedLocation" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryExtendedLocation" Index="8" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
@@ -1113,7 +1519,7 @@
         <param name="tags"> Resource tags. </param>
         <param name="location"> The geo-location where the resource lives. </param>
         <param name="properties"> The resource-specific properties for this resource. </param>
-        <param name="etag"> Resource Tag. </param>
+        <param name="eTag"> Resource Tag. </param>
         <param name="extendedLocation"> The extended location. </param>
         <summary> Device definition. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.DeviceRegistryNamespaceDeviceData" /> instance for mocking. </returns>
@@ -1818,6 +2224,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DeviceRegistryTopic">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic DeviceRegistryTopic (string path = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType? retain = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic DeviceRegistryTopic(string path, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt; retain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryTopic(System.String,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryTopic (Optional path As String = Nothing, Optional retain As Nullable(Of DeviceRegistryTopicRetainType) = Nothing) As DeviceRegistryTopic" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryTopic : string * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryTopic (path, retain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="retain" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="path"> The topic path for messages published to an MQTT broker. </param>
+        <param name="retain"> When set to 'Keep', messages published to an MQTT broker will have the retain flag set. Default: 'Never'. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopic" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistryUsernamePasswordCredentials">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials DeviceRegistryUsernamePasswordCredentials (string usernameSecretName = default, string passwordSecretName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials DeviceRegistryUsernamePasswordCredentials(string usernameSecretName, string passwordSecretName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryUsernamePasswordCredentials(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeviceRegistryUsernamePasswordCredentials (Optional usernameSecretName As String = Nothing, Optional passwordSecretName As String = Nothing) As DeviceRegistryUsernamePasswordCredentials" />
+      <MemberSignature Language="F#" Value="static member DeviceRegistryUsernamePasswordCredentials : string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.DeviceRegistryUsernamePasswordCredentials (usernameSecretName, passwordSecretName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernameSecretName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="passwordSecretName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="usernameSecretName"> The name of the secret containing the username. </param>
+        <param name="passwordSecretName"> The name of the secret containing the password. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DeviceStatus">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.DeviceStatus DeviceStatus (Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryStatusConfig config = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,Azure.ResourceManager.DeviceRegistry.Models.DeviceStatusEndpoint&gt; endpointsInbound = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.DeviceStatus DeviceStatus(class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryStatusConfig config, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Azure.ResourceManager.DeviceRegistry.Models.DeviceStatusEndpoint&gt; endpointsInbound) cil managed" />
@@ -1930,6 +2388,178 @@
           <paramref name="outboundAssigned" /> is null. </exception>
       </Docs>
     </Member>
+    <Member MemberName="EventDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.EventDestination EventDestination (string target = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.EventDestination EventDestination(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EventDestination (Optional target As String = Nothing) As EventDestination" />
+      <MemberSignature Language="F#" Value="static member EventDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.EventDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventDestination target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.EventDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="target"> Target destination. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.EventDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventMqttDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.EventMqttDestination EventMqttDestination (Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.EventMqttDestination EventMqttDestination(class Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventMqttDestination(Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EventMqttDestination (Optional configuration As MqttDestinationConfiguration = Nothing) As EventMqttDestination" />
+      <MemberSignature Language="F#" Value="static member EventMqttDestination : Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration -&gt; Azure.ResourceManager.DeviceRegistry.Models.EventMqttDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventMqttDestination configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.EventMqttDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="configuration"> The MQTT destination configuration. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.EventMqttDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventStorageDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.EventStorageDestination EventStorageDestination (string path = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.EventStorageDestination EventStorageDestination(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventStorageDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EventStorageDestination (Optional path As String = Nothing) As EventStorageDestination" />
+      <MemberSignature Language="F#" Value="static member EventStorageDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.EventStorageDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.EventStorageDestination path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.EventStorageDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="path"> The storage destination path. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.EventStorageDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HostAuthentication">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication HostAuthentication (Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod method = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials usernamePasswordCredentials = default, Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials x509Credentials = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication HostAuthentication(valuetype Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod method, class Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials usernamePasswordCredentials, class Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials x509Credentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.HostAuthentication(Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod,Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials,Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function HostAuthentication (Optional method As AuthenticationMethod = Nothing, Optional usernamePasswordCredentials As DeviceRegistryUsernamePasswordCredentials = Nothing, Optional x509Credentials As X509CertificateCredentials = Nothing) As HostAuthentication" />
+      <MemberSignature Language="F#" Value="static member HostAuthentication : Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod * Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials * Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials -&gt; Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.HostAuthentication (method, usernamePasswordCredentials, x509Credentials)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="Azure.ResourceManager.DeviceRegistry.Models.AuthenticationMethod" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="usernamePasswordCredentials" Type="Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryUsernamePasswordCredentials" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="x509Credentials" Type="Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="method"> Defines the method to authenticate the user of the client at the server. </param>
+        <param name="usernamePasswordCredentials"> Defines the username and password references when UsernamePassword user authentication mode is selected. </param>
+        <param name="x509Credentials"> Defines the certificate reference when Certificate user authentication mode is selected. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InboundEndpoints">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints InboundEndpoints (string endpointType = default, string address = default, string version = default, Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication authentication = default, string trustList = default, string additionalConfiguration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints InboundEndpoints(string endpointType, string address, string version, class Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication authentication, string trustList, string additionalConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.InboundEndpoints(System.String,System.String,System.String,Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function InboundEndpoints (Optional endpointType As String = Nothing, Optional address As String = Nothing, Optional version As String = Nothing, Optional authentication As HostAuthentication = Nothing, Optional trustList As String = Nothing, Optional additionalConfiguration As String = Nothing) As InboundEndpoints" />
+      <MemberSignature Language="F#" Value="static member InboundEndpoints : string * string * string * Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication * string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.InboundEndpoints (endpointType, address, version, authentication, trustList, additionalConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="address" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authentication" Type="Azure.ResourceManager.DeviceRegistry.Models.HostAuthentication" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="trustList" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="additionalConfiguration" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="endpointType"> Type of connection endpoint. </param>
+        <param name="address"> The endpoint address &amp; port. This can be either an IP address (e.g., 192.168.1.1) or a fully qualified domain name (FQDN, e.g., server.example.com). </param>
+        <param name="version"> Protocol version associated with the endpoint e.g. 1 or 2 for endpointType Microsoft.HTTP, and 3.5 or 5.0 for endpointType Microsoft.Mqtt etc. </param>
+        <param name="authentication"> Defines the client authentication mechanism to the server. </param>
+        <param name="trustList"> Defines a secret reference for certificates to trust. </param>
+        <param name="additionalConfiguration"> Stringified JSON that contains configuration to be used by the connector (e.g., OPC UA, ONVIF). </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagementAction">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.ManagementAction ManagementAction (string name = default, string actionConfiguration = default, string targetUri = default, string typeRef = default, string topic = default, Azure.ResourceManager.DeviceRegistry.Models.ManagementActionType? actionType = default, int? timeoutInSeconds = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.ManagementAction ManagementAction(string name, string actionConfiguration, string targetUri, string typeRef, string topic, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.ManagementActionType&gt; actionType, valuetype System.Nullable`1&lt;int32&gt; timeoutInSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.ManagementAction(System.String,System.String,System.String,System.String,System.String,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.ManagementActionType},System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ManagementAction (Optional name As String = Nothing, Optional actionConfiguration As String = Nothing, Optional targetUri As String = Nothing, Optional typeRef As String = Nothing, Optional topic As String = Nothing, Optional actionType As Nullable(Of ManagementActionType) = Nothing, Optional timeoutInSeconds As Nullable(Of Integer) = Nothing) As ManagementAction" />
+      <MemberSignature Language="F#" Value="static member ManagementAction : string * string * string * string * string * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.ManagementActionType&gt; * Nullable&lt;int&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.ManagementAction" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.ManagementAction (name, actionConfiguration, targetUri, typeRef, topic, actionType, timeoutInSeconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.ManagementAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionConfiguration" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetUri" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="typeRef" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topic" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionType" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.ManagementActionType&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="timeoutInSeconds" Type="System.Nullable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> Name of the action. </param>
+        <param name="actionConfiguration"> Stringified JSON that contains connector-specific configuration for the action. </param>
+        <param name="targetUri"> The target URI on which a client can invoke the specific action. </param>
+        <param name="typeRef"> URI or type definition ID. </param>
+        <param name="topic"> The MQTT topic path on which a client will receive the request for the action. </param>
+        <param name="actionType"> The type of the action. </param>
+        <param name="timeoutInSeconds"> Response timeout for the action. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.ManagementAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ManagementGroup">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.ManagementGroup ManagementGroup (string name = default, string dataSource = default, string managementGroupConfiguration = default, string typeRef = default, string defaultTopic = default, int? defaultTimeoutInSeconds = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.DeviceRegistry.Models.ManagementAction&gt; actions = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.ManagementGroup ManagementGroup(string name, string dataSource, string managementGroupConfiguration, string typeRef, string defaultTopic, valuetype System.Nullable`1&lt;int32&gt; defaultTimeoutInSeconds, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.DeviceRegistry.Models.ManagementAction&gt; actions) cil managed" />
@@ -1995,6 +2625,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MessagingEndpoint">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoint MessagingEndpoint (string endpointType = default, string address = default, string resourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoint MessagingEndpoint(string endpointType, string address, string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.MessagingEndpoint(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MessagingEndpoint (Optional endpointType As String = Nothing, Optional address As String = Nothing, Optional resourceId As String = Nothing) As MessagingEndpoint" />
+      <MemberSignature Language="F#" Value="static member MessagingEndpoint : string * string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoint" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.MessagingEndpoint (endpointType, address, resourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointType" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="address" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="endpointType"> Type of connection used for messaging endpoint. </param>
+        <param name="address"> The endpoint address to connect to. </param>
+        <param name="resourceId"> The messaging endpoint Azure resource Id. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoint" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MessagingEndpoints">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoints MessagingEndpoints (System.Collections.Generic.IDictionary&lt;string,Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints&gt; inbound = default, Azure.ResourceManager.DeviceRegistry.Models.OutboundEndpoints outbound = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoints MessagingEndpoints(class System.Collections.Generic.IDictionary`2&lt;string, class Azure.ResourceManager.DeviceRegistry.Models.InboundEndpoints&gt; inbound, class Azure.ResourceManager.DeviceRegistry.Models.OutboundEndpoints outbound) cil managed" />
@@ -2018,6 +2676,36 @@
         <param name="outbound"> Set of endpoints a device can connect to. </param>
         <summary> Connection endpoint URL a device can use to connect to a service. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.MessagingEndpoints" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MqttDestinationConfiguration">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration MqttDestinationConfiguration (string topic = default, Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType? retain = default, Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationQo? qos = default, long? ttl = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration MqttDestinationConfiguration(string topic, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt; retain, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationQo&gt; qos, valuetype System.Nullable`1&lt;int64&gt; ttl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.MqttDestinationConfiguration(System.String,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType},System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationQo},System.Nullable{System.Int64})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MqttDestinationConfiguration (Optional topic As String = Nothing, Optional retain As Nullable(Of DeviceRegistryTopicRetainType) = Nothing, Optional qos As Nullable(Of MqttDestinationQo) = Nothing, Optional ttl As Nullable(Of Long) = Nothing) As MqttDestinationConfiguration" />
+      <MemberSignature Language="F#" Value="static member MqttDestinationConfiguration : string * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt; * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationQo&gt; * Nullable&lt;int64&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.MqttDestinationConfiguration (topic, retain, qos, ttl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="topic" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="retain" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryTopicRetainType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="qos" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationQo&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="ttl" Type="System.Nullable&lt;System.Int64&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="topic"> The MQTT topic. </param>
+        <param name="retain"> When set to 'Keep', messages published to an MQTT broker will have the retain flag set. Default: 'Never'. </param>
+        <param name="qos"> The MQTT QoS setting. Defaults to QoS 1. </param>
+        <param name="ttl"> The MQTT TTL setting. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2122,6 +2810,36 @@
         <param name="dataPoints"> Array of data points that are part of the dataset. Each data point can have per-data point configuration. </param>
         <summary> Defines the dataset properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.NamespaceDataset" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceDatasetDataPoint">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.NamespaceDatasetDataPoint NamespaceDatasetDataPoint (string name = default, string dataSource = default, string dataPointConfiguration = default, string typeRef = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.NamespaceDatasetDataPoint NamespaceDatasetDataPoint(string name, string dataSource, string dataPointConfiguration, string typeRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDatasetDataPoint(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NamespaceDatasetDataPoint (Optional name As String = Nothing, Optional dataSource As String = Nothing, Optional dataPointConfiguration As String = Nothing, Optional typeRef As String = Nothing) As NamespaceDatasetDataPoint" />
+      <MemberSignature Language="F#" Value="static member NamespaceDatasetDataPoint : string * string * string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.NamespaceDatasetDataPoint" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDatasetDataPoint (name, dataSource, dataPointConfiguration, typeRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.NamespaceDatasetDataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataSource" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataPointConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="typeRef" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the data point. </param>
+        <param name="dataSource"> The address of the source of the data in the asset (e.g. URL) so that a client can access the data source on the asset. </param>
+        <param name="dataPointConfiguration"> Stringified JSON that contains connector-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <param name="typeRef"> URI or type definition ID. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.NamespaceDatasetDataPoint" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2267,6 +2985,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="NamespaceDiscoveredDatasetDataPoint">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDatasetDataPoint NamespaceDiscoveredDatasetDataPoint (string name = default, string dataSource = default, string dataPointConfiguration = default, DateTimeOffset? lastUpdatedOn = default, string typeRef = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDatasetDataPoint NamespaceDiscoveredDatasetDataPoint(string name, string dataSource, string dataPointConfiguration, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedOn, string typeRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDiscoveredDatasetDataPoint(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NamespaceDiscoveredDatasetDataPoint (Optional name As String = Nothing, Optional dataSource As String = Nothing, Optional dataPointConfiguration As String = Nothing, Optional lastUpdatedOn As Nullable(Of DateTimeOffset) = Nothing, Optional typeRef As String = Nothing) As NamespaceDiscoveredDatasetDataPoint" />
+      <MemberSignature Language="F#" Value="static member NamespaceDiscoveredDatasetDataPoint : string * string * string * Nullable&lt;DateTimeOffset&gt; * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDatasetDataPoint" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDiscoveredDatasetDataPoint (name, dataSource, dataPointConfiguration, lastUpdatedOn, typeRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDatasetDataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataSource" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dataPointConfiguration" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="typeRef" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> The name of the data point. </param>
+        <param name="dataSource"> The address of the source of the data in the asset (e.g. URL) so that a client can access the data source on the asset. </param>
+        <param name="dataPointConfiguration"> Stringified JSON that contains connector-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize. </param>
+        <param name="lastUpdatedOn"> UTC timestamp indicating when the data point was added or modified. </param>
+        <param name="typeRef"> URI or type definition ID. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDatasetDataPoint" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="NamespaceDiscoveredDeviceUpdateProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDeviceUpdateProperties NamespaceDiscoveredDeviceUpdateProperties (string externalDeviceId = default, Azure.ResourceManager.DeviceRegistry.Models.DiscoveredMessagingEndpoints endpoints = default, string operatingSystemVersion = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; attributes = default, string discoveryId = default, long? version = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredDeviceUpdateProperties NamespaceDiscoveredDeviceUpdateProperties(string externalDeviceId, class Azure.ResourceManager.DeviceRegistry.Models.DiscoveredMessagingEndpoints endpoints, string operatingSystemVersion, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; attributes, string discoveryId, valuetype System.Nullable`1&lt;int64&gt; version) cil managed" />
@@ -2366,6 +3116,44 @@
         <param name="events"> Array of events that are part of the event group. </param>
         <summary> Defines the discovered event group properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredEventGroup" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceDiscoveredManagementAction">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementAction NamespaceDiscoveredManagementAction (string name = default, string actionConfiguration = default, string targetUri = default, string typeRef = default, string topic = default, Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementActionType? actionType = default, int? timeoutInSeconds = default, DateTimeOffset? lastUpdatedOn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementAction NamespaceDiscoveredManagementAction(string name, string actionConfiguration, string targetUri, string typeRef, string topic, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementActionType&gt; actionType, valuetype System.Nullable`1&lt;int32&gt; timeoutInSeconds, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDiscoveredManagementAction(System.String,System.String,System.String,System.String,System.String,System.Nullable{Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementActionType},System.Nullable{System.Int32},System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NamespaceDiscoveredManagementAction (Optional name As String = Nothing, Optional actionConfiguration As String = Nothing, Optional targetUri As String = Nothing, Optional typeRef As String = Nothing, Optional topic As String = Nothing, Optional actionType As Nullable(Of NamespaceDiscoveredManagementActionType) = Nothing, Optional timeoutInSeconds As Nullable(Of Integer) = Nothing, Optional lastUpdatedOn As Nullable(Of DateTimeOffset) = Nothing) As NamespaceDiscoveredManagementAction" />
+      <MemberSignature Language="F#" Value="static member NamespaceDiscoveredManagementAction : string * string * string * string * string * Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementActionType&gt; * Nullable&lt;int&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementAction" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.NamespaceDiscoveredManagementAction (name, actionConfiguration, targetUri, typeRef, topic, actionType, timeoutInSeconds, lastUpdatedOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionConfiguration" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="targetUri" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="typeRef" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topic" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionType" Type="System.Nullable&lt;Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementActionType&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="timeoutInSeconds" Type="System.Nullable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> Name of the action. </param>
+        <param name="actionConfiguration"> Stringified JSON that contains connector-specific configuration for the action. </param>
+        <param name="targetUri"> The target URI on which a client can invoke the specific action. </param>
+        <param name="typeRef"> URI or type definition ID. </param>
+        <param name="topic"> The MQTT topic path on which a client will receive the request for the action. </param>
+        <param name="actionType"> The type of the action. </param>
+        <param name="timeoutInSeconds"> Response timeout for the action. </param>
+        <param name="lastUpdatedOn"> Timestamp (in UTC) indicating when the management action was added or modified. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.NamespaceDiscoveredManagementAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2619,6 +3407,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PolicyPatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.PolicyPatch PolicyPatch (Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration policyUpdateCertificate = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.PolicyPatch PolicyPatch(class Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration policyUpdateCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.PolicyPatch(Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PolicyPatch (Optional policyUpdateCertificate As CertificateConfiguration = Nothing) As PolicyPatch" />
+      <MemberSignature Language="F#" Value="static member PolicyPatch : Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration -&gt; Azure.ResourceManager.DeviceRegistry.Models.PolicyPatch" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.PolicyPatch policyUpdateCertificate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.PolicyPatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policyUpdateCertificate" Type="Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="policyUpdateCertificate"> The certificate configuration. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.PolicyPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PolicyProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.PolicyProperties PolicyProperties (Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState? provisioningState = default, Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration certificate = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.PolicyProperties PolicyProperties(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.DeviceRegistry.Models.DeviceRegistryProvisioningState&gt; provisioningState, class Azure.ResourceManager.DeviceRegistry.Models.CertificateConfiguration certificate) cil managed" />
@@ -2643,6 +3455,106 @@
         <summary> Details of the Credential Policy. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.PolicyProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaRegistryUpdateProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.SchemaRegistryUpdateProperties SchemaRegistryUpdateProperties (string displayName = default, string description = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.SchemaRegistryUpdateProperties SchemaRegistryUpdateProperties(string displayName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.SchemaRegistryUpdateProperties(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SchemaRegistryUpdateProperties (Optional displayName As String = Nothing, Optional description As String = Nothing) As SchemaRegistryUpdateProperties" />
+      <MemberSignature Language="F#" Value="static member SchemaRegistryUpdateProperties : string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.SchemaRegistryUpdateProperties" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.SchemaRegistryUpdateProperties (displayName, description)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.SchemaRegistryUpdateProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="displayName"> Human-readable display name. </param>
+        <param name="description"> Human-readable description of the schema registry. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.SchemaRegistryUpdateProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.StreamDestination StreamDestination (string target = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.StreamDestination StreamDestination(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StreamDestination (Optional target As String = Nothing) As StreamDestination" />
+      <MemberSignature Language="F#" Value="static member StreamDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.StreamDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamDestination target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.StreamDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="target"> Target destination. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.StreamDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamMqttDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.StreamMqttDestination StreamMqttDestination (Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.StreamMqttDestination StreamMqttDestination(class Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamMqttDestination(Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StreamMqttDestination (Optional configuration As MqttDestinationConfiguration = Nothing) As StreamMqttDestination" />
+      <MemberSignature Language="F#" Value="static member StreamMqttDestination : Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration -&gt; Azure.ResourceManager.DeviceRegistry.Models.StreamMqttDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamMqttDestination configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.StreamMqttDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Azure.ResourceManager.DeviceRegistry.Models.MqttDestinationConfiguration" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="configuration"> The MQTT destination configuration. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.StreamMqttDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamStorageDestination">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.StreamStorageDestination StreamStorageDestination (string path = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.StreamStorageDestination StreamStorageDestination(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamStorageDestination(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StreamStorageDestination (Optional path As String = Nothing) As StreamStorageDestination" />
+      <MemberSignature Language="F#" Value="static member StreamStorageDestination : string -&gt; Azure.ResourceManager.DeviceRegistry.Models.StreamStorageDestination" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.StreamStorageDestination path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.StreamStorageDestination</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="path"> The storage destination path. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.StreamStorageDestination" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SystemAssignedServiceIdentity">
@@ -2670,6 +3582,34 @@
         <param name="type"> The type of managed identity assigned to this resource. </param>
         <summary> Managed service identity (either system assigned, or none). </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.SystemAssignedServiceIdentity" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509CertificateCredentials">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials X509CertificateCredentials (string certificateSecretName = default, string keySecretName = default, string intermediateCertificatesSecretName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials X509CertificateCredentials(string certificateSecretName, string keySecretName, string intermediateCertificatesSecretName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.X509CertificateCredentials(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function X509CertificateCredentials (Optional certificateSecretName As String = Nothing, Optional keySecretName As String = Nothing, Optional intermediateCertificatesSecretName As String = Nothing) As X509CertificateCredentials" />
+      <MemberSignature Language="F#" Value="static member X509CertificateCredentials : string * string * string -&gt; Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials" Usage="Azure.ResourceManager.DeviceRegistry.Models.ArmDeviceRegistryModelFactory.X509CertificateCredentials (certificateSecretName, keySecretName, intermediateCertificatesSecretName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.DeviceRegistry</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateSecretName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="keySecretName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="intermediateCertificatesSecretName" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="certificateSecretName"> The name of the secret containing the certificate and private key (e.g. stored as .der/.pem or .der/.pfx). </param>
+        <param name="keySecretName"> The name of the secret containing the certificate private key in PEM or DER format. </param>
+        <param name="intermediateCertificatesSecretName"> The name of the secret containing the combined intermediate certificates in PEM format. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.DeviceRegistry.Models.X509CertificateCredentials" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

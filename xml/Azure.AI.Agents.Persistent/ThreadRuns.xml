@@ -59,14 +59,10 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Cancels a run of an in‐progress thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.CancelRun(System.String,System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -99,7 +95,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Cancels a run of an in‐progress thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -107,6 +103,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="CancelRunAsync">
@@ -132,14 +129,10 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Cancels a run of an in‐progress thread.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.CancelRunAsync(System.String,System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -172,7 +165,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Cancels a run of an in‐progress thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -180,6 +173,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateRun">
@@ -285,7 +279,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.InternalCreateRun(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Boolean},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.AI.Agents.Persistent.Truncation,System.BinaryData,System.BinaryData,System.Nullable{System.Boolean},System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.RunAdditionalFieldList},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.InternalCreateRun(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ThreadMessageOptions},System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Boolean},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.AI.Agents.Persistent.Truncation,System.BinaryData,System.BinaryData,System.Nullable{System.Boolean},System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.RunAdditionalFieldList},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -899,7 +893,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets an existing run from an existing thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -907,6 +901,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetRunAsync">
@@ -972,7 +967,7 @@
       <Docs>
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets an existing run from an existing thread. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -980,6 +975,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetRuns">
@@ -1515,7 +1511,7 @@
         <param name="toolOutputs"> A list of tools for which the outputs are being submitted. </param>
         <param name="toolApprovals"> A list of tool approvals allowing data to be sent to tools. </param>
         <param name="stream"> If true, returns a stream of events that happen during the Run as SSE, terminating at `[DONE]`. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Submits outputs from tools as requested by tool calls in a run. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1523,6 +1519,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SubmitToolOutputsToRunAsync">
@@ -1713,7 +1710,7 @@
         <param name="toolOutputs"> A list of tools for which the outputs are being submitted. </param>
         <param name="toolApprovals"> A list of tool approvals allowing data to be sent to tools. </param>
         <param name="stream"> If true, returns a stream of events that happen during the Run as SSE, terminating at `[DONE]`. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Submits outputs from tools as requested by tool calls in a run. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1721,6 +1718,7 @@
           <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SubmitToolOutputsToStream">
@@ -1874,14 +1872,10 @@
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing thread run.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRun(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1892,17 +1886,60 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateRun">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun (string threadId, string runId, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun(string threadId, string runId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRun(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRun (threadId As String, runId As String, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ThreadRun)" />
+      <MemberSignature Language="F#" Value="abstract member UpdateRun : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&#xA;override this.UpdateRun : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;" Usage="threadRuns.UpdateRun (threadId, runId, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="runId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="runId"> Identifier of the run. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing thread run. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRun">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun(string threadId, string runId, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRun(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRun (threadId As String, runId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ThreadRun)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRun (threadId As String, runId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ThreadRun)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateRun : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&#xA;override this.UpdateRun : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;" Usage="threadRuns.UpdateRun (threadId, runId, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt; UpdateRun (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRun (threadId As String, runId As String, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of ThreadRun)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;</ReturnType>
       </ReturnValue>
@@ -1917,7 +1954,7 @@
         <param name="runId"> Identifier of the run. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing thread run. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1951,14 +1988,10 @@
         <param name="threadId"> Identifier of the thread. </param>
         <param name="runId"> Identifier of the run. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing thread run.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRunAsync(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1969,17 +2002,60 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateRunAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync (string threadId, string runId, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync(string threadId, string runId, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRunAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRunAsync (threadId As String, runId As String, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ThreadRun))" />
+      <MemberSignature Language="F#" Value="abstract member UpdateRunAsync : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;&#xA;override this.UpdateRunAsync : string * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;" Usage="threadRuns.UpdateRunAsync (threadId, runId, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="runId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="threadId"> Identifier of the thread. </param>
+        <param name="runId"> Identifier of the run. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing thread run. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="threadId" /> or <paramref name="runId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="threadId" /> or <paramref name="runId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRunAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync(string threadId, string runId, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.ThreadRuns.UpdateRunAsync(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRunAsync (threadId As String, runId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ThreadRun))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRunAsync (threadId As String, runId As String, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ThreadRun))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateRunAsync : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;&#xA;override this.UpdateRunAsync : string * string * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;" Usage="threadRuns.UpdateRunAsync (threadId, runId, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt; UpdateRunAsync (string threadId, string runId, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateRunAsync (threadId As String, runId As String, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of ThreadRun))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.ThreadRun&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -1994,7 +2070,7 @@
         <param name="runId"> Identifier of the run. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing thread run. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

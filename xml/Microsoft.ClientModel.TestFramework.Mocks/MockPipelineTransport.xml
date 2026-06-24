@@ -1,0 +1,269 @@
+<Type Name="MockPipelineTransport" FullName="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport">
+  <TypeSignature Language="C#" Value="public class MockPipelineTransport : System.ClientModel.Primitives.PipelineTransport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MockPipelineTransport extends System.ClientModel.Primitives.PipelineTransport" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport" />
+  <TypeSignature Language="VB.NET" Value="Public Class MockPipelineTransport&#xA;Inherits PipelineTransport" />
+  <TypeSignature Language="F#" Value="type MockPipelineTransport = class&#xA;    inherit PipelineTransport" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ClientModel.Primitives.PipelineTransport</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A mock of <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> to use for testing.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MockPipelineTransport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport" />, which always returns a 200 response code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MockPipelineTransport (Func&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage,Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse&gt; responseFactory, bool addDelay = false, bool enableLogging = false, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`2&lt;class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage, class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse&gt; responseFactory, bool addDelay, bool enableLogging, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.#ctor(System.Func{Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage,Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse},System.Boolean,System.Boolean,Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (responseFactory As Func(Of MockPipelineMessage, MockPipelineResponse), Optional addDelay As Boolean = false, Optional enableLogging As Boolean = false, Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport : Func&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage, Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse&gt; * bool * bool * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport" Usage="new Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport (responseFactory, addDelay, enableLogging, loggerFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="responseFactory" Type="System.Func&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage,Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse&gt;" />
+        <Parameter Name="addDelay" Type="System.Boolean" />
+        <Parameter Name="enableLogging" Type="System.Boolean" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="responseFactory">A function that returns a <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineResponse" /> based on the incoming <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage" />.</param>
+        <param name="addDelay">Whether to add a delay when processing requests.</param>
+        <param name="enableLogging">Whether to enable logging for the transport.</param>
+        <param name="loggerFactory">The logger factory to use for creating loggers.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageCore">
+      <MemberSignature Language="C#" Value="protected override System.ClientModel.Primitives.PipelineMessage CreateMessageCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ClientModel.Primitives.PipelineMessage CreateMessageCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.CreateMessageCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateMessageCore () As PipelineMessage" />
+      <MemberSignature Language="F#" Value="override this.CreateMessageCore : unit -&gt; System.ClientModel.Primitives.PipelineMessage" Usage="mockPipelineTransport.CreateMessageCore " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.Primitives.PipelineMessage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new transport-specific instance of <see cref="T:System.ClientModel.Primitives.PipelineMessage" />.
+            Types that derive from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this
+            method to provide transport-specific functionality.
+            </summary>
+        <returns>A <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> that can be passed to
+            <see cref="M:System.ClientModel.Primitives.PipelineTransport.Process(System.ClientModel.Primitives.PipelineMessage)" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectSyncPipeline">
+      <MemberSignature Language="C#" Value="public bool? ExpectSyncPipeline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; ExpectSyncPipeline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.ExpectSyncPipeline" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpectSyncPipeline As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ExpectSyncPipeline : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.ExpectSyncPipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether this transport expects a synchronous pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReceivedResponse">
+      <MemberSignature Language="C#" Value="public Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt;? OnReceivedResponse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Action`1&lt;class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt; OnReceivedResponse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.OnReceivedResponse" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnReceivedResponse As Action(Of MockPipelineMessage)" />
+      <MemberSignature Language="F#" Value="member this.OnReceivedResponse : Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt; with get, set" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.OnReceivedResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An action invoked when a response is received.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSendingRequest">
+      <MemberSignature Language="C#" Value="public Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt;? OnSendingRequest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Action`1&lt;class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt; OnSendingRequest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.OnSendingRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnSendingRequest As Action(Of MockPipelineMessage)" />
+      <MemberSignature Language="F#" Value="member this.OnSendingRequest : Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt; with get, set" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.OnSendingRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An action invoked when a request is being sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCore">
+      <MemberSignature Language="C#" Value="protected override void ProcessCore (System.ClientModel.Primitives.PipelineMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessCore(class System.ClientModel.Primitives.PipelineMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.ProcessCore(System.ClientModel.Primitives.PipelineMessage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessCore (message As PipelineMessage)" />
+      <MemberSignature Language="F#" Value="override this.ProcessCore : System.ClientModel.Primitives.PipelineMessage -&gt; unit" Usage="mockPipelineTransport.ProcessCore message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">The <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> containing the
+            request that was sent and response that was received by the transport.</param>
+        <summary>
+            Transport-specific implementation used to sends the HTTP request
+            contained by <see cref="P:System.ClientModel.Primitives.PipelineMessage.Request" /> and set the
+            value of <see cref="P:System.ClientModel.Primitives.PipelineMessage.Response" />. Types that derive
+            from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this method to
+            provide transport-specific functionality.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCoreAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.ValueTask ProcessCoreAsync (System.ClientModel.Primitives.PipelineMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Threading.Tasks.ValueTask ProcessCoreAsync(class System.ClientModel.Primitives.PipelineMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.ProcessCoreAsync(System.ClientModel.Primitives.PipelineMessage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ProcessCoreAsync (message As PipelineMessage) As ValueTask" />
+      <MemberSignature Language="F#" Value="override this.ProcessCoreAsync : System.ClientModel.Primitives.PipelineMessage -&gt; System.Threading.Tasks.ValueTask" Usage="mockPipelineTransport.ProcessCoreAsync message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ClientModel.Primitives.PipelineMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">The <see cref="T:System.ClientModel.Primitives.PipelineMessage" /> containing the
+            request that was sent and response that was received by the transport.</param>
+        <summary>
+            Transport-specific implementation used to sends the HTTP request
+            contained by <see cref="P:System.ClientModel.Primitives.PipelineMessage.Request" /> and set the
+            value of <see cref="P:System.ClientModel.Primitives.PipelineMessage.Response" />. Types that derive
+            from <see cref="T:System.ClientModel.Primitives.PipelineTransport" /> must implement this method to
+            provide transport-specific functionality.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Requests">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineRequest&gt; Requests { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.ClientModel.TestFramework.Mocks.MockPipelineRequest&gt; Requests" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.Requests" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Requests As List(Of MockPipelineRequest)" />
+      <MemberSignature Language="F#" Value="member this.Requests : System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineRequest&gt;" Usage="Microsoft.ClientModel.TestFramework.Mocks.MockPipelineTransport.Requests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.ClientModel.TestFramework.Mocks.MockPipelineRequest&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A list of mock pipeline requests that have been sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

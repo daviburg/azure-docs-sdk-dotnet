@@ -1,0 +1,92 @@
+<Type Name="RecordedTestMode" FullName="Microsoft.ClientModel.TestFramework.RecordedTestMode">
+  <TypeSignature Language="C#" Value="public enum RecordedTestMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecordedTestMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RecordedTestMode" />
+  <TypeSignature Language="F#" Value="type RecordedTestMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the mode of a recorded test, determining how network requests and responses
+            are handled during test execution.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Live">
+      <MemberSignature Language="C#" Value="Live" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode Live = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Live" />
+      <MemberSignature Language="VB.NET" Value="Live" />
+      <MemberSignature Language="F#" Value="Live = 0" Usage="Microsoft.ClientModel.TestFramework.RecordedTestMode.Live" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.RecordedTestMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Live mode executes tests against actual live services with real network requests.
+            In this mode, tests make actual HTTP calls to live endpoints and receive real responses.
+            This mode is typically used for integration testing and validation against live services.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Playback">
+      <MemberSignature Language="C#" Value="Playback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode Playback = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Playback" />
+      <MemberSignature Language="VB.NET" Value="Playback" />
+      <MemberSignature Language="F#" Value="Playback = 2" Usage="Microsoft.ClientModel.TestFramework.RecordedTestMode.Playback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.RecordedTestMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Playback mode replays previously recorded network interactions instead of
+            making live network requests. Tests execute using saved HTTP request/response
+            pairs from session files, providing fast and deterministic test execution.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Record">
+      <MemberSignature Language="C#" Value="Record" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode Record = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.RecordedTestMode.Record" />
+      <MemberSignature Language="VB.NET" Value="Record" />
+      <MemberSignature Language="F#" Value="Record = 1" Usage="Microsoft.ClientModel.TestFramework.RecordedTestMode.Record" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.RecordedTestMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Record mode captures network interactions during test execution and saves them
+            for future playback. Tests run against live services while simultaneously
+            recording all HTTP requests and responses to session files.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

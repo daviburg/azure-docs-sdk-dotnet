@@ -1,0 +1,82 @@
+<Type Name="RecordedTestAttribute" FullName="Microsoft.ClientModel.TestFramework.RecordedTestAttribute">
+  <TypeSignature Language="C#" Value="public class RecordedTestAttribute : NUnit.Framework.TestAttribute, NUnit.Framework.Interfaces.IWrapSetUpTearDown" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RecordedTestAttribute extends NUnit.Framework.TestAttribute implements class NUnit.Framework.Interfaces.ICommandWrapper, class NUnit.Framework.Interfaces.IWrapSetUpTearDown" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.RecordedTestAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class RecordedTestAttribute&#xA;Inherits TestAttribute&#xA;Implements IWrapSetUpTearDown" />
+  <TypeSignature Language="F#" Value="type RecordedTestAttribute = class&#xA;    inherit TestAttribute&#xA;    interface IWrapSetUpTearDown&#xA;    interface ICommandWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.TestAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.ICommandWrapper</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IWrapSetUpTearDown</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Method)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Method)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This attribute replaces the [Test] attribute and will dynamically re-record recorded tests on failure when run in Playback mode.
+            Tests that are re-recorded will complete with a error status and indicate that copying the updated recording to SessionRecords is needed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecordedTestAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public NUnit.Framework.Internal.Commands.TestCommand Wrap (NUnit.Framework.Internal.Commands.TestCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class NUnit.Framework.Internal.Commands.TestCommand Wrap(class NUnit.Framework.Internal.Commands.TestCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordedTestAttribute.Wrap(NUnit.Framework.Internal.Commands.TestCommand)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Wrap (command As TestCommand) As TestCommand" />
+      <MemberSignature Language="F#" Value="abstract member Wrap : NUnit.Framework.Internal.Commands.TestCommand -&gt; NUnit.Framework.Internal.Commands.TestCommand&#xA;override this.Wrap : NUnit.Framework.Internal.Commands.TestCommand -&gt; NUnit.Framework.Internal.Commands.TestCommand" Usage="recordedTestAttribute.Wrap command" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.ICommandWrapper.Wrap(NUnit.Framework.Internal.Commands.TestCommand)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>NUnit.Framework.Internal.Commands.TestCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="NUnit.Framework.Internal.Commands.TestCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">The test command to wrap.</param>
+        <summary>
+            Wraps the test command to provide recorded test functionality, including automatic re-recording on playback failures.
+            </summary>
+        <returns>A wrapped test command that handles recorded test execution, or the original command if not applicable.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

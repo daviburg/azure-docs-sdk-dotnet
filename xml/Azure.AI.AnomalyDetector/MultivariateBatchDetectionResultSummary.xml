@@ -1,9 +1,9 @@
 <Type Name="MultivariateBatchDetectionResultSummary" FullName="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary">
-  <TypeSignature Language="C#" Value="public class MultivariateBatchDetectionResultSummary" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultivariateBatchDetectionResultSummary extends System.Object" />
+  <TypeSignature Language="C#" Value="public class MultivariateBatchDetectionResultSummary : System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;, System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultivariateBatchDetectionResultSummary extends System.Object implements class System.ClientModel.Primitives.IJsonModel`1&lt;class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;, class System.ClientModel.Primitives.IPersistableModel`1&lt;class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;" />
   <TypeSignature Language="DocId" Value="T:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary" />
-  <TypeSignature Language="VB.NET" Value="Public Class MultivariateBatchDetectionResultSummary" />
-  <TypeSignature Language="F#" Value="type MultivariateBatchDetectionResultSummary = class" />
+  <TypeSignature Language="VB.NET" Value="Public Class MultivariateBatchDetectionResultSummary&#xA;Implements IJsonModel(Of MultivariateBatchDetectionResultSummary), IPersistableModel(Of MultivariateBatchDetectionResultSummary)" />
+  <TypeSignature Language="F#" Value="type MultivariateBatchDetectionResultSummary = class&#xA;    interface IJsonModel&lt;MultivariateBatchDetectionResultSummary&gt;&#xA;    interface IPersistableModel&lt;MultivariateBatchDetectionResultSummary&gt;" />
   <AssemblyInfo>
     <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -11,29 +11,140 @@
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary> Multivariate anomaly detection status. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Errors">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt; Errors { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Azure.AI.AnomalyDetector.ErrorResponse&gt; Errors" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Azure.AI.AnomalyDetector.ErrorResponse&gt; Errors" />
       <MemberSignature Language="DocId" Value="P:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.Errors" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Errors As IReadOnlyList(Of ErrorResponse)" />
-      <MemberSignature Language="F#" Value="member this.Errors : System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt;" Usage="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.Errors" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Errors As IList(Of ErrorResponse)" />
+      <MemberSignature Language="F#" Value="member this.Errors : System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt;" Usage="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.Errors" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt;</ReturnType>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.ErrorResponse&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary> Error message when detection fails. </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary JsonModelCreateCore (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary JsonModelCreateCore(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.JsonModelCreateCore(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function JsonModelCreateCore (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As MultivariateBatchDetectionResultSummary" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&#xA;override this.JsonModelCreateCore : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary" Usage="multivariateBatchDetectionResultSummary.JsonModelCreateCore (reader, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JsonModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual void JsonModelWriteCore (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void JsonModelWriteCore(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.JsonModelWriteCore(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub JsonModelWriteCore (writer As Utf8JsonWriter, options As ModelReaderWriterOptions)" />
+      <MemberSignature Language="F#" Value="abstract member JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.JsonModelWriteCore : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="multivariateBatchDetectionResultSummary.JsonModelWriteCore (writer, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelCreateCore">
+      <MemberSignature Language="C#" Value="protected virtual Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary PersistableModelCreateCore (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary PersistableModelCreateCore(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.PersistableModelCreateCore(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelCreateCore (data As BinaryData, options As ModelReaderWriterOptions) As MultivariateBatchDetectionResultSummary" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&#xA;override this.PersistableModelCreateCore : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary" Usage="multivariateBatchDetectionResultSummary.PersistableModelCreateCore (data, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableModelWriteCore">
+      <MemberSignature Language="C#" Value="protected virtual BinaryData PersistableModelWriteCore (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.BinaryData PersistableModelWriteCore(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.PersistableModelWriteCore(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PersistableModelWriteCore (options As ModelReaderWriterOptions) As BinaryData" />
+      <MemberSignature Language="F#" Value="abstract member PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.PersistableModelWriteCore : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="multivariateBatchDetectionResultSummary.PersistableModelWriteCore options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -80,19 +191,159 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary IJsonModel&lt;MultivariateBatchDetectionResultSummary&gt;.Create (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.System#ClientModel#Primitives#IJsonModel&lt;Azure#AI#AnomalyDetector#MultivariateBatchDetectionResultSummary&gt;#Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As MultivariateBatchDetectionResultSummary Implements IJsonModel(Of MultivariateBatchDetectionResultSummary).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary" Usage="multivariateBatchDetectionResultSummary.System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create (reader, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The JSON reader. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write">
+      <MemberSignature Language="C#" Value="void IJsonModel&lt;MultivariateBatchDetectionResultSummary&gt;.Write (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.System#ClientModel#Primitives#IJsonModel&lt;Azure#AI#AnomalyDetector#MultivariateBatchDetectionResultSummary&gt;#Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Sub Write (writer As Utf8JsonWriter, options As ModelReaderWriterOptions) Implements IJsonModel(Of MultivariateBatchDetectionResultSummary).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="multivariateBatchDetectionResultSummary.System.ClientModel.Primitives.IJsonModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write (writer, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The JSON writer. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary IPersistableModel&lt;MultivariateBatchDetectionResultSummary&gt;.Create (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.System#ClientModel#Primitives#IPersistableModel&lt;Azure#AI#AnomalyDetector#MultivariateBatchDetectionResultSummary&gt;#Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (data As BinaryData, options As ModelReaderWriterOptions) As MultivariateBatchDetectionResultSummary Implements IPersistableModel(Of MultivariateBatchDetectionResultSummary).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary" Usage="multivariateBatchDetectionResultSummary.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Create (data, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The data to parse. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions">
+      <MemberSignature Language="C#" Value="string IPersistableModel&lt;MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.System#ClientModel#Primitives#IPersistableModel&lt;Azure#AI#AnomalyDetector#MultivariateBatchDetectionResultSummary&gt;#GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function GetFormatFromOptions (options As ModelReaderWriterOptions) As String Implements IPersistableModel(Of MultivariateBatchDetectionResultSummary).GetFormatFromOptions" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string" Usage="multivariateBatchDetectionResultSummary.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.GetFormatFromOptions options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write">
+      <MemberSignature Language="C#" Value="BinaryData IPersistableModel&lt;MultivariateBatchDetectionResultSummary&gt;.Write (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.BinaryData System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.System#ClientModel#Primitives#IPersistableModel&lt;Azure#AI#AnomalyDetector#MultivariateBatchDetectionResultSummary&gt;#Write(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Write (options As ModelReaderWriterOptions) As BinaryData Implements IPersistableModel(Of MultivariateBatchDetectionResultSummary).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="multivariateBatchDetectionResultSummary.System.ClientModel.Primitives.IPersistableModel&lt;Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary&gt;.Write options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Write(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="VariableStates">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.VariableState&gt; VariableStates { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Azure.AI.AnomalyDetector.VariableState&gt; VariableStates" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.VariableState&gt; VariableStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Azure.AI.AnomalyDetector.VariableState&gt; VariableStates" />
       <MemberSignature Language="DocId" Value="P:Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.VariableStates" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VariableStates As IReadOnlyList(Of VariableState)" />
-      <MemberSignature Language="F#" Value="member this.VariableStates : System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.VariableState&gt;" Usage="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.VariableStates" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VariableStates As IList(Of VariableState)" />
+      <MemberSignature Language="F#" Value="member this.VariableStates : System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.VariableState&gt;" Usage="Azure.AI.AnomalyDetector.MultivariateBatchDetectionResultSummary.VariableStates" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.AnomalyDetector</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Azure.AI.AnomalyDetector.VariableState&gt;</ReturnType>
+        <ReturnType>System.Collections.Generic.IList&lt;Azure.AI.AnomalyDetector.VariableState&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary> Variable status. </summary>

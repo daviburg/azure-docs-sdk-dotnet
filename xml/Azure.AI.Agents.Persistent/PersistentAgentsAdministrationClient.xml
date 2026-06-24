@@ -15,7 +15,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> The PersistentAgentsAdministration service client. </summary>
+    <summary> The PersistentAgentsAdministrationClient. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -33,6 +33,26 @@
       <Parameters />
       <Docs>
         <summary> Initializes a new instance of PersistentAgentsAdministrationClient for mocking. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistentAgentsAdministrationClient (Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.#ctor(Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As PersistentAgentsAdministrationClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient : Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings -&gt; Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient" Usage="new Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for PersistentAgentsAdministrationClient. </param>
+        <summary> Initializes a new instance of PersistentAgentsAdministrationClient from a <see cref="T:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientSettings" />. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -79,8 +99,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Project endpoint in the form of: https://&lt;aiservices-id&gt;.services.ai.azure.com/api/projects/&lt;project-name&gt;. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of PersistentAgentsAdministrationClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -133,8 +153,8 @@
         <Parameter Name="options" Type="Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Project endpoint in the form of: https://&lt;aiservices-id&gt;.services.ai.azure.com/api/projects/&lt;project-name&gt;. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of PersistentAgentsAdministrationClient. </summary>
         <remarks>To be added.</remarks>
@@ -175,7 +195,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgent(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgent(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -185,17 +205,84 @@
       </Docs>
     </Member>
     <Member MemberName="CreateAgent">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent(string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgent(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgent (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" />
+      <MemberSignature Language="F#" Value="abstract member CreateAgent : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&#xA;override this.CreateAgent : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;" Usage="persistentAgentsAdministrationClient.CreateAgent (model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="model" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="instructions" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tools" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="temperature" Type="System.Nullable&lt;System.Single&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topP" Type="System.Nullable&lt;System.Single&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="responseFormat" Type="System.BinaryData" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="model"> The ID of the model to use. </param>
+        <param name="name"> The name of the new agent. </param>
+        <param name="description"> The description of the new agent. </param>
+        <param name="instructions"> The system instructions for the new agent to use. </param>
+        <param name="tools"> The collection of tools to enable for the new agent. </param>
+        <param name="toolResources">
+            A set of resources that are used by the agent's tools. The resources are specific to the type of tool. For example, the `code_interpreter`
+            tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
+            </param>
+        <param name="temperature">
+            What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random,
+            while lower values like 0.2 will make it more focused and deterministic.
+            </param>
+        <param name="topP">
+            An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.
+            So 0.1 means only the tokens comprising the top 10% probability mass are considered.
+            We generally recommend altering this or temperature but not both.
+            </param>
+        <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new agent. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="model" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="model" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAgent">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent(string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgent(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgent (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgent (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateAgent : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&#xA;override this.CreateAgent : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;" Usage="persistentAgentsAdministrationClient.CreateAgent (model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; CreateAgent (string model, string name, string description, string instructions, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, Azure.AI.Agents.Persistent.ToolResources toolResources, float? temperature, float? topP, BinaryData responseFormat, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgent (model As String, name As String, description As String, instructions As String, tools As IEnumerable(Of ToolDefinition), toolResources As ToolResources, temperature As Nullable(Of Single), topP As Nullable(Of Single), responseFormat As BinaryData, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgent)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;</ReturnType>
       </ReturnValue>
@@ -235,7 +322,7 @@
         <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new agent. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -275,7 +362,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgentAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgentAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -285,17 +372,84 @@
       </Docs>
     </Member>
     <Member MemberName="CreateAgentAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync(string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgentAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgentAsync (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" />
+      <MemberSignature Language="F#" Value="abstract member CreateAgentAsync : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;&#xA;override this.CreateAgentAsync : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;" Usage="persistentAgentsAdministrationClient.CreateAgentAsync (model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="model" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="instructions" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tools" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="temperature" Type="System.Nullable&lt;System.Single&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topP" Type="System.Nullable&lt;System.Single&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="responseFormat" Type="System.BinaryData" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="model"> The ID of the model to use. </param>
+        <param name="name"> The name of the new agent. </param>
+        <param name="description"> The description of the new agent. </param>
+        <param name="instructions"> The system instructions for the new agent to use. </param>
+        <param name="tools"> The collection of tools to enable for the new agent. </param>
+        <param name="toolResources">
+            A set of resources that are used by the agent's tools. The resources are specific to the type of tool. For example, the `code_interpreter`
+            tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
+            </param>
+        <param name="temperature">
+            What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random,
+            while lower values like 0.2 will make it more focused and deterministic.
+            </param>
+        <param name="topP">
+            An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.
+            So 0.1 means only the tokens comprising the top 10% probability mass are considered.
+            We generally recommend altering this or temperature but not both.
+            </param>
+        <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a new agent. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="model" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="model" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync (string model, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync(string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.CreateAgentAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgentAsync (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgentAsync (model As String, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateAgentAsync : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;&#xA;override this.CreateAgentAsync : string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;" Usage="persistentAgentsAdministrationClient.CreateAgentAsync (model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; CreateAgentAsync (string model, string name, string description, string instructions, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, Azure.AI.Agents.Persistent.ToolResources toolResources, float? temperature, float? topP, BinaryData responseFormat, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAgentAsync (model As String, name As String, description As String, instructions As String, tools As IEnumerable(Of ToolDefinition), toolResources As ToolResources, temperature As Nullable(Of Single), topP As Nullable(Of Single), responseFormat As BinaryData, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgent))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -335,7 +489,7 @@
         <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a new agent. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -463,7 +617,7 @@
       </Parameters>
       <Docs>
         <param name="assistantId"> Identifier of the agent. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves an existing agent. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -471,6 +625,7 @@
           <paramref name="assistantId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="assistantId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAgentAsync">
@@ -532,7 +687,7 @@
       </Parameters>
       <Docs>
         <param name="assistantId"> Identifier of the agent. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves an existing agent. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -540,6 +695,7 @@
           <paramref name="assistantId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="assistantId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetAgents">
@@ -664,7 +820,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgent(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgent(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -676,17 +832,86 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateAgent">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent(string assistantId, string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgent(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgent (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" />
+      <MemberSignature Language="F#" Value="abstract member UpdateAgent : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&#xA;override this.UpdateAgent : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;" Usage="persistentAgentsAdministrationClient.UpdateAgent (assistantId, model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assistantId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="model" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="instructions" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tools" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="temperature" Type="System.Nullable&lt;System.Single&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topP" Type="System.Nullable&lt;System.Single&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="responseFormat" Type="System.BinaryData" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="assistantId"> The ID of the agent to modify. </param>
+        <param name="model"> The ID of the model to use. </param>
+        <param name="name"> The modified name for the agent to use. </param>
+        <param name="description"> The modified description for the agent to use. </param>
+        <param name="instructions"> The modified system instructions for the new agent to use. </param>
+        <param name="tools"> The modified collection of tools to enable for the agent. </param>
+        <param name="toolResources">
+            A set of resources that are used by the agent's tools. The resources are specific to the type of tool. For example,
+            the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
+            </param>
+        <param name="temperature">
+            What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random,
+            while lower values like 0.2 will make it more focused and deterministic.
+            </param>
+        <param name="topP">
+            An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.
+            So 0.1 means only the tokens comprising the top 10% probability mass are considered.
+            We generally recommend altering this or temperature but not both.
+            </param>
+        <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing agent. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assistantId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assistantId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAgent">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent(string assistantId, string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgent(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgent (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgent (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgent)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateAgent : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&#xA;override this.UpdateAgent : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;" Usage="persistentAgentsAdministrationClient.UpdateAgent (assistantId, model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt; UpdateAgent (string assistantId, string model, string name, string description, string instructions, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, Azure.AI.Agents.Persistent.ToolResources toolResources, float? temperature, float? topP, BinaryData responseFormat, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgent (assistantId As String, model As String, name As String, description As String, instructions As String, tools As IEnumerable(Of ToolDefinition), toolResources As ToolResources, temperature As Nullable(Of Single), topP As Nullable(Of Single), responseFormat As BinaryData, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgent)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;</ReturnType>
       </ReturnValue>
@@ -728,7 +953,7 @@
         <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing agent. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -772,7 +997,7 @@
             <list type="bullet"><item><description>
             This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
             </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgentAsync(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
+            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgentAsync(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
             </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
@@ -784,17 +1009,86 @@
       </Docs>
     </Member>
     <Member MemberName="UpdateAgentAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync(string assistantId, string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgentAsync(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgentAsync (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" />
+      <MemberSignature Language="F#" Value="abstract member UpdateAgentAsync : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;&#xA;override this.UpdateAgentAsync : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;" Usage="persistentAgentsAdministrationClient.UpdateAgentAsync (assistantId, model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assistantId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="model" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="instructions" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tools" Type="System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="toolResources" Type="Azure.AI.Agents.Persistent.ToolResources" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="temperature" Type="System.Nullable&lt;System.Single&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="topP" Type="System.Nullable&lt;System.Single&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="responseFormat" Type="System.BinaryData" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="assistantId"> The ID of the agent to modify. </param>
+        <param name="model"> The ID of the model to use. </param>
+        <param name="name"> The modified name for the agent to use. </param>
+        <param name="description"> The modified description for the agent to use. </param>
+        <param name="instructions"> The modified system instructions for the new agent to use. </param>
+        <param name="tools"> The modified collection of tools to enable for the agent. </param>
+        <param name="toolResources">
+            A set of resources that are used by the agent's tools. The resources are specific to the type of tool. For example,
+            the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
+            </param>
+        <param name="temperature">
+            What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random,
+            while lower values like 0.2 will make it more focused and deterministic.
+            </param>
+        <param name="topP">
+            An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.
+            So 0.1 means only the tokens comprising the top 10% probability mass are considered.
+            We generally recommend altering this or temperature but not both.
+            </param>
+        <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing agent. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assistantId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assistantId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAgentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync (string assistantId, string model = default, string name = default, string description = default, string instructions = default, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools = default, Azure.AI.Agents.Persistent.ToolResources toolResources = default, float? temperature = default, float? topP = default, BinaryData responseFormat = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync(string assistantId, string model, string name, string description, string instructions, class System.Collections.Generic.IEnumerable`1&lt;class Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, class Azure.AI.Agents.Persistent.ToolResources toolResources, valuetype System.Nullable`1&lt;float32&gt; temperature, valuetype System.Nullable`1&lt;float32&gt; topP, class System.BinaryData responseFormat, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.PersistentAgentsAdministrationClient.UpdateAgentAsync(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.AI.Agents.Persistent.ToolDefinition},Azure.AI.Agents.Persistent.ToolResources,System.Nullable{System.Single},System.Nullable{System.Single},System.BinaryData,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgentAsync (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgentAsync (assistantId As String, Optional model As String = Nothing, Optional name As String = Nothing, Optional description As String = Nothing, Optional instructions As String = Nothing, Optional tools As IEnumerable(Of ToolDefinition) = Nothing, Optional toolResources As ToolResources = Nothing, Optional temperature As Nullable(Of Single) = Nothing, Optional topP As Nullable(Of Single) = Nothing, Optional responseFormat As BinaryData = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgent))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member UpdateAgentAsync : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;&#xA;override this.UpdateAgentAsync : string * string * string * string * string * seq&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; * Azure.AI.Agents.Persistent.ToolResources * Nullable&lt;single&gt; * Nullable&lt;single&gt; * BinaryData * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;" Usage="persistentAgentsAdministrationClient.UpdateAgentAsync (assistantId, model, name, description, instructions, tools, toolResources, temperature, topP, responseFormat, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt; UpdateAgentAsync (string assistantId, string model, string name, string description, string instructions, System.Collections.Generic.IEnumerable&lt;Azure.AI.Agents.Persistent.ToolDefinition&gt; tools, Azure.AI.Agents.Persistent.ToolResources toolResources, float? temperature, float? topP, BinaryData responseFormat, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function UpdateAgentAsync (assistantId As String, model As String, name As String, description As String, instructions As String, tools As IEnumerable(Of ToolDefinition), toolResources As ToolResources, temperature As Nullable(Of Single), topP As Nullable(Of Single), responseFormat As BinaryData, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgent))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgent&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -836,7 +1130,7 @@
         <param name="responseFormat"> The response format of the tool calls used by this agent. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing agent. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

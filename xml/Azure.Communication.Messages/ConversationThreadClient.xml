@@ -36,6 +36,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationThreadClient (Azure.Communication.Messages.ConversationThreadClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Communication.Messages.ConversationThreadClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.Messages.ConversationThreadClient.#ctor(Azure.Communication.Messages.ConversationThreadClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As ConversationThreadClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.Communication.Messages.ConversationThreadClient : Azure.Communication.Messages.ConversationThreadClientSettings -&gt; Azure.Communication.Messages.ConversationThreadClient" Usage="new Azure.Communication.Messages.ConversationThreadClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.Messages</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.Communication.Messages.ConversationThreadClientSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for ConversationThreadClient. </param>
+        <summary> Initializes a new instance of ConversationThreadClient from a <see cref="T:Azure.Communication.Messages.ConversationThreadClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public ConversationThreadClient (Uri endpoint, Azure.Core.TokenCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.Core.TokenCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Communication.Messages.ConversationThreadClient.#ctor(System.Uri,Azure.Core.TokenCredential)" />
@@ -51,8 +71,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of ConversationThreadClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -102,8 +122,8 @@
         <Parameter Name="options" Type="Azure.Communication.Messages.CommunicationMessagesClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> The communication resource, for example https://my-resource.communication.azure.com. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of ConversationThreadClient. </summary>
         <remarks>To be added.</remarks>
@@ -133,14 +153,10 @@
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the payload for adding participants to a conversation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Adds participants to a specific conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call AddParticipants.
 <code><![CDATA[
@@ -169,6 +185,11 @@ AddParticipantsOptions options = new AddParticipantsOptions(new ConversationPart
 });
 Response<AddParticipantsResult> response = client.AddParticipants("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddParticipants">
@@ -193,21 +214,12 @@ Response<AddParticipantsResult> response = client.AddParticipants("<conversation
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Adds participants to a specific conversation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.AddParticipants(System.String,Azure.Communication.Messages.AddParticipantsOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AddParticipants and parse the result.
 <code><![CDATA[
@@ -266,6 +278,11 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("target").ToString());
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("innererror").GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddParticipantsAsync">
@@ -290,14 +307,10 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the payload for adding participants to a conversation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Adds participants to a specific conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call AddParticipantsAsync.
 <code><![CDATA[
@@ -326,6 +339,11 @@ AddParticipantsOptions options = new AddParticipantsOptions(new ConversationPart
 });
 Response<AddParticipantsResult> response = await client.AddParticipantsAsync("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AddParticipantsAsync">
@@ -350,21 +368,12 @@ Response<AddParticipantsResult> response = await client.AddParticipantsAsync("<c
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Adds participants to a specific conversation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.AddParticipantsAsync(System.String,Azure.Communication.Messages.AddParticipantsOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AddParticipantsAsync and parse the result.
 <code><![CDATA[
@@ -423,6 +432,11 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("target").ToString());
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("innererror").GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversation">
@@ -445,21 +459,12 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
       </Parameters>
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Get AI Analysis of a conversation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.AnalyzeConversation(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversation and parse the result.
 <code><![CDATA[
@@ -483,6 +488,11 @@ Response response = client.AnalyzeConversation("<conversationId>", null);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("summary").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversation">
@@ -505,14 +515,10 @@ Console.WriteLine(result.GetProperty("summary").ToString());
       </Parameters>
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Get AI Analysis of a conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call AnalyzeConversation.
 <code><![CDATA[
@@ -530,6 +536,11 @@ ConversationThreadClient client = new ConversationThreadClient(endpoint, credent
 
 Response<GetConversationThreadAnalysisResult> response = client.AnalyzeConversation("<conversationId>");
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationAsync">
@@ -552,21 +563,12 @@ Response<GetConversationThreadAnalysisResult> response = client.AnalyzeConversat
       </Parameters>
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Get AI Analysis of a conversation.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.AnalyzeConversationAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call AnalyzeConversationAsync and parse the result.
 <code><![CDATA[
@@ -590,6 +592,11 @@ Response response = await client.AnalyzeConversationAsync("<conversationId>", nu
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("summary").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="AnalyzeConversationAsync">
@@ -612,14 +619,10 @@ Console.WriteLine(result.GetProperty("summary").ToString());
       </Parameters>
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Get AI Analysis of a conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call AnalyzeConversationAsync.
 <code><![CDATA[
@@ -637,6 +640,11 @@ ConversationThreadClient client = new ConversationThreadClient(endpoint, credent
 
 Response<GetConversationThreadAnalysisResult> response = await client.AnalyzeConversationAsync("<conversationId>");
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetConversations">
@@ -663,17 +671,12 @@ Response<GetConversationThreadAnalysisResult> response = await client.AnalyzeCon
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
         <param name="channelId"> The id of channel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves list of conversations.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.GetConversations(System.Nullable{System.Int32},System.String,System.Nullable{System.Guid},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Pageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetConversations and parse the result.
 <code><![CDATA[
@@ -705,6 +708,7 @@ foreach (BinaryData item in client.GetConversations(1234, "<participantId>", Gui
     Console.WriteLine(result.GetProperty("participants")[0].GetProperty("kind").ToString());
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetConversations">
@@ -731,7 +735,7 @@ foreach (BinaryData item in client.GetConversations(1234, "<participantId>", Gui
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
         <param name="channelId"> The id of channel. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves list of conversations. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -756,6 +760,7 @@ foreach (CommunicationConversation item in client.GetConversations(maxPageSize: 
 {
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetConversationsAsync">
@@ -782,17 +787,12 @@ foreach (CommunicationConversation item in client.GetConversations(maxPageSize: 
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
         <param name="channelId"> The id of channel. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves list of conversations.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.GetConversationsAsync(System.Nullable{System.Int32},System.String,System.Nullable{System.Guid},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.AsyncPageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetConversationsAsync and parse the result.
 <code><![CDATA[
@@ -824,6 +824,7 @@ await foreach (BinaryData item in client.GetConversationsAsync(1234, "<participa
     Console.WriteLine(result.GetProperty("participants")[0].GetProperty("kind").ToString());
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetConversationsAsync">
@@ -850,7 +851,7 @@ await foreach (BinaryData item in client.GetConversationsAsync(1234, "<participa
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
         <param name="channelId"> The id of channel. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves list of conversations. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -875,6 +876,7 @@ await foreach (CommunicationConversation item in client.GetConversationsAsync(ma
 {
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessages">
@@ -901,21 +903,12 @@ await foreach (CommunicationConversation item in client.GetConversationsAsync(ma
         <param name="conversationId"> The conversation ID. </param>
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves list of conversation messages.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.GetMessages(System.String,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Pageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMessages and parse the result.
 <code><![CDATA[
@@ -949,6 +942,11 @@ foreach (BinaryData item in client.GetMessages("<conversationId>", 1234, "<parti
     Console.WriteLine(result.GetProperty("createdOn").ToString());
 }
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessages">
@@ -975,14 +973,10 @@ foreach (BinaryData item in client.GetMessages("<conversationId>", 1234, "<parti
         <param name="conversationId"> The conversation ID. </param>
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves list of conversation messages. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetMessages.
 <code><![CDATA[
@@ -1004,6 +998,11 @@ foreach (ConversationMessageItem item in client.GetMessages("<conversationId>", 
 {
 }
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessagesAsync">
@@ -1030,21 +1029,12 @@ foreach (ConversationMessageItem item in client.GetMessages("<conversationId>", 
         <param name="conversationId"> The conversation ID. </param>
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Retrieves list of conversation messages.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.GetMessagesAsync(System.String,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.AsyncPageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMessagesAsync and parse the result.
 <code><![CDATA[
@@ -1078,6 +1068,11 @@ await foreach (BinaryData item in client.GetMessagesAsync("<conversationId>", 12
     Console.WriteLine(result.GetProperty("createdOn").ToString());
 }
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMessagesAsync">
@@ -1104,14 +1099,10 @@ await foreach (BinaryData item in client.GetMessagesAsync("<conversationId>", 12
         <param name="conversationId"> The conversation ID. </param>
         <param name="maxPageSize"> Number of objects to return per page. </param>
         <param name="participantId"> The participant user ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Retrieves list of conversation messages. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetMessagesAsync.
 <code><![CDATA[
@@ -1133,6 +1124,11 @@ await foreach (ConversationMessageItem item in client.GetMessagesAsync("<convers
 {
 }
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">
@@ -1177,14 +1173,10 @@ await foreach (ConversationMessageItem item in client.GetMessagesAsync("<convers
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the request body for removing participants from a conversation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> remove a participant from a conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call RemoveParticipants.
 <code><![CDATA[
@@ -1204,6 +1196,11 @@ ConversationThreadClient client = new ConversationThreadClient(endpoint, credent
 RemoveParticipantsOptions options = new RemoveParticipantsOptions(new string[] { "<participantIds>" });
 Response<RemoveParticipantsResult> response = client.RemoveParticipants("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveParticipants">
@@ -1228,21 +1225,12 @@ Response<RemoveParticipantsResult> response = client.RemoveParticipants("<conver
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] remove a participant from a conversation
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.RemoveParticipants(System.String,Azure.Communication.Messages.RemoveParticipantsOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call RemoveParticipants and parse the result.
 <code><![CDATA[
@@ -1284,6 +1272,11 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("target").ToString());
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("innererror").GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveParticipantsAsync">
@@ -1308,14 +1301,10 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the request body for removing participants from a conversation. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> remove a participant from a conversation. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call RemoveParticipantsAsync.
 <code><![CDATA[
@@ -1335,6 +1324,11 @@ ConversationThreadClient client = new ConversationThreadClient(endpoint, credent
 RemoveParticipantsOptions options = new RemoveParticipantsOptions(new string[] { "<participantIds>" });
 Response<RemoveParticipantsResult> response = await client.RemoveParticipantsAsync("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveParticipantsAsync">
@@ -1359,21 +1353,12 @@ Response<RemoveParticipantsResult> response = await client.RemoveParticipantsAsy
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] remove a participant from a conversation
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.RemoveParticipantsAsync(System.String,Azure.Communication.Messages.RemoveParticipantsOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call RemoveParticipantsAsync and parse the result.
 <code><![CDATA[
@@ -1415,6 +1400,11 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("target").ToString());
 Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("error").GetProperty("innererror").GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SendMessage">
@@ -1439,14 +1429,10 @@ Console.WriteLine(result.GetProperty("invalidParticipants")[0].GetProperty("erro
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the conversation message to send. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Sends a conversation message from Business to User. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call SendMessage.
 <code><![CDATA[
@@ -1469,6 +1455,11 @@ SendConversationMessageOptions options = new SendConversationMessageOptions(new 
 };
 Response<SendConversationMessageResult> response = client.SendMessage("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SendMessage">
@@ -1493,21 +1484,12 @@ Response<SendConversationMessageResult> response = client.SendMessage("<conversa
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Sends a conversation message from Business to User.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.SendMessage(System.String,Azure.Communication.Messages.SendConversationMessageOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call SendMessage and parse the result.
 <code><![CDATA[
@@ -1548,6 +1530,11 @@ Response response = client.SendMessage("<conversationId>", content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("messageId").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SendMessageAsync">
@@ -1572,14 +1559,10 @@ Console.WriteLine(result.GetProperty("messageId").ToString());
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="options"> Details of the conversation message to send. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Sends a conversation message from Business to User. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call SendMessageAsync.
 <code><![CDATA[
@@ -1602,6 +1585,11 @@ SendConversationMessageOptions options = new SendConversationMessageOptions(new 
 };
 Response<SendConversationMessageResult> response = await client.SendMessageAsync("<conversationId>", options);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="options" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="SendMessageAsync">
@@ -1626,21 +1614,12 @@ Response<SendConversationMessageResult> response = await client.SendMessageAsync
       <Docs>
         <param name="conversationId"> The conversation ID. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Sends a conversation message from Business to User.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Communication.Messages.ConversationThreadClient.SendMessageAsync(System.String,Azure.Communication.Messages.SendConversationMessageOptions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call SendMessageAsync and parse the result.
 <code><![CDATA[
@@ -1681,6 +1660,11 @@ Response response = await client.SendMessageAsync("<conversationId>", content);
 JsonElement result = JsonDocument.Parse(response.ContentStream).RootElement;
 Console.WriteLine(result.GetProperty("messageId").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conversationId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="conversationId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
   </Members>

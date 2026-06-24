@@ -34,11 +34,11 @@
       </Docs>
     </Member>
     <Member MemberName="DeleteDeployment">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeployment (Azure.WaitUntil waitUntil, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeployment(valuetype Azure.WaitUntil waitUntil, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeployment(Azure.WaitUntil,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeployment (waitUntil As WaitUntil, Optional context As RequestContext = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeployment : Azure.WaitUntil * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeleteDeployment : Azure.WaitUntil * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeployment (waitUntil, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeployment (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeployment(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeployment(Azure.WaitUntil,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeployment (waitUntil As WaitUntil, projectName As String, deploymentName As String, context As RequestContext) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeployment : Azure.WaitUntil * string * string * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeleteDeployment : Azure.WaitUntil * string * string * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeployment (waitUntil, projectName, deploymentName, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -49,28 +49,66 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Deletes a project deployment.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Deletes a project deployment. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDeployment">
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeployment (Azure.WaitUntil waitUntil, string projectName, string deploymentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeployment(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeployment(Azure.WaitUntil,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeployment (waitUntil As WaitUntil, projectName As String, deploymentName As String, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeployment : Azure.WaitUntil * string * string * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.DeleteDeployment : Azure.WaitUntil * string * string * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeployment (waitUntil, projectName, deploymentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Operation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Deletes a project deployment. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteDeploymentAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentAsync (Azure.WaitUntil waitUntil, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentAsync(valuetype Azure.WaitUntil waitUntil, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentAsync(Azure.WaitUntil,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentAsync (waitUntil As WaitUntil, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentAsync : Azure.WaitUntil * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentAsync : Azure.WaitUntil * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentAsync (waitUntil, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentAsync(Azure.WaitUntil,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, context As RequestContext) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentAsync : Azure.WaitUntil * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentAsync : Azure.WaitUntil * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentAsync (waitUntil, projectName, deploymentName, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -81,28 +119,66 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Deletes a project deployment.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Deletes a project deployment. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDeploymentAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentAsync(Azure.WaitUntil,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentAsync : Azure.WaitUntil * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentAsync : Azure.WaitUntil * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentAsync (waitUntil, projectName, deploymentName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Operation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="waitUntil">
+          <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Deletes a project deployment. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteDeploymentFromResources">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeploymentFromResources (Azure.WaitUntil waitUntil, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds details, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeploymentFromResources(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResources(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResources (waitUntil As WaitUntil, details As ConversationAuthoringProjectResourceIds, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResources : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.DeleteDeploymentFromResources : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResources (waitUntil, details, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeploymentFromResources (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeploymentFromResources(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResources(Azure.WaitUntil,System.String,System.String,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResources (waitUntil As WaitUntil, projectName As String, deploymentName As String, details As ConversationAuthoringDeleteDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResources : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.DeleteDeploymentFromResources : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResources (waitUntil, projectName, deploymentName, details, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -113,27 +189,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
-        <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
+        <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="details"> The Language or AIService resource list for deleting the deployment.\r\n            The deployment will only be deleted from the specified resources, and will remain for the rest. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Deletes a deployment from the specified project-assigned resources. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="details" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="details" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteDeploymentFromResources">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeploymentFromResources (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeploymentFromResources(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResources(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResources (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResources : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeleteDeploymentFromResources : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResources (waitUntil, content, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeleteDeploymentFromResources (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeleteDeploymentFromResources(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResources(Azure.WaitUntil,System.String,System.String,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResources (waitUntil As WaitUntil, projectName As String, deploymentName As String, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResources : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeleteDeploymentFromResources : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResources (waitUntil, projectName, deploymentName, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -144,34 +226,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="content" Type="Azure.Core.RequestContent" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Deletes a deployment from the specified project-assigned resources.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResources(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Deletes a deployment from the specified project-assigned resources. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteDeploymentFromResourcesAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentFromResourcesAsync (Azure.WaitUntil waitUntil, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds details, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentFromResourcesAsync(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResourcesAsync (waitUntil As WaitUntil, details As ConversationAuthoringProjectResourceIds, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync (waitUntil, details, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentFromResourcesAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentFromResourcesAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync(Azure.WaitUntil,System.String,System.String,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResourcesAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, details As ConversationAuthoringDeleteDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync (waitUntil, projectName, deploymentName, details, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -182,27 +263,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
-        <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
+        <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeleteDeploymentDetails" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="details"> The Language or AIService resource list for deleting the deployment.\r\n            The deployment will only be deleted from the specified resources, and will remain for the rest. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Deletes a deployment from the specified project-assigned resources. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="details" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="details" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteDeploymentFromResourcesAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentFromResourcesAsync (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentFromResourcesAsync(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResourcesAsync (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync (waitUntil, content, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeleteDeploymentFromResourcesAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeleteDeploymentFromResourcesAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync(Azure.WaitUntil,System.String,System.String,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteDeploymentFromResourcesAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeleteDeploymentFromResourcesAsync : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync (waitUntil, projectName, deploymentName, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -213,34 +300,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="content" Type="Azure.Core.RequestContent" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Deletes a deployment from the specified project-assigned resources.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeleteDeploymentFromResourcesAsync(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectResourceIds,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Deletes a deployment from the specified project-assigned resources. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeployProject">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeployProject (Azure.WaitUntil waitUntil, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeployProject(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProject(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProject (waitUntil As WaitUntil, details As ConversationAuthoringCreateDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member DeployProject : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.DeployProject : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeployProject (waitUntil, details, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeployProject (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeployProject(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProject(Azure.WaitUntil,System.String,System.String,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProject (waitUntil As WaitUntil, projectName As String, deploymentName As String, details As ConversationAuthoringCreateDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeployProject : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation&#xA;override this.DeployProject : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeployProject (waitUntil, projectName, deploymentName, details, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -251,27 +337,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="details"> The new deployment info. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Creates a new deployment or replaces an existing one. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="details" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="details" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeployProject">
-      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeployProject (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeployProject(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProject(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProject (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
-      <MemberSignature Language="F#" Value="abstract member DeployProject : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeployProject : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeployProject (waitUntil, content, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Operation DeployProject (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Operation DeployProject(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProject(Azure.WaitUntil,System.String,System.String,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProject (waitUntil As WaitUntil, projectName As String, deploymentName As String, content As RequestContent, Optional context As RequestContext = Nothing) As Operation" />
+      <MemberSignature Language="F#" Value="abstract member DeployProject : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation&#xA;override this.DeployProject : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; Azure.Operation" Usage="conversationAuthoringDeployment.DeployProject (waitUntil, projectName, deploymentName, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -282,34 +374,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="content" Type="Azure.Core.RequestContent" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Creates a new deployment or replaces an existing one.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProject(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Creates a new deployment or replaces an existing one. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeployProjectAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeployProjectAsync (Azure.WaitUntil waitUntil, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeployProjectAsync(valuetype Azure.WaitUntil waitUntil, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProjectAsync(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProjectAsync (waitUntil As WaitUntil, details As ConversationAuthoringCreateDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member DeployProjectAsync : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeployProjectAsync : Azure.WaitUntil * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeployProjectAsync (waitUntil, details, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeployProjectAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeployProjectAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails details, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProjectAsync(Azure.WaitUntil,System.String,System.String,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProjectAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, details As ConversationAuthoringCreateDeploymentDetails, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeployProjectAsync : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeployProjectAsync : Azure.WaitUntil * string * string * Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeployProjectAsync (waitUntil, projectName, deploymentName, details, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -320,27 +411,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="details" Type="Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="details"> The new deployment info. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Creates a new deployment or replaces an existing one. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="details" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="details" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeployProjectAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeployProjectAsync (Azure.WaitUntil waitUntil, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeployProjectAsync(valuetype Azure.WaitUntil waitUntil, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProjectAsync(Azure.WaitUntil,Azure.Core.RequestContent,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProjectAsync (waitUntil As WaitUntil, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
-      <MemberSignature Language="F#" Value="abstract member DeployProjectAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeployProjectAsync : Azure.WaitUntil * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeployProjectAsync (waitUntil, content, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Operation&gt; DeployProjectAsync (Azure.WaitUntil waitUntil, string projectName, string deploymentName, Azure.Core.RequestContent content, Azure.RequestContext context = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Operation&gt; DeployProjectAsync(valuetype Azure.WaitUntil waitUntil, string projectName, string deploymentName, class Azure.Core.RequestContent content, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProjectAsync(Azure.WaitUntil,System.String,System.String,Azure.Core.RequestContent,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeployProjectAsync (waitUntil As WaitUntil, projectName As String, deploymentName As String, content As RequestContent, Optional context As RequestContext = Nothing) As Task(Of Operation)" />
+      <MemberSignature Language="F#" Value="abstract member DeployProjectAsync : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;&#xA;override this.DeployProjectAsync : Azure.WaitUntil * string * string * Azure.Core.RequestContent * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Operation&gt;" Usage="conversationAuthoringDeployment.DeployProjectAsync (waitUntil, projectName, deploymentName, content, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -351,34 +448,33 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" />
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="content" Type="Azure.Core.RequestContent" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
+        <param name="projectName"> The name of the project to use. </param>
+        <param name="deploymentName"> The name of the specific deployment of the project to use. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
-        <summary>
-            [Protocol Method] Creates a new deployment or replaces an existing one.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.DeployProjectAsync(Azure.WaitUntil,Azure.AI.Language.Conversations.Authoring.ConversationAuthoringCreateDeploymentDetails,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Operation" /> representing an asynchronous operation on the service. </returns>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <summary> Creates a new deployment or replaces an existing one. </summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeployment">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeployment (Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeployment(class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeployment(Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeployment (context As RequestContext) As Response" />
-      <MemberSignature Language="F#" Value="abstract member GetDeployment : Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeployment : Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeployment context" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeployment (string projectName, string deploymentName, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeployment(string projectName, string deploymentName, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeployment(System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeployment (projectName As String, deploymentName As String, context As RequestContext) As Response" />
+      <MemberSignature Language="F#" Value="abstract member GetDeployment : string * string * Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeployment : string * string * Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeployment (projectName, deploymentName, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -388,28 +484,32 @@
         <ReturnType>Azure.Response</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the details of a deployment.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeployment(System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeployment">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt; GetDeployment (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt; GetDeployment(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeployment(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeployment (Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringProjectDeployment)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeployment : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&#xA;override this.GetDeployment : System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;" Usage="conversationAuthoringDeployment.GetDeployment cancellationToken" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt; GetDeployment (string projectName, string deploymentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt; GetDeployment(string projectName, string deploymentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeployment(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeployment (projectName As String, deploymentName As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringProjectDeployment)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeployment : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&#xA;override this.GetDeployment : string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;" Usage="conversationAuthoringDeployment.GetDeployment (projectName, deploymentName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -419,21 +519,30 @@
         <ReturnType>Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the details of a deployment. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentAsync (Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentAsync(class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentAsync(Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentAsync (context As RequestContext) As Task(Of Response)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentAsync : Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentAsync : Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentAsync context" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentAsync (string projectName, string deploymentName, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentAsync(string projectName, string deploymentName, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentAsync(System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentAsync (projectName As String, deploymentName As String, context As RequestContext) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentAsync : string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentAsync : string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentAsync (projectName, deploymentName, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -443,28 +552,32 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the details of a deployment.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentAsync(System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt; GetDeploymentAsync (System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt; GetDeploymentAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringProjectDeployment))" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt;&#xA;override this.GetDeploymentAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentAsync cancellationToken" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt; GetDeploymentAsync (string projectName, string deploymentName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt; GetDeploymentAsync(string projectName, string deploymentName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentAsync(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentAsync (projectName As String, deploymentName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringProjectDeployment))" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt;&#xA;override this.GetDeploymentAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentAsync (projectName, deploymentName, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -474,21 +587,30 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringProjectDeployment&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the details of a deployment. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="projectName" /> or <paramref name="deploymentName" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentDeleteFromResourcesStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeploymentDeleteFromResourcesStatus (string jobId, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeploymentDeleteFromResourcesStatus(string jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus(System.String,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatus (jobId As String, context As RequestContext) As Response" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatus : string * Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeploymentDeleteFromResourcesStatus : string * Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus (jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeploymentDeleteFromResourcesStatus (string projectName, string deploymentName, string jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeploymentDeleteFromResourcesStatus(string projectName, string deploymentName, string jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus(System.String,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatus (projectName As String, deploymentName As String, jobId As String, context As RequestContext) As Response" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatus : string * string * string * Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeploymentDeleteFromResourcesStatus : string * string * string * Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus (projectName, deploymentName, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -498,34 +620,34 @@
         <ReturnType>Azure.Response</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the status of an existing delete deployment from specific resources job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentDeleteFromResourcesStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt; GetDeploymentDeleteFromResourcesStatus (string jobId, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt; GetDeploymentDeleteFromResourcesStatus(string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatus (jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringDeploymentDeleteFromResourcesState)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus (jobId, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt; GetDeploymentDeleteFromResourcesStatus (string projectName, string deploymentName, string jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt; GetDeploymentDeleteFromResourcesStatus(string projectName, string deploymentName, string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatus (projectName As String, deploymentName As String, jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringDeploymentDeleteFromResourcesState)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatus : string * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatus : string * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatus (projectName, deploymentName, jobId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -535,27 +657,32 @@
         <ReturnType>Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the status of an existing delete deployment from specific resources job. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentDeleteFromResourcesStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentDeleteFromResourcesStatusAsync (string jobId, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentDeleteFromResourcesStatusAsync(string jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync(System.String,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatusAsync (jobId As String, context As RequestContext) As Task(Of Response)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatusAsync : string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatusAsync : string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync (jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentDeleteFromResourcesStatusAsync (string projectName, string deploymentName, string jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentDeleteFromResourcesStatusAsync(string projectName, string deploymentName, string jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync(System.String,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatusAsync (projectName As String, deploymentName As String, jobId As String, context As RequestContext) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatusAsync : string * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatusAsync : string * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync (projectName, deploymentName, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -565,34 +692,34 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the status of an existing delete deployment from specific resources job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentDeleteFromResourcesStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt; GetDeploymentDeleteFromResourcesStatusAsync (string jobId, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt; GetDeploymentDeleteFromResourcesStatusAsync(string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatusAsync (jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringDeploymentDeleteFromResourcesState))" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync (jobId, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt; GetDeploymentDeleteFromResourcesStatusAsync (string projectName, string deploymentName, string jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt; GetDeploymentDeleteFromResourcesStatusAsync(string projectName, string deploymentName, string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentDeleteFromResourcesStatusAsync (projectName As String, deploymentName As String, jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringDeploymentDeleteFromResourcesState))" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentDeleteFromResourcesStatusAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt;&#xA;override this.GetDeploymentDeleteFromResourcesStatusAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentDeleteFromResourcesStatusAsync (projectName, deploymentName, jobId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -602,27 +729,32 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentDeleteFromResourcesState&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the status of an existing delete deployment from specific resources job. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeploymentStatus (string jobId, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeploymentStatus(string jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatus(System.String,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatus (jobId As String, context As RequestContext) As Response" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatus : string * Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeploymentStatus : string * Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeploymentStatus (jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response GetDeploymentStatus (string projectName, string deploymentName, string jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response GetDeploymentStatus(string projectName, string deploymentName, string jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatus(System.String,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatus (projectName As String, deploymentName As String, jobId As String, context As RequestContext) As Response" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatus : string * string * string * Azure.RequestContext -&gt; Azure.Response&#xA;override this.GetDeploymentStatus : string * string * string * Azure.RequestContext -&gt; Azure.Response" Usage="conversationAuthoringDeployment.GetDeploymentStatus (projectName, deploymentName, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -632,34 +764,34 @@
         <ReturnType>Azure.Response</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the status of an existing deployment job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatus(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentStatus">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt; GetDeploymentStatus (string jobId, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt; GetDeploymentStatus(string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatus(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatus (jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringDeploymentState)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&#xA;override this.GetDeploymentStatus : string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatus (jobId, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt; GetDeploymentStatus (string projectName, string deploymentName, string jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt; GetDeploymentStatus(string projectName, string deploymentName, string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatus(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatus (projectName As String, deploymentName As String, jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Response(Of ConversationAuthoringDeploymentState)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatus : string * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&#xA;override this.GetDeploymentStatus : string * string * string * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatus (projectName, deploymentName, jobId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -669,27 +801,32 @@
         <ReturnType>Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the status of an existing deployment job. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentStatusAsync (string jobId, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentStatusAsync(string jobId, class Azure.RequestContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatusAsync(System.String,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatusAsync (jobId As String, context As RequestContext) As Task(Of Response)" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatusAsync : string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentStatusAsync : string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatusAsync (jobId, context)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; GetDeploymentStatusAsync (string projectName, string deploymentName, string jobId, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; GetDeploymentStatusAsync(string projectName, string deploymentName, string jobId, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatusAsync(System.String,System.String,System.String,Azure.RequestContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatusAsync (projectName As String, deploymentName As String, jobId As String, context As RequestContext) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatusAsync : string * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.GetDeploymentStatusAsync : string * string * string * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatusAsync (projectName, deploymentName, jobId, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -699,34 +836,34 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Gets the status of an existing deployment job.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatusAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
         <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDeploymentStatusAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt; GetDeploymentStatusAsync (string jobId, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt; GetDeploymentStatusAsync(string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatusAsync(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatusAsync (jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringDeploymentState))" />
-      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt;&#xA;override this.GetDeploymentStatusAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatusAsync (jobId, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt; GetDeploymentStatusAsync (string projectName, string deploymentName, string jobId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt; GetDeploymentStatusAsync(string projectName, string deploymentName, string jobId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeployment.GetDeploymentStatusAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDeploymentStatusAsync (projectName As String, deploymentName As String, jobId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of ConversationAuthoringDeploymentState))" />
+      <MemberSignature Language="F#" Value="abstract member GetDeploymentStatusAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt;&#xA;override this.GetDeploymentStatusAsync : string * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt;" Usage="conversationAuthoringDeployment.GetDeploymentStatusAsync (projectName, deploymentName, jobId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Language.Conversations.Authoring</AssemblyName>
@@ -736,19 +873,24 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Language.Conversations.Authoring.ConversationAuthoringDeploymentState&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="projectName" Type="System.String" />
+        <Parameter Name="deploymentName" Type="System.String" />
         <Parameter Name="jobId" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="projectName"> The new project name. </param>
+        <param name="deploymentName"> Represents deployment name. </param>
         <param name="jobId"> The job ID. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Gets the status of an existing deployment job. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="jobId" /> is null. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+          <paramref name="projectName" />, <paramref name="deploymentName" /> or <paramref name="jobId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">

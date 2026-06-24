@@ -15,6 +15,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.1.0</AssemblyVersion>
     <AssemblyVersion>1.6.0.0</AssemblyVersion>
+    <AssemblyVersion>1.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,6 +36,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AddParticipantFailed</ReturnType>
@@ -71,6 +73,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AddParticipantResult</ReturnType>
@@ -99,6 +102,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AddParticipantSucceeded</ReturnType>
@@ -135,6 +139,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AnswerCallResult</ReturnType>
@@ -161,6 +166,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AnswerFailed</ReturnType>
@@ -195,15 +201,16 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AudioData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="data" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="timestamp" Type="System.DateTime" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="participantId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="silent" Type="System.Boolean" Index="3" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="data" Type="System.String" />
+        <Parameter Name="timestamp" Type="System.DateTime" />
+        <Parameter Name="participantId" Type="System.String" />
+        <Parameter Name="silent" Type="System.Boolean" />
       </Parameters>
       <Docs>
         <param name="data">Base64 encoded audio data.</param>
@@ -227,16 +234,17 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.AudioMetadata</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="mediaSubscriptionId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="encoding" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="sampleRate" Type="System.Int32" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="channels" Type="System.Int32" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="length" Type="System.Int32" Index="4" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="mediaSubscriptionId" Type="System.String" />
+        <Parameter Name="encoding" Type="System.String" />
+        <Parameter Name="sampleRate" Type="System.Int32" />
+        <Parameter Name="channels" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
       </Parameters>
       <Docs>
         <param name="mediaSubscriptionId">The media subscription id.</param>
@@ -261,6 +269,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallConnected</ReturnType>
@@ -293,6 +302,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallConnectionProperties</ReturnType>
@@ -320,9 +330,9 @@
         <param name="sourceIdentity">Source identity.</param>
         <param name="sourceCallerIdNumber">Caller ID phone number to appear on the invitee.</param>
         <param name="sourceDisplayName">Display name to appear on the invitee.</param>
-        <param name="answeredBy">Identifier that answered the call.</param>
         <param name="mediaStreamingSubscription">The subscription details for Media Streaming.</param>
         <param name="transcriptionSubscription">The subscription details for transcription.</param>
+        <param name="answeredBy">Identifier that answered the call.</param>
         <param name="answeredFor">Identity of the original Pstn target of an incoming Call.</param>
         <summary> Initializes a new instance of CallConnectionProperties. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.CallConnectionProperties" /> instance for mocking. </returns>
@@ -339,6 +349,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallDisconnected</ReturnType>
@@ -371,6 +382,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallParticipant</ReturnType>
@@ -399,6 +411,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallTransferAccepted</ReturnType>
@@ -418,8 +431,8 @@
         <param name="correlationId"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
         <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
         <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
-        <param name="transferee"> the participant who is being transferred away. </param>
         <param name="transferTarget"> Target who the call is transferred to. </param>
+        <param name="transferee"> the participant who is being transferred away. </param>
         <summary> Initializes a new instance of CallTransferAccepted. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.CallTransferAccepted" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -435,6 +448,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CallTransferFailed</ReturnType>
@@ -467,6 +481,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CancelAddParticipantFailed</ReturnType>
@@ -503,6 +518,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CancelAddParticipantOperationResult</ReturnType>
@@ -529,6 +545,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CancelAddParticipantSucceeded</ReturnType>
@@ -565,14 +582,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ChoiceResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="label" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="recognizedPhrase" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="recognizedPhrase" Type="System.String" />
+        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" />
       </Parameters>
       <Docs>
         <param name="label"> Label is the primary identifier for the choice detected. </param>
@@ -581,41 +599,6 @@
             If Dtmf input is recognized, then Label will be the identifier for the choice detected and phrases will be set to null
             </param>
         <param name="confidence"> The confidence level of the recognized speech, if available, ranges from 0.0 to 1.0. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.ChoiceResult" />. </summary>
-        <returns> A new <see cref="T:Azure.Communication.CallAutomation.ChoiceResult" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ChoiceResult">
-      <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.ChoiceResult ChoiceResult (string label = default, string recognizedPhrase = default, double? confidence = default, string languageIdentified = default, Azure.Communication.CallAutomation.SentimentAnalysisResult sentimentAnalysisResult = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.ChoiceResult ChoiceResult(string label, string recognizedPhrase, valuetype System.Nullable`1&lt;float64&gt; confidence, string languageIdentified, class Azure.Communication.CallAutomation.SentimentAnalysisResult sentimentAnalysisResult) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Communication.CallAutomation.CallAutomationModelFactory.ChoiceResult(System.String,System.String,System.Nullable{System.Double},System.String,Azure.Communication.CallAutomation.SentimentAnalysisResult)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ChoiceResult (Optional label As String = Nothing, Optional recognizedPhrase As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional languageIdentified As String = Nothing, Optional sentimentAnalysisResult As SentimentAnalysisResult = Nothing) As ChoiceResult" />
-      <MemberSignature Language="F#" Value="static member ChoiceResult : string * string * Nullable&lt;double&gt; * string * Azure.Communication.CallAutomation.SentimentAnalysisResult -&gt; Azure.Communication.CallAutomation.ChoiceResult" Usage="Azure.Communication.CallAutomation.CallAutomationModelFactory.ChoiceResult (label, recognizedPhrase, confidence, languageIdentified, sentimentAnalysisResult)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
-        <AssemblyVersion>1.6.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Communication.CallAutomation.ChoiceResult</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="label" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="recognizedPhrase" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="languageIdentified" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="sentimentAnalysisResult" Type="Azure.Communication.CallAutomation.SentimentAnalysisResult" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="label"> Label is the primary identifier for the choice detected. </param>
-        <param name="recognizedPhrase">
-            Phrases are set to the value if choice is selected via phrase detection.
-            If Dtmf input is recognized, then Label will be the identifier for the choice detected and phrases will be set to null
-            </param>
-        <param name="confidence"> The confidence level of the recognized speech, if available, ranges from 0.0 to 1.0. </param>
-        <param name="languageIdentified"> The identified language for a spoken phrase. </param>
-        <param name="sentimentAnalysisResult"> Gets or sets the sentiment analysis result. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.ChoiceResult" />. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.ChoiceResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -631,6 +614,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ConnectFailed</ReturnType>
@@ -663,6 +647,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ContinuousDtmfRecognitionStopped</ReturnType>
@@ -695,6 +680,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ContinuousDtmfRecognitionToneFailed</ReturnType>
@@ -727,6 +713,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ContinuousDtmfRecognitionToneReceived</ReturnType>
@@ -763,6 +750,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CreateCallFailed</ReturnType>
@@ -797,6 +785,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.CreateCallResult</ReturnType>
@@ -823,6 +812,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.DtmfResult</ReturnType>
@@ -847,6 +837,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.HoldFailed</ReturnType>
@@ -879,6 +870,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.MediaStreamingFailed</ReturnType>
@@ -913,6 +905,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.MediaStreamingStarted</ReturnType>
@@ -947,6 +940,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.MediaStreamingStopped</ReturnType>
@@ -981,6 +975,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.MediaStreamingUpdate</ReturnType>
@@ -1009,6 +1004,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.MuteParticipantResult</ReturnType>
@@ -1033,12 +1029,13 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.OutStreamingData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="kind" Type="Azure.Communication.CallAutomation.MediaKind" Index="0" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="kind" Type="Azure.Communication.CallAutomation.MediaKind" />
       </Parameters>
       <Docs>
         <param name="kind">The media kind.</param>
@@ -1059,6 +1056,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ParticipantsUpdated</ReturnType>
@@ -1095,6 +1093,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.PlayCanceled</ReturnType>
@@ -1127,6 +1126,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.PlayCompleted</ReturnType>
@@ -1159,6 +1159,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.PlayFailed</ReturnType>
@@ -1172,11 +1173,11 @@
         <Parameter Name="failedPlaySourceIndex" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
+        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
+        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <param name="callConnectionId"> Call connection ID. </param>
         <param name="serverCallId"> Server call ID. </param>
         <param name="correlationId"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
-        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
-        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <param name="failedPlaySourceIndex"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
         <summary> Initializes a new instance of PlayFailed. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.PlayFailed" /> instance for mocking. </returns>
@@ -1193,6 +1194,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.PlayStarted</ReturnType>
@@ -1205,11 +1207,11 @@
         <Parameter Name="resultInformation" Type="Azure.Communication.CallAutomation.ResultInformation" />
       </Parameters>
       <Docs>
+        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
+        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <param name="callConnectionId"> Call connection ID. </param>
         <param name="serverCallId"> Server call ID. </param>
         <param name="correlationId"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
-        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
-        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <summary> Initializes a new instance of PlayStarted. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.PlayStarted" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -1225,6 +1227,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RecognizeCanceled</ReturnType>
@@ -1257,6 +1260,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RecognizeCompleted</ReturnType>
@@ -1296,6 +1300,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RecognizeFailed</ReturnType>
@@ -1309,11 +1314,11 @@
         <Parameter Name="failedPlaySourceIndex" Type="System.Nullable&lt;System.Int32&gt;" />
       </Parameters>
       <Docs>
+        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
+        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <param name="callConnectionId"> Call connection ID. </param>
         <param name="serverCallId"> Server call ID. </param>
         <param name="correlationId"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
-        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
-        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
         <param name="failedPlaySourceIndex"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
         <summary> Initializes a new instance of RecognizeFailed. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.RecognizeFailed" /> instance for mocking. </returns>
@@ -1330,6 +1335,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RecordingStateChanged</ReturnType>
@@ -1368,6 +1374,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RecordingStateResult</ReturnType>
@@ -1396,6 +1403,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RemoveParticipantFailed</ReturnType>
@@ -1432,6 +1440,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RemoveParticipantResult</ReturnType>
@@ -1456,6 +1465,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.RemoveParticipantSucceeded</ReturnType>
@@ -1492,14 +1502,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ResultInformation</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="code" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="subCode" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="message" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="code" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="subCode" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="code"> Code of the current result. This can be helpful to Call Automation team to troubleshoot the issue if this result was unexpected. </param>
@@ -1520,6 +1531,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.ResultInformation</ReturnType>
@@ -1552,6 +1564,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.SendDtmfTonesCompleted</ReturnType>
@@ -1584,6 +1597,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.SendDtmfTonesFailed</ReturnType>
@@ -1616,6 +1630,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.SendDtmfTonesResult</ReturnType>
@@ -1630,30 +1645,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SentimentAnalysisResult">
-      <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.SentimentAnalysisResult SentimentAnalysisResult (string sentiment = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.SentimentAnalysisResult SentimentAnalysisResult(string sentiment) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Communication.CallAutomation.CallAutomationModelFactory.SentimentAnalysisResult(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SentimentAnalysisResult (Optional sentiment As String = Nothing) As SentimentAnalysisResult" />
-      <MemberSignature Language="F#" Value="static member SentimentAnalysisResult : string -&gt; Azure.Communication.CallAutomation.SentimentAnalysisResult" Usage="Azure.Communication.CallAutomation.CallAutomationModelFactory.SentimentAnalysisResult sentiment" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
-        <AssemblyVersion>1.6.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Communication.CallAutomation.SentimentAnalysisResult</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="sentiment" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="sentiment"> Gets or sets the value of the sentiment detected (positive, negative, neutral, mixed). </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.SentimentAnalysisResult" />. </summary>
-        <returns> A new <see cref="T:Azure.Communication.CallAutomation.SentimentAnalysisResult" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="SipDiagnosticInfo">
       <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.SipDiagnosticInfo SipDiagnosticInfo (int? code = default, string message = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.SipDiagnosticInfo SipDiagnosticInfo(valuetype System.Nullable`1&lt;int32&gt; code, string message) cil managed" />
@@ -1664,6 +1655,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.SipDiagnosticInfo</ReturnType>
@@ -1690,47 +1682,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.SpeechResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="speech" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="speech" Type="System.String" />
+        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" />
       </Parameters>
       <Docs>
         <param name="speech"> The recognized speech in string. </param>
         <param name="confidence"> The confidence level of the recognized speech, if available, ranges from 0.0 to 1.0. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.SpeechResult" />. </summary>
-        <returns> A new <see cref="T:Azure.Communication.CallAutomation.SpeechResult" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SpeechResult">
-      <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.SpeechResult SpeechResult (string speech = default, double? confidence = default, string languageIdentified = default, Azure.Communication.CallAutomation.SentimentAnalysisResult sentimentAnalysisResult = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.SpeechResult SpeechResult(string speech, valuetype System.Nullable`1&lt;float64&gt; confidence, string languageIdentified, class Azure.Communication.CallAutomation.SentimentAnalysisResult sentimentAnalysisResult) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Communication.CallAutomation.CallAutomationModelFactory.SpeechResult(System.String,System.Nullable{System.Double},System.String,Azure.Communication.CallAutomation.SentimentAnalysisResult)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function SpeechResult (Optional speech As String = Nothing, Optional confidence As Nullable(Of Double) = Nothing, Optional languageIdentified As String = Nothing, Optional sentimentAnalysisResult As SentimentAnalysisResult = Nothing) As SpeechResult" />
-      <MemberSignature Language="F#" Value="static member SpeechResult : string * Nullable&lt;double&gt; * string * Azure.Communication.CallAutomation.SentimentAnalysisResult -&gt; Azure.Communication.CallAutomation.SpeechResult" Usage="Azure.Communication.CallAutomation.CallAutomationModelFactory.SpeechResult (speech, confidence, languageIdentified, sentimentAnalysisResult)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
-        <AssemblyVersion>1.6.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Communication.CallAutomation.SpeechResult</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="speech" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="confidence" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="languageIdentified" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="sentimentAnalysisResult" Type="Azure.Communication.CallAutomation.SentimentAnalysisResult" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="speech"> The recognized speech in string. </param>
-        <param name="confidence"> The confidence level of the recognized speech, if available, ranges from 0.0 to 1.0. </param>
-        <param name="languageIdentified"> The identified language. </param>
-        <param name="sentimentAnalysisResult"> Gets or sets the sentiment analysis result. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.SpeechResult" />. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.SpeechResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -1746,6 +1709,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.StartRecordingFailed</ReturnType>
@@ -1770,40 +1734,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="TranscriptionCallSummaryUpdated">
-      <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated TranscriptionCallSummaryUpdated (Azure.Communication.CallAutomation.TranscriptionUpdate transcriptionUpdate = default, string callConnectionId = default, string serverCallId = default, string correlationId = default, string operationContext = default, Azure.Communication.CallAutomation.ResultInformation resultInformation = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated TranscriptionCallSummaryUpdated(class Azure.Communication.CallAutomation.TranscriptionUpdate transcriptionUpdate, string callConnectionId, string serverCallId, string correlationId, string operationContext, class Azure.Communication.CallAutomation.ResultInformation resultInformation) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Communication.CallAutomation.CallAutomationModelFactory.TranscriptionCallSummaryUpdated(Azure.Communication.CallAutomation.TranscriptionUpdate,System.String,System.String,System.String,System.String,Azure.Communication.CallAutomation.ResultInformation)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function TranscriptionCallSummaryUpdated (Optional transcriptionUpdate As TranscriptionUpdate = Nothing, Optional callConnectionId As String = Nothing, Optional serverCallId As String = Nothing, Optional correlationId As String = Nothing, Optional operationContext As String = Nothing, Optional resultInformation As ResultInformation = Nothing) As TranscriptionCallSummaryUpdated" />
-      <MemberSignature Language="F#" Value="static member TranscriptionCallSummaryUpdated : Azure.Communication.CallAutomation.TranscriptionUpdate * string * string * string * string * Azure.Communication.CallAutomation.ResultInformation -&gt; Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated" Usage="Azure.Communication.CallAutomation.CallAutomationModelFactory.TranscriptionCallSummaryUpdated (transcriptionUpdate, callConnectionId, serverCallId, correlationId, operationContext, resultInformation)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
-        <AssemblyVersion>1.6.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="transcriptionUpdate" Type="Azure.Communication.CallAutomation.TranscriptionUpdate" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="callConnectionId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="serverCallId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="correlationId" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="operationContext" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="resultInformation" Type="Azure.Communication.CallAutomation.ResultInformation" Index="5" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="transcriptionUpdate"> Defines the result for TranscriptionUpdate with the current status and the details about the status. </param>
-        <param name="callConnectionId"> Call connection ID. </param>
-        <param name="serverCallId"> Server call ID. </param>
-        <param name="correlationId"> Correlation ID for event to call correlation. Also called ChainId for skype chain ID. </param>
-        <param name="operationContext"> Used by customers when calling mid-call actions to correlate the request to the response event. </param>
-        <param name="resultInformation"> Contains the resulting SIP code, sub-code and message. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated" />. </summary>
-        <returns> A new <see cref="T:Azure.Communication.CallAutomation.TranscriptionCallSummaryUpdated" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="TranscriptionData">
       <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.TranscriptionData TranscriptionData (string text, string format, double confidence, long offset, long duration, System.Collections.Generic.IEnumerable&lt;Azure.Communication.CallAutomation.WordData&gt; words, string participantRawID, Azure.Communication.CallAutomation.TranscriptionResultState resultState);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.TranscriptionData TranscriptionData(string text, string format, float64 confidence, int64 offset, int64 duration, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.CallAutomation.WordData&gt; words, string participantRawID, valuetype Azure.Communication.CallAutomation.TranscriptionResultState resultState) cil managed" />
@@ -1814,19 +1744,20 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="text" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="format" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="confidence" Type="System.Double" Index="2" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="offset" Type="System.Int64" Index="3" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="duration" Type="System.Int64" Index="4" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="words" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.CallAutomation.WordData&gt;" Index="5" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="participantRawID" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="resultState" Type="Azure.Communication.CallAutomation.TranscriptionResultState" Index="7" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="confidence" Type="System.Double" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="duration" Type="System.Int64" />
+        <Parameter Name="words" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.CallAutomation.WordData&gt;" />
+        <Parameter Name="participantRawID" Type="System.String" />
+        <Parameter Name="resultState" Type="Azure.Communication.CallAutomation.TranscriptionResultState" />
       </Parameters>
       <Docs>
         <param name="text">The transcribed text.</param>
@@ -1854,6 +1785,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionFailed</ReturnType>
@@ -1888,6 +1820,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionStarted</ReturnType>
@@ -1922,6 +1855,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionStopped</ReturnType>
@@ -1956,45 +1890,18 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionUpdate</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="transcriptionStatus" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatus&gt;" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="transcriptionStatusDetails" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatusDetails&gt;" Index="1" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="transcriptionStatus" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatus&gt;" />
+        <Parameter Name="transcriptionStatusDetails" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatusDetails&gt;" />
       </Parameters>
       <Docs>
         <param name="transcriptionStatus" />
         <param name="transcriptionStatusDetails" />
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.TranscriptionUpdate" />. </summary>
-        <returns> A new <see cref="T:Azure.Communication.CallAutomation.TranscriptionUpdate" /> instance for mocking. </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="TranscriptionUpdate">
-      <MemberSignature Language="C#" Value="public static Azure.Communication.CallAutomation.TranscriptionUpdate TranscriptionUpdate (Azure.Communication.CallAutomation.TranscriptionStatus? transcriptionStatus = default, Azure.Communication.CallAutomation.TranscriptionStatusDetails? transcriptionStatusDetails = default, string transcriptionMessage = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.CallAutomation.TranscriptionUpdate TranscriptionUpdate(valuetype System.Nullable`1&lt;valuetype Azure.Communication.CallAutomation.TranscriptionStatus&gt; transcriptionStatus, valuetype System.Nullable`1&lt;valuetype Azure.Communication.CallAutomation.TranscriptionStatusDetails&gt; transcriptionStatusDetails, string transcriptionMessage) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.Communication.CallAutomation.CallAutomationModelFactory.TranscriptionUpdate(System.Nullable{Azure.Communication.CallAutomation.TranscriptionStatus},System.Nullable{Azure.Communication.CallAutomation.TranscriptionStatusDetails},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function TranscriptionUpdate (Optional transcriptionStatus As Nullable(Of TranscriptionStatus) = Nothing, Optional transcriptionStatusDetails As Nullable(Of TranscriptionStatusDetails) = Nothing, Optional transcriptionMessage As String = Nothing) As TranscriptionUpdate" />
-      <MemberSignature Language="F#" Value="static member TranscriptionUpdate : Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatus&gt; * Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatusDetails&gt; * string -&gt; Azure.Communication.CallAutomation.TranscriptionUpdate" Usage="Azure.Communication.CallAutomation.CallAutomationModelFactory.TranscriptionUpdate (transcriptionStatus, transcriptionStatusDetails, transcriptionMessage)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
-        <AssemblyVersion>1.6.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Azure.Communication.CallAutomation.TranscriptionUpdate</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="transcriptionStatus" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatus&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="transcriptionStatusDetails" Type="System.Nullable&lt;Azure.Communication.CallAutomation.TranscriptionStatusDetails&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="transcriptionMessage" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
-      </Parameters>
-      <Docs>
-        <param name="transcriptionStatus" />
-        <param name="transcriptionStatusDetails" />
-        <param name="transcriptionMessage"> Optional message providing additional context about the transcription update. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.Communication.CallAutomation.TranscriptionUpdate" />. </summary>
         <returns> A new <see cref="T:Azure.Communication.CallAutomation.TranscriptionUpdate" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -2010,6 +1917,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TranscriptionUpdated</ReturnType>
@@ -2044,6 +1952,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.TransferCallToParticipantResult</ReturnType>
@@ -2068,14 +1977,15 @@
       <AssemblyInfo>
         <AssemblyName>Azure.Communication.CallAutomation</AssemblyName>
         <AssemblyVersion>1.6.0.0</AssemblyVersion>
+        <AssemblyVersion>1.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Communication.CallAutomation.WordData</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="text" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="azure-dotnet" />
-        <Parameter Name="duration" Type="System.Int64" Index="2" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="duration" Type="System.Int64" />
       </Parameters>
       <Docs>
         <param name="text">The text of the word.</param>

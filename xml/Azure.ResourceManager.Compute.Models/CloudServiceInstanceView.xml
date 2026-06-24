@@ -39,8 +39,18 @@
       <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("CloudService operations are no longer supported.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("CloudService operations are no longer supported.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary> InstanceView of CloudService as a whole. </summary>
+    <summary> This type is obsolete. Cloud Services (classic) are no longer supported for new customers. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -86,7 +96,7 @@
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Specifies a list of unique identifiers generated internally for the cloud service. &lt;br /&gt;&lt;br /&gt; NOTE: If you are using Azure Diagnostics extension, this property can be used as 'DeploymentId' for querying details. </summary>
+        <summary> The private IDs. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -107,7 +117,7 @@
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Azure.ResourceManager.Compute.Models.StatusCodeCount&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The summary. </summary>
+        <summary> The role instance statuses summary. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -128,7 +138,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> The version of the SDK that was used to generate the package for the cloud service. </summary>
+        <summary> The SDK version. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,7 +159,7 @@
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Azure.ResourceManager.Compute.Models.ResourceInstanceViewStatus&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Gets the statuses. </summary>
+        <summary> The statuses. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

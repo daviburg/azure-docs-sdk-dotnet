@@ -1,0 +1,110 @@
+<Type Name="LiveOnlyAttribute" FullName="Microsoft.ClientModel.TestFramework.LiveOnlyAttribute">
+  <TypeSignature Language="C#" Value="public class LiveOnlyAttribute : NUnit.Framework.NUnitAttribute, NUnit.Framework.Interfaces.IApplyToTest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiveOnlyAttribute extends NUnit.Framework.NUnitAttribute implements class NUnit.Framework.Interfaces.IApplyToTest" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.LiveOnlyAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class LiveOnlyAttribute&#xA;Inherits NUnitAttribute&#xA;Implements IApplyToTest" />
+  <TypeSignature Language="F#" Value="type LiveOnlyAttribute = class&#xA;    inherit NUnitAttribute&#xA;    interface IApplyToTest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>NUnit.Framework.NUnitAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>NUnit.Framework.Interfaces.IApplyToTest</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=false, Inherited=true)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=false, Inherited=true)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute on test assemblies, classes, or methods that run only against live resources.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiveOnlyAttribute (bool alwaysRunLocally = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool alwaysRunLocally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.LiveOnlyAttribute.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional alwaysRunLocally As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.LiveOnlyAttribute : bool -&gt; Microsoft.ClientModel.TestFramework.LiveOnlyAttribute" Usage="new Microsoft.ClientModel.TestFramework.LiveOnlyAttribute alwaysRunLocally" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="alwaysRunLocally" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="alwaysRunLocally">If true, the test will still be run even if the Mode is not Live.
+            This can be used to allow tests that do not depend on RecordedTestMode to run locally, while still being skipped in CI.</param>
+        <summary>
+            Creates a new LiveOnlyAttribute instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyToTest">
+      <MemberSignature Language="C#" Value="public void ApplyToTest (NUnit.Framework.Internal.Test test);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyToTest(class NUnit.Framework.Internal.Test test) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.LiveOnlyAttribute.ApplyToTest(NUnit.Framework.Internal.Test)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ApplyToTest (test As Test)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyToTest : NUnit.Framework.Internal.Test -&gt; unit&#xA;override this.ApplyToTest : NUnit.Framework.Internal.Test -&gt; unit" Usage="liveOnlyAttribute.ApplyToTest test" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:NUnit.Framework.Interfaces.IApplyToTest.ApplyToTest(NUnit.Framework.Internal.Test)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="test" Type="NUnit.Framework.Internal.Test" />
+      </Parameters>
+      <Docs>
+        <param name="test">The <see cref="T:NUnit.Framework.Internal.Test" /> to modify.</param>
+        <summary>
+            Modifies the <paramref name="test" /> by adding categories to it and changing the run state as needed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string? Reason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.LiveOnlyAttribute.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public Property Reason As String" />
+      <MemberSignature Language="F#" Value="member this.Reason : string with get, set" Usage="Microsoft.ClientModel.TestFramework.LiveOnlyAttribute.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional reason that the test is marked LiveOnly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -123,14 +123,10 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Creates a vector store.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStore(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -139,17 +135,62 @@
       </Docs>
     </Member>
     <Member MemberName="CreateVectorStore">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore(class System.Collections.Generic.IEnumerable`1&lt;string&gt; fileIds, string name, class Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStore(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStore (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" />
+      <MemberSignature Language="F#" Value="abstract member CreateVectorStore : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&#xA;override this.CreateVectorStore : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;" Usage="vectorStores.CreateVectorStore (fileIds, name, storeConfiguration, expiresAfter, chunkingStrategy, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileIds" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="storeConfiguration" Type="Azure.AI.Agents.Persistent.VectorStoreConfiguration" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAfter" Type="Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="chunkingStrategy" Type="Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="fileIds"> A list of file IDs that the vector store should use. Useful for tools like `file_search` that can access files. </param>
+        <param name="name"> The name of the vector store. </param>
+        <param name="storeConfiguration"> The vector store configuration, used when vector store is created from Azure asset URIs. </param>
+        <param name="expiresAfter"> Details on when this vector store expires. </param>
+        <param name="chunkingStrategy"> The chunking strategy used to chunk the file(s). If not set, will use the auto strategy. Only applicable if file_ids is non-empty. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a vector store. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVectorStore">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore(class System.Collections.Generic.IEnumerable`1&lt;string&gt; fileIds, string name, class Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStore(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStore (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStore (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateVectorStore : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&#xA;override this.CreateVectorStore : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;" Usage="vectorStores.CreateVectorStore (fileIds, name, storeConfiguration, expiresAfter, chunkingStrategy, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; CreateVectorStore (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds, string name, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStore (fileIds As IEnumerable(Of String), name As String, storeConfiguration As VectorStoreConfiguration, expiresAfter As VectorStoreExpirationPolicy, chunkingStrategy As VectorStoreChunkingStrategy, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgentsVectorStore)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;</ReturnType>
       </ReturnValue>
@@ -170,7 +211,7 @@
         <param name="chunkingStrategy"> The chunking strategy used to chunk the file(s). If not set, will use the auto strategy. Only applicable if file_ids is non-empty. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a vector store. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,14 +237,10 @@
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Creates a vector store.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStoreAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -212,17 +249,62 @@
       </Docs>
     </Member>
     <Member MemberName="CreateVectorStoreAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; fileIds, string name, class Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStoreAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStoreAsync (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" />
+      <MemberSignature Language="F#" Value="abstract member CreateVectorStoreAsync : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;&#xA;override this.CreateVectorStoreAsync : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;" Usage="vectorStores.CreateVectorStoreAsync (fileIds, name, storeConfiguration, expiresAfter, chunkingStrategy, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileIds" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="storeConfiguration" Type="Azure.AI.Agents.Persistent.VectorStoreConfiguration" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAfter" Type="Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="chunkingStrategy" Type="Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="fileIds"> A list of file IDs that the vector store should use. Useful for tools like `file_search` that can access files. </param>
+        <param name="name"> The name of the vector store. </param>
+        <param name="storeConfiguration"> The vector store configuration, used when vector store is created from Azure asset URIs. </param>
+        <param name="expiresAfter"> Details on when this vector store expires. </param>
+        <param name="chunkingStrategy"> The chunking strategy used to chunk the file(s). If not set, will use the auto strategy. Only applicable if file_ids is non-empty. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Creates a vector store. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVectorStoreAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds = default, string name = default, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync(class System.Collections.Generic.IEnumerable`1&lt;string&gt; fileIds, string name, class Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.CreateVectorStoreAsync(System.Collections.Generic.IEnumerable{System.String},System.String,Azure.AI.Agents.Persistent.VectorStoreConfiguration,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStoreAsync (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStoreAsync (Optional fileIds As IEnumerable(Of String) = Nothing, Optional name As String = Nothing, Optional storeConfiguration As VectorStoreConfiguration = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional chunkingStrategy As VectorStoreChunkingStrategy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member CreateVectorStoreAsync : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;&#xA;override this.CreateVectorStoreAsync : seq&lt;string&gt; * string * Azure.AI.Agents.Persistent.VectorStoreConfiguration * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;" Usage="vectorStores.CreateVectorStoreAsync (fileIds, name, storeConfiguration, expiresAfter, chunkingStrategy, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; CreateVectorStoreAsync (System.Collections.Generic.IEnumerable&lt;string&gt; fileIds, string name, Azure.AI.Agents.Persistent.VectorStoreConfiguration storeConfiguration, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, Azure.AI.Agents.Persistent.VectorStoreChunkingStrategy chunkingStrategy, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateVectorStoreAsync (fileIds As IEnumerable(Of String), name As String, storeConfiguration As VectorStoreConfiguration, expiresAfter As VectorStoreExpirationPolicy, chunkingStrategy As VectorStoreChunkingStrategy, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgentsVectorStore))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -243,7 +325,7 @@
         <param name="chunkingStrategy"> The chunking strategy used to chunk the file(s). If not set, will use the auto strategy. Only applicable if file_ids is non-empty. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Creates a vector store. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -541,14 +623,10 @@
       </Parameters>
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Returns the vector store object matching the specified ID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.GetVectorStore(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -579,7 +657,7 @@
       </Parameters>
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Returns the vector store object matching the specified ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -587,6 +665,7 @@
           <paramref name="vectorStoreId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="vectorStoreId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetVectorStoreAsync">
@@ -610,14 +689,10 @@
       </Parameters>
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Returns the vector store object matching the specified ID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.GetVectorStoreAsync(System.String,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -648,7 +723,7 @@
       </Parameters>
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Returns the vector store object matching the specified ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -656,6 +731,7 @@
           <paramref name="vectorStoreId" /> is null. </exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="vectorStoreId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetVectorStoreFile">
@@ -1045,14 +1121,10 @@
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing vector store.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStore(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1063,17 +1135,62 @@
       </Docs>
     </Member>
     <Member MemberName="ModifyVectorStore">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore(string vectorStoreId, string name, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStore(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStore (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" />
+      <MemberSignature Language="F#" Value="abstract member ModifyVectorStore : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&#xA;override this.ModifyVectorStore : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;" Usage="vectorStores.ModifyVectorStore (vectorStoreId, name, expiresAfter, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vectorStoreId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAfter" Type="Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="vectorStoreId"> Identifier of the vector store. </param>
+        <param name="name"> The name of the vector store. </param>
+        <param name="expiresAfter"> Details on when this vector store expires. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing vector store. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="vectorStoreId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="vectorStoreId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyVectorStore">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore(string vectorStoreId, string name, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStore(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStore (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStore (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response(Of PersistentAgentsVectorStore)" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member ModifyVectorStore : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&#xA;override this.ModifyVectorStore : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;" Usage="vectorStores.ModifyVectorStore (vectorStoreId, name, expiresAfter, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt; ModifyVectorStore (string vectorStoreId, string name, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStore (vectorStoreId As String, name As String, expiresAfter As VectorStoreExpirationPolicy, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Response(Of PersistentAgentsVectorStore)" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;</ReturnType>
       </ReturnValue>
@@ -1090,7 +1207,7 @@
         <param name="expiresAfter"> Details on when this vector store expires. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing vector store. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1122,14 +1239,10 @@
       <Docs>
         <param name="vectorStoreId"> Identifier of the vector store. </param>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Modifies an existing vector store.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStoreAsync(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1140,17 +1253,62 @@
       </Docs>
     </Member>
     <Member MemberName="ModifyVectorStoreAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync(string vectorStoreId, string name, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStoreAsync(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStoreAsync (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" />
+      <MemberSignature Language="F#" Value="abstract member ModifyVectorStoreAsync : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;&#xA;override this.ModifyVectorStoreAsync : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;" Usage="vectorStores.ModifyVectorStoreAsync (vectorStoreId, name, expiresAfter, metadata, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vectorStoreId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAfter" Type="Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="vectorStoreId"> Identifier of the vector store. </param>
+        <param name="name"> The name of the vector store. </param>
+        <param name="expiresAfter"> Details on when this vector store expires. </param>
+        <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Modifies an existing vector store. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="vectorStoreId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="vectorStoreId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyVectorStoreAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync (string vectorStoreId, string name = default, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response`1&lt;class Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync(string vectorStoreId, string name, class Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; metadata, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.AI.Agents.Persistent.VectorStores.ModifyVectorStoreAsync(System.String,System.String,Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStoreAsync (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStoreAsync (vectorStoreId As String, Optional name As String = Nothing, Optional expiresAfter As VectorStoreExpirationPolicy = Nothing, Optional metadata As IReadOnlyDictionary(Of String, String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response(Of PersistentAgentsVectorStore))" FrameworkAlternate="azure-dotnet" />
       <MemberSignature Language="F#" Value="abstract member ModifyVectorStoreAsync : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;&#xA;override this.ModifyVectorStoreAsync : string * string * Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy * System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;" Usage="vectorStores.ModifyVectorStoreAsync (vectorStoreId, name, expiresAfter, metadata, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt; ModifyVectorStoreAsync (string vectorStoreId, string name, Azure.AI.Agents.Persistent.VectorStoreExpirationPolicy expiresAfter, System.Collections.Generic.IReadOnlyDictionary&lt;string,string&gt; metadata, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ModifyVectorStoreAsync (vectorStoreId As String, name As String, expiresAfter As VectorStoreExpirationPolicy, metadata As IReadOnlyDictionary(Of String, String), cancellationToken As CancellationToken) As Task(Of Response(Of PersistentAgentsVectorStore))" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.AI.Agents.Persistent</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.AI.Agents.Persistent.PersistentAgentsVectorStore&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -1167,7 +1325,7 @@
         <param name="expiresAfter"> Details on when this vector store expires. </param>
         <param name="metadata"> A set of up to 16 key/value pairs that can be attached to an object, used for storing additional information about that object in a structured format. Keys may be up to 64 characters in length and values may be up to 512 characters in length. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary> Modifies an existing vector store. </summary>
+        <summary> Backward-compat: accepts IReadOnlyDictionary metadata. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

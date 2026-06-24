@@ -1,0 +1,89 @@
+<Type Name="TestRetryHelper" FullName="Microsoft.ClientModel.TestFramework.TestRetryHelper">
+  <TypeSignature Language="C#" Value="public class TestRetryHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestRetryHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestRetryHelper" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestRetryHelper" />
+  <TypeSignature Language="F#" Value="type TestRetryHelper = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides retry functionality for test operations with configurable delays and iteration limits.
+            Useful for handling flaky test scenarios or operations that may need multiple attempts to succeed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestRetryHelper (bool noWait);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool noWait) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRetryHelper.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (noWait As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TestRetryHelper : bool -&gt; Microsoft.ClientModel.TestFramework.TestRetryHelper" Usage="new Microsoft.ClientModel.TestFramework.TestRetryHelper noWait" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="noWait" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noWait">If true, disables delays between retry attempts; if false, uses the specified delay.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TestRetryHelper" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryAsync&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;T&gt; RetryAsync&lt;T&gt; (Func&lt;System.Threading.Tasks.Task&lt;T&gt;&gt; operation, int maxIterations = 20, TimeSpan delay = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;!!T&gt; RetryAsync&lt;T&gt;(class System.Func`1&lt;class System.Threading.Tasks.Task`1&lt;!!T&gt;&gt; operation, int32 maxIterations, valuetype System.TimeSpan delay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRetryHelper.RetryAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Int32,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RetryAsync(Of T) (operation As Func(Of Task(Of T)), Optional maxIterations As Integer = 20, Optional delay As TimeSpan = Nothing) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="member this.RetryAsync : Func&lt;System.Threading.Tasks.Task&lt;'T&gt;&gt; * int * TimeSpan -&gt; System.Threading.Tasks.Task&lt;'T&gt;" Usage="testRetryHelper.RetryAsync (operation, maxIterations, delay)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Func&lt;System.Threading.Tasks.Task&lt;T&gt;&gt;" />
+        <Parameter Name="maxIterations" Type="System.Int32" />
+        <Parameter Name="delay" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The return type of the operation.</typeparam>
+        <param name="operation">The asynchronous operation to retry.</param>
+        <param name="maxIterations">The maximum number of retry attempts (default is 20).</param>
+        <param name="delay">The delay between retry attempts (default is 5 seconds).</param>
+        <summary>
+            Retries an asynchronous operation until it succeeds or the maximum number of iterations is reached.
+            </summary>
+        <returns>The result of the successful operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.AggregateException">Thrown when all retry attempts fail, containing the exceptions from failed attempts.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation fails without throwing exceptions.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

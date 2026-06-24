@@ -1,0 +1,94 @@
+<Type Name="TaskExtensions+WithCancellationTaskAwaitable&lt;T&gt;" FullName="Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationTaskAwaitable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public readonly struct TaskExtensions.WithCancellationTaskAwaitable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TaskExtensions/WithCancellationTaskAwaitable`1&lt;T&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable`1" />
+  <TypeSignature Language="VB.NET" Value="Public Structure TaskExtensions.WithCancellationTaskAwaitable(Of T)" />
+  <TypeSignature Language="F#" Value="type TaskExtensions.WithCancellationTaskAwaitable&lt;'T&gt; = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">The type of the task result.</typeparam>
+    <summary>
+            An awaitable wrapper that adds cancellation support to a <see cref="T:System.Threading.Tasks.Task`1" />.
+            This struct allows tasks to be awaited with cancellation token observation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WithCancellationTaskAwaitable (System.Threading.Tasks.Task&lt;T&gt; task, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Threading.Tasks.Task`1&lt;!T&gt; task, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable`1.#ctor(System.Threading.Tasks.Task{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (task As Task(Of T), cancellationToken As CancellationToken)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable&lt;'T&gt; : System.Threading.Tasks.Task&lt;'T&gt; * System.Threading.CancellationToken -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable&lt;'T&gt;" Usage="new Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable&lt;'T&gt; (task, cancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;T&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="task">The task to make cancellation-aware.</param>
+        <param name="cancellationToken">The cancellation token to observe.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable`1" /> struct.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAwaiter">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter&lt;T&gt; GetAwaiter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.ClientModel.TestFramework.TaskExtensions/WithCancellationTaskAwaiter`1&lt;!T&gt; GetAwaiter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaitable`1.GetAwaiter" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAwaiter () As TaskExtensions.WithCancellationTaskAwaiter(Of T)" />
+      <MemberSignature Language="F#" Value="member this.GetAwaiter : unit -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter&lt;'T&gt;" Usage="withCancellationTaskAwaitable.GetAwaiter " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationTaskAwaiter&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns an awaiter for this awaitable.
+            </summary>
+        <returns>An awaiter that supports cancellation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

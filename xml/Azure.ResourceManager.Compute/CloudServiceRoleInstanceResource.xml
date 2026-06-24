@@ -39,13 +39,18 @@
       <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="azure-dotnet-preview">
+      <AttributeName Language="C#">[System.Obsolete("CloudService operations are no longer supported.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("CloudService operations are no longer supported.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
-    <summary>
-            A Class representing a CloudServiceRoleInstance along with the instance operations that can be performed on it.
-            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" />
-            from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetCloudServiceRoleInstanceResource method.
-            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Compute.CloudServiceResource" /> using the GetCloudServiceRoleInstance method.
-            </summary>
+    <summary> This type is obsolete. Cloud Services (classic) are no longer supported for new customers. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -62,7 +67,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of CloudServiceRoleInstanceResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -100,9 +105,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -143,9 +146,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -178,7 +179,7 @@
         <param name="resourceGroupName"> The resourceGroupName. </param>
         <param name="cloudServiceName"> The cloudServiceName. </param>
         <param name="roleInstanceName"> The roleInstanceName. </param>
-        <summary> Generate the resource identifier of a <see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /> instance. </summary>
+        <summary> Generate the resource identifier of a CloudServiceRoleInstanceResource instance. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,7 +200,7 @@
         <ReturnType>Azure.ResourceManager.Compute.CloudServiceRoleInstanceData</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Gets the data representing this Feature. </summary>
+        <summary> Gets the data representing this CloudServiceRoleInstance. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException"> Throws if there is no data loaded in the current instance. </exception>
@@ -217,6 +218,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
       </ReturnValue>
@@ -228,9 +235,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Deletes a role instance from a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Delete</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -247,6 +252,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
       </ReturnValue>
@@ -258,9 +269,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Deletes a role instance from a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Delete</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -277,6 +286,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource&gt;</ReturnType>
       </ReturnValue>
@@ -287,9 +302,7 @@
       <Docs>
         <param name="expand"> The expand expression to apply to the operation. 'UserData' is not supported for cloud services. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a role instance from a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -306,6 +319,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -316,9 +335,7 @@
       <Docs>
         <param name="expand"> The expand expression to apply to the operation. 'UserData' is not supported for cloud services. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a role instance from a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -335,6 +352,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.Compute.Models.RoleInstanceView&gt;</ReturnType>
       </ReturnValue>
@@ -343,9 +366,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Retrieves information about the run-time state of a role instance in a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/instanceView</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_GetInstanceView</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -362,6 +383,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.Compute.Models.RoleInstanceView&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -370,9 +397,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Retrieves information about the run-time state of a role instance in a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/instanceView</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_GetInstanceView</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -389,6 +414,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;System.IO.Stream&gt;</ReturnType>
       </ReturnValue>
@@ -397,9 +428,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a remote desktop file for a role instance in a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/remoteDesktopFile</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_GetRemoteDesktopFile</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -416,6 +445,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;System.IO.Stream&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -424,9 +459,7 @@
       </Parameters>
       <Docs>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a remote desktop file for a role instance in a cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/remoteDesktopFile</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_GetRemoteDesktopFile</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -447,7 +480,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Gets whether or not the current instance has data. </summary>
+        <summary> Gets whether this resource has data. </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -464,6 +497,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
       </ReturnValue>
@@ -475,9 +514,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Rebuild Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles and initializes the storage resources that are used by them. If you do not want to initialize storage resources, you can use Reimage Role Instance.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/rebuild</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Rebuild</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -494,6 +531,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
       </ReturnValue>
@@ -505,9 +548,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Rebuild Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles and initializes the storage resources that are used by them. If you do not want to initialize storage resources, you can use Reimage Role Instance.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/rebuild</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Rebuild</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -524,6 +565,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
       </ReturnValue>
@@ -535,9 +582,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Reimage Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/reimage</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Reimage</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -554,6 +599,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
       </ReturnValue>
@@ -565,9 +616,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Reimage Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/reimage</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Reimage</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -604,9 +653,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -645,9 +692,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -670,7 +715,7 @@
         <ReturnType>Azure.Core.ResourceType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary> Gets the resource type for the operations. </summary>
+        <summary> The resource type for CloudServiceRoleInstance. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -686,6 +731,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation</ReturnType>
       </ReturnValue>
@@ -697,9 +748,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Reboot Role Instance asynchronous operation requests a reboot of a role instance in the cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/restart</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Restart</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -716,6 +765,12 @@
         <AssemblyVersion>1.14.0.0</AssemblyVersion>
         <AssemblyVersion>1.15.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&gt;</ReturnType>
       </ReturnValue>
@@ -727,9 +782,7 @@
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            The Reboot Role Instance asynchronous operation requests a reboot of a role instance in the cloud service.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}/restart</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Restart</description></item><item><term>Default Api Version</term><description>2024-11-04</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.Compute.CloudServiceRoleInstanceResource" /></description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -766,9 +819,7 @@
       <Docs>
         <param name="tags"> The set of tags to use as replacement. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -807,9 +858,7 @@
       <Docs>
         <param name="tags"> The set of tags to use as replacement. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/cloudServices/{cloudServiceName}/roleInstances/{roleInstanceName}</description></item><item><term>Operation Id</term><description>CloudServiceRoleInstances_Get</description></item></list></summary>
+        <summary> Not supported. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

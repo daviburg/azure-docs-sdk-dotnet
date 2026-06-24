@@ -1,9 +1,13 @@
 <Type Name="DnsZoneResource" FullName="Azure.ResourceManager.Dns.DnsZoneResource">
-  <TypeSignature Language="C#" Value="public class DnsZoneResource : Azure.ResourceManager.ArmResource" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsZoneResource extends Azure.ResourceManager.ArmResource" />
+  <TypeSignature Language="C#" Value="public class DnsZoneResource : Azure.ResourceManager.ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsZoneResource extends Azure.ResourceManager.ArmResource" FrameworkAlternate="azure-dotnet" />
   <TypeSignature Language="DocId" Value="T:Azure.ResourceManager.Dns.DnsZoneResource" />
-  <TypeSignature Language="VB.NET" Value="Public Class DnsZoneResource&#xA;Inherits ArmResource" />
-  <TypeSignature Language="F#" Value="type DnsZoneResource = class&#xA;    inherit ArmResource" />
+  <TypeSignature Language="VB.NET" Value="Public Class DnsZoneResource&#xA;Inherits ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="F#" Value="type DnsZoneResource = class&#xA;    inherit ArmResource" FrameworkAlternate="azure-dotnet" />
+  <TypeSignature Language="C#" Value="public class DnsZoneResource : Azure.ResourceManager.ArmResource, System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;, System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsZoneResource extends Azure.ResourceManager.ArmResource implements class System.ClientModel.Primitives.IJsonModel`1&lt;class Azure.ResourceManager.Dns.DnsZoneData&gt;, class System.ClientModel.Primitives.IPersistableModel`1&lt;class Azure.ResourceManager.Dns.DnsZoneData&gt;" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="VB.NET" Value="Public Class DnsZoneResource&#xA;Inherits ArmResource&#xA;Implements IJsonModel(Of DnsZoneData), IPersistableModel(Of DnsZoneData)" FrameworkAlternate="azure-dotnet-preview" />
+  <TypeSignature Language="F#" Value="type DnsZoneResource = class&#xA;    inherit ArmResource&#xA;    interface IJsonModel&lt;DnsZoneData&gt;&#xA;    interface IPersistableModel&lt;DnsZoneData&gt;" FrameworkAlternate="azure-dotnet-preview" />
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -15,13 +19,22 @@
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="azure-dotnet-preview">
+      <InterfaceName>System.ClientModel.Primitives.IPersistableModel&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
-            A Class representing a DnsZone along with the instance operations that can be performed on it.
-            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />
-            from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetDnsZoneResource method.
-            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> using the GetDnsZone method.
+            A class representing a DnsZone along with the instance operations that can be performed on it.
+            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetResource method.
+            Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.Resources.ResourceGroupResource" /> using the GetDnsZones method.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -39,7 +52,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of DnsZoneResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,9 +80,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -100,9 +111,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -130,10 +139,10 @@
         <Parameter Name="zoneName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="subscriptionId">To be added.</param>
-        <param name="resourceGroupName">To be added.</param>
-        <param name="zoneName">To be added.</param>
-        <summary> Generate the resource identifier of a <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" /> instance. </summary>
+        <param name="subscriptionId"> The subscriptionId. </param>
+        <param name="resourceGroupName"> The resourceGroupName. </param>
+        <param name="zoneName"> The zoneName. </param>
+        <summary> Generate the resource identifier for this resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -187,7 +196,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Deletes a DNS zone. WARNING: All DNS records in the zone will also be deleted. This operation cannot be undone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Delete</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Delete. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -219,7 +228,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Deletes a DNS zone. WARNING: All DNS records in the zone will also be deleted. This operation cannot be undone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Delete</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Delete. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -246,7 +255,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a DNS zone. Retrieves the zone properties, but not the record sets within the zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Get. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,12 +281,10 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
-        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="top"> The maximum number of record sets to return. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name used to filter record set enumerations. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists all record sets in a DNS zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/recordsets</description></item><item><term>Operation Id</term><description>RecordSets_ListByDnsZone</description></item></list></summary>
+        <summary> Lists all record sets in a DNS zone. </summary>
         <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -303,13 +310,11 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
-        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="top"> The maximum number of record sets to return. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name used to filter record set enumerations. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Lists all record sets in a DNS zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/recordsets</description></item><item><term>Operation Id</term><description>RecordSets_ListByDnsZone</description></item></list></summary>
-        <returns> An async collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
+        <summary> Lists all record sets in a DNS zone. </summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -335,8 +340,132 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets a DNS zone. Retrieves the zone properties, but not the record sets within the zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Get. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByDnsZone">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt; GetByDnsZone (int? top = default, string recordsetnamesuffix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Dns.DnsRecordData&gt; GetByDnsZone(valuetype System.Nullable`1&lt;int32&gt; top, string recordsetnamesuffix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.GetByDnsZone(System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByDnsZone (Optional top As Nullable(Of Integer) = Nothing, Optional recordsetnamesuffix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of DnsRecordData)" />
+      <MemberSignature Language="F#" Value="abstract member GetByDnsZone : Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;&#xA;override this.GetByDnsZone : Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;" Usage="dnsZoneResource.GetByDnsZone (top, recordsetnamesuffix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="recordsetnamesuffix" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists all record sets in a DNS zone.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/recordsets. </description></item><item><term> Operation Id. </term><description> Zones_ListByDnsZone. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByDnsZoneAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt; GetByDnsZoneAsync (int? top = default, string recordsetnamesuffix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Dns.DnsRecordData&gt; GetByDnsZoneAsync(valuetype System.Nullable`1&lt;int32&gt; top, string recordsetnamesuffix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.GetByDnsZoneAsync(System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByDnsZoneAsync (Optional top As Nullable(Of Integer) = Nothing, Optional recordsetnamesuffix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of DnsRecordData)" />
+      <MemberSignature Language="F#" Value="abstract member GetByDnsZoneAsync : Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;&#xA;override this.GetByDnsZoneAsync : Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;" Usage="dnsZoneResource.GetByDnsZoneAsync (top, recordsetnamesuffix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="recordsetnamesuffix" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists all record sets in a DNS zone.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/recordsets. </description></item><item><term> Operation Id. </term><description> Zones_ListByDnsZone. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByType">
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt; GetByType (Azure.ResourceManager.Dns.Models.DnsRecordType recordType, int? top = default, string recordsetnamesuffix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.ResourceManager.Dns.DnsRecordData&gt; GetByType(valuetype Azure.ResourceManager.Dns.Models.DnsRecordType recordType, valuetype System.Nullable`1&lt;int32&gt; top, string recordsetnamesuffix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.GetByType(Azure.ResourceManager.Dns.Models.DnsRecordType,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByType (recordType As DnsRecordType, Optional top As Nullable(Of Integer) = Nothing, Optional recordsetnamesuffix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of DnsRecordData)" />
+      <MemberSignature Language="F#" Value="abstract member GetByType : Azure.ResourceManager.Dns.Models.DnsRecordType * Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;&#xA;override this.GetByType : Azure.ResourceManager.Dns.Models.DnsRecordType * Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;" Usage="dnsZoneResource.GetByType (recordType, top, recordsetnamesuffix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Pageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordType" Type="Azure.ResourceManager.Dns.Models.DnsRecordType" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="recordsetnamesuffix" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="recordType"> The type of DNS record in this record set. </param>
+        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}. </description></item><item><term> Operation Id. </term><description> RecordSets_ListByType. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByTypeAsync">
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt; GetByTypeAsync (Azure.ResourceManager.Dns.Models.DnsRecordType recordType, int? top = default, string recordsetnamesuffix = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.ResourceManager.Dns.DnsRecordData&gt; GetByTypeAsync(valuetype Azure.ResourceManager.Dns.Models.DnsRecordType recordType, valuetype System.Nullable`1&lt;int32&gt; top, string recordsetnamesuffix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.GetByTypeAsync(Azure.ResourceManager.Dns.Models.DnsRecordType,System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByTypeAsync (recordType As DnsRecordType, Optional top As Nullable(Of Integer) = Nothing, Optional recordsetnamesuffix As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of DnsRecordData)" />
+      <MemberSignature Language="F#" Value="abstract member GetByTypeAsync : Azure.ResourceManager.Dns.Models.DnsRecordType * Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;&#xA;override this.GetByTypeAsync : Azure.ResourceManager.Dns.Models.DnsRecordType * Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;" Usage="dnsZoneResource.GetByTypeAsync (recordType, top, recordsetnamesuffix, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.AsyncPageable&lt;Azure.ResourceManager.Dns.DnsRecordData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordType" Type="Azure.ResourceManager.Dns.Models.DnsRecordType" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="top" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="recordsetnamesuffix" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="recordType"> The type of DNS record in this record set. </param>
+        <param name="top"> The maximum number of record sets to return. If not specified, returns up to 100 record sets. </param>
+        <param name="recordsetnamesuffix"> The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .&lt;recordSetNameSuffix&gt;. </param>
+        <param name="cancellationToken"> The cancellation token to use. </param>
+        <summary>
+            Lists the record sets of a specified type in a DNS zone.
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}. </description></item><item><term> Operation Id. </term><description> RecordSets_ListByType. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
+        <returns> A collection of <see cref="T:Azure.ResourceManager.Dns.DnsRecordData" /> that may take multiple service requests to iterate over. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -362,13 +491,13 @@
       <Docs>
         <param name="aaaaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{aaaaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aaaaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aaaaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsAaaaRecordAsync">
@@ -393,13 +522,13 @@
       <Docs>
         <param name="aaaaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{aaaaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aaaaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aaaaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsAaaaRecords">
@@ -419,8 +548,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsAaaaRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsAaaaRecordResources and their operations over a DnsAaaaRecordResource. </returns>
+        <summary> Gets a collection of DnsAaaaRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsAaaaRecords and their operations over a DnsAaaaRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -446,13 +575,13 @@
       <Docs>
         <param name="aRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{aRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsARecordAsync">
@@ -477,13 +606,13 @@
       <Docs>
         <param name="aRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{aRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="aRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="aRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsARecords">
@@ -503,8 +632,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsARecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsARecordResources and their operations over a DnsARecordResource. </returns>
+        <summary> Gets a collection of DnsARecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsARecords and their operations over a DnsARecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -530,13 +659,13 @@
       <Docs>
         <param name="caaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{caaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="caaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="caaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsCaaRecordAsync">
@@ -561,13 +690,13 @@
       <Docs>
         <param name="caaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{caaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="caaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="caaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsCaaRecords">
@@ -587,8 +716,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsCaaRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsCaaRecordResources and their operations over a DnsCaaRecordResource. </returns>
+        <summary> Gets a collection of DnsCaaRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsCaaRecords and their operations over a DnsCaaRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -614,13 +743,13 @@
       <Docs>
         <param name="cnameRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{cnameRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="cnameRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cnameRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsCnameRecordAsync">
@@ -645,13 +774,13 @@
       <Docs>
         <param name="cnameRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{cnameRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="cnameRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cnameRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsCnameRecords">
@@ -671,8 +800,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsCnameRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsCnameRecordResources and their operations over a DnsCnameRecordResource. </returns>
+        <summary> Gets a collection of DnsCnameRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsCnameRecords and their operations over a DnsCnameRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -697,13 +826,13 @@
       <Docs>
         <param name="dsRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{dsRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="dsRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dsRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsDSRecordAsync">
@@ -727,13 +856,13 @@
       <Docs>
         <param name="dsRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{dsRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="dsRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dsRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsDSRecords">
@@ -752,8 +881,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsDSRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsDSRecordResources and their operations over a DnsDSRecordResource. </returns>
+        <summary> Gets a collection of DnsDSRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsDSRecords and their operations over a DnsDSRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -779,13 +908,13 @@
       <Docs>
         <param name="mxRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{mxRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="mxRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mxRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsMXRecordAsync">
@@ -810,13 +939,13 @@
       <Docs>
         <param name="mxRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{mxRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="mxRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mxRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsMXRecords">
@@ -836,8 +965,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsMXRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsMXRecordResources and their operations over a DnsMXRecordResource. </returns>
+        <summary> Gets a collection of DnsMXRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsMXRecords and their operations over a DnsMXRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -862,13 +991,13 @@
       <Docs>
         <param name="naptrRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{naptrRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="naptrRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="naptrRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsNaptrRecordAsync">
@@ -892,13 +1021,13 @@
       <Docs>
         <param name="naptrRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{naptrRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="naptrRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="naptrRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsNaptrRecords">
@@ -917,8 +1046,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsNaptrRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsNaptrRecordResources and their operations over a DnsNaptrRecordResource. </returns>
+        <summary> Gets a collection of DnsNaptrRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsNaptrRecords and their operations over a DnsNaptrRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -944,13 +1073,13 @@
       <Docs>
         <param name="nsRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{nsRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="nsRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nsRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsNSRecordAsync">
@@ -975,13 +1104,13 @@
       <Docs>
         <param name="nsRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{nsRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="nsRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nsRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsNSRecords">
@@ -1001,8 +1130,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsNSRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsNSRecordResources and their operations over a DnsNSRecordResource. </returns>
+        <summary> Gets a collection of DnsNSRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsNSRecords and their operations over a DnsNSRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1028,13 +1157,13 @@
       <Docs>
         <param name="ptrRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{ptrRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="ptrRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ptrRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsPtrRecordAsync">
@@ -1059,13 +1188,13 @@
       <Docs>
         <param name="ptrRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{ptrRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="ptrRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ptrRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsPtrRecords">
@@ -1085,8 +1214,29 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsPtrRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsPtrRecordResources and their operations over a DnsPtrRecordResource. </returns>
+        <summary> Gets a collection of DnsPtrRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsPtrRecords and their operations over a DnsPtrRecordResource. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDnssecConfig">
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.Dns.DnssecConfigResource GetDnssecConfig ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.Dns.DnssecConfigResource GetDnssecConfig() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.GetDnssecConfig" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDnssecConfig () As DnssecConfigResource" />
+      <MemberSignature Language="F#" Value="abstract member GetDnssecConfig : unit -&gt; Azure.ResourceManager.Dns.DnssecConfigResource&#xA;override this.GetDnssecConfig : unit -&gt; Azure.ResourceManager.Dns.DnssecConfigResource" Usage="dnsZoneResource.GetDnssecConfig " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.DnssecConfigResource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Gets an object representing a <see cref="T:Azure.ResourceManager.Dns.DnssecConfigResource" /> along with the instance operations that can be performed on it in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> Returns a <see cref="T:Azure.ResourceManager.Dns.DnssecConfigResource" /> object. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1112,13 +1262,13 @@
       <Docs>
         <param name="soaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{soaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="soaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="soaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsSoaRecordAsync">
@@ -1143,13 +1293,13 @@
       <Docs>
         <param name="soaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{soaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="soaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="soaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsSoaRecords">
@@ -1169,8 +1319,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsSoaRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsSoaRecordResources and their operations over a DnsSoaRecordResource. </returns>
+        <summary> Gets a collection of DnsSoaRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsSoaRecords and their operations over a DnsSoaRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1196,13 +1346,13 @@
       <Docs>
         <param name="srvRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="srvRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="srvRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsSrvRecordAsync">
@@ -1227,13 +1377,13 @@
       <Docs>
         <param name="srvRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{srvRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="srvRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="srvRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsSrvRecords">
@@ -1253,8 +1403,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsSrvRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsSrvRecordResources and their operations over a DnsSrvRecordResource. </returns>
+        <summary> Gets a collection of DnsSrvRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsSrvRecords and their operations over a DnsSrvRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1279,13 +1429,13 @@
       <Docs>
         <param name="tlsaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{tlsaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="tlsaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tlsaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsTlsaRecordAsync">
@@ -1309,13 +1459,13 @@
       <Docs>
         <param name="tlsaRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{tlsaRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="tlsaRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tlsaRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsTlsaRecords">
@@ -1334,8 +1484,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsTlsaRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsTlsaRecordResources and their operations over a DnsTlsaRecordResource. </returns>
+        <summary> Gets a collection of DnsTlsaRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsTlsaRecords and their operations over a DnsTlsaRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1361,13 +1511,13 @@
       <Docs>
         <param name="txtRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{txtRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="txtRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="txtRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsTxtRecordAsync">
@@ -1392,13 +1542,13 @@
       <Docs>
         <param name="txtRecordName"> The name of the record set, relative to the name of the zone. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Gets a record set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{txtRecordName}</description></item><item><term>Operation Id</term><description>RecordSets_Get</description></item></list></summary>
+        <summary> Gets a record set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="txtRecordName" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="txtRecordName" /> is an empty string, and was expected to be non-empty. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetDnsTxtRecords">
@@ -1418,8 +1568,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary> Gets a collection of DnsTxtRecordResources in the DnsZone. </summary>
-        <returns> An object representing collection of DnsTxtRecordResources and their operations over a DnsTxtRecordResource. </returns>
+        <summary> Gets a collection of DnsTxtRecords in the <see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </summary>
+        <returns> An object representing collection of DnsTxtRecords and their operations over a DnsTxtRecordResource. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1466,9 +1616,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1497,9 +1645,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1546,11 +1692,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1577,15 +1721,153 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Get</description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="tags" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.Dns.DnsZoneData IJsonModel&lt;DnsZoneData&gt;.Create (ref System.Text.Json.Utf8JsonReader reader, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.Dns.DnsZoneData System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create(valuetype System.Text.Json.Utf8JsonReader&amp; reader, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#Dns#DnsZoneData&gt;#Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (ByRef reader As Utf8JsonReader, options As ModelReaderWriterOptions) As DnsZoneData Implements IJsonModel(Of DnsZoneData).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsZoneData&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create : Utf8JsonReader * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsZoneData" Usage="dnsZoneResource.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create (reader, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Create(System.Text.Json.Utf8JsonReader@,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.DnsZoneData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Text.Json.Utf8JsonReader" RefType="ref" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> The reader for deserializing the model. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write">
+      <MemberSignature Language="C#" Value="void IJsonModel&lt;DnsZoneData&gt;.Write (System.Text.Json.Utf8JsonWriter writer, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write(class System.Text.Json.Utf8JsonWriter writer, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.System#ClientModel#Primitives#IJsonModel&lt;Azure#ResourceManager#Dns#DnsZoneData&gt;#Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Sub Write (writer As Utf8JsonWriter, options As ModelReaderWriterOptions) Implements IJsonModel(Of DnsZoneData).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit&#xA;override this.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write : System.Text.Json.Utf8JsonWriter * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; unit" Usage="dnsZoneResource.System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write (writer, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IJsonModel`1.Write(System.Text.Json.Utf8JsonWriter,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Text.Json.Utf8JsonWriter" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="writer"> The writer to serialize the model to. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create">
+      <MemberSignature Language="C#" Value="Azure.ResourceManager.Dns.DnsZoneData IPersistableModel&lt;DnsZoneData&gt;.Create (BinaryData data, System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Azure.ResourceManager.Dns.DnsZoneData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create(class System.BinaryData data, class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsZoneData&gt;#Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Create (data As BinaryData, options As ModelReaderWriterOptions) As DnsZoneData Implements IPersistableModel(Of DnsZoneData).Create" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsZoneData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create : BinaryData * System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; Azure.ResourceManager.Dns.DnsZoneData" Usage="dnsZoneResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Create (data, options)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Create(System.BinaryData,System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Dns.DnsZoneData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="data"> The binary data to be processed. </param>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.GetFormatFromOptions">
+      <MemberSignature Language="C#" Value="string IPersistableModel&lt;DnsZoneData&gt;.GetFormatFromOptions (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.GetFormatFromOptions(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsZoneData&gt;#GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function GetFormatFromOptions (options As ModelReaderWriterOptions) As String Implements IPersistableModel(Of DnsZoneData).GetFormatFromOptions" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.GetFormatFromOptions : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; string" Usage="dnsZoneResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.GetFormatFromOptions options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.GetFormatFromOptions(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write">
+      <MemberSignature Language="C#" Value="BinaryData IPersistableModel&lt;DnsZoneData&gt;.Write (System.ClientModel.Primitives.ModelReaderWriterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.BinaryData System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write(class System.ClientModel.Primitives.ModelReaderWriterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Dns.DnsZoneResource.System#ClientModel#Primitives#IPersistableModel&lt;Azure#ResourceManager#Dns#DnsZoneData&gt;#Write(System.ClientModel.Primitives.ModelReaderWriterOptions)" />
+      <MemberSignature Language="VB.NET" Value="Function Write (options As ModelReaderWriterOptions) As BinaryData Implements IPersistableModel(Of DnsZoneData).Write" />
+      <MemberSignature Language="F#" Value="abstract member System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData&#xA;override this.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write : System.ClientModel.Primitives.ModelReaderWriterOptions -&gt; BinaryData" Usage="dnsZoneResource.System.ClientModel.Primitives.IPersistableModel&lt;Azure.ResourceManager.Dns.DnsZoneData&gt;.Write options" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ClientModel.Primitives.IPersistableModel`1.Write(System.ClientModel.Primitives.ModelReaderWriterOptions)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Dns</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="options"> The client options for reading and writing models. </param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -1614,7 +1896,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates a DNS zone. Does not modify DNS records within the zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Update</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Update. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1647,7 +1929,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Updates a DNS zone. Does not modify DNS records within the zone.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</description></item><item><term>Operation Id</term><description>Zones_Update</description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}. </description></item><item><term> Operation Id. </term><description> Zones_Update. </description></item><item><term> Default Api Version. </term><description> 2023-07-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.Dns.DnsZoneResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">

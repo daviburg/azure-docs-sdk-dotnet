@@ -139,17 +139,13 @@
         <Parameter Name="zones" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties">
-            The set of properties specific to bot channel resource
-                        Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-                        The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-            </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> The resource-specific properties for this resource. </param>
         <param name="sku"> Gets or sets the SKU of the resource. </param>
         <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
         <param name="etag"> Entity Tag. </param>
@@ -193,26 +189,18 @@
         <Parameter Name="zones" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="resource">
-            The set of properties specific to bot channel resource
-                        Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-                        The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-            </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="resource"> The set of properties specific to bot channel resource. </param>
         <param name="setting"> Channel settings. </param>
         <param name="provisioningState"> Provisioning state of the resource. </param>
         <param name="entityTag"> Entity tag of the resource. </param>
         <param name="changedTime"> Changed time of the resource. </param>
-        <param name="properties">
-            The set of properties specific to bot channel resource
-                        Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-                        The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-            </param>
+        <param name="properties"> The set of properties specific to bot channel resource. </param>
         <param name="sku"> Gets or sets the SKU of the resource. </param>
         <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
         <param name="etag"> Entity Tag. </param>
@@ -411,13 +399,13 @@
         <Parameter Name="zones" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties"> The set of properties specific to bot channel resource. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> The resource-specific properties for this resource. </param>
         <param name="sku"> Gets or sets the SKU of the resource. </param>
         <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
         <param name="etag"> Entity Tag. </param>
@@ -427,14 +415,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="BotConnectionSettingParameter">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter BotConnectionSettingParameter (string key = default, string value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter BotConnectionSettingParameter(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotConnectionSettingParameter(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotConnectionSettingParameter (Optional key As String = Nothing, Optional value As String = Nothing) As BotConnectionSettingParameter" />
+      <MemberSignature Language="F#" Value="static member BotConnectionSettingParameter : string * string -&gt; Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotConnectionSettingParameter (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="key"> Key for the Connection Setting Parameter. </param>
+        <param name="value"> Value associated with the Connection Setting Parameter. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BotConnectionSettingProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotConnectionSettingProperties BotConnectionSettingProperties (string clientId = default, string settingId = default, string clientSecret = default, string scopes = default, string serviceProviderId = default, string serviceProviderDisplayName = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter&gt; parameters = default, string provisioningState = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotConnectionSettingProperties BotConnectionSettingProperties (string clientId = default, string settingId = default, string clientSecret = default, string scopes = default, string serviceProviderId = default, string serviceProviderDisplayName = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter&gt; parameters = default, string provisioningState = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotConnectionSettingProperties BotConnectionSettingProperties(string clientId, string settingId, string clientSecret, string scopes, string serviceProviderId, string serviceProviderDisplayName, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter&gt; parameters, string provisioningState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotConnectionSettingProperties(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BotConnectionSettingProperties (Optional clientId As String = Nothing, Optional settingId As String = Nothing, Optional clientSecret As String = Nothing, Optional scopes As String = Nothing, Optional serviceProviderId As String = Nothing, Optional serviceProviderDisplayName As String = Nothing, Optional parameters As IEnumerable(Of BotConnectionSettingParameter) = Nothing, Optional provisioningState As String = Nothing) As BotConnectionSettingProperties" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotConnectionSettingProperties (Optional clientId As String = Nothing, Optional settingId As String = Nothing, Optional clientSecret As String = Nothing, Optional scopes As String = Nothing, Optional serviceProviderId As String = Nothing, Optional serviceProviderDisplayName As String = Nothing, Optional parameters As IEnumerable(Of BotConnectionSettingParameter) = Nothing, Optional provisioningState As String = Nothing) As BotConnectionSettingProperties" />
       <MemberSignature Language="F#" Value="static member BotConnectionSettingProperties : string * string * string * string * string * string * seq&lt;Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter&gt; * string -&gt; Azure.ResourceManager.BotService.Models.BotConnectionSettingProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotConnectionSettingProperties (clientId, settingId, clientSecret, scopes, serviceProviderId, serviceProviderDisplayName, parameters, provisioningState)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotConnectionSettingProperties BotConnectionSettingProperties (string clientId, string settingId, string clientSecret, string scopes, string serviceProviderId, string serviceProviderDisplayName, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.Models.BotConnectionSettingParameter&gt; parameters, string provisioningState);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BotConnectionSettingProperties (clientId As String, settingId As String, clientSecret As String, scopes As String, serviceProviderId As String, serviceProviderDisplayName As String, parameters As IEnumerable(Of BotConnectionSettingParameter), provisioningState As String) As BotConnectionSettingProperties" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
@@ -574,13 +586,13 @@
         <Parameter Name="zones" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
-        <param name="tags"> The tags. </param>
-        <param name="location"> The location. </param>
-        <param name="properties"> The set of properties specific to bot resource. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="tags"> Resource tags. </param>
+        <param name="location"> The geo-location where the resource lives. </param>
+        <param name="properties"> The resource-specific properties for this resource. </param>
         <param name="sku"> Gets or sets the SKU of the resource. </param>
         <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
         <param name="etag"> Entity Tag. </param>
@@ -591,13 +603,11 @@
       </Docs>
     </Member>
     <Member MemberName="BotProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotProperties BotProperties (string displayName = default, string description = default, Uri iconUri = default, Uri endpoint = default, string endpointVersion = default, System.Collections.Generic.IDictionary&lt;string,string&gt; allSettings = default, System.Collections.Generic.IDictionary&lt;string,string&gt; parameters = default, Uri manifestUri = default, Azure.ResourceManager.BotService.Models.BotMsaAppType? msaAppType = default, string msaAppId = default, string msaAppTenantId = default, Azure.Core.ResourceIdentifier msaAppMSIResourceId = default, System.Collections.Generic.IEnumerable&lt;string&gt; configuredChannels = default, System.Collections.Generic.IEnumerable&lt;string&gt; enabledChannels = default, string developerAppInsightKey = default, string developerAppInsightsApiKey = default, string developerAppInsightsApplicationId = default, System.Collections.Generic.IEnumerable&lt;string&gt; luisAppIds = default, string luisKey = default, bool? isCmekEnabled = default, Uri cmekKeyVaultUri = default, string cmekEncryptionStatus = default, Guid? tenantId = default, Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess? publicNetworkAccess = default, bool? isStreamingSupported = default, bool? isDeveloperAppInsightsApiKeySet = default, string migrationToken = default, bool? isLocalAuthDisabled = default, string schemaTransformationVersion = default, Azure.Core.ResourceIdentifier storageResourceId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData&gt; privateEndpointConnections = default, string openWithHint = default, string appPasswordHint = default, string provisioningState = default, string publishingCredentials = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotProperties BotProperties (string displayName = default, string description = default, Uri iconUri = default, Uri endpoint = default, string endpointVersion = default, System.Collections.Generic.IDictionary&lt;string,string&gt; allSettings = default, System.Collections.Generic.IDictionary&lt;string,string&gt; parameters = default, Uri manifestUri = default, Azure.ResourceManager.BotService.Models.BotMsaAppType? msaAppType = default, string msaAppId = default, string msaAppTenantId = default, Azure.Core.ResourceIdentifier msaAppMSIResourceId = default, System.Collections.Generic.IEnumerable&lt;string&gt; configuredChannels = default, System.Collections.Generic.IEnumerable&lt;string&gt; enabledChannels = default, string developerAppInsightKey = default, string developerAppInsightsApiKey = default, string developerAppInsightsApplicationId = default, System.Collections.Generic.IEnumerable&lt;string&gt; luisAppIds = default, string luisKey = default, bool? isCmekEnabled = default, Uri cmekKeyVaultUri = default, string cmekEncryptionStatus = default, Guid? tenantId = default, Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess? publicNetworkAccess = default, bool? isStreamingSupported = default, bool? isDeveloperAppInsightsApiKeySet = default, string migrationToken = default, bool? isLocalAuthDisabled = default, string schemaTransformationVersion = default, Azure.Core.ResourceIdentifier storageResourceId = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData&gt; privateEndpointConnections = default, string openWithHint = default, string appPasswordHint = default, string provisioningState = default, string publishingCredentials = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotProperties BotProperties(string displayName, string description, class System.Uri iconUri, class System.Uri endpoint, string endpointVersion, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; allSettings, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; parameters, class System.Uri manifestUri, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.BotService.Models.BotMsaAppType&gt; msaAppType, string msaAppId, string msaAppTenantId, class Azure.Core.ResourceIdentifier msaAppMSIResourceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; configuredChannels, class System.Collections.Generic.IEnumerable`1&lt;string&gt; enabledChannels, string developerAppInsightKey, string developerAppInsightsApiKey, string developerAppInsightsApplicationId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; luisAppIds, string luisKey, valuetype System.Nullable`1&lt;bool&gt; isCmekEnabled, class System.Uri cmekKeyVaultUri, string cmekEncryptionStatus, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; tenantId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess&gt; publicNetworkAccess, valuetype System.Nullable`1&lt;bool&gt; isStreamingSupported, valuetype System.Nullable`1&lt;bool&gt; isDeveloperAppInsightsApiKeySet, string migrationToken, valuetype System.Nullable`1&lt;bool&gt; isLocalAuthDisabled, string schemaTransformationVersion, class Azure.Core.ResourceIdentifier storageResourceId, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData&gt; privateEndpointConnections, string openWithHint, string appPasswordHint, string provisioningState, string publishingCredentials) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotProperties(System.String,System.String,System.Uri,System.Uri,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.Uri,System.Nullable{Azure.ResourceManager.BotService.Models.BotMsaAppType},System.String,System.String,Azure.Core.ResourceIdentifier,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.Boolean},System.Uri,System.String,System.Nullable{System.Guid},System.Nullable{Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.String,Azure.Core.ResourceIdentifier,System.Collections.Generic.IEnumerable{Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData},System.String,System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BotProperties (Optional displayName As String = Nothing, Optional description As String = Nothing, Optional iconUri As Uri = Nothing, Optional endpoint As Uri = Nothing, Optional endpointVersion As String = Nothing, Optional allSettings As IDictionary(Of String, String) = Nothing, Optional parameters As IDictionary(Of String, String) = Nothing, Optional manifestUri As Uri = Nothing, Optional msaAppType As Nullable(Of BotMsaAppType) = Nothing, Optional msaAppId As String = Nothing, Optional msaAppTenantId As String = Nothing, Optional msaAppMSIResourceId As ResourceIdentifier = Nothing, Optional configuredChannels As IEnumerable(Of String) = Nothing, Optional enabledChannels As IEnumerable(Of String) = Nothing, Optional developerAppInsightKey As String = Nothing, Optional developerAppInsightsApiKey As String = Nothing, Optional developerAppInsightsApplicationId As String = Nothing, Optional luisAppIds As IEnumerable(Of String) = Nothing, Optional luisKey As String = Nothing, Optional isCmekEnabled As Nullable(Of Boolean) = Nothing, Optional cmekKeyVaultUri As Uri = Nothing, Optional cmekEncryptionStatus As String = Nothing, Optional tenantId As Nullable(Of Guid) = Nothing, Optional publicNetworkAccess As Nullable(Of BotServicePublicNetworkAccess) = Nothing, Optional isStreamingSupported As Nullable(Of Boolean) = Nothing, Optional isDeveloperAppInsightsApiKeySet As Nullable(Of Boolean) = Nothing, Optional migrationToken As String = Nothing, Optional isLocalAuthDisabled As Nullable(Of Boolean) = Nothing, Optional schemaTransformationVersion As String = Nothing, Optional storageResourceId As ResourceIdentifier = Nothing, Optional privateEndpointConnections As IEnumerable(Of BotServicePrivateEndpointConnectionData) = Nothing, Optional openWithHint As String = Nothing, Optional appPasswordHint As String = Nothing, Optional provisioningState As String = Nothing, Optional publishingCredentials As String = Nothing) As BotProperties" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotProperties (Optional displayName As String = Nothing, Optional description As String = Nothing, Optional iconUri As Uri = Nothing, Optional endpoint As Uri = Nothing, Optional endpointVersion As String = Nothing, Optional allSettings As IDictionary(Of String, String) = Nothing, Optional parameters As IDictionary(Of String, String) = Nothing, Optional manifestUri As Uri = Nothing, Optional msaAppType As Nullable(Of BotMsaAppType) = Nothing, Optional msaAppId As String = Nothing, Optional msaAppTenantId As String = Nothing, Optional msaAppMSIResourceId As ResourceIdentifier = Nothing, Optional configuredChannels As IEnumerable(Of String) = Nothing, Optional enabledChannels As IEnumerable(Of String) = Nothing, Optional developerAppInsightKey As String = Nothing, Optional developerAppInsightsApiKey As String = Nothing, Optional developerAppInsightsApplicationId As String = Nothing, Optional luisAppIds As IEnumerable(Of String) = Nothing, Optional luisKey As String = Nothing, Optional isCmekEnabled As Nullable(Of Boolean) = Nothing, Optional cmekKeyVaultUri As Uri = Nothing, Optional cmekEncryptionStatus As String = Nothing, Optional tenantId As Nullable(Of Guid) = Nothing, Optional publicNetworkAccess As Nullable(Of BotServicePublicNetworkAccess) = Nothing, Optional isStreamingSupported As Nullable(Of Boolean) = Nothing, Optional isDeveloperAppInsightsApiKeySet As Nullable(Of Boolean) = Nothing, Optional migrationToken As String = Nothing, Optional isLocalAuthDisabled As Nullable(Of Boolean) = Nothing, Optional schemaTransformationVersion As String = Nothing, Optional storageResourceId As ResourceIdentifier = Nothing, Optional privateEndpointConnections As IEnumerable(Of BotServicePrivateEndpointConnectionData) = Nothing, Optional openWithHint As String = Nothing, Optional appPasswordHint As String = Nothing, Optional provisioningState As String = Nothing, Optional publishingCredentials As String = Nothing) As BotProperties" />
       <MemberSignature Language="F#" Value="static member BotProperties : string * string * Uri * Uri * string * System.Collections.Generic.IDictionary&lt;string, string&gt; * System.Collections.Generic.IDictionary&lt;string, string&gt; * Uri * Nullable&lt;Azure.ResourceManager.BotService.Models.BotMsaAppType&gt; * string * string * Azure.Core.ResourceIdentifier * seq&lt;string&gt; * seq&lt;string&gt; * string * string * string * seq&lt;string&gt; * string * Nullable&lt;bool&gt; * Uri * string * Nullable&lt;Guid&gt; * Nullable&lt;Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * string * Nullable&lt;bool&gt; * string * Azure.Core.ResourceIdentifier * seq&lt;Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData&gt; * string * string * string * string -&gt; Azure.ResourceManager.BotService.Models.BotProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotProperties (displayName, description, iconUri, endpoint, endpointVersion, allSettings, parameters, manifestUri, msaAppType, msaAppId, msaAppTenantId, msaAppMSIResourceId, configuredChannels, enabledChannels, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, luisAppIds, luisKey, isCmekEnabled, cmekKeyVaultUri, cmekEncryptionStatus, tenantId, publicNetworkAccess, isStreamingSupported, isDeveloperAppInsightsApiKeySet, migrationToken, isLocalAuthDisabled, schemaTransformationVersion, storageResourceId, privateEndpointConnections, openWithHint, appPasswordHint, provisioningState, publishingCredentials)" />
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotProperties BotProperties (string displayName, string description, Uri iconUri, Uri endpoint, string endpointVersion, System.Collections.Generic.IDictionary&lt;string,string&gt; allSettings, System.Collections.Generic.IDictionary&lt;string,string&gt; parameters, Uri manifestUri, Azure.ResourceManager.BotService.Models.BotMsaAppType? msaAppType, string msaAppId, string msaAppTenantId, Azure.Core.ResourceIdentifier msaAppMSIResourceId, System.Collections.Generic.IEnumerable&lt;string&gt; configuredChannels, System.Collections.Generic.IEnumerable&lt;string&gt; enabledChannels, string developerAppInsightKey, string developerAppInsightsApiKey, string developerAppInsightsApplicationId, System.Collections.Generic.IEnumerable&lt;string&gt; luisAppIds, string luisKey, bool? isCmekEnabled, Uri cmekKeyVaultUri, string cmekEncryptionStatus, Guid? tenantId, Azure.ResourceManager.BotService.Models.BotServicePublicNetworkAccess? publicNetworkAccess, bool? isStreamingSupported, bool? isDeveloperAppInsightsApiKeySet, string migrationToken, bool? isLocalAuthDisabled, string schemaTransformationVersion, Azure.Core.ResourceIdentifier storageResourceId, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData&gt; privateEndpointConnections, string openWithHint, string appPasswordHint, string provisioningState, string publishingCredentials);" FrameworkAlternate="azure-dotnet-preview" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function BotProperties (displayName As String, description As String, iconUri As Uri, endpoint As Uri, endpointVersion As String, allSettings As IDictionary(Of String, String), parameters As IDictionary(Of String, String), manifestUri As Uri, msaAppType As Nullable(Of BotMsaAppType), msaAppId As String, msaAppTenantId As String, msaAppMSIResourceId As ResourceIdentifier, configuredChannels As IEnumerable(Of String), enabledChannels As IEnumerable(Of String), developerAppInsightKey As String, developerAppInsightsApiKey As String, developerAppInsightsApplicationId As String, luisAppIds As IEnumerable(Of String), luisKey As String, isCmekEnabled As Nullable(Of Boolean), cmekKeyVaultUri As Uri, cmekEncryptionStatus As String, tenantId As Nullable(Of Guid), publicNetworkAccess As Nullable(Of BotServicePublicNetworkAccess), isStreamingSupported As Nullable(Of Boolean), isDeveloperAppInsightsApiKeySet As Nullable(Of Boolean), migrationToken As String, isLocalAuthDisabled As Nullable(Of Boolean), schemaTransformationVersion As String, storageResourceId As ResourceIdentifier, privateEndpointConnections As IEnumerable(Of BotServicePrivateEndpointConnectionData), openWithHint As String, appPasswordHint As String, provisioningState As String, publishingCredentials As String) As BotProperties" FrameworkAlternate="azure-dotnet-preview" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
@@ -824,6 +834,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="BotServiceNameAvailabilityContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityContent BotServiceNameAvailabilityContent (string name = default, Azure.Core.ResourceType? resourceType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityContent BotServiceNameAvailabilityContent(string name, valuetype System.Nullable`1&lt;valuetype Azure.Core.ResourceType&gt; resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServiceNameAvailabilityContent(System.String,System.Nullable{Azure.Core.ResourceType})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotServiceNameAvailabilityContent (Optional name As String = Nothing, Optional resourceType As Nullable(Of ResourceType) = Nothing) As BotServiceNameAvailabilityContent" />
+      <MemberSignature Language="F#" Value="static member BotServiceNameAvailabilityContent : string * Nullable&lt;Azure.Core.ResourceType&gt; -&gt; Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityContent" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServiceNameAvailabilityContent (name, resourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="System.Nullable&lt;Azure.Core.ResourceType&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="name"> the name of the bot for which availability needs to be checked. </param>
+        <param name="resourceType"> the type of the bot for which availability needs to be checked. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BotServiceNameAvailabilityResult">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityResult BotServiceNameAvailabilityResult (bool? isValid = default, string message = default, string absCode = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotServiceNameAvailabilityResult BotServiceNameAvailabilityResult(valuetype System.Nullable`1&lt;bool&gt; isValid, string message, string absCode) cil managed" />
@@ -953,6 +989,12 @@
         <AssemblyVersion>1.1.1.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData</ReturnType>
       </ReturnValue>
@@ -976,6 +1018,44 @@
         <param name="provisioningState"> The provisioning state of the private endpoint connection resource. </param>
         <param name="groupIds"> Group ids. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData" />. </summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotServicePrivateEndpointConnectionData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData BotServicePrivateEndpointConnectionData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState connectionState = default, Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointConnectionProvisioningState? provisioningState = default, System.Collections.Generic.IEnumerable&lt;string&gt; groupIds = default, Azure.Core.ResourceIdentifier privateEndpointId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData BotServicePrivateEndpointConnectionData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState connectionState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointConnectionProvisioningState&gt; provisioningState, class System.Collections.Generic.IEnumerable`1&lt;string&gt; groupIds, class Azure.Core.ResourceIdentifier privateEndpointId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServicePrivateEndpointConnectionData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState,System.Nullable{Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointConnectionProvisioningState},System.Collections.Generic.IEnumerable{System.String},Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotServicePrivateEndpointConnectionData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional connectionState As BotServicePrivateLinkServiceConnectionState = Nothing, Optional provisioningState As Nullable(Of BotServicePrivateEndpointConnectionProvisioningState) = Nothing, Optional groupIds As IEnumerable(Of String) = Nothing, Optional privateEndpointId As ResourceIdentifier = Nothing) As BotServicePrivateEndpointConnectionData" />
+      <MemberSignature Language="F#" Value="static member BotServicePrivateEndpointConnectionData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState * Nullable&lt;Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointConnectionProvisioningState&gt; * seq&lt;string&gt; * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServicePrivateEndpointConnectionData (id, name, resourceType, systemData, connectionState, provisioningState, groupIds, privateEndpointId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="connectionState" Type="Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointConnectionProvisioningState&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="groupIds" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="privateEndpointId" Type="Azure.Core.ResourceIdentifier" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="connectionState"> A collection of information about the state of the connection between service consumer and provider. </param>
+        <param name="provisioningState"> The provisioning state of the private endpoint connection resource. </param>
+        <param name="groupIds"> Group ids. </param>
+        <param name="privateEndpointId"> The ARM identifier for Private Endpoint. </param>
+        <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.BotServicePrivateEndpointConnectionData" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1014,6 +1094,34 @@
         <param name="requiredZoneNames"> The private link resource Private link DNS zone name. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.Models.BotServicePrivateLinkResourceData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.BotServicePrivateLinkResourceData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotServicePrivateLinkServiceConnectionState">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState BotServicePrivateLinkServiceConnectionState (Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointServiceConnectionStatus? status = default, string description = default, string actionsRequired = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState BotServicePrivateLinkServiceConnectionState(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointServiceConnectionStatus&gt; status, string description, string actionsRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServicePrivateLinkServiceConnectionState(System.Nullable{Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointServiceConnectionStatus},System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BotServicePrivateLinkServiceConnectionState (Optional status As Nullable(Of BotServicePrivateEndpointServiceConnectionStatus) = Nothing, Optional description As String = Nothing, Optional actionsRequired As String = Nothing) As BotServicePrivateLinkServiceConnectionState" />
+      <MemberSignature Language="F#" Value="static member BotServicePrivateLinkServiceConnectionState : Nullable&lt;Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointServiceConnectionStatus&gt; * string * string -&gt; Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.BotServicePrivateLinkServiceConnectionState (status, description, actionsRequired)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.ResourceManager.BotService.Models.BotServicePrivateEndpointServiceConnectionStatus&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="description" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="actionsRequired" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="status"> Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. </param>
+        <param name="description"> The reason for approval/rejection of the connection. </param>
+        <param name="actionsRequired"> A message indicating if changes on the service provider require any updates on the consumer. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.BotServicePrivateLinkServiceConnectionState" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1320,6 +1428,42 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DirectLineSpeechChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.DirectLineSpeechChannelProperties DirectLineSpeechChannelProperties (Azure.Core.ResourceIdentifier cognitiveServiceResourceId = default, string cognitiveServiceRegion = default, string cognitiveServiceSubscriptionKey = default, bool? isEnabled = default, string customVoiceDeploymentId = default, string customSpeechModelId = default, bool? isDefaultBotForCogSvcAccount = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.DirectLineSpeechChannelProperties DirectLineSpeechChannelProperties(class Azure.Core.ResourceIdentifier cognitiveServiceResourceId, string cognitiveServiceRegion, string cognitiveServiceSubscriptionKey, valuetype System.Nullable`1&lt;bool&gt; isEnabled, string customVoiceDeploymentId, string customSpeechModelId, valuetype System.Nullable`1&lt;bool&gt; isDefaultBotForCogSvcAccount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.DirectLineSpeechChannelProperties(Azure.Core.ResourceIdentifier,System.String,System.String,System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DirectLineSpeechChannelProperties (Optional cognitiveServiceResourceId As ResourceIdentifier = Nothing, Optional cognitiveServiceRegion As String = Nothing, Optional cognitiveServiceSubscriptionKey As String = Nothing, Optional isEnabled As Nullable(Of Boolean) = Nothing, Optional customVoiceDeploymentId As String = Nothing, Optional customSpeechModelId As String = Nothing, Optional isDefaultBotForCogSvcAccount As Nullable(Of Boolean) = Nothing) As DirectLineSpeechChannelProperties" />
+      <MemberSignature Language="F#" Value="static member DirectLineSpeechChannelProperties : Azure.Core.ResourceIdentifier * string * string * Nullable&lt;bool&gt; * string * string * Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.BotService.Models.DirectLineSpeechChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.DirectLineSpeechChannelProperties (cognitiveServiceResourceId, cognitiveServiceRegion, cognitiveServiceSubscriptionKey, isEnabled, customVoiceDeploymentId, customSpeechModelId, isDefaultBotForCogSvcAccount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.DirectLineSpeechChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cognitiveServiceResourceId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceRegion" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceSubscriptionKey" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="customVoiceDeploymentId" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="customSpeechModelId" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isDefaultBotForCogSvcAccount" Type="System.Nullable&lt;System.Boolean&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="cognitiveServiceResourceId"> The cognitive service id with this channel registration. </param>
+        <param name="cognitiveServiceRegion"> The cognitive service region with this channel registration. </param>
+        <param name="cognitiveServiceSubscriptionKey"> The cognitive service subscription key to use with this channel registration. </param>
+        <param name="isEnabled"> Whether this channel is enabled or not. </param>
+        <param name="customVoiceDeploymentId"> Custom speech model id (optional). </param>
+        <param name="customSpeechModelId"> Custom voice deployment id (optional). </param>
+        <param name="isDefaultBotForCogSvcAccount"> Make this a default bot for chosen cognitive service account. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.DirectLineSpeechChannelProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="EmailChannel">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.EmailChannel EmailChannel (Azure.ETag? etag = default, string provisioningState = default, Azure.Core.AzureLocation? location = default, Azure.ResourceManager.BotService.Models.EmailChannelProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.EmailChannel EmailChannel(valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, string provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, class Azure.ResourceManager.BotService.Models.EmailChannelProperties properties) cil managed" />
@@ -1348,6 +1492,38 @@
         <param name="properties"> The set of properties specific to email channel resource. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.Models.EmailChannel" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.EmailChannel" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.EmailChannelProperties EmailChannelProperties (string emailAddress = default, Azure.ResourceManager.BotService.Models.EmailChannelAuthMethod? authMethod = default, string password = default, string magicCode = default, bool isEnabled = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.EmailChannelProperties EmailChannelProperties(string emailAddress, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.BotService.Models.EmailChannelAuthMethod&gt; authMethod, string password, string magicCode, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.EmailChannelProperties(System.String,System.Nullable{Azure.ResourceManager.BotService.Models.EmailChannelAuthMethod},System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EmailChannelProperties (Optional emailAddress As String = Nothing, Optional authMethod As Nullable(Of EmailChannelAuthMethod) = Nothing, Optional password As String = Nothing, Optional magicCode As String = Nothing, Optional isEnabled As Boolean = false) As EmailChannelProperties" />
+      <MemberSignature Language="F#" Value="static member EmailChannelProperties : string * Nullable&lt;Azure.ResourceManager.BotService.Models.EmailChannelAuthMethod&gt; * string * string * bool -&gt; Azure.ResourceManager.BotService.Models.EmailChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.EmailChannelProperties (emailAddress, authMethod, password, magicCode, isEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.EmailChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emailAddress" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authMethod" Type="System.Nullable&lt;Azure.ResourceManager.BotService.Models.EmailChannelAuthMethod&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="password" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="magicCode" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="emailAddress"> The email address. </param>
+        <param name="authMethod"> Email channel auth method. 0 Password (Default); 1 Graph. </param>
+        <param name="password"> The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <param name="magicCode"> The magic code for setting up the modern authentication. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.EmailChannelProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1417,6 +1593,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="FacebookPage">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.FacebookPage FacebookPage (string id = default, string accessToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.FacebookPage FacebookPage(string id, string accessToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.FacebookPage(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FacebookPage (Optional id As String = Nothing, Optional accessToken As String = Nothing) As FacebookPage" />
+      <MemberSignature Language="F#" Value="static member FacebookPage : string * string -&gt; Azure.ResourceManager.BotService.Models.FacebookPage" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.FacebookPage (id, accessToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.FacebookPage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="accessToken" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Page id. </param>
+        <param name="accessToken"> Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.FacebookPage" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBotServiceQnAMakerEndpointKeyContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyContent GetBotServiceQnAMakerEndpointKeyContent (string hostname = default, string authkey = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyContent GetBotServiceQnAMakerEndpointKeyContent(string hostname, string authkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.GetBotServiceQnAMakerEndpointKeyContent(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetBotServiceQnAMakerEndpointKeyContent (Optional hostname As String = Nothing, Optional authkey As String = Nothing) As GetBotServiceQnAMakerEndpointKeyContent" />
+      <MemberSignature Language="F#" Value="static member GetBotServiceQnAMakerEndpointKeyContent : string * string -&gt; Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyContent" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.GetBotServiceQnAMakerEndpointKeyContent (hostname, authkey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostname" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authkey" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="hostname"> the host name of the QnA Maker endpoint. </param>
+        <param name="authkey"> Subscription key which provides access to this API. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetBotServiceQnAMakerEndpointKeyResult">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyResult GetBotServiceQnAMakerEndpointKeyResult (string primaryEndpointKey = default, string secondaryEndpointKey = default, string installedVersion = default, string lastStableVersion = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.GetBotServiceQnAMakerEndpointKeyResult GetBotServiceQnAMakerEndpointKeyResult(string primaryEndpointKey, string secondaryEndpointKey, string installedVersion, string lastStableVersion) cil managed" />
@@ -1476,6 +1704,36 @@
         <param name="properties"> The set of properties specific to Kik channel resource. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.Models.KikChannel" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.KikChannel" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KikChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.KikChannelProperties KikChannelProperties (string userName = default, string apiKey = default, bool? isValidated = default, bool isEnabled = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.KikChannelProperties KikChannelProperties(string userName, string apiKey, valuetype System.Nullable`1&lt;bool&gt; isValidated, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.KikChannelProperties(System.String,System.String,System.Nullable{System.Boolean},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function KikChannelProperties (Optional userName As String = Nothing, Optional apiKey As String = Nothing, Optional isValidated As Nullable(Of Boolean) = Nothing, Optional isEnabled As Boolean = false) As KikChannelProperties" />
+      <MemberSignature Language="F#" Value="static member KikChannelProperties : string * string * Nullable&lt;bool&gt; * bool -&gt; Azure.ResourceManager.BotService.Models.KikChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.KikChannelProperties (userName, apiKey, isValidated, isEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.KikChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="apiKey" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isValidated" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="userName"> The Kik user name. </param>
+        <param name="apiKey"> Kik API key. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <param name="isValidated"> Whether this channel is validated for the bot. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.KikChannelProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1625,6 +1883,40 @@
         <param name="properties"> The set of properties specific to Microsoft Teams channel resource. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.Models.MsTeamsChannel" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.MsTeamsChannel" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsTeamsChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.MsTeamsChannelProperties MsTeamsChannelProperties (bool? isCallingEnabled = default, string callingWebhook = default, bool isEnabled = false, string incomingCallRoute = default, string deploymentEnvironment = default, bool? acceptedTerms = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.MsTeamsChannelProperties MsTeamsChannelProperties(valuetype System.Nullable`1&lt;bool&gt; isCallingEnabled, string callingWebhook, bool isEnabled, string incomingCallRoute, string deploymentEnvironment, valuetype System.Nullable`1&lt;bool&gt; acceptedTerms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.MsTeamsChannelProperties(System.Nullable{System.Boolean},System.String,System.Boolean,System.String,System.String,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MsTeamsChannelProperties (Optional isCallingEnabled As Nullable(Of Boolean) = Nothing, Optional callingWebhook As String = Nothing, Optional isEnabled As Boolean = false, Optional incomingCallRoute As String = Nothing, Optional deploymentEnvironment As String = Nothing, Optional acceptedTerms As Nullable(Of Boolean) = Nothing) As MsTeamsChannelProperties" />
+      <MemberSignature Language="F#" Value="static member MsTeamsChannelProperties : Nullable&lt;bool&gt; * string * bool * string * string * Nullable&lt;bool&gt; -&gt; Azure.ResourceManager.BotService.Models.MsTeamsChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.MsTeamsChannelProperties (isCallingEnabled, callingWebhook, isEnabled, incomingCallRoute, deploymentEnvironment, acceptedTerms)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.MsTeamsChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isCallingEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="callingWebhook" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="incomingCallRoute" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="deploymentEnvironment" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acceptedTerms" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isCallingEnabled"> Enable calling for Microsoft Teams channel. </param>
+        <param name="callingWebhook"> Webhook for Microsoft Teams channel calls. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <param name="incomingCallRoute"> Webhook for Microsoft Teams channel calls. </param>
+        <param name="deploymentEnvironment"> Deployment environment for Microsoft Teams channel calls. </param>
+        <param name="acceptedTerms"> Whether this channel accepted terms. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.MsTeamsChannelProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1926,6 +2218,48 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SkypeChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.SkypeChannelProperties SkypeChannelProperties (bool? isMessagingEnabled = default, bool? isMediaCardsEnabled = default, bool? isVideoEnabled = default, bool? isCallingEnabled = default, bool? isScreenSharingEnabled = default, bool? isGroupsEnabled = default, string groupsMode = default, string callingWebHook = default, string incomingCallRoute = default, bool isEnabled = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.SkypeChannelProperties SkypeChannelProperties(valuetype System.Nullable`1&lt;bool&gt; isMessagingEnabled, valuetype System.Nullable`1&lt;bool&gt; isMediaCardsEnabled, valuetype System.Nullable`1&lt;bool&gt; isVideoEnabled, valuetype System.Nullable`1&lt;bool&gt; isCallingEnabled, valuetype System.Nullable`1&lt;bool&gt; isScreenSharingEnabled, valuetype System.Nullable`1&lt;bool&gt; isGroupsEnabled, string groupsMode, string callingWebHook, string incomingCallRoute, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.SkypeChannelProperties(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SkypeChannelProperties (Optional isMessagingEnabled As Nullable(Of Boolean) = Nothing, Optional isMediaCardsEnabled As Nullable(Of Boolean) = Nothing, Optional isVideoEnabled As Nullable(Of Boolean) = Nothing, Optional isCallingEnabled As Nullable(Of Boolean) = Nothing, Optional isScreenSharingEnabled As Nullable(Of Boolean) = Nothing, Optional isGroupsEnabled As Nullable(Of Boolean) = Nothing, Optional groupsMode As String = Nothing, Optional callingWebHook As String = Nothing, Optional incomingCallRoute As String = Nothing, Optional isEnabled As Boolean = false) As SkypeChannelProperties" />
+      <MemberSignature Language="F#" Value="static member SkypeChannelProperties : Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; * string * string * string * bool -&gt; Azure.ResourceManager.BotService.Models.SkypeChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.SkypeChannelProperties (isMessagingEnabled, isMediaCardsEnabled, isVideoEnabled, isCallingEnabled, isScreenSharingEnabled, isGroupsEnabled, groupsMode, callingWebHook, incomingCallRoute, isEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.SkypeChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isMessagingEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isMediaCardsEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isVideoEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isCallingEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isScreenSharingEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isGroupsEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="groupsMode" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="callingWebHook" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="incomingCallRoute" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="isMessagingEnabled"> Enable messaging for Skype channel. </param>
+        <param name="isMediaCardsEnabled"> Enable media cards for Skype channel. </param>
+        <param name="isVideoEnabled"> Enable video for Skype channel. </param>
+        <param name="isCallingEnabled"> Enable calling for Skype channel. </param>
+        <param name="isScreenSharingEnabled"> Enable screen sharing for Skype channel. </param>
+        <param name="isGroupsEnabled"> Enable groups for Skype channel. </param>
+        <param name="groupsMode"> Group mode for Skype channel. </param>
+        <param name="callingWebHook"> Calling web hook for Skype channel. </param>
+        <param name="incomingCallRoute"> Incoming call route for Skype channel. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.SkypeChannelProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SlackChannel">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.SlackChannel SlackChannel (Azure.ETag? etag = default, string provisioningState = default, Azure.Core.AzureLocation? location = default, Azure.ResourceManager.BotService.Models.SlackChannelProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.SlackChannel SlackChannel(valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, string provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, class Azure.ResourceManager.BotService.Models.SlackChannelProperties properties) cil managed" />
@@ -2033,6 +2367,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SmsChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.SmsChannelProperties SmsChannelProperties (string phone = default, string accountSID = default, string authToken = default, bool? isValidated = default, bool isEnabled = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.SmsChannelProperties SmsChannelProperties(string phone, string accountSID, string authToken, valuetype System.Nullable`1&lt;bool&gt; isValidated, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.SmsChannelProperties(System.String,System.String,System.String,System.Nullable{System.Boolean},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SmsChannelProperties (Optional phone As String = Nothing, Optional accountSID As String = Nothing, Optional authToken As String = Nothing, Optional isValidated As Nullable(Of Boolean) = Nothing, Optional isEnabled As Boolean = false) As SmsChannelProperties" />
+      <MemberSignature Language="F#" Value="static member SmsChannelProperties : string * string * string * Nullable&lt;bool&gt; * bool -&gt; Azure.ResourceManager.BotService.Models.SmsChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.SmsChannelProperties (phone, accountSID, authToken, isValidated, isEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.SmsChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="phone" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="accountSID" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="authToken" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isValidated" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="phone"> The Sms phone. </param>
+        <param name="accountSID"> The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <param name="authToken"> The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <param name="isValidated"> Whether this channel is validated for the bot. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.SmsChannelProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TelegramChannel">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.TelegramChannel TelegramChannel (Azure.ETag? etag = default, string provisioningState = default, Azure.Core.AzureLocation? location = default, Azure.ResourceManager.BotService.Models.TelegramChannelProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.TelegramChannel TelegramChannel(valuetype System.Nullable`1&lt;valuetype Azure.ETag&gt; etag, string provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, class Azure.ResourceManager.BotService.Models.TelegramChannelProperties properties) cil managed" />
@@ -2061,6 +2427,34 @@
         <param name="properties"> The set of properties specific to Telegram channel resource. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.BotService.Models.TelegramChannel" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.TelegramChannel" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelegramChannelProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.TelegramChannelProperties TelegramChannelProperties (string accessToken = default, bool? isValidated = default, bool isEnabled = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.TelegramChannelProperties TelegramChannelProperties(string accessToken, valuetype System.Nullable`1&lt;bool&gt; isValidated, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelegramChannelProperties(System.String,System.Nullable{System.Boolean},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TelegramChannelProperties (Optional accessToken As String = Nothing, Optional isValidated As Nullable(Of Boolean) = Nothing, Optional isEnabled As Boolean = false) As TelegramChannelProperties" />
+      <MemberSignature Language="F#" Value="static member TelegramChannelProperties : string * Nullable&lt;bool&gt; * bool -&gt; Azure.ResourceManager.BotService.Models.TelegramChannelProperties" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelegramChannelProperties (accessToken, isValidated, isEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.TelegramChannelProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessToken" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isValidated" Type="System.Nullable&lt;System.Boolean&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isEnabled" Type="System.Boolean" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="accessToken"> The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty. </param>
+        <param name="isValidated"> Whether this channel is validated for the bot. </param>
+        <param name="isEnabled"> Whether this channel is enabled for the bot. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.TelegramChannelProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2128,6 +2522,82 @@
         <param name="isEnabled"> Whether the channel is enabled. </param>
         <summary> The parameters to provide for the Direct Line channel. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.TelephonyChannelProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelephonyChannelResourceApiConfiguration">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.TelephonyChannelResourceApiConfiguration TelephonyChannelResourceApiConfiguration (string id = default, string providerName = default, string cognitiveServiceSubscriptionKey = default, string cognitiveServiceRegion = default, Azure.Core.ResourceIdentifier cognitiveServiceResourceId = default, string defaultLocale = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.TelephonyChannelResourceApiConfiguration TelephonyChannelResourceApiConfiguration(string id, string providerName, string cognitiveServiceSubscriptionKey, string cognitiveServiceRegion, class Azure.Core.ResourceIdentifier cognitiveServiceResourceId, string defaultLocale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelephonyChannelResourceApiConfiguration(System.String,System.String,System.String,System.String,Azure.Core.ResourceIdentifier,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TelephonyChannelResourceApiConfiguration (Optional id As String = Nothing, Optional providerName As String = Nothing, Optional cognitiveServiceSubscriptionKey As String = Nothing, Optional cognitiveServiceRegion As String = Nothing, Optional cognitiveServiceResourceId As ResourceIdentifier = Nothing, Optional defaultLocale As String = Nothing) As TelephonyChannelResourceApiConfiguration" />
+      <MemberSignature Language="F#" Value="static member TelephonyChannelResourceApiConfiguration : string * string * string * string * Azure.Core.ResourceIdentifier * string -&gt; Azure.ResourceManager.BotService.Models.TelephonyChannelResourceApiConfiguration" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelephonyChannelResourceApiConfiguration (id, providerName, cognitiveServiceSubscriptionKey, cognitiveServiceRegion, cognitiveServiceResourceId, defaultLocale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.TelephonyChannelResourceApiConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="providerName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceSubscriptionKey" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceRegion" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceResourceId" Type="Azure.Core.ResourceIdentifier" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="defaultLocale" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The id of config. </param>
+        <param name="providerName"> The provider name. </param>
+        <param name="cognitiveServiceSubscriptionKey"> The cognitive service subscription key. </param>
+        <param name="cognitiveServiceRegion"> The cognitive service region. </param>
+        <param name="cognitiveServiceResourceId"> The cognitive service resourceId. </param>
+        <param name="defaultLocale"> The default locale. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.TelephonyChannelResourceApiConfiguration" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelephonyPhoneNumbers">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.BotService.Models.TelephonyPhoneNumbers TelephonyPhoneNumbers (string id = default, string phoneNumber = default, string acsEndpoint = default, string acsSecret = default, Azure.Core.ResourceIdentifier acsResourceId = default, string cognitiveServiceSubscriptionKey = default, string cognitiveServiceRegion = default, Azure.Core.ResourceIdentifier cognitiveServiceResourceId = default, string defaultLocale = default, string offerType = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.BotService.Models.TelephonyPhoneNumbers TelephonyPhoneNumbers(string id, string phoneNumber, string acsEndpoint, string acsSecret, class Azure.Core.ResourceIdentifier acsResourceId, string cognitiveServiceSubscriptionKey, string cognitiveServiceRegion, class Azure.Core.ResourceIdentifier cognitiveServiceResourceId, string defaultLocale, string offerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelephonyPhoneNumbers(System.String,System.String,System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.String,Azure.Core.ResourceIdentifier,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TelephonyPhoneNumbers (Optional id As String = Nothing, Optional phoneNumber As String = Nothing, Optional acsEndpoint As String = Nothing, Optional acsSecret As String = Nothing, Optional acsResourceId As ResourceIdentifier = Nothing, Optional cognitiveServiceSubscriptionKey As String = Nothing, Optional cognitiveServiceRegion As String = Nothing, Optional cognitiveServiceResourceId As ResourceIdentifier = Nothing, Optional defaultLocale As String = Nothing, Optional offerType As String = Nothing) As TelephonyPhoneNumbers" />
+      <MemberSignature Language="F#" Value="static member TelephonyPhoneNumbers : string * string * string * string * Azure.Core.ResourceIdentifier * string * string * Azure.Core.ResourceIdentifier * string * string -&gt; Azure.ResourceManager.BotService.Models.TelephonyPhoneNumbers" Usage="Azure.ResourceManager.BotService.Models.ArmBotServiceModelFactory.TelephonyPhoneNumbers (id, phoneNumber, acsEndpoint, acsSecret, acsResourceId, cognitiveServiceSubscriptionKey, cognitiveServiceRegion, cognitiveServiceResourceId, defaultLocale, offerType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.BotService</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.BotService.Models.TelephonyPhoneNumbers</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="phoneNumber" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acsEndpoint" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acsSecret" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="acsResourceId" Type="Azure.Core.ResourceIdentifier" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceSubscriptionKey" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceRegion" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="cognitiveServiceResourceId" Type="Azure.Core.ResourceIdentifier" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="defaultLocale" Type="System.String" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="offerType" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> The element id. </param>
+        <param name="phoneNumber"> The phone number. </param>
+        <param name="acsEndpoint"> The endpoint of ACS. </param>
+        <param name="acsSecret"> The secret of ACS. </param>
+        <param name="acsResourceId"> The resource id of ACS. </param>
+        <param name="cognitiveServiceSubscriptionKey"> The subscription key of cognitive service. </param>
+        <param name="cognitiveServiceRegion"> The service region of cognitive service. </param>
+        <param name="cognitiveServiceResourceId"> The resource id of cognitive service. </param>
+        <param name="defaultLocale"> The default locale of the phone number. </param>
+        <param name="offerType"> Optional Property that will determine the offering type of the phone. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.BotService.Models.TelephonyPhoneNumbers" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

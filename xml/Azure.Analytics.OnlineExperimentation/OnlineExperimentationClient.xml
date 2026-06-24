@@ -13,7 +13,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> The OnlineExperimentation service client. </summary>
+    <summary> The OnlineExperimentationClient. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,6 +34,26 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OnlineExperimentationClient (Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.#ctor(Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As OnlineExperimentationClientSettings)" />
+      <MemberSignature Language="F#" Value="new Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient : Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings -&gt; Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient" Usage="new Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings"> The settings for OnlineExperimentationClient. </param>
+        <summary> Initializes a new instance of OnlineExperimentationClient from a <see cref="T:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientSettings" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public OnlineExperimentationClient (Uri endpoint, Azure.Core.TokenCredential credential);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri endpoint, class Azure.Core.TokenCredential credential) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.#ctor(System.Uri,Azure.Core.TokenCredential)" />
@@ -49,8 +69,8 @@
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Endpoint URL for the Online Experimentation workspace. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <summary> Initializes a new instance of OnlineExperimentationClient. </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -74,8 +94,8 @@
         <Parameter Name="options" Type="Azure.Analytics.OnlineExperimentation.OnlineExperimentationClientOptions" />
       </Parameters>
       <Docs>
-        <param name="endpoint"> Endpoint URL for the Online Experimentation workspace. </param>
-        <param name="credential"> A credential used to authenticate to an Azure Service. </param>
+        <param name="endpoint"> Service endpoint. </param>
+        <param name="credential"> A credential used to authenticate to the service. </param>
         <param name="options"> The options for configuring the client. </param>
         <summary> Initializes a new instance of OnlineExperimentationClient. </summary>
         <remarks>To be added.</remarks>
@@ -235,19 +255,12 @@
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Creates or updates an experiment metric.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call CreateOrUpdateMetric and parse the result.
 <code><![CDATA[
@@ -531,6 +544,11 @@ Console.WriteLine(result.GetProperty("definition").GetProperty("type").ToString(
 Console.WriteLine(result.GetProperty("eTag").ToString());
 Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateMetric">
@@ -593,19 +611,12 @@ Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="content"> The content to send as the body of the request. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Creates or updates an experiment metric.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> or <paramref name="content" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call CreateOrUpdateMetricAsync and parse the result.
 <code><![CDATA[
@@ -889,6 +900,11 @@ Console.WriteLine(result.GetProperty("definition").GetProperty("type").ToString(
 Console.WriteLine(result.GetProperty("eTag").ToString());
 Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> or <paramref name="content" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="CreateOrUpdateMetricAsync">
@@ -992,10 +1008,10 @@ Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
       </Docs>
     </Member>
     <Member MemberName="DeleteMetric">
-      <MemberSignature Language="C#" Value="public virtual Azure.Response DeleteMetric (string experimentMetricId, Azure.RequestConditions requestConditions = default, Azure.RequestContext context = default);" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Response DeleteMetric (string experimentMetricId, Azure.RequestConditions requestConditions, Azure.RequestContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response DeleteMetric(string experimentMetricId, class Azure.RequestConditions requestConditions, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.DeleteMetric(System.String,Azure.RequestConditions,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetric (experimentMetricId As String, Optional requestConditions As RequestConditions = Nothing, Optional context As RequestContext = Nothing) As Response" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetric (experimentMetricId As String, requestConditions As RequestConditions, context As RequestContext) As Response" />
       <MemberSignature Language="F#" Value="abstract member DeleteMetric : string * Azure.RequestConditions * Azure.RequestContext -&gt; Azure.Response&#xA;override this.DeleteMetric : string * Azure.RequestConditions * Azure.RequestContext -&gt; Azure.Response" Usage="onlineExperimentationClient.DeleteMetric (experimentMetricId, requestConditions, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1013,19 +1029,12 @@ Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Deletes an experiment metric.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call DeleteMetric.
 <code><![CDATA[
@@ -1037,13 +1046,51 @@ Response response = client.DeleteMetric("avg_purchase_revenue");
 
 Console.WriteLine(response.Status);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMetric">
+      <MemberSignature Language="C#" Value="public virtual Azure.Response DeleteMetric (string experimentMetricId, Azure.RequestConditions requestConditions = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Response DeleteMetric(string experimentMetricId, class Azure.RequestConditions requestConditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.DeleteMetric(System.String,Azure.RequestConditions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetric (experimentMetricId As String, Optional requestConditions As RequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Response" />
+      <MemberSignature Language="F#" Value="abstract member DeleteMetric : string * Azure.RequestConditions * System.Threading.CancellationToken -&gt; Azure.Response&#xA;override this.DeleteMetric : string * Azure.RequestConditions * System.Threading.CancellationToken -&gt; Azure.Response" Usage="onlineExperimentationClient.DeleteMetric (experimentMetricId, requestConditions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Response</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="experimentMetricId" Type="System.String" />
+        <Parameter Name="requestConditions" Type="Azure.RequestConditions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
+        <param name="requestConditions"> The content to send as the request conditions of the request. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Deletes an experiment metric. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="DeleteMetricAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteMetricAsync (string experimentMetricId, Azure.RequestConditions requestConditions = default, Azure.RequestContext context = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteMetricAsync (string experimentMetricId, Azure.RequestConditions requestConditions, Azure.RequestContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; DeleteMetricAsync(string experimentMetricId, class Azure.RequestConditions requestConditions, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.DeleteMetricAsync(System.String,Azure.RequestConditions,Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetricAsync (experimentMetricId As String, Optional requestConditions As RequestConditions = Nothing, Optional context As RequestContext = Nothing) As Task(Of Response)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetricAsync (experimentMetricId As String, requestConditions As RequestConditions, context As RequestContext) As Task(Of Response)" />
       <MemberSignature Language="F#" Value="abstract member DeleteMetricAsync : string * Azure.RequestConditions * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.DeleteMetricAsync : string * Azure.RequestConditions * Azure.RequestContext -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="onlineExperimentationClient.DeleteMetricAsync (experimentMetricId, requestConditions, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1061,19 +1108,12 @@ Console.WriteLine(response.Status);
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Deletes an experiment metric.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call DeleteMetricAsync.
 <code><![CDATA[
@@ -1085,6 +1125,44 @@ Response response = await client.DeleteMetricAsync("avg_purchase_revenue");
 
 Console.WriteLine(response.Status);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMetricAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.Response&gt; DeleteMetricAsync (string experimentMetricId, Azure.RequestConditions requestConditions = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.Response&gt; DeleteMetricAsync(string experimentMetricId, class Azure.RequestConditions requestConditions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.DeleteMetricAsync(System.String,Azure.RequestConditions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DeleteMetricAsync (experimentMetricId As String, Optional requestConditions As RequestConditions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Response)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteMetricAsync : string * Azure.RequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;&#xA;override this.DeleteMetricAsync : string * Azure.RequestConditions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.Response&gt;" Usage="onlineExperimentationClient.DeleteMetricAsync (experimentMetricId, requestConditions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="experimentMetricId" Type="System.String" />
+        <Parameter Name="requestConditions" Type="Azure.RequestConditions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
+        <param name="requestConditions"> The content to send as the request conditions of the request. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
+        <summary> Deletes an experiment metric. </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetric">
@@ -1109,21 +1187,12 @@ Console.WriteLine(response.Status);
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Fetches an experiment metric by ID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetric(System.String,Azure.RequestConditions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMetric and parse the result.
 <code><![CDATA[
@@ -1144,6 +1213,11 @@ Console.WriteLine(result.GetProperty("definition").GetProperty("type").ToString(
 Console.WriteLine(result.GetProperty("eTag").ToString());
 Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetric">
@@ -1168,14 +1242,10 @@ Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Fetches an experiment metric by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetMetric.
 <code><![CDATA[
@@ -1185,6 +1255,11 @@ OnlineExperimentationClient client = new OnlineExperimentationClient(endpoint, c
 
 Response<ExperimentMetric> response = client.GetMetric("events_purchase_creditcard");
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetricAsync">
@@ -1209,21 +1284,12 @@ Response<ExperimentMetric> response = client.GetMetric("events_purchase_creditca
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Fetches an experiment metric by ID.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetricAsync(System.String,Azure.RequestConditions,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMetricAsync and parse the result.
 <code><![CDATA[
@@ -1244,6 +1310,11 @@ Console.WriteLine(result.GetProperty("definition").GetProperty("type").ToString(
 Console.WriteLine(result.GetProperty("eTag").ToString());
 Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetricAsync">
@@ -1268,14 +1339,10 @@ Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
       <Docs>
         <param name="experimentMetricId"> Identifier for this experiment metric. Must start with a lowercase letter and contain only lowercase letters, numbers, and underscores. </param>
         <param name="requestConditions"> The content to send as the request conditions of the request. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Fetches an experiment metric by ID. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="experimentMetricId" /> is null. </exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
         <example>
 This sample shows how to call GetMetricAsync.
 <code><![CDATA[
@@ -1285,14 +1352,19 @@ OnlineExperimentationClient client = new OnlineExperimentationClient(endpoint, c
 
 Response<ExperimentMetric> response = await client.GetMetricAsync("events_purchase_creditcard");
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="experimentMetricId" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="experimentMetricId" /> is an empty string, and was expected to be non-empty. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetrics">
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;BinaryData&gt; GetMetrics (int? maxCount, int? skip, int? maxpagesize, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class System.BinaryData&gt; GetMetrics(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxpagesize, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;BinaryData&gt; GetMetrics (int? maxCount, int? skip, int? maxPageSize, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class System.BinaryData&gt; GetMetrics(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxPageSize, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetrics(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetrics (maxCount As Nullable(Of Integer), skip As Nullable(Of Integer), maxpagesize As Nullable(Of Integer), context As RequestContext) As Pageable(Of BinaryData)" />
-      <MemberSignature Language="F#" Value="abstract member GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Pageable&lt;BinaryData&gt;&#xA;override this.GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Pageable&lt;BinaryData&gt;" Usage="onlineExperimentationClient.GetMetrics (maxCount, skip, maxpagesize, context)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetrics (maxCount As Nullable(Of Integer), skip As Nullable(Of Integer), maxPageSize As Nullable(Of Integer), context As RequestContext) As Pageable(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="abstract member GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Pageable&lt;BinaryData&gt;&#xA;override this.GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.Pageable&lt;BinaryData&gt;" Usage="onlineExperimentationClient.GetMetrics (maxCount, skip, maxPageSize, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
@@ -1304,24 +1376,19 @@ Response<ExperimentMetric> response = await client.GetMetricAsync("events_purcha
       <Parameters>
         <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="maxpagesize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="maxPageSize" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="maxCount"> The number of result items to return. </param>
         <param name="skip"> The number of result items to skip. </param>
-        <param name="maxpagesize"> The maximum number of result items per page. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="maxPageSize"> The maximum number of result items per page. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Lists experiment metrics.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetrics(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.Pageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMetrics and parse the result.
 <code><![CDATA[
@@ -1343,14 +1410,15 @@ foreach (BinaryData item in client.GetMetrics(null, 15, null, null))
     Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetrics">
-      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetrics (int? maxCount = default, int? skip = default, int? maxpagesize = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetrics(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxpagesize, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetrics (int? maxCount = default, int? skip = default, int? maxPageSize = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.Pageable`1&lt;class Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetrics(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxPageSize, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetrics(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetrics (Optional maxCount As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional maxpagesize As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of ExperimentMetric)" />
-      <MemberSignature Language="F#" Value="abstract member GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;&#xA;override this.GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;" Usage="onlineExperimentationClient.GetMetrics (maxCount, skip, maxpagesize, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetrics (Optional maxCount As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional maxPageSize As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Pageable(Of ExperimentMetric)" />
+      <MemberSignature Language="F#" Value="abstract member GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;&#xA;override this.GetMetrics : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.Pageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;" Usage="onlineExperimentationClient.GetMetrics (maxCount, skip, maxPageSize, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
@@ -1362,14 +1430,14 @@ foreach (BinaryData item in client.GetMetrics(null, 15, null, null))
       <Parameters>
         <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="maxpagesize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="maxPageSize" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="maxCount"> The number of result items to return. </param>
         <param name="skip"> The number of result items to skip. </param>
-        <param name="maxpagesize"> The maximum number of result items per page. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="maxPageSize"> The maximum number of result items per page. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Lists experiment metrics. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1384,14 +1452,15 @@ foreach (ExperimentMetric item in client.GetMetrics())
 {
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetricsAsync">
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;BinaryData&gt; GetMetricsAsync (int? maxCount, int? skip, int? maxpagesize, Azure.RequestContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class System.BinaryData&gt; GetMetricsAsync(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxpagesize, class Azure.RequestContext context) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;BinaryData&gt; GetMetricsAsync (int? maxCount, int? skip, int? maxPageSize, Azure.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class System.BinaryData&gt; GetMetricsAsync(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxPageSize, class Azure.RequestContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetricsAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},Azure.RequestContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetricsAsync (maxCount As Nullable(Of Integer), skip As Nullable(Of Integer), maxpagesize As Nullable(Of Integer), context As RequestContext) As AsyncPageable(Of BinaryData)" />
-      <MemberSignature Language="F#" Value="abstract member GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.AsyncPageable&lt;BinaryData&gt;&#xA;override this.GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.AsyncPageable&lt;BinaryData&gt;" Usage="onlineExperimentationClient.GetMetricsAsync (maxCount, skip, maxpagesize, context)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetricsAsync (maxCount As Nullable(Of Integer), skip As Nullable(Of Integer), maxPageSize As Nullable(Of Integer), context As RequestContext) As AsyncPageable(Of BinaryData)" />
+      <MemberSignature Language="F#" Value="abstract member GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.AsyncPageable&lt;BinaryData&gt;&#xA;override this.GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * Azure.RequestContext -&gt; Azure.AsyncPageable&lt;BinaryData&gt;" Usage="onlineExperimentationClient.GetMetricsAsync (maxCount, skip, maxPageSize, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
@@ -1403,24 +1472,19 @@ foreach (ExperimentMetric item in client.GetMetrics())
       <Parameters>
         <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="maxpagesize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="maxPageSize" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="context" Type="Azure.RequestContext" />
       </Parameters>
       <Docs>
         <param name="maxCount"> The number of result items to return. </param>
         <param name="skip"> The number of result items to skip. </param>
-        <param name="maxpagesize"> The maximum number of result items per page. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="maxPageSize"> The maximum number of result items per page. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Lists experiment metrics.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetricsAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
-        <returns> The <see cref="T:Azure.AsyncPageable`1" /> from the service containing a list of <see cref="T:System.BinaryData" /> objects. Details of the body schema for each item in the collection are in the Remarks section below. </returns>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
+        <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call GetMetricsAsync and parse the result.
 <code><![CDATA[
@@ -1442,14 +1506,15 @@ await foreach (BinaryData item in client.GetMetricsAsync(null, 15, null, null))
     Console.WriteLine(result.GetProperty("lastModifiedAt").ToString());
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetMetricsAsync">
-      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetricsAsync (int? maxCount = default, int? skip = default, int? maxpagesize = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetricsAsync(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxpagesize, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetricsAsync (int? maxCount = default, int? skip = default, int? maxPageSize = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.AsyncPageable`1&lt;class Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt; GetMetricsAsync(valuetype System.Nullable`1&lt;int32&gt; maxCount, valuetype System.Nullable`1&lt;int32&gt; skip, valuetype System.Nullable`1&lt;int32&gt; maxPageSize, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.GetMetricsAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetricsAsync (Optional maxCount As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional maxpagesize As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of ExperimentMetric)" />
-      <MemberSignature Language="F#" Value="abstract member GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;&#xA;override this.GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;" Usage="onlineExperimentationClient.GetMetricsAsync (maxCount, skip, maxpagesize, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMetricsAsync (Optional maxCount As Nullable(Of Integer) = Nothing, Optional skip As Nullable(Of Integer) = Nothing, Optional maxPageSize As Nullable(Of Integer) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As AsyncPageable(Of ExperimentMetric)" />
+      <MemberSignature Language="F#" Value="abstract member GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;&#xA;override this.GetMetricsAsync : Nullable&lt;int&gt; * Nullable&lt;int&gt; * Nullable&lt;int&gt; * System.Threading.CancellationToken -&gt; Azure.AsyncPageable&lt;Azure.Analytics.OnlineExperimentation.ExperimentMetric&gt;" Usage="onlineExperimentationClient.GetMetricsAsync (maxCount, skip, maxPageSize, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.Analytics.OnlineExperimentation</AssemblyName>
@@ -1461,14 +1526,14 @@ await foreach (BinaryData item in client.GetMetricsAsync(null, 15, null, null))
       <Parameters>
         <Parameter Name="maxCount" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="skip" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="maxpagesize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="maxPageSize" Type="System.Nullable&lt;System.Int32&gt;" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="maxCount"> The number of result items to return. </param>
         <param name="skip"> The number of result items to skip. </param>
-        <param name="maxpagesize"> The maximum number of result items per page. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="maxPageSize"> The maximum number of result items per page. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Lists experiment metrics. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1483,6 +1548,7 @@ await foreach (ExperimentMetric item in client.GetMetricsAsync())
 {
 }
 ]]></code></example>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="Pipeline">
@@ -1593,12 +1659,10 @@ await foreach (ExperimentMetric item in client.GetMetricsAsync())
       </Parameters>
       <Docs>
         <param name="body"> Experiment metric input to validate. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Validates an experiment metric definition. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="body" /> is null. </exception>
         <example>
 This sample shows how to call ValidateMetric.
 <code><![CDATA[
@@ -1618,6 +1682,9 @@ new AverageMetricDefinition(new AggregatedValue("Transaction", "Revenue")
 }));
 Response<ExperimentMetricValidationResult> response = client.ValidateMetric(body);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="body" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="ValidateMetric">
@@ -1640,19 +1707,12 @@ Response<ExperimentMetricValidationResult> response = client.ValidateMetric(body
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Validates an experiment metric definition.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.ValidateMetric(Azure.Analytics.OnlineExperimentation.ExperimentMetric,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call ValidateMetric and parse the result.
 <code><![CDATA[
@@ -1688,6 +1748,9 @@ Console.WriteLine(result.GetProperty("isValid").ToString());
 Console.WriteLine(result.GetProperty("diagnostics")[0].GetProperty("message").ToString());
 Console.WriteLine(result.GetProperty("diagnostics")[0].GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="ValidateMetricAsync">
@@ -1710,12 +1773,10 @@ Console.WriteLine(result.GetProperty("diagnostics")[0].GetProperty("code").ToStr
       </Parameters>
       <Docs>
         <param name="body"> Experiment metric input to validate. </param>
-        <param name="cancellationToken"> The cancellation token to use. </param>
+        <param name="cancellationToken"> The cancellation token that can be used to cancel the operation. </param>
         <summary> Validates an experiment metric definition. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="body" /> is null. </exception>
         <example>
 This sample shows how to call ValidateMetricAsync.
 <code><![CDATA[
@@ -1735,6 +1796,9 @@ new AverageMetricDefinition(new AggregatedValue("Transaction", "Revenue")
 }));
 Response<ExperimentMetricValidationResult> response = await client.ValidateMetricAsync(body);
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="body" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
     <Member MemberName="ValidateMetricAsync">
@@ -1757,19 +1821,12 @@ Response<ExperimentMetricValidationResult> response = await client.ValidateMetri
       </Parameters>
       <Docs>
         <param name="content"> The content to send as the body of the request. </param>
-        <param name="context"> The request context, which can override default behaviors of the client pipeline on a per-call basis. </param>
+        <param name="context"> The request options, which can override default behaviors of the client pipeline on a per-call basis. </param>
         <summary>
             [Protocol Method] Validates an experiment metric definition.
-            <list type="bullet"><item><description>
-            This <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/ProtocolMethods.md">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios.
-            </description></item><item><description>
-            Please try the simpler <see cref="M:Azure.Analytics.OnlineExperimentation.OnlineExperimentationClient.ValidateMetricAsync(Azure.Analytics.OnlineExperimentation.ExperimentMetric,System.Threading.CancellationToken)" /> convenience overload with strongly typed models first.
-            </description></item></list></summary>
+            <list type="bullet"><item><description> This <see href="https://aka.ms/azsdk/net/protocol-methods">protocol method</see> allows explicit creation of the request and processing of the response for advanced scenarios. </description></item></list></summary>
         <returns> The response returned from the service. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="content" /> is null. </exception>
-        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
         <example>
 This sample shows how to call ValidateMetricAsync and parse the result.
 <code><![CDATA[
@@ -1805,6 +1862,9 @@ Console.WriteLine(result.GetProperty("isValid").ToString());
 Console.WriteLine(result.GetProperty("diagnostics")[0].GetProperty("message").ToString());
 Console.WriteLine(result.GetProperty("diagnostics")[0].GetProperty("code").ToString());
 ]]></code></example>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="content" /> is null. </exception>
+        <exception cref="T:Azure.RequestFailedException"> Service returned a non-success status code. </exception>
       </Docs>
     </Member>
   </Members>

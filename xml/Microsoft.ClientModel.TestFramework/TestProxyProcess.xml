@@ -1,0 +1,144 @@
+<Type Name="TestProxyProcess" FullName="Microsoft.ClientModel.TestFramework.TestProxyProcess">
+  <TypeSignature Language="C#" Value="public class TestProxyProcess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TestProxyProcess extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestProxyProcess" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestProxyProcess" />
+  <TypeSignature Language="F#" Value="type TestProxyProcess = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Encapsulates a process running an instance of the Test Proxy as well as providing access to the Test Proxy administration actions.
+            <seealso href="https://github.com/Azure/azure-sdk-tools/tree/main/tools/test-proxy" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckProxyOutputAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CheckProxyOutputAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CheckProxyOutputAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxyProcess.CheckProxyOutputAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CheckProxyOutputAsync () As Task" />
+      <MemberSignature Language="F#" Value="abstract member CheckProxyOutputAsync : unit -&gt; System.Threading.Tasks.Task&#xA;override this.CheckProxyOutputAsync : unit -&gt; System.Threading.Tasks.Task" Usage="testProxyProcess.CheckProxyOutputAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Checks the test proxy output for any logged information and errors.
+            If debug logging is enabled, outputs the collected logs and clears the buffer.
+            </summary>
+        <returns>A task representing the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IpAddress">
+      <MemberSignature Language="C#" Value="public const string IpAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string IpAddress" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.ClientModel.TestFramework.TestProxyProcess.IpAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const IpAddress As String " />
+      <MemberSignature Language="F#" Value="val mutable IpAddress : string" Usage="Microsoft.ClientModel.TestFramework.TestProxyProcess.IpAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The IP address used for the test proxy. Uses 127.0.0.1 instead of localhost to avoid SSL callback slowness.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyPortHttp">
+      <MemberSignature Language="C#" Value="public int? ProxyPortHttp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ProxyPortHttp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestProxyProcess.ProxyPortHttp" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyPortHttp As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.ProxyPortHttp : Nullable&lt;int&gt;" Usage="Microsoft.ClientModel.TestFramework.TestProxyProcess.ProxyPortHttp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the HTTP port used by the test proxy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyPortHttps">
+      <MemberSignature Language="C#" Value="public int? ProxyPortHttps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ProxyPortHttps" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestProxyProcess.ProxyPortHttps" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyPortHttps As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.ProxyPortHttps : Nullable&lt;int&gt;" Usage="Microsoft.ClientModel.TestFramework.TestProxyProcess.ProxyPortHttps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the HTTPS port used by the test proxy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public static Microsoft.ClientModel.TestFramework.TestProxyProcess Start (bool debugMode = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.ClientModel.TestFramework.TestProxyProcess Start(bool debugMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestProxyProcess.Start(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Start (Optional debugMode As Boolean = false) As TestProxyProcess" />
+      <MemberSignature Language="F#" Value="static member Start : bool -&gt; Microsoft.ClientModel.TestFramework.TestProxyProcess" Usage="Microsoft.ClientModel.TestFramework.TestProxyProcess.Start debugMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestProxyProcess</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="debugMode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="debugMode">If true, the proxy will be configured to look for port 5000 and 5001, which is the default used when running the proxy locally in debug mode.</param>
+        <summary>
+            Starts the test proxy
+            </summary>
+        <returns>The started TestProxy instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

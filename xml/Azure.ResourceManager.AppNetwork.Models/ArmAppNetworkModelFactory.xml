@@ -77,6 +77,34 @@
         <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkAvailableVersionProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fullyManagedVersionsReleaseChannels" /> or <paramref name="selfManagedVersionDetailVersions" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppLinkConnectivityProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile AppLinkConnectivityProfile (Azure.ResourceManager.AppNetwork.Models.AppLinkEastWestGatewayVisibility? eastWestGatewayVisibility = default, Azure.Core.ResourceIdentifier privateConnectSubnetResourceId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile AppLinkConnectivityProfile(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.AppNetwork.Models.AppLinkEastWestGatewayVisibility&gt; eastWestGatewayVisibility, class Azure.Core.ResourceIdentifier privateConnectSubnetResourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkConnectivityProfile(System.Nullable{Azure.ResourceManager.AppNetwork.Models.AppLinkEastWestGatewayVisibility},Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AppLinkConnectivityProfile (Optional eastWestGatewayVisibility As Nullable(Of AppLinkEastWestGatewayVisibility) = Nothing, Optional privateConnectSubnetResourceId As ResourceIdentifier = Nothing) As AppLinkConnectivityProfile" />
+      <MemberSignature Language="F#" Value="static member AppLinkConnectivityProfile : Nullable&lt;Azure.ResourceManager.AppNetwork.Models.AppLinkEastWestGatewayVisibility&gt; * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile" Usage="Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkConnectivityProfile (eastWestGatewayVisibility, privateConnectSubnetResourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.AppNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eastWestGatewayVisibility" Type="System.Nullable&lt;Azure.ResourceManager.AppNetwork.Models.AppLinkEastWestGatewayVisibility&gt;" />
+        <Parameter Name="privateConnectSubnetResourceId" Type="Azure.Core.ResourceIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="eastWestGatewayVisibility"> East-West gateway visibility. </param>
+        <param name="privateConnectSubnetResourceId"> Delegated Subnet to AppLink. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AppLinkData">
@@ -211,6 +239,36 @@
         <summary>To be added.</summary>
         <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkMemberProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadataResourceId" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppLinkMemberUpdateProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.AppNetwork.Models.AppLinkMemberUpdateProperties AppLinkMemberUpdateProperties (Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile upgradeProfile = default, string observabilityMetricsEndpoint = default, Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile connectivityProfile = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.AppNetwork.Models.AppLinkMemberUpdateProperties AppLinkMemberUpdateProperties(class Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile upgradeProfile, string observabilityMetricsEndpoint, class Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile connectivityProfile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkMemberUpdateProperties(Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile,System.String,Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AppLinkMemberUpdateProperties (Optional upgradeProfile As AppLinkUpgradeProfile = Nothing, Optional observabilityMetricsEndpoint As String = Nothing, Optional connectivityProfile As AppLinkConnectivityProfile = Nothing) As AppLinkMemberUpdateProperties" />
+      <MemberSignature Language="F#" Value="static member AppLinkMemberUpdateProperties : Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile * string * Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile -&gt; Azure.ResourceManager.AppNetwork.Models.AppLinkMemberUpdateProperties" Usage="Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkMemberUpdateProperties (upgradeProfile, observabilityMetricsEndpoint, connectivityProfile)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.AppNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.AppNetwork.Models.AppLinkMemberUpdateProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="upgradeProfile" Type="Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile" />
+        <Parameter Name="observabilityMetricsEndpoint" Type="System.String" />
+        <Parameter Name="connectivityProfile" Type="Azure.ResourceManager.AppNetwork.Models.AppLinkConnectivityProfile" />
+      </Parameters>
+      <Docs>
+        <param name="upgradeProfile"> Upgrade profile. </param>
+        <param name="observabilityMetricsEndpoint"> Metrics endpoint URL. </param>
+        <param name="connectivityProfile"> Connectivity profile. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkMemberUpdateProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AppLinkPatch">
@@ -326,6 +384,34 @@
         <param name="provisioningState"> Provisioning state. </param>
         <summary> AppLinkMember upgrade history properties. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeHistoryProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppLinkUpgradeProfile">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile AppLinkUpgradeProfile (Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeMode mode = default, Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeReleaseChannel? fullyManagedUpgradeReleaseChannel = default, string selfManagedUpgradeVersion = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile AppLinkUpgradeProfile(valuetype Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeMode mode, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeReleaseChannel&gt; fullyManagedUpgradeReleaseChannel, string selfManagedUpgradeVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkUpgradeProfile(Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeMode,System.Nullable{Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeReleaseChannel},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AppLinkUpgradeProfile (Optional mode As AppLinkUpgradeMode = Nothing, Optional fullyManagedUpgradeReleaseChannel As Nullable(Of AppLinkUpgradeReleaseChannel) = Nothing, Optional selfManagedUpgradeVersion As String = Nothing) As AppLinkUpgradeProfile" />
+      <MemberSignature Language="F#" Value="static member AppLinkUpgradeProfile : Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeMode * Nullable&lt;Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeReleaseChannel&gt; * string -&gt; Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile" Usage="Azure.ResourceManager.AppNetwork.Models.ArmAppNetworkModelFactory.AppLinkUpgradeProfile (mode, fullyManagedUpgradeReleaseChannel, selfManagedUpgradeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.AppNetwork</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeMode" />
+        <Parameter Name="fullyManagedUpgradeReleaseChannel" Type="System.Nullable&lt;Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeReleaseChannel&gt;" />
+        <Parameter Name="selfManagedUpgradeVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mode"> Upgrade mode. </param>
+        <param name="fullyManagedUpgradeReleaseChannel"> Release channel. </param>
+        <param name="selfManagedUpgradeVersion"> Istio version. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.AppNetwork.Models.AppLinkUpgradeProfile" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

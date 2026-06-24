@@ -9,13 +9,14 @@
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.1.0</AssemblyVersion>
     <AssemblyVersion>1.4.2.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,8 +29,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.AppliedReservationData</ReturnType>
@@ -42,10 +43,10 @@
         <Parameter Name="reservationOrderIds" Type="Azure.ResourceManager.Reservations.Models.AppliedReservationList" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="reservationOrderIds"> Paginated list of applied reservations. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.AppliedReservationData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.AppliedReservationData" /> instance for mocking. </returns>
@@ -61,8 +62,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.AppliedReservationList</ReturnType>
@@ -72,10 +73,66 @@
         <Parameter Name="nextLink" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="value" />
+        <param name="value"> Array of reservation resource ids. </param>
         <param name="nextLink"> Url to get the next page of reservations. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.AppliedReservationList" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.AppliedReservationList" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppliedScopeProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.AppliedScopeProperties AppliedScopeProperties (Guid? tenantId = default, Azure.Core.ResourceIdentifier managementGroupId = default, Azure.Core.ResourceIdentifier subscriptionId = default, Azure.Core.ResourceIdentifier resourceGroupId = default, string displayName = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties AppliedScopeProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; tenantId, class Azure.Core.ResourceIdentifier managementGroupId, class Azure.Core.ResourceIdentifier subscriptionId, class Azure.Core.ResourceIdentifier resourceGroupId, string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.AppliedScopeProperties(System.Nullable{System.Guid},Azure.Core.ResourceIdentifier,Azure.Core.ResourceIdentifier,Azure.Core.ResourceIdentifier,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AppliedScopeProperties (Optional tenantId As Nullable(Of Guid) = Nothing, Optional managementGroupId As ResourceIdentifier = Nothing, Optional subscriptionId As ResourceIdentifier = Nothing, Optional resourceGroupId As ResourceIdentifier = Nothing, Optional displayName As String = Nothing) As AppliedScopeProperties" />
+      <MemberSignature Language="F#" Value="static member AppliedScopeProperties : Nullable&lt;Guid&gt; * Azure.Core.ResourceIdentifier * Azure.Core.ResourceIdentifier * Azure.Core.ResourceIdentifier * string -&gt; Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.AppliedScopeProperties (tenantId, managementGroupId, subscriptionId, resourceGroupId, displayName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.AppliedScopeProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="managementGroupId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="subscriptionId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceGroupId" Type="Azure.Core.ResourceIdentifier" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="displayName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="tenantId"> Tenant ID where the savings plan should apply benefit. </param>
+        <param name="managementGroupId"> Fully-qualified identifier of the management group where the benefit must be applied. </param>
+        <param name="subscriptionId"> Fully-qualified identifier of the subscription. </param>
+        <param name="resourceGroupId"> Fully-qualified identifier of the resource group. </param>
+        <param name="displayName"> Display name. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableScopesContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.AvailableScopesContent AvailableScopesContent (System.Collections.Generic.IEnumerable&lt;string&gt; scopes = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.AvailableScopesContent AvailableScopesContent(class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.AvailableScopesContent(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AvailableScopesContent (Optional scopes As IEnumerable(Of String) = Nothing) As AvailableScopesContent" />
+      <MemberSignature Language="F#" Value="static member AvailableScopesContent : seq&lt;string&gt; -&gt; Azure.ResourceManager.Reservations.Models.AvailableScopesContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.AvailableScopesContent scopes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.AvailableScopesContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scopes"> Gets the Scopes. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.AvailableScopesContent" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -88,8 +145,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.AvailableScopesProperties</ReturnType>
@@ -98,9 +155,37 @@
         <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ScopeProperties&gt;" />
       </Parameters>
       <Docs>
-        <param name="scopes"> The scopes checked by the available scope api. </param>
+        <param name="scopes"> Gets the Scopes. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.AvailableScopesProperties" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.AvailableScopesProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BenefitsCommitment">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.BenefitsCommitment BenefitsCommitment (string currencyCode = default, double? amount = default, Azure.ResourceManager.Reservations.Models.BenefitsCommitmentGrain? grain = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.BenefitsCommitment BenefitsCommitment(string currencyCode, valuetype System.Nullable`1&lt;float64&gt; amount, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.BenefitsCommitmentGrain&gt; grain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.BenefitsCommitment(System.String,System.Nullable{System.Double},System.Nullable{Azure.ResourceManager.Reservations.Models.BenefitsCommitmentGrain})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BenefitsCommitment (Optional currencyCode As String = Nothing, Optional amount As Nullable(Of Double) = Nothing, Optional grain As Nullable(Of BenefitsCommitmentGrain) = Nothing) As BenefitsCommitment" />
+      <MemberSignature Language="F#" Value="static member BenefitsCommitment : string * Nullable&lt;double&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.BenefitsCommitmentGrain&gt; -&gt; Azure.ResourceManager.Reservations.Models.BenefitsCommitment" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.BenefitsCommitment (currencyCode, amount, grain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.BenefitsCommitment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currencyCode" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="amount" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="grain" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.BenefitsCommitmentGrain&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="currencyCode"> The ISO 4217 3-letter currency code for the currency used by this purchase record. </param>
+        <param name="amount" />
+        <param name="grain"> Commitment grain. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.BenefitsCommitment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -113,8 +198,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.BillingInformation</ReturnType>
@@ -133,6 +218,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CalculateExchangeContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.CalculateExchangeContent CalculateExchangeContent (Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.CalculateExchangeContent CalculateExchangeContent(class Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.CalculateExchangeContent(Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateExchangeContent (Optional properties As CalculateExchangeContentProperties = Nothing) As CalculateExchangeContent" />
+      <MemberSignature Language="F#" Value="static member CalculateExchangeContent : Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties -&gt; Azure.ResourceManager.Reservations.Models.CalculateExchangeContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.CalculateExchangeContent properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.CalculateExchangeContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="properties"> Calculate exchange request properties. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.CalculateExchangeContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateExchangeContentProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties CalculateExchangeContentProperties (System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent&gt; reservationsToPurchase = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase&gt; savingsPlansToPurchase = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ReservationToReturn&gt; reservationsToExchange = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties CalculateExchangeContentProperties(class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent&gt; reservationsToPurchase, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase&gt; savingsPlansToPurchase, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Reservations.Models.ReservationToReturn&gt; reservationsToExchange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.CalculateExchangeContentProperties(System.Collections.Generic.IEnumerable{Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase},System.Collections.Generic.IEnumerable{Azure.ResourceManager.Reservations.Models.ReservationToReturn})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateExchangeContentProperties (Optional reservationsToPurchase As IEnumerable(Of ReservationPurchaseContent) = Nothing, Optional savingsPlansToPurchase As IEnumerable(Of SavingsPlanPurchase) = Nothing, Optional reservationsToExchange As IEnumerable(Of ReservationToReturn) = Nothing) As CalculateExchangeContentProperties" />
+      <MemberSignature Language="F#" Value="static member CalculateExchangeContentProperties : seq&lt;Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent&gt; * seq&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase&gt; * seq&lt;Azure.ResourceManager.Reservations.Models.ReservationToReturn&gt; -&gt; Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.CalculateExchangeContentProperties (reservationsToPurchase, savingsPlansToPurchase, reservationsToExchange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reservationsToPurchase" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="savingsPlansToPurchase" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationsToExchange" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ReservationToReturn&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="reservationsToPurchase"> List of reservations that are being purchased in this exchange. </param>
+        <param name="savingsPlansToPurchase"> List of savings plans that are being purchased in this exchange. </param>
+        <param name="reservationsToExchange"> List of reservations that are being returned in this exchange. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.CalculateExchangeContentProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CalculateExchangeResult">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.CalculateExchangeResult CalculateExchangeResult (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.ResourceManager.Reservations.Models.CalculateExchangeOperationResultStatus? status = default, Azure.ResourceManager.Reservations.Models.CalculateExchangeResultProperties properties = default, Azure.ResourceManager.Reservations.Models.OperationResultError error = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.CalculateExchangeResult CalculateExchangeResult(class Azure.Core.ResourceIdentifier id, string name, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.CalculateExchangeOperationResultStatus&gt; status, class Azure.ResourceManager.Reservations.Models.CalculateExchangeResultProperties properties, class Azure.ResourceManager.Reservations.Models.OperationResultError error) cil managed" />
@@ -142,8 +279,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculateExchangeResult</ReturnType>
@@ -175,8 +312,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculateExchangeResultProperties</ReturnType>
@@ -199,7 +336,7 @@
         <param name="reservationsToPurchase"> Details of the reservations being purchased. </param>
         <param name="savingsPlansToPurchase"> Details of the savings plans being purchased. </param>
         <param name="reservationsToExchange"> Details of the reservations being returned. </param>
-        <param name="policyErrors"> Exchange policy errors. </param>
+        <param name="policyErrors"> Exchange Policy errors. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.CalculateExchangeResultProperties" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.CalculateExchangeResultProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -214,8 +351,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculatePriceResult</ReturnType>
@@ -239,8 +376,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculatePriceResultProperties</ReturnType>
@@ -284,8 +421,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculatePriceResultPropertiesBillingCurrencyTotal</ReturnType>
@@ -311,8 +448,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.CalculatePriceResultPropertiesPricingCurrencyTotal</ReturnType>
@@ -329,6 +466,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ChangeDirectoryContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ChangeDirectoryContent ChangeDirectoryContent (Guid? destinationTenantId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ChangeDirectoryContent ChangeDirectoryContent(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; destinationTenantId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ChangeDirectoryContent(System.Nullable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ChangeDirectoryContent (Optional destinationTenantId As Nullable(Of Guid) = Nothing) As ChangeDirectoryContent" />
+      <MemberSignature Language="F#" Value="static member ChangeDirectoryContent : Nullable&lt;Guid&gt; -&gt; Azure.ResourceManager.Reservations.Models.ChangeDirectoryContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ChangeDirectoryContent destinationTenantId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ChangeDirectoryContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationTenantId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="destinationTenantId"> Tenant id GUID that reservation order is to be transferred to. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ChangeDirectoryContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ChangeDirectoryDetail">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ChangeDirectoryDetail ChangeDirectoryDetail (Azure.ResourceManager.Reservations.Models.ChangeDirectoryResult reservationOrder = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.ChangeDirectoryResult&gt; reservations = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ChangeDirectoryDetail ChangeDirectoryDetail(class Azure.ResourceManager.Reservations.Models.ChangeDirectoryResult reservationOrder, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Reservations.Models.ChangeDirectoryResult&gt; reservations) cil managed" />
@@ -338,8 +499,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ChangeDirectoryDetail</ReturnType>
@@ -365,8 +526,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ChangeDirectoryResult</ReturnType>
@@ -387,6 +548,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ExchangeContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ExchangeContent ExchangeContent (Guid? exchangeRequestSessionId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ExchangeContent ExchangeContent(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; exchangeRequestSessionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ExchangeContent(System.Nullable{System.Guid})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExchangeContent (Optional exchangeRequestSessionId As Nullable(Of Guid) = Nothing) As ExchangeContent" />
+      <MemberSignature Language="F#" Value="static member ExchangeContent : Nullable&lt;Guid&gt; -&gt; Azure.ResourceManager.Reservations.Models.ExchangeContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ExchangeContent exchangeRequestSessionId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ExchangeContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exchangeRequestSessionId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="exchangeRequestSessionId"> SessionId that was returned by CalculateExchange API. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ExchangeContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ExchangePolicyError">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ExchangePolicyError ExchangePolicyError (string code = default, string message = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ExchangePolicyError ExchangePolicyError(string code, string message) cil managed" />
@@ -396,8 +581,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ExchangePolicyError</ReturnType>
@@ -423,8 +608,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ExchangeResult</ReturnType>
@@ -456,8 +641,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ExchangeResultProperties</ReturnType>
@@ -480,7 +665,7 @@
         <param name="reservationsToPurchase"> Details of the reservations being purchased. </param>
         <param name="savingsPlansToPurchase"> Details of the savings plans being purchased. </param>
         <param name="reservationsToExchange"> Details of the reservations being returned. </param>
-        <param name="policyErrors"> Exchange policy errors. </param>
+        <param name="policyErrors"> Exchange Policy errors. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.ExchangeResultProperties" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ExchangeResultProperties" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
@@ -495,8 +680,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo</ReturnType>
@@ -513,6 +698,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MergeContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.MergeContent MergeContent (System.Collections.Generic.IEnumerable&lt;string&gt; sources = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.MergeContent MergeContent(class System.Collections.Generic.IEnumerable`1&lt;string&gt; sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.MergeContent(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MergeContent (Optional sources As IEnumerable(Of String) = Nothing) As MergeContent" />
+      <MemberSignature Language="F#" Value="static member MergeContent : seq&lt;string&gt; -&gt; Azure.ResourceManager.Reservations.Models.MergeContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.MergeContent sources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.MergeContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="sources"> Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.MergeContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OperationResultError">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.OperationResultError OperationResultError (string code = default, string message = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.OperationResultError OperationResultError(string code, string message) cil managed" />
@@ -522,8 +731,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.OperationResultError</ReturnType>
@@ -549,8 +758,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.PaymentDetail</ReturnType>
@@ -577,6 +786,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PurchasePrice">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.PurchasePrice PurchasePrice (string currencyCode = default, double? amount = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.PurchasePrice PurchasePrice(string currencyCode, valuetype System.Nullable`1&lt;float64&gt; amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.PurchasePrice(System.String,System.Nullable{System.Double})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PurchasePrice (Optional currencyCode As String = Nothing, Optional amount As Nullable(Of Double) = Nothing) As PurchasePrice" />
+      <MemberSignature Language="F#" Value="static member PurchasePrice : string * Nullable&lt;double&gt; -&gt; Azure.ResourceManager.Reservations.Models.PurchasePrice" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.PurchasePrice (currencyCode, amount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.PurchasePrice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currencyCode" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="amount" Type="System.Nullable&lt;System.Double&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="currencyCode"> The ISO 4217 3-letter currency code for the currency used by this purchase record. </param>
+        <param name="amount" />
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.PurchasePrice" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="QuotaProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.QuotaProperties QuotaProperties (int? limit = default, int? currentValue = default, string unit = default, Azure.ResourceManager.Reservations.Models.ReservationResourceName resourceName = default, Azure.ResourceManager.Reservations.Models.ResourceTypeName? resourceTypeName = default, string quotaPeriod = default, BinaryData properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.QuotaProperties QuotaProperties(valuetype System.Nullable`1&lt;int32&gt; limit, valuetype System.Nullable`1&lt;int32&gt; currentValue, string unit, class Azure.ResourceManager.Reservations.Models.ReservationResourceName resourceName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ResourceTypeName&gt; resourceTypeName, string quotaPeriod, class System.BinaryData properties) cil managed" />
@@ -586,8 +821,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.QuotaProperties</ReturnType>
@@ -604,7 +839,7 @@
       <Docs>
         <param name="limit"> Quota properties. </param>
         <param name="currentValue"> Current usage value for the resource. </param>
-        <param name="unit"> The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation. </param>
+        <param name="unit"> The limit units, such as <b>count</b> and <b>bytes</b>. Use the unit field provided in the response of the GET quota operation. </param>
         <param name="resourceName"> Name of the resource provide by the resource provider. Use this property for quotaRequests resource operations. </param>
         <param name="resourceTypeName"> The name of the resource type. </param>
         <param name="quotaPeriod"> The time period over which the quota usage values are summarized. For example, P1D (per one day), PT1M (per one minute), and PT1S (per one second). This parameter is optional because, for some resources such as compute, the time period is irrelevant. </param>
@@ -623,8 +858,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.QuotaRequestDetailData</ReturnType>
@@ -640,10 +875,10 @@
         <Parameter Name="quotaRequestValue" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.Models.SubContent&gt;" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="provisioningState"> The quota request status. </param>
         <param name="message"> User friendly status message. </param>
         <param name="requestSubmitOn"> The time when the quota request was submitted using format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard. </param>
@@ -662,8 +897,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.RenewProperties</ReturnType>
@@ -691,8 +926,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.RenewPropertiesBillingCurrencyTotal</ReturnType>
@@ -718,8 +953,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.RenewPropertiesPricingCurrencyTotal</ReturnType>
@@ -736,6 +971,58 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationCalculateRefundContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundContent ReservationCalculateRefundContent (string id = default, Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundContent ReservationCalculateRefundContent(string id, class Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationCalculateRefundContent(System.String,Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationCalculateRefundContent (Optional id As String = Nothing, Optional properties As ReservationCalculateRefundRequestProperties = Nothing) As ReservationCalculateRefundContent" />
+      <MemberSignature Language="F#" Value="static member ReservationCalculateRefundContent : string * Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties -&gt; Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationCalculateRefundContent (id, properties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified identifier of the reservation order being returned. </param>
+        <param name="properties"> Properties needed for calculate refund including the scope and the reservation to be returned. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationCalculateRefundRequestProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties ReservationCalculateRefundRequestProperties (string scope = default, Azure.ResourceManager.Reservations.Models.ReservationToReturn reservationToReturn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties ReservationCalculateRefundRequestProperties(string scope, class Azure.ResourceManager.Reservations.Models.ReservationToReturn reservationToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationCalculateRefundRequestProperties(System.String,Azure.ResourceManager.Reservations.Models.ReservationToReturn)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationCalculateRefundRequestProperties (Optional scope As String = Nothing, Optional reservationToReturn As ReservationToReturn = Nothing) As ReservationCalculateRefundRequestProperties" />
+      <MemberSignature Language="F#" Value="static member ReservationCalculateRefundRequestProperties : string * Azure.ResourceManager.Reservations.Models.ReservationToReturn -&gt; Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationCalculateRefundRequestProperties (scope, reservationToReturn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationToReturn" Type="Azure.ResourceManager.Reservations.Models.ReservationToReturn" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="scope"> The scope of the refund, e.g. Reservation. </param>
+        <param name="reservationToReturn"> Reservation to return. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundRequestProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationCalculateRefundResult">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundResult ReservationCalculateRefundResult (string id = default, Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundResult ReservationCalculateRefundResult(string id, class Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties properties) cil managed" />
@@ -745,8 +1032,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationCalculateRefundResult</ReturnType>
@@ -772,8 +1059,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationCatalog</ReturnType>
@@ -817,8 +1104,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationCatalogMsrp</ReturnType>
@@ -838,6 +1125,46 @@
       </Docs>
     </Member>
     <Member MemberName="ReservationDetailData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.ReservationDetailData ReservationDetailData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Reservations.Models.ReservationProperties properties = default, Azure.Core.AzureLocation? location = default, int? version = default, string skuName = default, Azure.ResourceManager.Reservations.Models.ReservationKind? kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.ReservationDetailData ReservationDetailData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Reservations.Models.ReservationProperties properties, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, valuetype System.Nullable`1&lt;int32&gt; version, string skuName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationKind&gt; kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationDetailData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,Azure.ResourceManager.Reservations.Models.ReservationProperties,System.Nullable{Azure.Core.AzureLocation},System.Nullable{System.Int32},System.String,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationDetailData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional properties As ReservationProperties = Nothing, Optional location As Nullable(Of AzureLocation) = Nothing, Optional version As Nullable(Of Integer) = Nothing, Optional skuName As String = Nothing, Optional kind As Nullable(Of ReservationKind) = Nothing) As ReservationDetailData" />
+      <MemberSignature Language="F#" Value="static member ReservationDetailData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * Azure.ResourceManager.Reservations.Models.ReservationProperties * Nullable&lt;Azure.Core.AzureLocation&gt; * Nullable&lt;int&gt; * string * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationKind&gt; -&gt; Azure.ResourceManager.Reservations.ReservationDetailData" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationDetailData (id, name, resourceType, systemData, properties, location, version, skuName, kind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.ReservationDetailData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="properties" Type="Azure.ResourceManager.Reservations.Models.ReservationProperties" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.Nullable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="skuName" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="kind" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationKind&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="properties"> The properties associated to this reservation . </param>
+        <param name="location"> The Azure region where the reserved resource lives. </param>
+        <param name="version" />
+        <param name="skuName"> Gets or sets the Name. </param>
+        <param name="kind"> Resource Provider type to be reserved. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.ReservationDetailData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationDetailData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.ReservationDetailData ReservationDetailData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.Core.AzureLocation? location = default, int? version = default, string skuName = default, Azure.ResourceManager.Reservations.Models.ReservationProperties properties = default, Azure.ResourceManager.Reservations.Models.ReservationKind? kind = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.ReservationDetailData ReservationDetailData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, valuetype System.Nullable`1&lt;int32&gt; version, string skuName, class Azure.ResourceManager.Reservations.Models.ReservationProperties properties, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationKind&gt; kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationDetailData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.Nullable{Azure.Core.AzureLocation},System.Nullable{System.Int32},System.String,Azure.ResourceManager.Reservations.Models.ReservationProperties,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationKind})" />
@@ -846,9 +1173,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.ReservationDetailData</ReturnType>
       </ReturnValue>
@@ -878,6 +1211,44 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationDetailPatch">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationDetailPatch ReservationDetailPatch (Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, System.Collections.Generic.IEnumerable&lt;string&gt; appliedScopes = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, Azure.ResourceManager.Reservations.Models.InstanceFlexibility? instanceFlexibility = default, string name = default, bool? isRenewEnabled = default, DateTimeOffset? reviewOn = default, Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent renewPurchaseProperties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationDetailPatch ReservationDetailPatch(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, class System.Collections.Generic.IEnumerable`1&lt;string&gt; appliedScopes, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; instanceFlexibility, string name, valuetype System.Nullable`1&lt;bool&gt; isRenewEnabled, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, class Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent renewPurchaseProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationDetailPatch(System.Nullable{Azure.ResourceManager.Reservations.Models.AppliedScopeType},System.Collections.Generic.IEnumerable{System.String},Azure.ResourceManager.Reservations.Models.AppliedScopeProperties,System.Nullable{Azure.ResourceManager.Reservations.Models.InstanceFlexibility},System.String,System.Nullable{System.Boolean},System.Nullable{System.DateTimeOffset},Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationDetailPatch (Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional appliedScopes As IEnumerable(Of String) = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional instanceFlexibility As Nullable(Of InstanceFlexibility) = Nothing, Optional name As String = Nothing, Optional isRenewEnabled As Nullable(Of Boolean) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional renewPurchaseProperties As ReservationPurchaseContent = Nothing) As ReservationDetailPatch" />
+      <MemberSignature Language="F#" Value="static member ReservationDetailPatch : Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * seq&lt;string&gt; * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; * string * Nullable&lt;bool&gt; * Nullable&lt;DateTimeOffset&gt; * Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent -&gt; Azure.ResourceManager.Reservations.Models.ReservationDetailPatch" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationDetailPatch (appliedScopeType, appliedScopes, appliedScopeProperties, instanceFlexibility, name, isRenewEnabled, reviewOn, renewPurchaseProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationDetailPatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appliedScopeType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopeProperties" Type="Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="instanceFlexibility" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isRenewEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reviewOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="renewPurchaseProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="appliedScopeType"> Type of the Applied Scope. </param>
+        <param name="appliedScopes"> List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared. This property will be deprecated and replaced by appliedScopeProperties instead for Single AppliedScopeType. </param>
+        <param name="appliedScopeProperties"> Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup. </param>
+        <param name="instanceFlexibility"> Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type. </param>
+        <param name="name"> Display name of the reservation. </param>
+        <param name="isRenewEnabled"> Setting this to true will automatically purchase a new reservation on the expiration date time. </param>
+        <param name="reviewOn"> This is the date-time when the Azure hybrid benefit needs to be reviewed. </param>
+        <param name="renewPurchaseProperties"> The request for reservation purchase. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationDetailPatch" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationMergeProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationMergeProperties ReservationMergeProperties (string mergeDestination = default, System.Collections.Generic.IEnumerable&lt;string&gt; mergeSources = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationMergeProperties ReservationMergeProperties(string mergeDestination, class System.Collections.Generic.IEnumerable`1&lt;string&gt; mergeSources) cil managed" />
@@ -887,8 +1258,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationMergeProperties</ReturnType>
@@ -914,8 +1285,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation</ReturnType>
@@ -945,9 +1316,15 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.ReservationOrderData</ReturnType>
       </ReturnValue>
@@ -995,57 +1372,123 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ReservationProperties">
-      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties (Azure.ResourceManager.Reservations.Models.ReservedResourceType? reservedResourceType = default, Azure.ResourceManager.Reservations.Models.InstanceFlexibility? instanceFlexibility = default, string displayName = default, System.Collections.Generic.IEnumerable&lt;string&gt; appliedScopes = default, Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, bool? isArchived = default, string capabilities = default, int? quantity = default, Azure.ResourceManager.Reservations.Models.ReservationProvisioningState? provisioningState = default, DateTimeOffset? effectOn = default, DateTimeOffset? benefitStartOn = default, DateTimeOffset? lastUpdatedOn = default, DateTimeOffset? expireOn = default, DateTimeOffset? reservationExpireOn = default, DateTimeOffset? reviewOn = default, string skuDescription = default, Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo = default, Azure.ResourceManager.Reservations.Models.ReservationBillingPlan? billingPlan = default, string displayProvisioningState = default, string provisioningSubState = default, DateTimeOffset? purchaseOn = default, DateTimeOffset? reservationPurchaseOn = default, Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties = default, Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties = default, Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, Azure.Core.ResourceIdentifier billingScopeId = default, bool? isRenewEnabled = default, string renewSource = default, string renewDestination = default, Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties = default, Azure.ResourceManager.Reservations.Models.ReservationTerm? term = default, string userFriendlyAppliedScopeType = default, string userFriendlyRenewState = default, Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; reservedResourceType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; instanceFlexibility, string displayName, class System.Collections.Generic.IEnumerable`1&lt;string&gt; appliedScopes, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, valuetype System.Nullable`1&lt;bool&gt; isArchived, string capabilities, valuetype System.Nullable`1&lt;int32&gt; quantity, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; effectOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; benefitStartOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationExpireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, string skuDescription, class Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; billingPlan, string displayProvisioningState, string provisioningSubState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; purchaseOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationPurchaseOn, class Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties, class Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties, class Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, class Azure.Core.ResourceIdentifier billingScopeId, valuetype System.Nullable`1&lt;bool&gt; isRenewEnabled, string renewSource, string renewDestination, class Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; term, string userFriendlyAppliedScopeType, string userFriendlyRenewState, class Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationProperties(System.Nullable{Azure.ResourceManager.Reservations.Models.ReservedResourceType},System.Nullable{Azure.ResourceManager.Reservations.Models.InstanceFlexibility},System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Reservations.Models.AppliedScopeType},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationProvisioningState},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationBillingPlan},System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},Azure.ResourceManager.Reservations.Models.ReservationSplitProperties,Azure.ResourceManager.Reservations.Models.ReservationMergeProperties,Azure.ResourceManager.Reservations.Models.ReservationSwapProperties,Azure.ResourceManager.Reservations.Models.AppliedScopeProperties,Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.String,System.String,Azure.ResourceManager.Reservations.Models.RenewProperties,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationTerm},System.String,System.String,Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationProperties (Optional reservedResourceType As Nullable(Of ReservedResourceType) = Nothing, Optional instanceFlexibility As Nullable(Of InstanceFlexibility) = Nothing, Optional displayName As String = Nothing, Optional appliedScopes As IEnumerable(Of String) = Nothing, Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional isArchived As Nullable(Of Boolean) = Nothing, Optional capabilities As String = Nothing, Optional quantity As Nullable(Of Integer) = Nothing, Optional provisioningState As Nullable(Of ReservationProvisioningState) = Nothing, Optional effectOn As Nullable(Of DateTimeOffset) = Nothing, Optional benefitStartOn As Nullable(Of DateTimeOffset) = Nothing, Optional lastUpdatedOn As Nullable(Of DateTimeOffset) = Nothing, Optional expireOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationExpireOn As Nullable(Of DateTimeOffset) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional skuDescription As String = Nothing, Optional extendedStatusInfo As ExtendedStatusInfo = Nothing, Optional billingPlan As Nullable(Of ReservationBillingPlan) = Nothing, Optional displayProvisioningState As String = Nothing, Optional provisioningSubState As String = Nothing, Optional purchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationPurchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional splitProperties As ReservationSplitProperties = Nothing, Optional mergeProperties As ReservationMergeProperties = Nothing, Optional swapProperties As ReservationSwapProperties = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional billingScopeId As ResourceIdentifier = Nothing, Optional isRenewEnabled As Nullable(Of Boolean) = Nothing, Optional renewSource As String = Nothing, Optional renewDestination As String = Nothing, Optional renewProperties As RenewProperties = Nothing, Optional term As Nullable(Of ReservationTerm) = Nothing, Optional userFriendlyAppliedScopeType As String = Nothing, Optional userFriendlyRenewState As String = Nothing, Optional utilization As ReservationPropertiesUtilization = Nothing) As ReservationProperties" />
-      <MemberSignature Language="F#" Value="static member ReservationProperties : Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; * string * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * Nullable&lt;bool&gt; * string * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Azure.ResourceManager.Reservations.Models.ReservationSplitProperties * Azure.ResourceManager.Reservations.Models.ReservationMergeProperties * Azure.ResourceManager.Reservations.Models.ReservationSwapProperties * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * string * string * Azure.ResourceManager.Reservations.Models.RenewProperties * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; * string * string * Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization -&gt; Azure.ResourceManager.Reservations.Models.ReservationProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationProperties (reservedResourceType, instanceFlexibility, displayName, appliedScopes, appliedScopeType, isArchived, capabilities, quantity, provisioningState, effectOn, benefitStartOn, lastUpdatedOn, expireOn, reservationExpireOn, reviewOn, skuDescription, extendedStatusInfo, billingPlan, displayProvisioningState, provisioningSubState, purchaseOn, reservationPurchaseOn, splitProperties, mergeProperties, swapProperties, appliedScopeProperties, billingScopeId, isRenewEnabled, renewSource, renewDestination, renewProperties, term, userFriendlyAppliedScopeType, userFriendlyRenewState, utilization)" />
+    <Member MemberName="ReservationOrderData">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.ReservationOrderData ReservationOrderData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, string displayName = default, DateTimeOffset? requestOn = default, DateTimeOffset? createdOn = default, DateTimeOffset? reservationExpireOn = default, DateTimeOffset? expireOn = default, DateTimeOffset? benefitStartOn = default, int? originalQuantity = default, Azure.ResourceManager.Reservations.Models.ReservationTerm? term = default, Azure.ResourceManager.Reservations.Models.ReservationProvisioningState? provisioningState = default, Azure.ResourceManager.Reservations.Models.ReservationBillingPlan? billingPlan = default, Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation planInformation = default, System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.ReservationDetailData&gt; reservations = default, DateTimeOffset? reviewOn = default, int? version = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.ReservationOrderData ReservationOrderData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, string displayName, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; requestOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; createdOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationExpireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; benefitStartOn, valuetype System.Nullable`1&lt;int32&gt; originalQuantity, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; term, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; billingPlan, class Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation planInformation, class System.Collections.Generic.IEnumerable`1&lt;class Azure.ResourceManager.Reservations.ReservationDetailData&gt; reservations, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, valuetype System.Nullable`1&lt;int32&gt; version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationOrderData(Azure.Core.ResourceIdentifier,System.String,Azure.Core.ResourceType,Azure.ResourceManager.Models.SystemData,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationTerm},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationProvisioningState},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationBillingPlan},Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation,System.Collections.Generic.IEnumerable{Azure.ResourceManager.Reservations.ReservationDetailData},System.Nullable{System.DateTimeOffset},System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationOrderData (Optional id As ResourceIdentifier = Nothing, Optional name As String = Nothing, Optional resourceType As ResourceType = Nothing, Optional systemData As SystemData = Nothing, Optional displayName As String = Nothing, Optional requestOn As Nullable(Of DateTimeOffset) = Nothing, Optional createdOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationExpireOn As Nullable(Of DateTimeOffset) = Nothing, Optional expireOn As Nullable(Of DateTimeOffset) = Nothing, Optional benefitStartOn As Nullable(Of DateTimeOffset) = Nothing, Optional originalQuantity As Nullable(Of Integer) = Nothing, Optional term As Nullable(Of ReservationTerm) = Nothing, Optional provisioningState As Nullable(Of ReservationProvisioningState) = Nothing, Optional billingPlan As Nullable(Of ReservationBillingPlan) = Nothing, Optional planInformation As ReservationOrderBillingPlanInformation = Nothing, Optional reservations As IEnumerable(Of ReservationDetailData) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional version As Nullable(Of Integer) = Nothing) As ReservationOrderData" />
+      <MemberSignature Language="F#" Value="static member ReservationOrderData : Azure.Core.ResourceIdentifier * string * Azure.Core.ResourceType * Azure.ResourceManager.Models.SystemData * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; * Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation * seq&lt;Azure.ResourceManager.Reservations.ReservationDetailData&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;int&gt; -&gt; Azure.ResourceManager.Reservations.ReservationOrderData" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationOrderData (id, name, resourceType, systemData, displayName, requestOn, createdOn, reservationExpireOn, expireOn, benefitStartOn, originalQuantity, term, provisioningState, billingPlan, planInformation, reservations, reviewOn, version)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.ReservationOrderData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="resourceType" Type="Azure.Core.ResourceType" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="systemData" Type="Azure.ResourceManager.Models.SystemData" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="displayName" Type="System.String" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="requestOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="createdOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationExpireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="benefitStartOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="originalQuantity" Type="System.Nullable&lt;System.Int32&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="term" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingPlan" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="planInformation" Type="Azure.ResourceManager.Reservations.Models.ReservationOrderBillingPlanInformation" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservations" Type="System.Collections.Generic.IEnumerable&lt;Azure.ResourceManager.Reservations.ReservationDetailData&gt;" Index="15" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reviewOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="16" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="version" Type="System.Nullable&lt;System.Int32&gt;" Index="17" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        <param name="displayName"> Friendly name for user to easily identified the reservation. </param>
+        <param name="requestOn"> This is the DateTime when the reservation was initially requested for purchase. </param>
+        <param name="createdOn"> This is the DateTime when the reservation was created. </param>
+        <param name="reservationExpireOn"> This is the date when the reservation will expire. </param>
+        <param name="expireOn"> This is the date-time when the reservation will expire. </param>
+        <param name="benefitStartOn"> This is the DateTime when the reservation benefit started. </param>
+        <param name="originalQuantity"> Total Quantity of the skus purchased in the reservation. </param>
+        <param name="term"> Represent the term of reservation. </param>
+        <param name="provisioningState"> Current state of the reservation. </param>
+        <param name="billingPlan"> Represent the billing plans. </param>
+        <param name="planInformation"> Information describing the type of billing plan for this reservation. </param>
+        <param name="reservations"> Gets the Reservations. </param>
+        <param name="reviewOn"> This is the date-time when the Azure Hybrid Benefit needs to be reviewed. </param>
+        <param name="version" />
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.ReservationOrderData" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties (Azure.ResourceManager.Reservations.Models.ReservedResourceType? reservedResourceType = default, Azure.ResourceManager.Reservations.Models.InstanceFlexibility? instanceFlexibility = default, string displayName = default, System.Collections.Generic.IEnumerable&lt;string&gt; appliedScopes = default, Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, bool? isArchived = default, string capabilities = default, int? quantity = default, Azure.ResourceManager.Reservations.Models.ReservationProvisioningState? provisioningState = default, DateTimeOffset? effectOn = default, DateTimeOffset? benefitStartOn = default, DateTimeOffset? lastUpdatedOn = default, DateTimeOffset? expireOn = default, DateTimeOffset? reservationExpireOn = default, DateTimeOffset? reviewOn = default, string skuDescription = default, Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo = default, Azure.ResourceManager.Reservations.Models.ReservationBillingPlan? billingPlan = default, string displayProvisioningState = default, string provisioningSubState = default, DateTimeOffset? purchaseOn = default, DateTimeOffset? reservationPurchaseOn = default, Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties = default, Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties = default, Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, Azure.Core.ResourceIdentifier billingScopeId = default, bool? isRenewEnabled = default, string renewSource = default, string renewDestination = default, Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties = default, Azure.ResourceManager.Reservations.Models.ReservationTerm? term = default, string userFriendlyAppliedScopeType = default, string userFriendlyRenewState = default, Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization = default);" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; reservedResourceType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; instanceFlexibility, string displayName, class System.Collections.Generic.IEnumerable`1&lt;string&gt; appliedScopes, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, valuetype System.Nullable`1&lt;bool&gt; isArchived, string capabilities, valuetype System.Nullable`1&lt;int32&gt; quantity, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; effectOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; benefitStartOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationExpireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, string skuDescription, class Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; billingPlan, string displayProvisioningState, string provisioningSubState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; purchaseOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationPurchaseOn, class Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties, class Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties, class Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, class Azure.Core.ResourceIdentifier billingScopeId, valuetype System.Nullable`1&lt;bool&gt; isRenewEnabled, string renewSource, string renewDestination, class Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; term, string userFriendlyAppliedScopeType, string userFriendlyRenewState, class Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization) cil managed" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationProperties(System.Nullable{Azure.ResourceManager.Reservations.Models.ReservedResourceType},System.Nullable{Azure.ResourceManager.Reservations.Models.InstanceFlexibility},System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{Azure.ResourceManager.Reservations.Models.AppliedScopeType},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationProvisioningState},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.String,Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationBillingPlan},System.String,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},Azure.ResourceManager.Reservations.Models.ReservationSplitProperties,Azure.ResourceManager.Reservations.Models.ReservationMergeProperties,Azure.ResourceManager.Reservations.Models.ReservationSwapProperties,Azure.ResourceManager.Reservations.Models.AppliedScopeProperties,Azure.Core.ResourceIdentifier,System.Nullable{System.Boolean},System.String,System.String,Azure.ResourceManager.Reservations.Models.RenewProperties,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationTerm},System.String,System.String,Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationProperties (Optional reservedResourceType As Nullable(Of ReservedResourceType) = Nothing, Optional instanceFlexibility As Nullable(Of InstanceFlexibility) = Nothing, Optional displayName As String = Nothing, Optional appliedScopes As IEnumerable(Of String) = Nothing, Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional isArchived As Nullable(Of Boolean) = Nothing, Optional capabilities As String = Nothing, Optional quantity As Nullable(Of Integer) = Nothing, Optional provisioningState As Nullable(Of ReservationProvisioningState) = Nothing, Optional effectOn As Nullable(Of DateTimeOffset) = Nothing, Optional benefitStartOn As Nullable(Of DateTimeOffset) = Nothing, Optional lastUpdatedOn As Nullable(Of DateTimeOffset) = Nothing, Optional expireOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationExpireOn As Nullable(Of DateTimeOffset) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional skuDescription As String = Nothing, Optional extendedStatusInfo As ExtendedStatusInfo = Nothing, Optional billingPlan As Nullable(Of ReservationBillingPlan) = Nothing, Optional displayProvisioningState As String = Nothing, Optional provisioningSubState As String = Nothing, Optional purchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationPurchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional splitProperties As ReservationSplitProperties = Nothing, Optional mergeProperties As ReservationMergeProperties = Nothing, Optional swapProperties As ReservationSwapProperties = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional billingScopeId As ResourceIdentifier = Nothing, Optional isRenewEnabled As Nullable(Of Boolean) = Nothing, Optional renewSource As String = Nothing, Optional renewDestination As String = Nothing, Optional renewProperties As RenewProperties = Nothing, Optional term As Nullable(Of ReservationTerm) = Nothing, Optional userFriendlyAppliedScopeType As String = Nothing, Optional userFriendlyRenewState As String = Nothing, Optional utilization As ReservationPropertiesUtilization = Nothing) As ReservationProperties" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="F#" Value="static member ReservationProperties : Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; * string * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * Nullable&lt;bool&gt; * string * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Azure.ResourceManager.Reservations.Models.ReservationSplitProperties * Azure.ResourceManager.Reservations.Models.ReservationMergeProperties * Azure.ResourceManager.Reservations.Models.ReservationSwapProperties * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * string * string * Azure.ResourceManager.Reservations.Models.RenewProperties * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; * string * string * Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization -&gt; Azure.ResourceManager.Reservations.Models.ReservationProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationProperties (reservedResourceType, instanceFlexibility, displayName, appliedScopes, appliedScopeType, isArchived, capabilities, quantity, provisioningState, effectOn, benefitStartOn, lastUpdatedOn, expireOn, reservationExpireOn, reviewOn, skuDescription, extendedStatusInfo, billingPlan, displayProvisioningState, provisioningSubState, purchaseOn, reservationPurchaseOn, splitProperties, mergeProperties, swapProperties, appliedScopeProperties, billingScopeId, isRenewEnabled, renewSource, renewDestination, renewProperties, term, userFriendlyAppliedScopeType, userFriendlyRenewState, utilization)" FrameworkAlternate="azure-dotnet" />
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties (Azure.ResourceManager.Reservations.Models.ReservedResourceType? reservedResourceType = default, Azure.ResourceManager.Reservations.Models.InstanceFlexibility? instanceFlexibility = default, string displayName = default, System.Collections.Generic.IEnumerable&lt;string&gt; appliedScopes = default, Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, bool? isArchived = default, string capabilities = default, int? quantity = default, Azure.ResourceManager.Reservations.Models.ReservationProvisioningState? provisioningState = default, DateTimeOffset? effectOn = default, DateTimeOffset? benefitStartOn = default, DateTimeOffset? lastUpdatedOn = default, DateTimeOffset? reservationExpireOn = default, DateTimeOffset? expireOn = default, DateTimeOffset? reviewOn = default, string skuDescription = default, Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo = default, Azure.ResourceManager.Reservations.Models.ReservationBillingPlan? billingPlan = default, string displayProvisioningState = default, string provisioningSubState = default, DateTimeOffset? reservationPurchaseOn = default, DateTimeOffset? purchaseOn = default, Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties = default, Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties = default, Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, Azure.Core.ResourceIdentifier billingScopeId = default, bool? isRenewEnabled = default, string renewSource = default, string renewDestination = default, Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties = default, Azure.ResourceManager.Reservations.Models.ReservationTerm? term = default, string userFriendlyAppliedScopeType = default, string userFriendlyRenewState = default, Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization = default);" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationProperties ReservationProperties(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; reservedResourceType, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; instanceFlexibility, string displayName, class System.Collections.Generic.IEnumerable`1&lt;string&gt; appliedScopes, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, valuetype System.Nullable`1&lt;bool&gt; isArchived, string capabilities, valuetype System.Nullable`1&lt;int32&gt; quantity, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; provisioningState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; effectOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; benefitStartOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; lastUpdatedOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationExpireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expireOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, string skuDescription, class Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo extendedStatusInfo, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; billingPlan, string displayProvisioningState, string provisioningSubState, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reservationPurchaseOn, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; purchaseOn, class Azure.ResourceManager.Reservations.Models.ReservationSplitProperties splitProperties, class Azure.ResourceManager.Reservations.Models.ReservationMergeProperties mergeProperties, class Azure.ResourceManager.Reservations.Models.ReservationSwapProperties swapProperties, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, class Azure.Core.ResourceIdentifier billingScopeId, valuetype System.Nullable`1&lt;bool&gt; isRenewEnabled, string renewSource, string renewDestination, class Azure.ResourceManager.Reservations.Models.RenewProperties renewProperties, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; term, string userFriendlyAppliedScopeType, string userFriendlyRenewState, class Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization utilization) cil managed" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationProperties (Optional reservedResourceType As Nullable(Of ReservedResourceType) = Nothing, Optional instanceFlexibility As Nullable(Of InstanceFlexibility) = Nothing, Optional displayName As String = Nothing, Optional appliedScopes As IEnumerable(Of String) = Nothing, Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional isArchived As Nullable(Of Boolean) = Nothing, Optional capabilities As String = Nothing, Optional quantity As Nullable(Of Integer) = Nothing, Optional provisioningState As Nullable(Of ReservationProvisioningState) = Nothing, Optional effectOn As Nullable(Of DateTimeOffset) = Nothing, Optional benefitStartOn As Nullable(Of DateTimeOffset) = Nothing, Optional lastUpdatedOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservationExpireOn As Nullable(Of DateTimeOffset) = Nothing, Optional expireOn As Nullable(Of DateTimeOffset) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional skuDescription As String = Nothing, Optional extendedStatusInfo As ExtendedStatusInfo = Nothing, Optional billingPlan As Nullable(Of ReservationBillingPlan) = Nothing, Optional displayProvisioningState As String = Nothing, Optional provisioningSubState As String = Nothing, Optional reservationPurchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional purchaseOn As Nullable(Of DateTimeOffset) = Nothing, Optional splitProperties As ReservationSplitProperties = Nothing, Optional mergeProperties As ReservationMergeProperties = Nothing, Optional swapProperties As ReservationSwapProperties = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional billingScopeId As ResourceIdentifier = Nothing, Optional isRenewEnabled As Nullable(Of Boolean) = Nothing, Optional renewSource As String = Nothing, Optional renewDestination As String = Nothing, Optional renewProperties As RenewProperties = Nothing, Optional term As Nullable(Of ReservationTerm) = Nothing, Optional userFriendlyAppliedScopeType As String = Nothing, Optional userFriendlyRenewState As String = Nothing, Optional utilization As ReservationPropertiesUtilization = Nothing) As ReservationProperties" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberSignature Language="F#" Value="static member ReservationProperties : Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; * string * seq&lt;string&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * Nullable&lt;bool&gt; * string * Nullable&lt;int&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * string * Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; * string * string * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;DateTimeOffset&gt; * Azure.ResourceManager.Reservations.Models.ReservationSplitProperties * Azure.ResourceManager.Reservations.Models.ReservationMergeProperties * Azure.ResourceManager.Reservations.Models.ReservationSwapProperties * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Azure.Core.ResourceIdentifier * Nullable&lt;bool&gt; * string * string * Azure.ResourceManager.Reservations.Models.RenewProperties * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; * string * string * Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization -&gt; Azure.ResourceManager.Reservations.Models.ReservationProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationProperties (reservedResourceType, instanceFlexibility, displayName, appliedScopes, appliedScopeType, isArchived, capabilities, quantity, provisioningState, effectOn, benefitStartOn, lastUpdatedOn, reservationExpireOn, expireOn, reviewOn, skuDescription, extendedStatusInfo, billingPlan, displayProvisioningState, provisioningSubState, reservationPurchaseOn, purchaseOn, splitProperties, mergeProperties, swapProperties, appliedScopeProperties, billingScopeId, isRenewEnabled, renewSource, renewDestination, renewProperties, term, userFriendlyAppliedScopeType, userFriendlyRenewState, utilization)" FrameworkAlternate="azure-dotnet-preview" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationProperties</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="reservedResourceType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt;" />
-        <Parameter Name="instanceFlexibility" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt;" />
-        <Parameter Name="displayName" Type="System.String" />
-        <Parameter Name="appliedScopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="appliedScopeType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt;" />
-        <Parameter Name="isArchived" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="capabilities" Type="System.String" />
-        <Parameter Name="quantity" Type="System.Nullable&lt;System.Int32&gt;" />
-        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt;" />
-        <Parameter Name="effectOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="benefitStartOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="reservationExpireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="reviewOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="skuDescription" Type="System.String" />
-        <Parameter Name="extendedStatusInfo" Type="Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo" />
-        <Parameter Name="billingPlan" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt;" />
-        <Parameter Name="displayProvisioningState" Type="System.String" />
-        <Parameter Name="provisioningSubState" Type="System.String" />
-        <Parameter Name="purchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="reservationPurchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" />
-        <Parameter Name="splitProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationSplitProperties" />
-        <Parameter Name="mergeProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationMergeProperties" />
-        <Parameter Name="swapProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationSwapProperties" />
-        <Parameter Name="appliedScopeProperties" Type="Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" />
-        <Parameter Name="billingScopeId" Type="Azure.Core.ResourceIdentifier" />
-        <Parameter Name="isRenewEnabled" Type="System.Nullable&lt;System.Boolean&gt;" />
-        <Parameter Name="renewSource" Type="System.String" />
-        <Parameter Name="renewDestination" Type="System.String" />
-        <Parameter Name="renewProperties" Type="Azure.ResourceManager.Reservations.Models.RenewProperties" />
-        <Parameter Name="term" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt;" />
-        <Parameter Name="userFriendlyAppliedScopeType" Type="System.String" />
-        <Parameter Name="userFriendlyRenewState" Type="System.String" />
-        <Parameter Name="utilization" Type="Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization" />
+        <Parameter Name="reservedResourceType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt;" Index="0" />
+        <Parameter Name="instanceFlexibility" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt;" Index="1" />
+        <Parameter Name="displayName" Type="System.String" Index="2" />
+        <Parameter Name="appliedScopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="3" />
+        <Parameter Name="appliedScopeType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt;" Index="4" />
+        <Parameter Name="isArchived" Type="System.Nullable&lt;System.Boolean&gt;" Index="5" />
+        <Parameter Name="capabilities" Type="System.String" Index="6" />
+        <Parameter Name="quantity" Type="System.Nullable&lt;System.Int32&gt;" Index="7" />
+        <Parameter Name="provisioningState" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationProvisioningState&gt;" Index="8" />
+        <Parameter Name="effectOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="9" />
+        <Parameter Name="benefitStartOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="10" />
+        <Parameter Name="lastUpdatedOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="11" />
+        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="12" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="reservationExpireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationExpireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="13" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="expireOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reviewOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="14" />
+        <Parameter Name="skuDescription" Type="System.String" Index="15" />
+        <Parameter Name="extendedStatusInfo" Type="Azure.ResourceManager.Reservations.Models.ExtendedStatusInfo" Index="16" />
+        <Parameter Name="billingPlan" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt;" Index="17" />
+        <Parameter Name="displayProvisioningState" Type="System.String" Index="18" />
+        <Parameter Name="provisioningSubState" Type="System.String" Index="19" />
+        <Parameter Name="purchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="20" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="reservationPurchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="20" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationPurchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="21" FrameworkAlternate="azure-dotnet" />
+        <Parameter Name="purchaseOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="21" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="splitProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationSplitProperties" Index="22" />
+        <Parameter Name="mergeProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationMergeProperties" Index="23" />
+        <Parameter Name="swapProperties" Type="Azure.ResourceManager.Reservations.Models.ReservationSwapProperties" Index="24" />
+        <Parameter Name="appliedScopeProperties" Type="Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" Index="25" />
+        <Parameter Name="billingScopeId" Type="Azure.Core.ResourceIdentifier" Index="26" />
+        <Parameter Name="isRenewEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="27" />
+        <Parameter Name="renewSource" Type="System.String" Index="28" />
+        <Parameter Name="renewDestination" Type="System.String" Index="29" />
+        <Parameter Name="renewProperties" Type="Azure.ResourceManager.Reservations.Models.RenewProperties" Index="30" />
+        <Parameter Name="term" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt;" Index="31" />
+        <Parameter Name="userFriendlyAppliedScopeType" Type="System.String" Index="32" />
+        <Parameter Name="userFriendlyRenewState" Type="System.String" Index="33" />
+        <Parameter Name="utilization" Type="Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization" Index="34" />
       </Parameters>
       <Docs>
         <param name="reservedResourceType"> The type of the resource that is being reserved. </param>
@@ -1055,21 +1498,21 @@
         <param name="appliedScopeType"> The applied scope type. </param>
         <param name="isArchived"> Indicates if the reservation is archived. </param>
         <param name="capabilities"> Capabilities of the reservation. </param>
-        <param name="quantity"> Quantity of the skus that are part of the reservation. </param>
+        <param name="quantity"> Quantity of the skus that are part of the reservation. Must be greater than zero. </param>
         <param name="provisioningState"> Current state of the reservation. </param>
         <param name="effectOn"> DateTime of the reservation starting when this version is effective from. </param>
         <param name="benefitStartOn"> This is the DateTime when the reservation benefit started. </param>
         <param name="lastUpdatedOn"> DateTime of the last time the reservation was updated. </param>
-        <param name="expireOn"> This is the date when the reservation will expire. </param>
-        <param name="reservationExpireOn"> This is the date-time when the reservation will expire. </param>
+        <param name="reservationExpireOn"> This is the date when the reservation will expire. </param>
+        <param name="expireOn"> This is the date-time when the reservation will expire. </param>
         <param name="reviewOn"> This is the date-time when the Azure Hybrid Benefit needs to be reviewed. </param>
         <param name="skuDescription"> Description of the sku in english. </param>
         <param name="extendedStatusInfo"> The message giving detailed information about the status code. </param>
         <param name="billingPlan"> The billing plan options available for this sku. </param>
         <param name="displayProvisioningState"> The provisioning state of the reservation for display, e.g. Succeeded. </param>
         <param name="provisioningSubState"> The provisioning sub-state of the reservation, e.g. Succeeded. </param>
-        <param name="purchaseOn"> This is the date when the reservation was purchased. </param>
-        <param name="reservationPurchaseOn"> This is the date-time when the reservation was purchased. </param>
+        <param name="reservationPurchaseOn"> This is the date when the reservation was purchased. </param>
+        <param name="purchaseOn"> This is the date-time when the reservation was purchased. </param>
         <param name="splitProperties"> Properties of reservation split. </param>
         <param name="mergeProperties"> Properties of reservation merge. </param>
         <param name="swapProperties"> Properties of reservation swap. </param>
@@ -1097,8 +1540,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationPropertiesUtilization</ReturnType>
@@ -1115,6 +1558,56 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationPurchaseContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent ReservationPurchaseContent (string skuName = default, Azure.Core.AzureLocation? location = default, Azure.ResourceManager.Reservations.Models.ReservedResourceType? reservedResourceType = default, Azure.Core.ResourceIdentifier billingScopeId = default, Azure.ResourceManager.Reservations.Models.ReservationTerm? term = default, Azure.ResourceManager.Reservations.Models.ReservationBillingPlan? billingPlan = default, int? quantity = default, string displayName = default, Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, System.Collections.Generic.IEnumerable&lt;string&gt; appliedScopes = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, bool? isRenewEnabled = default, DateTimeOffset? reviewOn = default, Azure.ResourceManager.Reservations.Models.InstanceFlexibility? reservedResourceInstanceFlexibility = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent ReservationPurchaseContent(string skuName, valuetype System.Nullable`1&lt;valuetype Azure.Core.AzureLocation&gt; location, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; reservedResourceType, class Azure.Core.ResourceIdentifier billingScopeId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; term, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; billingPlan, valuetype System.Nullable`1&lt;int32&gt; quantity, string displayName, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, class System.Collections.Generic.IEnumerable`1&lt;string&gt; appliedScopes, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, valuetype System.Nullable`1&lt;bool&gt; isRenewEnabled, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; reviewOn, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; reservedResourceInstanceFlexibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationPurchaseContent(System.String,System.Nullable{Azure.Core.AzureLocation},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservedResourceType},Azure.Core.ResourceIdentifier,System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationTerm},System.Nullable{Azure.ResourceManager.Reservations.Models.ReservationBillingPlan},System.Nullable{System.Int32},System.String,System.Nullable{Azure.ResourceManager.Reservations.Models.AppliedScopeType},System.Collections.Generic.IEnumerable{System.String},Azure.ResourceManager.Reservations.Models.AppliedScopeProperties,System.Nullable{System.Boolean},System.Nullable{System.DateTimeOffset},System.Nullable{Azure.ResourceManager.Reservations.Models.InstanceFlexibility})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationPurchaseContent (Optional skuName As String = Nothing, Optional location As Nullable(Of AzureLocation) = Nothing, Optional reservedResourceType As Nullable(Of ReservedResourceType) = Nothing, Optional billingScopeId As ResourceIdentifier = Nothing, Optional term As Nullable(Of ReservationTerm) = Nothing, Optional billingPlan As Nullable(Of ReservationBillingPlan) = Nothing, Optional quantity As Nullable(Of Integer) = Nothing, Optional displayName As String = Nothing, Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional appliedScopes As IEnumerable(Of String) = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional isRenewEnabled As Nullable(Of Boolean) = Nothing, Optional reviewOn As Nullable(Of DateTimeOffset) = Nothing, Optional reservedResourceInstanceFlexibility As Nullable(Of InstanceFlexibility) = Nothing) As ReservationPurchaseContent" />
+      <MemberSignature Language="F#" Value="static member ReservationPurchaseContent : string * Nullable&lt;Azure.Core.AzureLocation&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt; * Azure.Core.ResourceIdentifier * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt; * Nullable&lt;int&gt; * string * Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * seq&lt;string&gt; * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Nullable&lt;bool&gt; * Nullable&lt;DateTimeOffset&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt; -&gt; Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationPurchaseContent (skuName, location, reservedResourceType, billingScopeId, term, billingPlan, quantity, displayName, appliedScopeType, appliedScopes, appliedScopeProperties, isRenewEnabled, reviewOn, reservedResourceInstanceFlexibility)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skuName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="location" Type="System.Nullable&lt;Azure.Core.AzureLocation&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservedResourceType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservedResourceType&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingScopeId" Type="Azure.Core.ResourceIdentifier" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="term" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationTerm&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingPlan" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.ReservationBillingPlan&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="quantity" Type="System.Nullable&lt;System.Int32&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="displayName" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopeType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopeProperties" Type="Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isRenewEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reviewOn" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservedResourceInstanceFlexibility" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.InstanceFlexibility&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="skuName"> Gets or sets the Name. </param>
+        <param name="location"> The Azure region where the reserved resource lives. </param>
+        <param name="reservedResourceType"> The type of the resource that is being reserved. In addition to below types we have also added the following: OpenAIPTU, MDC, Sentinel. </param>
+        <param name="billingScopeId"> Subscription that will be charged for purchasing reservation or savings plan. </param>
+        <param name="term"> Represent the term of reservation. </param>
+        <param name="billingPlan"> Represent the billing plans. </param>
+        <param name="quantity"> Quantity of the skus that are part of the reservation. </param>
+        <param name="displayName"> Friendly name of the reservation. </param>
+        <param name="appliedScopeType"> Type of the Applied Scope. </param>
+        <param name="appliedScopes"> List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared. This property will be deprecated and replaced by appliedScopeProperties instead for Single AppliedScopeType. </param>
+        <param name="appliedScopeProperties"> Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup. </param>
+        <param name="isRenewEnabled"> Setting this to true will automatically purchase a new reservation on the expiration date time. </param>
+        <param name="reviewOn"> This is the date-time when the Azure hybrid benefit needs to be reviewed. </param>
+        <param name="reservedResourceInstanceFlexibility"> Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationPurchaseContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationQuotaData">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.ReservationQuotaData ReservationQuotaData (Azure.Core.ResourceIdentifier id = default, string name = default, Azure.Core.ResourceType resourceType = default, Azure.ResourceManager.Models.SystemData systemData = default, Azure.ResourceManager.Reservations.Models.QuotaProperties properties = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.ReservationQuotaData ReservationQuotaData(class Azure.Core.ResourceIdentifier id, string name, valuetype Azure.Core.ResourceType resourceType, class Azure.ResourceManager.Models.SystemData systemData, class Azure.ResourceManager.Reservations.Models.QuotaProperties properties) cil managed" />
@@ -1124,8 +1617,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.ReservationQuotaData</ReturnType>
@@ -1138,10 +1631,10 @@
         <Parameter Name="properties" Type="Azure.ResourceManager.Reservations.Models.QuotaProperties" />
       </Parameters>
       <Docs>
-        <param name="id"> The id. </param>
-        <param name="name"> The name. </param>
-        <param name="resourceType"> The resourceType. </param>
-        <param name="systemData"> The systemData. </param>
+        <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        <param name="name"> The name of the resource. </param>
+        <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         <param name="properties"> Quota properties for the resource. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.ReservationQuotaData" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.ReservationQuotaData" /> instance for mocking. </returns>
@@ -1157,8 +1650,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundBillingInformation</ReturnType>
@@ -1183,6 +1676,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationRefundContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationRefundContent ReservationRefundContent (Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties properties = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationRefundContent ReservationRefundContent(class Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationRefundContent(Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationRefundContent (Optional properties As ReservationRefundRequestProperties = Nothing) As ReservationRefundContent" />
+      <MemberSignature Language="F#" Value="static member ReservationRefundContent : Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties -&gt; Azure.ResourceManager.Reservations.Models.ReservationRefundContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationRefundContent properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="properties"> Properties needed for refund request including the session id from calculate refund, the scope, the reservation to be returned and the return reason. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationRefundContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationRefundPolicyError">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyError ReservationRefundPolicyError (Azure.ResourceManager.Reservations.Models.ReservationErrorResponseCode? code = default, string message = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyError ReservationRefundPolicyError(valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationErrorResponseCode&gt; code, string message) cil managed" />
@@ -1192,8 +1709,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyError</ReturnType>
@@ -1219,8 +1736,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyResultProperty</ReturnType>
@@ -1239,6 +1756,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationRefundRequestProperties">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties ReservationRefundRequestProperties (Guid? sessionId = default, string scope = default, Azure.ResourceManager.Reservations.Models.ReservationToReturn reservationToReturn = default, string returnReason = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties ReservationRefundRequestProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; sessionId, string scope, class Azure.ResourceManager.Reservations.Models.ReservationToReturn reservationToReturn, string returnReason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationRefundRequestProperties(System.Nullable{System.Guid},System.String,Azure.ResourceManager.Reservations.Models.ReservationToReturn,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationRefundRequestProperties (Optional sessionId As Nullable(Of Guid) = Nothing, Optional scope As String = Nothing, Optional reservationToReturn As ReservationToReturn = Nothing, Optional returnReason As String = Nothing) As ReservationRefundRequestProperties" />
+      <MemberSignature Language="F#" Value="static member ReservationRefundRequestProperties : Nullable&lt;Guid&gt; * string * Azure.ResourceManager.Reservations.Models.ReservationToReturn * string -&gt; Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationRefundRequestProperties (sessionId, scope, reservationToReturn, returnReason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionId" Type="System.Nullable&lt;System.Guid&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scope" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationToReturn" Type="Azure.ResourceManager.Reservations.Models.ReservationToReturn" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="returnReason" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="sessionId"> SessionId that was returned by CalculateRefund API. </param>
+        <param name="scope"> The scope of the refund, e.g. Reservation. </param>
+        <param name="reservationToReturn"> Reservation to return. </param>
+        <param name="returnReason"> The reason of returning the reservation. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationRefundRequestProperties" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationRefundResponseProperties">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties ReservationRefundResponseProperties (Guid? sessionId = default, int? quantity = default, Azure.ResourceManager.Reservations.Models.PurchasePrice billingRefundAmount = default, Azure.ResourceManager.Reservations.Models.PurchasePrice pricingRefundAmount = default, Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyResultProperty policyResultProperties = default, Azure.ResourceManager.Reservations.Models.ReservationRefundBillingInformation billingInformation = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties ReservationRefundResponseProperties(valuetype System.Nullable`1&lt;valuetype System.Guid&gt; sessionId, valuetype System.Nullable`1&lt;int32&gt; quantity, class Azure.ResourceManager.Reservations.Models.PurchasePrice billingRefundAmount, class Azure.ResourceManager.Reservations.Models.PurchasePrice pricingRefundAmount, class Azure.ResourceManager.Reservations.Models.ReservationRefundPolicyResultProperty policyResultProperties, class Azure.ResourceManager.Reservations.Models.ReservationRefundBillingInformation billingInformation) cil managed" />
@@ -1248,8 +1795,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties</ReturnType>
@@ -1267,7 +1814,7 @@
         <param name="quantity"> Quantity to be returned. </param>
         <param name="billingRefundAmount"> Pricing information containing the amount and the currency code. </param>
         <param name="pricingRefundAmount"> Pricing information containing the amount and the currency code. </param>
-        <param name="policyResultProperties"> Refund policy result. </param>
+        <param name="policyResultProperties"> Refund policy result property. </param>
         <param name="billingInformation"> billing information. </param>
         <summary> Initializes a new instance of <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties" />. </summary>
         <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationRefundResponseProperties" /> instance for mocking. </returns>
@@ -1283,8 +1830,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationRefundResult</ReturnType>
@@ -1310,8 +1857,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationResourceName</ReturnType>
@@ -1337,8 +1884,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationSplitProperties</ReturnType>
@@ -1364,8 +1911,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationSwapProperties</ReturnType>
@@ -1391,8 +1938,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationToExchange</ReturnType>
@@ -1422,8 +1969,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationToPurchaseCalculateExchange</ReturnType>
@@ -1449,8 +1996,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationToPurchaseExchange</ReturnType>
@@ -1473,6 +2020,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReservationToReturn">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationToReturn ReservationToReturn (Azure.Core.ResourceIdentifier reservationId = default, int? quantity = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationToReturn ReservationToReturn(class Azure.Core.ResourceIdentifier reservationId, valuetype System.Nullable`1&lt;int32&gt; quantity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationToReturn(Azure.Core.ResourceIdentifier,System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReservationToReturn (Optional reservationId As ResourceIdentifier = Nothing, Optional quantity As Nullable(Of Integer) = Nothing) As ReservationToReturn" />
+      <MemberSignature Language="F#" Value="static member ReservationToReturn : Azure.Core.ResourceIdentifier * Nullable&lt;int&gt; -&gt; Azure.ResourceManager.Reservations.Models.ReservationToReturn" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.ReservationToReturn (reservationId, quantity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationToReturn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reservationId" Type="Azure.Core.ResourceIdentifier" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="quantity" Type="System.Nullable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="reservationId"> Fully qualified identifier of the reservation being returned. </param>
+        <param name="quantity"> Quantity to be returned. Must be greater than zero. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.ReservationToReturn" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ReservationToReturnForExchange">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.ReservationToReturnForExchange ReservationToReturnForExchange (Azure.Core.ResourceIdentifier reservationId = default, int? quantity = default, Azure.ResourceManager.Reservations.Models.PurchasePrice billingRefundAmount = default, Azure.ResourceManager.Reservations.Models.BillingInformation billingInformation = default, Azure.ResourceManager.Reservations.Models.ReservationOperationStatus? status = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.ReservationToReturnForExchange ReservationToReturnForExchange(class Azure.Core.ResourceIdentifier reservationId, valuetype System.Nullable`1&lt;int32&gt; quantity, class Azure.ResourceManager.Reservations.Models.PurchasePrice billingRefundAmount, class Azure.ResourceManager.Reservations.Models.BillingInformation billingInformation, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.ReservationOperationStatus&gt; status) cil managed" />
@@ -1482,8 +2055,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationToReturnForExchange</ReturnType>
@@ -1515,8 +2088,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ReservationUtilizationAggregates</ReturnType>
@@ -1537,6 +2110,44 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SavingsPlanPurchase">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase SavingsPlanPurchase (string skuName = default, string displayName = default, Azure.Core.ResourceIdentifier billingScopeId = default, Azure.ResourceManager.Reservations.Models.SavingsPlanTerm? term = default, Azure.ResourceManager.Reservations.Models.SavingsPlanBillingPlan? billingPlan = default, Azure.ResourceManager.Reservations.Models.AppliedScopeType? appliedScopeType = default, Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties = default, Azure.ResourceManager.Reservations.Models.BenefitsCommitment commitment = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase SavingsPlanPurchase(string skuName, string displayName, class Azure.Core.ResourceIdentifier billingScopeId, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.SavingsPlanTerm&gt; term, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.SavingsPlanBillingPlan&gt; billingPlan, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; appliedScopeType, class Azure.ResourceManager.Reservations.Models.AppliedScopeProperties appliedScopeProperties, class Azure.ResourceManager.Reservations.Models.BenefitsCommitment commitment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.SavingsPlanPurchase(System.String,System.String,Azure.Core.ResourceIdentifier,System.Nullable{Azure.ResourceManager.Reservations.Models.SavingsPlanTerm},System.Nullable{Azure.ResourceManager.Reservations.Models.SavingsPlanBillingPlan},System.Nullable{Azure.ResourceManager.Reservations.Models.AppliedScopeType},Azure.ResourceManager.Reservations.Models.AppliedScopeProperties,Azure.ResourceManager.Reservations.Models.BenefitsCommitment)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SavingsPlanPurchase (Optional skuName As String = Nothing, Optional displayName As String = Nothing, Optional billingScopeId As ResourceIdentifier = Nothing, Optional term As Nullable(Of SavingsPlanTerm) = Nothing, Optional billingPlan As Nullable(Of SavingsPlanBillingPlan) = Nothing, Optional appliedScopeType As Nullable(Of AppliedScopeType) = Nothing, Optional appliedScopeProperties As AppliedScopeProperties = Nothing, Optional commitment As BenefitsCommitment = Nothing) As SavingsPlanPurchase" />
+      <MemberSignature Language="F#" Value="static member SavingsPlanPurchase : string * string * Azure.Core.ResourceIdentifier * Nullable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanTerm&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanBillingPlan&gt; * Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt; * Azure.ResourceManager.Reservations.Models.AppliedScopeProperties * Azure.ResourceManager.Reservations.Models.BenefitsCommitment -&gt; Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.SavingsPlanPurchase (skuName, displayName, billingScopeId, term, billingPlan, appliedScopeType, appliedScopeProperties, commitment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skuName" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="displayName" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingScopeId" Type="Azure.Core.ResourceIdentifier" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="term" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanTerm&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="billingPlan" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.SavingsPlanBillingPlan&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopeType" Type="System.Nullable&lt;Azure.ResourceManager.Reservations.Models.AppliedScopeType&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appliedScopeProperties" Type="Azure.ResourceManager.Reservations.Models.AppliedScopeProperties" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="commitment" Type="Azure.ResourceManager.Reservations.Models.BenefitsCommitment" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="skuName"> Gets or sets the Name. </param>
+        <param name="displayName"> Friendly name of the savings plan. </param>
+        <param name="billingScopeId"> Subscription that will be charged for purchasing reservation or savings plan. </param>
+        <param name="term"> Represent savings plan term in ISO 8601 format. </param>
+        <param name="billingPlan"> Represents the billing plan in ISO 8601 format. Required only for monthly billing plans. </param>
+        <param name="appliedScopeType"> Type of the Applied Scope. </param>
+        <param name="appliedScopeProperties"> Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup. </param>
+        <param name="commitment"> Commitment towards the benefit. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SavingsPlanToPurchaseCalculateExchange">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.SavingsPlanToPurchaseCalculateExchange SavingsPlanToPurchaseCalculateExchange (Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase properties = default, Azure.ResourceManager.Reservations.Models.PurchasePrice billingCurrencyTotal = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.SavingsPlanToPurchaseCalculateExchange SavingsPlanToPurchaseCalculateExchange(class Azure.ResourceManager.Reservations.Models.SavingsPlanPurchase properties, class Azure.ResourceManager.Reservations.Models.PurchasePrice billingCurrencyTotal) cil managed" />
@@ -1546,8 +2157,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SavingsPlanToPurchaseCalculateExchange</ReturnType>
@@ -1573,8 +2184,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SavingsPlanToPurchaseExchange</ReturnType>
@@ -1606,8 +2217,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.ScopeProperties</ReturnType>
@@ -1633,8 +2244,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SkuCapability</ReturnType>
@@ -1660,8 +2271,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SkuProperty</ReturnType>
@@ -1687,8 +2298,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SkuRestriction</ReturnType>
@@ -1707,6 +2318,32 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SplitContent">
+      <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.SplitContent SplitContent (System.Collections.Generic.IEnumerable&lt;int&gt; quantities = default, Azure.Core.ResourceIdentifier reservationId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.SplitContent SplitContent(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; quantities, class Azure.Core.ResourceIdentifier reservationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.SplitContent(System.Collections.Generic.IEnumerable{System.Int32},Azure.Core.ResourceIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SplitContent (Optional quantities As IEnumerable(Of Integer) = Nothing, Optional reservationId As ResourceIdentifier = Nothing) As SplitContent" />
+      <MemberSignature Language="F#" Value="static member SplitContent : seq&lt;int&gt; * Azure.Core.ResourceIdentifier -&gt; Azure.ResourceManager.Reservations.Models.SplitContent" Usage="Azure.ResourceManager.Reservations.Models.ArmReservationsModelFactory.SplitContent (quantities, reservationId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.ResourceManager.Reservations.Models.SplitContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quantities" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="reservationId" Type="Azure.Core.ResourceIdentifier" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="quantities"> List of the quantities in the new reservations to create. </param>
+        <param name="reservationId"> Resource id of the reservation to be split. Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}. </param>
+        <summary>To be added.</summary>
+        <returns> A new <see cref="T:Azure.ResourceManager.Reservations.Models.SplitContent" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SubContent">
       <MemberSignature Language="C#" Value="public static Azure.ResourceManager.Reservations.Models.SubContent SubContent (int? limit = default, Azure.ResourceManager.Reservations.Models.ReservationResourceName name = default, string resourceType = default, string unit = default, Azure.ResourceManager.Reservations.Models.QuotaRequestState? provisioningState = default, string message = default, Guid? subRequestId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.ResourceManager.Reservations.Models.SubContent SubContent(valuetype System.Nullable`1&lt;int32&gt; limit, class Azure.ResourceManager.Reservations.Models.ReservationResourceName name, string resourceType, string unit, valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.Reservations.Models.QuotaRequestState&gt; provisioningState, string message, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; subRequestId) cil managed" />
@@ -1716,8 +2353,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.Reservations</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.2.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Reservations.Models.SubContent</ReturnType>
@@ -1735,7 +2372,7 @@
         <param name="limit"> Quota (resource limit). </param>
         <param name="name"> The resource name. </param>
         <param name="resourceType"> Resource type for which the quota check was made. </param>
-        <param name="unit"> The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation. </param>
+        <param name="unit"> The limit units, such as <b>count</b> and <b>bytes</b>. Use the unit field provided in the response of the GET quota operation. </param>
         <param name="provisioningState"> The quota request status. </param>
         <param name="message"> User-friendly status message. </param>
         <param name="subRequestId"> Sub request ID for individual request. </param>

@@ -1,0 +1,572 @@
+<Type Name="TestRecording" FullName="Microsoft.ClientModel.TestFramework.TestRecording">
+  <TypeSignature Language="C#" Value="public class TestRecording : IAsyncDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TestRecording extends System.Object implements class System.IAsyncDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TestRecording" />
+  <TypeSignature Language="VB.NET" Value="Public Class TestRecording&#xA;Implements IAsyncDisposable" />
+  <TypeSignature Language="F#" Value="type TestRecording = class&#xA;    interface IAsyncDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IAsyncDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a test recording session that can record, playback, or run live test interactions.
+            This class manages the lifecycle of test recordings and provides utilities for generating
+            deterministic test data during playback scenarios.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt; CreateAsync (Microsoft.ClientModel.TestFramework.RecordedTestMode mode, string sessionFile, Microsoft.ClientModel.TestFramework.TestProxyProcess? proxy, Microsoft.ClientModel.TestFramework.RecordedTestBase recordedTestBase, System.Threading.CancellationToken? cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.ClientModel.TestFramework.TestRecording&gt; CreateAsync(valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode mode, string sessionFile, class Microsoft.ClientModel.TestFramework.TestProxyProcess proxy, class Microsoft.ClientModel.TestFramework.RecordedTestBase recordedTestBase, valuetype System.Nullable`1&lt;valuetype System.Threading.CancellationToken&gt; cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.CreateAsync(Microsoft.ClientModel.TestFramework.RecordedTestMode,System.String,Microsoft.ClientModel.TestFramework.TestProxyProcess,Microsoft.ClientModel.TestFramework.RecordedTestBase,System.Nullable{System.Threading.CancellationToken})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAsync (mode As RecordedTestMode, sessionFile As String, proxy As TestProxyProcess, recordedTestBase As RecordedTestBase, Optional cancellationToken As Nullable(Of CancellationToken) = Nothing) As Task(Of TestRecording)" />
+      <MemberSignature Language="F#" Value="static member CreateAsync : Microsoft.ClientModel.TestFramework.RecordedTestMode * string * Microsoft.ClientModel.TestFramework.TestProxyProcess * Microsoft.ClientModel.TestFramework.RecordedTestBase * Nullable&lt;System.Threading.CancellationToken&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt;" Usage="Microsoft.ClientModel.TestFramework.TestRecording.CreateAsync (mode, sessionFile, proxy, recordedTestBase, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.ClientModel.TestFramework.TestRecording&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.ClientModel.TestFramework.RecordedTestMode" />
+        <Parameter Name="sessionFile" Type="System.String" />
+        <Parameter Name="proxy" Type="Microsoft.ClientModel.TestFramework.TestProxyProcess">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="recordedTestBase" Type="Microsoft.ClientModel.TestFramework.RecordedTestBase" />
+        <Parameter Name="cancellationToken" Type="System.Nullable&lt;System.Threading.CancellationToken&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The recording mode (Live, Record, or Playback).</param>
+        <param name="sessionFile">The file path where the recording session will be stored or read from.</param>
+        <param name="proxy">The test proxy process used for recording and playback operations.</param>
+        <param name="recordedTestBase">The base test class containing sanitizers and configuration.</param>
+        <param name="cancellationToken">Optional cancellation token to cancel the operation.</param>
+        <summary>
+            Creates a new test recording instance asynchronously and initializes proxy settings.
+            </summary>
+        <returns>A configured TestRecording instance ready for use.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the proxy client is not initialized.</exception>
+        <exception cref="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException">Thrown when a playback recording file is not found.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTransport">
+      <MemberSignature Language="C#" Value="public virtual System.ClientModel.Primitives.PipelineTransport? CreateTransport (System.ClientModel.Primitives.PipelineTransport? currentTransport);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ClientModel.Primitives.PipelineTransport CreateTransport(class System.ClientModel.Primitives.PipelineTransport currentTransport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.CreateTransport(System.ClientModel.Primitives.PipelineTransport)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateTransport (currentTransport As PipelineTransport) As PipelineTransport" />
+      <MemberSignature Language="F#" Value="abstract member CreateTransport : System.ClientModel.Primitives.PipelineTransport -&gt; System.ClientModel.Primitives.PipelineTransport&#xA;override this.CreateTransport : System.ClientModel.Primitives.PipelineTransport -&gt; System.ClientModel.Primitives.PipelineTransport" Usage="testRecording.CreateTransport currentTransport" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ClientModel.Primitives.PipelineTransport</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentTransport" Type="System.ClientModel.Primitives.PipelineTransport" />
+      </Parameters>
+      <Docs>
+        <param name="currentTransport">The existing transport to wrap or use directly in live mode.</param>
+        <summary>
+            Creates a transport pipeline that routes HTTP requests through the test proxy for recording or playback.
+            </summary>
+        <returns>A transport configured for the current recording mode.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when attempting to instrument already instrumented options.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableRecording">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope DisableRecording ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.ClientModel.TestFramework.TestRecording/DisableRecordingScope DisableRecording() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.DisableRecording" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableRecording () As TestRecording.DisableRecordingScope" />
+      <MemberSignature Language="F#" Value="abstract member DisableRecording : unit -&gt; Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope&#xA;override this.DisableRecording : unit -&gt; Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope" Usage="testRecording.DisableRecording " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestRecording+DisableRecordingScope</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a scope that disables recording for HTTP requests made within the scope.
+            Useful for setup calls that shouldn't be part of the test recording.
+            </summary>
+        <returns>A disposable scope that disables recording.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableRequestBodyRecording">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope DisableRequestBodyRecording ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.ClientModel.TestFramework.TestRecording/DisableRecordingScope DisableRequestBodyRecording() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.DisableRequestBodyRecording" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DisableRequestBodyRecording () As TestRecording.DisableRecordingScope" />
+      <MemberSignature Language="F#" Value="abstract member DisableRequestBodyRecording : unit -&gt; Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope&#xA;override this.DisableRequestBodyRecording : unit -&gt; Microsoft.ClientModel.TestFramework.TestRecording.DisableRecordingScope" Usage="testRecording.DisableRequestBodyRecording " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestRecording+DisableRecordingScope</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a scope that disables request body recording while still recording the request/response headers and metadata.
+            Useful for requests with sensitive data in the body that should be excluded from recordings.
+            </summary>
+        <returns>A disposable scope that disables request body recording.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask DisposeAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Threading.Tasks.ValueTask DisposeAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.DisposeAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function DisposeAsync () As ValueTask" />
+      <MemberSignature Language="F#" Value="abstract member DisposeAsync : unit -&gt; System.Threading.Tasks.ValueTask&#xA;override this.DisposeAsync : unit -&gt; System.Threading.Tasks.ValueTask" Usage="testRecording.DisposeAsync " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IAsyncDisposable.DisposeAsync</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs application-defined tasks associated with freeing, releasing, or
+            resetting unmanaged resources asynchronously.</summary>
+        <returns>A task that represents the asynchronous dispose operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask DisposeAsync (bool save);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask DisposeAsync(bool save) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.DisposeAsync(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DisposeAsync (save As Boolean) As ValueTask" />
+      <MemberSignature Language="F#" Value="member this.DisposeAsync : bool -&gt; System.Threading.Tasks.ValueTask" Usage="testRecording.DisposeAsync save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="save" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="save">Whether to save the recording. If false, the recording is discarded.</param>
+        <summary>
+            Disposes the test recording asynchronously, stopping the recording or playback session.
+            </summary>
+        <returns>A task representing the asynchronous disposal operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAlphaNumericId">
+      <MemberSignature Language="C#" Value="public virtual string GenerateAlphaNumericId (string prefix, int? maxLength = default, bool useOnlyLowercase = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateAlphaNumericId(string prefix, valuetype System.Nullable`1&lt;int32&gt; maxLength, bool useOnlyLowercase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.GenerateAlphaNumericId(System.String,System.Nullable{System.Int32},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateAlphaNumericId (prefix As String, Optional maxLength As Nullable(Of Integer) = Nothing, Optional useOnlyLowercase As Boolean = false) As String" />
+      <MemberSignature Language="F#" Value="abstract member GenerateAlphaNumericId : string * Nullable&lt;int&gt; * bool -&gt; string&#xA;override this.GenerateAlphaNumericId : string * Nullable&lt;int&gt; * bool -&gt; string" Usage="testRecording.GenerateAlphaNumericId (prefix, maxLength, useOnlyLowercase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="maxLength" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="useOnlyLowercase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">The prefix to prepend to the generated identifier.</param>
+        <param name="maxLength">Optional maximum length of the complete identifier (prefix + generated part).</param>
+        <param name="useOnlyLowercase">If true, uses only lowercase letters and numbers.</param>
+        <summary>
+            Generates a deterministic alphanumeric identifier with the specified prefix.
+            </summary>
+        <returns>An alphanumeric identifier string with the specified prefix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAssetName">
+      <MemberSignature Language="C#" Value="public virtual string GenerateAssetName (string prefix, string callerMethodName = &quot;testframework_failed&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateAssetName(string prefix, string callerMethodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.GenerateAssetName(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateAssetName (prefix As String, Optional callerMethodName As String = &quot;testframework_failed&quot;) As String" />
+      <MemberSignature Language="F#" Value="abstract member GenerateAssetName : string * string -&gt; string&#xA;override this.GenerateAssetName : string * string -&gt; string" Usage="testRecording.GenerateAssetName (prefix, callerMethodName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="callerMethodName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.CallerMemberName]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CallerMemberName&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="prefix">The prefix to prepend to the generated asset name.</param>
+        <param name="callerMethodName">The name of the calling method (automatically populated).</param>
+        <summary>
+            Generates a deterministic asset name for test resources using the calling method name.
+            </summary>
+        <returns>A deterministic asset name suitable for test resources.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateId">
+      <MemberSignature Language="C#" Value="public virtual string GenerateId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.GenerateId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateId () As String" />
+      <MemberSignature Language="F#" Value="abstract member GenerateId : unit -&gt; string&#xA;override this.GenerateId : unit -&gt; string" Usage="testRecording.GenerateId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a deterministic unique identifier as a string.
+            </summary>
+        <returns>A string representation of a random integer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateId">
+      <MemberSignature Language="C#" Value="public virtual string GenerateId (string prefix, int maxLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateId(string prefix, int32 maxLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.GenerateId(System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GenerateId (prefix As String, maxLength As Integer) As String" />
+      <MemberSignature Language="F#" Value="abstract member GenerateId : string * int -&gt; string&#xA;override this.GenerateId : string * int -&gt; string" Usage="testRecording.GenerateId (prefix, maxLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="maxLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">The prefix to prepend to the generated identifier.</param>
+        <param name="maxLength">The maximum length of the complete identifier.</param>
+        <summary>
+            Generates a deterministic identifier with the specified prefix, truncated to the maximum length.
+            </summary>
+        <returns>An identifier string that won't exceed the specified maximum length.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariable">
+      <MemberSignature Language="C#" Value="public virtual string? GetVariable (string variableName, string defaultValue, Func&lt;string,string&gt;? sanitizer = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetVariable(string variableName, string defaultValue, class System.Func`2&lt;string, string&gt; sanitizer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.GetVariable(System.String,System.String,System.Func{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetVariable (variableName As String, defaultValue As String, Optional sanitizer As Func(Of String, String) = Nothing) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetVariable : string * string * Func&lt;string, string&gt; -&gt; string&#xA;override this.GetVariable : string * string * Func&lt;string, string&gt; -&gt; string" Usage="testRecording.GetVariable (variableName, defaultValue, sanitizer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variableName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.String" />
+        <Parameter Name="sanitizer" Type="System.Func&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="variableName">The name of the variable to get or record.</param>
+        <param name="defaultValue">The value to use and record in record/live modes.</param>
+        <param name="sanitizer">Optional function to sanitize the value before recording.</param>
+        <summary>
+            Gets a variable value, recording it during record mode or retrieving it during playback.
+            </summary>
+        <returns>The variable value (defaultValue in record/live modes, recorded value in playback mode).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown for invalid recording modes.</exception>
+        <exception cref="T:Microsoft.ClientModel.TestFramework.TestRecordingMismatchException">Thrown when variables are missing in playback mode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRequests">
+      <MemberSignature Language="C#" Value="public bool HasRequests { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRequests" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.HasRequests" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasRequests As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasRequests : bool" Usage="Microsoft.ClientModel.TestFramework.TestRecording.HasRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether this recording session has processed any HTTP requests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.RecordedTestMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.ClientModel.TestFramework.RecordedTestMode Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.Mode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mode As RecordedTestMode" />
+      <MemberSignature Language="F#" Value="member this.Mode : Microsoft.ClientModel.TestFramework.RecordedTestMode" Usage="Microsoft.ClientModel.TestFramework.TestRecording.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.RecordedTestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current recording mode (Live, Record, or Playback).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Now">
+      <MemberSignature Language="C#" Value="public DateTimeOffset Now { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset Now" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.Now" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Now As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.Now : DateTimeOffset" Usage="Microsoft.ClientModel.TestFramework.TestRecording.Now" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the moment in time that this test is being run.  This is useful
+            for any test recordings that capture the current time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Random">
+      <MemberSignature Language="C#" Value="public Microsoft.ClientModel.TestFramework.TestRandom Random { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.ClientModel.TestFramework.TestRandom Random" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.Random" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Random As TestRandom" />
+      <MemberSignature Language="F#" Value="member this.Random : Microsoft.ClientModel.TestFramework.TestRandom" Usage="Microsoft.ClientModel.TestFramework.TestRecording.Random" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.ClientModel.TestFramework.TestRandom</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a deterministic random number generator that produces consistent results during playback.
+            The random seed is automatically recorded during record mode and restored during playback.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordingId">
+      <MemberSignature Language="C#" Value="public string? RecordingId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RecordingId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.RecordingId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecordingId As String" />
+      <MemberSignature Language="F#" Value="member this.RecordingId : string" Usage="Microsoft.ClientModel.TestFramework.TestRecording.RecordingId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the unique identifier for this recording session, assigned by the test proxy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVariable">
+      <MemberSignature Language="C#" Value="public virtual void SetVariable (string variableName, string? value, Func&lt;string,string&gt;? sanitizer = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVariable(string variableName, string value, class System.Func`2&lt;string, string&gt; sanitizer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TestRecording.SetVariable(System.String,System.String,System.Func{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetVariable (variableName As String, value As String, Optional sanitizer As Func(Of String, String) = Nothing)" />
+      <MemberSignature Language="F#" Value="abstract member SetVariable : string * string * Func&lt;string, string&gt; -&gt; unit&#xA;override this.SetVariable : string * string * Func&lt;string, string&gt; -&gt; unit" Usage="testRecording.SetVariable (variableName, value, sanitizer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variableName" Type="System.String" />
+        <Parameter Name="value" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="sanitizer" Type="System.Func&lt;System.String,System.String&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="variableName">The name of the variable to set.</param>
+        <param name="value">The value to record.</param>
+        <param name="sanitizer">Optional function to sanitize the value before recording.</param>
+        <summary>
+            Sets a variable value during record mode. No-op in other modes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UtcNow">
+      <MemberSignature Language="C#" Value="public DateTimeOffset UtcNow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset UtcNow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.UtcNow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UtcNow As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.UtcNow : DateTimeOffset" Usage="Microsoft.ClientModel.TestFramework.TestRecording.UtcNow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the moment in time that this test is being run in UTC format.
+            This is useful for any test recordings that capture the current time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SortedDictionary&lt;string,string&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SortedDictionary`2&lt;string, string&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TestRecording.Variables" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Variables As SortedDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Variables : System.Collections.Generic.SortedDictionary&lt;string, string&gt;" Usage="Microsoft.ClientModel.TestFramework.TestRecording.Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SortedDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A collection of variables used in the test recording.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

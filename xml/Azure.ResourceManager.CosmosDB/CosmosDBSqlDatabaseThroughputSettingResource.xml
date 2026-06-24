@@ -15,6 +15,7 @@
     <AssemblyVersion>1.3.2.0</AssemblyVersion>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.ArmResource</BaseTypeName>
@@ -32,9 +33,8 @@
   </Interfaces>
   <Docs>
     <summary>
-            A Class representing a CosmosDBSqlDatabaseThroughputSetting along with the instance operations that can be performed on it.
-            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />
-            from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetCosmosDBSqlDatabaseThroughputSettingResource method.
+            A class representing a CosmosDBSqlDatabaseThroughputSetting along with the instance operations that can be performed on it.
+            If you have a <see cref="T:Azure.Core.ResourceIdentifier" /> you can construct a <see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /> from an instance of <see cref="T:Azure.ResourceManager.ArmClient" /> using the GetResource method.
             Otherwise you can get one from its parent resource <see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseResource" /> using the GetCosmosDBSqlDatabaseThroughputSetting method.
             </summary>
     <remarks>To be added.</remarks>
@@ -48,12 +48,12 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary> Initializes a new instance of the <see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /> class for mocking. </summary>
+        <summary> Initializes a new instance of CosmosDBSqlDatabaseThroughputSettingResource for mocking. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -66,8 +66,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -81,9 +81,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -99,8 +97,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -114,9 +112,7 @@
         <param name="key"> The key for the tag. </param>
         <param name="value"> The value for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Add a tag to the current resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Add a tag to the current resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -132,8 +128,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -150,7 +146,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Update RUs per second of an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_UpdateSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_UpdateSqlDatabaseThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -166,8 +162,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -184,7 +180,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Update RUs per second of an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_UpdateSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_UpdateSqlDatabaseThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -200,8 +196,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceIdentifier</ReturnType>
@@ -217,7 +213,7 @@
         <param name="resourceGroupName"> The resourceGroupName. </param>
         <param name="accountName"> The accountName. </param>
         <param name="databaseName"> The databaseName. </param>
-        <summary> Generate the resource identifier of a <see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /> instance. </summary>
+        <summary> Generate the resource identifier for this resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -231,8 +227,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CosmosDB.ThroughputSettingData</ReturnType>
@@ -253,8 +249,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -266,7 +262,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets the RUs per second of the SQL database under an existing Azure Cosmos DB database account with the provided name.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_GetSqlDatabaseThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -280,8 +276,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -293,7 +289,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Gets the RUs per second of the SQL database under an existing Azure Cosmos DB database account with the provided name.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_GetSqlDatabaseThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -307,8 +303,8 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -328,8 +324,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -344,7 +340,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Migrate an Azure Cosmos DB SQL database from manual throughput to autoscale
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToAutoscale</description></item><item><term>Operation Id</term><description>SqlResources_MigrateSqlDatabaseToAutoscale</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToAutoscale. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_MigrateSqlDatabaseToAutoscale. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -358,8 +354,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -374,7 +370,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Migrate an Azure Cosmos DB SQL database from manual throughput to autoscale
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToAutoscale</description></item><item><term>Operation Id</term><description>SqlResources_MigrateSqlDatabaseToAutoscale</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToAutoscale. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_MigrateSqlDatabaseToAutoscale. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -388,8 +384,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -404,7 +400,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Migrate an Azure Cosmos DB SQL database from autoscale to manual throughput
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToManualThroughput</description></item><item><term>Operation Id</term><description>SqlResources_MigrateSqlDatabaseToManualThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToManualThroughput. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_MigrateSqlDatabaseToManualThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -418,8 +414,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -434,7 +430,7 @@
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Migrate an Azure Cosmos DB SQL database from autoscale to manual throughput
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToManualThroughput</description></item><item><term>Operation Id</term><description>SqlResources_MigrateSqlDatabaseToManualThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/migrateToManualThroughput. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_MigrateSqlDatabaseToManualThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -448,8 +444,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -461,9 +457,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -479,8 +473,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -492,9 +486,7 @@
       <Docs>
         <param name="key"> The key for the tag. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Removes a tag by key from the resource.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Removes a tag by key from the resource. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -510,8 +502,8 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Core.ResourceType</ReturnType>
@@ -530,8 +522,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;</ReturnType>
@@ -541,11 +533,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -561,8 +551,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Azure.Response&lt;Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource&gt;&gt;</ReturnType>
@@ -572,11 +562,9 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="tags"> The set of tags to use as replacement. </param>
+        <param name="tags"> The tags to set on the resource. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
-        <summary>
-            Replace the tags on the resource with the given set.
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</description></item><item><term>Operation Id</term><description>SqlResources_GetSqlDatabaseThroughput</description></item><item><term>Default Api Version</term><description>2025-10-15</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+        <summary> Replace the tags on the resource with the given set. </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -584,135 +572,135 @@
       </Docs>
     </Member>
     <Member MemberName="SqlDatabaseRedistributeThroughput">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt; SqlDatabaseRedistributeThroughput (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters redistributeThroughputParameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt; SqlDatabaseRedistributeThroughput(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters redistributeThroughputParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughput(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRedistributeThroughput (waitUntil As WaitUntil, redistributeThroughputParameters As RedistributeThroughputParameters, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of PhysicalPartitionThroughputInfoResult)" />
-      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRedistributeThroughput : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&#xA;override this.SqlDatabaseRedistributeThroughput : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughput (waitUntil, redistributeThroughputParameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt; SqlDatabaseRedistributeThroughput (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent content, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt; SqlDatabaseRedistributeThroughput(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughput(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRedistributeThroughput (waitUntil As WaitUntil, content As RedistributeThroughputContent, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of CosmosDBPhysicalPartitionThroughputResult)" />
+      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRedistributeThroughput : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&#xA;override this.SqlDatabaseRedistributeThroughput : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughput (waitUntil, content, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;</ReturnType>
+        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="redistributeThroughputParameters" Type="Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="redistributeThroughputParameters"> The parameters to provide for redistributing throughput for the current SQL database. </param>
+        <param name="content"> The parameters to provide for redistributing throughput for the current SQL database. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Redistribute throughput for an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/redistributeThroughput</description></item><item><term>Operation Id</term><description>SqlResources_SqlDatabaseRedistributeThroughput</description></item><item><term>Default Api Version</term><description>2024-12-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/redistributeThroughput. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_SqlDatabaseRedistributeThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="redistributeThroughputParameters" /> is null. </exception>
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SqlDatabaseRedistributeThroughputAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt; SqlDatabaseRedistributeThroughputAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters redistributeThroughputParameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt; SqlDatabaseRedistributeThroughputAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters redistributeThroughputParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughputAsync(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRedistributeThroughputAsync (waitUntil As WaitUntil, redistributeThroughputParameters As RedistributeThroughputParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of PhysicalPartitionThroughputInfoResult))" />
-      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRedistributeThroughputAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;&#xA;override this.SqlDatabaseRedistributeThroughputAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughputAsync (waitUntil, redistributeThroughputParameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt; SqlDatabaseRedistributeThroughputAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent content, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt; SqlDatabaseRedistributeThroughputAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughputAsync(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRedistributeThroughputAsync (waitUntil As WaitUntil, content As RedistributeThroughputContent, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of CosmosDBPhysicalPartitionThroughputResult))" />
+      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRedistributeThroughputAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;&#xA;override this.SqlDatabaseRedistributeThroughputAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRedistributeThroughputAsync (waitUntil, content, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="redistributeThroughputParameters" Type="Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputParameters" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="Azure.ResourceManager.CosmosDB.Models.RedistributeThroughputContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="redistributeThroughputParameters"> The parameters to provide for redistributing throughput for the current SQL database. </param>
+        <param name="content"> The parameters to provide for redistributing throughput for the current SQL database. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Redistribute throughput for an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/redistributeThroughput</description></item><item><term>Operation Id</term><description>SqlResources_SqlDatabaseRedistributeThroughput</description></item><item><term>Default Api Version</term><description>2024-12-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/redistributeThroughput. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_SqlDatabaseRedistributeThroughput. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="redistributeThroughputParameters" /> is null. </exception>
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SqlDatabaseRetrieveThroughputDistribution">
-      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt; SqlDatabaseRetrieveThroughputDistribution (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters retrieveThroughputParameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt; SqlDatabaseRetrieveThroughputDistribution(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters retrieveThroughputParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistribution(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRetrieveThroughputDistribution (waitUntil As WaitUntil, retrieveThroughputParameters As RetrieveThroughputParameters, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of PhysicalPartitionThroughputInfoResult)" />
-      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRetrieveThroughputDistribution : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&#xA;override this.SqlDatabaseRetrieveThroughputDistribution : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistribution (waitUntil, retrieveThroughputParameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt; SqlDatabaseRetrieveThroughputDistribution (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent content, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt; SqlDatabaseRetrieveThroughputDistribution(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistribution(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRetrieveThroughputDistribution (waitUntil As WaitUntil, content As RetrieveThroughputContent, Optional cancellationToken As CancellationToken = Nothing) As ArmOperation(Of CosmosDBPhysicalPartitionThroughputResult)" />
+      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRetrieveThroughputDistribution : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&#xA;override this.SqlDatabaseRetrieveThroughputDistribution : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent * System.Threading.CancellationToken -&gt; Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistribution (waitUntil, content, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;</ReturnType>
+        <ReturnType>Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="retrieveThroughputParameters" Type="Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="retrieveThroughputParameters"> The parameters to provide for retrieving throughput distribution for the current SQL database. </param>
+        <param name="content"> The parameters to provide for retrieving throughput distribution for the current SQL database. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Retrieve throughput distribution for an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/retrieveThroughputDistribution</description></item><item><term>Operation Id</term><description>SqlResources_SqlDatabaseRetrieveThroughputDistribution</description></item><item><term>Default Api Version</term><description>2024-12-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/retrieveThroughputDistribution. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_SqlDatabaseRetrieveThroughputDistribution. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="retrieveThroughputParameters" /> is null. </exception>
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SqlDatabaseRetrieveThroughputDistributionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt; SqlDatabaseRetrieveThroughputDistributionAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters retrieveThroughputParameters, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt; SqlDatabaseRetrieveThroughputDistributionAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters retrieveThroughputParameters, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistributionAsync(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRetrieveThroughputDistributionAsync (waitUntil As WaitUntil, retrieveThroughputParameters As RetrieveThroughputParameters, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of PhysicalPartitionThroughputInfoResult))" />
-      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRetrieveThroughputDistributionAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;&#xA;override this.SqlDatabaseRetrieveThroughputDistributionAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistributionAsync (waitUntil, retrieveThroughputParameters, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt; SqlDatabaseRetrieveThroughputDistributionAsync (Azure.WaitUntil waitUntil, Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent content, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Azure.ResourceManager.ArmOperation`1&lt;class Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt; SqlDatabaseRetrieveThroughputDistributionAsync(valuetype Azure.WaitUntil waitUntil, class Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistributionAsync(Azure.WaitUntil,Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function SqlDatabaseRetrieveThroughputDistributionAsync (waitUntil As WaitUntil, content As RetrieveThroughputContent, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ArmOperation(Of CosmosDBPhysicalPartitionThroughputResult))" />
+      <MemberSignature Language="F#" Value="abstract member SqlDatabaseRetrieveThroughputDistributionAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;&#xA;override this.SqlDatabaseRetrieveThroughputDistributionAsync : Azure.WaitUntil * Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;" Usage="cosmosDBSqlDatabaseThroughputSettingResource.SqlDatabaseRetrieveThroughputDistributionAsync (waitUntil, content, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.PhysicalPartitionThroughputInfoResult&gt;&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Azure.ResourceManager.ArmOperation&lt;Azure.ResourceManager.CosmosDB.Models.CosmosDBPhysicalPartitionThroughputResult&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="waitUntil" Type="Azure.WaitUntil" Index="0" FrameworkAlternate="azure-dotnet-preview" />
-        <Parameter Name="retrieveThroughputParameters" Type="Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputParameters" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="content" Type="Azure.ResourceManager.CosmosDB.Models.RetrieveThroughputContent" Index="1" FrameworkAlternate="azure-dotnet-preview" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="azure-dotnet-preview" />
       </Parameters>
       <Docs>
         <param name="waitUntil">
           <see cref="F:Azure.WaitUntil.Completed" /> if the method should wait to return until the long-running operation has completed on the service; <see cref="F:Azure.WaitUntil.Started" /> if it should return after starting the operation. For more information on long-running operations, please see <see href="https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/samples/LongRunningOperations.md"> Azure.Core Long-Running Operation samples</see>. </param>
-        <param name="retrieveThroughputParameters"> The parameters to provide for retrieving throughput distribution for the current SQL database. </param>
+        <param name="content"> The parameters to provide for retrieving throughput distribution for the current SQL database. </param>
         <param name="cancellationToken"> The cancellation token to use. </param>
         <summary>
             Retrieve throughput distribution for an Azure Cosmos DB SQL database
-            <list type="bullet"><item><term>Request Path</term><description>/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/retrieveThroughputDistribution</description></item><item><term>Operation Id</term><description>SqlResources_SqlDatabaseRetrieveThroughputDistribution</description></item><item><term>Default Api Version</term><description>2024-12-01-preview</description></item><item><term>Resource</term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" /></description></item></list></summary>
+            <list type="bullet"><item><term> Request Path. </term><description> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default/retrieveThroughputDistribution. </description></item><item><term> Operation Id. </term><description> ThroughputSettingsGetResultsOperationGroup_SqlDatabaseRetrieveThroughputDistribution. </description></item><item><term> Default Api Version. </term><description> 2026-04-01-preview. </description></item><item><term> Resource. </term><description><see cref="T:Azure.ResourceManager.CosmosDB.CosmosDBSqlDatabaseThroughputSettingResource" />. </description></item></list></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="retrieveThroughputParameters" /> is null. </exception>
+          <paramref name="content" /> is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="System.ClientModel.Primitives.IJsonModel&lt;Azure.ResourceManager.CosmosDB.ThroughputSettingData&gt;.Create">
@@ -727,8 +715,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CosmosDB.ThroughputSettingData</ReturnType>
@@ -738,8 +726,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="reader">The <see cref="T:System.Text.Json.Utf8JsonReader" /> to read.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="reader"> The reader for deserializing the model. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Reads one JSON value (including objects or arrays) from the provided reader and converts it to a model.
             </summary>
@@ -760,8 +748,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -771,8 +759,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="writer">The <see cref="T:System.Text.Json.Utf8JsonWriter" /> to write into.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="writer"> The writer to serialize the model to. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Writes the model to the provided <see cref="T:System.Text.Json.Utf8JsonWriter" />.
             </summary>
@@ -792,8 +780,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CosmosDB.ThroughputSettingData</ReturnType>
@@ -803,8 +791,8 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="data">The <see cref="T:System.BinaryData" /> to parse.</param>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="data"> The binary data to be processed. </param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Converts the provided <see cref="T:System.BinaryData" /> into a model.
             </summary>
@@ -825,8 +813,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -835,7 +823,7 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to consider when serializing and deserializing the model.</param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Gets the data interchange format (JSON, Xml, etc) that the model uses when communicating with the service.
             </summary>
@@ -855,8 +843,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CosmosDB</AssemblyName>
-        <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -865,7 +853,7 @@
         <Parameter Name="options" Type="System.ClientModel.Primitives.ModelReaderWriterOptions" />
       </Parameters>
       <Docs>
-        <param name="options">The <see cref="T:System.ClientModel.Primitives.ModelReaderWriterOptions" /> to use.</param>
+        <param name="options"> The client options for reading and writing models. </param>
         <summary>
             Writes the model into a <see cref="T:System.BinaryData" />.
             </summary>

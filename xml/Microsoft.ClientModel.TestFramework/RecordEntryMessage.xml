@@ -1,0 +1,175 @@
+<Type Name="RecordEntryMessage" FullName="Microsoft.ClientModel.TestFramework.RecordEntryMessage">
+  <TypeSignature Language="C#" Value="public class RecordEntryMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RecordEntryMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.RecordEntryMessage" />
+  <TypeSignature Language="VB.NET" Value="Public Class RecordEntryMessage" />
+  <TypeSignature Language="F#" Value="type RecordEntryMessage = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a recorded HTTP message entry containing headers and body data.
+            Used for storing and retrieving HTTP request/response information during test recording and playback.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecordEntryMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordEntryMessage.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public byte[]? Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Body" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordEntryMessage.Body" />
+      <MemberSignature Language="VB.NET" Value="Public Property Body As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Body : byte[] with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordEntryMessage.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the HTTP message body as a byte array.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SortedDictionary&lt;string,string[]&gt; Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SortedDictionary`2&lt;string, string[]&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.RecordEntryMessage.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public Property Headers As SortedDictionary(Of String, String())" />
+      <MemberSignature Language="F#" Value="member this.Headers : System.Collections.Generic.SortedDictionary&lt;string, string[]&gt; with get, set" Usage="Microsoft.ClientModel.TestFramework.RecordEntryMessage.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SortedDictionary&lt;System.String,System.String[]&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the HTTP headers for this message entry.
+            Headers are stored in a case-insensitive sorted dictionary where each header name maps to an array of values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextContentType">
+      <MemberSignature Language="C#" Value="public bool IsTextContentType (out System.Text.Encoding? encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsTextContentType([out] class System.Text.Encoding&amp; encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordEntryMessage.IsTextContentType(System.Text.Encoding@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsTextContentType (ByRef encoding As Encoding) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsTextContentType : Encoding -&gt; bool" Usage="recordEntryMessage.IsTextContentType encoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoding" Type="System.Text.Encoding" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="encoding">When this method returns, contains the text encoding if the content type is text-based; otherwise, null.</param>
+        <summary>
+            Determines whether the message has a text-based content type and retrieves the associated encoding.
+            </summary>
+        <returns>true if the content type is text-based and an encoding was determined; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetBodyAsText">
+      <MemberSignature Language="C#" Value="public bool TryGetBodyAsText (out string? text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetBodyAsText([out] string&amp; text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordEntryMessage.TryGetBodyAsText(System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetBodyAsText (ByRef text As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetBodyAsText : string -&gt; bool" Usage="recordEntryMessage.TryGetBodyAsText text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="text">When this method returns, contains the body content as a string if it's text-based; otherwise, null.</param>
+        <summary>
+            Attempts to retrieve the message body as a text string if it has a text-based content type.
+            </summary>
+        <returns>true if the body was successfully converted to text; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetContentType">
+      <MemberSignature Language="C#" Value="public bool TryGetContentType (out string? contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetContentType([out] string&amp; contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.RecordEntryMessage.TryGetContentType(System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetContentType (ByRef contentType As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetContentType : string -&gt; bool" Usage="recordEntryMessage.TryGetContentType contentType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">When this method returns, contains the Content-Type header value if found; otherwise, null.</param>
+        <summary>
+            Attempts to retrieve the Content-Type header value from the message headers.
+            </summary>
+        <returns>true if the Content-Type header was found and has exactly one value; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

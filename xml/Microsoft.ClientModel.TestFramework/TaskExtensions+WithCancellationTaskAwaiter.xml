@@ -1,0 +1,166 @@
+<Type Name="TaskExtensions+WithCancellationTaskAwaiter" FullName="Microsoft.ClientModel.TestFramework.TaskExtensions+WithCancellationTaskAwaiter">
+  <TypeSignature Language="C#" Value="public readonly struct TaskExtensions.WithCancellationTaskAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TaskExtensions/WithCancellationTaskAwaiter extends System.ValueType implements class System.Runtime.CompilerServices.ICriticalNotifyCompletion, class System.Runtime.CompilerServices.INotifyCompletion" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter" />
+  <TypeSignature Language="VB.NET" Value="Public Structure TaskExtensions.WithCancellationTaskAwaiter&#xA;Implements ICriticalNotifyCompletion" />
+  <TypeSignature Language="F#" Value="type TaskExtensions.WithCancellationTaskAwaiter = struct&#xA;    interface ICriticalNotifyCompletion&#xA;    interface INotifyCompletion" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.CompilerServices.ICriticalNotifyCompletion</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.CompilerServices.INotifyCompletion</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            An awaiter that adds cancellation support to a <see cref="T:System.Threading.Tasks.Task" />.
+            This awaiter will complete when either the task completes or the cancellation token is triggered.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WithCancellationTaskAwaiter (System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter awaiter, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.CompilerServices.ConfiguredTaskAwaitable/ConfiguredTaskAwaiter awaiter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.#ctor(System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (awaiter As ConfiguredTaskAwaitable.ConfiguredTaskAwaiter, cancellationToken As CancellationToken)" />
+      <MemberSignature Language="F#" Value="new Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter : System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter * System.Threading.CancellationToken -&gt; Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter" Usage="new Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter (awaiter, cancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="awaiter" Type="System.Runtime.CompilerServices.ConfiguredTaskAwaitable+ConfiguredTaskAwaiter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="awaiter">The task awaiter to wrap.</param>
+        <param name="cancellationToken">The cancellation token to observe.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter" /> struct.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResult">
+      <MemberSignature Language="C#" Value="public void GetResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.GetResult" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetResult ()" />
+      <MemberSignature Language="F#" Value="member this.GetResult : unit -&gt; unit" Usage="withCancellationTaskAwaiter.GetResult " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Ends the wait for the completion of the awaitable and returns the result.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OperationCanceledException">
+            Thrown if the cancellation token was triggered before the task completed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.IsCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsCompleted As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCompleted : bool" Usage="Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the awaitable has completed.
+            </summary>
+        <value>
+          <see langword="true" /> if the task is completed or the cancellation token has been triggered; otherwise, <see langword="false" />.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompleted">
+      <MemberSignature Language="C#" Value="public void OnCompleted (Action continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnCompleted(class System.Action continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.OnCompleted(System.Action)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OnCompleted (continuation As Action)" />
+      <MemberSignature Language="F#" Value="abstract member OnCompleted : Action -&gt; unit&#xA;override this.OnCompleted : Action -&gt; unit" Usage="withCancellationTaskAwaiter.OnCompleted continuation" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="continuation">The action to invoke when the operation completes.</param>
+        <summary>
+            Schedules the continuation action that's invoked when the instance completes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeOnCompleted">
+      <MemberSignature Language="C#" Value="public void UnsafeOnCompleted (Action continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnsafeOnCompleted(class System.Action continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.ClientModel.TestFramework.TaskExtensions.WithCancellationTaskAwaiter.UnsafeOnCompleted(System.Action)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnsafeOnCompleted (continuation As Action)" />
+      <MemberSignature Language="F#" Value="abstract member UnsafeOnCompleted : Action -&gt; unit&#xA;override this.UnsafeOnCompleted : Action -&gt; unit" Usage="withCancellationTaskAwaiter.UnsafeOnCompleted continuation" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.ClientModel.TestFramework</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="continuation">The action to invoke when the operation completes.</param>
+        <summary>
+            Schedules the continuation action that's invoked when the instance completes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -14,7 +14,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary> Model factory for models. </summary>
+    <summary> A factory class for creating instances of the models for mocking. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -42,11 +42,43 @@
         <param name="assignmentId"> Id of job assignment that assigns a worker that has accepted an offer to a job. </param>
         <param name="jobId"> Id of the job assigned. </param>
         <param name="workerId"> Id of the worker that has been assigned this job. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.AcceptJobOfferResult" />. </summary>
+        <summary> Response containing ids for the worker, job, and assignment from an accepted offer. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.AcceptJobOfferResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="assignmentId" />, <paramref name="jobId" /> or <paramref name="workerId" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BestWorkerMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.BestWorkerMode BestWorkerMode (int minConcurrentOffers = 0, int maxConcurrentOffers = 0, bool? bypassSelectors = default, Azure.Communication.JobRouter.RouterRule scoringRule = default, Azure.Communication.JobRouter.ScoringRuleOptions scoringRuleOptions = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.BestWorkerMode BestWorkerMode(int32 minConcurrentOffers, int32 maxConcurrentOffers, valuetype System.Nullable`1&lt;bool&gt; bypassSelectors, class Azure.Communication.JobRouter.RouterRule scoringRule, class Azure.Communication.JobRouter.ScoringRuleOptions scoringRuleOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.BestWorkerMode(System.Int32,System.Int32,System.Nullable{System.Boolean},Azure.Communication.JobRouter.RouterRule,Azure.Communication.JobRouter.ScoringRuleOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BestWorkerMode (Optional minConcurrentOffers As Integer = 0, Optional maxConcurrentOffers As Integer = 0, Optional bypassSelectors As Nullable(Of Boolean) = Nothing, Optional scoringRule As RouterRule = Nothing, Optional scoringRuleOptions As ScoringRuleOptions = Nothing) As BestWorkerMode" />
+      <MemberSignature Language="F#" Value="static member BestWorkerMode : int * int * Nullable&lt;bool&gt; * Azure.Communication.JobRouter.RouterRule * Azure.Communication.JobRouter.ScoringRuleOptions -&gt; Azure.Communication.JobRouter.BestWorkerMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.BestWorkerMode (minConcurrentOffers, maxConcurrentOffers, bypassSelectors, scoringRule, scoringRuleOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.BestWorkerMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minConcurrentOffers" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxConcurrentOffers" Type="System.Int32" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="bypassSelectors" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scoringRule" Type="Azure.Communication.JobRouter.RouterRule" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scoringRuleOptions" Type="Azure.Communication.JobRouter.ScoringRuleOptions" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="minConcurrentOffers"> Governs the minimum desired number of active concurrent offers a job can have. </param>
+        <param name="maxConcurrentOffers"> Governs the maximum number of active concurrent offers a job can have. </param>
+        <param name="bypassSelectors"> If set to true, then router will match workers to jobs even if they don't match label selectors. Warning: You may get workers that are not qualified for a job they are matched with if you set this variable to true. This flag is intended more for temporary usage. By default, set to false. </param>
+        <param name="scoringRule"> Define a scoring rule to use, when calculating a score to determine the best worker. If not set, will use a default scoring formula that uses the number of job labels that the worker labels match, as well as the number of label selectors the worker labels match and/or exceed using a logistic function (https://en.wikipedia.org/wiki/Logistic_function). </param>
+        <param name="scoringRuleOptions"> Options to configure 'scoringRule'. If not set, default values are used. </param>
+        <summary> Jobs are distributed to the worker with the strongest abilities available. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.BestWorkerMode" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CancelExceptionAction">
@@ -73,8 +105,34 @@
         <param name="id"> Unique Id of the exception action. </param>
         <param name="note"> A note that will be appended to a job's notes collection with the current timestamp. </param>
         <param name="dispositionCode"> Indicates the outcome of a job, populate this field with your own custom values. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.CancelExceptionAction" />. </summary>
+        <summary> An action that marks a job as cancelled. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.CancelExceptionAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelJobOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.CancelJobOptions CancelJobOptions (string note = default, string dispositionCode = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.CancelJobOptions CancelJobOptions(string note, string dispositionCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.CancelJobOptions(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CancelJobOptions (Optional note As String = Nothing, Optional dispositionCode As String = Nothing) As CancelJobOptions" />
+      <MemberSignature Language="F#" Value="static member CancelJobOptions : string * string -&gt; Azure.Communication.JobRouter.CancelJobOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.CancelJobOptions (note, dispositionCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.CancelJobOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="note" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dispositionCode" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="note"> A note that will be appended to a job's Notes collection with the current timestamp. </param>
+        <param name="dispositionCode"> Indicates the outcome of a job, populate this field with your own custom values. If not provided, default value of "Cancelled" is set. </param>
+        <summary> Request payload for cancelling a job. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.CancelJobOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,23 +164,63 @@
         <param name="id"> Id of a classification policy. </param>
         <param name="name"> Friendly name of this policy. </param>
         <param name="fallbackQueueId"> Id of a fallback queue to select if queue selector attachments doesn't find a match. </param>
-        <param name="queueSelectorAttachments">
-            Queue selector attachments used to resolve a queue for a job.
-            Please note <see cref="T:Azure.Communication.JobRouter.QueueSelectorAttachment" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.ConditionalQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.PassThroughQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.RuleEngineQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.StaticQueueSelectorAttachment" /> and <see cref="T:Azure.Communication.JobRouter.WeightedAllocationQueueSelectorAttachment" />.
-            </param>
-        <param name="prioritizationRule">
-            A rule to determine a priority score for a job.
-            Please note <see cref="T:Azure.Communication.JobRouter.RouterRule" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
-            </param>
-        <param name="workerSelectorAttachments">
-            Worker selector attachments used to attach worker selectors to a job.
-            Please note <see cref="T:Azure.Communication.JobRouter.WorkerSelectorAttachment" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.ConditionalWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.PassThroughWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.RuleEngineWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.StaticWorkerSelectorAttachment" /> and <see cref="T:Azure.Communication.JobRouter.WeightedAllocationWorkerSelectorAttachment" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ClassificationPolicy" />. </summary>
+        <param name="queueSelectorAttachments"> Queue selector attachments used to resolve a queue for a job. </param>
+        <param name="prioritizationRule"> A rule to determine a priority score for a job. </param>
+        <param name="workerSelectorAttachments"> Worker selector attachments used to attach worker selectors to a job. </param>
+        <summary> A container for the rules that govern how jobs are classified. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ClassificationPolicy" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseJobOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.CloseJobOptions CloseJobOptions (string dispositionCode = default, DateTimeOffset closeAt = default, string note = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.CloseJobOptions CloseJobOptions(string dispositionCode, valuetype System.DateTimeOffset closeAt, string note) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.CloseJobOptions(System.String,System.DateTimeOffset,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CloseJobOptions (Optional dispositionCode As String = Nothing, Optional closeAt As DateTimeOffset = Nothing, Optional note As String = Nothing) As CloseJobOptions" />
+      <MemberSignature Language="F#" Value="static member CloseJobOptions : string * DateTimeOffset * string -&gt; Azure.Communication.JobRouter.CloseJobOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.CloseJobOptions (dispositionCode, closeAt, note)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.CloseJobOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispositionCode" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="closeAt" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="note" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="dispositionCode"> Indicates the outcome of a job, populate this field with your own custom values. </param>
+        <param name="closeAt"> If not provided, worker capacity is released immediately along with a JobClosedEvent notification. If provided, worker capacity is released along with a JobClosedEvent notification at a future time in UTC. </param>
+        <param name="note"> A note that will be appended to a job's Notes collection with the current timestamp. </param>
+        <summary> Request payload for closing jobs. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.CloseJobOptions" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteJobOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.CompleteJobOptions CompleteJobOptions (string note = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.CompleteJobOptions CompleteJobOptions(string note) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.CompleteJobOptions(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompleteJobOptions (Optional note As String = Nothing) As CompleteJobOptions" />
+      <MemberSignature Language="F#" Value="static member CompleteJobOptions : string -&gt; Azure.Communication.JobRouter.CompleteJobOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.CompleteJobOptions note" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.CompleteJobOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="note" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="note"> A note that will be appended to a job's Notes collection with the current timestamp. </param>
+        <summary> Request payload for completing jobs. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.CompleteJobOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -146,13 +244,9 @@
         <Parameter Name="queueSelectors" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterQueueSelector&gt;" />
       </Parameters>
       <Docs>
-        <param name="condition">
-            The condition that must be true for the queue selectors to be attached.
-            Please note <see cref="T:Azure.Communication.JobRouter.RouterRule" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
-            </param>
+        <param name="condition"> The condition that must be true for the queue selectors to be attached. </param>
         <param name="queueSelectors"> The queue selectors to attach. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ConditionalQueueSelectorAttachment" />. </summary>
+        <summary> Describes a set of queue selectors that will be attached if the given condition resolves to true. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ConditionalQueueSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,14 +271,88 @@
         <Parameter Name="workerSelectors" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt;" />
       </Parameters>
       <Docs>
-        <param name="condition">
-            The condition that must be true for the worker selectors to be attached.
-            Please note <see cref="T:Azure.Communication.JobRouter.RouterRule" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
-            </param>
+        <param name="condition"> The condition that must be true for the worker selectors to be attached. </param>
         <param name="workerSelectors"> The worker selectors to attach. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ConditionalWorkerSelectorAttachment" />. </summary>
+        <summary> Describes a set of worker selectors that will be attached if the given condition resolves to true. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ConditionalWorkerSelectorAttachment" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclineJobOfferOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.DeclineJobOfferOptions DeclineJobOfferOptions (DateTimeOffset? retryOfferAt = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.DeclineJobOfferOptions DeclineJobOfferOptions(valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; retryOfferAt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.DeclineJobOfferOptions(System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeclineJobOfferOptions (Optional retryOfferAt As Nullable(Of DateTimeOffset) = Nothing) As DeclineJobOfferOptions" />
+      <MemberSignature Language="F#" Value="static member DeclineJobOfferOptions : Nullable&lt;DateTimeOffset&gt; -&gt; Azure.Communication.JobRouter.DeclineJobOfferOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.DeclineJobOfferOptions retryOfferAt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.DeclineJobOfferOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="retryOfferAt" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="retryOfferAt"> If the RetryOfferAt is not provided, then this job will not be offered again to the worker who declined this job unless the worker is de-registered and re-registered.  If a RetryOfferAt time is provided, then the job will be re-matched to eligible workers at the retry time in UTC.  The worker that declined the job will also be eligible for the job at that time. </param>
+        <summary> Request payload for declining offers. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.DeclineJobOfferOptions" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectMapRouterRule">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.DirectMapRouterRule DirectMapRouterRule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.DirectMapRouterRule DirectMapRouterRule() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.DirectMapRouterRule" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DirectMapRouterRule () As DirectMapRouterRule" />
+      <MemberSignature Language="F#" Value="static member DirectMapRouterRule : unit -&gt; Azure.Communication.JobRouter.DirectMapRouterRule" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.DirectMapRouterRule " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.DirectMapRouterRule</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> A rule that return the same labels as the input labels. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistributionMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.DistributionMode DistributionMode (int minConcurrentOffers = 0, int maxConcurrentOffers = 0, bool? bypassSelectors = default, string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.DistributionMode DistributionMode(int32 minConcurrentOffers, int32 maxConcurrentOffers, valuetype System.Nullable`1&lt;bool&gt; bypassSelectors, string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.DistributionMode(System.Int32,System.Int32,System.Nullable{System.Boolean},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DistributionMode (Optional minConcurrentOffers As Integer = 0, Optional maxConcurrentOffers As Integer = 0, Optional bypassSelectors As Nullable(Of Boolean) = Nothing, Optional kind As String = Nothing) As DistributionMode" />
+      <MemberSignature Language="F#" Value="static member DistributionMode : int * int * Nullable&lt;bool&gt; * string -&gt; Azure.Communication.JobRouter.DistributionMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.DistributionMode (minConcurrentOffers, maxConcurrentOffers, bypassSelectors, kind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.DistributionMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minConcurrentOffers" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxConcurrentOffers" Type="System.Int32" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="bypassSelectors" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="kind" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="minConcurrentOffers"> Governs the minimum desired number of active concurrent offers a job can have. </param>
+        <param name="maxConcurrentOffers"> Governs the maximum number of active concurrent offers a job can have. </param>
+        <param name="bypassSelectors"> If set to true, then router will match workers to jobs even if they don't match label selectors. Warning: You may get workers that are not qualified for a job they are matched with if you set this variable to true. This flag is intended more for temporary usage. By default, set to false. </param>
+        <param name="kind"> The type discriminator describing a sub-type of DistributionMode. </param>
+        <summary>
+            Abstract base class for defining a distribution mode.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.BestWorkerMode" />, <see cref="T:Azure.Communication.JobRouter.LongestIdleMode" />, and <see cref="T:Azure.Communication.JobRouter.RoundRobinMode" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.DistributionMode" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -214,12 +382,8 @@
         <param name="id"> Id of a distribution policy. </param>
         <param name="name"> Friendly name of this policy. </param>
         <param name="offerExpiresAfter"> Number of seconds after which any offers created under this policy will be expired. </param>
-        <param name="mode">
-            Mode governing the specific distribution method.
-            Please note <see cref="T:Azure.Communication.JobRouter.DistributionMode" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.BestWorkerMode" />, <see cref="T:Azure.Communication.JobRouter.LongestIdleMode" /> and <see cref="T:Azure.Communication.JobRouter.RoundRobinMode" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.DistributionPolicy" />. </summary>
+        <param name="mode"> Mode governing the specific distribution method. </param>
+        <summary> Policy governing how jobs are distributed to workers. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.DistributionPolicy" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -248,7 +412,10 @@
       <Docs>
         <param name="id"> Unique Id of the exception action. </param>
         <param name="kind"> The type discriminator describing a sub-type of ExceptionAction. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ExceptionAction" />. </summary>
+        <summary>
+            The action to take when the exception is triggered.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.CancelExceptionAction" />, <see cref="T:Azure.Communication.JobRouter.ManualReclassifyExceptionAction" />, and <see cref="T:Azure.Communication.JobRouter.ReclassifyExceptionAction" />.
+            </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ExceptionAction" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -278,7 +445,7 @@
         <param name="id"> Id of an exception policy. </param>
         <param name="name"> Friendly name of this policy. </param>
         <param name="exceptionRules"> A collection of exception rules on the exception policy. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ExceptionPolicy" />. </summary>
+        <summary> A policy that defines actions to execute when exception are triggered. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ExceptionPolicy" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -305,18 +472,63 @@
       </Parameters>
       <Docs>
         <param name="id"> Id of an exception rule. </param>
-        <param name="trigger">
-            The trigger for this exception rule.
-            Please note <see cref="T:Azure.Communication.JobRouter.ExceptionTrigger" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.QueueLengthExceptionTrigger" /> and <see cref="T:Azure.Communication.JobRouter.WaitTimeExceptionTrigger" />.
-            </param>
-        <param name="actions">
-            A collection of actions to perform once the exception is triggered.
-            Please note <see cref="T:Azure.Communication.JobRouter.ExceptionAction" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.CancelExceptionAction" />, <see cref="T:Azure.Communication.JobRouter.ManualReclassifyExceptionAction" /> and <see cref="T:Azure.Communication.JobRouter.ReclassifyExceptionAction" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ExceptionRule" />. </summary>
+        <param name="trigger"> The trigger for this exception rule. </param>
+        <param name="actions"> A collection of actions to perform once the exception is triggered. </param>
+        <summary> A rule that defines actions to execute upon a specific trigger. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ExceptionRule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionTrigger">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.ExceptionTrigger ExceptionTrigger (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.ExceptionTrigger ExceptionTrigger(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.ExceptionTrigger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExceptionTrigger (Optional kind As String = Nothing) As ExceptionTrigger" />
+      <MemberSignature Language="F#" Value="static member ExceptionTrigger : string -&gt; Azure.Communication.JobRouter.ExceptionTrigger" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.ExceptionTrigger kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.ExceptionTrigger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The type discriminator describing a sub-type of ExceptionTrigger. </param>
+        <summary>
+            Abstract base class for defining a trigger for exception rules.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.QueueLengthExceptionTrigger" /> and <see cref="T:Azure.Communication.JobRouter.WaitTimeExceptionTrigger" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.ExceptionTrigger" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionRouterRule">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.ExpressionRouterRule ExpressionRouterRule (string language = default, string expression = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.ExpressionRouterRule ExpressionRouterRule(string language, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.ExpressionRouterRule(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ExpressionRouterRule (Optional language As String = Nothing, Optional expression As String = Nothing) As ExpressionRouterRule" />
+      <MemberSignature Language="F#" Value="static member ExpressionRouterRule : string * string -&gt; Azure.Communication.JobRouter.ExpressionRouterRule" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.ExpressionRouterRule (language, expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.ExpressionRouterRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expression" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="language"> The expression language to compile to and execute. </param>
+        <param name="expression"> An expression to evaluate. Should contain return statement with calculated values. </param>
+        <summary> A rule providing inline expression rules. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -342,8 +554,94 @@
       <Docs>
         <param name="functionUri"> URL for Azure Function. </param>
         <param name="credential"> Credentials used to access Azure function rule. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />. </summary>
+        <summary> A rule providing a binding to an HTTP Triggered Azure Function. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionRouterRuleCredential">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.FunctionRouterRuleCredential FunctionRouterRuleCredential (string functionKey = default, string appKey = default, string clientId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.FunctionRouterRuleCredential FunctionRouterRuleCredential(string functionKey, string appKey, string clientId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.FunctionRouterRuleCredential(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FunctionRouterRuleCredential (Optional functionKey As String = Nothing, Optional appKey As String = Nothing, Optional clientId As String = Nothing) As FunctionRouterRuleCredential" />
+      <MemberSignature Language="F#" Value="static member FunctionRouterRuleCredential : string * string * string -&gt; Azure.Communication.JobRouter.FunctionRouterRuleCredential" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.FunctionRouterRuleCredential (functionKey, appKey, clientId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.FunctionRouterRuleCredential</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionKey" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="appKey" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clientId" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="functionKey"> Access key scoped to a particular function. </param>
+        <param name="appKey"> Access key scoped to a Azure Function app. This key grants access to all functions under the app. </param>
+        <param name="clientId"> Client id, when AppKey is provided In context of Azure function, this is usually the name of the key. </param>
+        <summary> Credentials used to access Azure function rule. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.FunctionRouterRuleCredential" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobMatchingMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.JobMatchingMode JobMatchingMode (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.JobMatchingMode JobMatchingMode(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.JobMatchingMode(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function JobMatchingMode (Optional kind As String = Nothing) As JobMatchingMode" />
+      <MemberSignature Language="F#" Value="static member JobMatchingMode : string -&gt; Azure.Communication.JobRouter.JobMatchingMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.JobMatchingMode kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.JobMatchingMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The type discriminator describing a sub-type of JobMatchingMode. </param>
+        <summary>
+            A matching mode of one of the following types:
+            QueueAndMatchMode: Used when matching worker to a job is required to be done right after job is queued.
+            ScheduleAndSuspendMode: Used for scheduling jobs to be queued at a future time. At specified time, matching of a worker to the job will not start automatically.
+            SuspendMode: Used when matching workers to a job needs to be suspended.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.ScheduleAndSuspendMode" />, <see cref="T:Azure.Communication.JobRouter.QueueAndMatchMode" />, and <see cref="T:Azure.Communication.JobRouter.SuspendMode" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.JobMatchingMode" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LongestIdleMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.LongestIdleMode LongestIdleMode (int minConcurrentOffers = 0, int maxConcurrentOffers = 0, bool? bypassSelectors = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.LongestIdleMode LongestIdleMode(int32 minConcurrentOffers, int32 maxConcurrentOffers, valuetype System.Nullable`1&lt;bool&gt; bypassSelectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.LongestIdleMode(System.Int32,System.Int32,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LongestIdleMode (Optional minConcurrentOffers As Integer = 0, Optional maxConcurrentOffers As Integer = 0, Optional bypassSelectors As Nullable(Of Boolean) = Nothing) As LongestIdleMode" />
+      <MemberSignature Language="F#" Value="static member LongestIdleMode : int * int * Nullable&lt;bool&gt; -&gt; Azure.Communication.JobRouter.LongestIdleMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.LongestIdleMode (minConcurrentOffers, maxConcurrentOffers, bypassSelectors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.LongestIdleMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minConcurrentOffers" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxConcurrentOffers" Type="System.Int32" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="bypassSelectors" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="minConcurrentOffers"> Governs the minimum desired number of active concurrent offers a job can have. </param>
+        <param name="maxConcurrentOffers"> Governs the maximum number of active concurrent offers a job can have. </param>
+        <param name="bypassSelectors"> If set to true, then router will match workers to jobs even if they don't match label selectors. Warning: You may get workers that are not qualified for a job they are matched with if you set this variable to true. This flag is intended more for temporary usage. By default, set to false. </param>
+        <summary> Jobs are directed to the worker who has been idle longest. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.LongestIdleMode" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -373,8 +671,34 @@
         <param name="queueId"> Updated QueueId. </param>
         <param name="priority"> Updated Priority. </param>
         <param name="workerSelectors"> Updated WorkerSelectors. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ManualReclassifyExceptionAction" />. </summary>
+        <summary> An action that manually reclassifies a job by providing the queue, priority and worker selectors. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ManualReclassifyExceptionAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OAuth2WebhookClientCredential">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.OAuth2WebhookClientCredential OAuth2WebhookClientCredential (string clientId = default, string clientSecret = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.OAuth2WebhookClientCredential OAuth2WebhookClientCredential(string clientId, string clientSecret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.OAuth2WebhookClientCredential(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function OAuth2WebhookClientCredential (Optional clientId As String = Nothing, Optional clientSecret As String = Nothing) As OAuth2WebhookClientCredential" />
+      <MemberSignature Language="F#" Value="static member OAuth2WebhookClientCredential : string * string -&gt; Azure.Communication.JobRouter.OAuth2WebhookClientCredential" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.OAuth2WebhookClientCredential (clientId, clientSecret)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.OAuth2WebhookClientCredential</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientId" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="clientSecret" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="clientId"> ClientId for Contoso Authorization server. </param>
+        <param name="clientSecret"> Client secret for Contoso Authorization server. </param>
+        <summary> OAuth2.0 Credentials used to Contoso's Authorization server. Reference: https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.OAuth2WebhookClientCredential" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -400,7 +724,7 @@
       <Docs>
         <param name="key"> The label key to query against. </param>
         <param name="labelOperator"> Describes how the value of the label is compared to the value pass through. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.PassThroughQueueSelectorAttachment" />. </summary>
+        <summary> Attaches a queue selector where the value is passed through from a job's label with the same key. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.PassThroughQueueSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -428,8 +752,29 @@
         <param name="key"> The label key to query against. </param>
         <param name="labelOperator"> Describes how the value of the label is compared to the value pass through. </param>
         <param name="expiresAfter"> Describes how long the attached label selector is valid in seconds. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.PassThroughWorkerSelectorAttachment" />. </summary>
+        <summary> Attaches a worker selector where the value is passed through from a job's label with the same key. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.PassThroughWorkerSelectorAttachment" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueAndMatchMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.QueueAndMatchMode QueueAndMatchMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.QueueAndMatchMode QueueAndMatchMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.QueueAndMatchMode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueueAndMatchMode () As QueueAndMatchMode" />
+      <MemberSignature Language="F#" Value="static member QueueAndMatchMode : unit -&gt; Azure.Communication.JobRouter.QueueAndMatchMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.QueueAndMatchMode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.QueueAndMatchMode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Describes a matching mode where matching worker to a job is automatically started after job is queued successfully. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.QueueAndMatchMode" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -453,8 +798,35 @@
       </Parameters>
       <Docs>
         <param name="threshold"> Threshold of number of jobs ahead in the queue to for this trigger to fire. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.QueueLengthExceptionTrigger" />. </summary>
+        <summary> Trigger for an exception action on exceeding queue length. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.QueueLengthExceptionTrigger" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueSelectorAttachment">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.QueueSelectorAttachment QueueSelectorAttachment (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.QueueSelectorAttachment QueueSelectorAttachment(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.QueueSelectorAttachment(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function QueueSelectorAttachment (Optional kind As String = Nothing) As QueueSelectorAttachment" />
+      <MemberSignature Language="F#" Value="static member QueueSelectorAttachment : string -&gt; Azure.Communication.JobRouter.QueueSelectorAttachment" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.QueueSelectorAttachment kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.QueueSelectorAttachment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The type discriminator describing a sub-type of QueueSelectorAttachment. </param>
+        <summary>
+            An attachment of queue selectors to resolve a queue to a job from a classification policy.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.ConditionalQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.PassThroughQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.RuleEngineQueueSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.StaticQueueSelectorAttachment" />, and <see cref="T:Azure.Communication.JobRouter.WeightedAllocationQueueSelectorAttachment" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.QueueSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -480,8 +852,64 @@
       <Docs>
         <param name="weight"> The percentage of this weight, expressed as a fraction of 1. </param>
         <param name="queueSelectors"> A collection of queue selectors that will be applied if this allocation is selected. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.QueueWeightedAllocation" />. </summary>
+        <summary> Contains the weight percentage and queue selectors to be applied if selected for weighted distributions. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.QueueWeightedAllocation" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReclassifyExceptionAction">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.ReclassifyExceptionAction ReclassifyExceptionAction (string id = default, string classificationPolicyId = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; labelsToUpsert = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.ReclassifyExceptionAction ReclassifyExceptionAction(string id, string classificationPolicyId, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; labelsToUpsert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.ReclassifyExceptionAction(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.BinaryData})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ReclassifyExceptionAction (Optional id As String = Nothing, Optional classificationPolicyId As String = Nothing, Optional labelsToUpsert As IDictionary(Of String, BinaryData) = Nothing) As ReclassifyExceptionAction" />
+      <MemberSignature Language="F#" Value="static member ReclassifyExceptionAction : string * string * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; -&gt; Azure.Communication.JobRouter.ReclassifyExceptionAction" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.ReclassifyExceptionAction (id, classificationPolicyId, labelsToUpsert)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.ReclassifyExceptionAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="classificationPolicyId" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labelsToUpsert" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="id"> Unique Id of the exception action. </param>
+        <param name="classificationPolicyId"> The new classification policy that will determine queue, priority and worker selectors. </param>
+        <param name="labelsToUpsert"> Dictionary containing the labels to update (or add if not existing) in key-value pairs.  Values must be primitive values - number, string, boolean. </param>
+        <summary> An action that modifies labels on a job and then reclassifies it. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.ReclassifyExceptionAction" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoundRobinMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RoundRobinMode RoundRobinMode (int minConcurrentOffers = 0, int maxConcurrentOffers = 0, bool? bypassSelectors = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RoundRobinMode RoundRobinMode(int32 minConcurrentOffers, int32 maxConcurrentOffers, valuetype System.Nullable`1&lt;bool&gt; bypassSelectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RoundRobinMode(System.Int32,System.Int32,System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RoundRobinMode (Optional minConcurrentOffers As Integer = 0, Optional maxConcurrentOffers As Integer = 0, Optional bypassSelectors As Nullable(Of Boolean) = Nothing) As RoundRobinMode" />
+      <MemberSignature Language="F#" Value="static member RoundRobinMode : int * int * Nullable&lt;bool&gt; -&gt; Azure.Communication.JobRouter.RoundRobinMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RoundRobinMode (minConcurrentOffers, maxConcurrentOffers, bypassSelectors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RoundRobinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minConcurrentOffers" Type="System.Int32" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxConcurrentOffers" Type="System.Int32" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="bypassSelectors" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="minConcurrentOffers"> Governs the minimum desired number of active concurrent offers a job can have. </param>
+        <param name="maxConcurrentOffers"> Governs the maximum number of active concurrent offers a job can have. </param>
+        <param name="bypassSelectors"> If set to true, then router will match workers to jobs even if they don't match label selectors. Warning: You may get workers that are not qualified for a job they are matched with if you set this variable to true. This flag is intended more for temporary usage. By default, set to false. </param>
+        <summary> Jobs are distributed in order to workers, starting with the worker that is after the last worker to receive a job. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RoundRobinMode" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -509,8 +937,66 @@
         <param name="channelId"> Id of a channel. </param>
         <param name="capacityCostPerJob"> The amount of capacity that an instance of a job of this channel will consume of the total worker capacity. </param>
         <param name="maxNumberOfJobs"> The maximum number of jobs that can be supported concurrently for this channel. Value must be greater than zero. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterChannel" />. </summary>
+        <summary> Represents the capacity a job in this channel will consume from a worker. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterChannel" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterJob">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterJob RouterJob (Azure.ETag eTag = default, string id = default, string channelReference = default, Azure.Communication.JobRouter.RouterJobStatus? status = default, DateTimeOffset? enqueuedAt = default, string channelId = default, string classificationPolicyId = default, string queueId = default, int? priority = default, string dispositionCode = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt; requestedWorkerSelectors = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt; attachedWorkerSelectors = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; labels = default, System.Collections.Generic.IReadOnlyDictionary&lt;string,Azure.Communication.JobRouter.RouterJobAssignment&gt; assignments = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; tags = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterJobNote&gt; notes = default, DateTimeOffset? scheduledAt = default, Azure.Communication.JobRouter.JobMatchingMode matchingMode = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterJob RouterJob(valuetype Azure.ETag eTag, string id, string channelReference, valuetype System.Nullable`1&lt;valuetype Azure.Communication.JobRouter.RouterJobStatus&gt; status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; enqueuedAt, string channelId, string classificationPolicyId, string queueId, valuetype System.Nullable`1&lt;int32&gt; priority, string dispositionCode, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterWorkerSelector&gt; requestedWorkerSelectors, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterWorkerSelector&gt; attachedWorkerSelectors, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; labels, class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Azure.Communication.JobRouter.RouterJobAssignment&gt; assignments, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; tags, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterJobNote&gt; notes, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; scheduledAt, class Azure.Communication.JobRouter.JobMatchingMode matchingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterJob(Azure.ETag,System.String,System.String,System.Nullable{Azure.Communication.JobRouter.RouterJobStatus},System.Nullable{System.DateTimeOffset},System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterWorkerSelector},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterWorkerSelector},System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IReadOnlyDictionary{System.String,Azure.Communication.JobRouter.RouterJobAssignment},System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterJobNote},System.Nullable{System.DateTimeOffset},Azure.Communication.JobRouter.JobMatchingMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterJob (Optional eTag As ETag = Nothing, Optional id As String = Nothing, Optional channelReference As String = Nothing, Optional status As Nullable(Of RouterJobStatus) = Nothing, Optional enqueuedAt As Nullable(Of DateTimeOffset) = Nothing, Optional channelId As String = Nothing, Optional classificationPolicyId As String = Nothing, Optional queueId As String = Nothing, Optional priority As Nullable(Of Integer) = Nothing, Optional dispositionCode As String = Nothing, Optional requestedWorkerSelectors As IEnumerable(Of RouterWorkerSelector) = Nothing, Optional attachedWorkerSelectors As IEnumerable(Of RouterWorkerSelector) = Nothing, Optional labels As IDictionary(Of String, BinaryData) = Nothing, Optional assignments As IReadOnlyDictionary(Of String, RouterJobAssignment) = Nothing, Optional tags As IDictionary(Of String, BinaryData) = Nothing, Optional notes As IEnumerable(Of RouterJobNote) = Nothing, Optional scheduledAt As Nullable(Of DateTimeOffset) = Nothing, Optional matchingMode As JobMatchingMode = Nothing) As RouterJob" />
+      <MemberSignature Language="F#" Value="static member RouterJob : Azure.ETag * string * string * Nullable&lt;Azure.Communication.JobRouter.RouterJobStatus&gt; * Nullable&lt;DateTimeOffset&gt; * string * string * string * Nullable&lt;int&gt; * string * seq&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt; * seq&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * System.Collections.Generic.IReadOnlyDictionary&lt;string, Azure.Communication.JobRouter.RouterJobAssignment&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * seq&lt;Azure.Communication.JobRouter.RouterJobNote&gt; * Nullable&lt;DateTimeOffset&gt; * Azure.Communication.JobRouter.JobMatchingMode -&gt; Azure.Communication.JobRouter.RouterJob" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterJob (eTag, id, channelReference, status, enqueuedAt, channelId, classificationPolicyId, queueId, priority, dispositionCode, requestedWorkerSelectors, attachedWorkerSelectors, labels, assignments, tags, notes, scheduledAt, matchingMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterJob</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eTag" Type="Azure.ETag" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="id" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="channelReference" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.Communication.JobRouter.RouterJobStatus&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="enqueuedAt" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="channelId" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="classificationPolicyId" Type="System.String" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="queueId" Type="System.String" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="priority" Type="System.Nullable&lt;System.Int32&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="dispositionCode" Type="System.String" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="requestedWorkerSelectors" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="attachedWorkerSelectors" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerSelector&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labels" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="assignments" Type="System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Azure.Communication.JobRouter.RouterJobAssignment&gt;" Index="13" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="14" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="notes" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterJobNote&gt;" Index="15" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scheduledAt" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="16" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="matchingMode" Type="Azure.Communication.JobRouter.JobMatchingMode" Index="17" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="eTag"> The entity tag for this resource. </param>
+        <param name="id"> Id of a job. </param>
+        <param name="channelReference"> Reference to an external parent context, eg. call ID. </param>
+        <param name="status"> The status of the job. </param>
+        <param name="enqueuedAt"> Timestamp a job was queued in UTC. </param>
+        <param name="channelId"> The channel identifier. eg. voice, chat, etc. </param>
+        <param name="classificationPolicyId"> Id of a classification policy used for classifying this job. </param>
+        <param name="queueId"> Id of a queue that this job is queued to. </param>
+        <param name="priority"> Priority of this job. Value must be between -100 to 100. </param>
+        <param name="dispositionCode"> Reason code for cancelled or closed jobs. </param>
+        <param name="requestedWorkerSelectors"> A collection of manually specified worker selectors, which a worker must satisfy in order to process this job. </param>
+        <param name="attachedWorkerSelectors"> A collection of worker selectors attached by a classification policy, which a worker must satisfy in order to process this job. </param>
+        <param name="labels"> A set of key/value pairs that are identifying attributes used by the rules engines to make decisions. Values must be primitive values - number, string, boolean. </param>
+        <param name="assignments"> A collection of the assignments of the job. Key is AssignmentId. </param>
+        <param name="tags"> A set of non-identifying attributes attached to this job. Values must be primitive values - number, string, boolean. </param>
+        <param name="notes"> Notes attached to a job, sorted by timestamp. </param>
+        <param name="scheduledAt"> If set, job will be scheduled to be enqueued at a given time. </param>
+        <param name="matchingMode"> If provided, will determine how job matching will be carried out. Default mode: QueueAndMatchMode. </param>
+        <summary> A unit of work to be routed. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterJob" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -542,7 +1028,7 @@
         <param name="assignedAt"> Timestamp when the job was assigned to a worker in UTC. </param>
         <param name="completedAt"> Timestamp when the job was marked as completed after being assigned in UTC. </param>
         <param name="closedAt"> Timestamp when the job was marked as closed after being completed in UTC. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterJobAssignment" />. </summary>
+        <summary> Assignment details of a job to a worker. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterJobAssignment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -569,7 +1055,7 @@
       <Docs>
         <param name="message"> The message contained in the note. </param>
         <param name="addedAt"> The time at which the note was added in UTC. If not provided, will default to the current time. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterJobNote" />. </summary>
+        <summary> A note attached to a job. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterJobNote" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -602,7 +1088,7 @@
         <param name="capacityCost"> The capacity cost consumed by the job offer. </param>
         <param name="offeredAt"> Timestamp when the offer was created in UTC. </param>
         <param name="expiresAt"> Timestamp when the offer will expire in UTC. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterJobOffer" />. </summary>
+        <summary> An offer of a job to a worker. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterJobOffer" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -634,8 +1120,70 @@
         <param name="queueId"> Id of the queue this job is enqueued in. </param>
         <param name="queueLength"> Length of the queue: total number of enqueued jobs. </param>
         <param name="estimatedWaitTime"> Estimated wait time of the job rounded up to the nearest minute. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterJobPositionDetails" />. </summary>
+        <summary> Position and estimated wait time for a job. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterJobPositionDetails" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterQueue">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterQueue RouterQueue (Azure.ETag eTag = default, string id = default, string name = default, string distributionPolicyId = default, System.Collections.Generic.IDictionary&lt;string,object&gt; labels = default, string exceptionPolicyId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterQueue RouterQueue(valuetype Azure.ETag eTag, string id, string name, string distributionPolicyId, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; labels, string exceptionPolicyId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterQueue(Azure.ETag,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterQueue (Optional eTag As ETag = Nothing, Optional id As String = Nothing, Optional name As String = Nothing, Optional distributionPolicyId As String = Nothing, Optional labels As IDictionary(Of String, Object) = Nothing, Optional exceptionPolicyId As String = Nothing) As RouterQueue" />
+      <MemberSignature Language="F#" Value="static member RouterQueue : Azure.ETag * string * string * string * System.Collections.Generic.IDictionary&lt;string, obj&gt; * string -&gt; Azure.Communication.JobRouter.RouterQueue" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterQueue (eTag, id, name, distributionPolicyId, labels, exceptionPolicyId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eTag" Type="Azure.ETag" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="id" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="name" Type="System.String" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="distributionPolicyId" Type="System.String" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labels" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="exceptionPolicyId" Type="System.String" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="eTag"> The entity tag for this resource. </param>
+        <param name="id"> Id of a queue. </param>
+        <param name="name"> Friendly name of this queue. </param>
+        <param name="distributionPolicyId"> Id of a distribution policy that will determine how a job is distributed to workers. </param>
+        <param name="labels"> A set of key/value pairs that are identifying attributes used by the rules engines to make decisions. Values must be primitive values - number, string, boolean. </param>
+        <param name="exceptionPolicyId"> Id of an exception policy that determines various job escalation rules. </param>
+        <summary> A queue that can contain jobs to be routed. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterQueue" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterQueueSelector">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterQueueSelector RouterQueueSelector (string key = default, Azure.Communication.JobRouter.LabelOperator labelOperator = default, BinaryData value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterQueueSelector RouterQueueSelector(string key, valuetype Azure.Communication.JobRouter.LabelOperator labelOperator, class System.BinaryData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterQueueSelector(System.String,Azure.Communication.JobRouter.LabelOperator,System.BinaryData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterQueueSelector (Optional key As String = Nothing, Optional labelOperator As LabelOperator = Nothing, Optional value As BinaryData = Nothing) As RouterQueueSelector" />
+      <MemberSignature Language="F#" Value="static member RouterQueueSelector : string * Azure.Communication.JobRouter.LabelOperator * BinaryData -&gt; Azure.Communication.JobRouter.RouterQueueSelector" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterQueueSelector (key, labelOperator, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterQueueSelector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labelOperator" Type="Azure.Communication.JobRouter.LabelOperator" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.BinaryData" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="key"> The label key to query against. </param>
+        <param name="labelOperator"> Describes how the value of the label is compared to the value defined on the label selector. </param>
+        <param name="value"> The value to compare against the actual label value with the given operator. Values must be primitive values - number, string, boolean. </param>
+        <summary> Describes a condition that must be met against a set of labels for queue selection. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterQueueSelector" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -664,8 +1212,88 @@
         <param name="length"> Length of the queue: total number of enqueued jobs. </param>
         <param name="estimatedWaitTimes"> The estimated wait time of this queue rounded up to the nearest minute, grouped by job priority. </param>
         <param name="longestJobWaitTimeMinutes"> The wait time of the job that has been enqueued in this queue for the longest. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterQueueStatistics" />. </summary>
+        <summary> Statistics for the queue. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterQueueStatistics" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterRule">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterRule RouterRule (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterRule RouterRule(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterRule(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterRule (Optional kind As String = Nothing) As RouterRule" />
+      <MemberSignature Language="F#" Value="static member RouterRule : string -&gt; Azure.Communication.JobRouter.RouterRule" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterRule kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The type discriminator describing a sub-type of RouterRule. </param>
+        <summary>
+            A rule of one of the following types:
+            StaticRule:  A rule providing static rules that always return the same result, regardless of input.
+            DirectMapRule:  A rule that return the same labels as the input labels.
+            ExpressionRule: A rule providing inline expression rules.
+            FunctionRule: A rule providing a binding to an HTTP Triggered Azure Function.
+            WebhookRule: A rule providing a binding to a webserver following OAuth2.0 authentication protocol.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" />, and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterRule" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterWorker">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterWorker RouterWorker (Azure.ETag eTag = default, string id = default, Azure.Communication.JobRouter.RouterWorkerState? state = default, System.Collections.Generic.IEnumerable&lt;string&gt; queues = default, int? capacity = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; labels = default, System.Collections.Generic.IDictionary&lt;string,BinaryData&gt; tags = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterChannel&gt; channels = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterJobOffer&gt; offers = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerAssignment&gt; assignedJobs = default, double? loadRatio = default, bool? availableForOffers = default, int? maxConcurrentOffers = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterWorker RouterWorker(valuetype Azure.ETag eTag, string id, valuetype System.Nullable`1&lt;valuetype Azure.Communication.JobRouter.RouterWorkerState&gt; state, class System.Collections.Generic.IEnumerable`1&lt;string&gt; queues, valuetype System.Nullable`1&lt;int32&gt; capacity, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; labels, class System.Collections.Generic.IDictionary`2&lt;string, class System.BinaryData&gt; tags, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterChannel&gt; channels, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterJobOffer&gt; offers, class System.Collections.Generic.IEnumerable`1&lt;class Azure.Communication.JobRouter.RouterWorkerAssignment&gt; assignedJobs, valuetype System.Nullable`1&lt;float64&gt; loadRatio, valuetype System.Nullable`1&lt;bool&gt; availableForOffers, valuetype System.Nullable`1&lt;int32&gt; maxConcurrentOffers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterWorker(Azure.ETag,System.String,System.Nullable{Azure.Communication.JobRouter.RouterWorkerState},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IDictionary{System.String,System.BinaryData},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterChannel},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterJobOffer},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.RouterWorkerAssignment},System.Nullable{System.Double},System.Nullable{System.Boolean},System.Nullable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterWorker (Optional eTag As ETag = Nothing, Optional id As String = Nothing, Optional state As Nullable(Of RouterWorkerState) = Nothing, Optional queues As IEnumerable(Of String) = Nothing, Optional capacity As Nullable(Of Integer) = Nothing, Optional labels As IDictionary(Of String, BinaryData) = Nothing, Optional tags As IDictionary(Of String, BinaryData) = Nothing, Optional channels As IEnumerable(Of RouterChannel) = Nothing, Optional offers As IEnumerable(Of RouterJobOffer) = Nothing, Optional assignedJobs As IEnumerable(Of RouterWorkerAssignment) = Nothing, Optional loadRatio As Nullable(Of Double) = Nothing, Optional availableForOffers As Nullable(Of Boolean) = Nothing, Optional maxConcurrentOffers As Nullable(Of Integer) = Nothing) As RouterWorker" />
+      <MemberSignature Language="F#" Value="static member RouterWorker : Azure.ETag * string * Nullable&lt;Azure.Communication.JobRouter.RouterWorkerState&gt; * seq&lt;string&gt; * Nullable&lt;int&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * System.Collections.Generic.IDictionary&lt;string, BinaryData&gt; * seq&lt;Azure.Communication.JobRouter.RouterChannel&gt; * seq&lt;Azure.Communication.JobRouter.RouterJobOffer&gt; * seq&lt;Azure.Communication.JobRouter.RouterWorkerAssignment&gt; * Nullable&lt;double&gt; * Nullable&lt;bool&gt; * Nullable&lt;int&gt; -&gt; Azure.Communication.JobRouter.RouterWorker" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterWorker (eTag, id, state, queues, capacity, labels, tags, channels, offers, assignedJobs, loadRatio, availableForOffers, maxConcurrentOffers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterWorker</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eTag" Type="Azure.ETag" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="id" Type="System.String" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="state" Type="System.Nullable&lt;Azure.Communication.JobRouter.RouterWorkerState&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="queues" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="capacity" Type="System.Nullable&lt;System.Int32&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labels" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="tags" Type="System.Collections.Generic.IDictionary&lt;System.String,System.BinaryData&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="channels" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterChannel&gt;" Index="7" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="offers" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterJobOffer&gt;" Index="8" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="assignedJobs" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.RouterWorkerAssignment&gt;" Index="9" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="loadRatio" Type="System.Nullable&lt;System.Double&gt;" Index="10" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="availableForOffers" Type="System.Nullable&lt;System.Boolean&gt;" Index="11" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="maxConcurrentOffers" Type="System.Nullable&lt;System.Int32&gt;" Index="12" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="eTag"> The entity tag for this resource. </param>
+        <param name="id"> Id of a worker. </param>
+        <param name="state"> Current state of a worker. </param>
+        <param name="queues"> Collection of queue(s) that this worker can receive work from. </param>
+        <param name="capacity"> The total capacity score this worker has to manage multiple concurrent jobs. </param>
+        <param name="labels"> A set of key/value pairs that are identifying attributes used by the rules engines to make decisions. Values must be primitive values - number, string, boolean. </param>
+        <param name="tags"> A set of non-identifying attributes attached to this worker. Values must be primitive values - number, string, boolean. </param>
+        <param name="channels"> Collection of channel(s) this worker can handle and their impact on the workers capacity. </param>
+        <param name="offers"> A list of active offers issued to this worker. </param>
+        <param name="assignedJobs"> A list of assigned jobs attached to this worker. </param>
+        <param name="loadRatio"> A value indicating the workers capacity. A value of '1' means all capacity is consumed. A value of '0' means no capacity is currently consumed. </param>
+        <param name="availableForOffers"> A flag indicating this worker is open to receive offers or not. </param>
+        <param name="maxConcurrentOffers"> If this is set, the worker will only receive up to this many new offers at a time. </param>
+        <summary> An entity for jobs to be routed to. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterWorker" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -695,11 +1323,47 @@
         <param name="jobId"> Id of the job assigned. </param>
         <param name="capacityCost"> The amount of capacity this assignment has consumed on the worker. </param>
         <param name="assignedAt"> The assignment time of the job in UTC. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RouterWorkerAssignment" />. </summary>
+        <summary> The assignment for a worker to a job. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterWorkerAssignment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="assignmentId" /> or <paramref name="jobId" /> is null. </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterWorkerSelector">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.RouterWorkerSelector RouterWorkerSelector (string key = default, Azure.Communication.JobRouter.LabelOperator labelOperator = default, BinaryData value = default, TimeSpan? expiresAfter = default, bool? expedite = default, Azure.Communication.JobRouter.RouterWorkerSelectorStatus? status = default, DateTimeOffset? expiresAt = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.RouterWorkerSelector RouterWorkerSelector(string key, valuetype Azure.Communication.JobRouter.LabelOperator labelOperator, class System.BinaryData value, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; expiresAfter, valuetype System.Nullable`1&lt;bool&gt; expedite, valuetype System.Nullable`1&lt;valuetype Azure.Communication.JobRouter.RouterWorkerSelectorStatus&gt; status, valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; expiresAt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.RouterWorkerSelector(System.String,Azure.Communication.JobRouter.LabelOperator,System.BinaryData,System.Nullable{System.TimeSpan},System.Nullable{System.Boolean},System.Nullable{Azure.Communication.JobRouter.RouterWorkerSelectorStatus},System.Nullable{System.DateTimeOffset})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RouterWorkerSelector (Optional key As String = Nothing, Optional labelOperator As LabelOperator = Nothing, Optional value As BinaryData = Nothing, Optional expiresAfter As Nullable(Of TimeSpan) = Nothing, Optional expedite As Nullable(Of Boolean) = Nothing, Optional status As Nullable(Of RouterWorkerSelectorStatus) = Nothing, Optional expiresAt As Nullable(Of DateTimeOffset) = Nothing) As RouterWorkerSelector" />
+      <MemberSignature Language="F#" Value="static member RouterWorkerSelector : string * Azure.Communication.JobRouter.LabelOperator * BinaryData * Nullable&lt;TimeSpan&gt; * Nullable&lt;bool&gt; * Nullable&lt;Azure.Communication.JobRouter.RouterWorkerSelectorStatus&gt; * Nullable&lt;DateTimeOffset&gt; -&gt; Azure.Communication.JobRouter.RouterWorkerSelector" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.RouterWorkerSelector (key, labelOperator, value, expiresAfter, expedite, status, expiresAt)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.RouterWorkerSelector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="labelOperator" Type="Azure.Communication.JobRouter.LabelOperator" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="value" Type="System.BinaryData" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAfter" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expedite" Type="System.Nullable&lt;System.Boolean&gt;" Index="4" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="status" Type="System.Nullable&lt;Azure.Communication.JobRouter.RouterWorkerSelectorStatus&gt;" Index="5" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="expiresAt" Type="System.Nullable&lt;System.DateTimeOffset&gt;" Index="6" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="key"> The label key to query against. </param>
+        <param name="labelOperator"> Describes how the value of the label is compared to the value defined on the worker selector. </param>
+        <param name="value"> The value to compare against the actual label value with the given operator. Values must be primitive values - number, string, boolean. </param>
+        <param name="expiresAfter"> Describes how long this label selector is valid in seconds. </param>
+        <param name="expedite"> Pushes a job to the front of the queue as long as this selector is active. </param>
+        <param name="status"> Status of the worker selector. </param>
+        <param name="expiresAt"> The time at which this worker selector expires in UTC. </param>
+        <summary> Describes a condition that must be met against a set of labels for worker selection. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.RouterWorkerSelector" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="RuleEngineQueueSelectorAttachment">
@@ -721,12 +1385,8 @@
         <Parameter Name="rule" Type="Azure.Communication.JobRouter.RouterRule" />
       </Parameters>
       <Docs>
-        <param name="rule">
-            A RouterRule that resolves a collection of queue selectors to attach.
-            Please note <see cref="T:Azure.Communication.JobRouter.RouterRule" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RuleEngineQueueSelectorAttachment" />. </summary>
+        <param name="rule"> A RouterRule that resolves a collection of queue selectors to attach. </param>
+        <summary> Attaches queue selectors to a job when the RouterRule is resolved. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RuleEngineQueueSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -750,12 +1410,8 @@
         <Parameter Name="rule" Type="Azure.Communication.JobRouter.RouterRule" />
       </Parameters>
       <Docs>
-        <param name="rule">
-            A RouterRule that resolves a collection of worker selectors to attach.
-            Please note <see cref="T:Azure.Communication.JobRouter.RouterRule" /> is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-            The available derived classes include <see cref="T:Azure.Communication.JobRouter.DirectMapRouterRule" />, <see cref="T:Azure.Communication.JobRouter.ExpressionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.FunctionRouterRule" />, <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> and <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />.
-            </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.RuleEngineWorkerSelectorAttachment" />. </summary>
+        <param name="rule"> A RouterRule that resolves a collection of worker selectors to attach. </param>
+        <summary> Attaches worker selectors to a job when a RouterRule is resolved. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.RuleEngineWorkerSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -780,8 +1436,38 @@
       </Parameters>
       <Docs>
         <param name="scheduleAt"> Requested schedule time. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.ScheduleAndSuspendMode" />. </summary>
+        <summary> Describes a matching mode used for scheduling jobs to be queued at a future time. At the specified time, matching worker to a job will not start automatically. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.ScheduleAndSuspendMode" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScoringRuleOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.ScoringRuleOptions ScoringRuleOptions (int? batchSize = default, System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.ScoringRuleParameterSelector&gt; scoringParameters = default, bool? isBatchScoringEnabled = default, bool? descendingOrder = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.ScoringRuleOptions ScoringRuleOptions(valuetype System.Nullable`1&lt;int32&gt; batchSize, class System.Collections.Generic.IEnumerable`1&lt;valuetype Azure.Communication.JobRouter.ScoringRuleParameterSelector&gt; scoringParameters, valuetype System.Nullable`1&lt;bool&gt; isBatchScoringEnabled, valuetype System.Nullable`1&lt;bool&gt; descendingOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.ScoringRuleOptions(System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{Azure.Communication.JobRouter.ScoringRuleParameterSelector},System.Nullable{System.Boolean},System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ScoringRuleOptions (Optional batchSize As Nullable(Of Integer) = Nothing, Optional scoringParameters As IEnumerable(Of ScoringRuleParameterSelector) = Nothing, Optional isBatchScoringEnabled As Nullable(Of Boolean) = Nothing, Optional descendingOrder As Nullable(Of Boolean) = Nothing) As ScoringRuleOptions" />
+      <MemberSignature Language="F#" Value="static member ScoringRuleOptions : Nullable&lt;int&gt; * seq&lt;Azure.Communication.JobRouter.ScoringRuleParameterSelector&gt; * Nullable&lt;bool&gt; * Nullable&lt;bool&gt; -&gt; Azure.Communication.JobRouter.ScoringRuleOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.ScoringRuleOptions (batchSize, scoringParameters, isBatchScoringEnabled, descendingOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.ScoringRuleOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="batchSize" Type="System.Nullable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="scoringParameters" Type="System.Collections.Generic.IEnumerable&lt;Azure.Communication.JobRouter.ScoringRuleParameterSelector&gt;" Index="1" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="isBatchScoringEnabled" Type="System.Nullable&lt;System.Boolean&gt;" Index="2" FrameworkAlternate="azure-dotnet-preview" />
+        <Parameter Name="descendingOrder" Type="System.Nullable&lt;System.Boolean&gt;" Index="3" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="batchSize"> Set batch size when 'isBatchScoringEnabled' is set to true. Defaults to 20 if not configured. </param>
+        <param name="scoringParameters"> List of extra parameters from a job that will be sent as part of the payload to scoring rule. If not set, a job's labels (sent in the payload as `job`) and a job's worker selectors (sent in the payload as `selectors`) are added to the payload of the scoring rule by default. Note: Worker labels are always sent with scoring payload. </param>
+        <param name="isBatchScoringEnabled"> If set to true, will score workers in batches, and the parameter name of the worker labels will be sent as `workers`. By default, set to false and the parameter name for the worker labels will be sent as `worker`. Note: If enabled, use 'batchSize' to set batch size. </param>
+        <param name="descendingOrder"> If false, will sort scores by ascending order. By default, set to true. </param>
+        <summary> Encapsulates all options that can be passed as parameters for scoring rule with BestWorkerMode. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.ScoringRuleOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -805,8 +1491,32 @@
       </Parameters>
       <Docs>
         <param name="queueSelector"> The queue selector to attach. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.StaticQueueSelectorAttachment" />. </summary>
+        <summary> Describes a queue selector that will be attached to a job. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.StaticQueueSelectorAttachment" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticRouterRule">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.StaticRouterRule StaticRouterRule (BinaryData value = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.StaticRouterRule StaticRouterRule(class System.BinaryData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.StaticRouterRule(System.BinaryData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function StaticRouterRule (Optional value As BinaryData = Nothing) As StaticRouterRule" />
+      <MemberSignature Language="F#" Value="static member StaticRouterRule : BinaryData -&gt; Azure.Communication.JobRouter.StaticRouterRule" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.StaticRouterRule value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.StaticRouterRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.BinaryData" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="value"> The static value this rule always returns. Values must be primitive values - number, string, boolean. </param>
+        <summary> A rule providing static rules that always return the same result, regardless of input. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.StaticRouterRule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -830,8 +1540,53 @@
       </Parameters>
       <Docs>
         <param name="workerSelector"> The worker selector to attach. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.StaticWorkerSelectorAttachment" />. </summary>
+        <summary> Describes a worker selector that will be attached to a job. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.StaticWorkerSelectorAttachment" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendMode">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.SuspendMode SuspendMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.SuspendMode SuspendMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.SuspendMode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SuspendMode () As SuspendMode" />
+      <MemberSignature Language="F#" Value="static member SuspendMode : unit -&gt; Azure.Communication.JobRouter.SuspendMode" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.SuspendMode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.SuspendMode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> Describes a matching mode where matching worker to a job is suspended. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.SuspendMode" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnassignJobOptions">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.UnassignJobOptions UnassignJobOptions (bool? suspendMatching = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.UnassignJobOptions UnassignJobOptions(valuetype System.Nullable`1&lt;bool&gt; suspendMatching) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.UnassignJobOptions(System.Nullable{System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function UnassignJobOptions (Optional suspendMatching As Nullable(Of Boolean) = Nothing) As UnassignJobOptions" />
+      <MemberSignature Language="F#" Value="static member UnassignJobOptions : Nullable&lt;bool&gt; -&gt; Azure.Communication.JobRouter.UnassignJobOptions" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.UnassignJobOptions suspendMatching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.UnassignJobOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="suspendMatching" Type="System.Nullable&lt;System.Boolean&gt;" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="suspendMatching"> If SuspendMatching is true, then a job is not queued for re-matching with a worker. </param>
+        <summary> Request payload for unassigning a job. </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.UnassignJobOptions" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -857,7 +1612,7 @@
       <Docs>
         <param name="jobId"> Id of an unassigned job. </param>
         <param name="unassignmentCount"> The number of times a job is unassigned. At a maximum 3. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.UnassignJobResult" />. </summary>
+        <summary> Response payload after a job has been successfully unassigned. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.UnassignJobResult" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -888,7 +1643,7 @@
         <param name="authorizationServerUri"> Uri for Authorization Server. </param>
         <param name="clientCredential"> OAuth2.0 Credentials used to Contoso's Authorization server. Reference: https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/. </param>
         <param name="webhookUri"> Uri for Contoso's Web Server. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" />. </summary>
+        <summary> A rule providing a binding to an external web server. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.WebhookRouterRule" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -913,7 +1668,7 @@
       </Parameters>
       <Docs>
         <param name="allocations"> A collection of percentage based weighted allocations. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.WeightedAllocationQueueSelectorAttachment" />. </summary>
+        <summary> Describes multiple sets of queue selectors, of which one will be selected and attached according to a weighting. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.WeightedAllocationQueueSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -938,8 +1693,35 @@
       </Parameters>
       <Docs>
         <param name="allocations"> A collection of percentage based weighted allocations. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.WeightedAllocationWorkerSelectorAttachment" />. </summary>
+        <summary> Describes multiple sets of worker selectors, of which one will be selected and attached according to a weighting. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.WeightedAllocationWorkerSelectorAttachment" /> instance for mocking. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkerSelectorAttachment">
+      <MemberSignature Language="C#" Value="public static Azure.Communication.JobRouter.WorkerSelectorAttachment WorkerSelectorAttachment (string kind = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Azure.Communication.JobRouter.WorkerSelectorAttachment WorkerSelectorAttachment(string kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Azure.Communication.JobRouter.JobRouterModelFactory.WorkerSelectorAttachment(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function WorkerSelectorAttachment (Optional kind As String = Nothing) As WorkerSelectorAttachment" />
+      <MemberSignature Language="F#" Value="static member WorkerSelectorAttachment : string -&gt; Azure.Communication.JobRouter.WorkerSelectorAttachment" Usage="Azure.Communication.JobRouter.JobRouterModelFactory.WorkerSelectorAttachment kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.Communication.JobRouter</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Communication.JobRouter.WorkerSelectorAttachment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" Index="0" FrameworkAlternate="azure-dotnet-preview" />
+      </Parameters>
+      <Docs>
+        <param name="kind"> The type discriminator describing a sub-type of WorkerSelectorAttachment. </param>
+        <summary>
+            An attachment which attaches worker selectors to a job.
+            Please note this is the abstract base class. The derived classes available for instantiation are: <see cref="T:Azure.Communication.JobRouter.ConditionalWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.PassThroughWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.RuleEngineWorkerSelectorAttachment" />, <see cref="T:Azure.Communication.JobRouter.StaticWorkerSelectorAttachment" />, and <see cref="T:Azure.Communication.JobRouter.WeightedAllocationWorkerSelectorAttachment" />.
+            </summary>
+        <returns> A new <see cref="T:Azure.Communication.JobRouter.WorkerSelectorAttachment" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -965,7 +1747,7 @@
       <Docs>
         <param name="weight"> The percentage of this weight, expressed as a fraction of 1. </param>
         <param name="workerSelectors"> A collection of worker selectors that will be applied if this allocation is selected. </param>
-        <summary> Initializes a new instance of <see cref="T:Azure.Communication.JobRouter.WorkerWeightedAllocation" />. </summary>
+        <summary> Contains the weight percentage and worker selectors to be applied if selected for weighted distributions. </summary>
         <returns> A new <see cref="T:Azure.Communication.JobRouter.WorkerWeightedAllocation" /> instance for mocking. </returns>
         <remarks>To be added.</remarks>
       </Docs>

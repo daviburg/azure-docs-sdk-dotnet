@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
     <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Azure.ResourceManager.Models.ResourceData</BaseTypeName>
@@ -36,6 +37,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,6 +55,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Single&gt;</ReturnType>
@@ -62,6 +65,55 @@
             The total amount of cost to track with the budget.
             Supported for CategoryType(s): Cost.
             Required for CategoryType(s): Cost.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BudgetCategory">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.CostManagement.Models.CategoryType? BudgetCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.CostManagement.Models.CategoryType&gt; BudgetCategory" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.CostManagement.BudgetData.BudgetCategory" />
+      <MemberSignature Language="VB.NET" Value="Public Property BudgetCategory As Nullable(Of CategoryType)" />
+      <MemberSignature Language="F#" Value="member this.BudgetCategory : Nullable&lt;Azure.ResourceManager.CostManagement.Models.CategoryType&gt; with get, set" Usage="Azure.ResourceManager.CostManagement.BudgetData.BudgetCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.CostManagement.Models.CategoryType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The category of the budget.
+            <list type="bullet"><item><description>'Cost' defines a Budget.</description></item><item><description>'ReservationUtilization' defines a Reservation Utilization Alert Rule.</description></item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BudgetTimeGrain">
+      <MemberSignature Language="C#" Value="public Azure.ResourceManager.CostManagement.Models.TimeGrainType? BudgetTimeGrain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Azure.ResourceManager.CostManagement.Models.TimeGrainType&gt; BudgetTimeGrain" />
+      <MemberSignature Language="DocId" Value="P:Azure.ResourceManager.CostManagement.BudgetData.BudgetTimeGrain" />
+      <MemberSignature Language="VB.NET" Value="Public Property BudgetTimeGrain As Nullable(Of TimeGrainType)" />
+      <MemberSignature Language="F#" Value="member this.BudgetTimeGrain : Nullable&lt;Azure.ResourceManager.CostManagement.Models.TimeGrainType&gt; with get, set" Usage="Azure.ResourceManager.CostManagement.BudgetData.BudgetTimeGrain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Azure.ResourceManager.CostManagement.Models.TimeGrainType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The time covered by a budget. Tracking of the amount will be reset based on the time grain.
+            Supported for CategoryType(s): Cost, ReservationUtilization.
+            Supported timeGrainTypes for <b>CategoryType: Cost</b><list type="bullet"><item><description>Monthly</description></item><item><description>Quarterly</description></item><item><description>Annually</description></item><item><description>BillingMonth*</description></item><item><description>BillingQuarter*</description></item><item><description>BillingAnnual*</description></item></list>
+            *only supported for Web Direct customers.
+            Supported timeGrainTypes for <b>CategoryType: ReservationUtilization</b><list type="bullet"><item><description>Last7Days</description></item><item><description>Last30Days</description></item></list>
+            Required for CategoryType(s): Cost, ReservationUtilization.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -77,14 +129,25 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("This property is obsolete and will be removed in a future release. Use BudgetCategory instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This property is obsolete and will be removed in a future release. Use BudgetCategory instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.CategoryType</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             The category of the budget.
-            <list type="bullet"><item><description>'Cost' defines a Budget.</description></item><item><description>'ReservationUtilization' defines a Reservation Utilization Alert Rule.</description></item></list></summary>
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -99,6 +162,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.CurrentSpend</ReturnType>
@@ -122,6 +186,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Azure.ETag&gt;</ReturnType>
@@ -142,6 +207,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.BudgetFilter</ReturnType>
@@ -165,6 +231,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.ForecastSpend</ReturnType>
@@ -188,6 +255,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Models.ResourceData</ReturnType>
@@ -214,6 +282,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -239,6 +308,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Azure.ResourceManager.CostManagement.Models.BudgetNotification&gt;</ReturnType>
@@ -262,6 +332,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.Models.ResourceData</ReturnType>
@@ -288,6 +359,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -315,6 +387,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.BudgetData</ReturnType>
@@ -344,6 +417,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -372,6 +446,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.BudgetData</ReturnType>
@@ -401,6 +476,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -428,6 +504,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.BinaryData</ReturnType>
@@ -452,18 +529,24 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="azure-dotnet-preview">
+          <AttributeName Language="C#">[System.Obsolete("This property is obsolete and will be removed in a future release. Use BudgetTimeGrain instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This property is obsolete and will be removed in a future release. Use BudgetTimeGrain instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.TimeGrainType</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             The time covered by a budget. Tracking of the amount will be reset based on the time grain.
-            Supported for CategoryType(s): Cost, ReservationUtilization.
-            Supported timeGrainTypes for <b>CategoryType: Cost</b><list type="bullet"><item><description>Monthly</description></item><item><description>Quarterly</description></item><item><description>Annually</description></item><item><description>BillingMonth*</description></item><item><description>BillingQuarter*</description></item><item><description>BillingAnnual*</description></item></list>
-            *only supported for Web Direct customers.
-            Supported timeGrainTypes for <b>CategoryType: ReservationUtilization</b><list type="bullet"><item><description>Last7Days</description></item><item><description>Last30Days</description></item></list>
-            Required for CategoryType(s): Cost, ReservationUtilization.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -479,6 +562,7 @@
       <AssemblyInfo>
         <AssemblyName>Azure.ResourceManager.CostManagement</AssemblyName>
         <AssemblyVersion>1.0.3.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Azure.ResourceManager.CostManagement.Models.BudgetTimePeriod</ReturnType>
