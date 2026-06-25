@@ -1,12 +1,12 @@
 ---
 title: Azure AI Projects client library for .NET
 keywords: Azure, dotnet, SDK, API, Azure.AI.Projects, ai
-ms.date: 05/30/2026
+ms.date: 06/25/2026
 ms.topic: reference
 ms.devlang: dotnet
 ms.service: ai
 ---
-# Azure AI Projects client library for .NET - version 2.1.0-beta.3 
+# Azure AI Projects client library for .NET - version 2.1.0-alpha.20260625.1 
 
 The AI Projects client library is part of the Azure AI Foundry SDK and provides easy access to resources in your Azure AI Foundry Project. Use it to:
 
@@ -56,6 +56,7 @@ The client library uses version `v1` of the AI Foundry [data plane REST APIs](ht
   - [Red teams](#red-teams)
   - [Schedules](#schedules)
   - [Toolboxes](#toolboxes)
+  - [Routines](#routines)
 - [Tracing](#tracing)
     - [Azure Monitor Tracing](#tracing-to-azure-monitor)
     - [Console Tracing](#tracing-to-console)
@@ -1272,7 +1273,7 @@ EvaluationRule continuousEvalRule = await projectClient.EvaluationRules.CreateOr
 Console.WriteLine($"Continuous Evaluation Rule created (id: {continuousEvalRule.Id}, name: {continuousEvalRule.DisplayName})");
 ```
 
-### Evaluation insights
+#### Evaluation insights
 
 To further analyze the evaluation runs the `ProjectInsights` can be used. They allow to cluster and compare the evaluation
 runs against baseline.
@@ -1390,6 +1391,55 @@ private static void ParseCompareResults(ProjectsInsight compareInsight)
         throw new InvalidOperationException("Evaluation comparison generation failed.");
     }
 }
+```
+
+#### Evaluator generation jobs
+
+To test the Agent or model, used for specific scenario we can generate the evaluator, which will ask
+question and evaluate answers related to it. In the code below we will create an Agent,
+which can generate questions and answers based on provided prompt and use it for evaluator generation.
+
+```C# Snippet:Sample_CreateAnAgent_EvaluatorGenerationJob_Async
+DeclarativeAgentDefinition agentDefinition = new(model: modelDeploymentName)
+{
+    Instructions = "You are a helpful assistant that answers general questions",
+};
+ProjectsAgentVersion agentVersion = await projectClient.AgentAdministrationClient.CreateAgentVersionAsync(
+    agentName: "evalAgent",
+    options: new(agentDefinition));
+Console.WriteLine($"Agent created (id: {agentVersion.Id}, name: {agentVersion.Name}, version: {agentVersion.Version})");
+EvaluatorGenerationJob job = new()
+{
+    Inputs = new EvaluatorGenerationInputs(
+        sources: [new AgentEvaluatorGenerationJobSource(agentName: agentVersion.Name)],
+        model: modelDeploymentName,
+        evaluatorName: "coherence"
+    )
+};
+```
+
+To generate the evaluator, we need to start the job:
+
+```C# Snippet:Sample_CreateJob_EvaluatorGenerationJob_Async
+EvaluatorGenerationJob runningJob = await projectClient.EvaluatorGenerationJobs.CreateAsync(job);
+Console.WriteLine($"Created job ID: {runningJob.Id}");
+```
+
+After the generation job is complete, the `EvaluatorVersion` object will be returned
+in `runningJob.Result` property.
+
+```C# Snippet:Sample_GetJob_EvaluatorGenerationJob_Async
+while (runningJob.Status != JobStatus.Failed && runningJob.Status != JobStatus.Succeeded)
+{
+    await Task.Delay(500);
+    Console.WriteLine($"Waiting for job ID: {runningJob.Id}...");
+    runningJob = await projectClient.EvaluatorGenerationJobs.GetAsync(jobId: runningJob.Id);
+}
+if (runningJob.Status == JobStatus.Failed)
+{
+    throw new InvalidOperationException($"The job {runningJob.Id} has failed.");
+}
+Console.WriteLine($"The job ID: {runningJob.Id} completed, created evaluator {runningJob.Result.Name}, v. {runningJob.Result.Version}");
 ```
 
 ### Red teams
@@ -1588,11 +1638,11 @@ the `AAIP001` warning.
 
 In the example below we create two versions of MCP tool and save it to Azure.
 ```C# Snippet:Sample_CreateToolbox_ToolboxesCRUD_Async
-ProjectsAgentTool tool = ProjectsAgentTool.AsProjectTool(ResponseTool.CreateMcpTool(
-    serverLabel: "api-specs",
-    serverUri: new Uri("https://gitmcp.io/Azure/azure-rest-api-specs"),
-    toolCallApprovalPolicy: new McpToolCallApprovalPolicy(GlobalMcpToolCallApprovalPolicy.AlwaysRequireApproval)
-));
+MCPToolboxTool tool = new(serverLabel: "api-specs")
+{
+    ServerUri = new Uri("https://gitmcp.io/Azure/azure-rest-api-specs"),
+    ToolCallApprovalPolicy = new McpToolCallApprovalPolicy(GlobalMcpToolCallApprovalPolicy.AlwaysRequireApproval)
+};
 ToolboxVersion toolBox1 = await toolboxClient.CreateToolboxVersionAsync(
     name: toolboxName,
     tools: [tool],
@@ -1629,6 +1679,91 @@ ToolboxVersion toolBox = await toolboxClient.GetToolboxVersionAsync(record.Name,
 Console.WriteLine($"Retrieved toolbox: {toolBox.Name} ({toolBox.Id})");
 ```
 
+## Routines
+
+Routines client provides the mechanism to call the Hosted Agent asynchronously.
+The call can be scheduled in three different ways by using different trigger types.
+  - At a specific date and time using `TimerRoutineTrigger`.
+  - In response to an external event using `CustomRoutineTrigger`.
+  - Repeatedly according to a schedule using `ScheduleRoutineTrigger`.
+
+To create Routine, we need to define the hosted agent to be called and an action, which will be called on the
+Agent.
+
+```C# Snippet:Sample_CreateRoutine_RoutinesScheduleTrigger_Async
+RoutineAction action = new InvokeAgentResponsesApiRoutineAction
+{
+    AgentName = agentVersion.Name,
+    Input = BinaryData.FromObjectAsJson("Hello, Tell me a joke."),
+};
+ProjectsRoutineOptions routineOptions = new(action: action, description: "Routine used by the schedule-trigger sample.", enabled: true);
+routineOptions.Triggers.Add("every_five_minutes", new ScheduleRoutineTrigger(
+        cronExpression: "*/5 * * * *",
+        timeZone: "UTC"
+));
+ProjectsRoutine created = await routinesClient.CreateOrUpdateRoutineAsync(
+    routineName: routineName,
+    options: routineOptions
+);
+Console.WriteLine($"Created routine: {created.Name} enabled={created.Enabled}.");
+Console.WriteLine($"cron expression: {((ScheduleRoutineTrigger)routineOptions.Triggers["every_five_minutes"]).CronExpression}; time zone: {((ScheduleRoutineTrigger)routineOptions.Triggers["every_five_minutes"]).TimeZone}");
+```
+
+In this case we create schedule, when we call Agent every five minutes, we use responses API for invocation
+and the phrase "Hello, Tell me a joke." as an input.
+
+Similarly, we can create the routine, which will start the run in a response to the external event.
+
+```C# Snippet:Sample_CreateRoutine_RoutinesCRUD_Async
+RoutineAction action = new InvokeAgentResponsesApiRoutineAction
+{
+    AgentName = agentVersion.Name
+};
+ProjectsRoutineOptions routineOptions = new(action: action, description: "Routine created by the azure-ai-projects sample.", enabled: true);
+routineOptions.Triggers.Add("manual", new CustomRoutineTrigger(
+        provider: "sample-provider",
+        parameters: new Dictionary<string, BinaryData>
+        {
+            ["source"] = BinaryData.FromString("\"sample_routines_crud\"")
+        })
+{
+    EventName = "sample-event"
+});
+ProjectsRoutine created = await routinesClient.CreateOrUpdateRoutineAsync(
+    routineName: routineName,
+    options: routineOptions
+);
+Console.WriteLine($"Created routine: {created.Name} enabled={created.Enabled}");
+```
+
+To create a single run at given time we need to define routine as follows:
+
+```C# Snippet:Sample_CreateRoutine_RoutinesTimerTrigger_Async
+RoutineAction action = new InvokeAgentResponsesApiRoutineAction
+{
+    AgentName = agentVersion.Name,
+    Input = BinaryData.FromObjectAsJson("Hello, Tell me a joke."),
+};
+ProjectsRoutineOptions routineOptions = new(action: action, description: "Routine used by the timer-trigger sample.", enabled: true);
+routineOptions.Triggers.Add("once", new TimerRoutineTrigger()
+{
+    At = DateTimeOffset.UtcNow + TimeSpan.FromSeconds(20),
+});
+ProjectsRoutine created = await routinesClient.CreateOrUpdateRoutineAsync(
+    routineName: routineName,
+    options: routineOptions
+);
+Console.WriteLine($"Created routine: {created.Name} enabled={created.Enabled}.");
+Console.WriteLine($"Fire at: {((TimerRoutineTrigger)routineOptions.Triggers["once"]).At.Value.ToString("o")}");
+```
+
+Routines runs can be manually dispatched by calling `DispatchAsyncRoutineAsync` or `DispatchAsyncRoutine` methods.
+
+```C# Snippet:Sample_DispatchTask_RoutinesManualDispatch_Async
+DispatchRoutineResponse dispatch = await routinesClient.DispatchAsyncRoutineAsync(routineName: created.Name, payload: new InvokeAgentResponsesApiDispatchPayload(BinaryData.FromObjectAsJson("Hello, Tell me a joke.")));
+Console.WriteLine($"Dispatched the routine. Dispatch ID {dispatch.DispatchId}, task ID: {dispatch.TaskId}.");
+```
+
 ## Tracing
 
 **Note:** Tracing functionality is in preliminary preview and is subject to change. Spans, attributes, and events may be modified in future versions.
@@ -1657,7 +1792,7 @@ For tracing to Azure Monitor from your application, the preferred option is to u
 dotnet add package Azure.Monitor.OpenTelemetry.AspNetCore
 ```
 
-More information about using the Azure.Monitor.OpenTelemetry.AspNetCore package can be found [here](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.Projects_2.1.0-beta.3/sdk/monitor/Azure.Monitor.OpenTelemetry.AspNetCore/README.md).
+More information about using the Azure.Monitor.OpenTelemetry.AspNetCore package can be found [here](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/monitor/Azure.Monitor.OpenTelemetry.AspNetCore/README.md).
 
 Another option is to use Azure.Monitor.OpenTelemetry.Exporter package. Install the package with [NuGet](https://www.nuget.org/ ):
 ```dotnetcli
@@ -1825,7 +1960,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][code_of_con
 [product_doc]: https://aka.ms/azsdk/azure-ai-projects-v2/product-doc
 [azure_identity]: https://learn.microsoft.com/dotnet/api/overview/azure/identity-readme?view=azure-dotnet
 [azure_identity_dac]: https://learn.microsoft.com/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet
-[aiprojects_contrib]: https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.Projects_2.1.0-beta.3/CONTRIBUTING.md
+[aiprojects_contrib]: https://github.com/Azure/azure-sdk-for-net/blob/main/CONTRIBUTING.md
 [cla]: https://cla.microsoft.com
 [code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 [code_of_conduct_faq]: https://opensource.microsoft.com/codeofconduct/faq/
