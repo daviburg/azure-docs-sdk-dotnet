@@ -1,16 +1,14 @@
 ---
 title: 
-keywords: Azure, dotnet, SDK, API, Azure.ResourceManager.Resources.Policy, resources
+keywords: Azure, dotnet, SDK, API, Azure.ResourceManager.Resources.Deployments, resources
 ms.date: 06/29/2026
 ms.topic: reference
 ms.devlang: dotnet
 ms.service: resources
 ---
-# Microsoft Azure Policy management client library for .NET
+# Microsoft Azure Resources.Deployments management client library for .NET
 
-Microsoft Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account.
-
-This library provides Policy management capabilities for Microsoft Azure, including policy assignments, definitions, set definitions, and exemptions.
+Azure Resource Manager Deployments provide an Azure native Infrastructure-as-Code (IaC) solution for managing Azure resources declaratively. This library can be used to manage Template Deployments, and is also compatible with Bicep-generated Templates.
 
 This library follows the [new Azure SDK guidelines](https://azure.github.io/azure-sdk/general_introduction.html), and provides many core capabilities:
 
@@ -20,14 +18,14 @@ This library follows the [new Azure SDK guidelines](https://azure.github.io/azur
     - Better error-handling.
     - Support uniform telemetry across all languages.
 
-## Getting started
+## Getting started 
 
 ### Install the package
 
-Install the Microsoft Azure Policy management library for .NET with [NuGet](https://www.nuget.org/):
+Install the Microsoft Azure Resources.Deployments management library for .NET with [NuGet](https://www.nuget.org/):
 
 ```dotnetcli
-dotnet add package Azure.ResourceManager.Resources.Policy --prerelease
+dotnet add package Azure.ResourceManager.Resources.Deployments --prerelease
 ```
 
 ### Prerequisites
