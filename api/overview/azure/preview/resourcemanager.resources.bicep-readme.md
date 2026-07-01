@@ -1,16 +1,16 @@
 ---
 title: 
-keywords: Azure, dotnet, SDK, API, Azure.ResourceManager.Resources, resources
+keywords: Azure, dotnet, SDK, API, Azure.ResourceManager.Resources.Bicep, resources
 ms.date: 07/01/2026
 ms.topic: reference
 ms.devlang: dotnet
 ms.service: resources
 ---
-# Microsoft Azure Resources management client library for .NET
+# Microsoft Azure Bicep management client library for .NET
 
 Microsoft Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account.
 
-This library provides resource deployment capabilities for Microsoft Azure.
+This library provides Bicep deployment capabilities for Microsoft Azure.
 
 This library follows the [new Azure SDK guidelines](https://azure.github.io/azure-sdk/general_introduction.html), and provides many core capabilities:
 
@@ -24,10 +24,10 @@ This library follows the [new Azure SDK guidelines](https://azure.github.io/azur
 
 ### Install the package
 
-Install the Microsoft Azure Resources management library for .NET with [NuGet](https://www.nuget.org/):
+Install the Microsoft Azure Bicep management library for .NET with [NuGet](https://www.nuget.org/):
 
 ```dotnetcli
-dotnet add package Azure.ResourceManager.Resources
+dotnet add package Azure.ResourceManager.Resources.Bicep --prerelease
 ```
 
 ### Prerequisites
@@ -40,14 +40,14 @@ To create an authenticated client and start interacting with Microsoft Azure res
 
 ## Key concepts
 
-Key concepts of the Microsoft Azure SDK for .NET can be found [here](https://azure.github.io/azure-sdk/dotnet_introduction.html).
+Key concepts of the Microsoft Azure SDK for .NET can be found [here](https://azure.github.io/azure-sdk/dotnet_introduction.html)
 
 ## Documentation
 
 Documentation is available to help you learn how to use this package:
 
 - [Quickstart](https://github.com/Azure/azure-sdk-for-net/blob/main/doc/dev/mgmt_quickstart.md).
-- [API References](https://learn.microsoft.com/dotnet/api/?view=azure-dotnet).
+- [API References](/dotnet/api/?view=azure-dotnet).
 - [Authentication](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/identity/Azure.Identity/README.md).
 
 ## Examples
